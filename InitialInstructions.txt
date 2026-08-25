@@ -1,0 +1,12 @@
+I want you to build a very robust trader analysis tool for Polymarket Traders. I should be able to give you the username and/or the wallet ID or some easy to find identifier and we should have a one click program that runs the entire trade history and does a deep dive on how this person wins, similar to PolyData.
+
+https://polydata.pro/traders/polika72
+
+For example, Lets start with polika72, I believe him to be a market maker. I want to know his exact strategy trade by trade, entires, exits, timing, sizing and how he has such a fantastic equity curve. https://polymarket.com/@polika72
+
+We should start by analyzing polika72 but we should have the ability to:
+Run whatever trader we want, pull up old analysis, update old analysis for new trades (only pull their trades since recent runs, not the entire history all over again), and then a strategy analyst that shows EXACTLY how this person is such a great winner and how we can replicate their success.
+
+This should be very simple to run for the end user, you should build this project from scratch in its entirety then run a test on polika72, your PNL should match exactly multiple data sources so we know its correct.
+
+Remember its imperative we get their entire trade history, no cut offs. Time to work. By the time you are done and have robustly tested, you should comb through their entire trade history and have an incredibly in depth summary of how they make money and how we can build something to copy it. It will be the same with other traders down the road. Then once thats done we want to be able to compare multiple traders to each other, know what they have in common and what their differences are.
