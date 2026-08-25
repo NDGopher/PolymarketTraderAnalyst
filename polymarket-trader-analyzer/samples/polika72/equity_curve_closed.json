@@ -1,0 +1,980 @@
+[
+  {
+    "date": "2026-03-12",
+    "equity": 194.7292,
+    "daily_pnl": 194.7292,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-13",
+    "equity": 217.9585,
+    "daily_pnl": 23.2293,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-14",
+    "equity": 409.6966,
+    "daily_pnl": 191.7381,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-15",
+    "equity": 506.4741,
+    "daily_pnl": 96.7775,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-16",
+    "equity": 510.3907,
+    "daily_pnl": 3.9166,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-17",
+    "equity": 515.2901,
+    "daily_pnl": 4.8994,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-18",
+    "equity": 1532.2963,
+    "daily_pnl": 1017.0062,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-19",
+    "equity": 1653.7402,
+    "daily_pnl": 121.4439,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-20",
+    "equity": 1872.5283,
+    "daily_pnl": 218.7881,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-21",
+    "equity": 2509.6331,
+    "daily_pnl": 637.1048,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-22",
+    "equity": 2623.3779,
+    "daily_pnl": 113.7448,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-23",
+    "equity": 2715.3408,
+    "daily_pnl": 91.9629,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-25",
+    "equity": 2756.3326,
+    "daily_pnl": 40.9918,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-26",
+    "equity": 3325.5816,
+    "daily_pnl": 569.249,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-27",
+    "equity": 3821.2462,
+    "daily_pnl": 495.6646,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-28",
+    "equity": 3971.5742,
+    "daily_pnl": 150.328,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-29",
+    "equity": 4076.0289,
+    "daily_pnl": 104.4547,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-30",
+    "equity": 4158.3024,
+    "daily_pnl": 82.2735,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-03-31",
+    "equity": 4543.3032,
+    "daily_pnl": 385.0008,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-01",
+    "equity": 4920.7536,
+    "daily_pnl": 377.4504,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-02",
+    "equity": 5335.1078,
+    "daily_pnl": 414.3542,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-03",
+    "equity": 6107.5524,
+    "daily_pnl": 772.4446,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-04",
+    "equity": 7374.0115,
+    "daily_pnl": 1266.4591,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-05",
+    "equity": 9900.8583,
+    "daily_pnl": 2526.8468,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-06",
+    "equity": 11180.8604,
+    "daily_pnl": 1280.0021,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-07",
+    "equity": 11424.4773,
+    "daily_pnl": 243.6169,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-08",
+    "equity": 10756.5608,
+    "daily_pnl": -667.9165,
+    "drawdown": -667.9165
+  },
+  {
+    "date": "2026-04-09",
+    "equity": 11298.2131,
+    "daily_pnl": 541.6523,
+    "drawdown": -126.2642
+  },
+  {
+    "date": "2026-04-10",
+    "equity": 11905.3937,
+    "daily_pnl": 607.1806,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-11",
+    "equity": 15391.0934,
+    "daily_pnl": 3485.6997,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-12",
+    "equity": 17890.7088,
+    "daily_pnl": 2499.6154,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-13",
+    "equity": 18086.5439,
+    "daily_pnl": 195.8351,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-14",
+    "equity": 18142.6603,
+    "daily_pnl": 56.1164,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-15",
+    "equity": 19836.7172,
+    "daily_pnl": 1694.0569,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-16",
+    "equity": 21163.5701,
+    "daily_pnl": 1326.8529,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-17",
+    "equity": 22102.8027,
+    "daily_pnl": 939.2326,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-18",
+    "equity": 22763.5571,
+    "daily_pnl": 660.7544,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-19",
+    "equity": 24360.5961,
+    "daily_pnl": 1597.039,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-20",
+    "equity": 24445.9384,
+    "daily_pnl": 85.3423,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-21",
+    "equity": 24398.2223,
+    "daily_pnl": -47.7161,
+    "drawdown": -47.7161
+  },
+  {
+    "date": "2026-04-22",
+    "equity": 23098.0272,
+    "daily_pnl": -1300.1951,
+    "drawdown": -1347.9112
+  },
+  {
+    "date": "2026-04-23",
+    "equity": 23515.5709,
+    "daily_pnl": 417.5437,
+    "drawdown": -930.3675
+  },
+  {
+    "date": "2026-04-24",
+    "equity": 24322.3557,
+    "daily_pnl": 806.7848,
+    "drawdown": -123.5827
+  },
+  {
+    "date": "2026-04-25",
+    "equity": 24071.0685,
+    "daily_pnl": -251.2872,
+    "drawdown": -374.8699
+  },
+  {
+    "date": "2026-04-26",
+    "equity": 25361.8914,
+    "daily_pnl": 1290.8229,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-27",
+    "equity": 25733.0953,
+    "daily_pnl": 371.2039,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-28",
+    "equity": 26183.2755,
+    "daily_pnl": 450.1802,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-29",
+    "equity": 26260.6104,
+    "daily_pnl": 77.3349,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-04-30",
+    "equity": 26597.8325,
+    "daily_pnl": 337.2221,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-01",
+    "equity": 26837.932,
+    "daily_pnl": 240.0995,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-02",
+    "equity": 28804.1242,
+    "daily_pnl": 1966.1922,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-03",
+    "equity": 29294.0062,
+    "daily_pnl": 489.882,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-04",
+    "equity": 29885.6407,
+    "daily_pnl": 591.6345,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-05",
+    "equity": 30175.876,
+    "daily_pnl": 290.2353,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-06",
+    "equity": 30301.7721,
+    "daily_pnl": 125.8961,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-07",
+    "equity": 30212.8453,
+    "daily_pnl": -88.9268,
+    "drawdown": -88.9268
+  },
+  {
+    "date": "2026-05-08",
+    "equity": 30283.7199,
+    "daily_pnl": 70.8746,
+    "drawdown": -18.0522
+  },
+  {
+    "date": "2026-05-09",
+    "equity": 30529.15,
+    "daily_pnl": 245.4301,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-10",
+    "equity": 31092.2031,
+    "daily_pnl": 563.0531,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-11",
+    "equity": 31264.1682,
+    "daily_pnl": 171.9651,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-12",
+    "equity": 31394.9278,
+    "daily_pnl": 130.7596,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-13",
+    "equity": 31826.9695,
+    "daily_pnl": 432.0417,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-14",
+    "equity": 31935.7668,
+    "daily_pnl": 108.7973,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-15",
+    "equity": 32064.46,
+    "daily_pnl": 128.6932,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-16",
+    "equity": 32419.0076,
+    "daily_pnl": 354.5476,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-17",
+    "equity": 34720.0838,
+    "daily_pnl": 2301.0762,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-18",
+    "equity": 35269.1557,
+    "daily_pnl": 549.0719,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-19",
+    "equity": 35537.3119,
+    "daily_pnl": 268.1562,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-20",
+    "equity": 35769.1797,
+    "daily_pnl": 231.8678,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-21",
+    "equity": 36018.1569,
+    "daily_pnl": 248.9772,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "equity": 36432.7511,
+    "daily_pnl": 414.5942,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-23",
+    "equity": 37444.2263,
+    "daily_pnl": 1011.4752,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-24",
+    "equity": 38216.579,
+    "daily_pnl": 772.3527,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-25",
+    "equity": 38712.4526,
+    "daily_pnl": 495.8736,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-26",
+    "equity": 38704.9246,
+    "daily_pnl": -7.528,
+    "drawdown": -7.528
+  },
+  {
+    "date": "2026-05-27",
+    "equity": 38758.4703,
+    "daily_pnl": 53.5457,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-28",
+    "equity": 38875.8221,
+    "daily_pnl": 117.3518,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-29",
+    "equity": 39141.3188,
+    "daily_pnl": 265.4967,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-30",
+    "equity": 39551.5724,
+    "daily_pnl": 410.2536,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-05-31",
+    "equity": 39761.206,
+    "daily_pnl": 209.6336,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-01",
+    "equity": 40325.2966,
+    "daily_pnl": 564.0906,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-02",
+    "equity": 40768.9073,
+    "daily_pnl": 443.6107,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-03",
+    "equity": 40799.1534,
+    "daily_pnl": 30.2461,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-04",
+    "equity": 41232.5387,
+    "daily_pnl": 433.3853,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-05",
+    "equity": 41442.1391,
+    "daily_pnl": 209.6004,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-06",
+    "equity": 41717.2192,
+    "daily_pnl": 275.0801,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-07",
+    "equity": 41854.9751,
+    "daily_pnl": 137.7559,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-08",
+    "equity": 42158.7674,
+    "daily_pnl": 303.7923,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-09",
+    "equity": 43229.3828,
+    "daily_pnl": 1070.6154,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-10",
+    "equity": 43662.9445,
+    "daily_pnl": 433.5617,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-11",
+    "equity": 43929.9613,
+    "daily_pnl": 267.0168,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-12",
+    "equity": 44272.5095,
+    "daily_pnl": 342.5482,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-13",
+    "equity": 44723.0341,
+    "daily_pnl": 450.5246,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-14",
+    "equity": 45769.2916,
+    "daily_pnl": 1046.2575,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-15",
+    "equity": 46409.5741,
+    "daily_pnl": 640.2825,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-16",
+    "equity": 47014.6444,
+    "daily_pnl": 605.0703,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-17",
+    "equity": 47972.8981,
+    "daily_pnl": 958.2537,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-18",
+    "equity": 47795.0148,
+    "daily_pnl": -177.8833,
+    "drawdown": -177.8833
+  },
+  {
+    "date": "2026-06-19",
+    "equity": 47746.7925,
+    "daily_pnl": -48.2223,
+    "drawdown": -226.1056
+  },
+  {
+    "date": "2026-06-20",
+    "equity": 47944.1734,
+    "daily_pnl": 197.3809,
+    "drawdown": -28.7247
+  },
+  {
+    "date": "2026-06-21",
+    "equity": 47957.6402,
+    "daily_pnl": 13.4668,
+    "drawdown": -15.2579
+  },
+  {
+    "date": "2026-06-22",
+    "equity": 48407.6834,
+    "daily_pnl": 450.0432,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-23",
+    "equity": 48413.2751,
+    "daily_pnl": 5.5917,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-24",
+    "equity": 48823.0326,
+    "daily_pnl": 409.7575,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-26",
+    "equity": 49031.1093,
+    "daily_pnl": 208.0767,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-27",
+    "equity": 48564.106,
+    "daily_pnl": -467.0033,
+    "drawdown": -467.0033
+  },
+  {
+    "date": "2026-06-28",
+    "equity": 49183.0952,
+    "daily_pnl": 618.9892,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-29",
+    "equity": 49252.7225,
+    "daily_pnl": 69.6273,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-06-30",
+    "equity": 49253.6392,
+    "daily_pnl": 0.9167,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-01",
+    "equity": 49256.7402,
+    "daily_pnl": 3.101,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-03",
+    "equity": 49248.7468,
+    "daily_pnl": -7.9934,
+    "drawdown": -7.9934
+  },
+  {
+    "date": "2026-07-04",
+    "equity": 49336.7242,
+    "daily_pnl": 87.9774,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-05",
+    "equity": 49357.6549,
+    "daily_pnl": 20.9307,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-06",
+    "equity": 49377.2287,
+    "daily_pnl": 19.5738,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-07",
+    "equity": 49478.113,
+    "daily_pnl": 100.8843,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-08",
+    "equity": 49535.8057,
+    "daily_pnl": 57.6927,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-09",
+    "equity": 49603.5654,
+    "daily_pnl": 67.7597,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-11",
+    "equity": 49616.3806,
+    "daily_pnl": 12.8152,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-12",
+    "equity": 49554.5468,
+    "daily_pnl": -61.8338,
+    "drawdown": -61.8338
+  },
+  {
+    "date": "2026-07-13",
+    "equity": 49556.6268,
+    "daily_pnl": 2.08,
+    "drawdown": -59.7538
+  },
+  {
+    "date": "2026-07-14",
+    "equity": 49591.4291,
+    "daily_pnl": 34.8023,
+    "drawdown": -24.9515
+  },
+  {
+    "date": "2026-07-15",
+    "equity": 49666.8201,
+    "daily_pnl": 75.391,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-16",
+    "equity": 49761.6656,
+    "daily_pnl": 94.8455,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-17",
+    "equity": 49818.9711,
+    "daily_pnl": 57.3055,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-18",
+    "equity": 49963.9383,
+    "daily_pnl": 144.9672,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-19",
+    "equity": 49999.3476,
+    "daily_pnl": 35.4093,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-20",
+    "equity": 50042.6573,
+    "daily_pnl": 43.3097,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-21",
+    "equity": 50080.9193,
+    "daily_pnl": 38.262,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-22",
+    "equity": 50236.5928,
+    "daily_pnl": 155.6735,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-23",
+    "equity": 50488.7748,
+    "daily_pnl": 252.182,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-24",
+    "equity": 50624.773,
+    "daily_pnl": 135.9982,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-25",
+    "equity": 50754.7946,
+    "daily_pnl": 130.0216,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-26",
+    "equity": 51086.922,
+    "daily_pnl": 332.1274,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-27",
+    "equity": 51202.4063,
+    "daily_pnl": 115.4843,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-28",
+    "equity": 51241.7071,
+    "daily_pnl": 39.3008,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-29",
+    "equity": 51396.1624,
+    "daily_pnl": 154.4553,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-30",
+    "equity": 51489.7855,
+    "daily_pnl": 93.6231,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-07-31",
+    "equity": 51521.4819,
+    "daily_pnl": 31.6964,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-01",
+    "equity": 51602.3819,
+    "daily_pnl": 80.9,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-02",
+    "equity": 51827.3538,
+    "daily_pnl": 224.9719,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-03",
+    "equity": 51888.9688,
+    "daily_pnl": 61.615,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-04",
+    "equity": 51932.873,
+    "daily_pnl": 43.9042,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-05",
+    "equity": 52016.1514,
+    "daily_pnl": 83.2784,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-06",
+    "equity": 52112.2662,
+    "daily_pnl": 96.1148,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-07",
+    "equity": 52209.3789,
+    "daily_pnl": 97.1127,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-08",
+    "equity": 52455.8534,
+    "daily_pnl": 246.4745,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-09",
+    "equity": 52395.655,
+    "daily_pnl": -60.1984,
+    "drawdown": -60.1984
+  },
+  {
+    "date": "2026-08-10",
+    "equity": 52408.9305,
+    "daily_pnl": 13.2755,
+    "drawdown": -46.9229
+  },
+  {
+    "date": "2026-08-11",
+    "equity": 52557.2537,
+    "daily_pnl": 148.3232,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-12",
+    "equity": 53123.6482,
+    "daily_pnl": 566.3945,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-13",
+    "equity": 53241.2995,
+    "daily_pnl": 117.6513,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-14",
+    "equity": 53360.296,
+    "daily_pnl": 118.9965,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-15",
+    "equity": 53576.161,
+    "daily_pnl": 215.865,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-16",
+    "equity": 53799.7971,
+    "daily_pnl": 223.6361,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-17",
+    "equity": 53932.3606,
+    "daily_pnl": 132.5635,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-18",
+    "equity": 54020.7334,
+    "daily_pnl": 88.3728,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-19",
+    "equity": 54026.3214,
+    "daily_pnl": 5.588,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-20",
+    "equity": 54082.0734,
+    "daily_pnl": 55.752,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-21",
+    "equity": 54167.5171,
+    "daily_pnl": 85.4437,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-22",
+    "equity": 54460.099,
+    "daily_pnl": 292.5819,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-23",
+    "equity": 55589.7292,
+    "daily_pnl": 1129.6302,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-24",
+    "equity": 61871.1635,
+    "daily_pnl": 6281.4343,
+    "drawdown": 0.0
+  },
+  {
+    "date": "2026-08-25",
+    "equity": 61909.3681,
+    "daily_pnl": 38.2046,
+    "drawdown": 0.0
+  }
+]

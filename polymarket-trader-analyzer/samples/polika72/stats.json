@@ -1,0 +1,727 @@
+{
+  "username": "polika72",
+  "wallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+  "identity": "one_sided_informed_scalper",
+  "market_making": {
+    "score": 65,
+    "label": "likely_market_maker",
+    "signals": [
+      "Fast round-trips (<2h) in 100% of two-sided markets",
+      "Avg sell > avg buy in 84% of markets (spread capture)",
+      "High-frequency cadence (median gap 45s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0068,
+      "fast_roundtrip_rate": 0.9984,
+      "spread_capture_rate": 0.8376,
+      "size_cv": 1.9148,
+      "median_gap_seconds": 45.0,
+      "outcome_counts": {
+        "Over": 14302,
+        "No": 1182,
+        "Yes": 4128,
+        "United States": 5,
+        "Germany": 2,
+        "Senegal": 2,
+        "Colombia": 8,
+        "Bosnia and Herzegovina": 2,
+        "Vila Nova FC": 1,
+        "Clube N\u00e1utico Capibaribe": 2,
+        "Panama": 2,
+        "Argentina": 6,
+        "Vasteraas SK": 2,
+        "FK Borac Banja Luka": 6,
+        "Zir\u0259 FK": 3,
+        "KF Shk\u00ebndija 79": 2,
+        "HNK Hajduk Split": 2,
+        "Hammarby IF": 7,
+        "Djurgardens IF": 2,
+        "PFK Levski Sofia": 8,
+        "FCI Levadia": 2,
+        "Liaoning Tieren FC": 5,
+        "Club Le\u00f3n FC": 2,
+        "AIK": 6,
+        "Sandefjord Fotball": 3,
+        "MH Hapoel Beer Sheva": 2,
+        "AA Ponte Preta": 6,
+        "FK Panev\u0117\u017eys": 2,
+        "FC Flora": 2,
+        "RSC Anderlecht": 2,
+        "FC Zimbru Chi\u015fin\u0103u": 2,
+        "FK Polissia": 4,
+        "FC Dinamo City": 2,
+        "FK Auda": 4,
+        "NK Vara\u017edin": 2,
+        "GKS GieKSa Katowice": 2,
+        "Gr\u00eamio FBPA": 3,
+        "SC Corinthians Paulista": 2,
+        "ASC O\u021belul Gala\u021bi": 2,
+        "Tianjin Jinmen Hu FC": 2,
+        "Jeonbuk Hyundai Motors FC": 6,
+        "Universitatea Craiova CS": 1,
+        "AD Pasto": 3,
+        "Portland Timbers": 2,
+        "SK Slavia Praha": 2,
+        "KFUM-Kameratene Oslo": 2,
+        "FC K\u00f8benhavn": 2,
+        "FK Bod\u00f8/Glimt": 3,
+        "Club Necaxa": 2,
+        "Sabah FK": 3,
+        "NK Celje": 2,
+        "CA Tigre": 2,
+        "Club Nacional de Football": 9,
+        "Fortaleza EC": 2,
+        "Al-Ittihad Club": 2,
+        "Club Puebla": 3,
+        "CD Guadalajara": 2,
+        "Tottenham Hotspur": 2,
+        "Cardiff City": 4,
+        "Aarhus GF": 3,
+        "MTK Budapest": 2,
+        "ACF Fiorentina": 4,
+        "Minnesota United FC": 4,
+        "Bay FC": 2,
+        "San Jose Earthquakes": 2,
+        "FK Zenit": 2,
+        "IFK Goteborg": 2,
+        "Sunderland AFC": 3,
+        "CA Newells Old Boys": 3,
+        "Paksi FC": 2,
+        "Zalaegerszeg TE": 5,
+        "CA Talleres": 2,
+        "Jeju SK FC": 4,
+        "AC Sparta Praha": 2,
+        "Charlotte FC": 1,
+        "CA Osasuna": 2,
+        "Real Betis Seville": 2,
+        "Troms\u00f8 IL": 2,
+        "CF Intercity": 2,
+        "Villarreal CF B": 3,
+        "Beijing Guoan FC": 7,
+        "Shenzhen Xinpengcheng FC": 4,
+        "Ansan Greeners FC": 4,
+        "LDU Quito": 3,
+        "Vancouver Whitecaps FC": 4,
+        "FC Ju\u00e1rez": 4,
+        "Galatasaray Istanbul": 3,
+        "Washington Spirit": 2,
+        "Coritiba FBC": 2,
+        "Fluminense FC": 2,
+        "FC Dallas": 2,
+        "FC Utrecht": 2,
+        "Jong FC Utrecht": 1,
+        "SC Braga": 1,
+        "Moreirense FC": 5,
+        "CSyD Defensa y Justicia": 3,
+        "FK Kauno \u017dalgiris": 2,
+        "CR Flamengo": 1,
+        "Quer\u00e9taro FC": 2,
+        "Tobyl FK": 1,
+        "Qaraba\u011f A\u011fdam FK": 2,
+        "FC Sheriff Tiraspol": 6,
+        "FC St. Gallen": 7,
+        "Ky\u014dto Sanga FC": 2,
+        "Suwon FC": 2,
+        "Real Sociedad San Sebastian": 2,
+        "Brentford FC": 2,
+        "Bologna FC": 2,
+        "Fulham FC": 2,
+        "Bodrum FK": 7,
+        "Istanbulspor AS": 2,
+        "AS Tren\u010d\u00edn": 2,
+        "FK \u017deleziarne Podbrezov\u00e1": 2,
+        "Fenerbah\u00e7e SK": 1,
+        "Inter Miami CF": 1,
+        "Bucheon FC 1995": 3,
+        "Lyngby BK": 2,
+        "Breidablik Kopavogur": 3,
+        "San Martin de Tucuman": 2,
+        "Monagas SC": 5,
+        "Deportivo Tachira": 1,
+        "Houston Dash": 2,
+        "Larne FC": 2,
+        "FC Midtjylland": 2,
+        "PFK CSKA Sofia": 1,
+        "Botafogo FR": 2,
+        "SV Zulte Waregem": 2,
+        "AS Saint-\u00c9tienne": 2,
+        "Sporting CP": 2,
+        "Forge FC Hamilton": 2,
+        "Orange County SC": 3,
+        "FC Tulsa": 2,
+        "Helsingborgs IF": 2,
+        "Heracles Almelo": 2
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "sports_totals": 40877.63,
+      "sports_match": 14704.2,
+      "other": 6180.6,
+      "crypto": 146.94
+    },
+    "category_counts": {
+      "sports_totals": 3558,
+      "sports_match": 1235,
+      "other": 625,
+      "crypto": 4
+    },
+    "slug_tokens": [
+      [
+        "ucl",
+        136
+      ],
+      [
+        "lal",
+        122
+      ],
+      [
+        "bun",
+        91
+      ],
+      [
+        "ten",
+        63
+      ],
+      [
+        "mma",
+        29
+      ]
+    ],
+    "primary": "sports_totals"
+  },
+  "counts": {
+    "activity": 22445,
+    "trades": 19978,
+    "buys": 9077,
+    "sells": 10901,
+    "closed_positions": 5035,
+    "open_positions": 424,
+    "markets_traded": 5422,
+    "activity_types": {
+      "DEPOSIT": 8,
+      "TRADE": 19978,
+      "REDEEM": 2321,
+      "MAKER_REBATE": 108,
+      "WITHDRAWAL": 20,
+      "TAKER_REBATE": 10
+    }
+  },
+  "span": {
+    "first_ts": 1773338353,
+    "last_ts": 1787672887,
+    "first_iso": "2026-03-12T17:59:13+00:00",
+    "last_iso": "2026-08-25T15:48:07+00:00",
+    "days_active_span": 165.91
+  },
+  "pnl": {
+    "cashflow_realized": 58204.9839,
+    "cashflow_core": 57699.0816,
+    "cashflow_detail": {
+      "buys_usdc": 203970.44145699855,
+      "sells_usdc": 259522.2648020036,
+      "redeems_usdc": 2147.2582870000015,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 481.53440000000006,
+      "taker_rebates_usdc": 24.3679,
+      "rewards_usdc": 0.0,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 61909.3681,
+    "closed_wins": 4032,
+    "closed_losses": 1003,
+    "closed_flat": 0,
+    "win_rate": 0.8008,
+    "profit_factor": 3.2979,
+    "win_pnl": 88851.5286,
+    "loss_pnl": -26942.1605,
+    "total_bought": 504409.1352,
+    "open_cash_pnl": -8115.1037,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -1917.627,
+    "leaderboard_all": {
+      "rank": "3244",
+      "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+      "userName": "polika72",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 1049905.188565,
+      "pnl": 57338.716846567695,
+      "profileImage": ""
+    }
+  },
+  "validation": {
+    "ok": true,
+    "all_checks_passed": true,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 57338.716846567695,
+        "ours": 57699.0816,
+        "ours_field": "cashflow_core",
+        "diff": 360.3648,
+        "match": true,
+        "volume_reference": 1049905.188565
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 52640.69,
+        "ours": 57699.0816,
+        "ours_field": "cashflow_core",
+        "diff": 5058.3916,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 24078,
+        "ours": 19978,
+        "diff": -4100,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.6567,
+        "ours": 0.8008,
+        "diff": 0.1441,
+        "match": false
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": 61909.3681,
+        "ours": 58204.9839,
+        "diff": -3704.3842,
+        "match": true,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": 58204.9839,
+      "cashflow_core": 57699.0816,
+      "closed_positions_sum": 61909.3681,
+      "trades": 19978,
+      "win_rate": 0.8008
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/polika72",
+      "raw_meta": {
+        "net_pnl": 52640.69,
+        "pos_realized_pnl": 52640.69,
+        "n_trades": 24078.0,
+        "total_buy": 277363.85,
+        "total_sell": 335178.97,
+        "total_redeem": 477.25,
+        "win_rate": 0.6567,
+        "profit_factor": 2.17,
+        "n_markets": 3529.0,
+        "n_buys": 10906.0,
+        "n_sells": 13172.0,
+        "n_redeems": 779.0
+      },
+      "headline_pnl": 52641.0,
+      "win_rate_pct": 66,
+      "smart_score": 98,
+      "n_trades": 24078,
+      "realized_pnl": 52640.69
+    },
+    "leaderboard": {
+      "rank": "3244",
+      "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+      "userName": "polika72",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 1049905.188565,
+      "pnl": 57338.716846567695,
+      "profileImage": ""
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/polika72",
+    "raw_meta": {
+      "net_pnl": 52640.69,
+      "pos_realized_pnl": 52640.69,
+      "n_trades": 24078.0,
+      "total_buy": 277363.85,
+      "total_sell": 335178.97,
+      "total_redeem": 477.25,
+      "win_rate": 0.6567,
+      "profit_factor": 2.17,
+      "n_markets": 3529.0,
+      "n_buys": 10906.0,
+      "n_sells": 13172.0,
+      "n_redeems": 779.0
+    },
+    "headline_pnl": 52641.0,
+    "win_rate_pct": 66,
+    "smart_score": 98,
+    "n_trades": 24078,
+    "realized_pnl": 52640.69
+  },
+  "leaderboard": {
+    "rank": "3244",
+    "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+    "userName": "polika72",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 1049905.188565,
+    "pnl": 57338.716846567695,
+    "profileImage": ""
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 717,
+      "wins": 298,
+      "losses": 100,
+      "win_rate": 0.7487,
+      "total_pnl": 2351.19,
+      "avg_pnl": 3.28,
+      "median_pnl": 0.0
+    },
+    "30s-2m": {
+      "n": 3234,
+      "wins": 2777,
+      "losses": 428,
+      "win_rate": 0.8665,
+      "total_pnl": 42763.37,
+      "avg_pnl": 13.22,
+      "median_pnl": 5.44
+    },
+    "2-5m": {
+      "n": 731,
+      "wins": 455,
+      "losses": 250,
+      "win_rate": 0.6454,
+      "total_pnl": 2609.46,
+      "avg_pnl": 3.57,
+      "median_pnl": 1.33
+    },
+    "5-15m": {
+      "n": 291,
+      "wins": 163,
+      "losses": 111,
+      "win_rate": 0.5949,
+      "total_pnl": 442.89,
+      "avg_pnl": 1.52,
+      "median_pnl": 1.7
+    },
+    "15m+": {
+      "n": 449,
+      "wins": 319,
+      "losses": 104,
+      "win_rate": 0.7541,
+      "total_pnl": 13742.46,
+      "avg_pnl": 30.61,
+      "median_pnl": 11.51
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 909,
+      "wins": 545,
+      "losses": 223,
+      "win_rate": 0.7096,
+      "total_pnl": 4517.97,
+      "avg_pnl": 4.97,
+      "median_pnl": 1.04
+    },
+    "20-40\u00a2": {
+      "n": 1285,
+      "wins": 933,
+      "losses": 275,
+      "win_rate": 0.7724,
+      "total_pnl": 15230.7,
+      "avg_pnl": 11.85,
+      "median_pnl": 4.65
+    },
+    "40-60\u00a2": {
+      "n": 1494,
+      "wins": 1153,
+      "losses": 252,
+      "win_rate": 0.8206,
+      "total_pnl": 22820.93,
+      "avg_pnl": 15.28,
+      "median_pnl": 4.65
+    },
+    "60-80\u00a2": {
+      "n": 1463,
+      "wins": 1171,
+      "losses": 185,
+      "win_rate": 0.8636,
+      "total_pnl": 17974.32,
+      "avg_pnl": 12.29,
+      "median_pnl": 3.72
+    },
+    "80-100\u00a2": {
+      "n": 271,
+      "wins": 210,
+      "losses": 58,
+      "win_rate": 0.7836,
+      "total_pnl": 1365.45,
+      "avg_pnl": 5.04,
+      "median_pnl": 1.17
+    }
+  },
+  "family": {
+    "Over/Under": {
+      "n": 3543,
+      "wins": 2575,
+      "losses": 730,
+      "win_rate": 0.7791,
+      "total_pnl": 40676.84,
+      "avg_pnl": 11.48,
+      "median_pnl": 3.39
+    },
+    "Yes/No moneyline": {
+      "n": 1743,
+      "wins": 1328,
+      "losses": 247,
+      "win_rate": 0.8432,
+      "total_pnl": 21062.8,
+      "avg_pnl": 12.08,
+      "median_pnl": 4.5
+    },
+    "Other": {
+      "n": 136,
+      "wins": 109,
+      "losses": 16,
+      "win_rate": 0.872,
+      "total_pnl": 169.73,
+      "avg_pnl": 1.25,
+      "median_pnl": 0.54
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 77447.15,
+      "taker_usdc": 124336.45,
+      "maker_pct": 38.38,
+      "taker_pct": 61.62,
+      "maker_fills": 3899,
+      "taker_fills": 5178
+    },
+    "exit": {
+      "maker_usdc": 127828.29,
+      "taker_usdc": 132567.8,
+      "maker_pct": 49.09,
+      "taker_pct": 50.91,
+      "maker_fills": 6935,
+      "taker_fills": 3966
+    },
+    "patterns": {
+      "enter_taker_exit_taker": 1468,
+      "enter_taker_exit_maker": 1723,
+      "enter_maker_exit_maker": 1062,
+      "enter_maker_exit_taker": 680
+    },
+    "classified": true
+  },
+  "both_sides": {
+    "n": 37,
+    "rate": 0.0068
+  },
+  "clip_size_usdc": {
+    "median": 10.567,
+    "mean": 23.1344,
+    "p90": 52.52,
+    "p99": 179.4,
+    "max": 1479.6322
+  },
+  "campaigns": {
+    "n": 317,
+    "pct": 5.85,
+    "avg_entries": 2.09,
+    "pnl": 9675.13,
+    "avg_pnl": 30.52,
+    "win_rate": 0.8202,
+    "single_n": 5105,
+    "single_pnl": 52234.23,
+    "single_avg_pnl": 10.23
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.9035,
+    "hold_to_resolution_style_n": 489,
+    "redeems_usdc": 2147.2582870000015,
+    "merges_usdc": 0.0
+  },
+  "equity": {
+    "final": 58204.9839,
+    "max_drawdown": -601.1817,
+    "max_drawdown_pct_of_peak": -0.0128,
+    "longest_drawdown_days": 0,
+    "daily_sharpe_ann": 14.692,
+    "n_days": 166
+  },
+  "contribution": {
+    "top10_winners_pnl": 6051.67,
+    "top10_winners_share_of_wins_pct": 6.82,
+    "top10_losers_pnl": -4429.46,
+    "top10_losers_share_of_losses_pct": 16.48,
+    "top10_winners": [
+      {
+        "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 3.5",
+        "pnl": 841.93,
+        "hold_s": 4344
+      },
+      {
+        "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 4.5",
+        "pnl": 670.1,
+        "hold_s": 1728
+      },
+      {
+        "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 3.5",
+        "pnl": 645.59,
+        "hold_s": 362
+      },
+      {
+        "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 4.5",
+        "pnl": 640.86,
+        "hold_s": 4724
+      },
+      {
+        "title": "Will Club Atl\u00e9tico de Madrid win on 2026-08-23?",
+        "pnl": 629.26,
+        "hold_s": 138
+      },
+      {
+        "title": "Will Real Madrid CF win on 2026-03-17?",
+        "pnl": 564.47,
+        "hold_s": 786
+      },
+      {
+        "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 2.5",
+        "pnl": 544.83,
+        "hold_s": 4208
+      },
+      {
+        "title": "Paris Saint-Germain vs. Aston Villa: O/U 3.5",
+        "pnl": 508.06,
+        "hold_s": 58
+      },
+      {
+        "title": "Will Paris Saint-Germain FC win on 2026-04-14?",
+        "pnl": 504.28,
+        "hold_s": 44
+      },
+      {
+        "title": "Netherlands vs. Japan: O/U 4.5",
+        "pnl": 502.3,
+        "hold_s": 570
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "C\u00e1diz CF vs. C\u00f3rdoba CF: O/U 4.5",
+        "pnl": -384.52,
+        "hold_s": 1410
+      },
+      {
+        "title": "Real Madrid CF vs. Deportivo Alav\u00e9s: O/U 3.5",
+        "pnl": -388.13,
+        "hold_s": 136
+      },
+      {
+        "title": "UD Las Palmas vs. SD Huesca: O/U 3.5",
+        "pnl": -414.38,
+        "hold_s": 490
+      },
+      {
+        "title": "Sporting CP vs. Arsenal FC: O/U 2.5",
+        "pnl": -416.8,
+        "hold_s": 74
+      },
+      {
+        "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 4.5",
+        "pnl": -427.77,
+        "hold_s": 490
+      },
+      {
+        "title": "Will Paris Saint-Germain FC win on 2026-04-22?",
+        "pnl": -427.8,
+        "hold_s": 46
+      },
+      {
+        "title": "Paris Saint-Germain FC vs. Liverpool FC: O/U 3.5",
+        "pnl": -471.2,
+        "hold_s": 4560
+      },
+      {
+        "title": "Panama vs. England: Both Teams to Score",
+        "pnl": -474.32,
+        "hold_s": 226
+      },
+      {
+        "title": "Melbourne City FC vs. Western Sydney Wanderers FC: O/U 4.5",
+        "pnl": -508.72,
+        "hold_s": 5250
+      },
+      {
+        "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 3.5",
+        "pnl": -515.82,
+        "hold_s": 406
+      }
+    ],
+    "profit_factor": 3.2979
+  },
+  "adverse_management": {
+    "n_early_adverse": 400,
+    "avg_pnl": -12.86,
+    "median_t_first_sell": 56,
+    "median_hold": 83
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 4058,
+    "avg_pnl": 18.13,
+    "median_mfe_capture": 1.0,
+    "mean_mfe_capture": 0.9582
+  },
+  "avg_down": {
+    "n_losers": 993,
+    "n_losers_with_red_buys": 15,
+    "pct_losers": 1.51,
+    "total_delta_if_skipped_on_losers": 62.53,
+    "global_fifo_sim": 58487.99,
+    "global_fifo_never_red_buy": 58429.79,
+    "global_delta": -58.2
+  },
+  "latency": {
+    "time_to_mfe_median": 64,
+    "time_to_mfe_p25": 44,
+    "time_to_mfe_p75": 99,
+    "time_to_mfe_p90": 389,
+    "mfe_ge_10c_n": 3256,
+    "mfe_ge_10c_within_30s": 222,
+    "mfe_ge_10c_within_60s": 1624,
+    "pct_big_within_60s": 49.88
+  },
+  "risk": {
+    "max_inventory_shares": 6000.0,
+    "max_dd": -601.1817,
+    "max_dd_pct": -0.0128,
+    "longest_dd_days": 0
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.6,
+    "both_sides_rate": 0.008,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -2214.9721,
+    "time_to_mfe_med": 64
+  }
+}

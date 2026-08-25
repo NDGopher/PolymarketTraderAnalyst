@@ -1,0 +1,95 @@
+{
+  "ok": false,
+  "all_checks_passed": false,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 442550.5051193265,
+      "ours": 169030.3377,
+      "ours_field": "cashflow_realized",
+      "diff": -273520.1674,
+      "match": false,
+      "volume_reference": 14224366.922521997
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 519173.09,
+      "ours": 169030.3377,
+      "ours_field": "cashflow_realized",
+      "diff": -350142.7523,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 29173,
+      "ours": 17934,
+      "diff": -11239,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.5402,
+      "ours": 0.987,
+      "diff": 0.4468,
+      "match": false
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 3581052.072,
+      "ours": 169030.3377,
+      "diff": -3412021.7343,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": 169030.3377,
+    "cashflow_core": 160372.0018,
+    "closed_positions_sum": 3581052.072,
+    "trades": 17934,
+    "win_rate": 0.987
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/WTSA",
+    "raw_meta": {
+      "net_pnl": 519173.09,
+      "pos_realized_pnl": 519173.09,
+      "n_trades": 29173.0,
+      "total_buy": 4029032.25,
+      "total_sell": 2020306.08,
+      "total_redeem": 0.0,
+      "win_rate": 0.5402,
+      "profit_factor": 0.9,
+      "n_markets": 92.0,
+      "n_buys": 23110.0,
+      "n_sells": 6063.0,
+      "n_redeems": 0.0
+    },
+    "headline_pnl": 519173.0,
+    "win_rate_pct": 54,
+    "smart_score": 29,
+    "n_trades": 29173,
+    "realized_pnl": 519173.09
+  },
+  "leaderboard": {
+    "rank": "471",
+    "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+    "userName": "WTSA",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 14224366.922521997,
+    "pnl": 442550.5051193265,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}

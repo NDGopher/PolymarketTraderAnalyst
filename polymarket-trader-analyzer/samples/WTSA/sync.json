@@ -1,0 +1,18 @@
+{
+  "wallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+  "username": "WTSA",
+  "mode": "full",
+  "duration_s": 34.08,
+  "counts": {
+    "activity": 17990,
+    "trades": 17934,
+    "closed_positions": 77,
+    "open_positions": 76
+  },
+  "last_activity_ts": 1785341556,
+  "last_trade_ts": 1785341556,
+  "resolved": {
+    "username": "WTSA",
+    "wallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8"
+  }
+}

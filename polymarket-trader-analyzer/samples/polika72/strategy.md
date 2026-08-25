@@ -17,11 +17,11 @@
 | Profit factor | 3.2979 |
 | Gross wins / losses | $88,851.53 / -$26,942.16 |
 | Equity max drawdown | -$2,214.97 |
-| Polymarket leaderboard (ALL) | $57,308.48 PnL · vol $1,049,789.09 · rank 3243 |
+| Polymarket leaderboard (ALL) | $57,338.72 PnL · vol $1,049,905.19 · rank 3244 |
 
 ## Source validation
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57308.48389656782 diff=390.5977
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57338.716846567695 diff=360.3648
 - **DRIFT** `polydata` realized_pnl: ours=57699.0816 ref=52640.69 diff=5058.3916
 - **DRIFT** `polydata` n_trades: ours=19978 ref=24078 diff=-4100
 - **DRIFT** `polydata` win_rate: ours=0.8008 ref=0.6567 diff=0.1441
@@ -40,7 +40,9 @@ Supporting rates — both-sides markets: 0.0068, fast round-trips: 0.9984, sprea
 
 ## Exact edge thesis
 
-polika72 primarily monetizes **liquidity / short-horizon mean reversion on sports markets**, not long-shot directional political bets. The tape shows repeated buy-then-sell (and often both-outcome inventory) with average exit price above average entry — the classic market-maker / scalper fingerprint.
+polika72 looks like a **market maker on a scanner score**, but the fill tape says otherwise: they almost never warehouse both outcomes. The real edge is **one-sided live scalping** on sports (especially O/U Over) — buy a clip, sell the same outcome higher within seconds/minutes, maker-biased, rinse and repeat. Equity compounds from thousands of small positive markouts, not from predicting finals.
+
+See `bot_playbook.md` for the full entry/management/exit autopsy and bot architecture.
 
 ## Where the money comes from
 
@@ -149,4 +151,4 @@ These vignettes are reconstructed from fills: average entry, average exit, hold 
 - Maker rebates: $481.53
 - Taker rebates: $24.37
 
-_Generated 2026-08-25T16:07:25.501303+00:00_
+_Generated 2026-08-25T16:46:52.153099+00:00_

@@ -83,8 +83,8 @@ pre{white-space:pre-wrap;background:#0f172a;padding:12px;border-radius:8px;overf
   </ul>
   <p><a href="{{ url_for('update', name=name) }}">Incremental update</a></p>
 </div>
-{% if preview %}
-<div class=card><h3>Autopsy preview</h3><pre>{{ preview }}</pre></div>
+  {% if preview %}
+<div class=card><h3>MASTER / autopsy preview</h3><pre>{{ preview }}</pre></div>
 {% endif %}
 </body></html>
 """
@@ -140,9 +140,11 @@ def trader(name: str):
     for base in (SAMPLES / name, REPORTS / name):
         if base.exists():
             files.extend(x.name for x in base.glob("*") if x.is_file())
-            autopsy = base / "autopsy.md"
-            if autopsy.exists() and not preview:
-                preview = autopsy.read_text()[:12000]
+            for candidate in ("MASTER.md", "autopsy.md", "strategy.md"):
+                p = base / candidate
+                if p.exists() and not preview:
+                    preview = p.read_text()[:16000]
+                    break
     return render_template_string(TRADER, name=name, files=sorted(set(files)), preview=preview)
 
 

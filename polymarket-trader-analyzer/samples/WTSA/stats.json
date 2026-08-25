@@ -1,0 +1,549 @@
+{
+  "username": "WTSA",
+  "wallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+  "identity": "directional_hold_to_resolution",
+  "market_making": {
+    "score": 10,
+    "label": "directional_or_unclear",
+    "signals": [
+      "High-frequency cadence (median gap 2s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0164,
+      "fast_roundtrip_rate": 0.0,
+      "spread_capture_rate": 0.0,
+      "size_cv": 7.8314,
+      "median_gap_seconds": 2,
+      "outcome_counts": {
+        "No": 5163,
+        "Yes": 6888,
+        "Portland Timbers": 6,
+        "Under": 3403,
+        "Over": 2441,
+        "Associa\u00e7\u00e3o Chapecoense de Futebol": 33
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "other": 799148.23,
+      "sports_totals": 399961.76,
+      "sports_match": 111448.19
+    },
+    "category_counts": {
+      "other": 30,
+      "sports_totals": 22,
+      "sports_match": 9
+    },
+    "slug_tokens": [],
+    "primary": "other"
+  },
+  "counts": {
+    "activity": 17990,
+    "trades": 17934,
+    "buys": 17934,
+    "sells": 0,
+    "closed_positions": 77,
+    "open_positions": 76,
+    "markets_traded": 61,
+    "activity_types": {
+      "DEPOSIT": 3,
+      "TRADE": 17934,
+      "MAKER_REBATE": 10,
+      "REDEEM": 31,
+      "TAKER_REBATE": 12
+    }
+  },
+  "span": {
+    "first_ts": 1784179612,
+    "last_ts": 1785341556,
+    "first_iso": "2026-07-16T05:26:52+00:00",
+    "last_iso": "2026-07-29T16:12:36+00:00",
+    "days_active_span": 13.45
+  },
+  "pnl": {
+    "cashflow_realized": 169030.3377,
+    "cashflow_core": 160372.0018,
+    "cashflow_detail": {
+      "buys_usdc": 2409822.9143779106,
+      "sells_usdc": 0.0,
+      "redeems_usdc": 2570194.916162,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 4798.419900000001,
+      "taker_rebates_usdc": 3859.916,
+      "rewards_usdc": 0.0,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 3581052.072,
+    "closed_wins": 76,
+    "closed_losses": 1,
+    "closed_flat": 0,
+    "win_rate": 0.987,
+    "profit_factor": 122.4517,
+    "win_pnl": 3610537.4731,
+    "loss_pnl": -29485.4011,
+    "total_bought": 7424102.6122,
+    "open_cash_pnl": -3180033.8287,
+    "open_current_value": 51477.1829,
+    "open_realized_pnl": -42449.5417,
+    "leaderboard_all": {
+      "rank": "471",
+      "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+      "userName": "WTSA",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 14224366.922521997,
+      "pnl": 442550.5051193265,
+      "profileImage": ""
+    }
+  },
+  "validation": {
+    "ok": false,
+    "all_checks_passed": false,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 442550.5051193265,
+        "ours": 169030.3377,
+        "ours_field": "cashflow_realized",
+        "diff": -273520.1674,
+        "match": false,
+        "volume_reference": 14224366.922521997
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 519173.09,
+        "ours": 169030.3377,
+        "ours_field": "cashflow_realized",
+        "diff": -350142.7523,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 29173,
+        "ours": 17934,
+        "diff": -11239,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.5402,
+        "ours": 0.987,
+        "diff": 0.4468,
+        "match": false
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": 3581052.072,
+        "ours": 169030.3377,
+        "diff": -3412021.7343,
+        "match": false,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": 169030.3377,
+      "cashflow_core": 160372.0018,
+      "closed_positions_sum": 3581052.072,
+      "trades": 17934,
+      "win_rate": 0.987
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/WTSA",
+      "raw_meta": {
+        "net_pnl": 519173.09,
+        "pos_realized_pnl": 519173.09,
+        "n_trades": 29173.0,
+        "total_buy": 4029032.25,
+        "total_sell": 2020306.08,
+        "total_redeem": 0.0,
+        "win_rate": 0.5402,
+        "profit_factor": 0.9,
+        "n_markets": 92.0,
+        "n_buys": 23110.0,
+        "n_sells": 6063.0,
+        "n_redeems": 0.0
+      },
+      "headline_pnl": 519173.0,
+      "win_rate_pct": 54,
+      "smart_score": 29,
+      "n_trades": 29173,
+      "realized_pnl": 519173.09
+    },
+    "leaderboard": {
+      "rank": "471",
+      "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+      "userName": "WTSA",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 14224366.922521997,
+      "pnl": 442550.5051193265,
+      "profileImage": ""
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/WTSA",
+    "raw_meta": {
+      "net_pnl": 519173.09,
+      "pos_realized_pnl": 519173.09,
+      "n_trades": 29173.0,
+      "total_buy": 4029032.25,
+      "total_sell": 2020306.08,
+      "total_redeem": 0.0,
+      "win_rate": 0.5402,
+      "profit_factor": 0.9,
+      "n_markets": 92.0,
+      "n_buys": 23110.0,
+      "n_sells": 6063.0,
+      "n_redeems": 0.0
+    },
+    "headline_pnl": 519173.0,
+    "win_rate_pct": 54,
+    "smart_score": 29,
+    "n_trades": 29173,
+    "realized_pnl": 519173.09
+  },
+  "leaderboard": {
+    "rank": "471",
+    "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
+    "userName": "WTSA",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 14224366.922521997,
+    "pnl": 442550.5051193265,
+    "profileImage": ""
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 2,
+      "wins": 1,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 17684.36,
+      "avg_pnl": 8842.18,
+      "median_pnl": 8842.18
+    },
+    "30s-2m": {
+      "n": 3,
+      "wins": 1,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 49617.1,
+      "avg_pnl": 16539.03,
+      "median_pnl": 0.0
+    },
+    "2-5m": {
+      "n": 4,
+      "wins": 2,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 14490.79,
+      "avg_pnl": 3622.7,
+      "median_pnl": 75.86
+    },
+    "5-15m": {
+      "n": 12,
+      "wins": 7,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 344851.76,
+      "avg_pnl": 28737.65,
+      "median_pnl": 18962.59
+    },
+    "15m+": {
+      "n": 40,
+      "wins": 21,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 883914.17,
+      "avg_pnl": 22097.85,
+      "median_pnl": 255.16
+    }
+  },
+  "entry_price_band": {
+    "20-40\u00a2": {
+      "n": 13,
+      "wins": 4,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 182533.9,
+      "avg_pnl": 14041.07,
+      "median_pnl": 0.0
+    },
+    "40-60\u00a2": {
+      "n": 38,
+      "wins": 23,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 1039138.45,
+      "avg_pnl": 27345.75,
+      "median_pnl": 16479.49
+    },
+    "60-80\u00a2": {
+      "n": 10,
+      "wins": 5,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 88885.82,
+      "avg_pnl": 8888.58,
+      "median_pnl": 75.86
+    }
+  },
+  "family": {
+    "Yes/No moneyline": {
+      "n": 38,
+      "wins": 20,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 890430.19,
+      "avg_pnl": 23432.37,
+      "median_pnl": 199.15
+    },
+    "Over/Under": {
+      "n": 21,
+      "wins": 10,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 395661.76,
+      "avg_pnl": 18841.04,
+      "median_pnl": 0.0
+    },
+    "Other": {
+      "n": 2,
+      "wins": 2,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 24466.22,
+      "avg_pnl": 12233.11,
+      "median_pnl": 12233.11
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 1302287.2,
+      "taker_usdc": 1080379.92,
+      "maker_pct": 54.66,
+      "taker_pct": 45.34,
+      "maker_fills": 17802,
+      "taker_fills": 132
+    },
+    "exit": {
+      "maker_usdc": 0.0,
+      "taker_usdc": 0.0,
+      "maker_pct": null,
+      "taker_pct": null,
+      "maker_fills": 0,
+      "taker_fills": 0
+    },
+    "patterns": {},
+    "classified": true
+  },
+  "both_sides": {
+    "n": 1,
+    "rate": 0.0164
+  },
+  "clip_size_usdc": {
+    "median": 4.8064,
+    "mean": 132.8575,
+    "p90": 93.195,
+    "p99": 2610.63,
+    "max": 45780.0
+  },
+  "campaigns": {
+    "n": 0,
+    "pct": 0.0,
+    "avg_entries": null,
+    "pnl": 0,
+    "avg_pnl": null,
+    "win_rate": null,
+    "single_n": 61,
+    "single_pnl": 1310558.18,
+    "single_avg_pnl": 21484.56
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.4262,
+    "hold_to_resolution_style_n": 61,
+    "redeems_usdc": 2570194.916162,
+    "merges_usdc": 0.0
+  },
+  "equity": {
+    "final": 169030.3377,
+    "max_drawdown": -596843.0806,
+    "max_drawdown_pct_of_peak": -4.416,
+    "longest_drawdown_days": 1,
+    "daily_sharpe_ann": 0.715,
+    "n_days": 15
+  },
+  "contribution": {
+    "top10_winners_pnl": 833981.93,
+    "top10_winners_share_of_wins_pct": 63.64,
+    "top10_losers_pnl": 0.0,
+    "top10_losers_share_of_losses_pct": null,
+    "top10_winners": [
+      {
+        "title": "Will Inter Miami CF win on 2026-07-25?",
+        "pnl": 157319.67,
+        "hold_s": 507
+      },
+      {
+        "title": "CD Guadalajara vs. FC Ju\u00e1rez: O/U 2.5",
+        "pnl": 100914.54,
+        "hold_s": 2347
+      },
+      {
+        "title": "Will Colorado Rapids SC win on 2026-07-22?",
+        "pnl": 94438.28,
+        "hold_s": 16314
+      },
+      {
+        "title": "Club Tijuana vs. Club Le\u00f3n FC: O/U 2.5",
+        "pnl": 85702.47,
+        "hold_s": 2742
+      },
+      {
+        "title": "Will CR Flamengo win on 2026-07-29?",
+        "pnl": 85019.66,
+        "hold_s": 13449
+      },
+      {
+        "title": "Will CF Montr\u00e9al win on 2026-07-16?",
+        "pnl": 80881.53,
+        "hold_s": 64975
+      },
+      {
+        "title": "Will Philadelphia Union win on 2026-07-25?",
+        "pnl": 71898.79,
+        "hold_s": 20192
+      },
+      {
+        "title": "Will Fluminense FC win on 2026-07-17?",
+        "pnl": 55072.39,
+        "hold_s": 3066
+      },
+      {
+        "title": "Will Athletic Club win on 2026-07-28?",
+        "pnl": 53117.48,
+        "hold_s": 14302
+      },
+      {
+        "title": "Will CA San Lorenzo de Almagro win on 2026-07-28?",
+        "pnl": 49617.1,
+        "hold_s": 99
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "Will EC Bahia win on 2026-07-26?",
+        "pnl": 0.0,
+        "hold_s": 3075
+      },
+      {
+        "title": "Will Cruzeiro EC win on 2026-07-26?",
+        "pnl": 0.0,
+        "hold_s": 2856
+      },
+      {
+        "title": "Will CA Rosario Central win on 2026-07-28?",
+        "pnl": 0.0,
+        "hold_s": 22418
+      },
+      {
+        "title": "Will EC Juventude win on 2026-07-28?",
+        "pnl": 0.0,
+        "hold_s": 15699
+      },
+      {
+        "title": "Will AA Ponte Preta win on 2026-07-28?",
+        "pnl": 0.0,
+        "hold_s": 14458
+      },
+      {
+        "title": "CA Rosario Central vs. Racing Club: O/U 2.5",
+        "pnl": 0.0,
+        "hold_s": 13509
+      },
+      {
+        "title": "Will CA Banfield win on 2026-07-28?",
+        "pnl": 0.0,
+        "hold_s": 1161
+      },
+      {
+        "title": "AA Ponte Preta vs. Athletic Club: O/U 2.5",
+        "pnl": 0.0,
+        "hold_s": 865
+      },
+      {
+        "title": "CA Rosario Central vs. Racing Club: O/U 1.5",
+        "pnl": 0.0,
+        "hold_s": 36
+      },
+      {
+        "title": "Will SC Internacional win on 2026-07-29?",
+        "pnl": 0.0,
+        "hold_s": 12626
+      }
+    ],
+    "profit_factor": 122.4517
+  },
+  "adverse_management": {
+    "n_early_adverse": 0,
+    "avg_pnl": null,
+    "median_t_first_sell": null,
+    "median_hold": null
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 0,
+    "avg_pnl": null,
+    "median_mfe_capture": null,
+    "mean_mfe_capture": null
+  },
+  "avg_down": {
+    "n_losers": 0,
+    "n_losers_with_red_buys": 0,
+    "pct_losers": 0.0,
+    "total_delta_if_skipped_on_losers": 0,
+    "global_fifo_sim": 0.0,
+    "global_fifo_never_red_buy": 0.0,
+    "global_delta": 0.0
+  },
+  "latency": {
+    "time_to_mfe_median": null,
+    "time_to_mfe_p25": null,
+    "time_to_mfe_p75": null,
+    "time_to_mfe_p90": null,
+    "mfe_ge_10c_n": 0,
+    "mfe_ge_10c_within_30s": 0,
+    "mfe_ge_10c_within_60s": 0,
+    "pct_big_within_60s": 0.0
+  },
+  "risk": {
+    "max_inventory_shares": 299998.81,
+    "max_dd": -596843.0806,
+    "max_dd_pct": -4.416,
+    "longest_dd_days": 1
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -601.1817,
+    "time_to_mfe_med": 64
+  }
+}

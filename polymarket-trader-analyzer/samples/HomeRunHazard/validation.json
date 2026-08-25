@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "all_checks_passed": true,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 2248711.8139243205,
+      "ours": 2231236.7279,
+      "ours_field": "closed_positions_sum",
+      "diff": -17475.086,
+      "match": true,
+      "volume_reference": 264797406.18681303
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 2250300.68,
+      "ours": 2231236.7279,
+      "ours_field": "closed_positions_sum",
+      "diff": -19063.9521,
+      "match": true
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 268747,
+      "ours": 26170,
+      "diff": -242577,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.5418,
+      "ours": 0.5402,
+      "diff": -0.0016,
+      "match": true
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 2231236.7279,
+      "ours": -2419854.5251,
+      "diff": -4651091.253,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": -2419854.5251,
+    "cashflow_core": -2438366.8288,
+    "closed_positions_sum": 2231236.7279,
+    "trades": 26170,
+    "win_rate": 0.5402
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/HomeRunHazard",
+    "raw_meta": {
+      "net_pnl": 2250300.68,
+      "pos_realized_pnl": 2250300.68,
+      "n_trades": 268747.0,
+      "total_buy": 4661238.79,
+      "total_sell": 1491265.38,
+      "total_redeem": 1193.27,
+      "win_rate": 0.5418,
+      "profit_factor": 1.05,
+      "n_markets": 5245.0,
+      "n_buys": 20074.0,
+      "n_sells": 7154.0,
+      "n_redeems": 25964.0
+    },
+    "headline_pnl": 2250301.0,
+    "win_rate_pct": 54,
+    "smart_score": 60,
+    "n_trades": 268747,
+    "realized_pnl": 2250300.68
+  },
+  "leaderboard": {
+    "rank": "67",
+    "proxyWallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+    "userName": "HomeRunHazard",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 264797406.18681303,
+    "pnl": 2248711.8139243205,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}

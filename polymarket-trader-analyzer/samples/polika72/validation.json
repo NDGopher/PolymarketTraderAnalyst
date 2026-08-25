@@ -6,12 +6,12 @@
     {
       "source": "polymarket_leaderboard_ALL",
       "metric": "pnl",
-      "reference": 57308.48389656782,
+      "reference": 57338.716846567695,
       "ours": 57699.0816,
       "ours_field": "cashflow_core",
-      "diff": 390.5977,
+      "diff": 360.3648,
       "match": true,
-      "volume_reference": 1049789.088565
+      "volume_reference": 1049905.188565
     },
     {
       "source": "polydata",
@@ -78,13 +78,13 @@
     "realized_pnl": 52640.69
   },
   "leaderboard": {
-    "rank": "3243",
+    "rank": "3244",
     "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
     "userName": "polika72",
     "xUsername": "",
     "verifiedBadge": false,
-    "vol": 1049789.088565,
-    "pnl": 57308.48389656782,
+    "vol": 1049905.188565,
+    "pnl": 57338.716846567695,
     "profileImage": ""
   },
   "notes": [

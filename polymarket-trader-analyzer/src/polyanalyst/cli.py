@@ -186,6 +186,21 @@ def autopsy_cmd(
     console.print(f"Reports: {result['paths']['samples']}")
 
 
+@app.command("master")
+def master_cmd(
+    trader: str = typer.Argument(..., help="Username already synced/autopsied"),
+    data_dir: Optional[Path] = typer.Option(None, "--data-dir"),
+    verbose: bool = typer.Option(False, "--verbose", "-v"),
+) -> None:
+    """Build one massive MASTER.md/json + equity CSVs for a trader (human + bot)."""
+    _setup_logging(verbose)
+    from .mega_report import generate_master
+
+    path = generate_master(_app(data_dir), trader)
+    console.print(f"[bold]MASTER written:[/bold] {path}")
+    console.print(f"Also: {path.parent / 'MASTER.json'}, {path.parent / 'equity_curve.csv'}")
+
+
 @app.command("ui")
 def ui_cmd(port: int = typer.Option(8787, "--port")) -> None:
     """Launch local research UI."""
