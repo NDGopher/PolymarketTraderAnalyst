@@ -88,12 +88,20 @@ def write_strategy_report(summary: dict[str, Any], validation: dict[str, Any] | 
     # Core thesis
     lines.append("## Exact edge thesis")
     lines.append("")
-    if mm["score"] >= 45:
+    both_rate = (mm.get("metrics") or {}).get("both_sides_rate") or 0
+    if both_rate < 0.05 and mm["score"] >= 45:
+        lines.append(
+            f"{u} looks like a **market maker on a scanner score**, but the fill tape says otherwise: "
+            "they almost never warehouse both outcomes. The real edge is **one-sided live scalping** "
+            "on sports (especially O/U Over) — buy a clip, sell the same outcome higher within "
+            "seconds/minutes, maker-biased, rinse and repeat. Equity compounds from thousands of "
+            "small positive markouts, not from predicting finals."
+        )
+    elif mm["score"] >= 45:
         lines.append(
             f"{u} primarily monetizes **liquidity / short-horizon mean reversion on sports markets**, "
             "not long-shot directional political bets. The tape shows repeated buy-then-sell "
-            "(and often both-outcome inventory) with average exit price above average entry — "
-            "the classic market-maker / scalper fingerprint."
+            "with average exit price above average entry — the classic scalper / spread fingerprint."
         )
     else:
         lines.append(
@@ -101,6 +109,10 @@ def write_strategy_report(summary: dict[str, Any], validation: dict[str, Any] | 
             "rather than harvesting bid-ask. Study their win rate by category and entry timing "
             "relative to kickoff / resolution."
         )
+    lines.append("")
+    lines.append(
+        f"See `bot_playbook.md` for the full entry/management/exit autopsy and bot architecture."
+    )
     lines.append("")
 
     # Category

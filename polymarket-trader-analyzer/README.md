@@ -39,10 +39,25 @@ Accepts `@username`, bare username, or `0x` wallet.
 
 Per trader under `data/reports/<username>/`:
 
-- `strategy.md` — deep strategy write-up  
+- `bot_playbook.md` — elite replication / bot architecture from fill autopsies  
+- `strategy.md` — strategy dossier  
+- `deep_dive.json` — entry/exit/hold/band statistics + example timelines  
 - `summary.json` — metrics  
 - `markets.json` — per-market round trips  
 - `validation.json` — PnL source checks  
+
+Checked-in sample for **polika72**: `samples/polika72/`.
+
+## polika72 headline (from full unique-fill history)
+
+| Metric | Value |
+|---|---|
+| Unique trades | 19,978 |
+| Markets | 5,422 |
+| Cashflow realized | ~$58,205 |
+| Polymarket leaderboard ALL | ~$57,308 (**MATCH**) |
+| Closed-legs sum | ~$61,909 |
+| Edge | One-sided live O/U **Over** scalps (BUY→SELL), median hold ~66s, maker-biased |
 
 ## PnL definitions
 

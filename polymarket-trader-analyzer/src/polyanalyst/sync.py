@@ -125,9 +125,31 @@ class SyncService:
         resolved = self.resolve_and_register(identifier)
         wallet = resolved["wallet"]
         state = self.store.get_sync_state(wallet)
-        if force_full or not state or not state.get("last_activity_ts"):
-            result = self.full_sync(wallet, resolved["username"])
+        counts = self.store.counts(wallet)
+        # Resume: if we already have a large history but sync_state was lost, prefer incremental
+        has_history = (counts.get("trades") or 0) > 100 and (counts.get("activity") or 0) > 100
+        if force_full or not has_history:
+            if force_full or not state or not state.get("last_activity_ts"):
+                result = self.full_sync(wallet, resolved["username"])
+            else:
+                result = self.incremental_sync(wallet)
         else:
+            # Ensure positions fresh even if we skip full trade re-pull
+            if not state or not state.get("last_activity_ts"):
+                # Reconstruct sync cursor from DB
+                activity = self.store.load_activity(wallet)
+                trades = self.store.load_trades(wallet)
+                last_act = max((int(r.get("timestamp") or 0) for r in activity), default=0)
+                last_tr = max((int(r.get("timestamp") or 0) for r in trades), default=0)
+                self.store.set_sync_state(
+                    wallet,
+                    last_activity_ts=last_act,
+                    last_trade_ts=last_tr,
+                    last_full_sync_at=time.time(),
+                    activity_count=counts["activity"],
+                    trade_count=counts["trades"],
+                    notes="cursor_rebuilt_from_db",
+                )
             result = self.incremental_sync(wallet)
         result["username"] = resolved["username"]
         result["resolved"] = {

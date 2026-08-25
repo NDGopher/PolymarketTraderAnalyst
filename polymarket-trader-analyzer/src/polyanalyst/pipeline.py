@@ -8,8 +8,10 @@ from pathlib import Path
 from typing import Any, Optional
 
 from .analytics import analyze_trader
+from .bot_playbook import write_bot_playbook
 from .client import PolymarketClient
 from .compare import compare_traders, format_comparison
+from .deep_dive import deep_analyze
 from .store import Store
 from .strategy import write_strategy_report
 from .sync import SyncService
@@ -55,11 +57,16 @@ class AnalyzerApp:
             leaderboard=leaderboard,
         )
 
+        deep = deep_analyze(trades, closed, activity, opened)
+        # Drop bulky episode_stats from default summary embed; keep on disk
+        episode_stats = deep.pop("episode_stats", [])
+
         polydata = None if skip_polydata else fetch_polydata_snapshot(username)
         validation = validate_against_sources(summary, leaderboard=leaderboard, polydata=polydata)
         strategy_md = write_strategy_report(summary, validation)
+        bot_md = write_bot_playbook(username, wallet, summary, deep, validation)
 
-        run_id = self.store.save_analysis(wallet, username, summary, strategy_md, validation)
+        run_id = self.store.save_analysis(wallet, username, summary, strategy_md + "\n\n" + bot_md, validation)
 
         # Persist artifacts (summary without full markets dump for readability + full json)
         trader_dir = self.reports_dir / username
@@ -68,20 +75,29 @@ class AnalyzerApp:
         markets = slim.pop("markets", [])
         (trader_dir / "summary.json").write_text(json.dumps(slim, indent=2))
         (trader_dir / "markets.json").write_text(json.dumps(markets, indent=2))
+        (trader_dir / "deep_dive.json").write_text(
+            json.dumps({**deep, "episode_stats_count": len(episode_stats)}, indent=2)
+        )
+        (trader_dir / "episode_stats.json").write_text(json.dumps(episode_stats))
         (trader_dir / "validation.json").write_text(json.dumps(validation, indent=2))
         (trader_dir / "strategy.md").write_text(strategy_md)
+        (trader_dir / "bot_playbook.md").write_text(bot_md)
         (trader_dir / "sync.json").write_text(json.dumps(sync_result, indent=2))
 
         return {
             "run_id": run_id,
             "sync": sync_result,
             "summary": slim,
+            "deep": deep,
             "validation": validation,
             "strategy_md": strategy_md,
+            "bot_md": bot_md,
             "paths": {
                 "summary": str(trader_dir / "summary.json"),
                 "markets": str(trader_dir / "markets.json"),
+                "deep_dive": str(trader_dir / "deep_dive.json"),
                 "strategy": str(trader_dir / "strategy.md"),
+                "bot_playbook": str(trader_dir / "bot_playbook.md"),
                 "validation": str(trader_dir / "validation.json"),
             },
         }
