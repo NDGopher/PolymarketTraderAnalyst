@@ -145,6 +145,19 @@ def compare_cmd(
     console.print(f"\nSaved: {result['path']}")
 
 
+@app.command("sync")
+def sync_cmd(
+    trader: str = typer.Argument(...),
+    full: bool = typer.Option(False, "--full"),
+    data_dir: Optional[Path] = typer.Option(None, "--data-dir"),
+    verbose: bool = typer.Option(False, "--verbose", "-v"),
+) -> None:
+    """Only sync history (no analysis)."""
+    _setup_logging(verbose)
+    result = _app(data_dir).sync.sync(trader, force_full=full)
+    console.print(json.dumps(result, indent=2))
+
+
 @app.command("autopsy")
 def autopsy_cmd(
     trader: str = typer.Argument(...),
