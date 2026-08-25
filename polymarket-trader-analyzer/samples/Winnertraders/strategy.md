@@ -17,11 +17,11 @@
 | Profit factor | 0.9845 |
 | Gross wins / losses | $53,716.10 / -$54,560.40 |
 | Equity max drawdown | -$1,644.51 |
-| Polymarket leaderboard (ALL) | $17,578.63 PnL · vol $2,032,708.12 · rank 9026 |
+| Polymarket leaderboard (ALL) | $17,578.63 PnL · vol $2,032,708.12 · rank 9024 |
 
 ## Source validation
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63184561259 diff=-916.7275
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63221507959 diff=-916.7279
 - **MATCH** `polydata` realized_pnl: ours=16661.9043 ref=17655.63 diff=-993.7257
 - **DRIFT** `polydata` n_trades: ours=20475 ref=16162 diff=4313
 - **DRIFT** `polydata` win_rate: ours=0.6511 ref=0.5926 diff=0.0585
@@ -151,4 +151,4 @@ These vignettes are reconstructed from fills: average entry, average exit, hold 
 - Maker rebates: $378.60
 - Taker rebates: $15.58
 
-_Generated 2026-08-25T16:47:01.145390+00:00_
+_Generated 2026-08-25T21:55:36.206160+00:00_

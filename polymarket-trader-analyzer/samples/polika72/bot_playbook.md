@@ -20,8 +20,8 @@ Heuristic label from the scanner may still say `likely_market_maker` because of 
 | Core cashflow (ex-rebates) | $57,699.08 |
 | Closed-position legs sum | $61,909.37 |
 | Leg win rate / profit factor | 80.08% / 3.2979 |
-| Polymarket leaderboard ALL | $57,338.72 · vol $1,049,905.19 · rank 3244 |
-| polymarket_leaderboard_ALL pnl | ref=57338.716846567695 ours=57699.0816 (MATCH) |
+| Polymarket leaderboard ALL | $57,431.61 · vol $1,050,695.46 · rank 3240 |
+| polymarket_leaderboard_ALL pnl | ref=57431.607979187625 ours=57699.0816 (MATCH) |
 | polydata realized_pnl | ref=52640.69 ours=57699.0816 (DRIFT) |
 | polydata n_trades | ref=24078 ours=19978 (DRIFT) |
 | polydata win_rate | ref=0.6567 ours=0.8008 (DRIFT) |
@@ -387,4 +387,4 @@ flatten_before_resolution: true
 
 _Research only. Latency, fee tier, and sports-data quality decide whether this edge is yours._
 
-_Generated 2026-08-25T16:46:52.153331+00:00_
+_Generated 2026-08-25T21:55:26.000575+00:00_

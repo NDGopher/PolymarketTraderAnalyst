@@ -4,7 +4,7 @@
 - Identity: **`hybrid_liquidity_scalper`**
 - Primary focus: **sports_totals**
 - Span: 2026-01-16T07:37:14+00:00 → 2026-08-23T03:42:52+00:00 (218.84 days)
-- Generated: 2026-08-25T16:47:01.145115+00:00
+- Generated: 2026-08-25T21:55:36.205871+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -13,10 +13,10 @@
 | Our cashflow realized | $16,661.90 | trades=20,475 |
 | Our core cashflow | $16,180.10 | buys=11,909 sells=8,566 |
 | Our closed-legs sum | -$844.29 | closed=3,001 WR=65.1% |
-| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9026 |
+| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9024 |
 | PolyData | $17,655.63 | trades=16162 WR=0.5926 |
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63184561259 diff=-916.7275
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63221507959 diff=-916.7279
 - **MATCH** `polydata` realized_pnl: ours=16661.9043 ref=17655.63 diff=-993.7257
 - **DRIFT** `polydata` n_trades: ours=20475 ref=16162 diff=4313
 - **DRIFT** `polydata` win_rate: ours=0.6511 ref=0.5926 diff=0.0585

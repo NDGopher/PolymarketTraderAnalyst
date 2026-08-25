@@ -4,7 +4,7 @@
 - Identity: **`one_sided_informed_scalper`**
 - Primary focus: **sports_totals**
 - Span: 2026-03-12T17:59:13+00:00 → 2026-08-25T15:48:07+00:00 (165.91 days)
-- Generated: 2026-08-25T16:46:52.152804+00:00
+- Generated: 2026-08-25T21:55:25.999959+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -13,10 +13,10 @@
 | Our cashflow realized | $58,204.98 | trades=19,978 |
 | Our core cashflow | $57,699.08 | buys=9,077 sells=10,901 |
 | Our closed-legs sum | $61,909.37 | closed=5,035 WR=80.1% |
-| Polymarket leaderboard ALL | $57,338.72 | vol=$1,049,905.19 rank=3244 |
+| Polymarket leaderboard ALL | $57,431.61 | vol=$1,050,695.46 rank=3240 |
 | PolyData | $52,640.69 | trades=24078 WR=0.6567 |
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57338.716846567695 diff=360.3648
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57431.607979187625 diff=267.4736
 - **DRIFT** `polydata` realized_pnl: ours=57699.0816 ref=52640.69 diff=5058.3916
 - **DRIFT** `polydata` n_trades: ours=19978 ref=24078 diff=-4100
 - **DRIFT** `polydata` win_rate: ours=0.8008 ref=0.6567 diff=0.1441
@@ -133,11 +133,11 @@
 | trades | 19978 | 19978 |
 | cashflow_pnl | 58204.9839 | 58204.9839 |
 | win_rate | 0.8008 | 0.8008 |
-| entry_taker_pct | 61.62 | 61.6 |
-| both_sides_rate | 0.0068 | 0.008 |
+| entry_taker_pct | 61.62 | 61.62 |
+| both_sides_rate | 0.0068 | 0.0068 |
 | median_clip | 10.567 | 11.29 |
 | campaign_pct | 5.85 | 5.85 |
-| max_dd | -601.1817 | -2214.9721 |
+| max_dd | -601.1817 | -601.1817 |
 | time_to_mfe_med | 64 | 64 |
 
 ### Steal / avoid

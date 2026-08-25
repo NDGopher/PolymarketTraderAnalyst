@@ -4,7 +4,7 @@
 - Identity: **`two_sided_inventory_mm`**
 - Primary focus: **sports_totals**
 - Span: 2026-04-24T14:39:18+00:00 → 2026-05-07T12:35:18+00:00 (12.91 days)
-- Generated: 2026-08-25T16:46:54.878991+00:00
+- Generated: 2026-08-25T21:55:29.505724+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -13,13 +13,13 @@
 | Our cashflow realized | -$2,419,854.53 | trades=26,170 |
 | Our core cashflow | -$2,438,366.83 | buys=26,170 sells=0 |
 | Our closed-legs sum | $2,231,236.73 | closed=42,624 WR=54.0% |
-| Polymarket leaderboard ALL | $2,248,711.81 | vol=$264,797,406.19 rank=67 |
-| PolyData | $2,250,300.68 | trades=268747 WR=0.5418 |
+| Polymarket leaderboard ALL | $2,246,399.48 | vol=$265,604,734.45 rank=67 |
+| PolyData | $2,267,102.44 | trades=269390 WR=0.5416 |
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=2231236.7279 ref=2248711.8139243205 diff=-17475.086
-- **MATCH** `polydata` realized_pnl: ours=2231236.7279 ref=2250300.68 diff=-19063.9521
-- **DRIFT** `polydata` n_trades: ours=26170 ref=268747 diff=-242577
-- **MATCH** `polydata` win_rate: ours=0.5402 ref=0.5418 diff=-0.0016
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=2231236.7279 ref=2246399.481092342 diff=-15162.7532
+- **MATCH** `polydata` realized_pnl: ours=2231236.7279 ref=2267102.44 diff=-35865.7121
+- **DRIFT** `polydata` n_trades: ours=26170 ref=269390 diff=-243220
+- **MATCH** `polydata` win_rate: ours=0.5402 ref=0.5416 diff=-0.0014
 - **DRIFT** `internal` cashflow_vs_closed: ours=-2419854.5251 ref=2231236.7279 diff=-4651091.253
 
 ## B. Core identity

@@ -4,7 +4,7 @@
 - Identity: **`directional_hold_to_resolution`**
 - Primary focus: **other**
 - Span: 2026-07-16T05:26:52+00:00 → 2026-07-29T16:12:36+00:00 (13.45 days)
-- Generated: 2026-08-25T16:47:02.752161+00:00
+- Generated: 2026-08-25T21:55:37.988626+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -13,10 +13,10 @@
 | Our cashflow realized | $169,030.34 | trades=17,934 |
 | Our core cashflow | $160,372.00 | buys=17,934 sells=0 |
 | Our closed-legs sum | $3,581,052.07 | closed=77 WR=98.7% |
-| Polymarket leaderboard ALL | $442,550.51 | vol=$14,224,366.92 rank=471 |
+| Polymarket leaderboard ALL | $445,687.54 | vol=$14,298,289.84 rank=468 |
 | PolyData | $519,173.09 | trades=29173 WR=0.5402 |
 
-- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=442550.5051193265 diff=-273520.1674
+- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=445687.5427547153 diff=-276657.2051
 - **DRIFT** `polydata` realized_pnl: ours=169030.3377 ref=519173.09 diff=-350142.7523
 - **DRIFT** `polydata` n_trades: ours=17934 ref=29173 diff=-11239
 - **DRIFT** `polydata` win_rate: ours=0.987 ref=0.5402 diff=0.4468

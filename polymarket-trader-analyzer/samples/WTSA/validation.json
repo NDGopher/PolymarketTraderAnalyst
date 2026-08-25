@@ -6,12 +6,12 @@
     {
       "source": "polymarket_leaderboard_ALL",
       "metric": "pnl",
-      "reference": 442550.5051193265,
+      "reference": 445687.5427547153,
       "ours": 169030.3377,
       "ours_field": "cashflow_realized",
-      "diff": -273520.1674,
+      "diff": -276657.2051,
       "match": false,
-      "volume_reference": 14224366.922521997
+      "volume_reference": 14298289.835262999
     },
     {
       "source": "polydata",
@@ -78,13 +78,13 @@
     "realized_pnl": 519173.09
   },
   "leaderboard": {
-    "rank": "471",
+    "rank": "468",
     "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
     "userName": "WTSA",
     "xUsername": "",
     "verifiedBadge": false,
-    "vol": 14224366.922521997,
-    "pnl": 442550.5051193265,
+    "vol": 14298289.835262999,
+    "pnl": 445687.5427547153,
     "profileImage": ""
   },
   "notes": [
