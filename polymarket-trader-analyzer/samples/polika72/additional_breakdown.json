@@ -1,0 +1,1746 @@
+{
+  "hold_time": {
+    "<30s": {
+      "n": 717,
+      "wins": 298,
+      "losses": 100,
+      "win_rate": 0.7487,
+      "total_pnl": 2351.19,
+      "avg_pnl": 3.28,
+      "median_pnl": 0.0
+    },
+    "30s-2m": {
+      "n": 3234,
+      "wins": 2777,
+      "losses": 428,
+      "win_rate": 0.8665,
+      "total_pnl": 42763.37,
+      "avg_pnl": 13.22,
+      "median_pnl": 5.44
+    },
+    "2-5m": {
+      "n": 731,
+      "wins": 455,
+      "losses": 250,
+      "win_rate": 0.6454,
+      "total_pnl": 2609.46,
+      "avg_pnl": 3.57,
+      "median_pnl": 1.33
+    },
+    "5-15m": {
+      "n": 291,
+      "wins": 163,
+      "losses": 111,
+      "win_rate": 0.5949,
+      "total_pnl": 442.89,
+      "avg_pnl": 1.52,
+      "median_pnl": 1.7
+    },
+    "15m+": {
+      "n": 449,
+      "wins": 319,
+      "losses": 104,
+      "win_rate": 0.7541,
+      "total_pnl": 13742.46,
+      "avg_pnl": 30.61,
+      "median_pnl": 11.51
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 909,
+      "wins": 545,
+      "losses": 223,
+      "win_rate": 0.7096,
+      "total_pnl": 4517.97,
+      "avg_pnl": 4.97,
+      "median_pnl": 1.04
+    },
+    "20-40\u00a2": {
+      "n": 1285,
+      "wins": 933,
+      "losses": 275,
+      "win_rate": 0.7724,
+      "total_pnl": 15230.7,
+      "avg_pnl": 11.85,
+      "median_pnl": 4.65
+    },
+    "40-60\u00a2": {
+      "n": 1494,
+      "wins": 1153,
+      "losses": 252,
+      "win_rate": 0.8206,
+      "total_pnl": 22820.93,
+      "avg_pnl": 15.28,
+      "median_pnl": 4.65
+    },
+    "60-80\u00a2": {
+      "n": 1463,
+      "wins": 1171,
+      "losses": 185,
+      "win_rate": 0.8636,
+      "total_pnl": 17974.32,
+      "avg_pnl": 12.29,
+      "median_pnl": 3.72
+    },
+    "80-100\u00a2": {
+      "n": 271,
+      "wins": 210,
+      "losses": 58,
+      "win_rate": 0.7836,
+      "total_pnl": 1365.45,
+      "avg_pnl": 5.04,
+      "median_pnl": 1.17
+    }
+  },
+  "family": {
+    "Over/Under": {
+      "n": 3543,
+      "wins": 2575,
+      "losses": 730,
+      "win_rate": 0.7791,
+      "total_pnl": 40676.84,
+      "avg_pnl": 11.48,
+      "median_pnl": 3.39
+    },
+    "Yes/No moneyline": {
+      "n": 1743,
+      "wins": 1328,
+      "losses": 247,
+      "win_rate": 0.8432,
+      "total_pnl": 21062.8,
+      "avg_pnl": 12.08,
+      "median_pnl": 4.5
+    },
+    "Other": {
+      "n": 136,
+      "wins": 109,
+      "losses": 16,
+      "win_rate": 0.872,
+      "total_pnl": 169.73,
+      "avg_pnl": 1.25,
+      "median_pnl": 0.54
+    }
+  },
+  "campaigns": {
+    "n_markets_with_reentry": 317,
+    "pct_markets": 5.85,
+    "avg_entries": 2.09,
+    "campaign_pnl": 9675.13,
+    "campaign_avg_pnl": 30.52,
+    "campaign_win_rate": 0.8202,
+    "single_entry_n": 5105,
+    "single_entry_pnl": 52234.23,
+    "single_entry_avg_pnl": 10.23,
+    "single_entry_win_rate": 0.735,
+    "best_examples": [
+      {
+        "title": "Odense BK vs. Randers FC: O/U 2.5",
+        "pnl": 358.54,
+        "hold_s": 4262,
+        "n_entries": 3,
+        "n_fills": 45,
+        "avg_entry": 0.5035,
+        "avg_exit": 0.7144,
+        "fills": [
+          {
+            "iso": "2026-04-19T12:19:02+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 265.2,
+            "price": 0.45,
+            "usdc": 119.34,
+            "role": "taker",
+            "net_after": 265.2,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 263.68,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 262.17,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 260.65,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 259.14,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 257.62,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 256.11,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 254.59,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 253.08,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 251.56,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 250.05,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 248.53,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 247.02,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 245.5,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 243.99,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 242.47,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 240.96,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 239.44,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 237.93,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 236.41,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 234.9,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 233.38,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.27,
+            "price": 0.66,
+            "usdc": 1.5,
+            "role": "maker",
+            "net_after": 231.11,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.27,
+            "price": 0.66,
+            "usdc": 1.5,
+            "role": "maker",
+            "net_after": 228.84,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 227.32,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 225.81,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 224.29,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 222.78,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 221.26,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 219.75,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 218.23,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 216.72,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 215.2,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 213.68,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 212.17,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.52,
+            "price": 0.66,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 210.65,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:20:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 210.4,
+            "price": 0.65,
+            "usdc": 136.76,
+            "role": "maker",
+            "net_after": 0.25,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-04-19T13:18:30+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 329.7,
+            "price": 0.35,
+            "usdc": 115.39,
+            "role": "taker",
+            "net_after": 329.95,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-04-19T13:20:08+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 41.77,
+            "price": 0.6,
+            "usdc": 25.06,
+            "role": "maker",
+            "net_after": 288.19,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:20:10+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 3.33,
+            "price": 0.6,
+            "usdc": 2.0,
+            "role": "maker",
+            "net_after": 284.85,
+            "mark": ""
+          }
+        ]
+      },
+      {
+        "title": "Odense BK vs. Randers FC: O/U 3.5",
+        "pnl": 334.65,
+        "hold_s": 5204,
+        "n_entries": 2,
+        "n_fills": 37,
+        "avg_entry": 0.2289,
+        "avg_exit": 0.4104,
+        "fills": [
+          {
+            "iso": "2026-04-19T12:19:02+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 29.16,
+            "price": 0.24,
+            "usdc": 7.0,
+            "role": "taker",
+            "net_after": 29.16,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-04-19T12:19:02+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 225.9,
+            "price": 0.24,
+            "usdc": 54.22,
+            "role": "taker",
+            "net_after": 255.06,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:19:06+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 32.54,
+            "price": 0.27,
+            "usdc": 8.79,
+            "role": "maker",
+            "net_after": 287.6,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:22:02+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 52.0,
+            "price": 0.37,
+            "usdc": 19.24,
+            "role": "maker",
+            "net_after": 235.6,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:22:26+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.78,
+            "price": 0.36,
+            "usdc": 1.0,
+            "role": "maker",
+            "net_after": 232.82,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:23:08+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 82.6,
+            "price": 0.34,
+            "usdc": 28.08,
+            "role": "maker",
+            "net_after": 150.22,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:23:08+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 9.5,
+            "price": 0.34,
+            "usdc": 3.23,
+            "role": "maker",
+            "net_after": 140.72,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:23:10+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 117.65,
+            "price": 0.34,
+            "usdc": 40.0,
+            "role": "maker",
+            "net_after": 23.08,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:28:48+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 5.0,
+            "price": 0.3,
+            "usdc": 1.5,
+            "role": "taker",
+            "net_after": 18.08,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T12:31:48+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 5.0,
+            "price": 0.3,
+            "usdc": 1.5,
+            "role": "taker",
+            "net_after": 13.08,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:18:30+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 222.2,
+            "price": 0.13,
+            "usdc": 28.89,
+            "role": "taker",
+            "net_after": 235.28,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:18:32+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 222.2,
+            "price": 0.13,
+            "usdc": 28.89,
+            "role": "taker",
+            "net_after": 457.48,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:18:34+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 222.2,
+            "price": 0.15,
+            "usdc": 33.33,
+            "role": "maker",
+            "net_after": 679.68,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:20:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 58.26,
+            "price": 0.24,
+            "usdc": 13.98,
+            "role": "maker",
+            "net_after": 621.42,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:20:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 80.49,
+            "price": 0.24,
+            "usdc": 19.32,
+            "role": "maker",
+            "net_after": 540.92,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:20:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 83.33,
+            "price": 0.24,
+            "usdc": 20.0,
+            "role": "maker",
+            "net_after": 457.59,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:21:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 222.1,
+            "price": 0.25,
+            "usdc": 55.52,
+            "role": "taker",
+            "net_after": 235.49,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:21:06+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 13.4,
+            "price": 0.2425,
+            "usdc": 3.25,
+            "role": "taker",
+            "net_after": 222.09,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:21:10+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 208.7,
+            "price": 0.22,
+            "usdc": 45.91,
+            "role": "maker",
+            "net_after": 13.39,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:24:04+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 8.33,
+            "price": 0.24,
+            "usdc": 2.0,
+            "role": "taker",
+            "net_after": 5.06,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:28:48+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 254.16,
+            "price": 0.2297,
+            "usdc": 58.39,
+            "role": "taker",
+            "net_after": 259.22,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:28:48+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 254.16,
+            "price": 0.23,
+            "usdc": 58.46,
+            "role": "taker",
+            "net_after": 513.38,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:28:48+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 99.85,
+            "price": 0.2396,
+            "usdc": 23.93,
+            "role": "taker",
+            "net_after": 613.23,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:28:50+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 154.33,
+            "price": 0.24,
+            "usdc": 37.04,
+            "role": "maker",
+            "net_after": 767.56,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:29:54+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 13.73,
+            "price": 0.51,
+            "usdc": 7.0,
+            "role": "maker",
+            "net_after": 753.83,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:29:54+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.96,
+            "price": 0.51,
+            "usdc": 1.51,
+            "role": "maker",
+            "net_after": 750.87,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:30:14+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 100.0,
+            "price": 0.5,
+            "usdc": 50.0,
+            "role": "maker",
+            "net_after": 650.87,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:30:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 153.9,
+            "price": 0.49,
+            "usdc": 75.41,
+            "role": "maker",
+            "net_after": 496.97,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:30:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 254.0,
+            "price": 0.49,
+            "usdc": 124.46,
+            "role": "maker",
+            "net_after": 242.97,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:30:24+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 237.2,
+            "price": 0.49,
+            "usdc": 116.23,
+            "role": "maker",
+            "net_after": 5.77,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:31:18+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 5.6,
+            "price": 0.51,
+            "usdc": 2.86,
+            "role": "maker",
+            "net_after": 0.17,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-04-19T13:44:38+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 92.4,
+            "price": 0.66,
+            "usdc": 60.98,
+            "role": "maker",
+            "net_after": 92.57,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-04-19T13:44:38+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 32.99,
+            "price": 0.66,
+            "usdc": 21.77,
+            "role": "maker",
+            "net_after": 125.56,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:45:40+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 28.89,
+            "price": 0.99,
+            "usdc": 28.6,
+            "role": "maker",
+            "net_after": 96.67,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:45:46+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.11,
+            "price": 0.99,
+            "usdc": 2.09,
+            "role": "maker",
+            "net_after": 94.56,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:45:46+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 30.69,
+            "price": 0.99,
+            "usdc": 30.38,
+            "role": "maker",
+            "net_after": 63.87,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T13:45:46+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 63.41,
+            "price": 0.99,
+            "usdc": 62.78,
+            "role": "maker",
+            "net_after": 0.46,
+            "mark": "FLAT"
+          }
+        ]
+      },
+      {
+        "title": "Iraq vs. Norway: Draw at halftime?",
+        "pnl": 333.67,
+        "hold_s": 507,
+        "n_entries": 2,
+        "n_fills": 6,
+        "avg_entry": 0.2439,
+        "avg_exit": 0.8618,
+        "fills": [
+          {
+            "iso": "2026-06-16T22:43:25+00:00",
+            "side": "BUY",
+            "outcome": "No",
+            "size": 288.45,
+            "price": 0.21,
+            "usdc": 60.57,
+            "role": "taker",
+            "net_after": 288.45,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-06-16T22:43:25+00:00",
+            "side": "BUY",
+            "outcome": "No",
+            "size": 288.45,
+            "price": 0.21,
+            "usdc": 60.57,
+            "role": "taker",
+            "net_after": 576.9,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:44:07+00:00",
+            "side": "SELL",
+            "outcome": "No",
+            "size": 288.3,
+            "price": 0.86,
+            "usdc": 247.94,
+            "role": "taker",
+            "net_after": 288.6,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:44:07+00:00",
+            "side": "SELL",
+            "outcome": "No",
+            "size": 288.3,
+            "price": 0.8637,
+            "usdc": 249.0,
+            "role": "taker",
+            "net_after": 0.3,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-06-16T22:51:46+00:00",
+            "side": "BUY",
+            "outcome": "Yes",
+            "size": 58.8,
+            "price": 0.51,
+            "usdc": 29.99,
+            "role": "maker",
+            "net_after": 59.1,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-06-16T22:51:52+00:00",
+            "side": "BUY",
+            "outcome": "Yes",
+            "size": 14.7,
+            "price": 0.51,
+            "usdc": 7.5,
+            "role": "maker",
+            "net_after": 73.8,
+            "mark": ""
+          }
+        ]
+      },
+      {
+        "title": "Iraq vs. Norway: O/U 3.5",
+        "pnl": 294.08,
+        "hold_s": 528,
+        "n_entries": 2,
+        "n_fills": 10,
+        "avg_entry": 0.7411,
+        "avg_exit": 0.8442,
+        "fills": [
+          {
+            "iso": "2026-06-16T22:43:25+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 696.04,
+            "price": 0.64,
+            "usdc": 445.47,
+            "role": "maker",
+            "net_after": 696.04,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-06-16T22:43:25+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 857.8,
+            "price": 0.64,
+            "usdc": 548.99,
+            "role": "maker",
+            "net_after": 1553.84,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:43:25+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 161.76,
+            "price": 0.64,
+            "usdc": 103.53,
+            "role": "maker",
+            "net_after": 1715.6,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:43:56+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 857.7,
+            "price": 0.84,
+            "usdc": 720.47,
+            "role": "taker",
+            "net_after": 857.9,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:43:56+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 857.7,
+            "price": 0.84,
+            "usdc": 720.47,
+            "role": "taker",
+            "net_after": 0.2,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-06-16T22:51:47+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 319.55,
+            "price": 0.88,
+            "usdc": 281.2,
+            "role": "maker",
+            "net_after": 319.75,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-06-16T22:51:47+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 623.85,
+            "price": 0.88,
+            "usdc": 548.99,
+            "role": "maker",
+            "net_after": 943.6,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:51:50+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 304.3,
+            "price": 0.88,
+            "usdc": 267.78,
+            "role": "maker",
+            "net_after": 1247.9,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:52:13+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 623.7,
+            "price": 0.85,
+            "usdc": 530.14,
+            "role": "taker",
+            "net_after": 624.2,
+            "mark": ""
+          },
+          {
+            "iso": "2026-06-16T22:52:13+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 623.7,
+            "price": 0.85,
+            "usdc": 530.14,
+            "role": "taker",
+            "net_after": 0.5,
+            "mark": "FLAT"
+          }
+        ]
+      },
+      {
+        "title": "Will FC Nantes win on 2026-04-19?",
+        "pnl": 240.79,
+        "hold_s": 6336,
+        "n_entries": 2,
+        "n_fills": 7,
+        "avg_entry": 0.4057,
+        "avg_exit": 0.7162,
+        "fills": [
+          {
+            "iso": "2026-04-19T15:24:14+00:00",
+            "side": "BUY",
+            "outcome": "Yes",
+            "size": 129.16,
+            "price": 0.48,
+            "usdc": 62.0,
+            "role": "maker",
+            "net_after": 129.16,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-04-19T15:24:14+00:00",
+            "side": "BUY",
+            "outcome": "Yes",
+            "size": 129.18,
+            "price": 0.48,
+            "usdc": 62.01,
+            "role": "maker",
+            "net_after": 258.34,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T15:25:08+00:00",
+            "side": "SELL",
+            "outcome": "Yes",
+            "size": 129.0,
+            "price": 0.6207,
+            "usdc": 80.08,
+            "role": "taker",
+            "net_after": 129.34,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T15:25:08+00:00",
+            "side": "SELL",
+            "outcome": "Yes",
+            "size": 129.0,
+            "price": 0.62,
+            "usdc": 79.98,
+            "role": "taker",
+            "net_after": 0.34,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-04-19T15:25:08+00:00",
+            "side": "SELL",
+            "outcome": "Yes",
+            "size": 129.0,
+            "price": 0.62,
+            "usdc": 79.98,
+            "role": "taker",
+            "net_after": -128.66,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-19T17:09:14+00:00",
+            "side": "BUY",
+            "outcome": "No",
+            "size": 181.73,
+            "price": 0.3,
+            "usdc": 54.52,
+            "role": "taker",
+            "net_after": 53.07,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-04-19T17:09:50+00:00",
+            "side": "SELL",
+            "outcome": "No",
+            "size": 185.6,
+            "price": 0.9163,
+            "usdc": 170.07,
+            "role": "taker",
+            "net_after": -132.53,
+            "mark": ""
+          }
+        ]
+      },
+      {
+        "title": "Gwangju FC vs. FC Anyang: O/U 4.5",
+        "pnl": 226.58,
+        "hold_s": 2034,
+        "n_entries": 2,
+        "n_fills": 14,
+        "avg_entry": 0.2406,
+        "avg_exit": 0.393,
+        "fills": [
+          {
+            "iso": "2026-04-26T08:10:26+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 83.33,
+            "price": 0.08,
+            "usdc": 6.67,
+            "role": "maker",
+            "net_after": 83.33,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-04-26T08:13:42+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 83.2,
+            "price": 0.12,
+            "usdc": 9.98,
+            "role": "maker",
+            "net_after": 0.13,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-04-26T08:17:56+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 28.98,
+            "price": 0.17,
+            "usdc": 4.93,
+            "role": "taker",
+            "net_after": 29.11,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-04-26T08:17:56+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 28.98,
+            "price": 0.17,
+            "usdc": 4.93,
+            "role": "taker",
+            "net_after": 58.09,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:17:56+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 28.98,
+            "price": 0.17,
+            "usdc": 4.93,
+            "role": "taker",
+            "net_after": 87.07,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:19:12+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 28.4,
+            "price": 0.35,
+            "usdc": 9.94,
+            "role": "maker",
+            "net_after": 58.67,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:19:12+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 30.4,
+            "price": 0.34,
+            "usdc": 10.34,
+            "role": "maker",
+            "net_after": 28.27,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:42:54+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 47.38,
+            "price": 0.36,
+            "usdc": 17.06,
+            "role": "taker",
+            "net_after": 75.65,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:42:54+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 58.65,
+            "price": 0.3575,
+            "usdc": 20.97,
+            "role": "taker",
+            "net_after": 134.3,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:42:54+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 58.66,
+            "price": 0.36,
+            "usdc": 21.12,
+            "role": "taker",
+            "net_after": 192.96,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:44:00+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 60.9,
+            "price": 0.63,
+            "usdc": 38.37,
+            "role": "maker",
+            "net_after": 132.06,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:44:10+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 9.0,
+            "price": 0.65,
+            "usdc": 5.85,
+            "role": "taker",
+            "net_after": 123.06,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:44:16+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 15.87,
+            "price": 0.63,
+            "usdc": 10.0,
+            "role": "maker",
+            "net_after": 107.18,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-26T08:44:20+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 21.22,
+            "price": 0.63,
+            "usdc": 13.37,
+            "role": "maker",
+            "net_after": 85.96,
+            "mark": ""
+          }
+        ]
+      },
+      {
+        "title": "FC Internazionale Milano vs. Cagliari Calcio: O/U 2.5",
+        "pnl": 220.53,
+        "hold_s": 240,
+        "n_entries": 2,
+        "n_fills": 7,
+        "avg_entry": 0.351,
+        "avg_exit": 0.6701,
+        "fills": [
+          {
+            "iso": "2026-04-17T19:59:42+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 23.33,
+            "price": 0.24,
+            "usdc": 5.6,
+            "role": "taker",
+            "net_after": 23.33,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-04-17T20:00:30+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 8.01,
+            "price": 0.43,
+            "usdc": 3.44,
+            "role": "maker",
+            "net_after": 15.32,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-17T20:00:48+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 2.62,
+            "price": 0.42,
+            "usdc": 1.1,
+            "role": "maker",
+            "net_after": 12.7,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-17T20:00:50+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 11.17,
+            "price": 0.42,
+            "usdc": 4.69,
+            "role": "maker",
+            "net_after": 1.53,
+            "mark": ""
+          },
+          {
+            "iso": "2026-04-17T20:00:50+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 1.71,
+            "price": 0.42,
+            "usdc": 0.72,
+            "role": "maker",
+            "net_after": -0.18,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-04-17T20:03:08+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 286.1,
+            "price": 0.36,
+            "usdc": 103.0,
+            "role": "taker",
+            "net_after": 285.92,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-04-17T20:03:42+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 292.0,
+            "price": 0.69,
+            "usdc": 201.48,
+            "role": "maker",
+            "net_after": -6.08,
+            "mark": ""
+          }
+        ]
+      },
+      {
+        "title": "Chelsea FC vs. Nottingham Forest FC: O/U 3.5",
+        "pnl": 208.66,
+        "hold_s": 4916,
+        "n_entries": 2,
+        "n_fills": 4,
+        "avg_entry": 0.3998,
+        "avg_exit": 0.5787,
+        "fills": [
+          {
+            "iso": "2026-05-04T14:01:52+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 305.0,
+            "price": 0.38,
+            "usdc": 115.9,
+            "role": "taker",
+            "net_after": 305.0,
+            "mark": "ENTRY#1"
+          },
+          {
+            "iso": "2026-05-04T14:03:08+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 304.9,
+            "price": 0.5605,
+            "usdc": 170.89,
+            "role": "taker",
+            "net_after": 0.1,
+            "mark": "FLAT"
+          },
+          {
+            "iso": "2026-05-04T15:21:58+00:00",
+            "side": "BUY",
+            "outcome": "Over",
+            "size": 42.45,
+            "price": 0.5418,
+            "usdc": 23.0,
+            "role": "taker",
+            "net_after": 42.55,
+            "mark": "ENTRY#2"
+          },
+          {
+            "iso": "2026-05-04T15:23:48+00:00",
+            "side": "SELL",
+            "outcome": "Over",
+            "size": 42.3,
+            "price": 0.71,
+            "usdc": 30.03,
+            "role": "maker",
+            "net_after": 0.25,
+            "mark": "FLAT"
+          }
+        ]
+      }
+    ]
+  },
+  "avg_down_leak": {
+    "definition": "BUY while long at least 2\u00a2 below current VWAP cost basis",
+    "n_losers": 993,
+    "n_losers_with_avg_down": 14,
+    "pct_losers_with_avg_down": 1.41,
+    "avg_sim_delta_on_those_losers": 10.04,
+    "total_sim_delta_on_those_losers": 140.54,
+    "fifo_sim_pnl_all": 58487.99,
+    "fifo_sim_pnl_never_avg_down": 58092.35,
+    "fifo_sim_improvement": -395.63,
+    "closed_legs_pnl_sum": 61909.37
+  },
+  "maker_taker": {
+    "method": "Data API trades?takerOnly=true vs full history; fills in full but not taker-only = maker",
+    "n_maker_fills": 10834,
+    "n_taker_fills": 9144,
+    "entry_volume": {
+      "maker_usdc": 77447.15,
+      "taker_usdc": 124336.45,
+      "maker_pct": 38.38,
+      "taker_pct": 61.62
+    },
+    "exit_volume": {
+      "maker_usdc": 127828.29,
+      "taker_usdc": 132567.8,
+      "maker_pct": 49.09,
+      "taker_pct": 50.91
+    },
+    "episode_patterns": {
+      "enter_taker_exit_taker": 1468,
+      "enter_taker_exit_maker": 1723,
+      "enter_maker_exit_maker": 1062,
+      "enter_maker_exit_taker": 680
+    }
+  },
+  "latency_impulse": {
+    "time_to_mfe_seconds": {
+      "n": 3826,
+      "p25": 44,
+      "median": 64,
+      "p75": 99,
+      "p90": 387
+    },
+    "time_to_mfe_when_mfe_ge_10c": {
+      "n": 3256,
+      "median": 61,
+      "p75": 90
+    },
+    "big_move_ge_10c": {
+      "n_winners_with_sells": 3871,
+      "n_with_mfe_ge_10c": 3256,
+      "n_mfe_ge_10c_within_30s": 252,
+      "n_mfe_ge_10c_within_60s": 1761,
+      "pct_of_big_moves_within_30s": 7.74,
+      "pct_of_big_moves_within_60s": 54.08,
+      "pct_of_all_winners_big_move_within_30s": 6.51,
+      "pct_of_all_winners_big_move_within_60s": 45.49
+    }
+  },
+  "risk": {
+    "max_inventory_shares": 6000.0,
+    "max_inventory_market": "Netherlands vs. Japan: O/U 4.5",
+    "max_inventory_market_pnl": 502.3,
+    "max_inventory_approx_usdc": 1484.1,
+    "max_inventory_usdc_market": "Will Club Atl\u00e9tico de Madrid win on 2026-08-23?",
+    "worst_10_pnl_sum": -4429.46,
+    "worst_10_share_of_total_losses_pct": 16.48,
+    "worst_10": [
+      {
+        "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 3.5",
+        "pnl": -515.82,
+        "hold_s": 406
+      },
+      {
+        "title": "Melbourne City FC vs. Western Sydney Wanderers FC: O/U 4.5",
+        "pnl": -508.72,
+        "hold_s": 5250
+      },
+      {
+        "title": "Panama vs. England: Both Teams to Score",
+        "pnl": -474.32,
+        "hold_s": 226
+      },
+      {
+        "title": "Paris Saint-Germain FC vs. Liverpool FC: O/U 3.5",
+        "pnl": -471.2,
+        "hold_s": 4560
+      },
+      {
+        "title": "Will Paris Saint-Germain FC win on 2026-04-22?",
+        "pnl": -427.8,
+        "hold_s": 46
+      },
+      {
+        "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 4.5",
+        "pnl": -427.77,
+        "hold_s": 490
+      },
+      {
+        "title": "Sporting CP vs. Arsenal FC: O/U 2.5",
+        "pnl": -416.8,
+        "hold_s": 74
+      },
+      {
+        "title": "UD Las Palmas vs. SD Huesca: O/U 3.5",
+        "pnl": -414.38,
+        "hold_s": 490
+      },
+      {
+        "title": "Real Madrid CF vs. Deportivo Alav\u00e9s: O/U 3.5",
+        "pnl": -388.13,
+        "hold_s": 136
+      },
+      {
+        "title": "C\u00e1diz CF vs. C\u00f3rdoba CF: O/U 4.5",
+        "pnl": -384.52,
+        "hold_s": 1410
+      }
+    ],
+    "loser_time_to_flat_s": {
+      "n": 982,
+      "median": 106,
+      "p75": 204,
+      "mean": 262,
+      "pct_within_60s": 26.27,
+      "pct_within_120s": 56.52,
+      "pct_within_300s": 84.11
+    }
+  },
+  "avg_down_leak_mtm_red": {
+    "definition": "BUY while long and last trade price is at least 0.5\u00a2 below VWAP cost basis (MTM red)",
+    "n_losers": 993,
+    "n_losers_with_red_buys": 15,
+    "pct_losers_with_red_buys": 1.51,
+    "n_winners_with_red_buys": 27,
+    "pct_winners_with_red_buys": 0.67,
+    "avg_sim_delta_on_those_losers": 4.17,
+    "total_sim_delta_on_those_losers": 62.53,
+    "total_red_buy_usdc_on_losers": 319.65,
+    "fifo_sim_pnl_all": 58487.99,
+    "fifo_sim_pnl_never_buy_while_red": 58429.79,
+    "fifo_sim_improvement": -58.2,
+    "note": "Global improvement can be negative because buying dips while temporarily red is often the profitable campaign pattern on winners."
+  }
+}
