@@ -1,0 +1,4438 @@
+{
+  "username": "Winnertraders",
+  "wallet": "0x13464aabec792c36b062316f474713e681330448",
+  "counts": {
+    "activity": 21289,
+    "trades": 20475,
+    "buys": 11909,
+    "sells": 8566,
+    "closed_positions": 3001,
+    "open_positions": 0,
+    "markets_traded": 2750,
+    "activity_types": {
+      "DEPOSIT": 26,
+      "TRADE": 20475,
+      "WITHDRAWAL": 133,
+      "REDEEM": 532,
+      "REWARD": 6,
+      "MAKER_REBATE": 106,
+      "YIELD": 2,
+      "TAKER_REBATE": 9
+    }
+  },
+  "span": {
+    "first_ts": 1768549034,
+    "last_ts": 1787456572,
+    "first_iso": "2026-01-16T07:37:14+00:00",
+    "last_iso": "2026-08-23T03:42:52+00:00",
+    "days_active_span": 218.84
+  },
+  "pnl": {
+    "cashflow_realized": 16661.9043,
+    "cashflow_core": 16180.1031,
+    "cashflow_detail": {
+      "buys_usdc": 224791.71762400042,
+      "sells_usdc": 239727.95123700003,
+      "redeems_usdc": 1243.869471,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 378.6011000000001,
+      "taker_rebates_usdc": 15.577800000000002,
+      "rewards_usdc": 87.6223,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": -844.295,
+    "closed_wins": 1952,
+    "closed_losses": 1046,
+    "closed_flat": 3,
+    "win_rate": 0.6511,
+    "profit_factor": 0.9845,
+    "win_pnl": 53716.1025,
+    "loss_pnl": -54560.3975,
+    "total_bought": 1220775.6868,
+    "open_cash_pnl": 0,
+    "open_current_value": 0,
+    "open_realized_pnl": 0,
+    "leaderboard_all": {
+      "rank": "9026",
+      "proxyWallet": "0x13464aabec792c36b062316f474713e681330448",
+      "userName": "Winnertraders",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 2032708.1231980002,
+      "pnl": 17578.63184561259,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 16661.9043,
+    "max_drawdown": -1644.5056,
+    "points": 21128,
+    "curve_sample": [
+      {
+        "timestamp": 1768549034,
+        "equity": -4.55,
+        "delta": -4.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hobart International: Taylah Preston vs Iva Jovic",
+        "usdc": 4.55
+      },
+      {
+        "timestamp": 1768572606,
+        "equity": -172.939672,
+        "delta": 7.8,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Elon Musk post 500-519 tweets from January 9 to January 16, 2026?",
+        "usdc": 7.8
+      },
+      {
+        "timestamp": 1768580550,
+        "equity": -85.896677,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Al Khaleej Saudi Club vs. Al Okhdood SC: O/U 3.5",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1768589920,
+        "equity": -52.398317,
+        "delta": -10.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SV Werder Bremen vs. Eintracht Frankfurt: O/U 2.5",
+        "usdc": 10.75
+      },
+      {
+        "timestamp": 1768596008,
+        "equity": -148.689125,
+        "delta": 12.92,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "US Boulogne C\u00f4te d'Opale vs. Montpellier HSC: O/U 1.5",
+        "usdc": 12.92
+      },
+      {
+        "timestamp": 1768632710,
+        "equity": -142.048652,
+        "delta": -0.33923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Adelaide International: Ugo Humbert vs Tomas Machac",
+        "usdc": 0.33923
+      },
+      {
+        "timestamp": 1768645286,
+        "equity": -90.9675,
+        "delta": -2.325,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Adelaide United FC vs. Melbourne Victory FC: O/U 2.5",
+        "usdc": 2.325
+      },
+      {
+        "timestamp": 1768660886,
+        "equity": -177.828504,
+        "delta": -0.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "TSG 1899 Hoffenheim vs. Bayer 04 Leverkusen: O/U 3.5",
+        "usdc": 0.43
+      },
+      {
+        "timestamp": 1768666668,
+        "equity": 20.440477,
+        "delta": -21.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chelsea FC vs. Brentford FC: O/U 2.5",
+        "usdc": 21.0
+      },
+      {
+        "timestamp": 1768675710,
+        "equity": 83.035547,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "RB Leipzig vs. FC Bayern M\u00fcnchen: O/U 3.5",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1768712024,
+        "equity": 78.506447,
+        "delta": -7.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CF Cruz Azul vs. Club Puebla: O/U 1.5",
+        "usdc": 7.44
+      },
+      {
+        "timestamp": 1768726098,
+        "equity": -97.05922,
+        "delta": -13.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kas\u0131mpa\u015fa SK vs. Antalyaspor: O/U 2.5",
+        "usdc": 13.5
+      },
+      {
+        "timestamp": 1768741634,
+        "equity": -219.55922,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "RCD Mallorca vs. Athletic Club: O/U 4.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1768745756,
+        "equity": -150.254464,
+        "delta": -7.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "RC Strasbourg Alsace vs. FC Metz: O/U 4.5",
+        "usdc": 7.6
+      },
+      {
+        "timestamp": 1768748560,
+        "equity": -166.947177,
+        "delta": 15.9,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Feyenoord Rotterdam vs. Sparta Rotterdam: O/U 3.5",
+        "usdc": 15.9
+      },
+      {
+        "timestamp": 1768752878,
+        "equity": 79.529048,
+        "delta": 10.0036,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Feyenoord Rotterdam vs. Sparta Rotterdam: O/U 4.5",
+        "usdc": 10.0036
+      },
+      {
+        "timestamp": 1768758976,
+        "equity": -51.311642,
+        "delta": 3.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will FC Nantes vs. Paris FC end in a draw?",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1768765514,
+        "equity": -105.132334,
+        "delta": -2.5575,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Real Sociedad de F\u00fatbol vs. FC Barcelona: O/U 2.5",
+        "usdc": 2.5575
+      },
+      {
+        "timestamp": 1768770204,
+        "equity": -40.048927,
+        "delta": -4.65,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Olympique Lyonnais vs. Stade Brestois 29: O/U 2.5",
+        "usdc": 4.65
+      },
+      {
+        "timestamp": 1768804380,
+        "equity": 113.416788,
+        "delta": -2.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Gen.G Global Academy vs KT Rolster Challengers (BO3) - LCK Challengers League Kickoff Group Stage",
+        "usdc": 2.3
+      },
+      {
+        "timestamp": 1768835550,
+        "equity": 85.484082,
+        "delta": 1.879999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Konyaspor vs. Ey\u00fcpspor: O/U 1.5",
+        "usdc": 1.879999
+      },
+      {
+        "timestamp": 1768848470,
+        "equity": 115.038773,
+        "delta": -5.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bucks vs. Hawks",
+        "usdc": 5.6
+      },
+      {
+        "timestamp": 1768855280,
+        "equity": 110.278419,
+        "delta": 24.64,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Elche CF vs. Sevilla FC: O/U 2.5",
+        "usdc": 24.64
+      },
+      {
+        "timestamp": 1768861002,
+        "equity": 233.434795,
+        "delta": 0.2144,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Clippers vs. Wizards",
+        "usdc": 0.2144
+      },
+      {
+        "timestamp": 1768870038,
+        "equity": 84.069782,
+        "delta": -2.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Suns (-7.5)",
+        "usdc": 2.85
+      },
+      {
+        "timestamp": 1768881392,
+        "equity": 201.618782,
+        "delta": 1.839999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Heat vs. Warriors: O/U 239.5",
+        "usdc": 1.839999
+      },
+      {
+        "timestamp": 1768891978,
+        "equity": -136.91384,
+        "delta": -6.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FK Bod\u00f8/Glimt vs. Manchester City FC: O/U 2.5",
+        "usdc": 6.5
+      },
+      {
+        "timestamp": 1768925390,
+        "equity": -106.497884,
+        "delta": -0.724137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Qairat FK vs. Club Brugge KV: O/U 3.5",
+        "usdc": 0.724137
+      },
+      {
+        "timestamp": 1768928184,
+        "equity": -78.170097,
+        "delta": 0.00237,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the price of Ethereum be above $3,100 on January 20?",
+        "usdc": 0.00237
+      },
+      {
+        "timestamp": 1768929998,
+        "equity": -194.523331,
+        "delta": -39.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al Fateh Saudi Club vs. Al Kholood Saudi Club: O/U 4.5",
+        "usdc": 39.5
+      },
+      {
+        "timestamp": 1768934238,
+        "equity": -134.599793,
+        "delta": 3.9,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Al Ahli Saudi Club vs. Al Khaleej Saudi Club: O/U 1.5",
+        "usdc": 3.9
+      },
+      {
+        "timestamp": 1768940712,
+        "equity": -192.358706,
+        "delta": 16.6912,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Real Madrid CF vs. AS Monaco FC: O/U 4.5",
+        "usdc": 16.6912
+      },
+      {
+        "timestamp": 1768944268,
+        "equity": -77.866427,
+        "delta": 16.82,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Villarreal CF vs. AFC Ajax: O/U 2.5",
+        "usdc": 16.82
+      },
+      {
+        "timestamp": 1768969304,
+        "equity": -231.330219,
+        "delta": -4.07699,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Jazz",
+        "usdc": 4.07699
+      },
+      {
+        "timestamp": 1768985992,
+        "equity": -205.351312,
+        "delta": 3.52,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Set 1 Winner: Medjedovic vs Minaur",
+        "usdc": 3.52
+      },
+      {
+        "timestamp": 1769011030,
+        "equity": -205.292555,
+        "delta": 2.331,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Al Okhdood SC vs. Al Riyadh Saudi Club: O/U 1.5",
+        "usdc": 2.331
+      },
+      {
+        "timestamp": 1769021250,
+        "equity": -240.18566,
+        "delta": -8.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Damac Saudi Club vs. Al Nassr Saudi Club: O/U 3.5",
+        "usdc": 8.25
+      },
+      {
+        "timestamp": 1769027954,
+        "equity": -153.65208,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Newcastle United FC vs. PSV: O/U 2.5",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769080062,
+        "equity": -211.915404,
+        "delta": -0.084227,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the price of Ethereum be between $3,100 and $3,200 on January 22?",
+        "usdc": 0.084227
+      },
+      {
+        "timestamp": 1769096532,
+        "equity": -188.616145,
+        "delta": 4.16,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Al Taawoun Saudi Club win on 2026-01-22?",
+        "usdc": 4.16
+      },
+      {
+        "timestamp": 1769106602,
+        "equity": -165.885512,
+        "delta": 24.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Al Qadisiyah Saudi Club vs. Al Ittihad Saudi Club: O/U 4.5",
+        "usdc": 24.5
+      },
+      {
+        "timestamp": 1769116892,
+        "equity": -148.085675,
+        "delta": -10.23,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "OGC Nice vs. Go Ahead Eagles: O/U 3.5",
+        "usdc": 10.23
+      },
+      {
+        "timestamp": 1769136568,
+        "equity": -169.620797,
+        "delta": -8.056,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Warriors vs. Mavericks",
+        "usdc": 8.056
+      },
+      {
+        "timestamp": 1769157658,
+        "equity": -145.373826,
+        "delta": -15.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Newcastle United Jets FC win on 2026-01-23?",
+        "usdc": 15.0
+      },
+      {
+        "timestamp": 1769186540,
+        "equity": -72.759908,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Rangers vs. Kings: O/U 6.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1769186550,
+        "equity": -72.759908,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Warriors vs. Mavericks",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1769194092,
+        "equity": -136.276222,
+        "delta": -4.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trabzonspor win on 2026-01-23?",
+        "usdc": 4.05
+      },
+      {
+        "timestamp": 1769203066,
+        "equity": -286.579867,
+        "delta": 1.36,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will FC St. Pauli 1910 vs. Hamburger SV end in a draw?",
+        "usdc": 1.36
+      },
+      {
+        "timestamp": 1769211186,
+        "equity": -64.745205,
+        "delta": 0.68,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will CA Lan\u00fas win on 2026-01-23?",
+        "usdc": 0.68
+      },
+      {
+        "timestamp": 1769231532,
+        "equity": -118.952255,
+        "delta": -0.1514,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Raptors vs. Trail Blazers",
+        "usdc": 0.1514
+      },
+      {
+        "timestamp": 1769240824,
+        "equity": -152.929806,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Auckland FC vs. Central Coast Mariners FC: O/U 1.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1769248266,
+        "equity": -327.574565,
+        "delta": -0.113901,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Melbourne City FC win on 2026-01-24?",
+        "usdc": 0.113901
+      },
+      {
+        "timestamp": 1769262410,
+        "equity": -165.454271,
+        "delta": 37.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Karlsruher SC vs. Hertha BSC end in a draw?",
+        "usdc": 37.0
+      },
+      {
+        "timestamp": 1769269304,
+        "equity": -203.697067,
+        "delta": -7.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Eintracht Frankfurt win on 2026-01-24?",
+        "usdc": 7.98
+      },
+      {
+        "timestamp": 1769280346,
+        "equity": -236.768114,
+        "delta": 61.2073,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Liverpool FC win on 2026-01-24?",
+        "usdc": 61.2073
+      },
+      {
+        "timestamp": 1769332040,
+        "equity": -166.838935,
+        "delta": 19.92,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Western Sydney Wanderers FC vs. Perth Glory FC: O/U 2.5",
+        "usdc": 19.92
+      },
+      {
+        "timestamp": 1769347678,
+        "equity": -71.692192,
+        "delta": 90.6442,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Gaziantep FK vs. Konyaspor end in a draw?",
+        "usdc": 90.6442
+      },
+      {
+        "timestamp": 1769356946,
+        "equity": -5.306635,
+        "delta": 28.44,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Borussia M\u00f6nchengladbach vs. VfB Stuttgart: O/U 3.5",
+        "usdc": 28.44
+      },
+      {
+        "timestamp": 1769363672,
+        "equity": -79.450437,
+        "delta": -3.1164,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester United FC win on 2026-01-25?",
+        "usdc": 3.1164
+      },
+      {
+        "timestamp": 1769375402,
+        "equity": -66.247508,
+        "delta": -3.07,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Deportivo Alav\u00e9s vs. Real Betis Balompi\u00e9: O/U 2.5",
+        "usdc": 3.07
+      },
+      {
+        "timestamp": 1769410340,
+        "equity": -208.829859,
+        "delta": -8.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Melbourne Victory FC vs. Sydney FC: O/U 2.5",
+        "usdc": 8.0
+      },
+      {
+        "timestamp": 1769435281,
+        "equity": -102.818056,
+        "delta": -12.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the price of Ethereum be above $2,900 on January 26?",
+        "usdc": 12.16
+      },
+      {
+        "timestamp": 1769451191,
+        "equity": -89.757109,
+        "delta": -1.7166,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Al Ittihad Saudi Club win on 2026-01-26?",
+        "usdc": 1.7166
+      },
+      {
+        "timestamp": 1769454037,
+        "equity": -233.292418,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Be\u015fikta\u015f JK win on 2026-01-26?",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1769464137,
+        "equity": -250.529317,
+        "delta": -5.419411,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Everton FC vs. Leeds United FC end in a draw?",
+        "usdc": 5.419411
+      },
+      {
+        "timestamp": 1769527123,
+        "equity": -192.141156,
+        "delta": 27.5807,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will El Ahly SC win on 2026-01-27?",
+        "usdc": 27.5807
+      },
+      {
+        "timestamp": 1769547617,
+        "equity": -268.86515,
+        "delta": -15.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA V\u00e9lez Sarsfield vs. CA Talleres: O/U 1.5",
+        "usdc": 15.6
+      },
+      {
+        "timestamp": 1769559689,
+        "equity": -322.6523,
+        "delta": 17.85,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Hurac\u00e1n vs. CS Independiente Rivadavia: O/U 2.5",
+        "usdc": 17.85
+      },
+      {
+        "timestamp": 1769574161,
+        "equity": -292.944929,
+        "delta": -7.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Suns",
+        "usdc": 7.2
+      },
+      {
+        "timestamp": 1769614588,
+        "equity": -303.210469,
+        "delta": -6.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Zamalek SC win on 2026-01-28?",
+        "usdc": 6.5
+      },
+      {
+        "timestamp": 1769623244,
+        "equity": -216.520394,
+        "delta": -3.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al Ahli Saudi Club vs. Al Ettifaq Saudi Club: O/U 3.5",
+        "usdc": 3.2
+      },
+      {
+        "timestamp": 1769632998,
+        "equity": -207.910316,
+        "delta": 8.36,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Barcelona vs. FC K\u00f8benhavn: O/U 2.5",
+        "usdc": 8.36
+      },
+      {
+        "timestamp": 1769639174,
+        "equity": -226.204469,
+        "delta": -5.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Racing Club vs. CA Rosario Central: O/U 1.5",
+        "usdc": 5.7
+      },
+      {
+        "timestamp": 1769696836,
+        "equity": -247.479425,
+        "delta": -9.10101,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U19 World Cup: South Africa Under-19s vs Sri Lanka Under-19s",
+        "usdc": 9.10101
+      },
+      {
+        "timestamp": 1769720182,
+        "equity": -366.60404,
+        "delta": -2.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Aston Villa FC win on 2026-01-29?",
+        "usdc": 2.225806
+      },
+      {
+        "timestamp": 1769730700,
+        "equity": -346.891603,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will CA Lan\u00fas vs. CA Uni\u00f3n end in a draw?",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1769773642,
+        "equity": -292.866909,
+        "delta": 18.05,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Set Handicap: Sinner (-2.5) vs Djokovic (+2.5)",
+        "usdc": 18.05
+      },
+      {
+        "timestamp": 1769788318,
+        "equity": -283.23533,
+        "delta": -5.644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "International T20 Series: Sri Lanka vs England (Game 1)",
+        "usdc": 5.644
+      },
+      {
+        "timestamp": 1769841284,
+        "equity": -359.792341,
+        "delta": 6.3,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Newcastle United Jets FC vs. Brisbane Roar FC: O/U 2.5",
+        "usdc": 6.3
+      },
+      {
+        "timestamp": 1769853572,
+        "equity": -301.720219,
+        "delta": -1.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mubadala Abu Dhabi Open, Qualification: Priscilla Hon vs Aliaksandra Sasnovich",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1769867250,
+        "equity": -379.236464,
+        "delta": 3.536,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Le Mans FC win on 2026-01-31?",
+        "usdc": 3.536
+      },
+      {
+        "timestamp": 1769879190,
+        "equity": -387.714468,
+        "delta": 0.15617,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "International T20 Series: India vs New Zealand (Game 5)",
+        "usdc": 0.15617
+      },
+      {
+        "timestamp": 1769892384,
+        "equity": -363.511017,
+        "delta": -4.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cagliari Calcio vs. Hellas Verona FC: O/U 2.5",
+        "usdc": 4.05
+      },
+      {
+        "timestamp": 1769948308,
+        "equity": -390.543341,
+        "delta": -2.513932,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SBV Excelsior vs. AFC Ajax: O/U 4.5",
+        "usdc": 2.513932
+      },
+      {
+        "timestamp": 1769964084,
+        "equity": -400.659499,
+        "delta": 3.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "International T20 Series: Sri Lanka vs England (Game 2)",
+        "usdc": 3.5
+      },
+      {
+        "timestamp": 1769974034,
+        "equity": -283.314577,
+        "delta": 4.65,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Al Hazem SC win on 2026-02-01?",
+        "usdc": 4.65
+      },
+      {
+        "timestamp": 1769982628,
+        "equity": -289.548256,
+        "delta": -11.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Athletic Club vs. Real Sociedad de F\u00fatbol end in a draw?",
+        "usdc": 11.55
+      },
+      {
+        "timestamp": 1770045904,
+        "equity": -256.419504,
+        "delta": 1.049999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Mubadala Abu Dhabi Open: Oksana Selekhmeteva vs Jelena Ostapenko",
+        "usdc": 1.049999
+      },
+      {
+        "timestamp": 1770057846,
+        "equity": -215.224967,
+        "delta": -2.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fenerbah\u00e7e SK win on 2026-02-02?",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1770069476,
+        "equity": -147.292446,
+        "delta": -11.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Casa Pia AC vs. FC Porto: O/U 4.5",
+        "usdc": 11.25
+      },
+      {
+        "timestamp": 1770086352,
+        "equity": -199.738947,
+        "delta": -1.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Grizzlies",
+        "usdc": 1.8
+      },
+      {
+        "timestamp": 1770090122,
+        "equity": -119.840709,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "CA Tigre vs. Racing Club: O/U 3.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1770121212,
+        "equity": -117.21417,
+        "delta": -2.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U19 World Cup: Australia Under-19s vs England Under-19s",
+        "usdc": 2.5
+      },
+      {
+        "timestamp": 1770149670,
+        "equity": -101.755076,
+        "delta": 1.68,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Bologna FC 1909 vs. AC Milan: O/U 1.5",
+        "usdc": 1.68
+      },
+      {
+        "timestamp": 1770183736,
+        "equity": -157.38588,
+        "delta": -20.4573,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Trail Blazers",
+        "usdc": 20.4573
+      },
+      {
+        "timestamp": 1770218802,
+        "equity": 4.472612,
+        "delta": -4.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Smouha SC win on 2026-02-04?",
+        "usdc": 4.1
+      },
+      {
+        "timestamp": 1770233555,
+        "equity": 72.294104,
+        "delta": -19.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Zamalek SC win on 2026-02-04?",
+        "usdc": 19.0
+      },
+      {
+        "timestamp": 1770267571,
+        "equity": 135.493345,
+        "delta": -3.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Kings",
+        "usdc": 3.3
+      },
+      {
+        "timestamp": 1770276723,
+        "equity": 157.086235,
+        "delta": 42.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "International T20 Series: Oman vs Zimbabwe (Game 1)",
+        "usdc": 42.0
+      },
+      {
+        "timestamp": 1770306907,
+        "equity": 190.754532,
+        "delta": -11.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Haras El Hodood SC vs. Pharco FC end in a draw?",
+        "usdc": 11.5
+      },
+      {
+        "timestamp": 1770352443,
+        "equity": 36.664017,
+        "delta": -38.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Lakers",
+        "usdc": 38.5
+      },
+      {
+        "timestamp": 1770367195,
+        "equity": 112.315018,
+        "delta": -5.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U19 World Cup: England Under-19s vs India Under-19s",
+        "usdc": 5.5
+      },
+      {
+        "timestamp": 1770384631,
+        "equity": 214.846958,
+        "delta": -1.95,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U19 World Cup: England Under-19s vs India Under-19s",
+        "usdc": 1.95
+      },
+      {
+        "timestamp": 1770405409,
+        "equity": 136.616656,
+        "delta": -15.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al Nassr Saudi Club vs. Al Ittihad Saudi Club: O/U 1.5",
+        "usdc": 15.5
+      },
+      {
+        "timestamp": 1770438695,
+        "equity": -20.848484,
+        "delta": -4.6648,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Clippers vs. Kings",
+        "usdc": 4.6648
+      },
+      {
+        "timestamp": 1770462383,
+        "equity": 361.246111,
+        "delta": 12.48,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Qatar Total Open, Qualification: Magdalena Frech vs Vera Zvonareva",
+        "usdc": 12.48
+      },
+      {
+        "timestamp": 1770477129,
+        "equity": 306.920299,
+        "delta": -16.53,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Frosinone Calcio win on 2026-02-07?",
+        "usdc": 16.53
+      },
+      {
+        "timestamp": 1770492745,
+        "equity": 451.904512,
+        "delta": -0.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago State Cougars vs. New Haven Chargers",
+        "usdc": 0.5
+      },
+      {
+        "timestamp": 1770502843,
+        "equity": 162.526669,
+        "delta": -2.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Thunder",
+        "usdc": 2.45
+      },
+      {
+        "timestamp": 1770537573,
+        "equity": 352.517274,
+        "delta": 68.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Afghanistan vs New Zealand (Game 1)",
+        "usdc": 68.0
+      },
+      {
+        "timestamp": 1770553957,
+        "equity": 647.844518,
+        "delta": -3.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs Nepal (Game 1)",
+        "usdc": 3.25
+      },
+      {
+        "timestamp": 1770569591,
+        "equity": 932.523401,
+        "delta": -1.8816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Sri Lanka vs Ireland (Game 1)",
+        "usdc": 1.8816
+      },
+      {
+        "timestamp": 1770584691,
+        "equity": 763.786034,
+        "delta": -2.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Clippers vs. Timberwolves",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1770628557,
+        "equity": 547.978629,
+        "delta": -33.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Oman vs Zimbabwe (Game 1)",
+        "usdc": 33.0
+      },
+      {
+        "timestamp": 1770675471,
+        "equity": 445.181037,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Kayserispor vs. Kocaelispor: Both Teams to Score",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1770711015,
+        "equity": 991.707188,
+        "delta": -0.4446,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Namibia vs Netherlands (Game 1)",
+        "usdc": 0.4446
+      },
+      {
+        "timestamp": 1770754929,
+        "equity": 1065.837383,
+        "delta": -5.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Everton FC vs. AFC Bournemouth: O/U 2.5",
+        "usdc": 5.3
+      },
+      {
+        "timestamp": 1770781347,
+        "equity": 1463.66051,
+        "delta": -0.022729,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Spurs (-9.5)",
+        "usdc": 0.022729
+      },
+      {
+        "timestamp": 1770801597,
+        "equity": 1611.036877,
+        "delta": -35.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Afghanistan vs South Africa (Game 1)",
+        "usdc": 35.2
+      },
+      {
+        "timestamp": 1770826319,
+        "equity": 1477.482677,
+        "delta": -20.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs West Indies (Game 1)",
+        "usdc": 20.4
+      },
+      {
+        "timestamp": 1770841059,
+        "equity": 1956.022214,
+        "delta": 4.106999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Aston Villa FC win on 2026-02-11?",
+        "usdc": 4.106999
+      },
+      {
+        "timestamp": 1770914265,
+        "equity": 4575.537731,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "T20 World Cup: Italy vs Nepal (Game 1)",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1770934765,
+        "equity": 4456.559846,
+        "delta": -24.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA Tigre vs. CA Aldosivi: O/U 2.5",
+        "usdc": 24.0
+      },
+      {
+        "timestamp": 1770969609,
+        "equity": 3938.595423,
+        "delta": 1.172,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Australia vs Zimbabwe (Game 1)",
+        "usdc": 1.172
+      },
+      {
+        "timestamp": 1770982273,
+        "equity": 4351.975817,
+        "delta": -1.109589,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Canada vs UAE (Game 1)",
+        "usdc": 1.109589
+      },
+      {
+        "timestamp": 1770989537,
+        "equity": 4466.788522,
+        "delta": -0.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Netherlands vs USA (Game 1) - Toss Match Double USA Winner",
+        "usdc": 0.1
+      },
+      {
+        "timestamp": 1771006973,
+        "equity": 4229.950915,
+        "delta": 2.499999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Galatasaray SK vs. Ey\u00fcpspor: O/U 4.5",
+        "usdc": 2.499999
+      },
+      {
+        "timestamp": 1771064105,
+        "equity": 4328.243584,
+        "delta": 3.59722,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Ireland vs Oman (Game 1)",
+        "usdc": 3.59722
+      },
+      {
+        "timestamp": 1771079581,
+        "equity": 4904.868373,
+        "delta": -58.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will ACF Fiorentina win on 2026-02-14?",
+        "usdc": 58.0
+      },
+      {
+        "timestamp": 1771097233,
+        "equity": 4764.506685,
+        "delta": -0.351351,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lille OSC vs. Stade Brestois 29: O/U 3.5",
+        "usdc": 0.351351
+      },
+      {
+        "timestamp": 1771158797,
+        "equity": 4813.020237,
+        "delta": 0.57272,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Namibia vs USA (Game 1)",
+        "usdc": 0.57272
+      },
+      {
+        "timestamp": 1771168477,
+        "equity": 4720.260106,
+        "delta": -21.315789,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: India vs Pakistan (Game 1)",
+        "usdc": 21.315789
+      },
+      {
+        "timestamp": 1771180075,
+        "equity": 4710.717847,
+        "delta": 17.6372,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Bologna FC 1909 win on 2026-02-15?",
+        "usdc": 17.6372
+      },
+      {
+        "timestamp": 1771195907,
+        "equity": 4801.888451,
+        "delta": -0.705287,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Team World vs. Team USA Stripes: O/U 81.5",
+        "usdc": 0.705287
+      },
+      {
+        "timestamp": 1771221881,
+        "equity": 4943.076285,
+        "delta": -45.50505,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Afghanistan vs UAE (Game 1)",
+        "usdc": 45.50505
+      },
+      {
+        "timestamp": 1771234461,
+        "equity": 5234.983136,
+        "delta": -5.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs Italy (Game 1) - Most Sixes England Winner",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1771257807,
+        "equity": 4615.407368,
+        "delta": -1.532028,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Australia vs Sri Lanka (Game 1)",
+        "usdc": 1.532028
+      },
+      {
+        "timestamp": 1771271235,
+        "equity": 4618.842538,
+        "delta": -33.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will M\u00e1laga CF win on 2026-02-16?",
+        "usdc": 33.55
+      },
+      {
+        "timestamp": 1771342687,
+        "equity": 4619.610642,
+        "delta": -22.121,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Nepal vs Scotland (Game 1)",
+        "usdc": 22.121
+      },
+      {
+        "timestamp": 1771345963,
+        "equity": 4594.883802,
+        "delta": 11.16,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Nepal vs Scotland (Game 1)",
+        "usdc": 11.16
+      },
+      {
+        "timestamp": 1771357279,
+        "equity": 5083.395406,
+        "delta": -11.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Paris Saint-Germain FC win on 2026-02-17?",
+        "usdc": 11.2
+      },
+      {
+        "timestamp": 1771400958,
+        "equity": 5197.285013,
+        "delta": -1.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Namibia vs Pakistan (Game 1)",
+        "usdc": 1.3
+      },
+      {
+        "timestamp": 1771421836,
+        "equity": 5189.555431,
+        "delta": 9.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: India vs Netherlands (Game 1)",
+        "usdc": 9.999999
+      },
+      {
+        "timestamp": 1771437404,
+        "equity": 4875.570812,
+        "delta": 18.92,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Qaraba\u011f A\u011fdam FK vs. Newcastle United FC: O/U 4.5",
+        "usdc": 18.92
+      },
+      {
+        "timestamp": 1771483026,
+        "equity": 4963.272016,
+        "delta": -2.8126,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Italy vs West Indies (Game 1)",
+        "usdc": 2.8126
+      },
+      {
+        "timestamp": 1771503606,
+        "equity": 4828.311993,
+        "delta": 2.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: Sri Lanka vs Zimbabwe (Game 1)",
+        "usdc": 2.999998
+      },
+      {
+        "timestamp": 1771513056,
+        "equity": 4625.796986,
+        "delta": -3.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Afghanistan vs Canada (Game 1)",
+        "usdc": 3.5
+      },
+      {
+        "timestamp": 1771552542,
+        "equity": 3901.118831,
+        "delta": -4.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Hornets: O/U 217.5",
+        "usdc": 4.5
+      },
+      {
+        "timestamp": 1771569548,
+        "equity": 3762.355048,
+        "delta": 17.8698,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Cal Poly Mustangs vs. Hawaii Rainbow Warriors: O/U 161.5",
+        "usdc": 17.8698
+      },
+      {
+        "timestamp": 1771644332,
+        "equity": 3842.964385,
+        "delta": -52.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Nuggets (-3.5)",
+        "usdc": 52.78
+      },
+      {
+        "timestamp": 1771673398,
+        "equity": 4282.625103,
+        "delta": 0.25,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Australia vs. India, Women: Australia vs India",
+        "usdc": 0.25
+      },
+      {
+        "timestamp": 1771689882,
+        "equity": 4421.627212,
+        "delta": 46.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Osasuna vs. Real Madrid CF: Both Teams to Score",
+        "usdc": 46.999999
+      },
+      {
+        "timestamp": 1771731326,
+        "equity": 4770.767749,
+        "delta": -0.586923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Knicks: O/U 220.5",
+        "usdc": 0.586923
+      },
+      {
+        "timestamp": 1771756692,
+        "equity": 4582.376751,
+        "delta": -7.0224,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Sri Lanka vs England",
+        "usdc": 7.0224
+      },
+      {
+        "timestamp": 1771768748,
+        "equity": 4472.747185,
+        "delta": -24.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Men's Final - Canada vs. USA",
+        "usdc": 24.12
+      },
+      {
+        "timestamp": 1771777022,
+        "equity": 4828.363087,
+        "delta": 1.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: India vs South Africa",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1771796440,
+        "equity": 4833.356568,
+        "delta": -9.62,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Suns (-2.5)",
+        "usdc": 9.62
+      },
+      {
+        "timestamp": 1771858938,
+        "equity": 4946.036777,
+        "delta": -0.26,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Zimbabwe vs West Indies",
+        "usdc": 0.26
+      },
+      {
+        "timestamp": 1771910968,
+        "equity": 4780.366098,
+        "delta": -0.414444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Australia vs India, Women: Australia vs India",
+        "usdc": 0.414444
+      },
+      {
+        "timestamp": 1771950014,
+        "equity": 4655.20613,
+        "delta": 16.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: England vs Pakistan",
+        "usdc": 16.999999
+      },
+      {
+        "timestamp": 1771989056,
+        "equity": 4845.373257,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Atalanta BC vs. BV Borussia 09 Dortmund: Both Teams to Score",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1772002632,
+        "equity": 5115.92867,
+        "delta": 2.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series New Zealand vs Zimbabwe, Women: New Zealand vs Zimbabwe",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1772030108,
+        "equity": 4783.685888,
+        "delta": -10.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Sri Lanka vs New Zealand",
+        "usdc": 10.5
+      },
+      {
+        "timestamp": 1772054952,
+        "equity": 4809.412975,
+        "delta": 148.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Real Madrid CF vs. Sport Lisboa e Benfica: O/U 3.5",
+        "usdc": 148.0
+      },
+      {
+        "timestamp": 1772080316,
+        "equity": 4683.407776,
+        "delta": 4.052799,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Celtics vs. Nuggets: O/U 227.5",
+        "usdc": 4.052799
+      },
+      {
+        "timestamp": 1772103444,
+        "equity": 4774.75189,
+        "delta": 6.2434,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: West Indies vs South Africa",
+        "usdc": 6.2434
+      },
+      {
+        "timestamp": 1772129742,
+        "equity": 4664.156231,
+        "delta": 44.91,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: VfB Stuttgart (-1.5)",
+        "usdc": 44.91
+      },
+      {
+        "timestamp": 1772176071,
+        "equity": 4796.724417,
+        "delta": -6.5152,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Thailand Open: Thailand vs Bahrain",
+        "usdc": 6.5152
+      },
+      {
+        "timestamp": 1772197753,
+        "equity": 4864.965343,
+        "delta": -19.74,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs New Zealand",
+        "usdc": 19.74
+      },
+      {
+        "timestamp": 1772209747,
+        "equity": 4967.416843,
+        "delta": -10.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs New Zealand",
+        "usdc": 10.4
+      },
+      {
+        "timestamp": 1772223927,
+        "equity": 5237.848476,
+        "delta": -7.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FC Porto vs. FC Arouca end in a draw?",
+        "usdc": 7.15
+      },
+      {
+        "timestamp": 1772242043,
+        "equity": 5459.196509,
+        "delta": 6.3516,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Nets vs. Celtics: O/U 208.5",
+        "usdc": 6.3516
+      },
+      {
+        "timestamp": 1772264771,
+        "equity": 5043.135127,
+        "delta": 8.335,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Hong Kong vs Kuwait: Hong Kong, China vs Kuwait",
+        "usdc": 8.335
+      },
+      {
+        "timestamp": 1772300095,
+        "equity": 5304.33535,
+        "delta": -30.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 30.5
+      },
+      {
+        "timestamp": 1772342253,
+        "equity": 5315.15505,
+        "delta": 139.35051,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series New Zealand vs Zimbabwe, Women: New Zealand vs Zimbabwe",
+        "usdc": 139.35051
+      },
+      {
+        "timestamp": 1772357929,
+        "equity": 5485.587263,
+        "delta": -9.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: Zimbabwe vs South Africa",
+        "usdc": 9.0
+      },
+      {
+        "timestamp": 1772370555,
+        "equity": 5422.527681,
+        "delta": -0.624698,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODi Series South Africa vs Pakistan, Women: South Africa vs Pakistan",
+        "usdc": 0.624698
+      },
+      {
+        "timestamp": 1772379595,
+        "equity": 5511.211459,
+        "delta": 24.192,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup: India vs West Indies",
+        "usdc": 24.192
+      },
+      {
+        "timestamp": 1772389341,
+        "equity": 5438.974594,
+        "delta": -8.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series West Indies vs Sri Lanka, Women: West Indies vs Sri Lanka",
+        "usdc": 8.1
+      },
+      {
+        "timestamp": 1772412159,
+        "equity": 5509.794046,
+        "delta": -46.08,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA Tigre vs. Gimnasia y Esgrima de La Plata: O/U 1.5",
+        "usdc": 46.08
+      },
+      {
+        "timestamp": 1772472925,
+        "equity": 5208.290443,
+        "delta": -38.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pisa SC vs. Bologna FC 1909: Both Teams to Score",
+        "usdc": 38.34
+      },
+      {
+        "timestamp": 1772486555,
+        "equity": 5364.28501,
+        "delta": -19.716666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Real Madrid CF (-1.5)",
+        "usdc": 19.716666
+      },
+      {
+        "timestamp": 1772511917,
+        "equity": 5383.792658,
+        "delta": 2.35,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Clippers vs. Warriors: O/U 215.5",
+        "usdc": 2.35
+      },
+      {
+        "timestamp": 1772557753,
+        "equity": 5111.22202,
+        "delta": -12.955,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series West Indies vs Sri Lanka, Women: West Indies vs Sri Lanka",
+        "usdc": 12.955
+      },
+      {
+        "timestamp": 1772574655,
+        "equity": 5367.53574,
+        "delta": 193.03,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Liverpool FC (-2.5)",
+        "usdc": 193.03
+      },
+      {
+        "timestamp": 1772600575,
+        "equity": 5269.97533,
+        "delta": 71.818948,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Deportivo Toluca FC (-1.5)",
+        "usdc": 71.818948
+      },
+      {
+        "timestamp": 1772633421,
+        "equity": 5242.89955,
+        "delta": -18.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: South Africa vs New Zealand",
+        "usdc": 18.5
+      },
+      {
+        "timestamp": 1772640179,
+        "equity": 5269.716643,
+        "delta": -0.01306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: South Africa vs New Zealand",
+        "usdc": 0.01306
+      },
+      {
+        "timestamp": 1772688161,
+        "equity": 5320.437775,
+        "delta": -2.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pacers vs. Clippers: O/U 226.5",
+        "usdc": 2.16
+      },
+      {
+        "timestamp": 1772730915,
+        "equity": 5482.924018,
+        "delta": -0.68634,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup: England vs India",
+        "usdc": 0.68634
+      },
+      {
+        "timestamp": 1772772823,
+        "equity": 5469.48622,
+        "delta": 44.9922,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Pelicans (-5.5)",
+        "usdc": 44.9922
+      },
+      {
+        "timestamp": 1772827601,
+        "equity": 5499.925367,
+        "delta": -0.016536,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Al Najmah Saudi Club win on 2026-03-05?",
+        "usdc": 0.016536
+      },
+      {
+        "timestamp": 1772845695,
+        "equity": 5127.525774,
+        "delta": 29.1218,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Celtics (-15.5)",
+        "usdc": 29.1218
+      },
+      {
+        "timestamp": 1772859895,
+        "equity": 5107.379211,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Heat vs. Hornets",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1772880637,
+        "equity": 5166.319354,
+        "delta": -0.033,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the match end in a draw?",
+        "usdc": 0.033
+      },
+      {
+        "timestamp": 1772895815,
+        "equity": 5097.418313,
+        "delta": -38.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: TSG 1899 Hoffenheim (-2.5)",
+        "usdc": 38.5
+      },
+      {
+        "timestamp": 1772910043,
+        "equity": 5197.593811,
+        "delta": 1.62,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Arkansas Razorbacks vs. Missouri Tigers: O/U 159.5",
+        "usdc": 1.62
+      },
+      {
+        "timestamp": 1772928087,
+        "equity": 5219.78588,
+        "delta": 0.9023,
+        "type": "REWARD",
+        "side": null,
+        "title": "",
+        "usdc": 0.9023
+      },
+      {
+        "timestamp": 1772973323,
+        "equity": 5267.1225,
+        "delta": 2.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "US Lecce vs. US Cremonese: O/U 3.5",
+        "usdc": 2.999998
+      },
+      {
+        "timestamp": 1772991789,
+        "equity": 5086.45522,
+        "delta": 14.9152,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Cavaliers (-3.5)",
+        "usdc": 14.9152
+      },
+      {
+        "timestamp": 1773007803,
+        "equity": 5204.721775,
+        "delta": -10.3308,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Lakers: O/U 226.5",
+        "usdc": 10.3308
+      },
+      {
+        "timestamp": 1773078387,
+        "equity": 5016.612072,
+        "delta": -10.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "First Round Pool A: Panama vs. Colombia",
+        "usdc": 10.5
+      },
+      {
+        "timestamp": 1773108353,
+        "equity": 5168.64993,
+        "delta": -0.2961,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-7.5)",
+        "usdc": 0.2961
+      },
+      {
+        "timestamp": 1773138861,
+        "equity": 5359.670057,
+        "delta": 198.59202,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Malaysia vs Bahrain: Malaysia vs Bahrain - Completed match?",
+        "usdc": 198.59202
+      },
+      {
+        "timestamp": 1773177491,
+        "equity": 5231.977376,
+        "delta": 48.495,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Stoke City FC win on 2026-03-10?",
+        "usdc": 48.495
+      },
+      {
+        "timestamp": 1773219341,
+        "equity": 5161.300252,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Antalya 3: Alina Charaeva vs Lia Karatancheva",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1773261529,
+        "equity": 5129.591856,
+        "delta": -0.678,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Americas Qualifier B: Argentina vs Mexico",
+        "usdc": 0.678
+      },
+      {
+        "timestamp": 1773323513,
+        "equity": 5019.329832,
+        "delta": -14.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Americas Qualifier B: Mexico vs Cayman",
+        "usdc": 14.0
+      },
+      {
+        "timestamp": 1773372267,
+        "equity": 5002.463337,
+        "delta": -6.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bulls vs. Lakers: O/U 235.5",
+        "usdc": 6.3
+      },
+      {
+        "timestamp": 1773410105,
+        "equity": 4884.76644,
+        "delta": 1.7271,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Afghanistan vs Sri Lanka: Afghanistan vs Sri Lanka - Completed match?",
+        "usdc": 1.7271
+      },
+      {
+        "timestamp": 1773431477,
+        "equity": 4946.396773,
+        "delta": -22.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Torino FC vs. Parma Calcio 1913: O/U 3.5",
+        "usdc": 22.05
+      },
+      {
+        "timestamp": 1773489103,
+        "equity": 4932.920113,
+        "delta": -8.028,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kocaelispor vs. Konyaspor: O/U 1.5",
+        "usdc": 8.028
+      },
+      {
+        "timestamp": 1773503681,
+        "equity": 4941.606712,
+        "delta": -14.751501,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: VfL Wolfsburg (-1.5)",
+        "usdc": 14.751501
+      },
+      {
+        "timestamp": 1773550815,
+        "equity": 4989.276435,
+        "delta": -0.0003,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Clippers",
+        "usdc": 0.0003
+      },
+      {
+        "timestamp": 1773574419,
+        "equity": 5065.110414,
+        "delta": -1.54275,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "National Cricket League, Women: Western Australia vs ACT Meteors",
+        "usdc": 1.54275
+      },
+      {
+        "timestamp": 1773593381,
+        "equity": 5237.194035,
+        "delta": 68.2134,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup Sub Regional Americas Qualifier B: Suriname vs Mexico",
+        "usdc": 68.2134
+      },
+      {
+        "timestamp": 1773633395,
+        "equity": 5381.448805,
+        "delta": -0.7818,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Kings (-3.5)",
+        "usdc": 0.7818
+      },
+      {
+        "timestamp": 1773652485,
+        "equity": 5290.184467,
+        "delta": -25.65476,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Malaysia vs Bahrain: Malaysia vs Bahrain",
+        "usdc": 25.65476
+      },
+      {
+        "timestamp": 1773693089,
+        "equity": 5384.680738,
+        "delta": -51.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rayo Vallecano de Madrid vs. Levante UD: O/U 2.5",
+        "usdc": 51.1
+      },
+      {
+        "timestamp": 1773729801,
+        "equity": 5375.901466,
+        "delta": 7.7025,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series New Zealand vs South Africa: New Zealand vs South Africa",
+        "usdc": 7.7025
+      },
+      {
+        "timestamp": 1773761059,
+        "equity": 5490.491425,
+        "delta": -0.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bitcoin Up or Down - March 17, 11:20AM-11:25AM ET",
+        "usdc": 0.1
+      },
+      {
+        "timestamp": 1773850337,
+        "equity": 5662.323831,
+        "delta": 0.9486,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "SC Braga vs. Ferencv\u00e1rosi TC: O/U 4.5",
+        "usdc": 0.9486
+      },
+      {
+        "timestamp": 1773918427,
+        "equity": 5572.120379,
+        "delta": -133.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series Namibia A vs Uganda: Namibia A vs Uganda",
+        "usdc": 133.0
+      },
+      {
+        "timestamp": 1773944949,
+        "equity": 5351.421299,
+        "delta": -0.469135,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Midtjylland vs. Nottingham Forest FC: O/U 1.5",
+        "usdc": 0.469135
+      },
+      {
+        "timestamp": 1773982071,
+        "equity": 5640.111072,
+        "delta": 0.17629,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20I Series New Zealand vs South Africa, Women: New Zealand vs South Africa",
+        "usdc": 0.17629
+      },
+      {
+        "timestamp": 1773995083,
+        "equity": 5808.78536,
+        "delta": -0.546,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series New Zealand vs South Africa: New Zealand vs South Africa",
+        "usdc": 0.546
+      },
+      {
+        "timestamp": 1774011065,
+        "equity": 5965.251269,
+        "delta": -2.563076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Zhejiang Zhiye FC win on 2026-03-20?",
+        "usdc": 2.563076
+      },
+      {
+        "timestamp": 1774071997,
+        "equity": 5719.85385,
+        "delta": -28.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "National Cricket League, Women: New South Wales Breakers vs Queensland Fire",
+        "usdc": 28.0
+      },
+      {
+        "timestamp": 1774084055,
+        "equity": 5695.161226,
+        "delta": -45.39,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Nigeria Invitational Tournament, Women: Rwanda vs South Africa",
+        "usdc": 45.39
+      },
+      {
+        "timestamp": 1774160827,
+        "equity": 5375.599636,
+        "delta": -21.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series New Zealand vs South Africa: New Zealand vs South Africa",
+        "usdc": 21.0
+      },
+      {
+        "timestamp": 1774292309,
+        "equity": 5321.552754,
+        "delta": 0.007245,
+        "type": "REDEEM",
+        "side": null,
+        "title": "T20 Nigeria Invitational Tournament, Women: Rwanda vs South Africa",
+        "usdc": 0.007245
+      },
+      {
+        "timestamp": 1774439209,
+        "equity": 5281.114055,
+        "delta": -2.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup, Sub Regional Africa, Qualifier B: Saint Helena vs Seychelles",
+        "usdc": 2.2
+      },
+      {
+        "timestamp": 1774583813,
+        "equity": 5293.351016,
+        "delta": -5.294117,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Illinois Fighting Illini (-10.5)",
+        "usdc": 5.294117
+      },
+      {
+        "timestamp": 1774631523,
+        "equity": 5417.495304,
+        "delta": -1.3047,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Quetta Gladiators vs Karachi Kings",
+        "usdc": 1.3047
+      },
+      {
+        "timestamp": 1774696607,
+        "equity": 5292.176472,
+        "delta": -20.008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Peshawar Zalmi vs Rawalpindi Pindiz",
+        "usdc": 20.008
+      },
+      {
+        "timestamp": 1774763304,
+        "equity": 5507.192939,
+        "delta": -23.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series New Zealand vs South Africa Women: New Zealand vs South Africa",
+        "usdc": 23.85
+      },
+      {
+        "timestamp": 1774780984,
+        "equity": 5538.407953,
+        "delta": -50.694,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Quetta Gladiators vs Hyderabad Kingsmen",
+        "usdc": 50.694
+      },
+      {
+        "timestamp": 1774798186,
+        "equity": 5708.273802,
+        "delta": -22.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Lahore Qalandars vs Karachi Kings",
+        "usdc": 22.0
+      },
+      {
+        "timestamp": 1774900523,
+        "equity": 5531.201831,
+        "delta": -0.3975,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Columbia Lions vs. Wisconsin Badgers (W)",
+        "usdc": 0.3975
+      },
+      {
+        "timestamp": 1774979151,
+        "equity": 5475.021172,
+        "delta": 26.719998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Punjab Kings vs Gujarat Titans",
+        "usdc": 26.719998
+      },
+      {
+        "timestamp": 1775052413,
+        "equity": 5607.790174,
+        "delta": -48.4752,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Multan Sultans vs Hyderabad Kingsmen",
+        "usdc": 48.4752
+      },
+      {
+        "timestamp": 1775119779,
+        "equity": 5952.779125,
+        "delta": -6.755294,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Macarthur FC vs. Newcastle United Jets FC: O/U 3.5",
+        "usdc": 6.755294
+      },
+      {
+        "timestamp": 1775129767,
+        "equity": 6185.807713,
+        "delta": -19.221,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Islamabad United vs Quetta Gladiators",
+        "usdc": 19.221
+      },
+      {
+        "timestamp": 1775145847,
+        "equity": 5988.680888,
+        "delta": -12.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Rawalpindi Pindiz vs Karachi Kings",
+        "usdc": 12.04
+      },
+      {
+        "timestamp": 1775150295,
+        "equity": 6326.698339,
+        "delta": 125.0004,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Kolkata Knight Riders vs Sunrisers Hyderabad",
+        "usdc": 125.0004
+      },
+      {
+        "timestamp": 1775209575,
+        "equity": 6367.378987,
+        "delta": 2.3313,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Adelaide United FC vs. Auckland FC: O/U 3.5",
+        "usdc": 2.3313
+      },
+      {
+        "timestamp": 1775237645,
+        "equity": 6412.800416,
+        "delta": 1.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Lahore Qalandars vs Multan Sultans",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1775288461,
+        "equity": 6226.392806,
+        "delta": -17.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ICC Cricket World Cup League Two: Namibia vs Oman",
+        "usdc": 17.16
+      },
+      {
+        "timestamp": 1775387789,
+        "equity": 6428.834637,
+        "delta": -29.8485,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Portugal Tri-Series: Norway vs France",
+        "usdc": 29.8485
+      },
+      {
+        "timestamp": 1775472651,
+        "equity": 6325.942067,
+        "delta": 56.268,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "ICC Cricket World Cup League Two: Namibia vs Scotland",
+        "usdc": 56.268
+      },
+      {
+        "timestamp": 1775544005,
+        "equity": 6559.951444,
+        "delta": -33.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series Indonesia vs Sweden: Indonesia vs Sweden",
+        "usdc": 33.0
+      },
+      {
+        "timestamp": 1775582185,
+        "equity": 6318.244285,
+        "delta": 0.0432,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Rajasthan Royals vs Mumbai Indians",
+        "usdc": 0.0432
+      },
+      {
+        "timestamp": 1775642035,
+        "equity": 6584.423841,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Kalahari Tournament, Women: Botswana vs Malawi",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1775679099,
+        "equity": 6343.344592,
+        "delta": 10.039998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Paris Saint-Germain FC vs. Liverpool FC: O/U 3.5",
+        "usdc": 10.039998
+      },
+      {
+        "timestamp": 1775722323,
+        "equity": 6802.754401,
+        "delta": 6.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Indonesia vs Sweden: Indonesia vs Sweden",
+        "usdc": 6.0
+      },
+      {
+        "timestamp": 1775750573,
+        "equity": 7152.478114,
+        "delta": 0.025,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Karachi Kings vs Peshawar Zalmi",
+        "usdc": 0.025
+      },
+      {
+        "timestamp": 1775819155,
+        "equity": 7055.749858,
+        "delta": 28.98,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Central Coast Mariners FC win on 2026-04-10?",
+        "usdc": 28.98
+      },
+      {
+        "timestamp": 1775841045,
+        "equity": 7186.850486,
+        "delta": 0.02168,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Quetta Gladiators vs Rawalpindi Pindiz",
+        "usdc": 0.02168
+      },
+      {
+        "timestamp": 1775891071,
+        "equity": 7278.216505,
+        "delta": -29.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Newcastle United Jets FC vs. Adelaide United FC: O/U 2.5",
+        "usdc": 29.0
+      },
+      {
+        "timestamp": 1775916929,
+        "equity": 7127.364952,
+        "delta": -23.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Chennai Super Kings vs Delhi Capitals",
+        "usdc": 23.0
+      },
+      {
+        "timestamp": 1776045335,
+        "equity": 7109.046074,
+        "delta": -1.5585,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series Indonesia vs Sweden: Indonesia vs Sweden",
+        "usdc": 1.5585
+      },
+      {
+        "timestamp": 1776089515,
+        "equity": 6986.553752,
+        "delta": 105.5628,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Sunrisers Hyderabad vs Rajasthan Royals",
+        "usdc": 105.5628
+      },
+      {
+        "timestamp": 1776178519,
+        "equity": 7061.967344,
+        "delta": 100.4612,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Chennai Super Kings vs Kolkata Knight Riders",
+        "usdc": 100.4612
+      },
+      {
+        "timestamp": 1776226814,
+        "equity": 7089.739818,
+        "delta": 115.199999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Trail Blazers vs. Suns: O/U 216.5",
+        "usdc": 115.199999
+      },
+      {
+        "timestamp": 1776273762,
+        "equity": 7152.44634,
+        "delta": 1.0689,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Peshawar Zalmi vs Quetta Gladiators",
+        "usdc": 1.0689
+      },
+      {
+        "timestamp": 1776325670,
+        "equity": 6844.531649,
+        "delta": -71.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuning 2: Buvaysar Gadamauri vs Leo Vithoontien",
+        "usdc": 71.4
+      },
+      {
+        "timestamp": 1776401368,
+        "equity": 7146.18566,
+        "delta": -7.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Bangladesh vs New Zealand: Bangladesh vs New Zealand",
+        "usdc": 7.35
+      },
+      {
+        "timestamp": 1776430218,
+        "equity": 7242.21272,
+        "delta": -5.551,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Bangladesh vs New Zealand: Bangladesh vs New Zealand",
+        "usdc": 5.551
+      },
+      {
+        "timestamp": 1776474014,
+        "equity": 7013.527602,
+        "delta": 3.0241,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 3.0241
+      },
+      {
+        "timestamp": 1776576874,
+        "equity": 6909.911994,
+        "delta": -7.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Adelaide United FC vs. Macarthur FC: O/U 2.5",
+        "usdc": 7.48
+      },
+      {
+        "timestamp": 1776612042,
+        "equity": 7008.782517,
+        "delta": -130.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Punjab Kings vs Lucknow Super Giants",
+        "usdc": 130.5
+      },
+      {
+        "timestamp": 1776702348,
+        "equity": 7158.834581,
+        "delta": -43.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Gujarat Titans vs Mumbai Indians",
+        "usdc": 43.0
+      },
+      {
+        "timestamp": 1776791654,
+        "equity": 7242.621171,
+        "delta": 0.4537,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Rawalpindi Pindiz vs Multan Sultans",
+        "usdc": 0.4537
+      },
+      {
+        "timestamp": 1776850580,
+        "equity": 7400.155165,
+        "delta": -0.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Challenge Trophy, Women: Rwanda vs Nepal",
+        "usdc": 0.5
+      },
+      {
+        "timestamp": 1776871856,
+        "equity": 7508.766292,
+        "delta": -38.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pakistan Super League: Hyderabad Kingsmen vs Multan Sultans",
+        "usdc": 38.0
+      },
+      {
+        "timestamp": 1776941710,
+        "equity": 7500.888265,
+        "delta": -34.0934,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Bangladesh vs New Zealand: Bangladesh vs New Zealand",
+        "usdc": 34.0934
+      },
+      {
+        "timestamp": 1777027802,
+        "equity": 7256.614417,
+        "delta": -61.272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Challenge Trophy, Women: Italy vs USA",
+        "usdc": 61.272
+      },
+      {
+        "timestamp": 1777104668,
+        "equity": 7150.466984,
+        "delta": -14.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ICC Cricket World Cup League Two: Nepal vs United Arab Emirates",
+        "usdc": 14.7
+      },
+      {
+        "timestamp": 1777121170,
+        "equity": 7182.179003,
+        "delta": 0.01171,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Pakistan Super League: Quetta Gladiators vs Karachi Kings",
+        "usdc": 0.01171
+      },
+      {
+        "timestamp": 1777227086,
+        "equity": 7108.966204,
+        "delta": -19.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Lucknow Super Giants vs Kolkata Knight Riders",
+        "usdc": 19.43
+      },
+      {
+        "timestamp": 1777367462,
+        "equity": 7181.226396,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Challenge Trophy, Women: Rwanda vs Nepal",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1777404954,
+        "equity": 7236.407907,
+        "delta": -3.5351,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Paris Saint-Germain FC vs. FC Bayern M\u00fcnchen: O/U 4.5",
+        "usdc": 3.5351
+      },
+      {
+        "timestamp": 1777553166,
+        "equity": 7181.260606,
+        "delta": -6.918528,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Challenge Trophy, Women: Nepal vs Vanuatu",
+        "usdc": 6.918528
+      },
+      {
+        "timestamp": 1777806328,
+        "equity": 7292.065216,
+        "delta": 176.92142,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "ICC Cricket World Cup League Two: United Arab Emirates vs Oman",
+        "usdc": 176.92142
+      },
+      {
+        "timestamp": 1778004382,
+        "equity": 7146.639329,
+        "delta": -2.240232,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al Khaleej Saudi Club vs. Al Hilal Saudi Club: O/U 3.5",
+        "usdc": 2.240232
+      },
+      {
+        "timestamp": 1778119483,
+        "equity": 7158.324929,
+        "delta": 9.44,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Hong Kong Tri-Series, Women: Malaysia vs China",
+        "usdc": 9.44
+      },
+      {
+        "timestamp": 1778235947,
+        "equity": 7308.794017,
+        "delta": 84.64,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Cyprus vs Finland: Cyprus vs Finland",
+        "usdc": 84.64
+      },
+      {
+        "timestamp": 1778328413,
+        "equity": 7294.12221,
+        "delta": -1.627906,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Liverpool FC vs. Chelsea FC: O/U 2.5",
+        "usdc": 1.627906
+      },
+      {
+        "timestamp": 1778401953,
+        "equity": 7442.71577,
+        "delta": -0.83,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series Romania vs Bulgaria: Romania vs Bulgaria",
+        "usdc": 0.83
+      },
+      {
+        "timestamp": 1778439319,
+        "equity": 7336.628154,
+        "delta": 20.78131,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will 1. FSV Mainz 05 win on 2026-05-10?",
+        "usdc": 20.78131
+      },
+      {
+        "timestamp": 1778490750,
+        "equity": 7516.404988,
+        "delta": -35.315,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the match end in a draw?",
+        "usdc": 35.315
+      },
+      {
+        "timestamp": 1778649263,
+        "equity": 7688.09318,
+        "delta": -13.72275,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup, East Asia-Pacific Qualifier, Regional Final: Cook Islands vs Vanuatu",
+        "usdc": 13.72275
+      },
+      {
+        "timestamp": 1779157337,
+        "equity": 7806.519383,
+        "delta": -9.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Thunder: O/U 220.5",
+        "usdc": 9.3
+      },
+      {
+        "timestamp": 1779194457,
+        "equity": 7558.976818,
+        "delta": -40.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Europe Qualifier A: Switzerland vs Croatia",
+        "usdc": 40.5
+      },
+      {
+        "timestamp": 1779245520,
+        "equity": 7381.878657,
+        "delta": -81.6282,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Bangladesh win?",
+        "usdc": 81.6282
+      },
+      {
+        "timestamp": 1779273728,
+        "equity": 7678.534141,
+        "delta": -0.5486,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Europe Qualifier A: Cyprus vs Switzerland",
+        "usdc": 0.5486
+      },
+      {
+        "timestamp": 1779346740,
+        "equity": 7554.400265,
+        "delta": 0.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Hamburg European Open (Doubles): Doumbia/Reboul vs Bolelli/Vavassori",
+        "usdc": 0.999998
+      },
+      {
+        "timestamp": 1779440564,
+        "equity": 7609.53058,
+        "delta": 7.83791,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup Sub Regional Europe Qualifier A: France vs Switzerland",
+        "usdc": 7.83791
+      },
+      {
+        "timestamp": 1779518579,
+        "equity": 7696.169806,
+        "delta": 9.8,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Sri Lanka A vs New Zealand A, Women: Sri Lanka A vs New Zealand A",
+        "usdc": 9.8
+      },
+      {
+        "timestamp": 1779543704,
+        "equity": 7714.547562,
+        "delta": -4.70626,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Europe Qualifier A: Croatia vs Austria",
+        "usdc": 4.70626
+      },
+      {
+        "timestamp": 1779633316,
+        "equity": 7703.813201,
+        "delta": 104.07462,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 World Cup, Sub Regional Africa, Qualifier A: Cameroon vs Sierra Leone",
+        "usdc": 104.07462
+      },
+      {
+        "timestamp": 1779703308,
+        "equity": 7725.757437,
+        "delta": -0.40851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup, Sub Regional Africa, Qualifier A: Kenya vs Rwanda",
+        "usdc": 0.40851
+      },
+      {
+        "timestamp": 1779721716,
+        "equity": 8201.285128,
+        "delta": 0.50444,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series England vs. New Zealand, Women: England vs New Zealand",
+        "usdc": 0.50444
+      },
+      {
+        "timestamp": 1779809883,
+        "equity": 8208.847015,
+        "delta": -25.24,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Royal Challengers Bengaluru vs Gujarat Titans",
+        "usdc": 25.24
+      },
+      {
+        "timestamp": 1779896781,
+        "equity": 8005.913275,
+        "delta": -102.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Indian Premier League: Sunrisers Hyderabad vs Rajasthan Royals",
+        "usdc": 102.0
+      },
+      {
+        "timestamp": 1779933642,
+        "equity": 8586.427649,
+        "delta": -15.37,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Asian Games, Women, Qualifier: Malaysia vs Hong Kong, China",
+        "usdc": 15.37
+      },
+      {
+        "timestamp": 1779990860,
+        "equity": 8627.617121,
+        "delta": -21.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Series England vs. India, Women: England vs India",
+        "usdc": 21.0
+      },
+      {
+        "timestamp": 1780074690,
+        "equity": 9010.645943,
+        "delta": 17.64881,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Indian Premier League: Gujarat Titans vs Rajasthan Royals",
+        "usdc": 17.64881
+      },
+      {
+        "timestamp": 1780153023,
+        "equity": 9055.959118,
+        "delta": -3.9243,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup, Sub Regional Africa, Qualifier A: Botswana vs Rwanda",
+        "usdc": 3.9243
+      },
+      {
+        "timestamp": 1780235716,
+        "equity": 9181.922886,
+        "delta": -55.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Scotland Tri-Series, Women: Bangladesh vs Netherlands",
+        "usdc": 55.0
+      },
+      {
+        "timestamp": 1780285360,
+        "equity": 9267.635341,
+        "delta": 0.97376,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Asian Games, Qualifier: Oman vs Singapore",
+        "usdc": 0.97376
+      },
+      {
+        "timestamp": 1780385164,
+        "equity": 9376.818101,
+        "delta": -0.101101,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Asian Games, Qualifier: Malaysia vs China",
+        "usdc": 0.101101
+      },
+      {
+        "timestamp": 1780476324,
+        "equity": 9359.19001,
+        "delta": 0.16,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 ACC Premier Cup, Women: China vs Oman",
+        "usdc": 0.16
+      },
+      {
+        "timestamp": 1780625988,
+        "equity": 9291.264479,
+        "delta": -16.8844,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mexico vs. Serbia: O/U 2.5",
+        "usdc": 16.8844
+      },
+      {
+        "timestamp": 1780692087,
+        "equity": 9377.598118,
+        "delta": -0.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 Blast: Sussex vs Leicestershire",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1780731613,
+        "equity": 9336.730125,
+        "delta": 4.77,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 ACC Premier Cup, Women: Nepal vs Hong Kong, China",
+        "usdc": 4.77
+      },
+      {
+        "timestamp": 1780936560,
+        "equity": 9574.168384,
+        "delta": 84.8582,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Boston Red Sox vs. New York Yankees: O/U 7.5",
+        "usdc": 84.8582
+      },
+      {
+        "timestamp": 1781006383,
+        "equity": 9573.120707,
+        "delta": -0.023673,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Bangladesh vs Australia: Bangladesh vs Australia",
+        "usdc": 0.023673
+      },
+      {
+        "timestamp": 1781187375,
+        "equity": 9731.913589,
+        "delta": 0.0084,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "ODI Series Bangladesh vs Australia: Bangladesh vs Australia",
+        "usdc": 0.0084
+      },
+      {
+        "timestamp": 1781240530,
+        "equity": 9786.839296,
+        "delta": -9.5472,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. New York Yankees: O/U 10.5",
+        "usdc": 9.5472
+      },
+      {
+        "timestamp": 1781317578,
+        "equity": 9957.43986,
+        "delta": -81.4617,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: United States (-2.5)",
+        "usdc": 81.4617
+      },
+      {
+        "timestamp": 1781422299,
+        "equity": 10111.778793,
+        "delta": -2.6128,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atlanta Braves vs. Chicago White Sox: O/U 9.5",
+        "usdc": 2.6128
+      },
+      {
+        "timestamp": 1781457337,
+        "equity": 10101.337653,
+        "delta": -0.3102,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Germany vs. Cura\u00e7ao: Both Teams to Score",
+        "usdc": 0.3102
+      },
+      {
+        "timestamp": 1781495119,
+        "equity": 9890.468227,
+        "delta": -15.057,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sweden vs. Tunisia: O/U 5.5",
+        "usdc": 15.057
+      },
+      {
+        "timestamp": 1781545020,
+        "equity": 10038.36299,
+        "delta": 4.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spain vs. Cabo Verde: O/U 8.5 Total Corners",
+        "usdc": 4.0
+      },
+      {
+        "timestamp": 1781625104,
+        "equity": 10089.813116,
+        "delta": -0.309278,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ICC T20 World Cup, Women: New Zealand vs Sri Lanka",
+        "usdc": 0.309278
+      },
+      {
+        "timestamp": 1781638286,
+        "equity": 10128.480511,
+        "delta": 66.424,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Exact Score: Any Other Score?",
+        "usdc": 66.424
+      },
+      {
+        "timestamp": 1781719973,
+        "equity": 10663.29751,
+        "delta": 146.68,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Portugal vs. DR Congo: O/U 10.5 Total Corners",
+        "usdc": 146.68
+      },
+      {
+        "timestamp": 1781835781,
+        "equity": 10798.90375,
+        "delta": 2.07,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Atlanta Braves (-3.5)",
+        "usdc": 2.07
+      },
+      {
+        "timestamp": 1781881483,
+        "equity": 10747.314121,
+        "delta": 0.21924,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Namibia T20 Tri-Series: Namibia vs Hong Kong, China",
+        "usdc": 0.21924
+      },
+      {
+        "timestamp": 1781930840,
+        "equity": 10874.249043,
+        "delta": 1.45,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T\u00fcrkiye vs. Paraguay: O/U 11.5 Total Corners",
+        "usdc": 1.45
+      },
+      {
+        "timestamp": 1782056824,
+        "equity": 11457.833779,
+        "delta": -43.0833,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ICC T20 World Cup, Women: South Africa vs India",
+        "usdc": 43.0833
+      },
+      {
+        "timestamp": 1782061760,
+        "equity": 11493.185923,
+        "delta": 0.825,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Exact Score: Any Other Score?",
+        "usdc": 0.825
+      },
+      {
+        "timestamp": 1782235037,
+        "equity": 11413.236658,
+        "delta": -2.178985,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Exact Score: Any Other Score?",
+        "usdc": 2.178985
+      },
+      {
+        "timestamp": 1782270688,
+        "equity": 11871.714623,
+        "delta": -3.2674,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colombia vs. DR Congo: O/U 8.5 Total Corners",
+        "usdc": 3.2674
+      },
+      {
+        "timestamp": 1782494413,
+        "equity": 12303.643344,
+        "delta": 1.95,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+        "usdc": 1.95
+      },
+      {
+        "timestamp": 1782612187,
+        "equity": 12027.602881,
+        "delta": -34.82085,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Algeria vs. Austria: O/U 2.5",
+        "usdc": 34.82085
+      },
+      {
+        "timestamp": 1782759494,
+        "equity": 12257.326928,
+        "delta": 74.39258,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Brazil vs. Japan: O/U 9.5 Total Corners",
+        "usdc": 74.39258
+      },
+      {
+        "timestamp": 1782840629,
+        "equity": 11848.014951,
+        "delta": -105.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "C\u00f4te d'Ivoire vs. Norway: O/U 9.5 Total Corners",
+        "usdc": 105.0
+      },
+      {
+        "timestamp": 1782873758,
+        "equity": 11950.2688,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "France vs. Sweden: 1st Half O/U 5.5 Total Corners",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1782928037,
+        "equity": 11871.58773,
+        "delta": 7.4965,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "England vs. DR Congo: O/U 2.5",
+        "usdc": 7.4965
+      },
+      {
+        "timestamp": 1783048355,
+        "equity": 12273.40917,
+        "delta": -8.35975,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Switzerland vs. Algeria: O/U 1.5",
+        "usdc": 8.35975
+      },
+      {
+        "timestamp": 1783108772,
+        "equity": 12487.146569,
+        "delta": -11.8161,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Australia vs. Egypt: Will the Match Go to a Penalty Shootout?",
+        "usdc": 11.8161
+      },
+      {
+        "timestamp": 1783123204,
+        "equity": 12734.116302,
+        "delta": 279.71161,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Argentina vs. Cabo Verde: O/U 8.5 Total Corners",
+        "usdc": 279.71161
+      },
+      {
+        "timestamp": 1783191872,
+        "equity": 13108.199806,
+        "delta": 0.03551,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Canada vs. Morocco: O/U 11.5 Total Corners",
+        "usdc": 0.03551
+      },
+      {
+        "timestamp": 1783204847,
+        "equity": 13046.26377,
+        "delta": 3.009999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Paraguay vs. France: O/U 12.5 Total Corners",
+        "usdc": 3.009999
+      },
+      {
+        "timestamp": 1783270451,
+        "equity": 12748.951001,
+        "delta": -9.99909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Brazil vs. Norway: O/U 8.5 Total Corners",
+        "usdc": 9.99909
+      },
+      {
+        "timestamp": 1783300049,
+        "equity": 12865.427375,
+        "delta": 118.94,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Mexico vs. England: O/U 7.5 Total Corners",
+        "usdc": 118.94
+      },
+      {
+        "timestamp": 1783338016,
+        "equity": 12802.112808,
+        "delta": -0.378,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Boston Red Sox (-1.5)",
+        "usdc": 0.378
+      },
+      {
+        "timestamp": 1783382693,
+        "equity": 12308.303562,
+        "delta": -105.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "United States vs. Belgium: O/U 11.5 Total Corners",
+        "usdc": 105.0
+      },
+      {
+        "timestamp": 1783446023,
+        "equity": 12910.911165,
+        "delta": 0.4446,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+        "usdc": 0.4446
+      },
+      {
+        "timestamp": 1783516813,
+        "equity": 13509.361912,
+        "delta": -47.54976,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "T20 World Cup Sub Regional Europe Qualifier B: Romania vs Serbia",
+        "usdc": 47.54976
+      },
+      {
+        "timestamp": 1783610837,
+        "equity": 13395.449431,
+        "delta": 13.0026,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "ODI Series Zimbabwe vs Bangladesh: Zimbabwe vs Bangladesh",
+        "usdc": 13.0026
+      },
+      {
+        "timestamp": 1783711670,
+        "equity": 13541.6904,
+        "delta": 1.499998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spain vs. Belgium: O/U 2.5",
+        "usdc": 1.499998
+      },
+      {
+        "timestamp": 1783776326,
+        "equity": 14098.07601,
+        "delta": -7.1985,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will England win?",
+        "usdc": 7.1985
+      },
+      {
+        "timestamp": 1783793086,
+        "equity": 14191.791417,
+        "delta": -0.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will England win?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1783811560,
+        "equity": 14406.096824,
+        "delta": 4.753099,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Norway vs. England: Will the Match Go to a Penalty Shootout?",
+        "usdc": 4.753099
+      },
+      {
+        "timestamp": 1783831946,
+        "equity": 15101.811894,
+        "delta": 628.69055,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will India win?",
+        "usdc": 628.69055
+      },
+      {
+        "timestamp": 1784121955,
+        "equity": 15705.815507,
+        "delta": 0.9499,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: New York Yankees (-1.5)",
+        "usdc": 0.9499
+      },
+      {
+        "timestamp": 1784147762,
+        "equity": 15726.548729,
+        "delta": 5.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "England vs. Argentina: O/U 6.5 Total Corners",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1784332455,
+        "equity": 16154.84744,
+        "delta": 2.45,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Arizona Diamondbacks vs. St. Louis Cardinals: O/U 9.5",
+        "usdc": 2.45
+      },
+      {
+        "timestamp": 1784414652,
+        "equity": 16320.917825,
+        "delta": 0.4407,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "France vs. England: O/U 7.5 Total Corners",
+        "usdc": 0.4407
+      },
+      {
+        "timestamp": 1784497566,
+        "equity": 16212.507062,
+        "delta": 50.4225,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spain vs. Argentina: Will the Match Go to a Penalty Shootout?",
+        "usdc": 50.4225
+      },
+      {
+        "timestamp": 1784659288,
+        "equity": 16456.456159,
+        "delta": -2.50246,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Aarhus GF vs. KKS Lech Pozna\u0144: O/U 5.5",
+        "usdc": 2.50246
+      },
+      {
+        "timestamp": 1784721840,
+        "equity": 16671.721759,
+        "delta": 0.1343,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Vancouver Whitecaps FC win on 2026-07-16?",
+        "usdc": 0.1343
+      },
+      {
+        "timestamp": 1784748109,
+        "equity": 16872.208197,
+        "delta": 2.392,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "KF Egnatia Rrogozhin\u00eb vs. NK Celje: O/U 3.5",
+        "usdc": 2.392
+      },
+      {
+        "timestamp": 1784792712,
+        "equity": 16986.57013,
+        "delta": 2.919999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "ODI Series Sri Lanka vs Pakistan, Women: Sri Lanka vs Pakistan",
+        "usdc": 2.919999
+      },
+      {
+        "timestamp": 1784971912,
+        "equity": 17105.727284,
+        "delta": -2.1106,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ODI Series Sri Lanka vs Pakistan, Women: Sri Lanka vs Pakistan",
+        "usdc": 2.1106
+      },
+      {
+        "timestamp": 1785064720,
+        "equity": 17006.992184,
+        "delta": -0.764406,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Yunnan Yukun FC vs. Shenzhen Xinpengcheng FC: O/U 3.5",
+        "usdc": 0.764406
+      },
+      {
+        "timestamp": 1785112786,
+        "equity": 16507.520609,
+        "delta": 31.849998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Club Necaxa vs. CF Monterrey: O/U 3.5",
+        "usdc": 31.849998
+      },
+      {
+        "timestamp": 1785199525,
+        "equity": 16717.715588,
+        "delta": 3.0782,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 3.0782
+      },
+      {
+        "timestamp": 1785254491,
+        "equity": 16791.553102,
+        "delta": 2.6896,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Real Madrid win on 2026-07-28?",
+        "usdc": 2.6896
+      },
+      {
+        "timestamp": 1785353313,
+        "equity": 16804.700601,
+        "delta": -91.4095,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Exact Score: G\u00f3rnik Zabrze 2 - 2 Fenerbah\u00e7e SK?",
+        "usdc": 91.4095
+      },
+      {
+        "timestamp": 1785440333,
+        "equity": 16830.601426,
+        "delta": -108.491,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sport Lisboa e Benfica vs. FC St. Gallen: O/U 3.5",
+        "usdc": 108.491
+      },
+      {
+        "timestamp": 1785664440,
+        "equity": 17048.371483,
+        "delta": -16.6554,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Japan vs. Slovenia",
+        "usdc": 16.6554
+      },
+      {
+        "timestamp": 1785828044,
+        "equity": 17185.097045,
+        "delta": 0.00991,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "T20 Series Sri Lanka vs Pakistan, Women: Sri Lanka vs Pakistan",
+        "usdc": 0.00991
+      },
+      {
+        "timestamp": 1785864998,
+        "equity": 17188.5972,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "BG Pathum United vs. Aston Villa: O/U 1.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1785953489,
+        "equity": 16953.797989,
+        "delta": -37.4272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fenerbah\u00e7e SK vs. SK Puntigamer Sturm Graz: O/U 3.5",
+        "usdc": 37.4272
+      },
+      {
+        "timestamp": 1786034043,
+        "equity": 17060.738272,
+        "delta": 4.959999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Inter Turku vs. FC Vaduz: O/U 3.5",
+        "usdc": 4.959999
+      },
+      {
+        "timestamp": 1786110313,
+        "equity": 17254.058498,
+        "delta": -25.5528,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Aston Villa vs. Bayern Munich: O/U 3.5",
+        "usdc": 25.5528
+      },
+      {
+        "timestamp": 1786134519,
+        "equity": 17439.295705,
+        "delta": 263.989998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Wolverhampton Wanderers FC vs. Port Vale FC: O/U 4.5",
+        "usdc": 263.989998
+      },
+      {
+        "timestamp": 1786224735,
+        "equity": 17422.844858,
+        "delta": -104.499,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New England Revolution vs. Houston Dynamo: O/U 2.5",
+        "usdc": 104.499
+      },
+      {
+        "timestamp": 1786234624,
+        "equity": 17444.514859,
+        "delta": 9.099998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Coritiba FBC vs. Associa\u00e7\u00e3o Chapecoense de Futebol: O/U 2.5",
+        "usdc": 9.099998
+      },
+      {
+        "timestamp": 1786283757,
+        "equity": 16885.555551,
+        "delta": -51.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Groningen vs. FC Utrecht: O/U 2.5",
+        "usdc": 51.0
+      },
+      {
+        "timestamp": 1786387059,
+        "equity": 16927.279555,
+        "delta": 1.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Silkeborg IF vs. Odense BK: O/U 1.5",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1786469223,
+        "equity": 16816.53972,
+        "delta": -83.59925,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "NEC vs. Olympiak\u00f3s SFP: O/U 1.5",
+        "usdc": 83.59925
+      },
+      {
+        "timestamp": 1786529922,
+        "equity": 16876.582835,
+        "delta": -77.3157,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Brunswick Juventus FC vs. Preston Lions FC: O/U 4.5",
+        "usdc": 77.3157
+      },
+      {
+        "timestamp": 1786556560,
+        "equity": 17040.553062,
+        "delta": 8.449999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC K\u00f8benhavn vs. Debreceni VSC: O/U 5.5",
+        "usdc": 8.449999
+      },
+      {
+        "timestamp": 1786595259,
+        "equity": 17110.283599,
+        "delta": 49.998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Los Angeles FC vs. Quer\u00e9taro FC: O/U 2.5",
+        "usdc": 49.998
+      },
+      {
+        "timestamp": 1786707273,
+        "equity": 17274.523745,
+        "delta": 52.91,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Australia win?",
+        "usdc": 52.91
+      },
+      {
+        "timestamp": 1786723132,
+        "equity": 17234.776534,
+        "delta": -0.0077,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al-Nasr Dubai CSC vs. Ittihad Kalba FC: O/U 4.5",
+        "usdc": 0.0077
+      },
+      {
+        "timestamp": 1786740516,
+        "equity": 17139.649794,
+        "delta": -29.3835,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ACF Fiorentina vs. Benevento Calcio: O/U 5.5",
+        "usdc": 29.3835
+      },
+      {
+        "timestamp": 1786841139,
+        "equity": 17283.82512,
+        "delta": 2.6259,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 2.6259
+      },
+      {
+        "timestamp": 1786901494,
+        "equity": 16866.312389,
+        "delta": -112.443,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "RCD Espanyol de Barcelona vs. Levante UD: O/U 3.5",
+        "usdc": 112.443
+      },
+      {
+        "timestamp": 1786984473,
+        "equity": 17047.346432,
+        "delta": 49.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "IF Gnistan vs. Tampereen Ilves: O/U 4.5",
+        "usdc": 49.0
+      },
+      {
+        "timestamp": 1787005225,
+        "equity": 16811.104599,
+        "delta": -0.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA V\u00e9lez Sarsfield vs. CSyD Defensa y Justicia: O/U 1.5",
+        "usdc": 0.55
+      },
+      {
+        "timestamp": 1787147559,
+        "equity": 16788.640788,
+        "delta": -8.181818,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vietnam vs. Malaysia: O/U 1.5",
+        "usdc": 8.181818
+      },
+      {
+        "timestamp": 1787240965,
+        "equity": 16792.24516,
+        "delta": -9.17187,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Qairat FK vs. RSC Anderlecht: O/U 4.5",
+        "usdc": 9.17187
+      },
+      {
+        "timestamp": 1787343082,
+        "equity": 16774.677846,
+        "delta": -55.242,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Arsenal FC vs. Coventry City FC: O/U 4.5",
+        "usdc": 55.242
+      },
+      {
+        "timestamp": 1787545650,
+        "equity": 16661.904284,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "CF Cruz Azul vs. Atlas FC: O/U 1.5",
+        "usdc": 0.0
+      }
+    ]
+  },
+  "market_making": {
+    "score": 65,
+    "label": "likely_market_maker",
+    "signals": [
+      "Fast round-trips (<2h) in 81% of two-sided markets",
+      "Avg sell > avg buy in 77% of markets (spread capture)",
+      "High-frequency cadence (median gap 100s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0924,
+      "fast_roundtrip_rate": 0.8133,
+      "spread_capture_rate": 0.7712,
+      "size_cv": 5.5442,
+      "median_gap_seconds": 100,
+      "outcome_counts": {
+        "Jovic": 2,
+        "Fokina": 6,
+        "Under": 6744,
+        "Yes": 2103,
+        "No": 1163,
+        "FURIA Esports": 2,
+        "Humbert": 23,
+        "Over 2.5": 4,
+        "Over": 573,
+        "Lakers": 51,
+        "FC Metz": 3,
+        "Gen.G Global Academy": 10,
+        "Hawks": 45,
+        "Clippers": 78,
+        "Wizards": 12,
+        "Spurs": 60,
+        "Knicks": 50,
+        "Indiana": 3,
+        "76ers": 74,
+        "Suns": 52,
+        "Pacers": 9,
+        "Nets": 17,
+        "Flames": 2,
+        "Pistons": 18,
+        "Celtics": 31,
+        "Heat": 17,
+        "Oilers": 3,
+        "Timberwolves": 119,
+        "Bulls": 16,
+        "Kings": 65,
+        "Predators": 1,
+        "Rockets": 19,
+        "Ak Bars Kazan": 8,
+        "Minaur": 2,
+        "EDward Gaming": 2,
+        "Under 3.5": 7,
+        "Medjedovic": 43,
+        "DN Freecs": 2,
+        "P\u00e1fos FC": 2,
+        "SK Puntigamer Sturm Graz": 2,
+        "Magic": 21,
+        "Nuggets": 32,
+        "Warriors": 68,
+        "Trail Blazers": 97,
+        "Wild": 5,
+        "AJ Auxerre": 6,
+        "Furman Paladins": 8,
+        "North Texas Mean Green": 17,
+        "Bucks": 49,
+        "Hornets": 16,
+        "Jazz": 35,
+        "Avalanche": 3,
+        "Musetti": 6,
+        "Fritz": 10,
+        "Cavaliers": 43,
+        "Lightning": 4,
+        "Koelner Haie": 12,
+        "Fribourg-Gotteron": 7,
+        "Djokovic": 37,
+        "Devils": 6,
+        "Australia Under-19s": 49,
+        "West Indies Under-19s": 13,
+        "Sri Lanka Under-19s": 22,
+        "South Africa Under-19s": 8,
+        "Ireland Under-19s": 5,
+        "Over 3.5": 10,
+        "Under 4.5": 1,
+        "Sinner": 6,
+        "Sri Lanka": 300,
+        "Starodubtseva": 9,
+        "Zimbabwe Under-19s": 14,
+        "Hon": 9,
+        "Sasnovich": 7,
+        "Rybakina": 2,
+        "Sabalenka": 11,
+        "Escorihuela": 4,
+        "India": 279,
+        "New Zealand": 301,
+        "Australia": 197,
+        "India Under-19s": 8,
+        "Pakistan Under-19s": 14,
+        "England": 180,
+        "USA": 105,
+        "Damm": 9,
+        "Ostapenko": 31,
+        "Selekhmeteva": 4,
+        "Pelicans": 3,
+        "Tennessee Tech Golden Eagles": 8,
+        "Tennessee State Tigers": 1,
+        "Texas A&M-Corpus Christi Islanders": 6,
+        "Zimbabwe": 89,
+        "Netherlands": 78,
+        "Fresno State Bulldogs": 3,
+        "Afghanistan Under-19s": 17,
+        "Afghanistan": 119,
+        "Pakistan": 244,
+        "Thunder": 63,
+        "Grizzlies": 35,
+        "Oman": 134,
+        "Auger-Aliassime": 10,
+        "Wawrinka": 5,
+        "England Under-19s": 30,
+        "Italy": 67,
+        "Waltert": 11,
+        "West Indies": 234,
+        "Frech": 12,
+        "Under 2.5": 5,
+        "Scotland": 177,
+        "Tottenham Hotspur FC": 10,
+        "New Haven Chargers": 22,
+        "Villanova Wildcats": 5,
+        "Purdue Boilermakers": 5,
+        "Georgia State Panthers": 24,
+        "Nepal": 128,
+        "Ireland": 74,
+        "USC Trojans": 6,
+        "Manchester City FC": 2,
+        "Canada": 107,
+        "Namibia": 158,
+        "UAE": 45,
+        "South Africa": 381,
+        "Norrie": 15,
+        "Tsitsipas": 3,
+        "Mavericks": 21,
+        "Niagara Purple Eagles": 4,
+        "Slovakia": 5,
+        "Tulane Green Wave": 7,
+        "UAB Blazers": 7,
+        "Dayton Flyers": 5,
+        "Team World": 3,
+        "Team USA Stars": 11,
+        "Team USA Stripes": 25,
+        "Murray State Racers": 12,
+        "Girona FC": 7,
+        "Germany": 17,
+        "Denmark": 3,
+        "Czechia": 17,
+        "Galatasaray SK": 10,
+        "Sport Lisboa e Benfica": 2,
+        "AS Monaco FC": 6,
+        "Medvedev": 13,
+        "Finland": 11,
+        "Qaraba\u011f A\u011fdam FK": 5,
+        "Club Brugge KV": 11,
+        "AC Milan": 3,
+        "Sweden": 78,
+        "Al Najmah Saudi Club": 21,
+        "Panathinaik\u00f3s AO": 6,
+        "FC Viktoria Plze\u0148": 7,
+        "Hawaii Rainbow Warriors": 22,
+        "Cal Poly Mustangs": 3,
+        "Bangladesh A": 9,
+        "Houston Cougars": 12,
+        "BYU Cougars": 9,
+        "Kas\u0131mpa\u015fa SK": 9,
+        "Antalyaspor": 6,
+        "Pegula": 3,
+        "FK Bod\u00f8/Glimt": 5,
+        "FC Internazionale Milano": 4,
+        "Kuwait": 92,
+        "Hong Kong, China": 142,
+        "BV Borussia 09 Dortmund": 11,
+        "Juventus FC": 2,
+        "Bhutan": 31,
+        "Wisconsin Badgers": 22,
+        "Celtic FC": 11,
+        "Fenerbah\u00e7e SK": 3,
+        "UC Davis Aggies": 8,
+        "Thailand": 18,
+        "Adelaide United FC": 12,
+        "Konyaspor": 4,
+        "Wolverhampton Wanderers FC": 22,
+        "Georgia Southern Eagles": 3,
+        "Miami (OH) RedHawks": 6,
+        "US Lecce": 3,
+        "US Cremonese": 8,
+        "Getafe CF": 10,
+        "AC Reggiana 1919": 1,
+        "Mazatl\u00e1n FC": 8,
+        "Pumas de la UNAM": 7,
+        "SS Lazio": 2,
+        "Bellarmine Knights": 6,
+        "Al Qadisiyah Saudi Club": 5,
+        "UCLA Bruins": 2,
+        "Sydney FC": 7,
+        "Cagliari Calcio": 2,
+        "1. FC Heidenheim 1846": 8,
+        "Al Kholood Saudi Club": 11,
+        "Bahrain": 77,
+        "Malaysia": 103,
+        "Elche CF": 5,
+        "1. FC Union Berlin": 9,
+        "South Korea": 2,
+        "Panama": 20,
+        "Great Britain": 5,
+        "Mexico": 67,
+        "Saint Marys Gaels": 4,
+        "Japan": 50,
+        "Karachi Region Blues": 3,
+        "Abbottabad Region": 2,
+        "Atalanta BC": 6,
+        "SMU Mustangs": 4,
+        "Mississippi Valley State Delta Devils": 2,
+        "Lia Karatancheva": 8,
+        "Pittsburgh Panthers": 3,
+        "St. Bonaventure Bonnies": 3,
+        "North Carolina State Wolfpack": 2,
+        "Victoria": 19,
+        "New South Wales Breakers": 13,
+        "Texas Tech Red Raiders": 13,
+        "Suriname": 16,
+        "San Jose State Spartans": 2,
+        "ACT Meteors": 14,
+        "Bangladesh": 228,
+        "Ohio State Buckeyes": 7,
+        "George Washington Revolutionaries": 2,
+        "Kentucky Wildcats": 4,
+        "Bristol City FC": 2,
+        "VfL Wolfsburg": 2,
+        "TSG 1899 Hoffenheim": 2,
+        "Newcastle United FC": 4,
+        "Western Australia": 12,
+        "Sevilla FC": 2,
+        "Cayman": 4,
+        "Sialkot Region": 40,
+        "Multan Region": 6,
+        "Up": 22,
+        "Namibia A": 49,
+        "India (Idpl)": 7,
+        "Hong Kong (Idpl)": 5,
+        "Uganda": 20,
+        "Belgium (Idpl)": 10,
+        "Rwanda": 102,
+        "Qingdao Hainiu FC": 4,
+        "Konark Suryas Odisha": 3,
+        "Kansas Jayhawks": 6,
+        "Queensland Fire": 12,
+        "Central Coast Mariners FC": 4,
+        "Tanzania": 4,
+        "Saint Helena": 18,
+        "Ghana": 18,
+        "Lahore Qalandars": 43,
+        "Hyderabad Kingsmen": 89,
+        "Nigeria": 21,
+        "Karachi Kings": 63,
+        "Quetta Gladiators": 174,
+        "Nicaragua": 2,
+        "Mauritania": 5,
+        "Peshawar Zalmi": 61,
+        "Rawalpindi Pindiz": 89,
+        "Multan Sultans": 83,
+        "Sunrisers Hyderabad": 85,
+        "Islamabad United": 23,
+        "Kolkata Knight Riders": 141,
+        "Rajasthan Royals": 73,
+        "Punjab Kings": 55,
+        "Gujarat Titans": 69,
+        "Delhi Capitals": 53,
+        "Lucknow Super Giants": 53,
+        "Brisbane Roar FC": 2,
+        "Chennai Super Kings": 52,
+        "Mumbai Indians": 84,
+        "Hong Kong A": 5,
+        "Malaysia A": 3,
+        "France": 50,
+        "Norway": 33,
+        "Royal Challengers Bangalore": 26,
+        "Portugal": 40,
+        "Indonesia": 145,
+        "Botswana": 36,
+        "Malawi": 11,
+        "Mozambique": 4,
+        "Auckland FC": 4,
+        "Lesotho": 3,
+        "Al Ettifaq Saudi Club": 4,
+        "Buvaysar Gadamauri": 10,
+        "United Arab Emirates": 46,
+        "Vanuatu": 24,
+        "Down": 10,
+        "Flavio Cobolli": 2,
+        "Al Fateh Saudi Club": 5,
+        "China": 27,
+        "Gibraltar": 2,
+        "Malta": 46,
+        "Korea Republic": 14,
+        "Cyprus": 27,
+        "Bulgaria": 11,
+        "Romania": 21,
+        "Papua New Guinea": 44,
+        "Chelsea FC": 5,
+        "Felix Auger-Aliassime": 2,
+        "Borussia M\u00f6nchengladbach": 4,
+        "Fiji": 3,
+        "Cook Islands": 4,
+        "Switzerland": 53,
+        "Croatia": 66,
+        "Jersey": 8,
+        "Doumbia/Reboul": 11,
+        "Atmane/Etcheverry": 17,
+        "Andreozzi/Guinard": 3,
+        "Los Angeles Sparks": 2,
+        "Slovenia": 2,
+        "Kent": 6,
+        "Sri Lanka A": 27,
+        "Kenya": 37,
+        "Austria": 19,
+        "Surrey": 6,
+        "Cameroon": 21,
+        "Durham": 6,
+        "New Zealand A": 8,
+        "Ivory Coast": 10,
+        "Lancashire": 4,
+        "Sussex": 36,
+        "Nottinghamshire": 4,
+        "Royal Challengers Bengaluru": 5,
+        "Leicestershire": 5,
+        "Sierra Leone": 2,
+        "Mali": 19,
+        "Arsenal FC": 2,
+        "Iceland": 2,
+        "Singapore": 21,
+        "Seattle Storm": 2,
+        "Mensik": 3,
+        "Zverev": 7,
+        "Saudi Arabia": 49,
+        "Toronto Tempo": 4,
+        "New York Yankees": 6,
+        "Boston Red Sox": 30,
+        "United States": 5,
+        "Qatar": 3,
+        "Zimbabwe High Performance Xi": 11,
+        "Chicago White Sox": 24,
+        "Cabo Verde": 2,
+        "Atlanta Braves": 10,
+        "Egypt": 14,
+        "Jordan": 9,
+        "Seattle Orcas": 11,
+        "San Francisco Giants": 2,
+        "Uzbekistan": 15,
+        "": 3,
+        "Ecuador": 2,
+        "Coastal Kings Mangaluru": 2,
+        "Hubli Tigers": 5,
+        "Kalyani Bengaluru Blasters": 8,
+        "St. Louis Cardinals": 3,
+        "Syria": 4,
+        "Indiana Fever": 21,
+        "Jaffna Kings": 2,
+        "Fredrikstad FK": 2,
+        "Spain": 2,
+        "Arizona Diamondbacks": 2,
+        "Hamarkameratene": 25,
+        "PortlandFire": 3,
+        "Dallas Wings": 9,
+        "CF Monterrey": 2,
+        "NEC": 4
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 251,
+      "1": 304,
+      "2": 536,
+      "3": 626,
+      "4": 869,
+      "5": 690,
+      "6": 662,
+      "7": 760,
+      "8": 762,
+      "9": 869,
+      "10": 820,
+      "11": 704,
+      "12": 932,
+      "13": 901,
+      "14": 1156,
+      "15": 1301,
+      "16": 1595,
+      "17": 1487,
+      "18": 1150,
+      "19": 1112,
+      "20": 1209,
+      "21": 1012,
+      "22": 503,
+      "23": 264
+    },
+    "dow_utc": {
+      "0": 2402,
+      "1": 2880,
+      "2": 2941,
+      "3": 2322,
+      "4": 2956,
+      "5": 3507,
+      "6": 3467
+    },
+    "peak_hours": [
+      16,
+      17,
+      15,
+      20,
+      14
+    ],
+    "peak_dows": [
+      5,
+      6,
+      4
+    ]
+  },
+  "sizing": {
+    "n": 20475,
+    "mean_usdc": 22.6723,
+    "median_usdc": 6.8027,
+    "p10_usdc": 0.3489,
+    "p90_usdc": 62.5,
+    "max_usdc": 2575.0,
+    "mean_shares": 99.0755,
+    "median_shares": 29.04
+  },
+  "categories": {
+    "pnl": {
+      "sports_totals": 9253.2818,
+      "other": 994.8784,
+      "crypto": -294.95,
+      "sports_match": -10797.5052
+    },
+    "counts": {
+      "sports_match": 1375,
+      "crypto": 33,
+      "sports_totals": 1441,
+      "other": 152
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Mavericks vs. Bucks: O/U 218.5",
+      "pnl": 2507.6093,
+      "buy_usdc": 607.8898,
+      "sell_usdc": 3115.4652,
+      "n_buys": 14,
+      "n_sells": 3,
+      "hold_seconds": 42410,
+      "avg_buy": 0.0945,
+      "avg_sell": 0.4845
+    },
+    {
+      "title": "ODI Series Bangladesh vs New Zealand: Bangladesh vs New Zealand",
+      "pnl": 1681.8334,
+      "buy_usdc": 467.7162,
+      "sell_usdc": 490.8438,
+      "n_buys": 26,
+      "n_sells": 15,
+      "hold_seconds": 64888,
+      "avg_buy": 0.3792,
+      "avg_sell": 0.3988
+    },
+    {
+      "title": "Germany vs. Latvia: O/U 5.5",
+      "pnl": 841.2503,
+      "buy_usdc": 48.6819,
+      "sell_usdc": 889.9323,
+      "n_buys": 1,
+      "n_sells": 4,
+      "hold_seconds": 1322,
+      "avg_buy": 0.03,
+      "avg_sell": 0.5484
+    },
+    {
+      "title": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+      "pnl": 700.1432,
+      "buy_usdc": 349.304,
+      "sell_usdc": 1049.7197,
+      "n_buys": 21,
+      "n_sells": 49,
+      "hold_seconds": 3930719,
+      "avg_buy": 0.1029,
+      "avg_sell": 0.3093
+    },
+    {
+      "title": "Will India win?",
+      "pnl": 607.7412,
+      "buy_usdc": 254.8195,
+      "sell_usdc": 876.7497,
+      "n_buys": 11,
+      "n_sells": 10,
+      "hold_seconds": 56072,
+      "avg_buy": 0.1237,
+      "avg_sell": 0.4257
+    },
+    {
+      "title": "Spread: Real Madrid CF (-1.5)",
+      "pnl": 585.9,
+      "buy_usdc": 141.75,
+      "sell_usdc": 727.65,
+      "n_buys": 1,
+      "n_sells": 1,
+      "hold_seconds": 96,
+      "avg_buy": 0.15,
+      "avg_sell": 0.77
+    },
+    {
+      "title": "T20 World Cup: Namibia vs Netherlands (Game 1)",
+      "pnl": 571.5696,
+      "buy_usdc": 316.9518,
+      "sell_usdc": 888.518,
+      "n_buys": 38,
+      "n_sells": 13,
+      "hold_seconds": 10830,
+      "avg_buy": 0.0558,
+      "avg_sell": 0.1564
+    },
+    {
+      "title": "ODI Series New Zealand vs South Africa Women: New Zealand vs South Africa",
+      "pnl": 551.8357,
+      "buy_usdc": 345.0548,
+      "sell_usdc": 446.2721,
+      "n_buys": 19,
+      "n_sells": 10,
+      "hold_seconds": 24128,
+      "avg_buy": 0.1898,
+      "avg_sell": 0.2497
+    },
+    {
+      "title": "Switzerland vs. Colombia: O/U 8.5 Total Corners",
+      "pnl": 448.3002,
+      "buy_usdc": 251.0,
+      "sell_usdc": 699.2901,
+      "n_buys": 2,
+      "n_sells": 2,
+      "hold_seconds": 355,
+      "avg_buy": 0.3586,
+      "avg_sell": 0.999
+    },
+    {
+      "title": "Team USA Stars vs. Team USA Stripes",
+      "pnl": 434.8917,
+      "buy_usdc": 215.2434,
+      "sell_usdc": 650.1258,
+      "n_buys": 10,
+      "n_sells": 15,
+      "hold_seconds": 1706,
+      "avg_buy": 0.1776,
+      "avg_sell": 0.5364
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Indian Premier League: Kolkata Knight Riders vs Sunrisers Hyderabad",
+      "pnl": -2394.2184,
+      "buy_usdc": 631.0149,
+      "sell_usdc": 806.9811,
+      "n_buys": 75,
+      "n_sells": 17,
+      "hold_seconds": 12024
+    },
+    {
+      "title": "Pakistan Super League: Peshawar Zalmi vs Multan Sultans",
+      "pnl": -2176.103,
+      "buy_usdc": 138.5078,
+      "sell_usdc": 170.4454,
+      "n_buys": 6,
+      "n_sells": 8,
+      "hold_seconds": 3356
+    },
+    {
+      "title": "T20 Series Namibia vs Scotland: Namibia vs Scotland",
+      "pnl": -1272.2266,
+      "buy_usdc": 276.0624,
+      "sell_usdc": 97.3415,
+      "n_buys": 14,
+      "n_sells": 18,
+      "hold_seconds": 77780
+    },
+    {
+      "title": "Indian Premier League: Mumbai Indians vs Lucknow Super Giants",
+      "pnl": -1268.2913,
+      "buy_usdc": 146.9084,
+      "sell_usdc": 68.0805,
+      "n_buys": 18,
+      "n_sells": 5,
+      "hold_seconds": 8920
+    },
+    {
+      "title": "T20 Challenge Trophy, Women: Rwanda vs Nepal",
+      "pnl": -1267.3805,
+      "buy_usdc": 40.4491,
+      "sell_usdc": 245.5455,
+      "n_buys": 7,
+      "n_sells": 11,
+      "hold_seconds": 19856
+    },
+    {
+      "title": "T20 Series Indonesia vs Sweden: Indonesia vs Sweden",
+      "pnl": -1100.4208,
+      "buy_usdc": 194.8545,
+      "sell_usdc": 768.7548,
+      "n_buys": 16,
+      "n_sells": 34,
+      "hold_seconds": 17808
+    },
+    {
+      "title": "Indian Premier League: Chennai Super Kings vs Delhi Capitals",
+      "pnl": -881.3264,
+      "buy_usdc": 241.5289,
+      "sell_usdc": 153.9168,
+      "n_buys": 21,
+      "n_sells": 3,
+      "hold_seconds": 14912
+    },
+    {
+      "title": "T20 Series Bangladesh vs Sri Lanka, Women: Bangladesh vs Sri Lanka",
+      "pnl": -846.3023,
+      "buy_usdc": 47.9865,
+      "sell_usdc": 189.2103,
+      "n_buys": 13,
+      "n_sells": 29,
+      "hold_seconds": 4862
+    },
+    {
+      "title": "Indian Premier League: Chennai Super Kings vs Kolkata Knight Riders",
+      "pnl": -815.0012,
+      "buy_usdc": 276.9792,
+      "sell_usdc": 316.8011,
+      "n_buys": 13,
+      "n_sells": 10,
+      "hold_seconds": 14921
+    },
+    {
+      "title": "T20 Series South Africa vs. India, Women: South Africa vs India",
+      "pnl": -729.9713,
+      "buy_usdc": 224.8752,
+      "sell_usdc": 85.407,
+      "n_buys": 9,
+      "n_sells": 1,
+      "hold_seconds": 5628
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "Mavericks vs. Bucks: O/U 218.5",
+      "avg_buy": 0.0945,
+      "avg_sell": 0.4845,
+      "spread": 0.39,
+      "pnl": 2507.6093,
+      "n_buys": 14,
+      "n_sells": 3,
+      "hold_seconds": 42410,
+      "both_sides": false
+    },
+    {
+      "title": "ODI Series Bangladesh vs New Zealand: Bangladesh vs New Zealand",
+      "avg_buy": 0.3792,
+      "avg_sell": 0.3988,
+      "spread": 0.0196,
+      "pnl": 1681.8334,
+      "n_buys": 26,
+      "n_sells": 15,
+      "hold_seconds": 64888,
+      "both_sides": true
+    },
+    {
+      "title": "Atlanta Braves vs. Chicago White Sox: O/U 8.5",
+      "avg_buy": 0.1029,
+      "avg_sell": 0.3093,
+      "spread": 0.2064,
+      "pnl": 700.1432,
+      "n_buys": 21,
+      "n_sells": 49,
+      "hold_seconds": 3930719,
+      "both_sides": true
+    },
+    {
+      "title": "Will India win?",
+      "avg_buy": 0.1237,
+      "avg_sell": 0.4257,
+      "spread": 0.302,
+      "pnl": 607.7412,
+      "n_buys": 11,
+      "n_sells": 10,
+      "hold_seconds": 56072,
+      "both_sides": true
+    },
+    {
+      "title": "T20 World Cup: Namibia vs Netherlands (Game 1)",
+      "avg_buy": 0.0558,
+      "avg_sell": 0.1564,
+      "spread": 0.1006,
+      "pnl": 571.5696,
+      "n_buys": 38,
+      "n_sells": 13,
+      "hold_seconds": 10830,
+      "both_sides": true
+    },
+    {
+      "title": "ODI Series New Zealand vs South Africa Women: New Zealand vs South Africa",
+      "avg_buy": 0.1898,
+      "avg_sell": 0.2497,
+      "spread": 0.0599,
+      "pnl": 551.8357,
+      "n_buys": 19,
+      "n_sells": 10,
+      "hold_seconds": 24128,
+      "both_sides": false
+    },
+    {
+      "title": "Switzerland vs. Colombia: O/U 8.5 Total Corners",
+      "avg_buy": 0.3586,
+      "avg_sell": 0.999,
+      "spread": 0.6404,
+      "pnl": 448.3002,
+      "n_buys": 2,
+      "n_sells": 2,
+      "hold_seconds": 355,
+      "both_sides": false
+    },
+    {
+      "title": "Team USA Stars vs. Team USA Stripes",
+      "avg_buy": 0.1776,
+      "avg_sell": 0.5364,
+      "spread": 0.3588,
+      "pnl": 434.8917,
+      "n_buys": 10,
+      "n_sells": 15,
+      "hold_seconds": 1706,
+      "both_sides": true
+    },
+    {
+      "title": "T20 World Cup: England vs Nepal (Game 1)",
+      "avg_buy": 0.0236,
+      "avg_sell": 0.1129,
+      "spread": 0.0893,
+      "pnl": 396.0054,
+      "n_buys": 26,
+      "n_sells": 27,
+      "hold_seconds": 10920,
+      "both_sides": true
+    },
+    {
+      "title": "T20 World Cup, Sub Regional Africa, Qualifier A: Kenya vs Rwanda",
+      "avg_buy": 0.1701,
+      "avg_sell": 0.4646,
+      "spread": 0.2945,
+      "pnl": 391.3983,
+      "n_buys": 14,
+      "n_sells": 25,
+      "hold_seconds": 2821,
+      "both_sides": true
+    }
+  ]
+}

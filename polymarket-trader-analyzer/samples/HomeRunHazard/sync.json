@@ -1,0 +1,18 @@
+{
+  "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+  "username": "HomeRunHazard",
+  "mode": "full",
+  "duration_s": 576.76,
+  "counts": {
+    "activity": 27410,
+    "trades": 26170,
+    "closed_positions": 42624,
+    "open_positions": 3092
+  },
+  "last_activity_ts": 1778157318,
+  "last_trade_ts": 1778157318,
+  "resolved": {
+    "username": "HomeRunHazard",
+    "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d"
+  }
+}

@@ -1,0 +1,4214 @@
+{
+  "username": "polika72",
+  "wallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+  "counts": {
+    "activity": 22445,
+    "trades": 19978,
+    "buys": 9077,
+    "sells": 10901,
+    "closed_positions": 5035,
+    "open_positions": 424,
+    "markets_traded": 5422,
+    "activity_types": {
+      "DEPOSIT": 8,
+      "TRADE": 19978,
+      "REDEEM": 2321,
+      "MAKER_REBATE": 108,
+      "WITHDRAWAL": 20,
+      "TAKER_REBATE": 10
+    }
+  },
+  "span": {
+    "first_ts": 1773338353,
+    "last_ts": 1787672887,
+    "first_iso": "2026-03-12T17:59:13+00:00",
+    "last_iso": "2026-08-25T15:48:07+00:00",
+    "days_active_span": 165.91
+  },
+  "pnl": {
+    "cashflow_realized": 58204.9839,
+    "cashflow_core": 57699.0816,
+    "cashflow_detail": {
+      "buys_usdc": 203970.44145699855,
+      "sells_usdc": 259522.2648020036,
+      "redeems_usdc": 2147.2582870000015,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 481.53440000000006,
+      "taker_rebates_usdc": 24.3679,
+      "rewards_usdc": 0.0,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 61909.3681,
+    "closed_wins": 4032,
+    "closed_losses": 1003,
+    "closed_flat": 0,
+    "win_rate": 0.8008,
+    "profit_factor": 3.2979,
+    "win_pnl": 88851.5286,
+    "loss_pnl": -26942.1605,
+    "total_bought": 504409.1352,
+    "open_cash_pnl": -8115.1037,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -1917.627,
+    "leaderboard_all": {
+      "rank": "3244",
+      "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+      "userName": "polika72",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 1049905.188565,
+      "pnl": 57338.716846567695,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 58204.9839,
+    "max_drawdown": -2214.9721,
+    "points": 22417,
+    "curve_sample": [
+      {
+        "timestamp": 1773338353,
+        "equity": -17.976,
+        "delta": -17.976,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Samsunspor vs. Rayo Vallecano de Madrid: O/U 3.5",
+        "usdc": 17.976
+      },
+      {
+        "timestamp": 1773505101,
+        "equity": 237.754998,
+        "delta": 19.7768,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Racing Club de Lens win on 2026-03-14?",
+        "usdc": 19.7768
+      },
+      {
+        "timestamp": 1773580819,
+        "equity": 482.799793,
+        "delta": 180.48,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "SG Dynamo Dresden vs. SC Preu\u00dfen M\u00fcnster: O/U 4.5",
+        "usdc": 180.48
+      },
+      {
+        "timestamp": 1773830551,
+        "equity": 1108.376498,
+        "delta": 61.36,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Jeonbuk Hyundai Motors FC vs. FC Anyang: Both Teams to Score",
+        "usdc": 61.36
+      },
+      {
+        "timestamp": 1773874393,
+        "equity": 1534.459849,
+        "delta": 84.735,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Paranaense vs. Cruzeiro EC: O/U 3.5",
+        "usdc": 84.735
+      },
+      {
+        "timestamp": 1774007431,
+        "equity": 1610.755894,
+        "delta": 0.104,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Qingdao Hainiu FC vs. Zhejiang Zhiye FC: O/U 3.5",
+        "usdc": 0.104
+      },
+      {
+        "timestamp": 1774078157,
+        "equity": 1892.634498,
+        "delta": 16.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Melbourne Victory FC vs. Central Coast Mariners FC: O/U 4.5",
+        "usdc": 16.6
+      },
+      {
+        "timestamp": 1774112279,
+        "equity": 2335.227098,
+        "delta": 106.5933,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "RCD Espanyol de Barcelona vs. Getafe CF: O/U 2.5",
+        "usdc": 106.5933
+      },
+      {
+        "timestamp": 1774190219,
+        "equity": 2397.735597,
+        "delta": -84.661,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atalanta BC vs. Hellas Verona FC: O/U 1.5",
+        "usdc": 84.661
+      },
+      {
+        "timestamp": 1774199823,
+        "equity": 2760.739187,
+        "delta": 18.6456,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Cincinnati vs. CF Montr\u00e9al: O/U 3.5",
+        "usdc": 18.6456
+      },
+      {
+        "timestamp": 1774356695,
+        "equity": 3154.555847,
+        "delta": 0.158727,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Melbourne Victory FC vs. Central Coast Mariners FC: O/U 3.5",
+        "usdc": 0.158727
+      },
+      {
+        "timestamp": 1774461447,
+        "equity": 3158.296203,
+        "delta": -28.833,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Real Madrid CF Femenino vs. FC Barcelona: O/U 4.5",
+        "usdc": 28.833
+      },
+      {
+        "timestamp": 1774555739,
+        "equity": 3106.40302,
+        "delta": -44.4378,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Czechia vs. Republic of Ireland: O/U 2.5",
+        "usdc": 44.4378
+      },
+      {
+        "timestamp": 1774635319,
+        "equity": 2993.221362,
+        "delta": -52.284,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "C\u00f3rdoba CF vs. CD Mirand\u00e9s: O/U 3.5",
+        "usdc": 52.284
+      },
+      {
+        "timestamp": 1774678877,
+        "equity": 3771.423782,
+        "delta": 0.4356,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Machida Zelvia vs. Kawasaki Frontale: Both Teams to Score",
+        "usdc": 0.4356
+      },
+      {
+        "timestamp": 1774711649,
+        "equity": 3849.960282,
+        "delta": 0.765,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Wycombe Wanderers FC vs. Port Vale FC: O/U 1.5",
+        "usdc": 0.765
+      },
+      {
+        "timestamp": 1774728474,
+        "equity": 3852.717785,
+        "delta": -2.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Albacete Balompi\u00e9 vs. CD Castell\u00f3n: O/U 2.5",
+        "usdc": 2.25
+      },
+      {
+        "timestamp": 1774793410,
+        "equity": 3881.70089,
+        "delta": 25.665,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Armenia vs. Belarus: O/U 1.5",
+        "usdc": 25.665
+      },
+      {
+        "timestamp": 1774978183,
+        "equity": 4100.897602,
+        "delta": 1.924,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will AA Argentinos Juniors win on 2026-03-31?",
+        "usdc": 1.924
+      },
+      {
+        "timestamp": 1774985289,
+        "equity": 4339.746366,
+        "delta": 5.94,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Southend United FC vs. Yeovil Town FC: O/U 2.5",
+        "usdc": 5.94
+      },
+      {
+        "timestamp": 1775000827,
+        "equity": 4318.946853,
+        "delta": 9.9974,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "United States vs. Portugal: O/U 1.5",
+        "usdc": 9.9974
+      },
+      {
+        "timestamp": 1775006579,
+        "equity": 4619.938244,
+        "delta": 1.699999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Mexico vs. Belgium: O/U 3.5",
+        "usdc": 1.699999
+      },
+      {
+        "timestamp": 1775086669,
+        "equity": 4762.287342,
+        "delta": 0.851,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Cruzeiro EC vs. EC Vit\u00f3ria: O/U 4.5",
+        "usdc": 0.851
+      },
+      {
+        "timestamp": 1775089339,
+        "equity": 4801.325281,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Mexico vs. Belgium: O/U 3.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1775120381,
+        "equity": 4687.135765,
+        "delta": -113.7832,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Macarthur FC vs. Newcastle United Jets FC: O/U 3.5",
+        "usdc": 113.7832
+      },
+      {
+        "timestamp": 1775163435,
+        "equity": 5169.634262,
+        "delta": 0.476,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Tigre vs. CS Independiente Rivadavia: O/U 4.5",
+        "usdc": 0.476
+      },
+      {
+        "timestamp": 1775180553,
+        "equity": 5125.329229,
+        "delta": 0.777,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "SE Palmeiras vs. Gr\u00eamio FBPA: O/U 2.5",
+        "usdc": 0.777
+      },
+      {
+        "timestamp": 1775216511,
+        "equity": 5201.036242,
+        "delta": -120.9703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chengdu Rongcheng FC vs. Qingdao Xihaian FC: O/U 2.5",
+        "usdc": 120.9703
+      },
+      {
+        "timestamp": 1775225241,
+        "equity": 5325.295451,
+        "delta": -20.0354,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colchester United FC vs. Oldham Athletic AFC: O/U 1.5",
+        "usdc": 20.0354
+      },
+      {
+        "timestamp": 1775226801,
+        "equity": 5361.951481,
+        "delta": -22.8029,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boreham Wood FC vs. Wealdstone FC: O/U 2.5",
+        "usdc": 22.8029
+      },
+      {
+        "timestamp": 1775227447,
+        "equity": 5517.691444,
+        "delta": 1.44,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Boreham Wood FC vs. Wealdstone FC: O/U 4.5",
+        "usdc": 1.44
+      },
+      {
+        "timestamp": 1775229221,
+        "equity": 5455.054285,
+        "delta": 56.203,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Sheffield United FC win on 2026-04-03?",
+        "usdc": 56.203
+      },
+      {
+        "timestamp": 1775230649,
+        "equity": 5781.500872,
+        "delta": -0.177272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grimsby Town FC vs. Harrogate Town AFC: O/U 4.5",
+        "usdc": 0.177272
+      },
+      {
+        "timestamp": 1775240579,
+        "equity": 5913.177059,
+        "delta": -3.4408,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SC Bastia vs. Amiens SC: O/U 4.5",
+        "usdc": 3.4408
+      },
+      {
+        "timestamp": 1775272535,
+        "equity": 5901.876872,
+        "delta": -25.928,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Club Necaxa vs. Mazatl\u00e1n FC: O/U 1.5",
+        "usdc": 25.928
+      },
+      {
+        "timestamp": 1775279477,
+        "equity": 5956.756015,
+        "delta": 8.748,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Jeonbuk Hyundai Motors FC vs. Ulsan HD FC: O/U 4.5",
+        "usdc": 8.748
+      },
+      {
+        "timestamp": 1775288441,
+        "equity": 5938.11381,
+        "delta": -13.923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Gangwon FC vs. Gwangju FC: O/U 3.5",
+        "usdc": 13.923
+      },
+      {
+        "timestamp": 1775292265,
+        "equity": 6077.436199,
+        "delta": 5.5242,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gangwon FC vs. Gwangju FC: O/U 2.5",
+        "usdc": 5.5242
+      },
+      {
+        "timestamp": 1775302923,
+        "equity": 6138.968494,
+        "delta": -117.1152,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kas\u0131mpa\u015fa SK vs. Kayserispor: O/U 1.5",
+        "usdc": 117.1152
+      },
+      {
+        "timestamp": 1775308073,
+        "equity": 6539.286687,
+        "delta": 8.3,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Shanghai Haigang FC vs. Yunnan Yukun FC: O/U 4.5",
+        "usdc": 8.3
+      },
+      {
+        "timestamp": 1775310391,
+        "equity": 6412.313101,
+        "delta": 65.384,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Borussia M\u00f6nchengladbach vs. 1. FC Heidenheim 1846: O/U 3.5",
+        "usdc": 65.384
+      },
+      {
+        "timestamp": 1775310985,
+        "equity": 7009.451539,
+        "delta": 0.17,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Macarthur FC vs. Newcastle United Jets FC: O/U 1.5",
+        "usdc": 0.17
+      },
+      {
+        "timestamp": 1775312213,
+        "equity": 7055.036126,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Associa\u00e7\u00e3o Chapecoense de Futebol vs. CA Mineiro: O/U 4.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1775316345,
+        "equity": 7316.613141,
+        "delta": 1.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gaziantep FK vs. Alanyaspor: O/U 4.5",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1775331003,
+        "equity": 7746.713504,
+        "delta": -7.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SBV Excelsior vs. NEC: O/U 4.5",
+        "usdc": 7.2
+      },
+      {
+        "timestamp": 1775341847,
+        "equity": 7807.576957,
+        "delta": -54.516,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Real Salt Lake vs. Sporting Kansas City: O/U 4.5",
+        "usdc": 54.516
+      },
+      {
+        "timestamp": 1775346693,
+        "equity": 7591.093327,
+        "delta": -35.6996,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Red Bulls vs. FC Cincinnati: O/U 2.5",
+        "usdc": 35.6996
+      },
+      {
+        "timestamp": 1775347163,
+        "equity": 7842.709302,
+        "delta": 3.969999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "New York Red Bulls vs. FC Cincinnati: O/U 3.5",
+        "usdc": 3.969999
+      },
+      {
+        "timestamp": 1775347963,
+        "equity": 7966.95798,
+        "delta": -28.802,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Inter Miami CF vs. Austin FC: O/U 3.5",
+        "usdc": 28.802
+      },
+      {
+        "timestamp": 1775350011,
+        "equity": 8001.046042,
+        "delta": -2.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Red Bulls vs. FC Cincinnati: O/U 4.5",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1775354379,
+        "equity": 8072.84814,
+        "delta": -30.4844,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles FC vs. Orlando City SC: O/U 3.5",
+        "usdc": 30.4844
+      },
+      {
+        "timestamp": 1775357639,
+        "equity": 8180.642041,
+        "delta": 1.1256,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "San Jose Earthquakes leading at halftime?",
+        "usdc": 1.1256
+      },
+      {
+        "timestamp": 1775368047,
+        "equity": 8199.271742,
+        "delta": 0.500599,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Anyang vs. FC Seoul: O/U 2.5",
+        "usdc": 0.500599
+      },
+      {
+        "timestamp": 1775378943,
+        "equity": 7944.048244,
+        "delta": -55.9844,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Incheon United FC vs. Gimcheon Sangmu FC: Both Teams to Score",
+        "usdc": 55.9844
+      },
+      {
+        "timestamp": 1775390385,
+        "equity": 8394.023736,
+        "delta": 4.74,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Go Ahead Eagles win on 2026-04-05?",
+        "usdc": 4.74
+      },
+      {
+        "timestamp": 1775392223,
+        "equity": 8436.191815,
+        "delta": -2.125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Shenzhen Xinpengcheng FC vs. Wuhan San Zhen FC: Both Teams to Score",
+        "usdc": 2.125
+      },
+      {
+        "timestamp": 1775403001,
+        "equity": 8597.723166,
+        "delta": -27.285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Le Havre AC vs. AJ Auxerre: O/U 3.5",
+        "usdc": 27.285
+      },
+      {
+        "timestamp": 1775409927,
+        "equity": 8592.833772,
+        "delta": 12.3735,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "UD Las Palmas vs. SD Huesca: O/U 4.5",
+        "usdc": 12.3735
+      },
+      {
+        "timestamp": 1775425003,
+        "equity": 9048.103173,
+        "delta": 156.849,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA River Plate vs. CA Belgrano: O/U 1.5",
+        "usdc": 156.849
+      },
+      {
+        "timestamp": 1775484377,
+        "equity": 9089.677987,
+        "delta": -23.8635,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wycombe Wanderers FC vs. Bradford City AFC: O/U 2.5",
+        "usdc": 23.8635
+      },
+      {
+        "timestamp": 1775485407,
+        "equity": 9123.756423,
+        "delta": -0.457254,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Crawley Town FC vs. Grimsby Town FC: O/U 2.5",
+        "usdc": 0.457254
+      },
+      {
+        "timestamp": 1775486137,
+        "equity": 9281.145916,
+        "delta": 0.402,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Petrolul Ploie\u015fti vs. FK Cs\u00edkszereda Miercurea Ciuc: O/U 1.5",
+        "usdc": 0.402
+      },
+      {
+        "timestamp": 1775488139,
+        "equity": 9249.234593,
+        "delta": 59.472,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Sarpsborg 08 FF win on 2026-04-06?",
+        "usdc": 59.472
+      },
+      {
+        "timestamp": 1775501493,
+        "equity": 9531.416843,
+        "delta": 28.017,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Universitatea Craiova CS vs. FC CFR 1907 Cluj: O/U 1.5",
+        "usdc": 28.017
+      },
+      {
+        "timestamp": 1775593515,
+        "equity": 9748.271903,
+        "delta": 0.5965,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Sporting CP vs. Arsenal FC: O/U 2.5",
+        "usdc": 0.5965
+      },
+      {
+        "timestamp": 1775620133,
+        "equity": 9919.422796,
+        "delta": -15.236,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Club Alianza Atl\u00e9tico vs. CA Tigre: O/U 2.5",
+        "usdc": 15.236
+      },
+      {
+        "timestamp": 1775696737,
+        "equity": 10260.893206,
+        "delta": 3.712,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will CA River Plate win on 2026-04-08?",
+        "usdc": 3.712
+      },
+      {
+        "timestamp": 1775761849,
+        "equity": 10209.829828,
+        "delta": -10.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SC Freiburg vs. RC Celta de Vigo: O/U 1.5",
+        "usdc": 10.8
+      },
+      {
+        "timestamp": 1775776041,
+        "equity": 10398.329956,
+        "delta": -56.0248,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will CA Rosario Central win on 2026-04-09?",
+        "usdc": 56.0248
+      },
+      {
+        "timestamp": 1775845151,
+        "equity": 10517.724315,
+        "delta": -53.994125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Karlsruher SC vs. DSC Arminia Bielefeld: O/U 4.5",
+        "usdc": 53.994125
+      },
+      {
+        "timestamp": 1775883187,
+        "equity": 10858.759756,
+        "delta": 44.643,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "JEF United Ichihara Chiba vs. FC Mito Holly Hock: O/U 1.5",
+        "usdc": 44.643
+      },
+      {
+        "timestamp": 1775888307,
+        "equity": 10889.413149,
+        "delta": -0.0505,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FC Mito Holly Hock win on 2026-04-11?",
+        "usdc": 0.0505
+      },
+      {
+        "timestamp": 1775893955,
+        "equity": 10861.603747,
+        "delta": -29.664,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Incheon United FC vs. Ulsan HD FC: O/U 2.5",
+        "usdc": 29.664
+      },
+      {
+        "timestamp": 1775901703,
+        "equity": 10656.637843,
+        "delta": 23.01,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Western Sydney Wanderers FC vs. Sydney FC: O/U 1.5",
+        "usdc": 23.01
+      },
+      {
+        "timestamp": 1775909797,
+        "equity": 11383.920826,
+        "delta": -8.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Norwich City FC vs. Ipswich Town FC: O/U 3.5",
+        "usdc": 8.55
+      },
+      {
+        "timestamp": 1775916185,
+        "equity": 11484.884525,
+        "delta": 0.083,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Cambridge United FC vs. Notts County FC: O/U 1.5",
+        "usdc": 0.083
+      },
+      {
+        "timestamp": 1775918885,
+        "equity": 11490.632354,
+        "delta": 25.146,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Delfino Pescara 1936 vs. UC Sampdoria: O/U 1.5",
+        "usdc": 25.146
+      },
+      {
+        "timestamp": 1775925485,
+        "equity": 11744.938503,
+        "delta": -30.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "AC Milan vs. Udinese Calcio: O/U 4.5",
+        "usdc": 30.5
+      },
+      {
+        "timestamp": 1775929461,
+        "equity": 12057.689954,
+        "delta": -3.9864,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Viking FK vs. FK Bod\u00f8/Glimt: O/U 4.5",
+        "usdc": 3.9864
+      },
+      {
+        "timestamp": 1775934313,
+        "equity": 12748.507038,
+        "delta": 14.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CF Montr\u00e9al vs. Philadelphia Union: O/U 2.5",
+        "usdc": 14.5
+      },
+      {
+        "timestamp": 1775935059,
+        "equity": 12686.818386,
+        "delta": 14.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Stade Rennais FC 1901 vs. Angers SCO: O/U 2.5",
+        "usdc": 14.6
+      },
+      {
+        "timestamp": 1775951517,
+        "equity": 12687.563102,
+        "delta": 22.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Vancouver Whitecaps FC vs. New York City FC: O/U 2.5",
+        "usdc": 22.0
+      },
+      {
+        "timestamp": 1775953687,
+        "equity": 13029.187997,
+        "delta": 1.961,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Inter Miami CF vs. New York Red Bulls: O/U 4.5",
+        "usdc": 1.961
+      },
+      {
+        "timestamp": 1775956523,
+        "equity": 13116.737114,
+        "delta": 61.92,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Inter Miami CF win on 2026-04-11?",
+        "usdc": 61.92
+      },
+      {
+        "timestamp": 1775962495,
+        "equity": 13324.925902,
+        "delta": -6.0944,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Diego FC vs. Minnesota United FC: O/U 3.5",
+        "usdc": 6.0944
+      },
+      {
+        "timestamp": 1775985867,
+        "equity": 13572.761595,
+        "delta": -93.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gimcheon Sangmu FC vs. FC Anyang end in a draw?",
+        "usdc": 93.0
+      },
+      {
+        "timestamp": 1775995031,
+        "equity": 13899.257733,
+        "delta": -16.284,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SV 07 Elversberg vs. FC Schalke 04: O/U 2.5",
+        "usdc": 16.284
+      },
+      {
+        "timestamp": 1775998291,
+        "equity": 13907.071272,
+        "delta": 8.36,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Beijing Guoan FC vs. Chengdu Rongcheng FC: O/U 1.5",
+        "usdc": 8.36
+      },
+      {
+        "timestamp": 1776003735,
+        "equity": 14164.404747,
+        "delta": 10.36,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Sunderland AFC vs. Tottenham Hotspur FC: O/U 2.5",
+        "usdc": 10.36
+      },
+      {
+        "timestamp": 1776008511,
+        "equity": 14323.690042,
+        "delta": -2.72,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Alverca vs. Casa Pia AC: O/U 3.5",
+        "usdc": 2.72
+      },
+      {
+        "timestamp": 1776022073,
+        "equity": 14322.079008,
+        "delta": 29.45,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Real Racing Club vs. UD Almer\u00eda: O/U 4.5",
+        "usdc": 29.45
+      },
+      {
+        "timestamp": 1776029749,
+        "equity": 14305.002408,
+        "delta": -0.462777,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Red Bull Bragantino win on 2026-04-12?",
+        "usdc": 0.462777
+      },
+      {
+        "timestamp": 1776037541,
+        "equity": 14335.624482,
+        "delta": -12.186,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA Bucaramanga vs. Boyac\u00e1 Chic\u00f3 FC: O/U 2.5",
+        "usdc": 12.186
+      },
+      {
+        "timestamp": 1776070991,
+        "equity": 14482.298289,
+        "delta": 0.728647,
+        "type": "REDEEM",
+        "side": null,
+        "title": "SK Sigma Olomouc vs. FK Mlad\u00e1 Boleslav: O/U 4.5",
+        "usdc": 0.728647
+      },
+      {
+        "timestamp": 1776070995,
+        "equity": 14514.588361,
+        "delta": 0.3,
+        "type": "REDEEM",
+        "side": null,
+        "title": "FC Rapid 1923 vs. FC Universitatea Cluj: O/U 1.5",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1776071487,
+        "equity": 14518.252811,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Torino FC vs. Hellas Verona FC: O/U 4.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1776071493,
+        "equity": 14518.252811,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Casa Pia AC vs. Sport Lisboa e Benfica: O/U 3.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1776071681,
+        "equity": 14531.033573,
+        "delta": 0.1959,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will US Sassuolo Calcio vs. Cagliari Calcio end in a draw?",
+        "usdc": 0.1959
+      },
+      {
+        "timestamp": 1776071699,
+        "equity": 14538.497143,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "G\u00f6ztepe SK vs. Galatasaray SK: O/U 4.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1776071703,
+        "equity": 14538.497143,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "CD Guadalajara vs. Pumas de la UNAM: O/U 4.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1776071743,
+        "equity": 14541.23831,
+        "delta": 0.1583,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Instituto AC C\u00f3rdoba win on 2026-04-06?",
+        "usdc": 0.1583
+      },
+      {
+        "timestamp": 1776071747,
+        "equity": 14548.857965,
+        "delta": 0.1044,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Cagliari Calcio win on 2026-04-11?",
+        "usdc": 0.1044
+      },
+      {
+        "timestamp": 1776107067,
+        "equity": 14562.595937,
+        "delta": -33.3888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester United FC win on 2026-04-13?",
+        "usdc": 33.3888
+      },
+      {
+        "timestamp": 1776194262,
+        "equity": 14944.500676,
+        "delta": -23.6192,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colchester United FC vs. Accrington Stanley FC: O/U 1.5",
+        "usdc": 23.6192
+      },
+      {
+        "timestamp": 1776211576,
+        "equity": 15589.361123,
+        "delta": -6.981764,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Club Bol\u00edvar vs. Deportivo La Guaira FC: O/U 1.5",
+        "usdc": 6.981764
+      },
+      {
+        "timestamp": 1776213692,
+        "equity": 15558.856602,
+        "delta": 1.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CD Palestino vs. Montevideo City Torque: O/U 1.5",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1776284198,
+        "equity": 15979.775008,
+        "delta": 4.512,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "AFC Wimbledon vs. Stockport County FC: O/U 2.5",
+        "usdc": 4.512
+      },
+      {
+        "timestamp": 1776360328,
+        "equity": 16137.51389,
+        "delta": 57.442,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "RC Celta de Vigo vs. SC Freiburg: O/U 4.5",
+        "usdc": 57.442
+      },
+      {
+        "timestamp": 1776367128,
+        "equity": 16462.901554,
+        "delta": 26.025,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Aston Villa FC leading at halftime?",
+        "usdc": 26.025
+      },
+      {
+        "timestamp": 1776424682,
+        "equity": 16655.389707,
+        "delta": -11.6909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Qingdao Hainiu FC vs. Qingdao Xihaian FC: O/U 3.5",
+        "usdc": 11.6909
+      },
+      {
+        "timestamp": 1776445552,
+        "equity": 16682.275696,
+        "delta": 158.842,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Holstein Kiel vs. 1. FC Kaiserslautern: O/U 2.5",
+        "usdc": 158.842
+      },
+      {
+        "timestamp": 1776455198,
+        "equity": 17046.602032,
+        "delta": -23.48125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Montpellier HSC vs. Grenoble Foot 38: Both Teams to Score",
+        "usdc": 23.48125
+      },
+      {
+        "timestamp": 1776480762,
+        "equity": 17345.281177,
+        "delta": -5.928,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vancouver Whitecaps FC vs. Sporting Kansas City: O/U 2.5",
+        "usdc": 5.928
+      },
+      {
+        "timestamp": 1776485970,
+        "equity": 17405.486945,
+        "delta": 12.6086,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Yokohama F\u00b7Marinos vs. Kawasaki Frontale: O/U 3.5",
+        "usdc": 12.6086
+      },
+      {
+        "timestamp": 1776492798,
+        "equity": 17623.993634,
+        "delta": -7.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sanfrecce Hiroshima vs. V-Varen Nagasaki: O/U 3.5",
+        "usdc": 7.5
+      },
+      {
+        "timestamp": 1776497822,
+        "equity": 17734.299587,
+        "delta": 20.496,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Brisbane Roar FC vs. Melbourne City FC: O/U 2.5",
+        "usdc": 20.496
+      },
+      {
+        "timestamp": 1776512320,
+        "equity": 18111.413735,
+        "delta": 2.4,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Henan FC win on 2026-04-18?",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1776517500,
+        "equity": 18286.776127,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Zl\u00edn vs. FK Teplice: O/U 3.5",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1776520882,
+        "equity": 18472.857535,
+        "delta": 1.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "BV Borussia 09 Dortmund leading at halftime?",
+        "usdc": 1.6
+      },
+      {
+        "timestamp": 1776525944,
+        "equity": 18631.647533,
+        "delta": -59.086,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Newcastle United FC vs. AFC Bournemouth: O/U 2.5",
+        "usdc": 59.086
+      },
+      {
+        "timestamp": 1776531398,
+        "equity": 18710.166345,
+        "delta": -122.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eintracht Frankfurt vs. RB Leipzig: O/U 1.5",
+        "usdc": 122.0
+      },
+      {
+        "timestamp": 1776541620,
+        "equity": 19069.193962,
+        "delta": -51.462,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CF Montr\u00e9al vs. New York Red Bulls: O/U 4.5",
+        "usdc": 51.462
+      },
+      {
+        "timestamp": 1776557232,
+        "equity": 19252.506301,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Cincinnati vs. Chicago Fire FC: O/U 3.5",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1776561458,
+        "equity": 19489.070878,
+        "delta": -4.488,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Dallas vs. Los Angeles Galaxy: O/U 2.5",
+        "usdc": 4.488
+      },
+      {
+        "timestamp": 1776564186,
+        "equity": 19415.669372,
+        "delta": 5.733,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seattle Sounders FC vs. St. Louis City SC: O/U 2.5",
+        "usdc": 5.733
+      },
+      {
+        "timestamp": 1776581626,
+        "equity": 19559.37206,
+        "delta": 20.493,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Adelaide United FC vs. Macarthur FC: Both Teams to Score",
+        "usdc": 20.493
+      },
+      {
+        "timestamp": 1776601204,
+        "equity": 19403.271435,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Odense BK vs. Randers FC: O/U 2.5",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1776604846,
+        "equity": 19964.352249,
+        "delta": -15.58,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Carrarese Calcio win on 2026-04-19?",
+        "usdc": 15.58
+      },
+      {
+        "timestamp": 1776611518,
+        "equity": 20090.412249,
+        "delta": -8.763,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Nordsj\u00e6lland vs. Viborg FF: O/U 4.5",
+        "usdc": 8.763
+      },
+      {
+        "timestamp": 1776624706,
+        "equity": 20531.194949,
+        "delta": -2.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Paris Saint-Germain FC vs. Olympique Lyonnais: O/U 4.5",
+        "usdc": 2.7
+      },
+      {
+        "timestamp": 1776645838,
+        "equity": 20933.859431,
+        "delta": 9.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Los Angeles FC vs. San Jose Earthquakes: O/U 4.5",
+        "usdc": 9.999999
+      },
+      {
+        "timestamp": 1776712402,
+        "equity": 21025.820768,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Barracas Central vs. CA Belgrano: O/U 1.5",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1776768332,
+        "equity": 21436.916323,
+        "delta": 6.46,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Jeonbuk Hyundai Motors FC vs. Incheon United FC: O/U 3.5",
+        "usdc": 6.46
+      },
+      {
+        "timestamp": 1776801832,
+        "equity": 21729.361893,
+        "delta": -3.6593,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Norwich City FC vs. Derby County FC: O/U 2.5",
+        "usdc": 3.6593
+      },
+      {
+        "timestamp": 1776854016,
+        "equity": 21805.585349,
+        "delta": -6.666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pohang Steelers FC vs. Gwangju FC: O/U 4.5",
+        "usdc": 6.666
+      },
+      {
+        "timestamp": 1776870080,
+        "equity": 21897.486243,
+        "delta": 0.272,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "HNK Vukovar 1991 vs. HNK Gorica: O/U 4.5",
+        "usdc": 0.272
+      },
+      {
+        "timestamp": 1776889730,
+        "equity": 21901.375119,
+        "delta": 0.888,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Atalanta BC vs. SS Lazio: Both Teams to Score",
+        "usdc": 0.888
+      },
+      {
+        "timestamp": 1776906892,
+        "equity": 22063.175454,
+        "delta": -0.8585,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Houston Dynamo vs. San Diego FC: O/U 1.5",
+        "usdc": 0.8585
+      },
+      {
+        "timestamp": 1776912872,
+        "equity": 22109.950079,
+        "delta": -27.285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Columbus Crew vs. Los Angeles Galaxy: O/U 2.5",
+        "usdc": 27.285
+      },
+      {
+        "timestamp": 1776971446,
+        "equity": 22218.604203,
+        "delta": 4.8389,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "PSV vs. PEC Zwolle: O/U 4.5",
+        "usdc": 4.8389
+      },
+      {
+        "timestamp": 1777053384,
+        "equity": 22039.226106,
+        "delta": -60.992,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "TSV Fortuna 95 D\u00fcsseldorf vs. SG Dynamo Dresden: O/U 4.5",
+        "usdc": 60.992
+      },
+      {
+        "timestamp": 1777058280,
+        "equity": 22520.145052,
+        "delta": 3.026,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Sunderland AFC vs. Nottingham Forest FC: O/U 3.5",
+        "usdc": 3.026
+      },
+      {
+        "timestamp": 1777070896,
+        "equity": 22757.557399,
+        "delta": -5.605,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "AA Estudiantes vs. CA Rosario Central: Both Teams to Score",
+        "usdc": 5.605
+      },
+      {
+        "timestamp": 1777114966,
+        "equity": 22309.888643,
+        "delta": -84.2704,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hertha BSC vs. Holstein Kiel: O/U 2.5",
+        "usdc": 84.2704
+      },
+      {
+        "timestamp": 1777116906,
+        "equity": 22475.141048,
+        "delta": -23.268,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Altrincham FC vs. Gateshead FC: O/U 1.5",
+        "usdc": 23.268
+      },
+      {
+        "timestamp": 1777117192,
+        "equity": 22167.680318,
+        "delta": 31.2,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Chengdu Rongcheng FC vs. Zhejiang Zhiye FC: O/U 4.5",
+        "usdc": 31.2
+      },
+      {
+        "timestamp": 1777118002,
+        "equity": 22343.478238,
+        "delta": -12.1923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Beijing Guoan FC vs. Tianjin Jinmen Hu FC: O/U 3.5",
+        "usdc": 12.1923
+      },
+      {
+        "timestamp": 1777119036,
+        "equity": 22358.592537,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Stade de Reims vs. AS Nancy-Lorraine: Both Teams to Score",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1777121660,
+        "equity": 22487.638927,
+        "delta": 68.9,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Ey\u00fcpspor vs. Gaziantep FK: O/U 2.5",
+        "usdc": 68.9
+      },
+      {
+        "timestamp": 1777127226,
+        "equity": 22468.884973,
+        "delta": -23.66,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oxford United FC vs. Sheffield Wednesday FC: O/U 2.5",
+        "usdc": 23.66
+      },
+      {
+        "timestamp": 1777127770,
+        "equity": 22521.183633,
+        "delta": 36.4852,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Liverpool FC vs. Crystal Palace FC: O/U 2.5",
+        "usdc": 36.4852
+      },
+      {
+        "timestamp": 1777134050,
+        "equity": 22628.896574,
+        "delta": 13.68,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Rosenborg BK vs. SK Brann: O/U 4.5",
+        "usdc": 13.68
+      },
+      {
+        "timestamp": 1777141256,
+        "equity": 22790.386065,
+        "delta": -2.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Toronto FC vs. Atlanta United FC: O/U 1.5",
+        "usdc": 2.25
+      },
+      {
+        "timestamp": 1777146478,
+        "equity": 22870.127046,
+        "delta": 17.919,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "AS Saint-\u00c9tienne vs. ES Troyes AC: O/U 1.5",
+        "usdc": 17.919
+      },
+      {
+        "timestamp": 1777164046,
+        "equity": 23034.254334,
+        "delta": -2.87,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Mirassol FC win on 2026-04-25?",
+        "usdc": 2.87
+      },
+      {
+        "timestamp": 1777165464,
+        "equity": 23092.496328,
+        "delta": -30.485,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "D.C. United SC vs. Orlando City SC: O/U 2.5",
+        "usdc": 30.485
+      },
+      {
+        "timestamp": 1777172590,
+        "equity": 23136.32555,
+        "delta": -26.136,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vancouver Whitecaps FC vs. Colorado Rapids SC: O/U 4.5",
+        "usdc": 26.136
+      },
+      {
+        "timestamp": 1777174196,
+        "equity": 23253.129257,
+        "delta": 31.82,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Ju\u00e1rez vs. Atl\u00e9tico San Luis: O/U 1.5",
+        "usdc": 31.82
+      },
+      {
+        "timestamp": 1777188150,
+        "equity": 23253.828669,
+        "delta": -3.5896,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ehime FC vs. Kamatamare Sanuki: O/U 3.5",
+        "usdc": 3.5896
+      },
+      {
+        "timestamp": 1777189972,
+        "equity": 23280.742398,
+        "delta": 10.362,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gwangju FC vs. FC Anyang: O/U 3.5",
+        "usdc": 10.362
+      },
+      {
+        "timestamp": 1777191552,
+        "equity": 23396.474711,
+        "delta": 9.94,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gwangju FC vs. FC Anyang: O/U 4.5",
+        "usdc": 9.94
+      },
+      {
+        "timestamp": 1777200058,
+        "equity": 23508.904716,
+        "delta": 39.798,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Qingdao Hainiu FC vs. Shandong Taishan FC: O/U 2.5",
+        "usdc": 39.798
+      },
+      {
+        "timestamp": 1777205100,
+        "equity": 23602.094062,
+        "delta": -61.206896,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SC Paderborn 07 vs. FC Schalke 04: O/U 3.5",
+        "usdc": 61.206896
+      },
+      {
+        "timestamp": 1777211250,
+        "equity": 23470.581657,
+        "delta": 3.521,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Heracles Almelo vs. FC Volendam: O/U 2.5",
+        "usdc": 3.521
+      },
+      {
+        "timestamp": 1777232158,
+        "equity": 23848.790785,
+        "delta": -1.2614,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Gr\u00eamio FBPA vs. Coritiba FBC: O/U 2.5",
+        "usdc": 1.2614
+      },
+      {
+        "timestamp": 1777300786,
+        "equity": 24034.311634,
+        "delta": 29.998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Alanyaspor vs. Samsunspor: O/U 2.5",
+        "usdc": 29.998
+      },
+      {
+        "timestamp": 1777320678,
+        "equity": 24310.004968,
+        "delta": 4.922,
+        "type": "REDEEM",
+        "side": null,
+        "title": "1. FC Union Berlin vs. VfL Wolfsburg: O/U 2.5",
+        "usdc": 4.922
+      },
+      {
+        "timestamp": 1777320684,
+        "equity": 24377.491108,
+        "delta": 0.486026,
+        "type": "REDEEM",
+        "side": null,
+        "title": "1. FC Slov\u00e1cko vs. FK Dukla Praha: O/U 1.5",
+        "usdc": 0.486026
+      },
+      {
+        "timestamp": 1777320688,
+        "equity": 24397.87966,
+        "delta": 0.28,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Leicester City FC vs. Millwall FC: Both Teams to Score",
+        "usdc": 0.28
+      },
+      {
+        "timestamp": 1777320696,
+        "equity": 24409.875351,
+        "delta": 0.189,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Molde FK vs. V\u00e5lerenga Fotball: O/U 3.5",
+        "usdc": 0.189
+      },
+      {
+        "timestamp": 1777324966,
+        "equity": 24655.040079,
+        "delta": 0.16912,
+        "type": "REDEEM",
+        "side": null,
+        "title": "CA Uni\u00f3n vs. CA Newell's Old Boys: O/U 4.5",
+        "usdc": 0.16912
+      },
+      {
+        "timestamp": 1777324972,
+        "equity": 24663.487714,
+        "delta": 0.1385,
+        "type": "REDEEM",
+        "side": null,
+        "title": "SC Preu\u00dfen M\u00fcnster vs. DSC Arminia Bielefeld: O/U 4.5",
+        "usdc": 0.1385
+      },
+      {
+        "timestamp": 1777400452,
+        "equity": 24647.856459,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Al Hilal Saudi Club vs. Damac Saudi Club: Both Teams to Score",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1777441216,
+        "equity": 25008.392217,
+        "delta": -2.58748,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kataller Toyama vs. Albirex Niigata: O/U 1.5",
+        "usdc": 2.58748
+      },
+      {
+        "timestamp": 1777489862,
+        "equity": 24897.949927,
+        "delta": 3.43764,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Al Ahli Saudi Club win on 2026-04-29?",
+        "usdc": 3.43764
+      },
+      {
+        "timestamp": 1777580142,
+        "equity": 25212.306505,
+        "delta": 4.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FK Shakhtar Donetsk vs. Crystal Palace FC: O/U 2.5",
+        "usdc": 4.999998
+      },
+      {
+        "timestamp": 1777602860,
+        "equity": 25452.94921,
+        "delta": 4.11685,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Club Alianza Atl\u00e9tico vs. CSyD Macar\u00e1: O/U 4.5",
+        "usdc": 4.11685
+      },
+      {
+        "timestamp": 1777641530,
+        "equity": 25483.091354,
+        "delta": -12.192,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Palermo FC vs. US Catanzaro 1929: O/U 4.5",
+        "usdc": 12.192
+      },
+      {
+        "timestamp": 1777658688,
+        "equity": 25632.104323,
+        "delta": 24.64361,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "RC Deportivo La Coru\u00f1a vs. CD Legan\u00e9s: O/U 2.5",
+        "usdc": 24.64361
+      },
+      {
+        "timestamp": 1777720924,
+        "equity": 25657.981051,
+        "delta": -15.44688,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Gwangju FC vs. Daejeon Hana Citizen FC: O/U 4.5",
+        "usdc": 15.44688
+      },
+      {
+        "timestamp": 1777723746,
+        "equity": 25882.401583,
+        "delta": 42.13314,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Sheffield Wednesday FC vs. West Bromwich Albion FC: O/U 2.5",
+        "usdc": 42.13314
+      },
+      {
+        "timestamp": 1777730506,
+        "equity": 26070.714451,
+        "delta": 99.6003,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Bayern M\u00fcnchen vs. 1. FC Heidenheim 1846: O/U 2.5",
+        "usdc": 99.6003
+      },
+      {
+        "timestamp": 1777731538,
+        "equity": 26419.810274,
+        "delta": 1.99127,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Wolverhampton Wanderers FC vs. Sunderland AFC: O/U 4.5",
+        "usdc": 1.99127
+      },
+      {
+        "timestamp": 1777737520,
+        "equity": 26759.515728,
+        "delta": -60.984,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valencia CF vs. Club Atl\u00e9tico de Madrid: O/U 1.5",
+        "usdc": 60.984
+      },
+      {
+        "timestamp": 1777742734,
+        "equity": 27028.278615,
+        "delta": 3.4,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Samsunspor vs. Galatasaray SK: O/U 3.5",
+        "usdc": 3.4
+      },
+      {
+        "timestamp": 1777749566,
+        "equity": 27247.439249,
+        "delta": -7.23738,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SD Eibar vs. M\u00e1laga CF: O/U 3.5",
+        "usdc": 7.23738
+      },
+      {
+        "timestamp": 1777770206,
+        "equity": 27362.759124,
+        "delta": 27.12925,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Chicago Fire FC vs. FC Cincinnati: O/U 1.5",
+        "usdc": 27.12925
+      },
+      {
+        "timestamp": 1777809868,
+        "equity": 27427.791579,
+        "delta": -9.70824,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Volendam vs. SC Heerenveen: O/U 2.5",
+        "usdc": 9.70824
+      },
+      {
+        "timestamp": 1777817914,
+        "equity": 27456.333019,
+        "delta": 17.919,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Fortuna Sittard vs. Feyenoord Rotterdam: O/U 1.5",
+        "usdc": 17.919
+      },
+      {
+        "timestamp": 1777826376,
+        "equity": 27399.653846,
+        "delta": -3.38316,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Paris FC vs. Stade Brestois 29: O/U 2.5",
+        "usdc": 3.38316
+      },
+      {
+        "timestamp": 1777837354,
+        "equity": 27735.558575,
+        "delta": 7.383,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "New York City FC vs. D.C. United SC: Draw at halftime?",
+        "usdc": 7.383
+      },
+      {
+        "timestamp": 1777857258,
+        "equity": 27726.855983,
+        "delta": -3.71715,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mirassol FC vs. SC Corinthians Paulista: O/U 2.5",
+        "usdc": 3.71715
+      },
+      {
+        "timestamp": 1777926602,
+        "equity": 27687.766502,
+        "delta": 6.3,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Gimnasia y Esgrima de Mendoza vs. CSyD Defensa y Justicia: O/U 3.5",
+        "usdc": 6.3
+      },
+      {
+        "timestamp": 1777971092,
+        "equity": 27738.110172,
+        "delta": 9.801,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gimcheon Sangmu FC vs. Ulsan HD FC: O/U 1.5",
+        "usdc": 9.801
+      },
+      {
+        "timestamp": 1778044422,
+        "equity": 27889.973372,
+        "delta": -22.57554,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sagan Tosu vs. Gainare Tottori: O/U 1.5",
+        "usdc": 22.57554
+      },
+      {
+        "timestamp": 1778055776,
+        "equity": 27933.738118,
+        "delta": 17.43329,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Machida Zelvia vs. Yokohama F\u00b7Marinos: Both Teams to Score",
+        "usdc": 17.43329
+      },
+      {
+        "timestamp": 1778181531,
+        "equity": 27530.969189,
+        "delta": -118.94707,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SC Freiburg vs. SC Braga: O/U 2.5",
+        "usdc": 118.94707
+      },
+      {
+        "timestamp": 1778183178,
+        "equity": 27714.724942,
+        "delta": 101.79975,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Crystal Palace FC vs. FK Shakhtar Donetsk: O/U 3.5",
+        "usdc": 101.79975
+      },
+      {
+        "timestamp": 1778201124,
+        "equity": 28021.860848,
+        "delta": 5.7949,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 5.7949
+      },
+      {
+        "timestamp": 1778267170,
+        "equity": 27867.313644,
+        "delta": -11.76306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will US Catanzaro 1929 win on 2026-05-08?",
+        "usdc": 11.76306
+      },
+      {
+        "timestamp": 1778330256,
+        "equity": 27913.760107,
+        "delta": -78.31369,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Liverpool FC vs. Chelsea FC: O/U 4.5",
+        "usdc": 78.31369
+      },
+      {
+        "timestamp": 1778340744,
+        "equity": 27903.805337,
+        "delta": 16.137,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Falkirk FC vs. Hibernian FC: Both Teams to Score",
+        "usdc": 16.137
+      },
+      {
+        "timestamp": 1778348827,
+        "equity": 27921.450177,
+        "delta": -0.98366,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2026-05-09?",
+        "usdc": 0.98366
+      },
+      {
+        "timestamp": 1778352479,
+        "equity": 28257.928014,
+        "delta": 4.996799,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Chicago Fire FC vs. New York Red Bulls: O/U 2.5",
+        "usdc": 4.996799
+      },
+      {
+        "timestamp": 1778381167,
+        "equity": 28185.888386,
+        "delta": -24.25996,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Portland Timbers vs. Sporting Kansas City: O/U 2.5",
+        "usdc": 24.25996
+      },
+      {
+        "timestamp": 1778415603,
+        "equity": 28092.982304,
+        "delta": 2.9299,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Vejle BK vs. FC Fredericia: O/U 2.5",
+        "usdc": 2.9299
+      },
+      {
+        "timestamp": 1778425599,
+        "equity": 28159.578158,
+        "delta": -12.3928,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will PSV win on 2026-05-10?",
+        "usdc": 12.3928
+      },
+      {
+        "timestamp": 1778434045,
+        "equity": 28148.280656,
+        "delta": -6.82936,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "AVS Futebol vs. FC Porto: O/U 4.5",
+        "usdc": 6.82936
+      },
+      {
+        "timestamp": 1778446979,
+        "equity": 28239.559054,
+        "delta": 2.85,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Clube do Remo vs. SE Palmeiras: O/U 3.5",
+        "usdc": 2.85
+      },
+      {
+        "timestamp": 1778464049,
+        "equity": 28340.623814,
+        "delta": 3.18228,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Los Angeles FC vs. Houston Dynamo: O/U 4.5",
+        "usdc": 3.18228
+      },
+      {
+        "timestamp": 1778614015,
+        "equity": 28498.584138,
+        "delta": 56.84,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Aberdeen FC vs. St Mirren FC: O/U 1.5",
+        "usdc": 56.84
+      },
+      {
+        "timestamp": 1778674747,
+        "equity": 28782.774077,
+        "delta": 87.71862,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Ulsan HD FC win on 2026-05-13?",
+        "usdc": 87.71862
+      },
+      {
+        "timestamp": 1778716033,
+        "equity": 28904.902484,
+        "delta": 43.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "New York Red Bulls vs. Columbus Crew: O/U 2.5",
+        "usdc": 43.6
+      },
+      {
+        "timestamp": 1778720061,
+        "equity": 28978.320582,
+        "delta": 37.63521,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Clube do Remo vs. EC Bahia: O/U 1.5",
+        "usdc": 37.63521
+      },
+      {
+        "timestamp": 1778805544,
+        "equity": 29104.767324,
+        "delta": 25.857,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will EC Vit\u00f3ria win on 2026-05-14?",
+        "usdc": 25.857
+      },
+      {
+        "timestamp": 1778890112,
+        "equity": 29280.881913,
+        "delta": 15.145,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will CD Palestino win on 2026-05-15?",
+        "usdc": 15.145
+      },
+      {
+        "timestamp": 1778938589,
+        "equity": 29214.405026,
+        "delta": -90.98183,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "1. FC Heidenheim 1846 vs. 1. FSV Mainz 05: O/U 3.5",
+        "usdc": 90.98183
+      },
+      {
+        "timestamp": 1778955520,
+        "equity": 29572.762763,
+        "delta": -36.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Gaziantep FK vs. Rams Ba\u015fak\u015fehir FK: O/U 2.5",
+        "usdc": 36.6
+      },
+      {
+        "timestamp": 1778960965,
+        "equity": 29467.982056,
+        "delta": -18.291,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "V\u00e5lerenga Fotball vs. Sarpsborg 08 FF: O/U 4.5",
+        "usdc": 18.291
+      },
+      {
+        "timestamp": 1778976433,
+        "equity": 29779.307387,
+        "delta": -16.35362,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will CD Universidad Cat\u00f3lica win on 2026-05-16?",
+        "usdc": 16.35362
+      },
+      {
+        "timestamp": 1778980537,
+        "equity": 29911.624122,
+        "delta": -1.419,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "D.C. United SC vs. St. Louis City SC: Both Teams to Score",
+        "usdc": 1.419
+      },
+      {
+        "timestamp": 1778999575,
+        "equity": 29921.712651,
+        "delta": 11.662,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "RB \u014cmiya Ardija vs. AC Nagano Parceiro: O/U 2.5",
+        "usdc": 11.662
+      },
+      {
+        "timestamp": 1779011099,
+        "equity": 30020.923561,
+        "delta": -35.45597,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Ry\u016bky\u016b vs. Gainare Tottori: O/U 2.5",
+        "usdc": 35.45597
+      },
+      {
+        "timestamp": 1779017476,
+        "equity": 30341.901553,
+        "delta": 3.25545,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "AS Roma vs. SS Lazio: O/U 2.5",
+        "usdc": 3.25545
+      },
+      {
+        "timestamp": 1779021840,
+        "equity": 30576.853955,
+        "delta": 44.37,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "NEC vs. Go Ahead Eagles: O/U 4.5",
+        "usdc": 44.37
+      },
+      {
+        "timestamp": 1779026065,
+        "equity": 30734.065783,
+        "delta": -40.83235,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 1. FC N\u00fcrnberg win on 2026-05-17?",
+        "usdc": 40.83235
+      },
+      {
+        "timestamp": 1779029829,
+        "equity": 31114.018413,
+        "delta": 8.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will FC Internazionale Milano win on 2026-05-17?",
+        "usdc": 8.5
+      },
+      {
+        "timestamp": 1779036661,
+        "equity": 31126.491969,
+        "delta": 1.17,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Newcastle United FC vs. West Ham United FC: O/U 3.5",
+        "usdc": 1.17
+      },
+      {
+        "timestamp": 1779039396,
+        "equity": 31775.497201,
+        "delta": 0.22,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Atalanta BC vs. Bologna FC 1909: O/U 1.5",
+        "usdc": 0.22
+      },
+      {
+        "timestamp": 1779045927,
+        "equity": 31902.750702,
+        "delta": 20.685,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Torino FC leading at halftime?",
+        "usdc": 20.685
+      },
+      {
+        "timestamp": 1779050339,
+        "equity": 32237.223978,
+        "delta": -4.51573,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Barcelona vs. Real Betis Balompi\u00e9: O/U 3.5",
+        "usdc": 4.51573
+      },
+      {
+        "timestamp": 1779197803,
+        "equity": 32535.072288,
+        "delta": 33.53099,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Henan FC win on 2026-05-19?",
+        "usdc": 33.53099
+      },
+      {
+        "timestamp": 1779229679,
+        "equity": 32790.530555,
+        "delta": -3.37114,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Montevideo City Torque vs. CD Riestra: O/U 3.5",
+        "usdc": 3.37114
+      },
+      {
+        "timestamp": 1779239715,
+        "equity": 32707.984205,
+        "delta": 4.4566,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Club Always Ready vs. Mirassol FC: O/U 2.5",
+        "usdc": 4.4566
+      },
+      {
+        "timestamp": 1779278518,
+        "equity": 32938.103154,
+        "delta": 26.544,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Zhejiang Zhiye FC vs. Shandong Taishan FC: O/U 4.5",
+        "usdc": 26.544
+      },
+      {
+        "timestamp": 1779328888,
+        "equity": 33155.420863,
+        "delta": -5.03188,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will LDU de Quito win on 2026-05-20?",
+        "usdc": 5.03188
+      },
+      {
+        "timestamp": 1779408048,
+        "equity": 33364.5936,
+        "delta": -3.16417,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Racing Club vs. Caracas FC: O/U 3.5",
+        "usdc": 3.16417
+      },
+      {
+        "timestamp": 1779501886,
+        "equity": 33564.364779,
+        "delta": 1.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Mexico vs. Ghana: O/U 1.5",
+        "usdc": 1.999998
+      },
+      {
+        "timestamp": 1779538372,
+        "equity": 33951.768877,
+        "delta": 1.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Shanghai Haigang FC vs. Tianjin Jinmen Hu FC: O/U 2.5",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1779553548,
+        "equity": 34374.107901,
+        "delta": 21.53648,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Bologna FC 1909 vs. FC Internazionale Milano: O/U 4.5",
+        "usdc": 21.53648
+      },
+      {
+        "timestamp": 1779567739,
+        "equity": 34717.934569,
+        "delta": -3.87656,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valencia CF vs. FC Barcelona: O/U 0.5",
+        "usdc": 3.87656
+      },
+      {
+        "timestamp": 1779580003,
+        "equity": 34748.050214,
+        "delta": 31.825,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Cincinnati vs. Orlando City SC: O/U 2.5",
+        "usdc": 31.825
+      },
+      {
+        "timestamp": 1779601500,
+        "equity": 34965.896052,
+        "delta": 7.1905,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Matsumoto Yamaga FC vs. Fukushima United FC: O/U 3.5",
+        "usdc": 7.1905
+      },
+      {
+        "timestamp": 1779624804,
+        "equity": 35012.30036,
+        "delta": 31.415,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Bolton Wanderers FC vs. Stockport County FC: O/U 2.5",
+        "usdc": 31.415
+      },
+      {
+        "timestamp": 1779638962,
+        "equity": 34631.9187,
+        "delta": 10.27,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Brighton & Hove Albion FC vs. Manchester United FC: O/U 3.5",
+        "usdc": 10.27
+      },
+      {
+        "timestamp": 1779645661,
+        "equity": 35562.327815,
+        "delta": 5.148,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "C\u00e1diz CF vs. CD Legan\u00e9s: O/U 1.5",
+        "usdc": 5.148
+      },
+      {
+        "timestamp": 1779659967,
+        "equity": 36024.547624,
+        "delta": 35.446,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Columbus Crew vs. Atlanta United FC: O/U 2.5",
+        "usdc": 35.446
+      },
+      {
+        "timestamp": 1779697541,
+        "equity": 36120.151996,
+        "delta": 0.5,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Wolverhampton Wanderers FC vs. Sunderland AFC: O/U 1.5",
+        "usdc": 0.5
+      },
+      {
+        "timestamp": 1779697552,
+        "equity": 36142.844704,
+        "delta": 0.3,
+        "type": "REDEEM",
+        "side": null,
+        "title": "FC Dallas vs. Vancouver Whitecaps FC: O/U 1.5",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1779697564,
+        "equity": 36159.15607,
+        "delta": 0.26,
+        "type": "REDEEM",
+        "side": null,
+        "title": "PSV leading at halftime?",
+        "usdc": 0.26
+      },
+      {
+        "timestamp": 1779837157,
+        "equity": 36190.618647,
+        "delta": 1.4,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gr\u00eamio FBPA vs. Montevideo City Torque: O/U 4.5",
+        "usdc": 1.4
+      },
+      {
+        "timestamp": 1779924671,
+        "equity": 36297.38855,
+        "delta": 25.57012,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Botafogo FR win on 2026-05-27?",
+        "usdc": 25.57012
+      },
+      {
+        "timestamp": 1780074515,
+        "equity": 36514.366148,
+        "delta": 11.34,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Fredrikstad FK vs. IK Start: O/U 4.5",
+        "usdc": 11.34
+      },
+      {
+        "timestamp": 1780099834,
+        "equity": 36433.913735,
+        "delta": 7.009998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "EC Juventude vs. Am\u00e9rica FC: O/U 1.5",
+        "usdc": 7.009998
+      },
+      {
+        "timestamp": 1780141745,
+        "equity": 36730.125093,
+        "delta": 19.027,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Chengdu Rongcheng FC vs. Shandong Taishan FC: O/U 3.5",
+        "usdc": 19.027
+      },
+      {
+        "timestamp": 1780173329,
+        "equity": 36792.744213,
+        "delta": 0.88277,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CR Flamengo vs. Coritiba FBC: O/U 4.5",
+        "usdc": 0.88277
+      },
+      {
+        "timestamp": 1780204062,
+        "equity": 36864.561092,
+        "delta": 1.78,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Imabari vs. FC Ry\u016bky\u016b: O/U 4.5",
+        "usdc": 1.78
+      },
+      {
+        "timestamp": 1780249608,
+        "equity": 37022.827393,
+        "delta": 25.1559,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CD Castell\u00f3n vs. SD Eibar: Both Teams to Score",
+        "usdc": 25.1559
+      },
+      {
+        "timestamp": 1780331844,
+        "equity": 37422.784606,
+        "delta": 14.94,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Slovakia vs. Malta: O/U 3.5",
+        "usdc": 14.94
+      },
+      {
+        "timestamp": 1780513933,
+        "equity": 37759.625217,
+        "delta": -179.14263,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Poland vs. Nigeria: O/U 1.5",
+        "usdc": 179.14263
+      },
+      {
+        "timestamp": 1780626069,
+        "equity": 38367.699057,
+        "delta": -10.25989,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mexico vs. Serbia: O/U 4.5",
+        "usdc": 10.25989
+      },
+      {
+        "timestamp": 1780726722,
+        "equity": 38391.878009,
+        "delta": 8.74,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Mito Holly Hock vs. V-Varen Nagasaki: O/U 2.5",
+        "usdc": 8.74
+      },
+      {
+        "timestamp": 1780772055,
+        "equity": 38691.362542,
+        "delta": -51.22487,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Romania vs. Wales: O/U 2.5",
+        "usdc": 51.22487
+      },
+      {
+        "timestamp": 1780948596,
+        "equity": 39029.294079,
+        "delta": -12.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "France leading at halftime?",
+        "usdc": 12.48
+      },
+      {
+        "timestamp": 1780970695,
+        "equity": 39087.174697,
+        "delta": 50.049999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Peru vs. Spain: O/U 2.5",
+        "usdc": 50.049999
+      },
+      {
+        "timestamp": 1781024905,
+        "equity": 39400.628498,
+        "delta": -57.478235,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hungary vs. Kazakhstan: O/U 3.5",
+        "usdc": 57.478235
+      },
+      {
+        "timestamp": 1781054556,
+        "equity": 39189.576889,
+        "delta": -22.58349,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Iraq vs. Venezuela: O/U 2.5",
+        "usdc": 22.58349
+      },
+      {
+        "timestamp": 1781138712,
+        "equity": 39458.840797,
+        "delta": 5.4397,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 5.4397
+      },
+      {
+        "timestamp": 1781314267,
+        "equity": 39946.089733,
+        "delta": 4.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "United States vs. Paraguay: 1st Half O/U 1.5",
+        "usdc": 4.999999
+      },
+      {
+        "timestamp": 1781389521,
+        "equity": 40605.977606,
+        "delta": 112.365,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Morocco to score first vs. Brazil?",
+        "usdc": 112.365
+      },
+      {
+        "timestamp": 1781455377,
+        "equity": 40911.803653,
+        "delta": 22.971,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will CD Concepci\u00f3n win on 2026-06-14?",
+        "usdc": 22.971
+      },
+      {
+        "timestamp": 1781490589,
+        "equity": 41964.958952,
+        "delta": -266.41235,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sweden vs. Tunisia: O/U 3.5",
+        "usdc": 266.41235
+      },
+      {
+        "timestamp": 1781649836,
+        "equity": 43138.726879,
+        "delta": 717.00976,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Iraq vs. Norway: O/U 3.5",
+        "usdc": 717.00976
+      },
+      {
+        "timestamp": 1781752841,
+        "equity": 44928.819107,
+        "delta": -11.32637,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Uzbekistan vs. Colombia: Uzbekistan O/U 2.5",
+        "usdc": 11.32637
+      },
+      {
+        "timestamp": 1781987378,
+        "equity": 44947.247235,
+        "delta": 241.85274,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Germany vs. C\u00f4te d'Ivoire: 1st Half O/U 1.5",
+        "usdc": 241.85274
+      },
+      {
+        "timestamp": 1782154756,
+        "equity": 45768.006435,
+        "delta": 75.933,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Argentina vs. Austria: O/U 1.5",
+        "usdc": 75.933
+      },
+      {
+        "timestamp": 1782501763,
+        "equity": 46777.384643,
+        "delta": 17.721,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Norway vs. France: Both Teams to Score in First Half",
+        "usdc": 17.721
+      },
+      {
+        "timestamp": 1782600800,
+        "equity": 46179.92918,
+        "delta": 17.81155,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Panama vs. England: O/U 2.5",
+        "usdc": 17.81155
+      },
+      {
+        "timestamp": 1782680075,
+        "equity": 46882.79281,
+        "delta": 46.886198,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Exact Score: South Africa 0 - 1 Canada?",
+        "usdc": 46.886198
+      },
+      {
+        "timestamp": 1782747887,
+        "equity": 46979.029061,
+        "delta": 0.466665,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Crystal Palace FC vs. FK Shakhtar Donetsk: O/U 2.5",
+        "usdc": 0.466665
+      },
+      {
+        "timestamp": 1782747895,
+        "equity": 46998.456901,
+        "delta": 0.3,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Independiente Santa Fe vs. CA Platense: O/U 2.5",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1782747904,
+        "equity": 47013.133833,
+        "delta": 0.200871,
+        "type": "REDEEM",
+        "side": null,
+        "title": "West Ham United FC vs. Leeds United FC: O/U 2.5",
+        "usdc": 0.200871
+      },
+      {
+        "timestamp": 1782747911,
+        "equity": 47024.334328,
+        "delta": 0.2,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Cusco FC vs. Independiente Medell\u00edn: O/U 1.5",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1782747923,
+        "equity": 47035.113019,
+        "delta": 0.18,
+        "type": "REDEEM",
+        "side": null,
+        "title": "C\u00f4te d'Ivoire to score first vs. Germany?",
+        "usdc": 0.18
+      },
+      {
+        "timestamp": 1782747968,
+        "equity": 47044.221352,
+        "delta": 0.15,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Villarreal CF leading at halftime?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1782747974,
+        "equity": 47052.464715,
+        "delta": 0.14,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Paris Saint-Germain FC win on 2026-04-28?",
+        "usdc": 0.14
+      },
+      {
+        "timestamp": 1782748076,
+        "equity": 47059.749967,
+        "delta": 0.12,
+        "type": "REDEEM",
+        "side": null,
+        "title": "CD Universidad Cat\u00f3lica vs. CD Universidad de Concepci\u00f3n: O/U 1.5",
+        "usdc": 0.12
+      },
+      {
+        "timestamp": 1782748079,
+        "equity": 47066.192293,
+        "delta": 0.11,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Rodez Aveyron Football vs. ES Troyes AC: Both Teams to Score",
+        "usdc": 0.11
+      },
+      {
+        "timestamp": 1782922063,
+        "equity": 48109.824308,
+        "delta": 9.4248,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "DR Congo to score first vs. England?",
+        "usdc": 9.4248
+      },
+      {
+        "timestamp": 1783102478,
+        "equity": 48789.092996,
+        "delta": 24.651,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "IK Sirius vs. Mjallby AIF: Both Teams to Score",
+        "usdc": 24.651
+      },
+      {
+        "timestamp": 1783252096,
+        "equity": 48991.938608,
+        "delta": -8.27995,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Shanghai Shenhua FC vs. Zhejiang Zhiye FC: O/U 3.5",
+        "usdc": 8.27995
+      },
+      {
+        "timestamp": 1783446022,
+        "equity": 49148.346725,
+        "delta": -16.54073,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FK Kauno \u017dalgiris vs. FC Drita end in a draw?",
+        "usdc": 16.54073
+      },
+      {
+        "timestamp": 1783524770,
+        "equity": 49309.106903,
+        "delta": -24.882,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Qairat FK vs. FK Sutjeska Nik\u0161i\u0107: O/U 2.5",
+        "usdc": 24.882
+      },
+      {
+        "timestamp": 1783557989,
+        "equity": 49422.814186,
+        "delta": 1.1623,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 1.1623
+      },
+      {
+        "timestamp": 1783624571,
+        "equity": 49427.28669,
+        "delta": -18.282,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Europa FC vs. KF Shk\u00ebndija 79: O/U 4.5",
+        "usdc": 18.282
+      },
+      {
+        "timestamp": 1783775840,
+        "equity": 49461.216723,
+        "delta": 27.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Mjallby AIF vs. AIK: O/U 2.5",
+        "usdc": 27.6
+      },
+      {
+        "timestamp": 1783806622,
+        "equity": 49112.063426,
+        "delta": -278.992,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will England win on 2026-07-11?",
+        "usdc": 278.992
+      },
+      {
+        "timestamp": 1783866235,
+        "equity": 49314.385457,
+        "delta": 2.043999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Oper\u00e1rio Ferrovi\u00e1rio EC vs. Gr\u00eamio Novorizontino: 1st Half O/U 0.5",
+        "usdc": 2.043999
+      },
+      {
+        "timestamp": 1783984684,
+        "equity": 49541.236991,
+        "delta": 7.92,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Am\u00e9rica FC vs. Londrina EC: Both Teams to Score",
+        "usdc": 7.92
+      },
+      {
+        "timestamp": 1784062141,
+        "equity": 49588.618708,
+        "delta": 2.26451,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Larne FC vs. Tre Fiori FC: O/U 3.5",
+        "usdc": 2.26451
+      },
+      {
+        "timestamp": 1784225200,
+        "equity": 49748.113824,
+        "delta": -3.40527,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "KF Shk\u00ebndija 79 vs. Europa FC: O/U 2.5",
+        "usdc": 3.40527
+      },
+      {
+        "timestamp": 1784262760,
+        "equity": 49995.544177,
+        "delta": 27.324,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seattle Sounders FC vs. Portland Timbers: O/U 4.5",
+        "usdc": 27.324
+      },
+      {
+        "timestamp": 1784378829,
+        "equity": 50092.789358,
+        "delta": -3.53146,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chongqing Tonglianglong FC vs. Zhejiang Zhiye FC end in a draw?",
+        "usdc": 3.53146
+      },
+      {
+        "timestamp": 1784421916,
+        "equity": 50308.426748,
+        "delta": 1.6014,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 1.6014
+      },
+      {
+        "timestamp": 1784568592,
+        "equity": 50390.932004,
+        "delta": 4.32173,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Kalmar FF vs. Malmo FF: O/U 2.5",
+        "usdc": 4.32173
+      },
+      {
+        "timestamp": 1784661789,
+        "equity": 50375.839078,
+        "delta": 27.789999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "KF V\u00edkingur vs. MH Hapoel Be'er Sheva: O/U 3.5",
+        "usdc": 27.789999
+      },
+      {
+        "timestamp": 1784716549,
+        "equity": 50543.151911,
+        "delta": 8.844,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Gwangju FC vs. Gimcheon Sangmu FC: O/U 2.5",
+        "usdc": 8.844
+      },
+      {
+        "timestamp": 1784751637,
+        "equity": 50745.529343,
+        "delta": 13.3,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Neft\u00e7i PFK vs. FK Dynama-Minsk: 1st Half O/U 2.5",
+        "usdc": 13.3
+      },
+      {
+        "timestamp": 1784766273,
+        "equity": 50926.947769,
+        "delta": 6.336,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Oper\u00e1rio Ferrovi\u00e1rio EC (-1.5)",
+        "usdc": 6.336
+      },
+      {
+        "timestamp": 1784829790,
+        "equity": 50951.621888,
+        "delta": -14.0715,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will AFC Ajax win on 2026-07-23?",
+        "usdc": 14.0715
+      },
+      {
+        "timestamp": 1784832261,
+        "equity": 51084.760778,
+        "delta": 7.32234,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Zimbru Chi\u015fin\u0103u vs. Noah FA: O/U 1.5",
+        "usdc": 7.32234
+      },
+      {
+        "timestamp": 1784845563,
+        "equity": 51312.982072,
+        "delta": -5.952,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Exact Score: Club Bol\u00edvar 2 - 1 Gr\u00eamio FBPA?",
+        "usdc": 5.952
+      },
+      {
+        "timestamp": 1784908557,
+        "equity": 51348.059595,
+        "delta": -5.994,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC UTA Arad vs. ASC O\u021belul Gala\u021bi: 1st Half O/U 0.5",
+        "usdc": 5.994
+      },
+      {
+        "timestamp": 1784977233,
+        "equity": 51566.839322,
+        "delta": -36.99561,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Daegu FC vs. Suwon FC: O/U 2.5",
+        "usdc": 36.99561
+      },
+      {
+        "timestamp": 1785000723,
+        "equity": 51660.409745,
+        "delta": -15.14407,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stroemsgodset IF vs. Lyn 1896 FK: O/U 2.5",
+        "usdc": 15.14407
+      },
+      {
+        "timestamp": 1785039180,
+        "equity": 51730.376618,
+        "delta": 2.30782,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Los Angeles FC vs. Sporting Kansas City: Both Teams to Score",
+        "usdc": 2.30782
+      },
+      {
+        "timestamp": 1785069207,
+        "equity": 51763.406276,
+        "delta": -6.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Anyang vs. Gangwon FC: Both Teams to Score",
+        "usdc": 6.7
+      },
+      {
+        "timestamp": 1785078664,
+        "equity": 51902.931881,
+        "delta": 6.31409,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Lyngby BK (-1.5)",
+        "usdc": 6.31409
+      },
+      {
+        "timestamp": 1785095019,
+        "equity": 52013.737469,
+        "delta": -4.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Exact Score: SV Wienerberg 1921 0 - 2 SK Rapid Wien?",
+        "usdc": 4.4
+      },
+      {
+        "timestamp": 1785170407,
+        "equity": 52167.816913,
+        "delta": 51.56803,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC CFR 1907 Cluj vs. FC Voluntari: O/U 4.5",
+        "usdc": 51.56803
+      },
+      {
+        "timestamp": 1785262718,
+        "equity": 52159.201965,
+        "delta": -5.31476,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "NK Celje leading at halftime?",
+        "usdc": 5.31476
+      },
+      {
+        "timestamp": 1785290598,
+        "equity": 52420.005239,
+        "delta": -18.2975,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "AA Argentinos Juniors vs. AA Estudiantes: O/U 2.5",
+        "usdc": 18.2975
+      },
+      {
+        "timestamp": 1785352989,
+        "equity": 52536.588637,
+        "delta": -23.8702,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "\u0160K Slovan Bratislava vs. SK Iberia 1999: O/U 2.5",
+        "usdc": 23.8702
+      },
+      {
+        "timestamp": 1785405921,
+        "equity": 52661.939932,
+        "delta": 18.315,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "South Melbourne FC vs. Adelaide United FC: 1st Half O/U 1.5",
+        "usdc": 18.315
+      },
+      {
+        "timestamp": 1785434166,
+        "equity": 52718.185851,
+        "delta": -2.546078,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "N\u00f5mme Kalju FC vs. Shelbourne FC: O/U 3.5",
+        "usdc": 2.546078
+      },
+      {
+        "timestamp": 1785440135,
+        "equity": 52769.639499,
+        "delta": -6.9793,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "RSC Anderlecht vs. Hammarby Fotboll: O/U 4.5",
+        "usdc": 6.9793
+      },
+      {
+        "timestamp": 1785523647,
+        "equity": 52834.686221,
+        "delta": -36.78193,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sporting CP vs. Nottingham Forest: O/U 3.5",
+        "usdc": 36.78193
+      },
+      {
+        "timestamp": 1785578771,
+        "equity": 52945.973534,
+        "delta": -16.77,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chelsea FC vs. Tottenham Hotspur: Both Teams to Score in First Half",
+        "usdc": 16.77
+      },
+      {
+        "timestamp": 1785596843,
+        "equity": 52911.30245,
+        "delta": 40.20503,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "IFK Norrkoping FK vs. Helsingborgs IF: O/U 1.5",
+        "usdc": 40.20503
+      },
+      {
+        "timestamp": 1785611478,
+        "equity": 52905.871318,
+        "delta": -3.965,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nueva Chicago vs. San Martin de Tucuman: Nueva Chicago O/U 1.5",
+        "usdc": 3.965
+      },
+      {
+        "timestamp": 1785628151,
+        "equity": 53042.368822,
+        "delta": 6.18345,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CA Tigre leading at halftime?",
+        "usdc": 6.18345
+      },
+      {
+        "timestamp": 1785632435,
+        "equity": 53115.914516,
+        "delta": -9.996,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fort Wayne FC vs. Union Omaha SC: O/U 2.5",
+        "usdc": 9.996
+      },
+      {
+        "timestamp": 1785643671,
+        "equity": 53238.871306,
+        "delta": -5.99188,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CF Cruz Azul vs. Atlante FC: O/U 4.5",
+        "usdc": 5.99188
+      },
+      {
+        "timestamp": 1785679745,
+        "equity": 53276.081801,
+        "delta": -34.04403,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Volendam vs. Ajax Amsterdam: O/U 2.5",
+        "usdc": 34.04403
+      },
+      {
+        "timestamp": 1785695082,
+        "equity": 53504.582745,
+        "delta": -7.46274,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "PFC CSKA Sofia vs. FC Dunav Ruse: O/U 2.5",
+        "usdc": 7.46274
+      },
+      {
+        "timestamp": 1785708171,
+        "equity": 53566.369127,
+        "delta": -36.595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CSD Macara vs. Guayaquil City FC: O/U 3.5",
+        "usdc": 36.595
+      },
+      {
+        "timestamp": 1785783435,
+        "equity": 53530.892491,
+        "delta": -6.592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Exact Score: KS Cracovia Krakow 0 - 2 Pogon Szczecin?",
+        "usdc": 6.592
+      },
+      {
+        "timestamp": 1785880242,
+        "equity": 53620.595736,
+        "delta": 1.533964,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Newport County vs. AS Roma: O/U 2.5",
+        "usdc": 1.533964
+      },
+      {
+        "timestamp": 1785969984,
+        "equity": 53682.747832,
+        "delta": 4.95,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Cruzeiro EC vs. Associa\u00e7\u00e3o Chapecoense de Futebol: 1st Half O/U 0.5",
+        "usdc": 4.95
+      },
+      {
+        "timestamp": 1786035093,
+        "equity": 53708.511101,
+        "delta": 40.095,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC CFR 1907 Cluj vs. Troms\u00f8 IL: O/U 1.5",
+        "usdc": 40.095
+      },
+      {
+        "timestamp": 1786048947,
+        "equity": 53685.300355,
+        "delta": 4.95,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Red Bull Salzburg vs. P\u00e1fos FC: FC Red Bull Salzburg O/U 0.5",
+        "usdc": 4.95
+      },
+      {
+        "timestamp": 1786112940,
+        "equity": 53792.514436,
+        "delta": -6.677647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vietnam vs. Cambodia: Both Teams to Score",
+        "usdc": 6.677647
+      },
+      {
+        "timestamp": 1786134903,
+        "equity": 53873.216284,
+        "delta": 18.711,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "AC Monza vs. Calcio Padova: O/U 5.5",
+        "usdc": 18.711
+      },
+      {
+        "timestamp": 1786183653,
+        "equity": 53765.686047,
+        "delta": -9.54877,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will RB \u014cmiya Ardija win on 2026-08-08?",
+        "usdc": 9.54877
+      },
+      {
+        "timestamp": 1786196454,
+        "equity": 53799.997632,
+        "delta": -18.2975,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Yunnan Yukun FC vs. Chengdu Rongcheng FC: O/U 1.5",
+        "usdc": 18.2975
+      },
+      {
+        "timestamp": 1786201491,
+        "equity": 53956.97927,
+        "delta": -1.97695,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Shrewsbury Town FC win on 2026-08-08?",
+        "usdc": 1.97695
+      },
+      {
+        "timestamp": 1786220098,
+        "equity": 54093.591238,
+        "delta": -3.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CF Estrela da Amadora vs. Sporting CP: 1st Half O/U 0.5",
+        "usdc": 3.4
+      },
+      {
+        "timestamp": 1786235223,
+        "equity": 54167.179278,
+        "delta": -18.282,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Spirit vs. North Carolina Courage: O/U 5.5",
+        "usdc": 18.282
+      },
+      {
+        "timestamp": 1786240855,
+        "equity": 54091.680566,
+        "delta": -5.2475,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CA Independiente vs. CA Platense: O/U 4.5",
+        "usdc": 5.2475
+      },
+      {
+        "timestamp": 1786277811,
+        "equity": 54139.117432,
+        "delta": 39.6825,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Hannover 96 win on 2026-08-09?",
+        "usdc": 39.6825
+      },
+      {
+        "timestamp": 1786284655,
+        "equity": 54486.479008,
+        "delta": -3.944,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "PEC Zwolle vs. AFC Ajax: AFC Ajax O/U 0.5",
+        "usdc": 3.944
+      },
+      {
+        "timestamp": 1786301206,
+        "equity": 54450.027972,
+        "delta": 22.49856,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Vikingur Reykjavik vs. IBV Vestmannaeyjar: O/U 2.5",
+        "usdc": 22.49856
+      },
+      {
+        "timestamp": 1786320619,
+        "equity": 54559.119695,
+        "delta": 1.6155,
+        "type": "TAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 1.6155
+      },
+      {
+        "timestamp": 1786403373,
+        "equity": 54481.305214,
+        "delta": -11.9765,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Caracas FC vs. Deportivo La Guaira: O/U 1.5",
+        "usdc": 11.9765
+      },
+      {
+        "timestamp": 1786466365,
+        "equity": 54637.639359,
+        "delta": -2.6624,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Al Jazira (UAE) vs. Al-Ittihad Club: 1st Half O/U 1.5",
+        "usdc": 2.6624
+      },
+      {
+        "timestamp": 1786476049,
+        "equity": 54686.237743,
+        "delta": -3.493,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will NEC vs. Olympiak\u00f3s SFP end in a draw?",
+        "usdc": 3.493
+      },
+      {
+        "timestamp": 1786529401,
+        "equity": 54748.159242,
+        "delta": 23.226,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Preston Lions FC win on 2026-08-12?",
+        "usdc": 23.226
+      },
+      {
+        "timestamp": 1786567869,
+        "equity": 55244.954286,
+        "delta": -4.5627,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fulham FC win on 2026-08-12?",
+        "usdc": 4.5627
+      },
+      {
+        "timestamp": 1786581924,
+        "equity": 55244.819722,
+        "delta": 9.6314,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 9.6314
+      },
+      {
+        "timestamp": 1786643151,
+        "equity": 55326.318479,
+        "delta": -0.57447,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FK ML Viciebsk leading at halftime?",
+        "usdc": 0.57447
+      },
+      {
+        "timestamp": 1786646169,
+        "equity": 55376.568848,
+        "delta": -16.796,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "G\u00f3rnik Zabrze vs. Ferencv\u00e1rosi TC: Both Teams to Score",
+        "usdc": 16.796
+      },
+      {
+        "timestamp": 1786675806,
+        "equity": 55467.126563,
+        "delta": -8.985662,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CF Cruz Azul vs. Chicago Fire FC: O/U 1.5",
+        "usdc": 8.985662
+      },
+      {
+        "timestamp": 1786737292,
+        "equity": 55468.639652,
+        "delta": -3.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will MVV Maastricht win on 2026-08-14?",
+        "usdc": 3.35
+      },
+      {
+        "timestamp": 1786791658,
+        "equity": 55433.240551,
+        "delta": 25.67655,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Kashima Antlers win on 2026-08-15?",
+        "usdc": 25.67655
+      },
+      {
+        "timestamp": 1786801489,
+        "equity": 55558.547472,
+        "delta": 22.75167,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Bayern Munich win on 2026-08-15?",
+        "usdc": 22.75167
+      },
+      {
+        "timestamp": 1786804974,
+        "equity": 55607.401478,
+        "delta": -1.91678,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Brighton & Hove Albion vs. Bologna FC: Draw at halftime?",
+        "usdc": 1.91678
+      },
+      {
+        "timestamp": 1786808193,
+        "equity": 55546.342968,
+        "delta": 32.95803,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Fulham FC vs. VfB Stuttgart: O/U 1.5",
+        "usdc": 32.95803
+      },
+      {
+        "timestamp": 1786813102,
+        "equity": 55695.219076,
+        "delta": 7.735,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Kaisar Kyzylorda vs. FC Aktobe end in a draw?",
+        "usdc": 7.735
+      },
+      {
+        "timestamp": 1786837966,
+        "equity": 55805.692905,
+        "delta": -3.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hartford Athletic vs. Miami FC: Draw at halftime?",
+        "usdc": 3.3
+      },
+      {
+        "timestamp": 1786851558,
+        "equity": 55877.637382,
+        "delta": -12.44108,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oakland Roots SC vs. Monterey Bay FC: Both Teams to Score",
+        "usdc": 12.44108
+      },
+      {
+        "timestamp": 1786893436,
+        "equity": 56044.037381,
+        "delta": -6.05913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Midtjylland (-1.5)",
+        "usdc": 6.05913
+      },
+      {
+        "timestamp": 1786906440,
+        "equity": 56234.552686,
+        "delta": 5.346,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Arouca vs. Moreirense FC: O/U 3.5",
+        "usdc": 5.346
+      },
+      {
+        "timestamp": 1786922830,
+        "equity": 56175.468895,
+        "delta": -5.30207,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will CSD Colo-Colo vs. O'Higgins FC end in a draw?",
+        "usdc": 5.30207
+      },
+      {
+        "timestamp": 1786987243,
+        "equity": 56336.027299,
+        "delta": -16.767,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pisa SC vs. Empoli FC: Both Teams to Score",
+        "usdc": 16.767
+      },
+      {
+        "timestamp": 1787029329,
+        "equity": 56488.867488,
+        "delta": 5.049,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "CF Pachuca vs. Club Puebla: O/U 4.5",
+        "usdc": 5.049
+      },
+      {
+        "timestamp": 1787152843,
+        "equity": 56544.904422,
+        "delta": 14.602,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "APS Z\u00e1kynthos vs. AE Kifisi\u00e1s: O/U 3.5",
+        "usdc": 14.602
+      },
+      {
+        "timestamp": 1787183593,
+        "equity": 56263.828213,
+        "delta": 39.86776,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Toronto FC vs. Charlotte FC: O/U 2.5",
+        "usdc": 39.86776
+      },
+      {
+        "timestamp": 1787188702,
+        "equity": 56203.674291,
+        "delta": 8.451,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Toronto FC vs. Charlotte FC: O/U 5.5",
+        "usdc": 8.451
+      },
+      {
+        "timestamp": 1787197849,
+        "equity": 56143.544012,
+        "delta": 15.256,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Portland Timbers vs. San Diego FC: O/U 3.5",
+        "usdc": 15.256
+      },
+      {
+        "timestamp": 1787248981,
+        "equity": 56160.779434,
+        "delta": 5.3508,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "PAOK vs. SK Brann: 1st Half O/U 0.5",
+        "usdc": 5.3508
+      },
+      {
+        "timestamp": 1787256658,
+        "equity": 56217.648705,
+        "delta": 20.727,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Rayo Vallecano de Madrid vs. Deportivo Alav\u00e9s: O/U 1.5",
+        "usdc": 20.727
+      },
+      {
+        "timestamp": 1787337756,
+        "equity": 56335.475481,
+        "delta": -2.47604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will KSC Lokeren-Temse win on 2026-08-21?",
+        "usdc": 2.47604
+      },
+      {
+        "timestamp": 1787353983,
+        "equity": 56628.787968,
+        "delta": -3.7476,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Deportivo Madryn vs. Mitre Santiago del Estero: O/U 3.5",
+        "usdc": 3.7476
+      },
+      {
+        "timestamp": 1787397235,
+        "equity": 56707.067123,
+        "delta": -27.975,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SV Wehen Wiesbaden vs. Bayer 04 Leverkusen: O/U 2.5",
+        "usdc": 27.975
+      },
+      {
+        "timestamp": 1787409592,
+        "equity": 56823.432309,
+        "delta": 61.35192,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Ipswich Town FC win on 2026-08-22?",
+        "usdc": 61.35192
+      },
+      {
+        "timestamp": 1787422911,
+        "equity": 56998.263449,
+        "delta": -36.77361,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Zira FK vs. Imisli FK: O/U 1.5",
+        "usdc": 36.77361
+      },
+      {
+        "timestamp": 1787433292,
+        "equity": 57155.910131,
+        "delta": -45.7275,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CD Eldense vs. C\u00e1diz CF: O/U 4.5",
+        "usdc": 45.7275
+      },
+      {
+        "timestamp": 1787448237,
+        "equity": 57279.666038,
+        "delta": 10.763,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Orlando City SC vs. Real Salt Lake: O/U 3.5",
+        "usdc": 10.763
+      },
+      {
+        "timestamp": 1787455174,
+        "equity": 57413.563288,
+        "delta": 2.18813,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: FC Tulsa (-1.5)",
+        "usdc": 2.18813
+      },
+      {
+        "timestamp": 1787494086,
+        "equity": 57578.575394,
+        "delta": -2.263157,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "FC Carl Zeiss Jena vs. SV Darmstadt 98: 1st Half O/U 1.5",
+        "usdc": 2.263157
+      },
+      {
+        "timestamp": 1787503117,
+        "equity": 58457.095019,
+        "delta": 13.04115,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "FC Hegelmann Kaunas vs. FK Banga Gargzdai: O/U 4.5",
+        "usdc": 13.04115
+      },
+      {
+        "timestamp": 1787518665,
+        "equity": 58460.678712,
+        "delta": 39.4729,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Red Bull Bragantino win on 2026-08-23?",
+        "usdc": 39.4729
+      },
+      {
+        "timestamp": 1787570686,
+        "equity": 58145.188252,
+        "delta": 0.396221,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Paju Frontier FC win on 2026-08-23?",
+        "usdc": 0.396221
+      },
+      {
+        "timestamp": 1787570695,
+        "equity": 58162.797752,
+        "delta": 0.3,
+        "type": "REDEEM",
+        "side": null,
+        "title": "IF Brommapojkarna vs. Hammarby IF: Both Teams to Score",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1787570703,
+        "equity": 58179.20663,
+        "delta": 0.26,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Real Salt Lake vs. FC Dallas: O/U 3.5",
+        "usdc": 0.26
+      },
+      {
+        "timestamp": 1787570718,
+        "equity": 58191.783444,
+        "delta": 0.2,
+        "type": "REDEEM",
+        "side": null,
+        "title": "NEC vs. FK Bod\u00f8/Glimt: O/U 3.5",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1787570728,
+        "equity": 58202.983444,
+        "delta": 0.2,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Atlas FC to score first vs. Tigres de la UANL?",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1787572897,
+        "equity": 58213.792743,
+        "delta": 0.18,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Club Nacional de Football vs. CA Tigre: O/U 2.5",
+        "usdc": 0.18
+      },
+      {
+        "timestamp": 1787572903,
+        "equity": 58223.094301,
+        "delta": 0.151416,
+        "type": "REDEEM",
+        "side": null,
+        "title": "SE Palmeiras vs. CA Mineiro: Both Teams to Score",
+        "usdc": 0.151416
+      },
+      {
+        "timestamp": 1787672887,
+        "equity": 58204.983932,
+        "delta": 45.82,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will FC Andijon vs. Xorazm Fk Urganch end in a draw?",
+        "usdc": 45.82
+      }
+    ]
+  },
+  "market_making": {
+    "score": 65,
+    "label": "likely_market_maker",
+    "signals": [
+      "Fast round-trips (<2h) in 100% of two-sided markets",
+      "Avg sell > avg buy in 84% of markets (spread capture)",
+      "High-frequency cadence (median gap 45s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0068,
+      "fast_roundtrip_rate": 0.9984,
+      "spread_capture_rate": 0.8376,
+      "size_cv": 1.9148,
+      "median_gap_seconds": 45.0,
+      "outcome_counts": {
+        "Over": 14302,
+        "No": 1182,
+        "Yes": 4128,
+        "United States": 5,
+        "Germany": 2,
+        "Senegal": 2,
+        "Colombia": 8,
+        "Bosnia and Herzegovina": 2,
+        "Vila Nova FC": 1,
+        "Clube N\u00e1utico Capibaribe": 2,
+        "Panama": 2,
+        "Argentina": 6,
+        "Vasteraas SK": 2,
+        "FK Borac Banja Luka": 6,
+        "Zir\u0259 FK": 3,
+        "KF Shk\u00ebndija 79": 2,
+        "HNK Hajduk Split": 2,
+        "Hammarby IF": 7,
+        "Djurgardens IF": 2,
+        "PFK Levski Sofia": 8,
+        "FCI Levadia": 2,
+        "Liaoning Tieren FC": 5,
+        "Club Le\u00f3n FC": 2,
+        "AIK": 6,
+        "Sandefjord Fotball": 3,
+        "MH Hapoel Beer Sheva": 2,
+        "AA Ponte Preta": 6,
+        "FK Panev\u0117\u017eys": 2,
+        "FC Flora": 2,
+        "RSC Anderlecht": 2,
+        "FC Zimbru Chi\u015fin\u0103u": 2,
+        "FK Polissia": 4,
+        "FC Dinamo City": 2,
+        "FK Auda": 4,
+        "NK Vara\u017edin": 2,
+        "GKS GieKSa Katowice": 2,
+        "Gr\u00eamio FBPA": 3,
+        "SC Corinthians Paulista": 2,
+        "ASC O\u021belul Gala\u021bi": 2,
+        "Tianjin Jinmen Hu FC": 2,
+        "Jeonbuk Hyundai Motors FC": 6,
+        "Universitatea Craiova CS": 1,
+        "AD Pasto": 3,
+        "Portland Timbers": 2,
+        "SK Slavia Praha": 2,
+        "KFUM-Kameratene Oslo": 2,
+        "FC K\u00f8benhavn": 2,
+        "FK Bod\u00f8/Glimt": 3,
+        "Club Necaxa": 2,
+        "Sabah FK": 3,
+        "NK Celje": 2,
+        "CA Tigre": 2,
+        "Club Nacional de Football": 9,
+        "Fortaleza EC": 2,
+        "Al-Ittihad Club": 2,
+        "Club Puebla": 3,
+        "CD Guadalajara": 2,
+        "Tottenham Hotspur": 2,
+        "Cardiff City": 4,
+        "Aarhus GF": 3,
+        "MTK Budapest": 2,
+        "ACF Fiorentina": 4,
+        "Minnesota United FC": 4,
+        "Bay FC": 2,
+        "San Jose Earthquakes": 2,
+        "FK Zenit": 2,
+        "IFK Goteborg": 2,
+        "Sunderland AFC": 3,
+        "CA Newells Old Boys": 3,
+        "Paksi FC": 2,
+        "Zalaegerszeg TE": 5,
+        "CA Talleres": 2,
+        "Jeju SK FC": 4,
+        "AC Sparta Praha": 2,
+        "Charlotte FC": 1,
+        "CA Osasuna": 2,
+        "Real Betis Seville": 2,
+        "Troms\u00f8 IL": 2,
+        "CF Intercity": 2,
+        "Villarreal CF B": 3,
+        "Beijing Guoan FC": 7,
+        "Shenzhen Xinpengcheng FC": 4,
+        "Ansan Greeners FC": 4,
+        "LDU Quito": 3,
+        "Vancouver Whitecaps FC": 4,
+        "FC Ju\u00e1rez": 4,
+        "Galatasaray Istanbul": 3,
+        "Washington Spirit": 2,
+        "Coritiba FBC": 2,
+        "Fluminense FC": 2,
+        "FC Dallas": 2,
+        "FC Utrecht": 2,
+        "Jong FC Utrecht": 1,
+        "SC Braga": 1,
+        "Moreirense FC": 5,
+        "CSyD Defensa y Justicia": 3,
+        "FK Kauno \u017dalgiris": 2,
+        "CR Flamengo": 1,
+        "Quer\u00e9taro FC": 2,
+        "Tobyl FK": 1,
+        "Qaraba\u011f A\u011fdam FK": 2,
+        "FC Sheriff Tiraspol": 6,
+        "FC St. Gallen": 7,
+        "Ky\u014dto Sanga FC": 2,
+        "Suwon FC": 2,
+        "Real Sociedad San Sebastian": 2,
+        "Brentford FC": 2,
+        "Bologna FC": 2,
+        "Fulham FC": 2,
+        "Bodrum FK": 7,
+        "Istanbulspor AS": 2,
+        "AS Tren\u010d\u00edn": 2,
+        "FK \u017deleziarne Podbrezov\u00e1": 2,
+        "Fenerbah\u00e7e SK": 1,
+        "Inter Miami CF": 1,
+        "Bucheon FC 1995": 3,
+        "Lyngby BK": 2,
+        "Breidablik Kopavogur": 3,
+        "San Martin de Tucuman": 2,
+        "Monagas SC": 5,
+        "Deportivo Tachira": 1,
+        "Houston Dash": 2,
+        "Larne FC": 2,
+        "FC Midtjylland": 2,
+        "PFK CSKA Sofia": 1,
+        "Botafogo FR": 2,
+        "SV Zulte Waregem": 2,
+        "AS Saint-\u00c9tienne": 2,
+        "Sporting CP": 2,
+        "Forge FC Hamilton": 2,
+        "Orange County SC": 3,
+        "FC Tulsa": 2,
+        "Helsingborgs IF": 2,
+        "Heracles Almelo": 2
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 1234,
+      "1": 947,
+      "2": 879,
+      "3": 415,
+      "4": 218,
+      "5": 405,
+      "6": 274,
+      "7": 367,
+      "8": 417,
+      "9": 192,
+      "10": 444,
+      "11": 1015,
+      "12": 1114,
+      "13": 885,
+      "14": 1383,
+      "15": 962,
+      "16": 1029,
+      "17": 1218,
+      "18": 1497,
+      "19": 1812,
+      "20": 1194,
+      "21": 455,
+      "22": 610,
+      "23": 1012
+    },
+    "dow_utc": {
+      "0": 1212,
+      "1": 1394,
+      "2": 1723,
+      "3": 2207,
+      "4": 2085,
+      "5": 5666,
+      "6": 5691
+    },
+    "peak_hours": [
+      19,
+      18,
+      14,
+      0,
+      17
+    ],
+    "peak_dows": [
+      6,
+      5,
+      3
+    ]
+  },
+  "sizing": {
+    "n": 19978,
+    "mean_usdc": 23.1344,
+    "median_usdc": 10.568,
+    "p10_usdc": 1.216,
+    "p90_usdc": 52.52,
+    "max_usdc": 1479.6322,
+    "mean_shares": 49.1094,
+    "median_shares": 24.5
+  },
+  "categories": {
+    "pnl": {
+      "sports_totals": 40877.6335,
+      "sports_match": 14704.2005,
+      "other": 6180.5978,
+      "crypto": 146.9363
+    },
+    "counts": {
+      "sports_totals": 3321,
+      "sports_match": 1135,
+      "other": 576,
+      "crypto": 3
+    }
+  },
+  "top_wins": [
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 3.5",
+      "pnl": 841.9287,
+      "buy_usdc": 508.3181,
+      "sell_usdc": 838.4896,
+      "n_buys": 6,
+      "n_sells": 9,
+      "hold_seconds": 4344,
+      "avg_buy": 0.3703,
+      "avg_sell": 0.5992
+    },
+    {
+      "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 4.5",
+      "pnl": 670.1035,
+      "buy_usdc": 811.1373,
+      "sell_usdc": 1043.984,
+      "n_buys": 7,
+      "n_sells": 4,
+      "hold_seconds": 1728,
+      "avg_buy": 0.5437,
+      "avg_sell": 0.6917
+    },
+    {
+      "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 3.5",
+      "pnl": 645.5871,
+      "buy_usdc": 755.6091,
+      "sell_usdc": 908.658,
+      "n_buys": 4,
+      "n_sells": 4,
+      "hold_seconds": 362,
+      "avg_buy": 0.6513,
+      "avg_sell": 0.775
+    },
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 4.5",
+      "pnl": 640.8589,
+      "buy_usdc": 245.9479,
+      "sell_usdc": 368.7693,
+      "n_buys": 7,
+      "n_sells": 24,
+      "hold_seconds": 4724,
+      "avg_buy": 0.1881,
+      "avg_sell": 0.2751
+    },
+    {
+      "title": "Will Club Atl\u00e9tico de Madrid win on 2026-08-23?",
+      "pnl": 629.2581,
+      "buy_usdc": 892.7539,
+      "sell_usdc": 1567.3822,
+      "n_buys": 2,
+      "n_sells": 3,
+      "hold_seconds": 138,
+      "avg_buy": 0.426,
+      "avg_sell": 0.7479
+    },
+    {
+      "title": "Will Real Madrid CF win on 2026-03-17?",
+      "pnl": 564.4731,
+      "buy_usdc": 44.59,
+      "sell_usdc": 609.0592,
+      "n_buys": 1,
+      "n_sells": 2,
+      "hold_seconds": 786,
+      "avg_buy": 0.07,
+      "avg_sell": 0.9561
+    },
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 2.5",
+      "pnl": 544.8298,
+      "buy_usdc": 417.139,
+      "sell_usdc": 660.5046,
+      "n_buys": 5,
+      "n_sells": 6,
+      "hold_seconds": 4208,
+      "avg_buy": 0.5686,
+      "avg_sell": 0.8888
+    },
+    {
+      "title": "Paris Saint-Germain vs. Aston Villa: O/U 3.5",
+      "pnl": 508.056,
+      "buy_usdc": 731.952,
+      "sell_usdc": 930.006,
+      "n_buys": 11,
+      "n_sells": 4,
+      "hold_seconds": 58,
+      "avg_buy": 0.36,
+      "avg_sell": 0.61
+    },
+    {
+      "title": "Will Paris Saint-Germain FC win on 2026-04-14?",
+      "pnl": 504.2754,
+      "buy_usdc": 286.2058,
+      "sell_usdc": 907.854,
+      "n_buys": 3,
+      "n_sells": 9,
+      "hold_seconds": 44,
+      "avg_buy": 0.21,
+      "avg_sell": 0.65
+    },
+    {
+      "title": "Netherlands vs. Japan: O/U 4.5",
+      "pnl": 502.2958,
+      "buy_usdc": 297.03,
+      "sell_usdc": 817.9121,
+      "n_buys": 3,
+      "n_sells": 4,
+      "hold_seconds": 570,
+      "avg_buy": 0.0495,
+      "avg_sell": 0.1363
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 3.5",
+      "pnl": -515.8212,
+      "buy_usdc": 284.5435,
+      "sell_usdc": 230.58,
+      "n_buys": 3,
+      "n_sells": 1,
+      "hold_seconds": 406
+    },
+    {
+      "title": "Melbourne City FC vs. Western Sydney Wanderers FC: O/U 4.5",
+      "pnl": -508.7234,
+      "buy_usdc": 270.5471,
+      "sell_usdc": 260.0428,
+      "n_buys": 5,
+      "n_sells": 17,
+      "hold_seconds": 5250
+    },
+    {
+      "title": "Panama vs. England: Both Teams to Score",
+      "pnl": -474.3155,
+      "buy_usdc": 503.976,
+      "sell_usdc": 30.54,
+      "n_buys": 1,
+      "n_sells": 1,
+      "hold_seconds": 226
+    },
+    {
+      "title": "Paris Saint-Germain FC vs. Liverpool FC: O/U 3.5",
+      "pnl": -471.2024,
+      "buy_usdc": 289.7583,
+      "sell_usdc": 399.529,
+      "n_buys": 4,
+      "n_sells": 4,
+      "hold_seconds": 4560
+    },
+    {
+      "title": "Will Paris Saint-Germain FC win on 2026-04-22?",
+      "pnl": -427.7997,
+      "buy_usdc": 58.503,
+      "sell_usdc": 150.6,
+      "n_buys": 1,
+      "n_sells": 1,
+      "hold_seconds": 46
+    },
+    {
+      "title": "RC Strasbourg Alsace vs. OGC Nice: O/U 4.5",
+      "pnl": -427.7716,
+      "buy_usdc": 123.1697,
+      "sell_usdc": 81.785,
+      "n_buys": 3,
+      "n_sells": 1,
+      "hold_seconds": 490
+    },
+    {
+      "title": "Sporting CP vs. Arsenal FC: O/U 2.5",
+      "pnl": -416.8006,
+      "buy_usdc": 47.1804,
+      "sell_usdc": 42.3546,
+      "n_buys": 1,
+      "n_sells": 5,
+      "hold_seconds": 74
+    },
+    {
+      "title": "UD Las Palmas vs. SD Huesca: O/U 3.5",
+      "pnl": -414.379,
+      "buy_usdc": 152.342,
+      "sell_usdc": 130.8378,
+      "n_buys": 3,
+      "n_sells": 1,
+      "hold_seconds": 490
+    },
+    {
+      "title": "Real Madrid CF vs. Deportivo Alav\u00e9s: O/U 3.5",
+      "pnl": -388.1273,
+      "buy_usdc": 359.0358,
+      "sell_usdc": 313.1497,
+      "n_buys": 4,
+      "n_sells": 8,
+      "hold_seconds": 136
+    },
+    {
+      "title": "C\u00e1diz CF vs. C\u00f3rdoba CF: O/U 4.5",
+      "pnl": -384.5207,
+      "buy_usdc": 99.9984,
+      "sell_usdc": 239.8507,
+      "n_buys": 19,
+      "n_sells": 1,
+      "hold_seconds": 1410
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 3.5",
+      "avg_buy": 0.3703,
+      "avg_sell": 0.5992,
+      "spread": 0.2289,
+      "pnl": 841.9287,
+      "n_buys": 6,
+      "n_sells": 9,
+      "hold_seconds": 4344,
+      "both_sides": false
+    },
+    {
+      "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 4.5",
+      "avg_buy": 0.5437,
+      "avg_sell": 0.6917,
+      "spread": 0.148,
+      "pnl": 670.1035,
+      "n_buys": 7,
+      "n_sells": 4,
+      "hold_seconds": 1728,
+      "both_sides": false
+    },
+    {
+      "title": "FC Bayern M\u00fcnchen vs. Real Madrid CF: O/U 3.5",
+      "avg_buy": 0.6513,
+      "avg_sell": 0.775,
+      "spread": 0.1237,
+      "pnl": 645.5871,
+      "n_buys": 4,
+      "n_sells": 4,
+      "hold_seconds": 362,
+      "both_sides": false
+    },
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 4.5",
+      "avg_buy": 0.1881,
+      "avg_sell": 0.2751,
+      "spread": 0.087,
+      "pnl": 640.8589,
+      "n_buys": 7,
+      "n_sells": 24,
+      "hold_seconds": 4724,
+      "both_sides": false
+    },
+    {
+      "title": "Will Club Atl\u00e9tico de Madrid win on 2026-08-23?",
+      "avg_buy": 0.426,
+      "avg_sell": 0.7479,
+      "spread": 0.3219,
+      "pnl": 629.2581,
+      "n_buys": 2,
+      "n_sells": 3,
+      "hold_seconds": 138,
+      "both_sides": false
+    },
+    {
+      "title": "FC St. Pauli 1910 vs. FC Bayern M\u00fcnchen: O/U 2.5",
+      "avg_buy": 0.5686,
+      "avg_sell": 0.8888,
+      "spread": 0.3202,
+      "pnl": 544.8298,
+      "n_buys": 5,
+      "n_sells": 6,
+      "hold_seconds": 4208,
+      "both_sides": false
+    },
+    {
+      "title": "Paris Saint-Germain vs. Aston Villa: O/U 3.5",
+      "avg_buy": 0.36,
+      "avg_sell": 0.61,
+      "spread": 0.25,
+      "pnl": 508.056,
+      "n_buys": 11,
+      "n_sells": 4,
+      "hold_seconds": 58,
+      "both_sides": false
+    },
+    {
+      "title": "Will Paris Saint-Germain FC win on 2026-04-14?",
+      "avg_buy": 0.21,
+      "avg_sell": 0.65,
+      "spread": 0.44,
+      "pnl": 504.2754,
+      "n_buys": 3,
+      "n_sells": 9,
+      "hold_seconds": 44,
+      "both_sides": false
+    },
+    {
+      "title": "Netherlands vs. Japan: O/U 4.5",
+      "avg_buy": 0.0495,
+      "avg_sell": 0.1363,
+      "spread": 0.0868,
+      "pnl": 502.2958,
+      "n_buys": 3,
+      "n_sells": 4,
+      "hold_seconds": 570,
+      "both_sides": false
+    },
+    {
+      "title": "US Cremonese vs. Bologna FC 1909: O/U 2.5",
+      "avg_buy": 0.44,
+      "avg_sell": 0.6705,
+      "spread": 0.2305,
+      "pnl": 463.7076,
+      "n_buys": 3,
+      "n_sells": 17,
+      "hold_seconds": 106,
+      "both_sides": false
+    }
+  ]
+}

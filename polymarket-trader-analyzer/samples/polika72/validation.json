@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "all_checks_passed": true,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 57338.716846567695,
+      "ours": 57699.0816,
+      "ours_field": "cashflow_core",
+      "diff": 360.3648,
+      "match": true,
+      "volume_reference": 1049905.188565
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 52640.69,
+      "ours": 57699.0816,
+      "ours_field": "cashflow_core",
+      "diff": 5058.3916,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 24078,
+      "ours": 19978,
+      "diff": -4100,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.6567,
+      "ours": 0.8008,
+      "diff": 0.1441,
+      "match": false
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 61909.3681,
+      "ours": 58204.9839,
+      "diff": -3704.3842,
+      "match": true,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": 58204.9839,
+    "cashflow_core": 57699.0816,
+    "closed_positions_sum": 61909.3681,
+    "trades": 19978,
+    "win_rate": 0.8008
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/polika72",
+    "raw_meta": {
+      "net_pnl": 52640.69,
+      "pos_realized_pnl": 52640.69,
+      "n_trades": 24078.0,
+      "total_buy": 277363.85,
+      "total_sell": 335178.97,
+      "total_redeem": 477.25,
+      "win_rate": 0.6567,
+      "profit_factor": 2.17,
+      "n_markets": 3529.0,
+      "n_buys": 10906.0,
+      "n_sells": 13172.0,
+      "n_redeems": 779.0
+    },
+    "headline_pnl": 52641.0,
+    "win_rate_pct": 66,
+    "smart_score": 98,
+    "n_trades": 24078,
+    "realized_pnl": 52640.69
+  },
+  "leaderboard": {
+    "rank": "3244",
+    "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
+    "userName": "polika72",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 1049905.188565,
+    "pnl": 57338.716846567695,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}

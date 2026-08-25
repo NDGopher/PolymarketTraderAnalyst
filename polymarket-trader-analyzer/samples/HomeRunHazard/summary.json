@@ -1,0 +1,4440 @@
+{
+  "username": "HomeRunHazard",
+  "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+  "counts": {
+    "activity": 27410,
+    "trades": 26170,
+    "buys": 26170,
+    "sells": 0,
+    "closed_positions": 42624,
+    "open_positions": 3092,
+    "markets_traded": 1097,
+    "activity_types": {
+      "DEPOSIT": 7,
+      "WITHDRAWAL": 1,
+      "TRADE": 26170,
+      "MERGE": 428,
+      "REDEEM": 788,
+      "REWARD": 7,
+      "MAKER_REBATE": 9
+    }
+  },
+  "span": {
+    "first_ts": 1777041558,
+    "last_ts": 1778157318,
+    "first_iso": "2026-04-24T14:39:18+00:00",
+    "last_iso": "2026-05-07T12:35:18+00:00",
+    "days_active_span": 12.91
+  },
+  "pnl": {
+    "cashflow_realized": -2419854.5251,
+    "cashflow_core": -2438366.8288,
+    "cashflow_detail": {
+      "buys_usdc": 5131498.829359183,
+      "sells_usdc": 0.0,
+      "redeems_usdc": 2693132.0005570017,
+      "merges_usdc": 1593363.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 8822.8708,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 9689.432900000002,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 2231236.7279,
+    "closed_wins": 23021,
+    "closed_losses": 19597,
+    "closed_flat": 6,
+    "win_rate": 0.5402,
+    "profit_factor": 1.0434,
+    "win_pnl": 53634448.6771,
+    "loss_pnl": -51403211.9492,
+    "total_bought": 263241167.0184,
+    "open_cash_pnl": -1176599.5309,
+    "open_current_value": 199068.0927,
+    "open_realized_pnl": -26254.9003,
+    "leaderboard_all": {
+      "rank": "67",
+      "proxyWallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+      "userName": "HomeRunHazard",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 264797406.18681303,
+      "pnl": 2248711.8139243205,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": -826491.5251,
+    "max_drawdown": -1510984.5154,
+    "points": 27402,
+    "curve_sample": [
+      {
+        "timestamp": 1777041558,
+        "equity": -3.3,
+        "delta": -3.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rome: Andrea Vavassori vs Pol Martin Tiffon",
+        "usdc": 3.3
+      },
+      {
+        "timestamp": 1777043076,
+        "equity": -13026.250494,
+        "delta": -557.83,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Leolia Jeanjean vs Coco Gauff",
+        "usdc": 557.83
+      },
+      {
+        "timestamp": 1777045092,
+        "equity": -11837.79634,
+        "delta": -72.4504,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Sebastian Ofner vs Tomas Etcheverry",
+        "usdc": 72.4504
+      },
+      {
+        "timestamp": 1777049518,
+        "equity": -16063.101499,
+        "delta": -0.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oeiras 4: Elena Pridankina vs Fiona Ferro",
+        "usdc": 0.9
+      },
+      {
+        "timestamp": 1777051280,
+        "equity": -28873.610338,
+        "delta": -2.664,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Cameron Norrie vs Tomas Machac",
+        "usdc": 2.664
+      },
+      {
+        "timestamp": 1777052174,
+        "equity": -19431.58739,
+        "delta": 2187.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Madrid Open: Cameron Norrie vs Tomas Machac",
+        "usdc": 2187.0
+      },
+      {
+        "timestamp": 1777052568,
+        "equity": -20063.650736,
+        "delta": -0.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Savannah: Nick Hardt vs Jack Kennedy",
+        "usdc": 0.225806
+      },
+      {
+        "timestamp": 1777053512,
+        "equity": -29220.523371,
+        "delta": -1.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Caty McNally vs Victoria Mboko",
+        "usdc": 1.02
+      },
+      {
+        "timestamp": 1777054588,
+        "equity": -34186.281327,
+        "delta": -42.257894,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Rafael Jodar vs Alex de Minaur",
+        "usdc": 42.257894
+      },
+      {
+        "timestamp": 1777055712,
+        "equity": -51695.167362,
+        "delta": -2.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Rafael Jodar vs Alex de Minaur",
+        "usdc": 2.225806
+      },
+      {
+        "timestamp": 1777057574,
+        "equity": -32331.436287,
+        "delta": 3285.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Madrid Open: Rafael Jodar vs Alex de Minaur",
+        "usdc": 3285.0
+      },
+      {
+        "timestamp": 1777059374,
+        "equity": -41237.60522,
+        "delta": 2072.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Abidjan: Gauthier Onclin vs Mert Alkaya",
+        "usdc": 2072.0
+      },
+      {
+        "timestamp": 1777061212,
+        "equity": -45738.90353,
+        "delta": -1.4288,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Abidjan: Gauthier Onclin vs Mert Alkaya",
+        "usdc": 1.4288
+      },
+      {
+        "timestamp": 1777062386,
+        "equity": -47007.124427,
+        "delta": -22.91,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Thiago Agustin Tirante vs Tommy Paul",
+        "usdc": 22.91
+      },
+      {
+        "timestamp": 1777062436,
+        "equity": -56801.38464,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Thiago Agustin Tirante vs Tommy Paul",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1777063084,
+        "equity": -80255.521487,
+        "delta": -6761.4441,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Thiago Agustin Tirante vs Tommy Paul",
+        "usdc": 6761.4441
+      },
+      {
+        "timestamp": 1777072458,
+        "equity": -62284.319575,
+        "delta": -21.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Baltimore Orioles",
+        "usdc": 21.0
+      },
+      {
+        "timestamp": 1777073172,
+        "equity": -74706.667322,
+        "delta": -8.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Celtics (-6.5)",
+        "usdc": 8.55
+      },
+      {
+        "timestamp": 1777073836,
+        "equity": -70857.113896,
+        "delta": -133.781161,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. 76ers",
+        "usdc": 133.781161
+      },
+      {
+        "timestamp": 1777074646,
+        "equity": -81547.040654,
+        "delta": -5.49,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox",
+        "usdc": 5.49
+      },
+      {
+        "timestamp": 1777075486,
+        "equity": -103009.789489,
+        "delta": -93.72,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colorado Rockies vs. New York Mets",
+        "usdc": 93.72
+      },
+      {
+        "timestamp": 1777076480,
+        "equity": -93740.83416,
+        "delta": -0.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Minnesota Twins vs. Tampa Bay Rays",
+        "usdc": 0.7
+      },
+      {
+        "timestamp": 1777077168,
+        "equity": -113359.960071,
+        "delta": -8.987037,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. 76ers: O/U 207.5",
+        "usdc": 8.987037
+      },
+      {
+        "timestamp": 1777077568,
+        "equity": -107333.446612,
+        "delta": -155.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Philadelphia Phillies vs. Atlanta Braves",
+        "usdc": 155.4
+      },
+      {
+        "timestamp": 1777078592,
+        "equity": -116233.76468,
+        "delta": -17.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Washington Nationals (-1.5)",
+        "usdc": 17.1
+      },
+      {
+        "timestamp": 1777079604,
+        "equity": -115255.075122,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Yankees vs. Houston Astros",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1777080938,
+        "equity": -96814.427044,
+        "delta": -2.23875,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox",
+        "usdc": 2.23875
+      },
+      {
+        "timestamp": 1777081542,
+        "equity": -84394.044117,
+        "delta": -26.824814,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Philadelphia Phillies vs. Atlanta Braves: O/U 8.5",
+        "usdc": 26.824814
+      },
+      {
+        "timestamp": 1777082774,
+        "equity": -94243.126223,
+        "delta": -4.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox",
+        "usdc": 4.42
+      },
+      {
+        "timestamp": 1777084518,
+        "equity": -91123.103403,
+        "delta": -728.56537,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Gwangju: August Holmgren vs Leandro Riedi",
+        "usdc": 728.56537
+      },
+      {
+        "timestamp": 1777086140,
+        "equity": -93461.81185,
+        "delta": -9.9984,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Spurs (-1.5)",
+        "usdc": 9.9984
+      },
+      {
+        "timestamp": 1777086832,
+        "equity": -64639.913091,
+        "delta": -1293.2202,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago Cubs vs. Los Angeles Dodgers",
+        "usdc": 1293.2202
+      },
+      {
+        "timestamp": 1777087542,
+        "equity": -74185.529167,
+        "delta": -1.075054,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Detroit Tigers vs. Cincinnati Reds",
+        "usdc": 1.075054
+      },
+      {
+        "timestamp": 1777089042,
+        "equity": -69330.778049,
+        "delta": -11.332585,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Detroit Tigers vs. Cincinnati Reds",
+        "usdc": 11.332585
+      },
+      {
+        "timestamp": 1777092206,
+        "equity": -53678.509569,
+        "delta": 3.071427,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Miami Marlins vs. San Francisco Giants: O/U 9.5",
+        "usdc": 3.071427
+      },
+      {
+        "timestamp": 1777097396,
+        "equity": -5268.88081,
+        "delta": 14490.804954,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: Spurs (-1.5)",
+        "usdc": 14490.804954
+      },
+      {
+        "timestamp": 1777109598,
+        "equity": -16133.054083,
+        "delta": -2.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Laura Samson vs Anna Bondar",
+        "usdc": 2.333333
+      },
+      {
+        "timestamp": 1777112150,
+        "equity": -11497.545804,
+        "delta": -1683.034285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Karen Khachanov vs Adam Walton",
+        "usdc": 1683.034285
+      },
+      {
+        "timestamp": 1777114718,
+        "equity": -14276.266011,
+        "delta": -494.4416,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Leylah Fernandez vs Iva Jovic",
+        "usdc": 494.4416
+      },
+      {
+        "timestamp": 1777116974,
+        "equity": -16198.491079,
+        "delta": 1472.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Madrid Open: Juan Manuel Cerundolo vs Luciano Darderi",
+        "usdc": 1472.0
+      },
+      {
+        "timestamp": 1777117648,
+        "equity": -30141.263394,
+        "delta": -0.100869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Martin Damm vs Jakub Mensik",
+        "usdc": 0.100869
+      },
+      {
+        "timestamp": 1777118774,
+        "equity": -19104.366804,
+        "delta": 5705.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Madrid Open: Jaume Munar vs Casper Ruud",
+        "usdc": 5705.0
+      },
+      {
+        "timestamp": 1777121002,
+        "equity": -25284.160639,
+        "delta": -22.6776,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Leylah Fernandez vs Iva Jovic",
+        "usdc": 22.6776
+      },
+      {
+        "timestamp": 1777122202,
+        "equity": -26491.944956,
+        "delta": -3.284383,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Ugo Humbert vs Terence Atmane",
+        "usdc": 3.284383
+      },
+      {
+        "timestamp": 1777123700,
+        "equity": -36524.687187,
+        "delta": -2.65,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Brandon Nakashima vs Alexander Blockx",
+        "usdc": 2.65
+      },
+      {
+        "timestamp": 1777125572,
+        "equity": -31132.403332,
+        "delta": -445.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rome: Dalibor Svrcina vs Jacopo Vasami",
+        "usdc": 445.0
+      },
+      {
+        "timestamp": 1777126872,
+        "equity": -25365.810097,
+        "delta": -0.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Ugo Humbert vs Terence Atmane",
+        "usdc": 0.347826
+      },
+      {
+        "timestamp": 1777126872,
+        "equity": -25383.810078,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Ugo Humbert vs Terence Atmane",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1777127824,
+        "equity": -32950.65804,
+        "delta": -285.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Mariano Navone vs Alexander Zverev",
+        "usdc": 285.0
+      },
+      {
+        "timestamp": 1777129960,
+        "equity": -27402.700339,
+        "delta": -5.908378,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Camilo Ugo Carabelli vs Flavio Cobolli",
+        "usdc": 5.908378
+      },
+      {
+        "timestamp": 1777133132,
+        "equity": -26557.230747,
+        "delta": -0.217108,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Learner Tien vs Adolfo Vallejo",
+        "usdc": 0.217108
+      },
+      {
+        "timestamp": 1777134142,
+        "equity": -37487.587904,
+        "delta": -227.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Hailey Baptiste vs Jasmine Paolini",
+        "usdc": 227.7
+      },
+      {
+        "timestamp": 1777135062,
+        "equity": -28193.461471,
+        "delta": -1.393333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Hailey Baptiste vs Jasmine Paolini",
+        "usdc": 1.393333
+      },
+      {
+        "timestamp": 1777136736,
+        "equity": -46259.251653,
+        "delta": -6225.999,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Baltimore Orioles",
+        "usdc": 6225.999
+      },
+      {
+        "timestamp": 1777137604,
+        "equity": -45232.387545,
+        "delta": -46.397752,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Baltimore Orioles",
+        "usdc": 46.397752
+      },
+      {
+        "timestamp": 1777138574,
+        "equity": -49103.355336,
+        "delta": 6743.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Pistons vs. Magic",
+        "usdc": 6743.0
+      },
+      {
+        "timestamp": 1777139842,
+        "equity": -43669.940379,
+        "delta": -10.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Baltimore Orioles: O/U 9.5",
+        "usdc": 10.6
+      },
+      {
+        "timestamp": 1777140914,
+        "equity": -46884.083474,
+        "delta": -0.075268,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Nicolai Budkov Kjaer vs Denis Shapovalov",
+        "usdc": 0.075268
+      },
+      {
+        "timestamp": 1777140914,
+        "equity": -46900.492047,
+        "delta": -0.301075,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Nicolai Budkov Kjaer vs Denis Shapovalov",
+        "usdc": 0.301075
+      },
+      {
+        "timestamp": 1777141516,
+        "equity": -81177.147249,
+        "delta": -2.219178,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seattle Mariners vs. St. Louis Cardinals",
+        "usdc": 2.219178
+      },
+      {
+        "timestamp": 1777141810,
+        "equity": -84060.989483,
+        "delta": -0.733333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Baltimore Orioles: O/U 8.5",
+        "usdc": 0.733333
+      },
+      {
+        "timestamp": 1777142536,
+        "equity": -63891.910847,
+        "delta": -6.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Daniil Medvedev vs Fabian Marozsan",
+        "usdc": 6.03
+      },
+      {
+        "timestamp": 1777143478,
+        "equity": -74217.941254,
+        "delta": -5.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Savannah: Kilian Feldbausch vs Jack Kennedy",
+        "usdc": 5.2
+      },
+      {
+        "timestamp": 1777144986,
+        "equity": -90825.797799,
+        "delta": -46.9464,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Jaqueline Cristian",
+        "usdc": 46.9464
+      },
+      {
+        "timestamp": 1777146498,
+        "equity": -88546.698226,
+        "delta": -5.810869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-9.5)",
+        "usdc": 5.810869
+      },
+      {
+        "timestamp": 1777147574,
+        "equity": -92419.68543,
+        "delta": 636.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Thunder vs. Suns",
+        "usdc": 636.0
+      },
+      {
+        "timestamp": 1777148476,
+        "equity": -119791.290517,
+        "delta": -57.065384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Bublik vs Stefanos Tsitsipas",
+        "usdc": 57.065384
+      },
+      {
+        "timestamp": 1777149376,
+        "equity": -110060.836525,
+        "delta": 9292.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Thunder vs. Suns",
+        "usdc": 9292.0
+      },
+      {
+        "timestamp": 1777150190,
+        "equity": -121187.101837,
+        "delta": -1.392,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-9.5)",
+        "usdc": 1.392
+      },
+      {
+        "timestamp": 1777151074,
+        "equity": -166369.963848,
+        "delta": -1.0248,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Bublik vs Stefanos Tsitsipas",
+        "usdc": 1.0248
+      },
+      {
+        "timestamp": 1777151774,
+        "equity": -168244.875449,
+        "delta": -6.277857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Toronto Blue Jays: O/U 7.5",
+        "usdc": 6.277857
+      },
+      {
+        "timestamp": 1777152648,
+        "equity": -186541.474354,
+        "delta": -1.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seattle Mariners vs. St. Louis Cardinals",
+        "usdc": 1.4
+      },
+      {
+        "timestamp": 1777154478,
+        "equity": -195735.229371,
+        "delta": -11.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Washington Nationals (-1.5)",
+        "usdc": 11.6
+      },
+      {
+        "timestamp": 1777155532,
+        "equity": -194721.920859,
+        "delta": -515.9925,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Knicks (-1.5)",
+        "usdc": 515.9925
+      },
+      {
+        "timestamp": 1777156308,
+        "equity": -216579.639442,
+        "delta": -16.462439,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox: O/U 5.5",
+        "usdc": 16.462439
+      },
+      {
+        "timestamp": 1777157346,
+        "equity": -181920.804066,
+        "delta": -200.6896,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox",
+        "usdc": 200.6896
+      },
+      {
+        "timestamp": 1777159104,
+        "equity": -175275.539507,
+        "delta": -2728.91362,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Angels vs. Kansas City Royals",
+        "usdc": 2728.91362
+      },
+      {
+        "timestamp": 1777160800,
+        "equity": -199676.595895,
+        "delta": -4.048297,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Yankees vs. Houston Astros: O/U 8.5",
+        "usdc": 4.048297
+      },
+      {
+        "timestamp": 1777161644,
+        "equity": -214079.446321,
+        "delta": -3.064516,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago Cubs vs. Los Angeles Dodgers: O/U 9.5",
+        "usdc": 3.064516
+      },
+      {
+        "timestamp": 1777162742,
+        "equity": -185548.446023,
+        "delta": -13.765,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Philadelphia Phillies vs. Atlanta Braves",
+        "usdc": 13.765
+      },
+      {
+        "timestamp": 1777164122,
+        "equity": -69559.162605,
+        "delta": -11.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Diego Padres vs. Arizona Diamondbacks: O/U 10.5",
+        "usdc": 11.8
+      },
+      {
+        "timestamp": 1777165162,
+        "equity": -101815.90525,
+        "delta": -3.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Athletics vs. Texas Rangers",
+        "usdc": 3.5
+      },
+      {
+        "timestamp": 1777166166,
+        "equity": -84736.215803,
+        "delta": -0.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Yankees vs. Houston Astros",
+        "usdc": 0.333333
+      },
+      {
+        "timestamp": 1777167238,
+        "equity": -87184.544887,
+        "delta": -128.091,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Philadelphia Phillies vs. Atlanta Braves",
+        "usdc": 128.091
+      },
+      {
+        "timestamp": 1777167872,
+        "equity": -83866.671266,
+        "delta": -12.624,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Timberwolves",
+        "usdc": 12.624
+      },
+      {
+        "timestamp": 1777168702,
+        "equity": -93999.773036,
+        "delta": -218.2795,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Timberwolves",
+        "usdc": 218.2795
+      },
+      {
+        "timestamp": 1777170136,
+        "equity": -83423.606028,
+        "delta": -233.0008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Timberwolves",
+        "usdc": 233.0008
+      },
+      {
+        "timestamp": 1777172450,
+        "equity": -74152.843685,
+        "delta": 366.05083,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Athletics vs. Texas Rangers",
+        "usdc": 366.05083
+      },
+      {
+        "timestamp": 1777176838,
+        "equity": -2383.633924,
+        "delta": 3.508769,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: Los Angeles Dodgers (-2.5)",
+        "usdc": 3.508769
+      },
+      {
+        "timestamp": 1777197524,
+        "equity": 8552.390386,
+        "delta": -1.063291,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Katerina Siniakova vs Caty McNally",
+        "usdc": 1.063291
+      },
+      {
+        "timestamp": 1777199390,
+        "equity": 7232.631107,
+        "delta": -7.526881,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Solana Sierra vs Zeynep Sonmez",
+        "usdc": 7.526881
+      },
+      {
+        "timestamp": 1777201928,
+        "equity": 20301.805847,
+        "delta": -624.26,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Sorana Cirstea vs Coco Gauff",
+        "usdc": 624.26
+      },
+      {
+        "timestamp": 1777203060,
+        "equity": 13260.547998,
+        "delta": -6.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Katerina Siniakova vs Caty McNally",
+        "usdc": 6.4
+      },
+      {
+        "timestamp": 1777206474,
+        "equity": 18677.64651,
+        "delta": -220.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Dino Prizmic vs Tomas Etcheverry",
+        "usdc": 220.0
+      },
+      {
+        "timestamp": 1777208648,
+        "equity": 17423.766484,
+        "delta": -0.696376,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Elise Mertens vs Karolina Pliskova",
+        "usdc": 0.696376
+      },
+      {
+        "timestamp": 1777213272,
+        "equity": 19309.809685,
+        "delta": -65.994644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Dino Prizmic vs Tomas Etcheverry",
+        "usdc": 65.994644
+      },
+      {
+        "timestamp": 1777216678,
+        "equity": -24975.877442,
+        "delta": -0.564102,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Arthur Fils vs Emilio Nava",
+        "usdc": 0.564102
+      },
+      {
+        "timestamp": 1777218728,
+        "equity": -33195.573659,
+        "delta": -13.285714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Arthur Fils vs Emilio Nava",
+        "usdc": 13.285714
+      },
+      {
+        "timestamp": 1777224216,
+        "equity": 8674.071318,
+        "delta": -670.1918,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Cavaliers (-3.5)",
+        "usdc": 670.1918
+      },
+      {
+        "timestamp": 1777225214,
+        "equity": 8248.709784,
+        "delta": -36.6604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Cameron Norrie vs Thiago Agustin Tirante",
+        "usdc": 36.6604
+      },
+      {
+        "timestamp": 1777225928,
+        "equity": 1216.179132,
+        "delta": -8.518518,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Cavaliers (-5.5)",
+        "usdc": 8.518518
+      },
+      {
+        "timestamp": 1777226644,
+        "equity": -22058.132623,
+        "delta": -44.339622,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Cavaliers (-5.5)",
+        "usdc": 44.339622
+      },
+      {
+        "timestamp": 1777227432,
+        "equity": -15332.7321,
+        "delta": -2.305882,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seattle Mariners vs. St. Louis Cardinals: O/U 8.5",
+        "usdc": 2.305882
+      },
+      {
+        "timestamp": 1777227970,
+        "equity": -35437.862303,
+        "delta": -184.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Cameron Norrie vs Thiago Agustin Tirante",
+        "usdc": 184.0
+      },
+      {
+        "timestamp": 1777227990,
+        "equity": -36146.771245,
+        "delta": -0.301075,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Cameron Norrie vs Thiago Agustin Tirante",
+        "usdc": 0.301075
+      },
+      {
+        "timestamp": 1777228356,
+        "equity": -57615.367883,
+        "delta": -5.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Minnesota Twins vs. Tampa Bay Rays: O/U 8.5",
+        "usdc": 5.6
+      },
+      {
+        "timestamp": 1777228676,
+        "equity": -21790.460918,
+        "delta": -0.818181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Qinwen Zheng vs Elena Rybakina",
+        "usdc": 0.818181
+      },
+      {
+        "timestamp": 1777229548,
+        "equity": -39059.537417,
+        "delta": -1957.514791,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Qinwen Zheng vs Elena Rybakina",
+        "usdc": 1957.514791
+      },
+      {
+        "timestamp": 1777230026,
+        "equity": -59362.769479,
+        "delta": -20.30303,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Athletics vs. Texas Rangers",
+        "usdc": 20.30303
+      },
+      {
+        "timestamp": 1777230510,
+        "equity": -45828.720067,
+        "delta": -8.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Minnesota Twins vs. Tampa Bay Rays: O/U 6.5",
+        "usdc": 8.6
+      },
+      {
+        "timestamp": 1777230982,
+        "equity": -52757.782442,
+        "delta": -36.786451,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Qinwen Zheng vs Elena Rybakina",
+        "usdc": 36.786451
+      },
+      {
+        "timestamp": 1777232008,
+        "equity": -63674.506035,
+        "delta": -292.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Yankees vs. Houston Astros: O/U 10.5",
+        "usdc": 292.4
+      },
+      {
+        "timestamp": 1777232972,
+        "equity": -63482.255459,
+        "delta": -352.960234,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Toronto Blue Jays",
+        "usdc": 352.960234
+      },
+      {
+        "timestamp": 1777233590,
+        "equity": -85942.879331,
+        "delta": -11.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox: O/U 2.5",
+        "usdc": 11.8
+      },
+      {
+        "timestamp": 1777233976,
+        "equity": -73399.230189,
+        "delta": 3094.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Colorado Rockies vs. New York Mets",
+        "usdc": 3094.0
+      },
+      {
+        "timestamp": 1777234218,
+        "equity": -78179.19056,
+        "delta": -294.3262,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Qinwen Zheng vs Elena Rybakina",
+        "usdc": 294.3262
+      },
+      {
+        "timestamp": 1777234548,
+        "equity": -101180.341488,
+        "delta": -28.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Qinwen Zheng vs Elena Rybakina",
+        "usdc": 28.44
+      },
+      {
+        "timestamp": 1777234864,
+        "equity": -124865.390942,
+        "delta": -2050.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Washington Nationals vs. Chicago White Sox: O/U 2.5",
+        "usdc": 2050.0
+      },
+      {
+        "timestamp": 1777235452,
+        "equity": -141931.43837,
+        "delta": -5.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami Marlins vs. San Francisco Giants",
+        "usdc": 5.06
+      },
+      {
+        "timestamp": 1777236958,
+        "equity": -85380.659877,
+        "delta": -2.987012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Diego Padres vs. Arizona Diamondbacks",
+        "usdc": 2.987012
+      },
+      {
+        "timestamp": 1777238050,
+        "equity": -96463.025293,
+        "delta": -570.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Trail Blazers",
+        "usdc": 570.0
+      },
+      {
+        "timestamp": 1777239362,
+        "equity": -114369.487478,
+        "delta": -1923.21,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Trail Blazers",
+        "usdc": 1923.21
+      },
+      {
+        "timestamp": 1777243310,
+        "equity": -48700.945898,
+        "delta": 1743.067782,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: New York Mets (-1.5)",
+        "usdc": 1743.067782
+      },
+      {
+        "timestamp": 1777276112,
+        "equity": 29765.917915,
+        "delta": -0.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Xiaodi You vs Jiajing Lu",
+        "usdc": 0.35
+      },
+      {
+        "timestamp": 1777284082,
+        "equity": 17513.771364,
+        "delta": -58.545454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Alevtina Ibragimova vs Han Shi",
+        "usdc": 58.545454
+      },
+      {
+        "timestamp": 1777286136,
+        "equity": 22239.480904,
+        "delta": -5.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Alevtina Ibragimova vs Han Shi",
+        "usdc": 5.666666
+      },
+      {
+        "timestamp": 1777287162,
+        "equity": 15823.395264,
+        "delta": -7.7004,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Belinda Bencic vs Hailey Baptiste",
+        "usdc": 7.7004
+      },
+      {
+        "timestamp": 1777288544,
+        "equity": 7013.756016,
+        "delta": -16.0384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Solana Sierra vs Karolina Pliskova",
+        "usdc": 16.0384
+      },
+      {
+        "timestamp": 1777290038,
+        "equity": 10319.668224,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mauthausen: Tomas Barrios vs Sebastian Sorger",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1777291288,
+        "equity": -23737.299999,
+        "delta": -1308.7123,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+        "usdc": 1308.7123
+      },
+      {
+        "timestamp": 1777292022,
+        "equity": -15698.094305,
+        "delta": -0.785714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+        "usdc": 0.785714
+      },
+      {
+        "timestamp": 1777292920,
+        "equity": -34831.476583,
+        "delta": -138.9102,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+        "usdc": 138.9102
+      },
+      {
+        "timestamp": 1777293872,
+        "equity": -31057.001871,
+        "delta": -88.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Daniel Merida Aguilar",
+        "usdc": 88.0
+      },
+      {
+        "timestamp": 1777294000,
+        "equity": -34836.431934,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Daniel Merida Aguilar",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1777294078,
+        "equity": -35864.699696,
+        "delta": -1.0857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+        "usdc": 1.0857
+      },
+      {
+        "timestamp": 1777295278,
+        "equity": -42070.460373,
+        "delta": -72.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+        "usdc": 72.0
+      },
+      {
+        "timestamp": 1777296152,
+        "equity": -49563.966091,
+        "delta": -31.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Saint-Malo: Lulu Sun vs Yue Yuan",
+        "usdc": 31.36
+      },
+      {
+        "timestamp": 1777298104,
+        "equity": -57067.62541,
+        "delta": -33.3854,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ostrava: Max Schoenhaus vs Jay Clarke",
+        "usdc": 33.3854
+      },
+      {
+        "timestamp": 1777298898,
+        "equity": -58084.645282,
+        "delta": -0.134782,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Daniil Medvedev vs Nicolai Budkov Kjaer",
+        "usdc": 0.134782
+      },
+      {
+        "timestamp": 1777300574,
+        "equity": -73465.857676,
+        "delta": -2.99,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ostrava: Max Schoenhaus vs Jay Clarke",
+        "usdc": 2.99
+      },
+      {
+        "timestamp": 1777301732,
+        "equity": -60839.74128,
+        "delta": -6.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Mirra Andreeva vs Anna Bondar",
+        "usdc": 6.333333
+      },
+      {
+        "timestamp": 1777302900,
+        "equity": -61507.316553,
+        "delta": -8.7513,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ostrava: Max Schoenhaus vs Jay Clarke",
+        "usdc": 8.7513
+      },
+      {
+        "timestamp": 1777303726,
+        "equity": -71176.593271,
+        "delta": -14.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Linda Noskova vs Coco Gauff",
+        "usdc": 14.45
+      },
+      {
+        "timestamp": 1777304600,
+        "equity": -63888.136069,
+        "delta": -3.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Mirra Andreeva vs Anna Bondar",
+        "usdc": 3.35
+      },
+      {
+        "timestamp": 1777305948,
+        "equity": -72151.790344,
+        "delta": -16.4639,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Linda Noskova vs Coco Gauff",
+        "usdc": 16.4639
+      },
+      {
+        "timestamp": 1777307230,
+        "equity": -67543.212201,
+        "delta": -16.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Blockx vs Felix Auger-Aliassime",
+        "usdc": 16.68
+      },
+      {
+        "timestamp": 1777309794,
+        "equity": -57808.292935,
+        "delta": -3.5728,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Blockx vs Felix Auger-Aliassime",
+        "usdc": 3.5728
+      },
+      {
+        "timestamp": 1777310988,
+        "equity": -66356.790704,
+        "delta": -16.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Blockx vs Felix Auger-Aliassime",
+        "usdc": 16.1
+      },
+      {
+        "timestamp": 1777311554,
+        "equity": -79294.503887,
+        "delta": -5489.0052,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Alexander Blockx vs Felix Auger-Aliassime",
+        "usdc": 5489.0052
+      },
+      {
+        "timestamp": 1777313250,
+        "equity": -85768.515286,
+        "delta": -0.126067,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Marta Kostyuk vs Caty McNally",
+        "usdc": 0.126067
+      },
+      {
+        "timestamp": 1777315800,
+        "equity": -76779.95188,
+        "delta": -225.1568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Adolfo Vallejo vs Flavio Cobolli",
+        "usdc": 225.1568
+      },
+      {
+        "timestamp": 1777320994,
+        "equity": -49404.232434,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Karen Khachanov vs Jakub Mensik",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1777320994,
+        "equity": -49479.587617,
+        "delta": -44.5627,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Karen Khachanov vs Jakub Mensik",
+        "usdc": 44.5627
+      },
+      {
+        "timestamp": 1777322718,
+        "equity": -58709.955876,
+        "delta": -23.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Karen Khachanov vs Jakub Mensik",
+        "usdc": 23.7
+      },
+      {
+        "timestamp": 1777323382,
+        "equity": -66863.019403,
+        "delta": -5.011111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Karen Khachanov vs Jakub Mensik",
+        "usdc": 5.011111
+      },
+      {
+        "timestamp": 1777325644,
+        "equity": -42154.373483,
+        "delta": -21.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Abidjan 2: Maks Kasnikowski vs Cesar Bouchelaghem",
+        "usdc": 21.16
+      },
+      {
+        "timestamp": 1777328582,
+        "equity": -52647.946165,
+        "delta": -11.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Abidjan 2: Digvijaypratap Singh vs Paul Jubb",
+        "usdc": 11.5
+      },
+      {
+        "timestamp": 1777332202,
+        "equity": -53469.41734,
+        "delta": -3523.998,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Tampa Bay Rays vs. Cleveland Guardians: O/U 5.5",
+        "usdc": 3523.998
+      },
+      {
+        "timestamp": 1777333888,
+        "equity": -57446.419605,
+        "delta": -0.204819,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Tampa Bay Rays vs. Cleveland Guardians",
+        "usdc": 0.204819
+      },
+      {
+        "timestamp": 1777335046,
+        "equity": -63868.849022,
+        "delta": -32.058,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seattle Mariners vs. Minnesota Twins",
+        "usdc": 32.058
+      },
+      {
+        "timestamp": 1777335918,
+        "equity": -83378.645537,
+        "delta": -997.105,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "St. Louis Cardinals vs. Pittsburgh Pirates",
+        "usdc": 997.105
+      },
+      {
+        "timestamp": 1777336608,
+        "equity": -49427.226431,
+        "delta": -1154.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-2.5)",
+        "usdc": 1154.78
+      },
+      {
+        "timestamp": 1777337204,
+        "equity": -60625.053887,
+        "delta": -776.97,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Abidjan 2: Karim Bennani vs Karan Singh",
+        "usdc": 776.97
+      },
+      {
+        "timestamp": 1777338104,
+        "equity": -85536.809201,
+        "delta": -881.7451,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Magic",
+        "usdc": 881.7451
+      },
+      {
+        "timestamp": 1777339098,
+        "equity": -67595.902595,
+        "delta": -1200.1307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-3.5)",
+        "usdc": 1200.1307
+      },
+      {
+        "timestamp": 1777340806,
+        "equity": -30965.609099,
+        "delta": -912.786,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Magic",
+        "usdc": 912.786
+      },
+      {
+        "timestamp": 1777342312,
+        "equity": -9063.95572,
+        "delta": -306.2428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Magic",
+        "usdc": 306.2428
+      },
+      {
+        "timestamp": 1777343816,
+        "equity": -1643.093229,
+        "delta": -51.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: New York Yankees (-3.5)",
+        "usdc": 51.0
+      },
+      {
+        "timestamp": 1777345102,
+        "equity": -27495.714967,
+        "delta": -240.4962,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Angels vs. Chicago White Sox: O/U 9.5",
+        "usdc": 240.4962
+      },
+      {
+        "timestamp": 1777345756,
+        "equity": -19716.165796,
+        "delta": -2.1141,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami Marlins vs. Los Angeles Dodgers",
+        "usdc": 2.1141
+      },
+      {
+        "timestamp": 1777346662,
+        "equity": -33282.826826,
+        "delta": -62.448979,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Nuggets (-10.5)",
+        "usdc": 62.448979
+      },
+      {
+        "timestamp": 1777347376,
+        "equity": -19323.168995,
+        "delta": 10848.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Timberwolves vs. Nuggets",
+        "usdc": 10848.0
+      },
+      {
+        "timestamp": 1777348464,
+        "equity": -14302.052038,
+        "delta": -35.066,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Angels vs. Chicago White Sox",
+        "usdc": 35.066
+      },
+      {
+        "timestamp": 1777349476,
+        "equity": -7474.740283,
+        "delta": -10.4144,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Nuggets: O/U 222.5",
+        "usdc": 10.4144
+      },
+      {
+        "timestamp": 1777349710,
+        "equity": -11051.957871,
+        "delta": -122.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami Marlins vs. Los Angeles Dodgers",
+        "usdc": 122.64
+      },
+      {
+        "timestamp": 1777350520,
+        "equity": -18999.884047,
+        "delta": -0.40845,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami Marlins vs. Los Angeles Dodgers",
+        "usdc": 0.40845
+      },
+      {
+        "timestamp": 1777351536,
+        "equity": -15185.776612,
+        "delta": -4.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago Cubs vs. San Diego Padres",
+        "usdc": 4.5
+      },
+      {
+        "timestamp": 1777352122,
+        "equity": -22030.008183,
+        "delta": -0.052631,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Angels vs. Chicago White Sox",
+        "usdc": 0.052631
+      },
+      {
+        "timestamp": 1777352774,
+        "equity": -22963.620531,
+        "delta": 925.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Huzhou: Xiyu Wang vs Zhibek Kulambayeva",
+        "usdc": 925.0
+      },
+      {
+        "timestamp": 1777354226,
+        "equity": -18245.109978,
+        "delta": -1.702702,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Sara Saito vs Xinxin Yao",
+        "usdc": 1.702702
+      },
+      {
+        "timestamp": 1777355986,
+        "equity": -9958.115845,
+        "delta": -5.603333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Dalila Spiteri vs Varvara Panshina",
+        "usdc": 5.603333
+      },
+      {
+        "timestamp": 1777361036,
+        "equity": 24068.987799,
+        "delta": -344.6124,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Rada Zolotareva vs Despina Papamichail",
+        "usdc": 344.6124
+      },
+      {
+        "timestamp": 1777366156,
+        "equity": 21553.69453,
+        "delta": -2.381008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mauthausen: David Jorda Sanchis vs Daniel Cukierman",
+        "usdc": 2.381008
+      },
+      {
+        "timestamp": 1777367514,
+        "equity": 21610.670859,
+        "delta": -0.754385,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Polona Hercog vs Xinyu Gao",
+        "usdc": 0.754385
+      },
+      {
+        "timestamp": 1777367952,
+        "equity": 17779.57065,
+        "delta": -0.197802,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Aix en Provence: Alexander Shevchenko vs Dan Added",
+        "usdc": 0.197802
+      },
+      {
+        "timestamp": 1777367952,
+        "equity": 17759.394846,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Aix en Provence: Alexander Shevchenko vs Dan Added",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1777369846,
+        "equity": 9971.297,
+        "delta": -6.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Huzhou: Polona Hercog vs Xinyu Gao",
+        "usdc": 6.16
+      },
+      {
+        "timestamp": 1777372134,
+        "equity": 14845.698686,
+        "delta": -1360.068425,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mauthausen: Joel Schwaerzler vs Jan Choinski",
+        "usdc": 1360.068425
+      },
+      {
+        "timestamp": 1777373286,
+        "equity": 15443.454815,
+        "delta": -3.342222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Saint-Malo: Sofia Costoulas vs Ayla Aksu",
+        "usdc": 3.342222
+      },
+      {
+        "timestamp": 1777386214,
+        "equity": 9712.393053,
+        "delta": -480.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Vit Kopriva vs Rafael Jodar",
+        "usdc": 480.0
+      },
+      {
+        "timestamp": 1777387300,
+        "equity": 3036.757682,
+        "delta": -605.355882,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cagliari: Patrick Kypson vs Matteo Berrettini",
+        "usdc": 605.355882
+      },
+      {
+        "timestamp": 1777388008,
+        "equity": -20167.401944,
+        "delta": -41.9224,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Casper Ruud",
+        "usdc": 41.9224
+      },
+      {
+        "timestamp": 1777388522,
+        "equity": -43256.155714,
+        "delta": -134.9946,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Casper Ruud",
+        "usdc": 134.9946
+      },
+      {
+        "timestamp": 1777389364,
+        "equity": -63301.016082,
+        "delta": -8.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Casper Ruud",
+        "usdc": 8.36
+      },
+      {
+        "timestamp": 1777390364,
+        "equity": -94495.04534,
+        "delta": -52.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Stefanos Tsitsipas vs Casper Ruud",
+        "usdc": 52.5
+      },
+      {
+        "timestamp": 1777391712,
+        "equity": -102312.261101,
+        "delta": -0.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ostrava: Thiago Seyboth Wild vs Norbert Gombos",
+        "usdc": 0.35
+      },
+      {
+        "timestamp": 1777392182,
+        "equity": -108383.13424,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ostrava: Carlos Sanchez Jover vs Frederico Ferreira Silva",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1777392322,
+        "equity": -109617.268137,
+        "delta": -13.152592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Celtics (-11.5)",
+        "usdc": 13.152592
+      },
+      {
+        "timestamp": 1777393336,
+        "equity": -123147.04075,
+        "delta": -1.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Saint-Malo: Leolia Jeanjean vs Talia Gibson",
+        "usdc": 1.8
+      },
+      {
+        "timestamp": 1777416770,
+        "equity": -145288.702618,
+        "delta": -4980.06345,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Jakub Mensik vs Alexander Zverev",
+        "usdc": 4980.06345
+      },
+      {
+        "timestamp": 1777418078,
+        "equity": -168381.030776,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Jakub Mensik vs Alexander Zverev",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1777418078,
+        "equity": -168398.726411,
+        "delta": -0.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Madrid Open: Jakub Mensik vs Alexander Zverev",
+        "usdc": 0.347826
+      },
+      {
+        "timestamp": 1777418788,
+        "equity": -181082.443262,
+        "delta": -158.3792,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "St. Louis Cardinals vs. Pittsburgh Pirates",
+        "usdc": 158.3792
+      },
+      {
+        "timestamp": 1777419498,
+        "equity": -186487.996093,
+        "delta": -45.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Francisco Giants vs. Philadelphia Phillies",
+        "usdc": 45.78
+      },
+      {
+        "timestamp": 1777420518,
+        "equity": -201354.717484,
+        "delta": -66.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Celtics (-9.5)",
+        "usdc": 66.666666
+      },
+      {
+        "timestamp": 1777933700,
+        "equity": -218039.719362,
+        "delta": -22.5038,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers: O/U 7.5",
+        "usdc": 22.5038
+      },
+      {
+        "timestamp": 1777934908,
+        "equity": -228761.484816,
+        "delta": -1.532142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers",
+        "usdc": 1.532142
+      },
+      {
+        "timestamp": 1777936412,
+        "equity": -255346.746278,
+        "delta": -12.222222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Spurs (-11.5)",
+        "usdc": 12.222222
+      },
+      {
+        "timestamp": 1777937542,
+        "equity": -277761.337907,
+        "delta": -142.938,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Toronto Blue Jays vs. Tampa Bay Rays",
+        "usdc": 142.938
+      },
+      {
+        "timestamp": 1777938562,
+        "equity": -307715.835135,
+        "delta": -20.481927,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers",
+        "usdc": 20.481927
+      },
+      {
+        "timestamp": 1777939436,
+        "equity": -320095.133266,
+        "delta": -104.413333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers",
+        "usdc": 104.413333
+      },
+      {
+        "timestamp": 1777939764,
+        "equity": -336272.44513,
+        "delta": -3485.46398,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Milwaukee Brewers vs. St. Louis Cardinals",
+        "usdc": 3485.46398
+      },
+      {
+        "timestamp": 1777940536,
+        "equity": -363430.842786,
+        "delta": -2.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Knicks",
+        "usdc": 2.333333
+      },
+      {
+        "timestamp": 1777941628,
+        "equity": -388907.658108,
+        "delta": -21.0312,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. New York Yankees",
+        "usdc": 21.0312
+      },
+      {
+        "timestamp": 1777942522,
+        "equity": -401896.372829,
+        "delta": -5.194,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs",
+        "usdc": 5.194
+      },
+      {
+        "timestamp": 1777943556,
+        "equity": -412373.264748,
+        "delta": -3.9008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Dodgers vs. Houston Astros",
+        "usdc": 3.9008
+      },
+      {
+        "timestamp": 1777944610,
+        "equity": -432097.562827,
+        "delta": -2.187719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Milwaukee Brewers vs. St. Louis Cardinals: O/U 8.5",
+        "usdc": 2.187719
+      },
+      {
+        "timestamp": 1777945442,
+        "equity": -456052.456667,
+        "delta": -1265.0033,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Spurs",
+        "usdc": 1265.0033
+      },
+      {
+        "timestamp": 1777945744,
+        "equity": -471884.05903,
+        "delta": -411.97623,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Spurs: O/U 216.5",
+        "usdc": 411.97623
+      },
+      {
+        "timestamp": 1777946988,
+        "equity": -488069.530058,
+        "delta": -820.793076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs",
+        "usdc": 820.793076
+      },
+      {
+        "timestamp": 1777948152,
+        "equity": -494003.49706,
+        "delta": -40.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: San Francisco Giants (-1.5)",
+        "usdc": 40.666666
+      },
+      {
+        "timestamp": 1777948852,
+        "equity": -507354.560951,
+        "delta": -150.537634,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago White Sox vs. Los Angeles Angels",
+        "usdc": 150.537634
+      },
+      {
+        "timestamp": 1777950194,
+        "equity": -523775.125934,
+        "delta": -507.01977,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Spurs",
+        "usdc": 507.01977
+      },
+      {
+        "timestamp": 1777951372,
+        "equity": -543806.985683,
+        "delta": -1870.3741,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Spurs",
+        "usdc": 1870.3741
+      },
+      {
+        "timestamp": 1777952552,
+        "equity": -560238.147978,
+        "delta": -4.062857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Anastasia Zolotareva vs Mei Yamaguchi",
+        "usdc": 4.062857
+      },
+      {
+        "timestamp": 1777953580,
+        "equity": -571818.758316,
+        "delta": -28.0908,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atlanta Braves vs. Seattle Mariners",
+        "usdc": 28.0908
+      },
+      {
+        "timestamp": 1777955560,
+        "equity": -602311.936078,
+        "delta": -1.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Haruka Kaji vs Xinyu Gao",
+        "usdc": 1.12
+      },
+      {
+        "timestamp": 1777956948,
+        "equity": -616079.391739,
+        "delta": -26.962,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Lanlana Tararudee vs Sofya Lansere",
+        "usdc": 26.962
+      },
+      {
+        "timestamp": 1777957792,
+        "equity": -627579.837733,
+        "delta": -0.59376,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Rio Noguchi vs Petr Bar Biryukov",
+        "usdc": 0.59376
+      },
+      {
+        "timestamp": 1777959898,
+        "equity": -630971.97015,
+        "delta": -31.43271,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Mananchaya Sawangkaew vs Heather Watson",
+        "usdc": 31.43271
+      },
+      {
+        "timestamp": 1777961272,
+        "equity": -636780.92903,
+        "delta": -17.064358,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Aoi Ito vs Lizette Cabrera",
+        "usdc": 17.064358
+      },
+      {
+        "timestamp": 1777964014,
+        "equity": -641896.543321,
+        "delta": -3.33366,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Alex Bolt vs Fajing Sun",
+        "usdc": 3.33366
+      },
+      {
+        "timestamp": 1777967034,
+        "equity": -648873.983402,
+        "delta": -0.461549,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Viktoria Morvayova vs Yexin Ma",
+        "usdc": 0.461549
+      },
+      {
+        "timestamp": 1777969392,
+        "equity": -659818.010712,
+        "delta": -15.087719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cavaliers vs. Pistons: O/U 213.5",
+        "usdc": 15.087719
+      },
+      {
+        "timestamp": 1777970796,
+        "equity": -665873.820888,
+        "delta": -5.535,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Ajla Tomljanovic vs Leolia Jeanjean",
+        "usdc": 5.535
+      },
+      {
+        "timestamp": 1777972366,
+        "equity": -672366.167012,
+        "delta": -2.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Hayato Matsuoka vs Maximus Jones",
+        "usdc": 2.16
+      },
+      {
+        "timestamp": 1777972444,
+        "equity": -673087.452495,
+        "delta": -0.395604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Hayato Matsuoka vs Maximus Jones",
+        "usdc": 0.395604
+      },
+      {
+        "timestamp": 1777972658,
+        "equity": -675006.11127,
+        "delta": -584.68538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jiujiang: Viktoria Morvayova vs Yexin Ma",
+        "usdc": 584.68538
+      },
+      {
+        "timestamp": 1777973828,
+        "equity": -685696.355612,
+        "delta": -1.746216,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Cristian Garin vs Jan Choinski",
+        "usdc": 1.746216
+      },
+      {
+        "timestamp": 1777975470,
+        "equity": -704208.358781,
+        "delta": -14.2864,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Barbora Krejcikova vs Elsa Jacquemot",
+        "usdc": 14.2864
+      },
+      {
+        "timestamp": 1777976400,
+        "equity": -715661.46039,
+        "delta": -17.6244,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Istanbul: Danka Kovinic vs Adelina Lachinova",
+        "usdc": 17.6244
+      },
+      {
+        "timestamp": 1777976444,
+        "equity": -715885.377234,
+        "delta": -1.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Yue Yuan vs Simona Waltert",
+        "usdc": 1.75
+      },
+      {
+        "timestamp": 1777977382,
+        "equity": -724079.663028,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Knicks: O/U 215.5",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1777978580,
+        "equity": -731673.989548,
+        "delta": -213.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Yue Yuan vs Simona Waltert",
+        "usdc": 213.9
+      },
+      {
+        "timestamp": 1777979092,
+        "equity": -743024.604378,
+        "delta": -4.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Toby Samuel vs Stefanos Sakellaridis",
+        "usdc": 4.05
+      },
+      {
+        "timestamp": 1777979498,
+        "equity": -748918.164171,
+        "delta": -0.395604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Luca Castelnuovo vs Ognjen Milic",
+        "usdc": 0.395604
+      },
+      {
+        "timestamp": 1777979498,
+        "equity": -748937.746569,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Luca Castelnuovo vs Ognjen Milic",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1777980342,
+        "equity": -750286.749776,
+        "delta": -1.71,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Petra Marcinko vs Oleksandra Oliynykova",
+        "usdc": 1.71
+      },
+      {
+        "timestamp": 1777981150,
+        "equity": -756224.930893,
+        "delta": -1354.48181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Facundo Acosta vs Henry Bernet",
+        "usdc": 1354.48181
+      },
+      {
+        "timestamp": 1777983226,
+        "equity": -760653.424942,
+        "delta": -2.156,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Facundo Acosta vs Henry Bernet",
+        "usdc": 2.156
+      },
+      {
+        "timestamp": 1777984696,
+        "equity": -776384.235856,
+        "delta": -1.2026,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Hugo Dellien vs Jesper de Jong",
+        "usdc": 1.2026
+      },
+      {
+        "timestamp": 1777985298,
+        "equity": -802130.499683,
+        "delta": -4.111111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Anna Bondar vs Qinwen Zheng",
+        "usdc": 4.111111
+      },
+      {
+        "timestamp": 1777986000,
+        "equity": -821180.167236,
+        "delta": -262.1056,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Noemi Basiletti vs Daria Snigur",
+        "usdc": 262.1056
+      },
+      {
+        "timestamp": 1777987350,
+        "equity": -843451.199602,
+        "delta": -0.54,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Istanbul: Maria Sara Popa vs Carole Monnet",
+        "usdc": 0.54
+      },
+      {
+        "timestamp": 1777988236,
+        "equity": -850538.607544,
+        "delta": -39.168,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Facundo Acosta vs Henry Bernet",
+        "usdc": 39.168
+      },
+      {
+        "timestamp": 1777988932,
+        "equity": -857280.240843,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Patrick Kypson vs Titouan Droguet",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1777988932,
+        "equity": -857303.110391,
+        "delta": -0.260869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Patrick Kypson vs Titouan Droguet",
+        "usdc": 0.260869
+      },
+      {
+        "timestamp": 1777989382,
+        "equity": -868078.653382,
+        "delta": -4.434,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Hugo Dellien vs Jesper de Jong",
+        "usdc": 4.434
+      },
+      {
+        "timestamp": 1777990306,
+        "equity": -881066.75231,
+        "delta": -0.301075,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Ryan Seggerman vs Yannick Alexandrescou",
+        "usdc": 0.301075
+      },
+      {
+        "timestamp": 1777990306,
+        "equity": -881082.784539,
+        "delta": -0.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Ryan Seggerman vs Yannick Alexandrescou",
+        "usdc": 0.225806
+      },
+      {
+        "timestamp": 1777990632,
+        "equity": -884848.681206,
+        "delta": -0.9559,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Anastasia Zakharova vs Dayana Yastremska",
+        "usdc": 0.9559
+      },
+      {
+        "timestamp": 1777991186,
+        "equity": -889614.563419,
+        "delta": -19.426666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Hugo Dellien vs Jesper de Jong",
+        "usdc": 19.426666
+      },
+      {
+        "timestamp": 1777991854,
+        "equity": -902734.660861,
+        "delta": -2.030303,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Mayar Sherif vs Tamara Korpatsch",
+        "usdc": 2.030303
+      },
+      {
+        "timestamp": 1777992936,
+        "equity": -912659.033492,
+        "delta": -1.315531,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: McCartney Kessler vs Lucia Bronzetti",
+        "usdc": 1.315531
+      },
+      {
+        "timestamp": 1777994416,
+        "equity": -924278.421812,
+        "delta": -11.534404,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: McCartney Kessler vs Lucia Bronzetti",
+        "usdc": 11.534404
+      },
+      {
+        "timestamp": 1777994978,
+        "equity": -927063.162209,
+        "delta": -0.255319,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Martin Krumich vs Gabriele Piraino",
+        "usdc": 0.255319
+      },
+      {
+        "timestamp": 1777995212,
+        "equity": -931494.064492,
+        "delta": -0.89855,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Zeynep Sonmez vs Jennifer Ruggeri",
+        "usdc": 0.89855
+      },
+      {
+        "timestamp": 1777997074,
+        "equity": -946144.625503,
+        "delta": -14.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. Miami Marlins",
+        "usdc": 14.7
+      },
+      {
+        "timestamp": 1777998052,
+        "equity": -961363.682029,
+        "delta": -311.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Anastasia Zakharova vs Dayana Yastremska",
+        "usdc": 311.347826
+      },
+      {
+        "timestamp": 1777999040,
+        "equity": -987455.831434,
+        "delta": -23.64747,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Martina Trevisan vs Talia Gibson",
+        "usdc": 23.64747
+      },
+      {
+        "timestamp": 1778000042,
+        "equity": -994847.55696,
+        "delta": -0.052,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia, Qualification: Mayar Sherif vs Tamara Korpatsch",
+        "usdc": 0.052
+      },
+      {
+        "timestamp": 1778001902,
+        "equity": -1003860.718253,
+        "delta": -1165.2104,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Justin Engel vs Nikolas Sanchez Izquierdo",
+        "usdc": 1165.2104
+      },
+      {
+        "timestamp": 1778002834,
+        "equity": -1013851.886505,
+        "delta": -4.14647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Justin Engel vs Nikolas Sanchez Izquierdo",
+        "usdc": 4.14647
+      },
+      {
+        "timestamp": 1778004554,
+        "equity": -1020639.758699,
+        "delta": -0.327619,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Ann Li vs Shuai Zhang",
+        "usdc": 0.327619
+      },
+      {
+        "timestamp": 1778006522,
+        "equity": -1034637.35558,
+        "delta": -2.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Justin Engel vs Nikolas Sanchez Izquierdo",
+        "usdc": 2.333333
+      },
+      {
+        "timestamp": 1778009632,
+        "equity": -1049258.852461,
+        "delta": -72.413793,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Athletics vs. Philadelphia Phillies: O/U 8.5",
+        "usdc": 72.413793
+      },
+      {
+        "timestamp": 1778013550,
+        "equity": -1060501.082412,
+        "delta": -824.0022,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Santos: Valerio Aboian vs Pedro Sakamoto",
+        "usdc": 824.0022
+      },
+      {
+        "timestamp": 1778014726,
+        "equity": -1071355.85842,
+        "delta": -5.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Santos: Juan Pablo Varillas vs Ryan Dickerson",
+        "usdc": 5.1
+      },
+      {
+        "timestamp": 1778016092,
+        "equity": -1081185.697211,
+        "delta": -5.3651,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Santos: Juan Pablo Varillas vs Ryan Dickerson",
+        "usdc": 5.3651
+      },
+      {
+        "timestamp": 1778018746,
+        "equity": -1100732.14371,
+        "delta": -4.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Santos: Santiago De La Fuente vs Franco Roncadelli",
+        "usdc": 4.16
+      },
+      {
+        "timestamp": 1778019500,
+        "equity": -1118356.844175,
+        "delta": -1317.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atlanta Braves vs. Seattle Mariners: O/U 7.5",
+        "usdc": 1317.0
+      },
+      {
+        "timestamp": 1778020282,
+        "equity": -1155275.600794,
+        "delta": -152.8702,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Minnesota Twins vs. Washington Nationals: O/U 9.5",
+        "usdc": 152.8702
+      },
+      {
+        "timestamp": 1778021212,
+        "equity": -1182158.370708,
+        "delta": -3.665454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-2.5)",
+        "usdc": 3.665454
+      },
+      {
+        "timestamp": 1778022042,
+        "equity": -1200909.74202,
+        "delta": -0.8215,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Washington Nationals (-1.5)",
+        "usdc": 0.8215
+      },
+      {
+        "timestamp": 1778022156,
+        "equity": -1204720.19214,
+        "delta": -3.976744,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Avalanche (-1.5)",
+        "usdc": 3.976744
+      },
+      {
+        "timestamp": 1778023696,
+        "equity": -1219762.87772,
+        "delta": -4.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texas Rangers vs. New York Yankees: O/U 10.5",
+        "usdc": 4.0
+      },
+      {
+        "timestamp": 1778025138,
+        "equity": -1242147.59822,
+        "delta": -890.7021,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atlanta Braves vs. Seattle Mariners: O/U 7.5",
+        "usdc": 890.7021
+      },
+      {
+        "timestamp": 1778025940,
+        "equity": -1261555.812988,
+        "delta": -395.08,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texas Rangers vs. New York Yankees",
+        "usdc": 395.08
+      },
+      {
+        "timestamp": 1778027048,
+        "equity": -1274622.365772,
+        "delta": -3.2466,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-12.5)",
+        "usdc": 3.2466
+      },
+      {
+        "timestamp": 1778028104,
+        "equity": -1290194.708225,
+        "delta": -648.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 648.0
+      },
+      {
+        "timestamp": 1778028430,
+        "equity": -1304378.954166,
+        "delta": -19.95549,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-14.5)",
+        "usdc": 19.95549
+      },
+      {
+        "timestamp": 1778029032,
+        "equity": -1316459.497584,
+        "delta": -715.93089,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cavaliers vs. Pistons",
+        "usdc": 715.93089
+      },
+      {
+        "timestamp": 1778029916,
+        "equity": -1330420.022479,
+        "delta": -22.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-15.5)",
+        "usdc": 22.12
+      },
+      {
+        "timestamp": 1778030298,
+        "equity": -1336336.238264,
+        "delta": -41.468461,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs",
+        "usdc": 41.468461
+      },
+      {
+        "timestamp": 1778030306,
+        "equity": -1345063.759482,
+        "delta": -1365.094285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs",
+        "usdc": 1365.094285
+      },
+      {
+        "timestamp": 1778031224,
+        "equity": -1359581.386916,
+        "delta": -1.590909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-16.5)",
+        "usdc": 1.590909
+      },
+      {
+        "timestamp": 1778031722,
+        "equity": -1380885.066583,
+        "delta": -0.7502,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs",
+        "usdc": 0.7502
+      },
+      {
+        "timestamp": 1778033560,
+        "equity": -1401346.432864,
+        "delta": -38.80476,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-14.5)",
+        "usdc": 38.80476
+      },
+      {
+        "timestamp": 1778034542,
+        "equity": -1426573.461921,
+        "delta": -1.988372,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Diego Padres vs. San Francisco Giants: O/U 10.5",
+        "usdc": 1.988372
+      },
+      {
+        "timestamp": 1778035366,
+        "equity": -1434935.159984,
+        "delta": -0.639344,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs: O/U 5.5",
+        "usdc": 0.639344
+      },
+      {
+        "timestamp": 1778035832,
+        "equity": -1444738.172162,
+        "delta": -6.574698,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pittsburgh Pirates vs. Arizona Diamondbacks",
+        "usdc": 6.574698
+      },
+      {
+        "timestamp": 1778038320,
+        "equity": -1464899.520429,
+        "delta": -14.215714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "San Diego Padres vs. San Francisco Giants",
+        "usdc": 14.215714
+      },
+      {
+        "timestamp": 1778056404,
+        "equity": -704166.807591,
+        "delta": 2592.018696,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Jiujiang: Haruka Kaji vs Xinyu Gao",
+        "usdc": 2592.018696
+      },
+      {
+        "timestamp": 1778058122,
+        "equity": -615334.587586,
+        "delta": -297.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. Miami Marlins",
+        "usdc": 297.0
+      },
+      {
+        "timestamp": 1778060092,
+        "equity": -628647.106153,
+        "delta": -0.663827,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Damir Dzumhur vs Adrian Mannarino",
+        "usdc": 0.663827
+      },
+      {
+        "timestamp": 1778061384,
+        "equity": -643466.068687,
+        "delta": -0.136363,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Jenson Brooksby vs Sebastian Baez",
+        "usdc": 0.136363
+      },
+      {
+        "timestamp": 1778062326,
+        "equity": -653557.395085,
+        "delta": -0.303,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Stefanos Sakellaridis vs Gustavo Heide",
+        "usdc": 0.303
+      },
+      {
+        "timestamp": 1778062798,
+        "equity": -656913.122725,
+        "delta": -0.197802,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Fabian Marozsan vs Vit Kopriva",
+        "usdc": 0.197802
+      },
+      {
+        "timestamp": 1778062798,
+        "equity": -656933.39743,
+        "delta": -0.197802,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Fabian Marozsan vs Vit Kopriva",
+        "usdc": 0.197802
+      },
+      {
+        "timestamp": 1778063544,
+        "equity": -665425.063338,
+        "delta": -29.6177,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Zhizhen Zhang vs Daniel Altmaier",
+        "usdc": 29.6177
+      },
+      {
+        "timestamp": 1778064686,
+        "equity": -673518.06886,
+        "delta": -11.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marco Trungelliti vs Zachary Svajda",
+        "usdc": 11.333333
+      },
+      {
+        "timestamp": 1778065890,
+        "equity": -684726.869119,
+        "delta": -0.47238,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marco Trungelliti vs Zachary Svajda",
+        "usdc": 0.47238
+      },
+      {
+        "timestamp": 1778067184,
+        "equity": -699430.244217,
+        "delta": -1.5996,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Istanbul: Anastasia Gasanova vs Polina Kudermetova",
+        "usdc": 1.5996
+      },
+      {
+        "timestamp": 1778068488,
+        "equity": -716439.711725,
+        "delta": -10.570952,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Hubert Hurkacz vs Yannick Hanfmann",
+        "usdc": 10.570952
+      },
+      {
+        "timestamp": 1778069330,
+        "equity": -722547.569408,
+        "delta": -124.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Hubert Hurkacz vs Yannick Hanfmann",
+        "usdc": 124.0
+      },
+      {
+        "timestamp": 1778070518,
+        "equity": -731589.225553,
+        "delta": -0.1245,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Viktorija Golubic vs Federica Urgesi",
+        "usdc": 0.1245
+      },
+      {
+        "timestamp": 1778071302,
+        "equity": -733537.874047,
+        "delta": -20.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Alexandre Muller vs Botic van de Zandschulp",
+        "usdc": 20.5
+      },
+      {
+        "timestamp": 1778071834,
+        "equity": -739654.131942,
+        "delta": -204.225352,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marco Trungelliti vs Zachary Svajda",
+        "usdc": 204.225352
+      },
+      {
+        "timestamp": 1778072678,
+        "equity": -730810.859837,
+        "delta": -3.1075,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Hubert Hurkacz vs Yannick Hanfmann",
+        "usdc": 3.1075
+      },
+      {
+        "timestamp": 1778073174,
+        "equity": -738199.972418,
+        "delta": -33.93,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Camilo Ugo Carabelli vs Alexander Shevchenko",
+        "usdc": 33.93
+      },
+      {
+        "timestamp": 1778073278,
+        "equity": -740447.331668,
+        "delta": -0.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Fajing Sun vs Rio Noguchi",
+        "usdc": 0.225806
+      },
+      {
+        "timestamp": 1778073278,
+        "equity": -740466.916817,
+        "delta": -0.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Fajing Sun vs Rio Noguchi",
+        "usdc": 0.225806
+      },
+      {
+        "timestamp": 1778073518,
+        "equity": -744780.044233,
+        "delta": -0.204,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Camilo Ugo Carabelli vs Alexander Shevchenko",
+        "usdc": 0.204
+      },
+      {
+        "timestamp": 1778073718,
+        "equity": -745669.950857,
+        "delta": -0.210526,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Hubert Hurkacz vs Yannick Hanfmann",
+        "usdc": 0.210526
+      },
+      {
+        "timestamp": 1778075204,
+        "equity": -743078.958353,
+        "delta": -138.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texas Rangers vs. New York Yankees",
+        "usdc": 138.04
+      },
+      {
+        "timestamp": 1778076120,
+        "equity": -731603.709471,
+        "delta": -3.517959,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Laura Siegemund vs Sara Bejlek",
+        "usdc": 3.517959
+      },
+      {
+        "timestamp": 1778076246,
+        "equity": -733490.617971,
+        "delta": -0.260869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Martin Krumich vs Clement Chidekh",
+        "usdc": 0.260869
+      },
+      {
+        "timestamp": 1778076840,
+        "equity": -729472.7528,
+        "delta": -0.123595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Jan-Lennard Struff vs Francisco Comesana",
+        "usdc": 0.123595
+      },
+      {
+        "timestamp": 1778077744,
+        "equity": -742212.147104,
+        "delta": -2.2528,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Knicks (-6.5)",
+        "usdc": 2.2528
+      },
+      {
+        "timestamp": 1778078740,
+        "equity": -746518.478076,
+        "delta": -0.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Alastair Gray vs Jie Cui",
+        "usdc": 0.9
+      },
+      {
+        "timestamp": 1778080421,
+        "equity": -743457.66211,
+        "delta": -0.3404,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Yulia Putintseva vs Tereza Valentova",
+        "usdc": 0.3404
+      },
+      {
+        "timestamp": 1778081125,
+        "equity": -762963.739131,
+        "delta": -1246.490648,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Spurs (-9.5)",
+        "usdc": 1246.490648
+      },
+      {
+        "timestamp": 1778082513,
+        "equity": -759393.983667,
+        "delta": -446.9985,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Zalgiris Kaunas vs. Fenerbahce",
+        "usdc": 446.9985
+      },
+      {
+        "timestamp": 1778083232,
+        "equity": -726040.571475,
+        "delta": -0.7905,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Aleksandar Vukic vs Patrick Kypson",
+        "usdc": 0.7905
+      },
+      {
+        "timestamp": 1778083846,
+        "equity": -742421.394851,
+        "delta": -271.588905,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Milwaukee Brewers vs. St. Louis Cardinals: O/U 8.5",
+        "usdc": 271.588905
+      },
+      {
+        "timestamp": 1778084133,
+        "equity": -751789.734794,
+        "delta": -0.222222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Matteo Arnaldi vs Jaume Munar",
+        "usdc": 0.222222
+      },
+      {
+        "timestamp": 1778084268,
+        "equity": -753469.57099,
+        "delta": -0.319148,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Matteo Arnaldi vs Jaume Munar",
+        "usdc": 0.319148
+      },
+      {
+        "timestamp": 1778084774,
+        "equity": -760146.085292,
+        "delta": -0.785714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Knicks: O/U 214.5",
+        "usdc": 0.785714
+      },
+      {
+        "timestamp": 1778085568,
+        "equity": -779614.097429,
+        "delta": -107.692307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Dalma Galfi vs Anastasia Potapova",
+        "usdc": 107.692307
+      },
+      {
+        "timestamp": 1778086207,
+        "equity": -792307.742596,
+        "delta": -0.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Santos: Guido Justo vs Luis Felipe Miguel",
+        "usdc": 0.6
+      },
+      {
+        "timestamp": 1778087351,
+        "equity": -802779.221997,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Knicks (-7.5)",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1778088993,
+        "equity": -817132.010562,
+        "delta": -7.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Knicks (-7.5)",
+        "usdc": 7.38
+      },
+      {
+        "timestamp": 1778089838,
+        "equity": -840567.240214,
+        "delta": -140.22,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Toronto Blue Jays vs. Tampa Bay Rays: O/U 5.5",
+        "usdc": 140.22
+      },
+      {
+        "timestamp": 1778091056,
+        "equity": -848343.526862,
+        "delta": -22.94,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Dalma Galfi vs Anastasia Potapova",
+        "usdc": 22.94
+      },
+      {
+        "timestamp": 1778091863,
+        "equity": -864062.755472,
+        "delta": -154.599333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Dodgers vs. Houston Astros",
+        "usdc": 154.599333
+      },
+      {
+        "timestamp": 1778092388,
+        "equity": -886203.429898,
+        "delta": -0.456,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Dalma Galfi vs Anastasia Potapova",
+        "usdc": 0.456
+      },
+      {
+        "timestamp": 1778093326,
+        "equity": -913151.812388,
+        "delta": -8.513513,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Dodgers vs. Houston Astros",
+        "usdc": 8.513513
+      },
+      {
+        "timestamp": 1778094350,
+        "equity": -911069.044703,
+        "delta": -8.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Los Angeles Dodgers (-2.5)",
+        "usdc": 8.0
+      },
+      {
+        "timestamp": 1778095405,
+        "equity": -896933.839022,
+        "delta": -585.9249,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marton Fucsovics vs Dino Prizmic",
+        "usdc": 585.9249
+      },
+      {
+        "timestamp": 1778096388,
+        "equity": -900463.403552,
+        "delta": -557.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Yulia Starodubtseva vs Simona Waltert",
+        "usdc": 557.2
+      },
+      {
+        "timestamp": 1778096896,
+        "equity": -906517.535951,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marton Fucsovics vs Dino Prizmic",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1778096898,
+        "equity": -906541.964502,
+        "delta": -0.098901,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marton Fucsovics vs Dino Prizmic",
+        "usdc": 0.098901
+      },
+      {
+        "timestamp": 1778098390,
+        "equity": -929063.859576,
+        "delta": -30.747692,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago White Sox vs. Los Angeles Angels: O/U 8.5",
+        "usdc": 30.747692
+      },
+      {
+        "timestamp": 1778099148,
+        "equity": -943199.221579,
+        "delta": -1.077118,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago White Sox vs. Los Angeles Angels: O/U 8.5",
+        "usdc": 1.077118
+      },
+      {
+        "timestamp": 1778100672,
+        "equity": -938234.313744,
+        "delta": -0.572298,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago White Sox vs. Los Angeles Angels",
+        "usdc": 0.572298
+      },
+      {
+        "timestamp": 1778103773,
+        "equity": -870035.81038,
+        "delta": -73.67,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Los Angeles Angels (-5.5)",
+        "usdc": 73.67
+      },
+      {
+        "timestamp": 1778105534,
+        "equity": -879953.276405,
+        "delta": -1.896363,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Atlanta Braves vs. Seattle Mariners: O/U 4.5",
+        "usdc": 1.896363
+      },
+      {
+        "timestamp": 1778107035,
+        "equity": -868857.869309,
+        "delta": -392.857142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. Miami Marlins",
+        "usdc": 392.857142
+      },
+      {
+        "timestamp": 1778108533,
+        "equity": -884882.9744,
+        "delta": -1.86,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Athletics vs. Philadelphia Phillies",
+        "usdc": 1.86
+      },
+      {
+        "timestamp": 1778109484,
+        "equity": -873010.559605,
+        "delta": -0.661935,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers: O/U 8.5",
+        "usdc": 0.661935
+      },
+      {
+        "timestamp": 1778110381,
+        "equity": -898419.555352,
+        "delta": -728.571428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. Miami Marlins",
+        "usdc": 728.571428
+      },
+      {
+        "timestamp": 1778111211,
+        "equity": -845652.34816,
+        "delta": -10.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Kansas City Royals: O/U 7.5",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1778111860,
+        "equity": -851878.996547,
+        "delta": -2.042253,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Minnesota Twins vs. Washington Nationals",
+        "usdc": 2.042253
+      },
+      {
+        "timestamp": 1778112581,
+        "equity": -868210.702572,
+        "delta": -2385.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Kansas City Royals: O/U 6.5",
+        "usdc": 2385.6
+      },
+      {
+        "timestamp": 1778113269,
+        "equity": -885777.343264,
+        "delta": -0.3717,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boston Red Sox vs. Detroit Tigers",
+        "usdc": 0.3717
+      },
+      {
+        "timestamp": 1778114462,
+        "equity": -899616.184452,
+        "delta": -20.34128,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Baltimore Orioles vs. Miami Marlins: O/U 11.5",
+        "usdc": 20.34128
+      },
+      {
+        "timestamp": 1778115176,
+        "equity": -910207.31425,
+        "delta": -2200.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Kansas City Royals: O/U 5.5",
+        "usdc": 2200.0
+      },
+      {
+        "timestamp": 1778116533,
+        "equity": -922311.262294,
+        "delta": -6.111111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Chicago Cubs (-2.5)",
+        "usdc": 6.111111
+      },
+      {
+        "timestamp": 1778118417,
+        "equity": -922765.50432,
+        "delta": -21.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cleveland Guardians vs. Kansas City Royals",
+        "usdc": 21.12
+      },
+      {
+        "timestamp": 1778118955,
+        "equity": -932462.166753,
+        "delta": -75.943636,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cincinnati Reds vs. Chicago Cubs: O/U 7.5",
+        "usdc": 75.943636
+      },
+      {
+        "timestamp": 1778119340,
+        "equity": -934476.393628,
+        "delta": -37.719298,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Spurs: O/U 217.5",
+        "usdc": 37.719298
+      },
+      {
+        "timestamp": 1778119744,
+        "equity": -924095.620824,
+        "delta": -0.485217,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pittsburgh Pirates vs. Arizona Diamondbacks",
+        "usdc": 0.485217
+      },
+      {
+        "timestamp": 1778120482,
+        "equity": -916658.583486,
+        "delta": -9.07198,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Mets vs. Colorado Rockies: O/U 10.5",
+        "usdc": 9.07198
+      },
+      {
+        "timestamp": 1778122385,
+        "equity": -800152.918375,
+        "delta": -4.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pittsburgh Pirates vs. Arizona Diamondbacks",
+        "usdc": 4.8
+      },
+      {
+        "timestamp": 1778130370,
+        "equity": -712851.185729,
+        "delta": 14507.906911,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Timberwolves vs. Spurs: O/U 217.5",
+        "usdc": 14507.906911
+      },
+      {
+        "timestamp": 1778135314,
+        "equity": -668641.024165,
+        "delta": -35.135135,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Adam Walton vs James McCabe",
+        "usdc": 35.135135
+      },
+      {
+        "timestamp": 1778135942,
+        "equity": -669989.530071,
+        "delta": -0.395604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Alafia Ayeni vs Soon-Woo Kwon",
+        "usdc": 0.395604
+      },
+      {
+        "timestamp": 1778135944,
+        "equity": -670009.21137,
+        "delta": -0.296703,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Alafia Ayeni vs Soon-Woo Kwon",
+        "usdc": 0.296703
+      },
+      {
+        "timestamp": 1778139314,
+        "equity": -675914.723954,
+        "delta": -132.18202,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Alafia Ayeni vs Soon-Woo Kwon",
+        "usdc": 132.18202
+      },
+      {
+        "timestamp": 1778142377,
+        "equity": -681370.435305,
+        "delta": -1.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Maximus Jones vs Akira Santillan",
+        "usdc": 1.55
+      },
+      {
+        "timestamp": 1778145159,
+        "equity": -686869.524643,
+        "delta": -15.06909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Dalibor Svrcina vs Miomir Kecmanovic",
+        "usdc": 15.06909
+      },
+      {
+        "timestamp": 1778146295,
+        "equity": -697317.333776,
+        "delta": -20.061428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Cristina Bucsa vs Qinwen Zheng",
+        "usdc": 20.061428
+      },
+      {
+        "timestamp": 1778146459,
+        "equity": -697433.38369,
+        "delta": -0.250704,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Maximus Jones vs Akira Santillan",
+        "usdc": 0.250704
+      },
+      {
+        "timestamp": 1778146589,
+        "equity": -698622.173675,
+        "delta": -11.836315,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Istanbul: Linda Fruhvirtova vs Laura Pigossi",
+        "usdc": 11.836315
+      },
+      {
+        "timestamp": 1778147761,
+        "equity": -705190.396396,
+        "delta": -0.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wuxi: Maximus Jones vs Akira Santillan",
+        "usdc": 0.7
+      },
+      {
+        "timestamp": 1778148684,
+        "equity": -723542.361565,
+        "delta": -0.260869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Zizou Bergs vs Terence Atmane",
+        "usdc": 0.260869
+      },
+      {
+        "timestamp": 1778148684,
+        "equity": -723559.665898,
+        "delta": -0.260869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Zizou Bergs vs Terence Atmane",
+        "usdc": 0.260869
+      },
+      {
+        "timestamp": 1778148796,
+        "equity": -728384.785825,
+        "delta": -2.608695,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Zizou Bergs vs Terence Atmane",
+        "usdc": 2.608695
+      },
+      {
+        "timestamp": 1778149345,
+        "equity": -733335.557215,
+        "delta": -24.445714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Cristina Bucsa vs Qinwen Zheng",
+        "usdc": 24.445714
+      },
+      {
+        "timestamp": 1778150297,
+        "equity": -738749.266858,
+        "delta": -2.5228,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Istanbul: Linda Fruhvirtova vs Laura Pigossi",
+        "usdc": 2.5228
+      },
+      {
+        "timestamp": 1778151382,
+        "equity": -750776.964327,
+        "delta": -39.857142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marton Fucsovics vs Dino Prizmic",
+        "usdc": 39.857142
+      },
+      {
+        "timestamp": 1778152061,
+        "equity": -761206.902714,
+        "delta": -451.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marcos Giron vs Marin Cilic",
+        "usdc": 451.2
+      },
+      {
+        "timestamp": 1778152556,
+        "equity": -771267.737023,
+        "delta": -0.651,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Juan Carlos Prado vs Ryan Seggerman",
+        "usdc": 0.651
+      },
+      {
+        "timestamp": 1778153745,
+        "equity": -765098.987401,
+        "delta": -22.85814,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Marton Fucsovics vs Dino Prizmic",
+        "usdc": 22.85814
+      },
+      {
+        "timestamp": 1778154404,
+        "equity": -767644.170217,
+        "delta": -8.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Federico Cina vs Alexander Blockx",
+        "usdc": 8.25
+      },
+      {
+        "timestamp": 1778154796,
+        "equity": -791656.642121,
+        "delta": -0.173913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Juan Carlos Prado vs Ryan Seggerman",
+        "usdc": 0.173913
+      },
+      {
+        "timestamp": 1778154796,
+        "equity": -791677.124714,
+        "delta": -0.103478,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Francavilla: Juan Carlos Prado vs Ryan Seggerman",
+        "usdc": 0.103478
+      },
+      {
+        "timestamp": 1778155407,
+        "equity": -809039.832093,
+        "delta": -192.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Jacob Fearnley vs Giovanni Mpetshi Perricard",
+        "usdc": 192.85
+      },
+      {
+        "timestamp": 1778156583,
+        "equity": -820056.727285,
+        "delta": -1.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Roman Andres Burruchaga vs Mattia Bellucci",
+        "usdc": 1.25
+      },
+      {
+        "timestamp": 1778157318,
+        "equity": -826491.525102,
+        "delta": -2.75913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Internazionali BNL d'Italia: Jasmine Paolini vs Leolia Jeanjean",
+        "usdc": 2.75913
+      }
+    ]
+  },
+  "market_making": {
+    "score": 45,
+    "label": "likely_market_maker",
+    "signals": [
+      "Trades both outcomes in 69% of markets (inventory/MM signature)",
+      "High-frequency cadence (median gap 10s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.6864,
+      "fast_roundtrip_rate": 0.0,
+      "spread_capture_rate": 0.0,
+      "size_cv": 2.7663,
+      "median_gap_seconds": 10,
+      "outcome_counts": {
+        "Andrea Vavassori": 3,
+        "Ignacio Buse": 57,
+        "Yue Yuan": 58,
+        "Linda Klimovicova": 18,
+        "Coco Gauff": 76,
+        "Pol Martin Tiffon": 12,
+        "Benjamin Bonzi": 16,
+        "Arthur Fils": 30,
+        "Tomas Etcheverry": 46,
+        "Leolia Jeanjean": 108,
+        "Jannik Sinner": 23,
+        "Sebastian Ofner": 9,
+        "Elena Pridankina": 17,
+        "Fiona Ferro": 28,
+        "Vit Kopriva": 140,
+        "Cameron Norrie": 67,
+        "Andrey Rublev": 45,
+        "Nick Hardt": 120,
+        "Caty McNally": 142,
+        "Tomas Machac": 61,
+        "Jack Kennedy": 43,
+        "Victoria Mboko": 30,
+        "Kilian Feldbausch": 32,
+        "Rafael Jodar": 42,
+        "Mert Alkaya": 88,
+        "Alex de Minaur": 32,
+        "Hamish Stewart": 41,
+        "Clement Tabur": 15,
+        "Thiago Agustin Tirante": 183,
+        "Yanki Erel": 5,
+        "Gauthier Onclin": 36,
+        "Andres Andrade": 5,
+        "Tommy Paul": 117,
+        "Katie Boulter": 44,
+        "Jessica Pegula": 14,
+        "Mitchell Krueger": 23,
+        "Daniel Galan": 33,
+        "Under": 1475,
+        "Cincinnati Reds": 285,
+        "Over": 1400,
+        "Detroit Tigers": 169,
+        "Toronto Blue Jays": 202,
+        "New York Mets": 136,
+        "Boston Red Sox": 230,
+        "Colorado Rockies": 149,
+        "76ers": 247,
+        "Atlanta Braves": 193,
+        "Celtics": 85,
+        "Minnesota Twins": 140,
+        "Cleveland Guardians": 234,
+        "Tampa Bay Rays": 239,
+        "Philadelphia Phillies": 210,
+        "Baltimore Orioles": 193,
+        "Chicago White Sox": 187,
+        "Pittsburgh Pirates": 133,
+        "Kansas City Royals": 96,
+        "Milwaukee Brewers": 69,
+        "New York Yankees": 175,
+        "Texas Rangers": 122,
+        "Houston Astros": 135,
+        "Athletics": 147,
+        "Seattle Mariners": 195,
+        "St. Louis Cardinals": 203,
+        "Los Angeles Angels": 209,
+        "Washington Nationals": 212,
+        "Leandro Riedi": 23,
+        "Yu-Hsiou Hsu": 25,
+        "San Francisco Giants": 112,
+        "Los Angeles Dodgers": 263,
+        "Miami Marlins": 196,
+        "Chicago Cubs": 343,
+        "August Holmgren": 36,
+        "Spurs": 232,
+        "Trail Blazers": 102,
+        "Soon-Woo Kwon": 88,
+        "Anna Bondar": 71,
+        "Pablo Carreno Busta": 34,
+        "Belinda Bencic": 90,
+        "Alejandro Davidovich Fokina": 30,
+        "Diana Shnaider": 21,
+        "Adam Walton": 79,
+        "Yannick Hanfmann": 63,
+        "Karen Khachanov": 145,
+        "Laura Samson": 2,
+        "Francisco Cerundolo": 44,
+        "Whitney Osuigwe": 21,
+        "Polina Kudermetova": 67,
+        "Iva Jovic": 59,
+        "Leylah Fernandez": 64,
+        "Dalma Galfi": 91,
+        "Martin Damm": 38,
+        "Jaume Munar": 136,
+        "Luciano Darderi": 33,
+        "Juan Manuel Cerundolo": 21,
+        "Mirra Andreeva": 71,
+        "Casper Ruud": 61,
+        "Jakub Mensik": 164,
+        "Brandon Nakashima": 41,
+        "Dalibor Svrcina": 66,
+        "Jacopo Vasami": 26,
+        "Terence Atmane": 53,
+        "Ugo Humbert": 128,
+        "Iga Swiatek": 22,
+        "Alexander Blockx": 155,
+        "Ann Li": 90,
+        "Felix Auger-Aliassime": 84,
+        "Vilius Gaubas": 31,
+        "Alexander Zverev": 51,
+        "Mariano Navone": 35,
+        "Andrea Guerrieri": 90,
+        "Flavio Cobolli": 16,
+        "Learner Tien": 26,
+        "Adolfo Vallejo": 41,
+        "Hailey Baptiste": 121,
+        "Jasmine Paolini": 56,
+        "Camilo Ugo Carabelli": 145,
+        "Pistons": 212,
+        "Magic": 151,
+        "Daniil Medvedev": 35,
+        "Fabian Marozsan": 167,
+        "Nicolai Budkov Kjaer": 60,
+        "Daniel Merida Aguilar": 161,
+        "Denis Shapovalov": 107,
+        "Corentin Moutet": 13,
+        "Jaqueline Cristian": 12,
+        "Aryna Sabalenka": 83,
+        "Calvin Hemery": 8,
+        "Suns": 125,
+        "Thunder": 224,
+        "Naomi Osaka": 231,
+        "Anhelina Kalinina": 52,
+        "Stefanos Tsitsipas": 285,
+        "Alexander Bublik": 23,
+        "Nishesh Basavareddy": 14,
+        "Hawks": 29,
+        "Knicks": 172,
+        "San Diego Padres": 194,
+        "Arizona Diamondbacks": 166,
+        "Timberwolves": 291,
+        "Nuggets": 116,
+        "Sorana Cirstea": 62,
+        "Katerina Siniakova": 52,
+        "Jiri Lehecka": 9,
+        "Zeynep Sonmez": 73,
+        "Solana Sierra": 67,
+        "Alex Michelsen": 9,
+        "Elise Mertens": 33,
+        "Karolina Pliskova": 85,
+        "Tallon Griekspoor": 38,
+        "Dino Prizmic": 52,
+        "Lorenzo Musetti": 22,
+        "Marta Kostyuk": 81,
+        "Emilio Nava": 51,
+        "Cavaliers": 159,
+        "Raptors": 61,
+        "Qinwen Zheng": 212,
+        "Arthur Rinderknech": 1,
+        "Elena Rybakina": 57,
+        "Jelena Ostapenko": 15,
+        "Anastasia Potapova": 130,
+        "Joao Fonseca": 5,
+        "Katarzyna Kawa": 2,
+        "Jiajing Lu": 9,
+        "Sijia Wei": 4,
+        "Xiaodi You": 4,
+        "Jessica Pieri": 14,
+        "Sarah Rakotomanga": 20,
+        "Lilli Tagger": 54,
+        "Alevtina Ibragimova": 20,
+        "Han Shi": 25,
+        "Sloane Stephens": 5,
+        "Tereza Valentova": 30,
+        "Sebastian Sorger": 19,
+        "Moyuka Uchijima": 21,
+        "Ksenia Efremova": 33,
+        "Marco Cecchinato": 2,
+        "Tomas Barrios": 34,
+        "Daniel Michalski": 3,
+        "Max Schoenhaus": 35,
+        "Lucrezia Stefanini": 20,
+        "Tamara Korpatsch": 112,
+        "Lulu Sun": 33,
+        "Zsombor Piros": 7,
+        "Max Houkes": 8,
+        "Justin Engel": 21,
+        "Linda Noskova": 49,
+        "Beatriz Haddad Maia": 43,
+        "Andrea Lazaro Garcia": 25,
+        "Clara Burel": 10,
+        "Darwin Blanch": 19,
+        "Laslo Djere": 9,
+        "Diego Dedura-Palomero": 7,
+        "Viktorija Golubic": 11,
+        "Oksana Selekhmeteva": 19,
+        "Jay Clarke": 9,
+        "Jurij Rodionov": 35,
+        "George Loffhagen": 5,
+        "Tom Gentzsch": 16,
+        "Billy Harris": 6,
+        "Rebecca Sramkova": 2,
+        "Storm Hunter": 29,
+        "Ashlyn Krueger": 12,
+        "Anastasia Zakharova": 57,
+        "Marina Bassols Ribera": 13,
+        "Sasikumar Mukund": 30,
+        "Cesar Bouchelaghem": 17,
+        "Maks Kasnikowski": 2,
+        "Digvijaypratap Singh": 25,
+        "Paul Jubb": 18,
+        "Karan Singh": 29,
+        "Karim Bennani": 19,
+        "Varvara Panshina": 30,
+        "Xinxin Yao": 40,
+        "Sara Saito": 21,
+        "Dalila Spiteri": 27,
+        "Zhibek Kulambayeva": 5,
+        "Xiyu Wang": 3,
+        "Anastasia Zolotareva": 34,
+        "Chengyiyi Yuan": 24,
+        "Despina Papamichail": 28,
+        "Rada Zolotareva": 12,
+        "Dalila Jakupovic": 13,
+        "Hanyu Guo": 9,
+        "Sandro Kopp": 7,
+        "Daniel Cukierman": 2,
+        "Matthew William Donald": 19,
+        "Nikoloz Basilashvili": 93,
+        "Yufei Ren": 2,
+        "Nicolas Mejia": 25,
+        "David Jorda Sanchis": 5,
+        "Daniel Siniakov": 5,
+        "Polona Hercog": 9,
+        "Kamilla Rakhimova": 37,
+        "Xinyu Gao": 57,
+        "Rudolf Molleker": 4,
+        "Yidi Yang": 13,
+        "Caroline Werner": 2,
+        "Claire Liu": 7,
+        "Sofia Costoulas": 28,
+        "Ayla Aksu": 19,
+        "Alice Rame": 6,
+        "Amandine Monnot": 3,
+        "Carlota Martinez Cirez": 8,
+        "Dan Added": 98,
+        "Jan Choinski": 42,
+        "Cezar Cretu": 19,
+        "Alexander Shevchenko": 33,
+        "Alina Korneeva": 48,
+        "Joel Schwaerzler": 38,
+        "Roman Safiullin": 3,
+        "Stefano Travaglia": 1,
+        "Titouan Droguet": 166,
+        "Jan Jermar": 2,
+        "Jessica Bouzas Maneiro": 32,
+        "Garrett Johns": 1,
+        "Miguel Damas": 12,
+        "Laura Pigossi": 65,
+        "Celine Naef": 2,
+        "Patrick Kypson": 85,
+        "Talia Gibson": 78,
+        "Felix Gill": 25,
+        "Matteo Berrettini": 45,
+        "Emiliana Arango": 2,
+        "Daria Kasatkina": 25,
+        "Varvara Lepchenko": 12,
+        "Daniel Jade": 11,
+        "Norbert Gombos": 20,
+        "Frederico Ferreira Silva": 17,
+        "Martin Landaluce": 30,
+        "Monaco": 21,
+        "Carlos Sanchez Jover": 110,
+        "Jaime Faria": 26,
+        "Francesco Maestrelli": 12,
+        "Xinyu Wang": 12,
+        "Kaitlin Quevedo": 13,
+        "Hynek Barton": 3,
+        "Jonas Forejtek": 5,
+        "Fenerbahce": 28,
+        "Zachary Svajda": 32,
+        "Hubert Hurkacz": 142,
+        "Thiago Seyboth Wild": 1,
+        "Ioannis Xilas": 2,
+        "Michael Geerts": 4,
+        "Florent Bax": 2,
+        "Flyers": 1,
+        "Ducks": 2,
+        "Lakers": 137,
+        "Haruka Kaji": 26,
+        "Hayu Kinoshita": 5,
+        "Mei Yamaguchi": 27,
+        "Kristiana Sidorova": 10,
+        "Real Madrid": 18,
+        "Petr Bar Biryukov": 49,
+        "Rio Noguchi": 153,
+        "Elena Micic": 6,
+        "Wild": 47,
+        "Sofya Lansere": 34,
+        "Kaichi Uchida": 7,
+        "Lanlana Tararudee": 39,
+        "Tung-Lin Wu": 21,
+        "Alex Bolt": 47,
+        "Heather Watson": 8,
+        "Fajing Sun": 33,
+        "Mananchaya Sawangkaew": 8,
+        "Lizette Cabrera": 18,
+        "Aoi Ito": 15,
+        "James McCabe": 65,
+        "Viktoria Morvayova": 45,
+        "Hapoel Tel Aviv": 21,
+        "Yexin Ma": 34,
+        "Alafia Ayeni": 150,
+        "Maximus Jones": 141,
+        "Kyoka Okamura": 6,
+        "Carol Zhao": 14,
+        "Maria Timofeeva": 9,
+        "Anastasia Gasanova": 21,
+        "Bernard Tomic": 10,
+        "Hayato Matsuoka": 127,
+        "Ajla Tomljanovic": 94,
+        "Sinja Kraus": 35,
+        "Keegan Smith": 15,
+        "Julia Grabher": 12,
+        "Simona Waltert": 42,
+        "Noma Noha Akugue": 2,
+        "Nikola Bartunkova": 25,
+        "Elsa Jacquemot": 34,
+        "Francisco Comesana": 48,
+        "Gabriela Ruse": 10,
+        "Barbora Krejcikova": 7,
+        "Olympiacos B.C.": 4,
+        "Ognjen Milic": 15,
+        "Jiaqi Wang": 8,
+        "Cristian Garin": 4,
+        "Alex Barrena": 9,
+        "Lilian Marmousez": 60,
+        "Akira Santillan": 19,
+        "Coleman Wong": 4,
+        "Danka Kovinic": 9,
+        "Adelina Lachinova": 31,
+        "Stefanos Sakellaridis": 36,
+        "Luca Castelnuovo": 117,
+        "Berfu Cengiz": 32,
+        "Oleksandra Oliynykova": 5,
+        "Xinran Sun": 61,
+        "Toby Samuel": 3,
+        "Zdenek Kolar": 13,
+        "Lina Gjorcheska": 10,
+        "Petra Marcinko": 31,
+        "Bianca Andreescu": 53,
+        "Noemi Basiletti": 60,
+        "Daria Snigur": 18,
+        "Facundo Acosta": 7,
+        "Jesper de Jong": 55,
+        "Daniele Rapagnetta": 3,
+        "Federico Bondioli": 2,
+        "Henry Bernet": 3,
+        "Sofia Kenin": 12,
+        "Aleksandar Kovacevic": 9,
+        "Jacob Fearnley": 48,
+        "Hugo Dellien": 50,
+        "Ryan Seggerman": 164,
+        "Linda Fruhvirtova": 64,
+        "Maria Sara Popa": 26,
+        "Veronika Erjavec": 14,
+        "Carole Monnet": 26,
+        "Harry Wendelken": 24,
+        "Antonia Ruzic": 35,
+        "Federica Urgesi": 14,
+        "Lucia Cortez Llorca": 14,
+        "Dayana Yastremska": 28,
+        "Tereza Martincova": 15,
+        "Lucia Bronzetti": 31,
+        "Yannick Alexandrescou": 112,
+        "McCartney Kessler": 26,
+        "Andrea Pellegrino": 41,
+        "Pablo Llamas Ruiz": 4,
+        "Rebeka Masarova": 32,
+        "Gabriele Piraino": 114,
+        "Mayar Sherif": 67,
+        "Jil Teichmann": 12,
+        "Victoria Jimenez Kasintseva": 23,
+        "Taylor Townsend": 33,
+        "Martin Krumich": 6,
+        "Francesca Jones": 10,
+        "Ekaterine Gorgodze": 6,
+        "Jennifer Ruggeri": 29,
+        "Katie Volynets": 6,
+        "Rinky Hijikata": 14,
+        "Nikolas Sanchez Izquierdo": 34,
+        "Martina Trevisan": 32,
+        "Shuai Zhang": 50,
+        "Miguel Tobon": 26,
+        "Eduardo Ribeiro": 25,
+        "Chun-Hsin Tseng": 6,
+        "Santiago De La Fuente": 23,
+        "Franco Roncadelli": 31,
+        "Valerio Aboian": 65,
+        "Pedro Sakamoto": 28,
+        "Avalanche": 2,
+        "Juan Pablo Varillas": 25,
+        "Ryan Dickerson": 63,
+        "Panathinaikos": 16,
+        "Jose Pereira": 12,
+        "Lorenzo Joaquin Rodriguez": 7,
+        "Gustavo Albieri": 2,
+        "Joao Eduardo Schiessl": 1,
+        "En-Shuo Liang": 6,
+        "Guiomar Maristany": 5,
+        "Panna Udvardy": 47,
+        "Zhizhen Zhang": 44,
+        "Gustavo Heide": 14,
+        "Valencia": 8,
+        "Jenson Brooksby": 48,
+        "Magdalena Frech": 36,
+        "Alexandra Eala": 18,
+        "Tatjana Maria": 16,
+        "Damir Dzumhur": 4,
+        "Buvaysar Gadamauri": 12,
+        "Sebastian Baez": 24,
+        "Adrian Mannarino": 12,
+        "Taylah Preston": 4,
+        "Magda Linette": 22,
+        "Daniel Altmaier": 25,
+        "Juan Carlos Prado": 13,
+        "Marco Trungelliti": 34,
+        "Lois Boisson": 27,
+        "Zalgiris Kaunas": 32,
+        "Lisa Pigato": 10,
+        "Tyra Caterina Grant": 13,
+        "Botic van de Zandschulp": 5,
+        "Alexandre Muller": 49,
+        "Guy Den Ouden": 10,
+        "Sara Bejlek": 34,
+        "Laura Siegemund": 38,
+        "Nuria Brancaccio": 8,
+        "Janice Tjen": 8,
+        "Peyton Stearns": 6,
+        "Nicolas Zanellato": 3,
+        "Clement Chidekh": 88,
+        "Matteo Arnaldi": 70,
+        "Maria Sakkari": 29,
+        "Donna Vekic": 7,
+        "Jan-Lennard Struff": 8,
+        "Bruno Fernandez": 15,
+        "Yulia Putintseva": 11,
+        "Jie Cui": 19,
+        "Murkel Dellien": 2,
+        "Aleksandar Vukic": 57,
+        "Fermin Tenti": 2,
+        "Alastair Gray": 6,
+        "Mateus Cardoso Alves": 8,
+        "Hernan Casanova": 28,
+        "Eva Lys": 45,
+        "Nuno Borges": 2,
+        "Guido Justo": 5,
+        "Luis Felipe Miguel": 15,
+        "Matheus Pucinelli de Almeida": 3,
+        "Alejandro Tabilo": 8,
+        "Yulia Starodubtseva": 18,
+        "Elisabetta Cocciaretto": 13,
+        "Marton Fucsovics": 157,
+        "Giovanni Mpetshi Perricard": 31,
+        "Luis Guto Miguel": 4,
+        "Wilson Leite": 7,
+        "Yunchaokete Bu": 6,
+        "Miomir Kecmanovic": 11,
+        "Alexei Popyrin": 14,
+        "Zizou Bergs": 171,
+        "Cristina Bucsa": 6,
+        "Mia Ristic": 5,
+        "Federico Cina": 104,
+        "Marin Cilic": 12,
+        "Marcos Giron": 27,
+        "Roman Andres Burruchaga": 1,
+        "Mattia Bellucci": 4
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 1740,
+      "1": 1475,
+      "2": 1083,
+      "3": 766,
+      "4": 607,
+      "5": 316,
+      "6": 383,
+      "7": 208,
+      "8": 299,
+      "9": 1214,
+      "10": 1554,
+      "11": 1541,
+      "12": 1302,
+      "13": 1236,
+      "14": 1483,
+      "15": 1217,
+      "16": 1272,
+      "17": 1295,
+      "18": 1483,
+      "19": 1081,
+      "20": 1409,
+      "21": 639,
+      "22": 916,
+      "23": 1651
+    },
+    "dow_utc": {
+      "0": 2667,
+      "1": 8261,
+      "2": 5009,
+      "3": 2514,
+      "4": 1286,
+      "5": 3683,
+      "6": 2750
+    },
+    "peak_hours": [
+      0,
+      23,
+      10,
+      11,
+      14
+    ],
+    "peak_dows": [
+      1,
+      2,
+      5
+    ]
+  },
+  "sizing": {
+    "n": 26170,
+    "mean_usdc": 195.7531,
+    "median_usdc": 8.1682,
+    "p10_usdc": 0.2967,
+    "p90_usdc": 488.5396,
+    "max_usdc": 9369.92,
+    "mean_shares": 401.4378,
+    "median_shares": 20.0
+  },
+  "categories": {
+    "pnl": {
+      "sports_totals": 1509899.5075,
+      "sports_match": 721337.2204
+    },
+    "counts": {
+      "sports_match": 24187,
+      "sports_totals": 18437
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Madrid Open: Anastasia Potapova vs Elena Rybakina",
+      "pnl": 30407.9841,
+      "buy_usdc": 14458.1752,
+      "sell_usdc": 0.0,
+      "n_buys": 62,
+      "n_sells": 0,
+      "hold_seconds": 6606,
+      "avg_buy": 0.3322,
+      "avg_sell": null
+    },
+    {
+      "title": "Madrid Open: Alexander Bublik vs Stefanos Tsitsipas",
+      "pnl": 27567.4892,
+      "buy_usdc": 60871.5114,
+      "sell_usdc": 0.0,
+      "n_buys": 96,
+      "n_sells": 0,
+      "hold_seconds": 4104,
+      "avg_buy": 0.8092,
+      "avg_sell": null
+    },
+    {
+      "title": "Madrid Open: Thiago Agustin Tirante vs Tommy Paul",
+      "pnl": 24774.1799,
+      "buy_usdc": 65721.6306,
+      "sell_usdc": 0.0,
+      "n_buys": 177,
+      "n_sells": 0,
+      "hold_seconds": 5774,
+      "avg_buy": 0.6688,
+      "avg_sell": null
+    },
+    {
+      "title": "76ers vs. Knicks",
+      "pnl": 21400.7297,
+      "buy_usdc": 13351.3385,
+      "sell_usdc": 0.0,
+      "n_buys": 22,
+      "n_sells": 0,
+      "hold_seconds": 5776,
+      "avg_buy": 0.6944,
+      "avg_sell": null
+    },
+    {
+      "title": "Madrid Open: Jessica Pegula vs Marta Kostyuk",
+      "pnl": 18618.9544,
+      "buy_usdc": 41704.1449,
+      "sell_usdc": 0.0,
+      "n_buys": 57,
+      "n_sells": 0,
+      "hold_seconds": 3708,
+      "avg_buy": 0.8933,
+      "avg_sell": null
+    },
+    {
+      "title": "Athletics vs. Philadelphia Phillies: O/U 8.5",
+      "pnl": 18085.1755,
+      "buy_usdc": 25587.9707,
+      "sell_usdc": 0.0,
+      "n_buys": 20,
+      "n_sells": 0,
+      "hold_seconds": 38976,
+      "avg_buy": 0.5465,
+      "avg_sell": null
+    },
+    {
+      "title": "Milwaukee Brewers vs. St. Louis Cardinals: O/U 8.5",
+      "pnl": 17054.0213,
+      "buy_usdc": 20720.5884,
+      "sell_usdc": 0.0,
+      "n_buys": 16,
+      "n_sells": 0,
+      "hold_seconds": 7762,
+      "avg_buy": 0.5478,
+      "avg_sell": null
+    },
+    {
+      "title": "Cincinnati Reds vs. Chicago Cubs: O/U 8.5",
+      "pnl": 16281.3804,
+      "buy_usdc": 1424.6665,
+      "sell_usdc": 0.0,
+      "n_buys": 5,
+      "n_sells": 0,
+      "hold_seconds": 157,
+      "avg_buy": 0.5008,
+      "avg_sell": null
+    },
+    {
+      "title": "Athletics vs. Philadelphia Phillies: O/U 9.5",
+      "pnl": 15666.677,
+      "buy_usdc": 16713.5518,
+      "sell_usdc": 0.0,
+      "n_buys": 12,
+      "n_sells": 0,
+      "hold_seconds": 19274,
+      "avg_buy": 0.4616,
+      "avg_sell": null
+    },
+    {
+      "title": "Toronto Blue Jays vs. Tampa Bay Rays",
+      "pnl": 12770.7978,
+      "buy_usdc": 5049.0632,
+      "sell_usdc": 0.0,
+      "n_buys": 29,
+      "n_sells": 0,
+      "hold_seconds": 5496,
+      "avg_buy": 0.5636,
+      "avg_sell": null
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "76ers vs. Knicks: O/U 211.5",
+      "pnl": -91965.5553,
+      "buy_usdc": 5515.3417,
+      "sell_usdc": 0.0,
+      "n_buys": 27,
+      "n_sells": 0,
+      "hold_seconds": 5950
+    },
+    {
+      "title": "Baltimore Orioles vs. New York Yankees",
+      "pnl": -70897.1196,
+      "buy_usdc": 14563.5851,
+      "sell_usdc": 0.0,
+      "n_buys": 32,
+      "n_sells": 0,
+      "hold_seconds": 7404
+    },
+    {
+      "title": "Madrid Open: Stefanos Tsitsipas vs Casper Ruud",
+      "pnl": -69098.3357,
+      "buy_usdc": 82297.0998,
+      "sell_usdc": 0.0,
+      "n_buys": 221,
+      "n_sells": 0,
+      "hold_seconds": 5220
+    },
+    {
+      "title": "76ers vs. Knicks: O/U 212.5",
+      "pnl": -59416.6306,
+      "buy_usdc": 6154.0327,
+      "sell_usdc": 0.0,
+      "n_buys": 9,
+      "n_sells": 0,
+      "hold_seconds": 6470
+    },
+    {
+      "title": "New York Mets vs. Colorado Rockies: O/U 10.5",
+      "pnl": -57746.3791,
+      "buy_usdc": 8714.9555,
+      "sell_usdc": 0.0,
+      "n_buys": 12,
+      "n_sells": 0,
+      "hold_seconds": 5373
+    },
+    {
+      "title": "Madrid Open: Aryna Sabalenka vs Naomi Osaka",
+      "pnl": -54557.3887,
+      "buy_usdc": 65700.5769,
+      "sell_usdc": 0.0,
+      "n_buys": 293,
+      "n_sells": 0,
+      "hold_seconds": 7736
+    },
+    {
+      "title": "Internazionali BNL d'Italia: Federico Cina vs Alexander Blockx",
+      "pnl": -23006.3331,
+      "buy_usdc": 27251.3319,
+      "sell_usdc": 0.0,
+      "n_buys": 107,
+      "n_sells": 0,
+      "hold_seconds": 5317
+    },
+    {
+      "title": "Madrid Open: Daniil Medvedev vs Fabian Marozsan",
+      "pnl": -21487.4082,
+      "buy_usdc": 10570.1649,
+      "sell_usdc": 0.0,
+      "n_buys": 69,
+      "n_sells": 0,
+      "hold_seconds": 6776
+    },
+    {
+      "title": "Madrid Open: Terence Atmane vs Alexander Zverev",
+      "pnl": -19436.4383,
+      "buy_usdc": 14107.7411,
+      "sell_usdc": 0.0,
+      "n_buys": 39,
+      "n_sells": 0,
+      "hold_seconds": 5560
+    },
+    {
+      "title": "Colorado Rockies vs. New York Mets",
+      "pnl": -16346.1116,
+      "buy_usdc": 25739.19,
+      "sell_usdc": 0.0,
+      "n_buys": 56,
+      "n_sells": 0,
+      "hold_seconds": 8990
+    }
+  ],
+  "strategy_vignettes": []
+}
