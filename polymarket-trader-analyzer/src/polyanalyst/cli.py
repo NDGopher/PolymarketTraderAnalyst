@@ -145,17 +145,40 @@ def compare_cmd(
     console.print(f"\nSaved: {result['path']}")
 
 
-@app.command("sync")
-def sync_cmd(
+@app.command("autopsy")
+def autopsy_cmd(
     trader: str = typer.Argument(...),
     full: bool = typer.Option(False, "--full"),
     data_dir: Optional[Path] = typer.Option(None, "--data-dir"),
+    skip_maker_taker: bool = typer.Option(False, "--skip-maker-taker"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ) -> None:
-    """Only sync history (no analysis)."""
+    """Full-depth autopsy (polika72 standard): sync, validate, reports, samples."""
     _setup_logging(verbose)
-    result = _app(data_dir).sync.sync(trader, force_full=full)
-    console.print(json.dumps(result, indent=2))
+    from .autopsy_runner import run_full_autopsy
+
+    result = run_full_autopsy(
+        _app(data_dir),
+        trader,
+        force_full=full,
+        classify_maker_taker=not skip_maker_taker,
+    )
+    s = result["stats"]
+    v = result["validation"]
+    console.print(
+        f"[bold]{result['username']}[/bold] autopsy complete — "
+        f"identity={s.get('identity')} trades={s['counts']['trades']:,} "
+        f"cashflow=${s['pnl']['cashflow_realized']:,.2f} validation={'OK' if v.get('ok') else 'REVIEW'}"
+    )
+    console.print(f"Reports: {result['paths']['samples']}")
+
+
+@app.command("ui")
+def ui_cmd(port: int = typer.Option(8787, "--port")) -> None:
+    """Launch local research UI."""
+    from .ui import app as flask_app
+
+    flask_app.run(host="127.0.0.1", port=port, debug=False)
 
 
 if __name__ == "__main__":

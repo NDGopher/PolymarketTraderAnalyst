@@ -184,7 +184,7 @@ class PolymarketClient:
         start_ts: int = 1,
         end_ts: Optional[int] = None,
         include_deposits: bool = True,
-        window_seconds: int = 6 * 3600,
+        window_seconds: int = 24 * 3600,
     ) -> list[dict]:
         end = end_ts or int(time.time()) + 60
         # Discover true oldest if start is default
@@ -231,7 +231,8 @@ class PolymarketClient:
         wallet: str,
         start_ts: int = 1,
         end_ts: Optional[int] = None,
-        window_seconds: int = 6 * 3600,
+        window_seconds: int = 24 * 3600,
+        taker_only: bool = False,
     ) -> list[dict]:
         end = end_ts or int(time.time()) + 60
         if start_ts <= 1:
@@ -260,7 +261,7 @@ class PolymarketClient:
                     "offset": offset,
                     "start": ws,
                     "end": we,
-                    "takerOnly": "false",
+                    "takerOnly": "true" if taker_only else "false",
                 },
             ) or []
 

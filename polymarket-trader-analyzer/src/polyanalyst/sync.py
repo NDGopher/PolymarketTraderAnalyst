@@ -22,7 +22,7 @@ class SyncService:
         self.store.upsert_trader(resolved["wallet"], resolved["username"], resolved.get("profile") or {})
         return resolved
 
-    def full_sync(self, wallet: str, username: str = "") -> dict[str, Any]:
+    def full_sync(self, wallet: str, username: str = "", derive_trades_from_activity: bool = True) -> dict[str, Any]:
         wallet = wallet.lower()
         log.info("Full sync starting for %s", wallet)
         t0 = time.time()
@@ -31,10 +31,39 @@ class SyncService:
         log.info("Fetched %s activity rows", len(activity))
         self.store.upsert_activity(wallet, activity)
 
-        # Prefer deriving trades from activity TRADE rows for consistency,
-        # but also pull /trades to capture maker fills activity may miss.
-        trades = self.client.fetch_trades(wallet, start_ts=1)
-        log.info("Fetched %s trade rows", len(trades))
+        if derive_trades_from_activity:
+            trades = []
+            for a in activity:
+                if (a.get("type") or "").upper() != "TRADE":
+                    continue
+                # Normalize activity TRADE row into trade-shaped dict
+                trades.append(
+                    {
+                        "proxyWallet": a.get("proxyWallet"),
+                        "side": a.get("side"),
+                        "asset": a.get("asset"),
+                        "conditionId": a.get("conditionId"),
+                        "size": a.get("size"),
+                        "price": a.get("price"),
+                        "timestamp": a.get("timestamp"),
+                        "title": a.get("title"),
+                        "slug": a.get("slug"),
+                        "icon": a.get("icon"),
+                        "eventSlug": a.get("eventSlug"),
+                        "outcome": a.get("outcome"),
+                        "outcomeIndex": a.get("outcomeIndex"),
+                        "name": a.get("name"),
+                        "pseudonym": a.get("pseudonym"),
+                        "bio": a.get("bio"),
+                        "profileImage": a.get("profileImage"),
+                        "profileImageOptimized": a.get("profileImageOptimized"),
+                        "transactionHash": a.get("transactionHash"),
+                    }
+                )
+            log.info("Derived %s trades from activity", len(trades))
+        else:
+            trades = self.client.fetch_trades(wallet, start_ts=1)
+            log.info("Fetched %s trade rows", len(trades))
         self.store.upsert_trades(wallet, trades)
 
         closed = self.client.fetch_closed_positions(wallet)
@@ -56,7 +85,7 @@ class SyncService:
             last_incremental_at=time.time(),
             activity_count=counts["activity"],
             trade_count=counts["trades"],
-            notes=f"full_sync_seconds={time.time()-t0:.1f}",
+            notes=f"full_sync_seconds={time.time()-t0:.1f}; derive_trades={derive_trades_from_activity}",
         )
         return {
             "wallet": wallet,
@@ -76,16 +105,40 @@ class SyncService:
 
         t0 = time.time()
         start_act = max(1, int(state["last_activity_ts"]) - overlap_seconds)
-        start_tr = max(1, int(state.get("last_trade_ts") or state["last_activity_ts"]) - overlap_seconds)
         log.info("Incremental sync for %s from activity_ts>=%s", wallet, start_act)
 
         activity = self.client.fetch_activity(wallet, start_ts=start_act)
         self.store.upsert_activity(wallet, activity)
 
-        trades = self.client.fetch_trades(wallet, start_ts=start_tr)
+        trades = []
+        for a in activity:
+            if (a.get("type") or "").upper() != "TRADE":
+                continue
+            trades.append(
+                {
+                    "proxyWallet": a.get("proxyWallet"),
+                    "side": a.get("side"),
+                    "asset": a.get("asset"),
+                    "conditionId": a.get("conditionId"),
+                    "size": a.get("size"),
+                    "price": a.get("price"),
+                    "timestamp": a.get("timestamp"),
+                    "title": a.get("title"),
+                    "slug": a.get("slug"),
+                    "icon": a.get("icon"),
+                    "eventSlug": a.get("eventSlug"),
+                    "outcome": a.get("outcome"),
+                    "outcomeIndex": a.get("outcomeIndex"),
+                    "name": a.get("name"),
+                    "pseudonym": a.get("pseudonym"),
+                    "bio": a.get("bio"),
+                    "profileImage": a.get("profileImage"),
+                    "profileImageOptimized": a.get("profileImageOptimized"),
+                    "transactionHash": a.get("transactionHash"),
+                }
+            )
         self.store.upsert_trades(wallet, trades)
 
-        # Positions snapshots are small — always refresh
         closed = self.client.fetch_closed_positions(wallet)
         self.store.replace_closed_positions(wallet, closed)
         opened = self.client.fetch_positions(wallet)
