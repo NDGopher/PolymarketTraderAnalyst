@@ -1,0 +1,6636 @@
+{
+  "n_episodes": 1580,
+  "n_winners": 845,
+  "n_losers": 210,
+  "n_flats": 525,
+  "entry_styles": [
+    [
+      "directional_buy_above_mid",
+      560
+    ],
+    [
+      "directional_buy_sub_mid",
+      541
+    ],
+    [
+      "directional_buy_near_mid",
+      300
+    ],
+    [
+      "directional_buy_expensive_favorite",
+      87
+    ],
+    [
+      "directional_buy_cheap_tail",
+      76
+    ],
+    [
+      "two_sided_inventory_near_mid",
+      8
+    ],
+    [
+      "two_sided_inventory_sub_mid",
+      6
+    ],
+    [
+      "two_sided_inventory_above_mid",
+      2
+    ]
+  ],
+  "exit_styles": [
+    [
+      "hold_to_resolution_or_redeem",
+      1576
+    ],
+    [
+      "adverse_exit_sell_below_buy",
+      3
+    ],
+    [
+      "mixed_roundtrip",
+      1
+    ]
+  ],
+  "management_styles": [
+    [
+      "single_clip",
+      744
+    ],
+    [
+      "scalp_sub_15m",
+      674
+    ],
+    [
+      "multi_hour_position",
+      91
+    ],
+    [
+      "intraday_swing",
+      71
+    ]
+  ],
+  "sequence_patterns": [
+    [
+      "BUY->BUY",
+      969
+    ],
+    [
+      "single_fill",
+      610
+    ],
+    [
+      "BUY->SELL",
+      1
+    ]
+  ],
+  "winners": {
+    "n": 845,
+    "pnl": 7560464.4026,
+    "avg_pnl": 8947.2952,
+    "median_hold_s": 9,
+    "mean_hold_s": 1768,
+    "median_spread": -0.0342,
+    "mean_spread": -0.0307,
+    "both_sides_rate": 0.0118,
+    "median_ticket_usdc": 35.1481,
+    "avg_fills": 10.07,
+    "scale_in_rate": 0.6225,
+    "scale_out_rate": 0.0,
+    "flatten_before_res_rate": 1.0,
+    "top_entry_styles": [
+      [
+        "directional_buy_above_mid",
+        384
+      ],
+      [
+        "directional_buy_sub_mid",
+        210
+      ],
+      [
+        "directional_buy_near_mid",
+        151
+      ],
+      [
+        "directional_buy_expensive_favorite",
+        68
+      ],
+      [
+        "directional_buy_cheap_tail",
+        22
+      ],
+      [
+        "two_sided_inventory_near_mid",
+        5
+      ],
+      [
+        "two_sided_inventory_sub_mid",
+        4
+      ],
+      [
+        "two_sided_inventory_above_mid",
+        1
+      ]
+    ],
+    "top_mgmt_styles": [
+      [
+        "single_clip",
+        396
+      ],
+      [
+        "scalp_sub_15m",
+        352
+      ],
+      [
+        "multi_hour_position",
+        54
+      ],
+      [
+        "intraday_swing",
+        43
+      ]
+    ],
+    "top_exit_styles": [
+      [
+        "hold_to_resolution_or_redeem",
+        841
+      ],
+      [
+        "adverse_exit_sell_below_buy",
+        3
+      ],
+      [
+        "mixed_roundtrip",
+        1
+      ]
+    ]
+  },
+  "losers": {
+    "n": 210,
+    "pnl": -3799001.3208,
+    "avg_pnl": -18090.4825,
+    "median_hold_s": 53,
+    "mean_hold_s": 2886,
+    "median_spread": null,
+    "mean_spread": null,
+    "both_sides_rate": 0.0286,
+    "median_ticket_usdc": 18.8508,
+    "avg_fills": 20.71,
+    "scale_in_rate": 0.7524,
+    "scale_out_rate": 0.0,
+    "flatten_before_res_rate": 1.0,
+    "top_entry_styles": [
+      [
+        "directional_buy_sub_mid",
+        94
+      ],
+      [
+        "directional_buy_above_mid",
+        55
+      ],
+      [
+        "directional_buy_near_mid",
+        33
+      ],
+      [
+        "directional_buy_cheap_tail",
+        17
+      ],
+      [
+        "directional_buy_expensive_favorite",
+        5
+      ],
+      [
+        "two_sided_inventory_near_mid",
+        3
+      ],
+      [
+        "two_sided_inventory_sub_mid",
+        2
+      ],
+      [
+        "two_sided_inventory_above_mid",
+        1
+      ]
+    ],
+    "top_mgmt_styles": [
+      [
+        "scalp_sub_15m",
+        104
+      ],
+      [
+        "single_clip",
+        69
+      ],
+      [
+        "multi_hour_position",
+        24
+      ],
+      [
+        "intraday_swing",
+        13
+      ]
+    ],
+    "top_exit_styles": [
+      [
+        "hold_to_resolution_or_redeem",
+        210
+      ]
+    ]
+  },
+  "hold_edge": {
+    "<5m": {
+      "n": 1379,
+      "pnl": 3022086.8724,
+      "avg": 2191.5061,
+      "win_rate": 0.5257
+    },
+    "5-30m": {
+      "n": 38,
+      "pnl": 63882.1618,
+      "avg": 1681.1095,
+      "win_rate": 0.6053
+    },
+    "30m-2h": {
+      "n": 61,
+      "pnl": 196132.7364,
+      "avg": 3215.2908,
+      "win_rate": 0.541
+    },
+    "2-12h": {
+      "n": 99,
+      "pnl": 398861.9813,
+      "avg": 4028.9089,
+      "win_rate": 0.6162
+    },
+    "12h+": {
+      "n": 3,
+      "pnl": 80499.3299,
+      "avg": 26833.11,
+      "win_rate": 1.0
+    }
+  },
+  "entry_price_bands": {
+    "0.00-0.20": {
+      "n": 29,
+      "pnl": 68889.327,
+      "avg": 2375.494
+    },
+    "0.20-0.40": {
+      "n": 382,
+      "pnl": 1219824.1622,
+      "avg": 3193.257
+    },
+    "0.40-0.60": {
+      "n": 664,
+      "pnl": 994426.7562,
+      "avg": 1497.6307
+    },
+    "0.60-0.80": {
+      "n": 476,
+      "pnl": 1416045.4695,
+      "avg": 2974.8854
+    },
+    "0.80-1.00": {
+      "n": 29,
+      "pnl": 62277.3669,
+      "avg": 2147.4954
+    }
+  },
+  "outcome_pnl": {
+    "SK Gaming": 261339.0011,
+    "Dplus KIA": 238098.3161,
+    "Team Yandex": 235504.4423,
+    "Movistar KOI": 186135.0173,
+    "Team Liquid": 172912.4727,
+    "G2 Esports": 167039.6815,
+    "LGD Gaming": 150862.0075,
+    "Karmine Corp": 145621.6811,
+    "JD Gaming": 145300.8716,
+    "MOUZ": 129445.3588,
+    "Bilibili Gaming": 129412.463,
+    "Aurora": 108271.4854,
+    "Hanwha Life Esports": 104399.3938,
+    "BNK FEARX": 98163.6738,
+    "Over": 92756.4136,
+    "Weibo Gaming": 91491.5262,
+    "Spirit": 85688.2039,
+    "BetBoom Team": 85369.2256,
+    "Aurora Gaming": 82121.8093,
+    "DN Freecs": 75410.1994,
+    "Kiwoom DRX": 74697.2766,
+    "HANJIN BRION": 74474.0232,
+    "DRX": 70678.0169,
+    "Mirra Andreeva": 66406.2591,
+    "Heroic": 63856.1628,
+    "Gen.G": 58385.9969,
+    "Maja Chwalinska": 56548.0951,
+    "Anyone's Legend": 55806.5731,
+    "Xtreme Gaming": 53834.7763,
+    "MIBR": 47130.5414,
+    "Jakub Mensik": 47048.8253,
+    "OKSavingsBank BRION": 44785.5888,
+    "Leviat\u00e1n Esports": 44494.5101,
+    "GIANTX": 44258.4432,
+    "Nigma Galaxy": 37960.4575,
+    "Ninjas in Pyjamas": 37215.4977,
+    "LOUD": 35731.1677,
+    "FURIA Esports": 32044.3207,
+    "Nongshim Esports Academy": 31573.6797,
+    "Alexander Zverev": 28550.0152,
+    "9z": 27628.6359,
+    "FlyQuest": 27273.4756,
+    "LOS": 25833.1984,
+    "Matteo Arnaldi": 24830.85,
+    "Liquid": 24564.0465,
+    "magic": 24020.2893,
+    "Rafael Jodar": 23981.0473,
+    "TheMongolz": 22808.755,
+    "Vitality": 22482.834,
+    "G2": 21917.135,
+    "LYON": 21607.0971,
+    "REKONIX": 20406.7864,
+    "Wild": 20000.0,
+    "Flyers": 20000.0,
+    "Gentle Mates": 19982.5721,
+    "Jil Teichmann": 18829.1732,
+    "Jack Draper": 18357.9007,
+    "Raphael Collignon": 18249.252,
+    "Anna Blinkova": 18185.361,
+    "T1 Academy": 17836.0254,
+    "Pablo Carreno Busta": 17335.6615,
+    "All Gamers": 16566.0554,
+    "Aleksandar Vukic": 16519.5049,
+    "paiN Gaming": 15879.7267,
+    "ThunderTalk Gaming": 15708.5527,
+    "Marie Bouzkova": 15119.7363,
+    "Top Esports": 14562.8644,
+    "Diana Shnaider": 14057.7348,
+    "Devils": 13964.24,
+    "B8": 13887.5629,
+    "Legacy": 13318.551,
+    "Clara Tauson": 12391.5404,
+    "Team WE": 12315.936,
+    "Roman Andres Burruchaga": 12174.0824,
+    "Shifters": 12152.161,
+    "Paper Rex": 11544.0777,
+    "No": 11274.1922,
+    "FULL SENSE": 10226.659,
+    "Alliance": 10125.053,
+    "Joblife": 10121.7485,
+    "Sinners": 9947.4626,
+    "Tundra Esports": 9928.7012,
+    "Chicago Cubs": 9445.067,
+    "Alexander Bublik": 9161.3647,
+    "Mayar Sherif": 8898.2671,
+    "Mackenzie McDonald": 8154.3876,
+    "Vici Gaming": 7850.0195,
+    "DRX Challengers": 7755.0419,
+    "Sentinels": 7619.8319,
+    "NRG": 7558.2417,
+    "EDward Gaming": 7550.6298,
+    "Team Spirit": 7478.6283,
+    "Sho Shimabukuro": 7453.2156,
+    "Global Esports": 7376.2637,
+    "Alycia Parks": 7287.6169,
+    "BIG": 7196.7324,
+    "Viktorija Golubic": 7126.5334,
+    "Coleman Wong": 7021.9815,
+    "Matteo Berrettini": 6964.812,
+    "FOKUS": 6729.2301,
+    "Stefanos Tsitsipas": 6648.8229,
+    "Sara Bejlek": 6485.3482,
+    "FaZe": 6427.785,
+    "Team Heretics": 6342.3263,
+    "FUT Esports": 6338.8001,
+    "Juan Manuel Cerundolo": 6066.0617,
+    "Nongshim RedForce": 6029.5033,
+    "Nuno Borges": 5795.8145,
+    "PlayTime": 5526.8638,
+    "DN SOOPers Challengers": 5385.7407,
+    "TEAM VISION": 5227.2,
+    "Enterprise Esports": 5227.0135,
+    "TYLOO": 4992.0614,
+    "Darja Vidmanova": 4761.501,
+    "Team Envy": 4755.135,
+    "Luciano Darderi": 4667.2372,
+    "100 Thieves": 3988.9404,
+    "Yakutou Brothers": 3772.0,
+    "Caty McNally": 3749.16,
+    "Rex Regum Qeon": 3739.8257,
+    "Linda Noskova": 3722.6369,
+    "Harriet Dart": 3716.1256,
+    "MIBR LOS": 3561.9088,
+    "T1": 3437.4047,
+    "Mark Lajal": 3434.6447,
+    "Daria Snigur": 3186.6418,
+    "Monte": 3029.6808,
+    "Yellow Submarine": 2877.3614,
+    "XLG Gaming": 2682.7895,
+    "Alejandro Davidovich Fokina": 2571.2235,
+    "Sharper Esport": 2481.0692,
+    "Cloud9": 2403.142,
+    "Alex Michelsen": 2179.413,
+    "Adrian Mannarino": 2058.3824,
+    "Mariano Navone": 2028.4636,
+    "Corentin Moutet": 1983.2381,
+    "Elias Ymer": 1708.9124,
+    "Oh My God": 1578.7938,
+    "Coco Gauff": 1565.301,
+    "1win": 1436.4332,
+    "Amanda Anisimova": 1337.725,
+    "Bushido Wildcats": 1056.2762,
+    "Flavio Cobolli": 1039.0318,
+    "Solary": 628.2807,
+    "Jaqueline Cristian": 517.6087,
+    "TLN Pirates": 128.5942,
+    "ZYB Esport": 41.4477,
+    "Eintracht Spandau": 10.0085,
+    "Fire Flux Esports": 2.4875,
+    "Lorenzo Sonego": -323.9845,
+    "DN SOOPers": -513.0876,
+    "Astralis": -1600.9457,
+    "South America Rejects": -1772.977,
+    "Tommy Paul": -2288.4083,
+    "BoomBoys": -4146.7396,
+    "James Duckworth": -4627.5199,
+    "KT Rolster": -5217.3858,
+    "Kamil Majchrzak": -5323.7731,
+    "Luca Van Assche": -6307.7431,
+    "Karmine Corp Blue": -6522.0789,
+    "Natus Vincere": -6575.7537,
+    "Sharks": -6934.64,
+    "Execration": -7867.684,
+    "Invictus Gaming": -8687.7891,
+    "Galions": -9514.5916,
+    "BC.Game Esports": -11249.9747,
+    "Lynn Vision": -12504.6225,
+    "Hubert Hurkacz": -12855.8828,
+    "Virtus.pro": -14767.4814,
+    "Fnatic": -14999.8818,
+    "Darja Semenistaja": -15341.3506,
+    "OG": -15856.2668,
+    "Shopify Rebellion": -17251.4586,
+    "Jaime Faria": -17532.5714,
+    "Under": -20600.3524,
+    "Team Falcons": -22345.9981,
+    "Nongshim Red Force": -23945.1302,
+    "Vivo Keyd Stars": -26059.0057,
+    "GamerLegion": -26921.0964,
+    "PARIVISION": -27004.7299,
+    "Ultra Prime": -28326.5693,
+    "3DMAX": -33699.8564,
+    "Team Vitality": -36378.3641,
+    "Los Ratones": -44187.4874,
+    "paiN": -46394.4785,
+    "Yes": -81935.1814,
+    "Passion UA": -84487.8396,
+    "FURIA": -108426.627,
+    "LNG Esports": -110232.8397,
+    "Magic": -126706.5129
+  },
+  "outcome_counts": {
+    "SK Gaming": 5,
+    "MOUZ": 32,
+    "Dplus KIA": 39,
+    "DRX": 5,
+    "Over": 2,
+    "Jakub Mensik": 1,
+    "Mirra Andreeva": 2,
+    "Cloud9": 7,
+    "OKSavingsBank BRION": 1,
+    "Team Liquid": 47,
+    "Spirit": 8,
+    "Team Yandex": 31,
+    "DRX Challengers": 5,
+    "Liquid": 2,
+    "Maja Chwalinska": 4,
+    "JD Gaming": 25,
+    "Weibo Gaming": 8,
+    "Alexander Zverev": 2,
+    "Anyone's Legend": 12,
+    "LGD Gaming": 17,
+    "Nongshim Red Force": 11,
+    "Movistar KOI": 22,
+    "magic": 6,
+    "G2 Esports": 40,
+    "No": 2,
+    "Heroic": 10,
+    "Bilibili Gaming": 28,
+    "BetBoom Team": 24,
+    "DN Freecs": 6,
+    "Matteo Arnaldi": 1,
+    "Karmine Corp": 32,
+    "Aurora": 23,
+    "Tundra Esports": 22,
+    "Xtreme Gaming": 20,
+    "Ninjas in Pyjamas": 12,
+    "Wild": 1,
+    "Flyers": 1,
+    "Aurora Gaming": 13,
+    "LNG Esports": 10,
+    "Jil Teichmann": 1,
+    "G2": 8,
+    "Jack Draper": 1,
+    "Nongshim Esports Academy": 2,
+    "Raphael Collignon": 1,
+    "Astralis": 9,
+    "MIBR": 4,
+    "Pablo Carreno Busta": 1,
+    "Kiwoom DRX": 9,
+    "South America Rejects": 2,
+    "FURIA": 8,
+    "Aleksandar Vukic": 1,
+    "LOUD": 5,
+    "Team Falcons": 23,
+    "PARIVISION": 15,
+    "FlyQuest": 2,
+    "BNK FEARX": 14,
+    "HANJIN BRION": 8,
+    "FUT Esports": 3,
+    "GIANTX": 7,
+    "Marie Bouzkova": 1,
+    "Hanwha Life Esports": 17,
+    "Anna Blinkova": 2,
+    "Diana Shnaider": 1,
+    "Top Esports": 11,
+    "Devils": 1,
+    "Natus Vincere": 30,
+    "T1": 17,
+    "REKONIX": 3,
+    "KT Rolster": 3,
+    "T1 Academy": 2,
+    "OG": 7,
+    "Nigma Galaxy": 3,
+    "Team WE": 5,
+    "GamerLegion": 12,
+    "Gentle Mates": 3,
+    "DN SOOPers": 7,
+    "LYON": 2,
+    "Team Spirit": 14,
+    "Rafael Jodar": 3,
+    "Vici Gaming": 12,
+    "PlayTime": 6,
+    "Fnatic": 7,
+    "Vitality": 4,
+    "9z": 4,
+    "Clara Tauson": 2,
+    "Team Heretics": 8,
+    "TheMongolz": 4,
+    "Shifters": 4,
+    "FULL SENSE": 1,
+    "FURIA Esports": 7,
+    "Roman Andres Burruchaga": 2,
+    "B8": 8,
+    "Leviat\u00e1n Esports": 8,
+    "Sinners": 1,
+    "Gen.G": 22,
+    "LOS": 9,
+    "Chicago Cubs": 1,
+    "All Gamers": 3,
+    "Alexander Bublik": 1,
+    "Alliance": 2,
+    "ThunderTalk Gaming": 2,
+    "Mayar Sherif": 1,
+    "Oh My God": 4,
+    "Invictus Gaming": 9,
+    "Mackenzie McDonald": 1,
+    "Sentinels": 3,
+    "Legacy": 5,
+    "Sho Shimabukuro": 1,
+    "Team Vitality": 11,
+    "Global Esports": 1,
+    "Alycia Parks": 1,
+    "Paper Rex": 2,
+    "BIG": 1,
+    "Viktorija Golubic": 1,
+    "Coleman Wong": 1,
+    "Matteo Berrettini": 1,
+    "FOKUS": 1,
+    "Stefanos Tsitsipas": 1,
+    "Sara Bejlek": 1,
+    "FaZe": 1,
+    "Luca Van Assche": 2,
+    "paiN": 4,
+    "BC.Game Esports": 1,
+    "Juan Manuel Cerundolo": 1,
+    "Nongshim RedForce": 2,
+    "Nuno Borges": 1,
+    "BoomBoys": 2,
+    "paiN Gaming": 5,
+    "Joblife": 3,
+    "Jaime Faria": 2,
+    "NRG": 6,
+    "DN SOOPers Challengers": 1,
+    "TEAM VISION": 1,
+    "Under": 3,
+    "Darja Vidmanova": 1,
+    "Team Envy": 1,
+    "Luciano Darderi": 1,
+    "100 Thieves": 1,
+    "EDward Gaming": 3,
+    "Yakutou Brothers": 1,
+    "Caty McNally": 1,
+    "Rex Regum Qeon": 1,
+    "Linda Noskova": 1,
+    "Harriet Dart": 1,
+    "Shopify Rebellion": 2,
+    "MIBR LOS": 1,
+    "TYLOO": 2,
+    "Mark Lajal": 1,
+    "Daria Snigur": 1,
+    "Monte": 1,
+    "Enterprise Esports": 2,
+    "Yellow Submarine": 1,
+    "XLG Gaming": 1,
+    "Alejandro Davidovich Fokina": 1,
+    "Sharper Esport": 1,
+    "Alex Michelsen": 1,
+    "Adrian Mannarino": 1,
+    "Mariano Navone": 1,
+    "Corentin Moutet": 1,
+    "Elias Ymer": 1,
+    "Coco Gauff": 1,
+    "1win": 1,
+    "Amanda Anisimova": 1,
+    "Flavio Cobolli": 1,
+    "Bushido Wildcats": 2,
+    "Solary": 1,
+    "Jaqueline Cristian": 1,
+    "Galions": 2,
+    "TLN Pirates": 1,
+    "ZYB Esport": 1,
+    "Eintracht Spandau": 1,
+    "Fire Flux Esports": 1,
+    "Lorenzo Sonego": 1,
+    "Tommy Paul": 1,
+    "James Duckworth": 1,
+    "Kamil Majchrzak": 1,
+    "Karmine Corp Blue": 1,
+    "Sharks": 1,
+    "Execration": 1,
+    "3DMAX": 2,
+    "Lynn Vision": 1,
+    "Hubert Hurkacz": 1,
+    "Virtus.pro": 1,
+    "Darja Semenistaja": 1,
+    "Vivo Keyd Stars": 1,
+    "Ultra Prime": 1,
+    "Los Ratones": 1,
+    "Yes": 1,
+    "Passion UA": 1,
+    "Magic": 1
+  },
+  "ou_markets": {
+    "n": 7,
+    "pnl": 72156.0612,
+    "avg_pnl": 10308.0087,
+    "median_hold_s": 96,
+    "mean_hold_s": 2572,
+    "median_spread": null,
+    "mean_spread": null,
+    "both_sides_rate": 0.0,
+    "median_ticket_usdc": 39.4654,
+    "avg_fills": 12.29,
+    "scale_in_rate": 0.5714,
+    "scale_out_rate": 0.0,
+    "flatten_before_res_rate": 0.7143,
+    "top_entry_styles": [
+      [
+        "directional_buy_near_mid",
+        7
+      ]
+    ],
+    "top_mgmt_styles": [
+      [
+        "single_clip",
+        4
+      ],
+      [
+        "intraday_swing",
+        2
+      ],
+      [
+        "scalp_sub_15m",
+        1
+      ]
+    ],
+    "top_exit_styles": [
+      [
+        "hold_to_resolution_or_redeem",
+        7
+      ]
+    ]
+  },
+  "match_markets": {
+    "n": 1572,
+    "pnl": 3816013.5335,
+    "avg_pnl": 2427.4895,
+    "median_hold_s": 10,
+    "mean_hold_s": 1497,
+    "median_spread": -0.0342,
+    "mean_spread": -0.0307,
+    "both_sides_rate": 0.0102,
+    "median_ticket_usdc": 29.67,
+    "avg_fills": 10.38,
+    "scale_in_rate": 0.6132,
+    "scale_out_rate": 0.0,
+    "flatten_before_res_rate": 0.6673,
+    "top_entry_styles": [
+      [
+        "directional_buy_above_mid",
+        560
+      ],
+      [
+        "directional_buy_sub_mid",
+        541
+      ],
+      [
+        "directional_buy_near_mid",
+        292
+      ],
+      [
+        "directional_buy_expensive_favorite",
+        87
+      ],
+      [
+        "directional_buy_cheap_tail",
+        76
+      ],
+      [
+        "two_sided_inventory_near_mid",
+        8
+      ],
+      [
+        "two_sided_inventory_sub_mid",
+        6
+      ],
+      [
+        "two_sided_inventory_above_mid",
+        2
+      ]
+    ],
+    "top_mgmt_styles": [
+      [
+        "single_clip",
+        740
+      ],
+      [
+        "scalp_sub_15m",
+        673
+      ],
+      [
+        "multi_hour_position",
+        90
+      ],
+      [
+        "intraday_swing",
+        69
+      ]
+    ],
+    "top_exit_styles": [
+      [
+        "hold_to_resolution_or_redeem",
+        1568
+      ],
+      [
+        "adverse_exit_sell_below_buy",
+        3
+      ],
+      [
+        "mixed_roundtrip",
+        1
+      ]
+    ]
+  },
+  "rebates": {
+    "maker": 5659.4296,
+    "taker": 12275.9924,
+    "maker_events": 106,
+    "taker_events": 65
+  },
+  "chase_vs_fade": {
+    "chase_up": 47,
+    "fade_down": 16
+  },
+  "what_works": [
+    "Both-sides inventory on 1.2% of winning markets (losers 2.9%)",
+    "Hold bucket <5m: avg PnL $2191.51 on 1379 markets (WR 53%)",
+    "Hold bucket 5-30m: avg PnL $1681.11 on 38 markets (WR 61%)",
+    "Hold bucket 30m-2h: avg PnL $3215.29 on 61 markets (WR 54%)",
+    "Hold bucket 2-12h: avg PnL $4028.91 on 99 markets (WR 62%)",
+    "Entry band 0.20-0.40: avg $3193.26 across 382 markets",
+    "Entry band 0.40-0.60: avg $1497.63 across 664 markets",
+    "Entry band 0.60-0.80: avg $2974.89 across 476 markets",
+    "Buy-ladder behavior: fade-into-weakness markets=16, chase-up markets=47"
+  ],
+  "what_fails": [],
+  "bot_parameters": {
+    "preferred_entry_price_median": 0.57,
+    "preferred_entry_price_p25_p75": [
+      0.4374,
+      0.6689
+    ],
+    "target_spread_median": -0.0342,
+    "target_spread_p75": -0.0101,
+    "max_hold_seconds_p75": 73,
+    "median_hold_seconds": 9,
+    "clip_size_usdc_median": 35.1481,
+    "clip_size_usdc_p90": 2878.2108,
+    "both_sides_on_winners_rate": 0.0118,
+    "require_exit_above_entry": true,
+    "flatten_before_resolution": true,
+    "maker_bias": false
+  },
+  "open_risk": {
+    "n": 526,
+    "cash_pnl": -2851007.4951,
+    "current_value": 0.0,
+    "redeemable": 526
+  },
+  "mm_examples": [],
+  "scalp_examples": [],
+  "failure_examples": [
+    {
+      "title": "Spread: Pistons (-8.5)",
+      "condition_id": "0x8474b581c4b70bfd1c319136f4f2b704aea61327fe5973f381782af720c9861f",
+      "realized_pnl": -126706.5129,
+      "hold_seconds": 14298,
+      "n_fills": 192,
+      "n_buys": 192,
+      "n_sells": 0,
+      "buy_usdc": 77472.3029,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.4964,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_near_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "multi_hour_position",
+      "scale_ins": 191,
+      "scale_outs": 0,
+      "max_inventory_shares": 156065.92,
+      "first_iso": "2026-04-22T11:00:28+00:00",
+      "last_iso": "2026-04-22T14:58:46+00:00",
+      "end_date": "2026-04-22",
+      "seconds_to_resolution": 32473,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.4901562884203125,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.490000033540625,
+        "close_avg_sell": null,
+        "open_n": 64,
+        "middle_n": 64,
+        "close_n": 64
+      },
+      "outcomes_traded": [
+        "Magic"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1776855628,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 100000.0,
+          "price": 0.5,
+          "usdc": 50000.0,
+          "pos": {
+            "Magic": 100000.0
+          },
+          "net_shares": 100000.0,
+          "gross_inventory": 100000.0
+        },
+        {
+          "ts": 1776856248,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 103055.8823
+          },
+          "net_shares": 103055.8823,
+          "gross_inventory": 103055.8823
+        },
+        {
+          "ts": 1776856924,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 111802.9435
+          },
+          "net_shares": 111802.9435,
+          "gross_inventory": 111802.9435
+        },
+        {
+          "ts": 1776857592,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 9.8039,
+          "price": 0.49,
+          "usdc": 4.8039,
+          "pos": {
+            "Magic": 112089.7076
+          },
+          "net_shares": 112089.7076,
+          "gross_inventory": 112089.7076
+        },
+        {
+          "ts": 1776858772,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 112270.8408
+          },
+          "net_shares": 112270.8408,
+          "gross_inventory": 112270.8408
+        },
+        {
+          "ts": 1776859466,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 112476.8604
+          },
+          "net_shares": 112476.8604,
+          "gross_inventory": 112476.8604
+        },
+        {
+          "ts": 1776859536,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 11.0,
+          "price": 0.49,
+          "usdc": 5.39,
+          "pos": {
+            "Magic": 113189.8515
+          },
+          "net_shares": 113189.8515,
+          "gross_inventory": 113189.8515
+        },
+        {
+          "ts": 1776859654,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 113254.4751
+          },
+          "net_shares": 113254.4751,
+          "gross_inventory": 113254.4751
+        },
+        {
+          "ts": 1776859768,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 54.3,
+          "price": 0.49,
+          "usdc": 26.607,
+          "pos": {
+            "Magic": 113320.5398
+          },
+          "net_shares": 113320.5398,
+          "gross_inventory": 113320.5398
+        },
+        {
+          "ts": 1776860196,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 260.2157,
+          "price": 0.49,
+          "usdc": 127.5057,
+          "pos": {
+            "Magic": 113646.4502
+          },
+          "net_shares": 113646.4502,
+          "gross_inventory": 113646.4502
+        },
+        {
+          "ts": 1776860780,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 114022.649
+          },
+          "net_shares": 114022.649,
+          "gross_inventory": 114022.649
+        },
+        {
+          "ts": 1776861182,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 19.14,
+          "price": 0.49,
+          "usdc": 9.3786,
+          "pos": {
+            "Magic": 114143.1054
+          },
+          "net_shares": 114143.1054,
+          "gross_inventory": 114143.1054
+        },
+        {
+          "ts": 1776861652,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 19.14,
+          "price": 0.49,
+          "usdc": 9.3786,
+          "pos": {
+            "Magic": 114241.3762
+          },
+          "net_shares": 114241.3762,
+          "gross_inventory": 114241.3762
+        },
+        {
+          "ts": 1776861992,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 1.9608,
+          "price": 0.49,
+          "usdc": 0.9608,
+          "pos": {
+            "Magic": 114304.3578
+          },
+          "net_shares": 114304.3578,
+          "gross_inventory": 114304.3578
+        },
+        {
+          "ts": 1776863352,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 114391.8099
+          },
+          "net_shares": 114391.8099,
+          "gross_inventory": 114391.8099
+        },
+        {
+          "ts": 1776863660,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 39.2157,
+          "price": 0.49,
+          "usdc": 19.2157,
+          "pos": {
+            "Magic": 114789.7511
+          },
+          "net_shares": 114789.7511,
+          "gross_inventory": 114789.7511
+        },
+        {
+          "ts": 1776863860,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 115230.9423
+          },
+          "net_shares": 115230.9423,
+          "gross_inventory": 115230.9423
+        },
+        {
+          "ts": 1776864136,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 19.6078,
+          "price": 0.49,
+          "usdc": 9.6078,
+          "pos": {
+            "Magic": 115455.4521
+          },
+          "net_shares": 115455.4521,
+          "gross_inventory": 115455.4521
+        },
+        {
+          "ts": 1776864172,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 115470.158
+          },
+          "net_shares": 115470.158,
+          "gross_inventory": 115470.158
+        },
+        {
+          "ts": 1776864304,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 44.05,
+          "price": 0.49,
+          "usdc": 21.5845,
+          "pos": {
+            "Magic": 115578.7915
+          },
+          "net_shares": 115578.7915,
+          "gross_inventory": 115578.7915
+        },
+        {
+          "ts": 1776864632,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 10.0,
+          "price": 0.49,
+          "usdc": 4.9,
+          "pos": {
+            "Magic": 115608.0856
+          },
+          "net_shares": 115608.0856,
+          "gross_inventory": 115608.0856
+        },
+        {
+          "ts": 1776864754,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 980.3922,
+          "price": 0.49,
+          "usdc": 480.3922,
+          "pos": {
+            "Magic": 116666.7868
+          },
+          "net_shares": 116666.7868,
+          "gross_inventory": 116666.7868
+        },
+        {
+          "ts": 1776865130,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 196.0784,
+          "price": 0.49,
+          "usdc": 96.0784,
+          "pos": {
+            "Magic": 116964.4675
+          },
+          "net_shares": 116964.4675,
+          "gross_inventory": 116964.4675
+        },
+        {
+          "ts": 1776865350,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 4000.0,
+          "price": 0.49,
+          "usdc": 1960.0,
+          "pos": {
+            "Magic": 121138.5095
+          },
+          "net_shares": 121138.5095,
+          "gross_inventory": 121138.5095
+        },
+        {
+          "ts": 1776865564,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 18.13,
+          "price": 0.49,
+          "usdc": 8.8837,
+          "pos": {
+            "Magic": 121345.6158
+          },
+          "net_shares": 121345.6158,
+          "gross_inventory": 121345.6158
+        },
+        {
+          "ts": 1776865868,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 121459.6089
+          },
+          "net_shares": 121459.6089,
+          "gross_inventory": 121459.6089
+        },
+        {
+          "ts": 1776865946,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 5.0,
+          "price": 0.49,
+          "usdc": 2.45,
+          "pos": {
+            "Magic": 121511.7658
+          },
+          "net_shares": 121511.7658,
+          "gross_inventory": 121511.7658
+        },
+        {
+          "ts": 1776866132,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 19.14,
+          "price": 0.49,
+          "usdc": 9.3786,
+          "pos": {
+            "Magic": 121658.332
+          },
+          "net_shares": 121658.332,
+          "gross_inventory": 121658.332
+        },
+        {
+          "ts": 1776866716,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 8150.0,
+          "price": 0.49,
+          "usdc": 3993.5,
+          "pos": {
+            "Magic": 129915.3797
+          },
+          "net_shares": 129915.3797,
+          "gross_inventory": 129915.3797
+        },
+        {
+          "ts": 1776866760,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 49.0196,
+          "price": 0.49,
+          "usdc": 24.0196,
+          "pos": {
+            "Magic": 130179.6528
+          },
+          "net_shares": 130179.6528,
+          "gross_inventory": 130179.6528
+        },
+        {
+          "ts": 1776867010,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.9412,
+          "price": 0.49,
+          "usdc": 1.4412,
+          "pos": {
+            "Magic": 144965.3779
+          },
+          "net_shares": 144965.3779,
+          "gross_inventory": 144965.3779
+        },
+        {
+          "ts": 1776867164,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 15.0588,
+          "price": 0.49,
+          "usdc": 7.3788,
+          "pos": {
+            "Magic": 150868.672
+          },
+          "net_shares": 150868.672,
+          "gross_inventory": 150868.672
+        },
+        {
+          "ts": 1776867306,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 25.7647,
+          "price": 0.49,
+          "usdc": 12.6247,
+          "pos": {
+            "Magic": 151171.7308
+          },
+          "net_shares": 151171.7308,
+          "gross_inventory": 151171.7308
+        },
+        {
+          "ts": 1776867698,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 1.9608,
+          "price": 0.49,
+          "usdc": 0.9608,
+          "pos": {
+            "Magic": 151743.5369
+          },
+          "net_shares": 151743.5369,
+          "gross_inventory": 151743.5369
+        },
+        {
+          "ts": 1776868294,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 10.07,
+          "price": 0.49,
+          "usdc": 4.9343,
+          "pos": {
+            "Magic": 151773.5497
+          },
+          "net_shares": 151773.5497,
+          "gross_inventory": 151773.5497
+        },
+        {
+          "ts": 1776868418,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 9.8039,
+          "price": 0.49,
+          "usdc": 4.8039,
+          "pos": {
+            "Magic": 151876.9351
+          },
+          "net_shares": 151876.9351,
+          "gross_inventory": 151876.9351
+        },
+        {
+          "ts": 1776868558,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 3.9216,
+          "price": 0.49,
+          "usdc": 1.9216,
+          "pos": {
+            "Magic": 154591.1355
+          },
+          "net_shares": 154591.1355,
+          "gross_inventory": 154591.1355
+        },
+        {
+          "ts": 1776868954,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 5.03,
+          "price": 0.49,
+          "usdc": 2.4647,
+          "pos": {
+            "Magic": 154747.7579
+          },
+          "net_shares": 154747.7579,
+          "gross_inventory": 154747.7579
+        },
+        {
+          "ts": 1776869260,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 633.75,
+          "price": 0.49,
+          "usdc": 310.5375,
+          "pos": {
+            "Magic": 155443.6647
+          },
+          "net_shares": 155443.6647,
+          "gross_inventory": 155443.6647
+        },
+        {
+          "ts": 1776869710,
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 86.2745,
+          "price": 0.49,
+          "usdc": 42.2745,
+          "pos": {
+            "Magic": 155697.0612
+          },
+          "net_shares": 155697.0612,
+          "gross_inventory": 155697.0612
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1776855628,
+          "iso": "2026-04-22T11:00:28+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 100000.0,
+          "price": 0.5,
+          "usdc": 50000.0
+        },
+        {
+          "ts": 1776855854,
+          "iso": "2026-04-22T11:04:14+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 3000.0,
+          "price": 0.49,
+          "usdc": 1470.0
+        },
+        {
+          "ts": 1776855860,
+          "iso": "2026-04-22T11:04:20+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776855992,
+          "iso": "2026-04-22T11:06:32+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 50.0,
+          "price": 0.49,
+          "usdc": 24.5
+        },
+        {
+          "ts": 1776856248,
+          "iso": "2026-04-22T11:10:48+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776856428,
+          "iso": "2026-04-22T11:13:48+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 7937.3,
+          "price": 0.49,
+          "usdc": 3889.277
+        },
+        {
+          "ts": 1776856440,
+          "iso": "2026-04-22T11:14:00+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 348.0,
+          "price": 0.49,
+          "usdc": 170.52
+        },
+        {
+          "ts": 1776856504,
+          "iso": "2026-04-22T11:15:04+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 58.82,
+          "price": 0.49,
+          "usdc": 28.8218
+        },
+        {
+          "ts": 1776856772,
+          "iso": "2026-04-22T11:19:32+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 400.0,
+          "price": 0.49,
+          "usdc": 196.0
+        },
+        {
+          "ts": 1776856924,
+          "iso": "2026-04-22T11:22:04+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776857052,
+          "iso": "2026-04-22T11:24:12+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 19.607842,
+          "price": 0.4900000214,
+          "usdc": 9.6078
+        },
+        {
+          "ts": 1776857074,
+          "iso": "2026-04-22T11:24:34+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776857160,
+          "iso": "2026-04-22T11:26:00+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776857434,
+          "iso": "2026-04-22T11:30:34+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 251.47,
+          "price": 0.49,
+          "usdc": 123.2203
+        },
+        {
+          "ts": 1776857592,
+          "iso": "2026-04-22T11:33:12+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 9.80392,
+          "price": 0.4900000204,
+          "usdc": 4.8039
+        },
+        {
+          "ts": 1776868954,
+          "iso": "2026-04-22T14:42:34+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 5.03,
+          "price": 0.49,
+          "usdc": 2.4647
+        },
+        {
+          "ts": 1776869156,
+          "iso": "2026-04-22T14:45:56+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 39.215685,
+          "price": 0.4900000089,
+          "usdc": 19.2157
+        },
+        {
+          "ts": 1776869244,
+          "iso": "2026-04-22T14:47:24+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 10.0,
+          "price": 0.49,
+          "usdc": 4.9
+        },
+        {
+          "ts": 1776869246,
+          "iso": "2026-04-22T14:47:26+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 10.0,
+          "price": 0.49,
+          "usdc": 4.9
+        },
+        {
+          "ts": 1776869248,
+          "iso": "2026-04-22T14:47:28+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776869260,
+          "iso": "2026-04-22T14:47:40+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 633.75,
+          "price": 0.49,
+          "usdc": 310.5375
+        },
+        {
+          "ts": 1776869272,
+          "iso": "2026-04-22T14:47:52+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 5.0,
+          "price": 0.49,
+          "usdc": 2.45
+        },
+        {
+          "ts": 1776869280,
+          "iso": "2026-04-22T14:48:00+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 143.960783,
+          "price": 0.4900000023,
+          "usdc": 70.5408
+        },
+        {
+          "ts": 1776869286,
+          "iso": "2026-04-22T14:48:06+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776869644,
+          "iso": "2026-04-22T14:54:04+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 15.22,
+          "price": 0.49,
+          "usdc": 7.4578
+        },
+        {
+          "ts": 1776869710,
+          "iso": "2026-04-22T14:55:10+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 86.274508,
+          "price": 0.4900000009,
+          "usdc": 42.2745
+        },
+        {
+          "ts": 1776869742,
+          "iso": "2026-04-22T14:55:42+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 29.411763,
+          "price": 0.4900000044,
+          "usdc": 14.4118
+        },
+        {
+          "ts": 1776869814,
+          "iso": "2026-04-22T14:56:54+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 163.22,
+          "price": 0.49,
+          "usdc": 79.9778
+        },
+        {
+          "ts": 1776869912,
+          "iso": "2026-04-22T14:58:32+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 2.941175,
+          "price": 0.490000085,
+          "usdc": 1.4412
+        },
+        {
+          "ts": 1776869926,
+          "iso": "2026-04-22T14:58:46+00:00",
+          "side": "BUY",
+          "outcome": "Magic",
+          "size": 173.29,
+          "price": 0.49,
+          "usdc": 84.9121
+        }
+      ]
+    },
+    {
+      "title": "Counter-Strike: paiN vs Passion UA (BO3) - ESL Pro League Stage 1",
+      "condition_id": "0x01bded8d4eb4719ffcf3b3fd491f30f9726d643cce51f60e9a8b4423c8558da6",
+      "realized_pnl": -84487.8396,
+      "hold_seconds": 20,
+      "n_fills": 2,
+      "n_buys": 2,
+      "n_sells": 0,
+      "buy_usdc": 84487.8396,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.57,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "single_clip",
+      "scale_ins": 1,
+      "scale_outs": 0,
+      "max_inventory_shares": 148224.28,
+      "first_iso": "2026-03-03T09:19:29+00:00",
+      "last_iso": "2026-03-03T09:19:49+00:00",
+      "end_date": "2026-03-03",
+      "seconds_to_resolution": 52810,
+      "flattened_before_resolution": true,
+      "phases": {},
+      "outcomes_traded": [
+        "Passion UA"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1772529569,
+          "side": "BUY",
+          "outcome": "Passion UA",
+          "size": 116279.07,
+          "price": 0.57,
+          "usdc": 66279.0699,
+          "pos": {
+            "Passion UA": 116279.07
+          },
+          "net_shares": 116279.07,
+          "gross_inventory": 116279.07
+        },
+        {
+          "ts": 1772529589,
+          "side": "BUY",
+          "outcome": "Passion UA",
+          "size": 31945.21,
+          "price": 0.57,
+          "usdc": 18208.7697,
+          "pos": {
+            "Passion UA": 148224.28
+          },
+          "net_shares": 148224.28,
+          "gross_inventory": 148224.28
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1772529569,
+          "iso": "2026-03-03T09:19:29+00:00",
+          "side": "BUY",
+          "outcome": "Passion UA",
+          "size": 116279.07,
+          "price": 0.57,
+          "usdc": 66279.0699
+        },
+        {
+          "ts": 1772529589,
+          "iso": "2026-03-03T09:19:49+00:00",
+          "side": "BUY",
+          "outcome": "Passion UA",
+          "size": 31945.21,
+          "price": 0.57,
+          "usdc": 18208.7697
+        }
+      ]
+    },
+    {
+      "title": "Will Chelsea FC win on 2026-03-14?",
+      "condition_id": "0x0d7df475442dc327a13f0f5e8e46bebb22b1814b9707aa08b1188265616cc37c",
+      "realized_pnl": -81935.1814,
+      "hold_seconds": 116,
+      "n_fills": 100,
+      "n_buys": 100,
+      "n_sells": 0,
+      "buy_usdc": 81938.9402,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.5672,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "scalp_sub_15m",
+      "scale_ins": 99,
+      "scale_outs": 0,
+      "max_inventory_shares": 144458.85,
+      "first_iso": "2026-03-14T16:22:27+00:00",
+      "last_iso": "2026-03-14T16:24:23+00:00",
+      "end_date": "2026-03-14",
+      "seconds_to_resolution": 27336,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.5609090909090909,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.5700000057529411,
+        "close_avg_sell": null,
+        "open_n": 33,
+        "middle_n": 33,
+        "close_n": 34
+      },
+      "outcomes_traded": [
+        "Yes"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1773505347,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 14442.95,
+          "price": 0.56,
+          "usdc": 8088.052,
+          "pos": {
+            "Yes": 14442.95
+          },
+          "net_shares": 14442.95,
+          "gross_inventory": 14442.95
+        },
+        {
+          "ts": 1773505347,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 266.0,
+          "price": 0.56,
+          "usdc": 148.96,
+          "pos": {
+            "Yes": 16175.37
+          },
+          "net_shares": 16175.37,
+          "gross_inventory": 16175.37
+        },
+        {
+          "ts": 1773505349,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 62.58,
+          "price": 0.56,
+          "usdc": 35.0448,
+          "pos": {
+            "Yes": 16277.95
+          },
+          "net_shares": 16277.95,
+          "gross_inventory": 16277.95
+        },
+        {
+          "ts": 1773505355,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 4863.78,
+          "price": 0.56,
+          "usdc": 2723.7168,
+          "pos": {
+            "Yes": 28393.53
+          },
+          "net_shares": 28393.53,
+          "gross_inventory": 28393.53
+        },
+        {
+          "ts": 1773505361,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 3653.75,
+          "price": 0.56,
+          "usdc": 2046.1,
+          "pos": {
+            "Yes": 34161.48
+          },
+          "net_shares": 34161.48,
+          "gross_inventory": 34161.48
+        },
+        {
+          "ts": 1773505363,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.56,
+          "usdc": 21.84,
+          "pos": {
+            "Yes": 34507.48
+          },
+          "net_shares": 34507.48,
+          "gross_inventory": 34507.48
+        },
+        {
+          "ts": 1773505365,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 5.0,
+          "price": 0.56,
+          "usdc": 2.8,
+          "pos": {
+            "Yes": 34817.48
+          },
+          "net_shares": 34817.48,
+          "gross_inventory": 34817.48
+        },
+        {
+          "ts": 1773505367,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.56,
+          "usdc": 21.84,
+          "pos": {
+            "Yes": 34895.48
+          },
+          "net_shares": 34895.48,
+          "gross_inventory": 34895.48
+        },
+        {
+          "ts": 1773505371,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 12.95,
+          "price": 0.56,
+          "usdc": 7.252,
+          "pos": {
+            "Yes": 35216.43
+          },
+          "net_shares": 35216.43,
+          "gross_inventory": 35216.43
+        },
+        {
+          "ts": 1773505373,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 5.25,
+          "price": 0.56,
+          "usdc": 2.94,
+          "pos": {
+            "Yes": 35578.68
+          },
+          "net_shares": 35578.68,
+          "gross_inventory": 35578.68
+        },
+        {
+          "ts": 1773505375,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 40.0,
+          "price": 0.56,
+          "usdc": 22.4,
+          "pos": {
+            "Yes": 37417.84
+          },
+          "net_shares": 37417.84,
+          "gross_inventory": 37417.84
+        },
+        {
+          "ts": 1773505375,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.56,
+          "usdc": 16.8,
+          "pos": {
+            "Yes": 39140.41
+          },
+          "net_shares": 39140.41,
+          "gross_inventory": 39140.41
+        },
+        {
+          "ts": 1773505377,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 246.0,
+          "price": 0.57,
+          "usdc": 140.22,
+          "pos": {
+            "Yes": 39731.41
+          },
+          "net_shares": 39731.41,
+          "gross_inventory": 39731.41
+        },
+        {
+          "ts": 1773505377,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 620.0,
+          "price": 0.57,
+          "usdc": 353.4,
+          "pos": {
+            "Yes": 40381.41
+          },
+          "net_shares": 40381.41,
+          "gross_inventory": 40381.41
+        },
+        {
+          "ts": 1773505377,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 175.43,
+          "price": 0.57,
+          "usdc": 99.9951,
+          "pos": {
+            "Yes": 41266.84
+          },
+          "net_shares": 41266.84,
+          "gross_inventory": 41266.84
+        },
+        {
+          "ts": 1773505377,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 627.907,
+          "price": 0.57,
+          "usdc": 357.907,
+          "pos": {
+            "Yes": 41924.747
+          },
+          "net_shares": 41924.747,
+          "gross_inventory": 41924.747
+        },
+        {
+          "ts": 1773505379,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 4868.42,
+          "price": 0.57,
+          "usdc": 2774.9994,
+          "pos": {
+            "Yes": 51642.307
+          },
+          "net_shares": 51642.307,
+          "gross_inventory": 51642.307
+        },
+        {
+          "ts": 1773505379,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 2730.6,
+          "price": 0.57,
+          "usdc": 1556.442,
+          "pos": {
+            "Yes": 57045.097
+          },
+          "net_shares": 57045.097,
+          "gross_inventory": 57045.097
+        },
+        {
+          "ts": 1773505379,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 38838.08,
+          "price": 0.5698,
+          "usdc": 22129.9557,
+          "pos": {
+            "Yes": 97582.607
+          },
+          "net_shares": 97582.607,
+          "gross_inventory": 97582.607
+        },
+        {
+          "ts": 1773505379,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 173.0,
+          "price": 0.57,
+          "usdc": 98.61,
+          "pos": {
+            "Yes": 99353.607
+          },
+          "net_shares": 99353.607,
+          "gross_inventory": 99353.607
+        },
+        {
+          "ts": 1773505379,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 100.0,
+          "price": 0.57,
+          "usdc": 57.0,
+          "pos": {
+            "Yes": 101612.977
+          },
+          "net_shares": 101612.977,
+          "gross_inventory": 101612.977
+        },
+        {
+          "ts": 1773505441,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 5924.32,
+          "price": 0.57,
+          "usdc": 3376.8624,
+          "pos": {
+            "Yes": 107547.297
+          },
+          "net_shares": 107547.297,
+          "gross_inventory": 107547.297
+        },
+        {
+          "ts": 1773505443,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 23.62,
+          "price": 0.57,
+          "usdc": 13.4634,
+          "pos": {
+            "Yes": 107788.787
+          },
+          "net_shares": 107788.787,
+          "gross_inventory": 107788.787
+        },
+        {
+          "ts": 1773505443,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 341.0,
+          "price": 0.57,
+          "usdc": 194.37,
+          "pos": {
+            "Yes": 109624.867
+          },
+          "net_shares": 109624.867,
+          "gross_inventory": 109624.867
+        },
+        {
+          "ts": 1773505443,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 5938.31,
+          "price": 0.57,
+          "usdc": 3384.8367,
+          "pos": {
+            "Yes": 116598.177
+          },
+          "net_shares": 116598.177,
+          "gross_inventory": 116598.177
+        },
+        {
+          "ts": 1773505443,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 548.78,
+          "price": 0.57,
+          "usdc": 312.8046,
+          "pos": {
+            "Yes": 117151.957
+          },
+          "net_shares": 117151.957,
+          "gross_inventory": 117151.957
+        },
+        {
+          "ts": 1773505443,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 900.09,
+          "price": 0.57,
+          "usdc": 513.0513,
+          "pos": {
+            "Yes": 124079.437
+          },
+          "net_shares": 124079.437,
+          "gross_inventory": 124079.437
+        },
+        {
+          "ts": 1773505445,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 15.0,
+          "price": 0.57,
+          "usdc": 8.55,
+          "pos": {
+            "Yes": 124689.427
+          },
+          "net_shares": 124689.427,
+          "gross_inventory": 124689.427
+        },
+        {
+          "ts": 1773505445,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 841.21,
+          "price": 0.57,
+          "usdc": 479.4897,
+          "pos": {
+            "Yes": 126905.947
+          },
+          "net_shares": 126905.947,
+          "gross_inventory": 126905.947
+        },
+        {
+          "ts": 1773505447,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7,
+          "pos": {
+            "Yes": 127435.667
+          },
+          "net_shares": 127435.667,
+          "gross_inventory": 127435.667
+        },
+        {
+          "ts": 1773505447,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 1075.0,
+          "price": 0.57,
+          "usdc": 612.75,
+          "pos": {
+            "Yes": 128830.667
+          },
+          "net_shares": 128830.667,
+          "gross_inventory": 128830.667
+        },
+        {
+          "ts": 1773505447,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 7.3256,
+          "price": 0.57,
+          "usdc": 4.1756,
+          "pos": {
+            "Yes": 128848.1626
+          },
+          "net_shares": 128848.1626,
+          "gross_inventory": 128848.1626
+        },
+        {
+          "ts": 1773505447,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.57,
+          "usdc": 22.23,
+          "pos": {
+            "Yes": 128940.5326
+          },
+          "net_shares": 128940.5326,
+          "gross_inventory": 128940.5326
+        },
+        {
+          "ts": 1773505449,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.57,
+          "usdc": 22.23,
+          "pos": {
+            "Yes": 128984.5326
+          },
+          "net_shares": 128984.5326,
+          "gross_inventory": 128984.5326
+        },
+        {
+          "ts": 1773505449,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 2.5581,
+          "price": 0.57,
+          "usdc": 1.4581,
+          "pos": {
+            "Yes": 129001.0907
+          },
+          "net_shares": 129001.0907,
+          "gross_inventory": 129001.0907
+        },
+        {
+          "ts": 1773505451,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7,
+          "pos": {
+            "Yes": 129050.0907
+          },
+          "net_shares": 129050.0907,
+          "gross_inventory": 129050.0907
+        },
+        {
+          "ts": 1773505455,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7,
+          "pos": {
+            "Yes": 129340.0907
+          },
+          "net_shares": 129340.0907,
+          "gross_inventory": 129340.0907
+        },
+        {
+          "ts": 1773505457,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 366.02,
+          "price": 0.57,
+          "usdc": 208.6314,
+          "pos": {
+            "Yes": 131163.1707
+          },
+          "net_shares": 131163.1707,
+          "gross_inventory": 131163.1707
+        },
+        {
+          "ts": 1773505459,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.57,
+          "usdc": 17.1,
+          "pos": {
+            "Yes": 132480.0907
+          },
+          "net_shares": 132480.0907,
+          "gross_inventory": 132480.0907
+        },
+        {
+          "ts": 1773505463,
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 32.5349,
+          "price": 0.57,
+          "usdc": 18.5449,
+          "pos": {
+            "Yes": 132522.6256
+          },
+          "net_shares": 132522.6256,
+          "gross_inventory": 132522.6256
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1773505347,
+          "iso": "2026-03-14T16:22:27+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 14442.95,
+          "price": 0.56,
+          "usdc": 8088.052
+        },
+        {
+          "ts": 1773505347,
+          "iso": "2026-03-14T16:22:27+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 1466.42,
+          "price": 0.56,
+          "usdc": 821.1952
+        },
+        {
+          "ts": 1773505347,
+          "iso": "2026-03-14T16:22:27+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 266.0,
+          "price": 0.56,
+          "usdc": 148.96
+        },
+        {
+          "ts": 1773505347,
+          "iso": "2026-03-14T16:22:27+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.56,
+          "usdc": 16.8
+        },
+        {
+          "ts": 1773505349,
+          "iso": "2026-03-14T16:22:29+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.56,
+          "usdc": 5.6
+        },
+        {
+          "ts": 1773505349,
+          "iso": "2026-03-14T16:22:29+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 62.58,
+          "price": 0.56,
+          "usdc": 35.0448
+        },
+        {
+          "ts": 1773505353,
+          "iso": "2026-03-14T16:22:33+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 7251.8,
+          "price": 0.56,
+          "usdc": 4061.008
+        },
+        {
+          "ts": 1773505355,
+          "iso": "2026-03-14T16:22:35+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 4863.78,
+          "price": 0.56,
+          "usdc": 2723.7168
+        },
+        {
+          "ts": 1773505359,
+          "iso": "2026-03-14T16:22:39+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 1666.6,
+          "price": 0.56,
+          "usdc": 933.296
+        },
+        {
+          "ts": 1773505359,
+          "iso": "2026-03-14T16:22:39+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 447.6,
+          "price": 0.56,
+          "usdc": 250.656
+        },
+        {
+          "ts": 1773505361,
+          "iso": "2026-03-14T16:22:41+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 3653.75,
+          "price": 0.56,
+          "usdc": 2046.1
+        },
+        {
+          "ts": 1773505363,
+          "iso": "2026-03-14T16:22:43+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 307.0,
+          "price": 0.56,
+          "usdc": 171.92
+        },
+        {
+          "ts": 1773505363,
+          "iso": "2026-03-14T16:22:43+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.56,
+          "usdc": 21.84
+        },
+        {
+          "ts": 1773505363,
+          "iso": "2026-03-14T16:22:43+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.56,
+          "usdc": 16.8
+        },
+        {
+          "ts": 1773505363,
+          "iso": "2026-03-14T16:22:43+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 275.0,
+          "price": 0.56,
+          "usdc": 154.0
+        },
+        {
+          "ts": 1773505449,
+          "iso": "2026-03-14T16:24:09+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 2.558138,
+          "price": 0.5700001329,
+          "usdc": 1.4581
+        },
+        {
+          "ts": 1773505451,
+          "iso": "2026-03-14T16:24:11+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.57,
+          "usdc": 22.23
+        },
+        {
+          "ts": 1773505451,
+          "iso": "2026-03-14T16:24:11+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7
+        },
+        {
+          "ts": 1773505453,
+          "iso": "2026-03-14T16:24:13+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 250.0,
+          "price": 0.57,
+          "usdc": 142.5
+        },
+        {
+          "ts": 1773505453,
+          "iso": "2026-03-14T16:24:13+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.57,
+          "usdc": 17.1
+        },
+        {
+          "ts": 1773505455,
+          "iso": "2026-03-14T16:24:15+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7
+        },
+        {
+          "ts": 1773505457,
+          "iso": "2026-03-14T16:24:17+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 1457.06,
+          "price": 0.57,
+          "usdc": 830.5242
+        },
+        {
+          "ts": 1773505457,
+          "iso": "2026-03-14T16:24:17+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 366.02,
+          "price": 0.57,
+          "usdc": 208.6314
+        },
+        {
+          "ts": 1773505457,
+          "iso": "2026-03-14T16:24:17+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 1247.92,
+          "price": 0.57,
+          "usdc": 711.3144
+        },
+        {
+          "ts": 1773505457,
+          "iso": "2026-03-14T16:24:17+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 39.0,
+          "price": 0.57,
+          "usdc": 22.23
+        },
+        {
+          "ts": 1773505459,
+          "iso": "2026-03-14T16:24:19+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 30.0,
+          "price": 0.57,
+          "usdc": 17.1
+        },
+        {
+          "ts": 1773505459,
+          "iso": "2026-03-14T16:24:19+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 10.0,
+          "price": 0.57,
+          "usdc": 5.7
+        },
+        {
+          "ts": 1773505463,
+          "iso": "2026-03-14T16:24:23+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 32.534882,
+          "price": 0.570000008,
+          "usdc": 18.5449
+        },
+        {
+          "ts": 1773505463,
+          "iso": "2026-03-14T16:24:23+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 3255.813952,
+          "price": 0.5700000001,
+          "usdc": 1855.814
+        },
+        {
+          "ts": 1773505463,
+          "iso": "2026-03-14T16:24:23+00:00",
+          "side": "BUY",
+          "outcome": "Yes",
+          "size": 8680.41,
+          "price": 0.57,
+          "usdc": 4947.8337
+        }
+      ]
+    },
+    {
+      "title": "LoL: Cloud9 vs LYON - Game 2 Winner",
+      "condition_id": "0x0edb76cba5a18d9a9b55bf0e2866c61ab6e5e5119fad30e8b4a441b4f451bf19",
+      "realized_pnl": -69220.5819,
+      "hold_seconds": 0,
+      "n_fills": 1,
+      "n_buys": 1,
+      "n_sells": 0,
+      "buy_usdc": 69220.6671,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.6898,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "single_clip",
+      "scale_ins": 0,
+      "scale_outs": 0,
+      "max_inventory_shares": 100354.59,
+      "first_iso": "2026-03-01T22:18:17+00:00",
+      "last_iso": "2026-03-01T22:18:17+00:00",
+      "end_date": "2026-03-02",
+      "seconds_to_resolution": 92502,
+      "flattened_before_resolution": true,
+      "phases": {},
+      "outcomes_traded": [
+        "Cloud9"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1772403497,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100354.59,
+          "price": 0.6898,
+          "usdc": 69220.6671,
+          "pos": {
+            "Cloud9": 100354.59
+          },
+          "net_shares": 100354.59,
+          "gross_inventory": 100354.59
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1772403497,
+          "iso": "2026-03-01T22:18:17+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100354.59,
+          "price": 0.689760848,
+          "usdc": 69220.6671
+        }
+      ]
+    },
+    {
+      "title": "LoL: DRX vs Nongshim Red Force - Game 1 Winner",
+      "condition_id": "0xfbbb5737e9b57b708841524493e84a2298f59114c37901c64bf5bbece828149e",
+      "realized_pnl": -62131.8939,
+      "hold_seconds": 82,
+      "n_fills": 8,
+      "n_buys": 8,
+      "n_sells": 0,
+      "buy_usdc": 62132.0639,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.6213,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "scalp_sub_15m",
+      "scale_ins": 7,
+      "scale_outs": 0,
+      "max_inventory_shares": 99999.99,
+      "first_iso": "2026-02-08T08:06:07+00:00",
+      "last_iso": "2026-02-08T08:07:29+00:00",
+      "end_date": "2026-02-08",
+      "seconds_to_resolution": 57150,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.63,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.6188678333333333,
+        "close_avg_sell": null,
+        "open_n": 2,
+        "middle_n": 3,
+        "close_n": 3
+      },
+      "outcomes_traded": [
+        "Nongshim Red Force"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1770537967,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 100.0,
+          "price": 0.63,
+          "usdc": 63.0,
+          "pos": {
+            "Nongshim Red Force": 100.0
+          },
+          "net_shares": 100.0,
+          "gross_inventory": 100.0
+        },
+        {
+          "ts": 1770537967,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 670.67,
+          "price": 0.63,
+          "usdc": 422.5221,
+          "pos": {
+            "Nongshim Red Force": 770.67
+          },
+          "net_shares": 770.67,
+          "gross_inventory": 770.67
+        },
+        {
+          "ts": 1770537967,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 270.2703,
+          "price": 0.63,
+          "usdc": 170.2703,
+          "pos": {
+            "Nongshim Red Force": 1040.9403
+          },
+          "net_shares": 1040.9403,
+          "gross_inventory": 1040.9403
+        },
+        {
+          "ts": 1770537971,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 18959.05,
+          "price": 0.63,
+          "usdc": 11944.2015,
+          "pos": {
+            "Nongshim Red Force": 19999.9903
+          },
+          "net_shares": 19999.9903,
+          "gross_inventory": 19999.9903
+        },
+        {
+          "ts": 1770537987,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 10000.0,
+          "price": 0.62,
+          "usdc": 6200.0,
+          "pos": {
+            "Nongshim Red Force": 29999.9903
+          },
+          "net_shares": 29999.9903,
+          "gross_inventory": 29999.9903
+        },
+        {
+          "ts": 1770538007,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 30000.0,
+          "price": 0.62,
+          "usdc": 18600.0,
+          "pos": {
+            "Nongshim Red Force": 59999.9903
+          },
+          "net_shares": 59999.9903,
+          "gross_inventory": 59999.9903
+        },
+        {
+          "ts": 1770538035,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 20000.0,
+          "price": 0.6166,
+          "usdc": 12332.07,
+          "pos": {
+            "Nongshim Red Force": 79999.9903
+          },
+          "net_shares": 79999.9903,
+          "gross_inventory": 79999.9903
+        },
+        {
+          "ts": 1770538049,
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 20000.0,
+          "price": 0.62,
+          "usdc": 12400.0,
+          "pos": {
+            "Nongshim Red Force": 99999.9903
+          },
+          "net_shares": 99999.9903,
+          "gross_inventory": 99999.9903
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1770537967,
+          "iso": "2026-02-08T08:06:07+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 100.0,
+          "price": 0.63,
+          "usdc": 63.0
+        },
+        {
+          "ts": 1770537967,
+          "iso": "2026-02-08T08:06:07+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 670.67,
+          "price": 0.63,
+          "usdc": 422.5221
+        },
+        {
+          "ts": 1770537967,
+          "iso": "2026-02-08T08:06:07+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 270.270269,
+          "price": 0.630000002,
+          "usdc": 170.2703
+        },
+        {
+          "ts": 1770537971,
+          "iso": "2026-02-08T08:06:11+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 18959.05,
+          "price": 0.63,
+          "usdc": 11944.2015
+        },
+        {
+          "ts": 1770537987,
+          "iso": "2026-02-08T08:06:27+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 10000.0,
+          "price": 0.62,
+          "usdc": 6200.0
+        },
+        {
+          "ts": 1770538007,
+          "iso": "2026-02-08T08:06:47+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 30000.0,
+          "price": 0.62,
+          "usdc": 18600.0
+        },
+        {
+          "ts": 1770538035,
+          "iso": "2026-02-08T08:07:15+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 20000.0,
+          "price": 0.6166035,
+          "usdc": 12332.07
+        },
+        {
+          "ts": 1770538049,
+          "iso": "2026-02-08T08:07:29+00:00",
+          "side": "BUY",
+          "outcome": "Nongshim Red Force",
+          "size": 20000.0,
+          "price": 0.62,
+          "usdc": 12400.0
+        }
+      ]
+    },
+    {
+      "title": "Counter-Strike: FURIA vs Vitality (BO5) - IEM Krakow Playoffs",
+      "condition_id": "0x20dde9ca3797374fc1c786ad3c8f83c3384de35c31eb08bf95012add9d969d59",
+      "realized_pnl": -59675.5343,
+      "hold_seconds": 23200,
+      "n_fills": 116,
+      "n_buys": 116,
+      "n_sells": 0,
+      "buy_usdc": 59683.5095,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.3324,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_sub_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "multi_hour_position",
+      "scale_ins": 115,
+      "scale_outs": 0,
+      "max_inventory_shares": 179555.21,
+      "first_iso": "2026-02-08T07:59:51+00:00",
+      "last_iso": "2026-02-08T14:26:31+00:00",
+      "end_date": "2026-02-08",
+      "seconds_to_resolution": 34408,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.3365789666157895,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.3200000166820513,
+        "close_avg_sell": null,
+        "open_n": 38,
+        "middle_n": 39,
+        "close_n": 39
+      },
+      "outcomes_traded": [
+        "FURIA"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1770537591,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 16650.34,
+          "price": 0.34,
+          "usdc": 5661.1156,
+          "pos": {
+            "FURIA": 16650.34
+          },
+          "net_shares": 16650.34,
+          "gross_inventory": 16650.34
+        },
+        {
+          "ts": 1770537869,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 151.5152,
+          "price": 0.34,
+          "usdc": 51.5152,
+          "pos": {
+            "FURIA": 16816.5552
+          },
+          "net_shares": 16816.5552,
+          "gross_inventory": 16816.5552
+        },
+        {
+          "ts": 1770538789,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 2.303,
+          "price": 0.34,
+          "usdc": 0.783,
+          "pos": {
+            "FURIA": 18727.9491
+          },
+          "net_shares": 18727.9491,
+          "gross_inventory": 18727.9491
+        },
+        {
+          "ts": 1770539061,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.5758,
+          "price": 0.34,
+          "usdc": 2.5758,
+          "pos": {
+            "FURIA": 19005.5248
+          },
+          "net_shares": 19005.5248,
+          "gross_inventory": 19005.5248
+        },
+        {
+          "ts": 1770539267,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 4.8939,
+          "price": 0.34,
+          "usdc": 1.6639,
+          "pos": {
+            "FURIA": 19022.4188
+          },
+          "net_shares": 19022.4188,
+          "gross_inventory": 19022.4188
+        },
+        {
+          "ts": 1770540753,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 15.1515,
+          "price": 0.34,
+          "usdc": 5.1515,
+          "pos": {
+            "FURIA": 19107.4188
+          },
+          "net_shares": 19107.4188,
+          "gross_inventory": 19107.4188
+        },
+        {
+          "ts": 1770540999,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 4.5455,
+          "price": 0.34,
+          "usdc": 1.5455,
+          "pos": {
+            "FURIA": 19137.4339
+          },
+          "net_shares": 19137.4339,
+          "gross_inventory": 19137.4339
+        },
+        {
+          "ts": 1770541435,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.5758,
+          "price": 0.34,
+          "usdc": 2.5758,
+          "pos": {
+            "FURIA": 19152.5854
+          },
+          "net_shares": 19152.5854,
+          "gross_inventory": 19152.5854
+        },
+        {
+          "ts": 1770541621,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 24956.55,
+          "price": 0.34,
+          "usdc": 8485.227,
+          "pos": {
+            "FURIA": 44117.5445
+          },
+          "net_shares": 44117.5445,
+          "gross_inventory": 44117.5445
+        },
+        {
+          "ts": 1770551283,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 2.7164,
+          "price": 0.33,
+          "usdc": 0.8964,
+          "pos": {
+            "FURIA": 142498.8609
+          },
+          "net_shares": 142498.8609,
+          "gross_inventory": 142498.8609
+        },
+        {
+          "ts": 1770551383,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 5000.0,
+          "price": 0.33,
+          "usdc": 1650.0,
+          "pos": {
+            "FURIA": 147537.3236
+          },
+          "net_shares": 147537.3236,
+          "gross_inventory": 147537.3236
+        },
+        {
+          "ts": 1770551579,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 14.9254,
+          "price": 0.33,
+          "usdc": 4.9254,
+          "pos": {
+            "FURIA": 147620.249
+          },
+          "net_shares": 147620.249,
+          "gross_inventory": 147620.249
+        },
+        {
+          "ts": 1770552047,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 20.0,
+          "price": 0.33,
+          "usdc": 6.6,
+          "pos": {
+            "FURIA": 148099.7702
+          },
+          "net_shares": 148099.7702,
+          "gross_inventory": 148099.7702
+        },
+        {
+          "ts": 1770552189,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 17.32,
+          "price": 0.33,
+          "usdc": 5.7156,
+          "pos": {
+            "FURIA": 148477.6872
+          },
+          "net_shares": 148477.6872,
+          "gross_inventory": 148477.6872
+        },
+        {
+          "ts": 1770552313,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 25.0,
+          "price": 0.33,
+          "usdc": 8.25,
+          "pos": {
+            "FURIA": 148542.8372
+          },
+          "net_shares": 148542.8372,
+          "gross_inventory": 148542.8372
+        },
+        {
+          "ts": 1770552391,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 189.0,
+          "price": 0.33,
+          "usdc": 62.37,
+          "pos": {
+            "FURIA": 148816.6581
+          },
+          "net_shares": 148816.6581,
+          "gross_inventory": 148816.6581
+        },
+        {
+          "ts": 1770552911,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 22.3881,
+          "price": 0.33,
+          "usdc": 7.3881,
+          "pos": {
+            "FURIA": 148883.8223
+          },
+          "net_shares": 148883.8223,
+          "gross_inventory": 148883.8223
+        },
+        {
+          "ts": 1770557449,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 12804.3924,
+          "price": 0.32,
+          "usdc": 4097.4056,
+          "pos": {
+            "FURIA": 161859.1997
+          },
+          "net_shares": 161859.1997,
+          "gross_inventory": 161859.1997
+        },
+        {
+          "ts": 1770557763,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 10.0,
+          "price": 0.32,
+          "usdc": 3.2,
+          "pos": {
+            "FURIA": 161886.5526
+          },
+          "net_shares": 161886.5526,
+          "gross_inventory": 161886.5526
+        },
+        {
+          "ts": 1770558369,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 41.1765,
+          "price": 0.32,
+          "usdc": 13.1765,
+          "pos": {
+            "FURIA": 162112.832
+          },
+          "net_shares": 162112.832,
+          "gross_inventory": 162112.832
+        },
+        {
+          "ts": 1770558597,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 294.1176,
+          "price": 0.32,
+          "usdc": 94.1176,
+          "pos": {
+            "FURIA": 162833.4938
+          },
+          "net_shares": 162833.4938,
+          "gross_inventory": 162833.4938
+        },
+        {
+          "ts": 1770558703,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 29.4118,
+          "price": 0.32,
+          "usdc": 9.4118,
+          "pos": {
+            "FURIA": 162870.2585
+          },
+          "net_shares": 162870.2585,
+          "gross_inventory": 162870.2585
+        },
+        {
+          "ts": 1770560071,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.6176,
+          "price": 0.32,
+          "usdc": 1.1576,
+          "pos": {
+            "FURIA": 163022.1826
+          },
+          "net_shares": 163022.1826,
+          "gross_inventory": 163022.1826
+        },
+        {
+          "ts": 1770560077,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 2.9412,
+          "price": 0.32,
+          "usdc": 0.9412,
+          "pos": {
+            "FURIA": 163034.0944
+          },
+          "net_shares": 163034.0944,
+          "gross_inventory": 163034.0944
+        },
+        {
+          "ts": 1770560089,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 5.8823,
+          "price": 0.32,
+          "usdc": 1.8824,
+          "pos": {
+            "FURIA": 163046.6826
+          },
+          "net_shares": 163046.6826,
+          "gross_inventory": 163046.6826
+        },
+        {
+          "ts": 1770560091,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 6.9706,
+          "price": 0.32,
+          "usdc": 2.2306,
+          "pos": {
+            "FURIA": 163056.6332
+          },
+          "net_shares": 163056.6332,
+          "gross_inventory": 163056.6332
+        },
+        {
+          "ts": 1770560139,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.3529,
+          "price": 0.32,
+          "usdc": 2.3529,
+          "pos": {
+            "FURIA": 163096.0302
+          },
+          "net_shares": 163096.0302,
+          "gross_inventory": 163096.0302
+        },
+        {
+          "ts": 1770560179,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 4.4118,
+          "price": 0.32,
+          "usdc": 1.4118,
+          "pos": {
+            "FURIA": 163341.6479
+          },
+          "net_shares": 163341.6479,
+          "gross_inventory": 163341.6479
+        },
+        {
+          "ts": 1770560217,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 500.0,
+          "price": 0.32,
+          "usdc": 160.0,
+          "pos": {
+            "FURIA": 167570.0449
+          },
+          "net_shares": 167570.0449,
+          "gross_inventory": 167570.0449
+        },
+        {
+          "ts": 1770560229,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7352.9412,
+          "price": 0.32,
+          "usdc": 2352.9412,
+          "pos": {
+            "FURIA": 174968.5937
+          },
+          "net_shares": 174968.5937,
+          "gross_inventory": 174968.5937
+        },
+        {
+          "ts": 1770560283,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 20.5882,
+          "price": 0.32,
+          "usdc": 6.5882,
+          "pos": {
+            "FURIA": 175011.2408
+          },
+          "net_shares": 175011.2408,
+          "gross_inventory": 175011.2408
+        },
+        {
+          "ts": 1770560319,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 47.0588,
+          "price": 0.32,
+          "usdc": 15.0588,
+          "pos": {
+            "FURIA": 175065.6526
+          },
+          "net_shares": 175065.6526,
+          "gross_inventory": 175065.6526
+        },
+        {
+          "ts": 1770560339,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 220.5882,
+          "price": 0.32,
+          "usdc": 70.5882,
+          "pos": {
+            "FURIA": 175422.5202
+          },
+          "net_shares": 175422.5202,
+          "gross_inventory": 175422.5202
+        },
+        {
+          "ts": 1770560343,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.6765,
+          "price": 0.32,
+          "usdc": 1.1765,
+          "pos": {
+            "FURIA": 175580.6084
+          },
+          "net_shares": 175580.6084,
+          "gross_inventory": 175580.6084
+        },
+        {
+          "ts": 1770560415,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.6765,
+          "price": 0.32,
+          "usdc": 1.1765,
+          "pos": {
+            "FURIA": 175866.2114
+          },
+          "net_shares": 175866.2114,
+          "gross_inventory": 175866.2114
+        },
+        {
+          "ts": 1770560469,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 54.4118,
+          "price": 0.32,
+          "usdc": 17.4118,
+          "pos": {
+            "FURIA": 176050.9172
+          },
+          "net_shares": 176050.9172,
+          "gross_inventory": 176050.9172
+        },
+        {
+          "ts": 1770560507,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 6.12,
+          "price": 0.32,
+          "usdc": 1.9584,
+          "pos": {
+            "FURIA": 176114.8608
+          },
+          "net_shares": 176114.8608,
+          "gross_inventory": 176114.8608
+        },
+        {
+          "ts": 1770560563,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.6765,
+          "price": 0.32,
+          "usdc": 1.1765,
+          "pos": {
+            "FURIA": 176296.1108
+          },
+          "net_shares": 176296.1108,
+          "gross_inventory": 176296.1108
+        },
+        {
+          "ts": 1770560703,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 36.0588,
+          "price": 0.32,
+          "usdc": 11.5388,
+          "pos": {
+            "FURIA": 176396.1402
+          },
+          "net_shares": 176396.1402,
+          "gross_inventory": 176396.1402
+        },
+        {
+          "ts": 1770560747,
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.3529,
+          "price": 0.32,
+          "usdc": 2.3529,
+          "pos": {
+            "FURIA": 179508.4784
+          },
+          "net_shares": 179508.4784,
+          "gross_inventory": 179508.4784
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1770537591,
+          "iso": "2026-02-08T07:59:51+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 16650.34,
+          "price": 0.34,
+          "usdc": 5661.1156
+        },
+        {
+          "ts": 1770537677,
+          "iso": "2026-02-08T08:01:17+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 14.7,
+          "price": 0.34,
+          "usdc": 4.998
+        },
+        {
+          "ts": 1770537869,
+          "iso": "2026-02-08T08:04:29+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 151.51515,
+          "price": 0.34,
+          "usdc": 51.5152
+        },
+        {
+          "ts": 1770538157,
+          "iso": "2026-02-08T08:09:17+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 909.090908,
+          "price": 0.3400000003,
+          "usdc": 309.0909
+        },
+        {
+          "ts": 1770538269,
+          "iso": "2026-02-08T08:11:09+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 1000.0,
+          "price": 0.34,
+          "usdc": 340.0
+        },
+        {
+          "ts": 1770538789,
+          "iso": "2026-02-08T08:19:49+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 2.303029,
+          "price": 0.3400000608,
+          "usdc": 0.783
+        },
+        {
+          "ts": 1770538863,
+          "iso": "2026-02-08T08:21:03+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 250.0,
+          "price": 0.34,
+          "usdc": 85.0
+        },
+        {
+          "ts": 1770538871,
+          "iso": "2026-02-08T08:21:11+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 20.0,
+          "price": 0.34,
+          "usdc": 6.8
+        },
+        {
+          "ts": 1770539061,
+          "iso": "2026-02-08T08:24:21+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.575755,
+          "price": 0.3400000396,
+          "usdc": 2.5758
+        },
+        {
+          "ts": 1770539155,
+          "iso": "2026-02-08T08:25:55+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 4.545452,
+          "price": 0.3400000704,
+          "usdc": 1.5455
+        },
+        {
+          "ts": 1770539201,
+          "iso": "2026-02-08T08:26:41+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.454544,
+          "price": 0.3400000054,
+          "usdc": 2.5345
+        },
+        {
+          "ts": 1770539267,
+          "iso": "2026-02-08T08:27:47+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 4.893938,
+          "price": 0.3400000163,
+          "usdc": 1.6639
+        },
+        {
+          "ts": 1770539491,
+          "iso": "2026-02-08T08:31:31+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 9.848482,
+          "price": 0.3400000122,
+          "usdc": 3.3485
+        },
+        {
+          "ts": 1770539845,
+          "iso": "2026-02-08T08:37:25+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 60.0,
+          "price": 0.34,
+          "usdc": 20.4
+        },
+        {
+          "ts": 1770540753,
+          "iso": "2026-02-08T08:52:33+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 15.151514,
+          "price": 0.3400000158,
+          "usdc": 5.1515
+        },
+        {
+          "ts": 1770560469,
+          "iso": "2026-02-08T14:21:09+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 54.411762,
+          "price": 0.3200000029,
+          "usdc": 17.4118
+        },
+        {
+          "ts": 1770560493,
+          "iso": "2026-02-08T14:21:33+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.676468,
+          "price": 0.3200000653,
+          "usdc": 1.1765
+        },
+        {
+          "ts": 1770560501,
+          "iso": "2026-02-08T14:21:41+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 54.147056,
+          "price": 0.3200000015,
+          "usdc": 17.3271
+        },
+        {
+          "ts": 1770560507,
+          "iso": "2026-02-08T14:21:47+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 6.12,
+          "price": 0.32,
+          "usdc": 1.9584
+        },
+        {
+          "ts": 1770560527,
+          "iso": "2026-02-08T14:22:07+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.676468,
+          "price": 0.3200000653,
+          "usdc": 1.1765
+        },
+        {
+          "ts": 1770560551,
+          "iso": "2026-02-08T14:22:31+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 173.897056,
+          "price": 0.3200000005,
+          "usdc": 55.6471
+        },
+        {
+          "ts": 1770560563,
+          "iso": "2026-02-08T14:22:43+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.676468,
+          "price": 0.3200000653,
+          "usdc": 1.1765
+        },
+        {
+          "ts": 1770560599,
+          "iso": "2026-02-08T14:23:19+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 60.294115,
+          "price": 0.3200000033,
+          "usdc": 19.2941
+        },
+        {
+          "ts": 1770560629,
+          "iso": "2026-02-08T14:23:49+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 3.676468,
+          "price": 0.3200000653,
+          "usdc": 1.1765
+        },
+        {
+          "ts": 1770560703,
+          "iso": "2026-02-08T14:25:03+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 36.058821,
+          "price": 0.3200000078,
+          "usdc": 11.5388
+        },
+        {
+          "ts": 1770560707,
+          "iso": "2026-02-08T14:25:07+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 1594.117646,
+          "price": 0.3200000002,
+          "usdc": 510.1176
+        },
+        {
+          "ts": 1770560721,
+          "iso": "2026-02-08T14:25:21+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 1510.867646,
+          "price": 0.3200000002,
+          "usdc": 483.4776
+        },
+        {
+          "ts": 1770560747,
+          "iso": "2026-02-08T14:25:47+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.35294,
+          "price": 0.3200000272,
+          "usdc": 2.3529
+        },
+        {
+          "ts": 1770560775,
+          "iso": "2026-02-08T14:26:15+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 7.35294,
+          "price": 0.3200000272,
+          "usdc": 2.3529
+        },
+        {
+          "ts": 1770560791,
+          "iso": "2026-02-08T14:26:31+00:00",
+          "side": "BUY",
+          "outcome": "FURIA",
+          "size": 39.38235,
+          "price": 0.32,
+          "usdc": 12.6024
+        }
+      ]
+    },
+    {
+      "title": "LoL: Cloud9 vs LYON (BO5) - LCS Lock In Playoffs",
+      "condition_id": "0x6a367a1ade69e70c7e9c475beb6bbe826cd0fa03e672cbaef9f514c371d2f978",
+      "realized_pnl": -52198.4483,
+      "hold_seconds": 10512,
+      "n_fills": 18,
+      "n_buys": 18,
+      "n_sells": 0,
+      "buy_usdc": 52198.5126,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.6989,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "multi_hour_position",
+      "scale_ins": 17,
+      "scale_outs": 0,
+      "max_inventory_shares": 74686.79,
+      "first_iso": "2026-03-01T17:04:15+00:00",
+      "last_iso": "2026-03-01T19:59:27+00:00",
+      "end_date": "2026-03-02",
+      "seconds_to_resolution": 100832,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.6900000324166666,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.6933333386,
+        "close_avg_sell": null,
+        "open_n": 6,
+        "middle_n": 6,
+        "close_n": 6
+      },
+      "outcomes_traded": [
+        "Cloud9"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1772384655,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 7431.2942,
+          "price": 0.69,
+          "usdc": 5127.593,
+          "pos": {
+            "Cloud9": 7431.2942
+          },
+          "net_shares": 7431.2942,
+          "gross_inventory": 7431.2942
+        },
+        {
+          "ts": 1772384847,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 142.85,
+          "price": 0.69,
+          "usdc": 98.5665,
+          "pos": {
+            "Cloud9": 7574.1442
+          },
+          "net_shares": 7574.1442,
+          "gross_inventory": 7574.1442
+        },
+        {
+          "ts": 1772385299,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 120.5806,
+          "price": 0.69,
+          "usdc": 83.2006,
+          "pos": {
+            "Cloud9": 7694.7248
+          },
+          "net_shares": 7694.7248,
+          "gross_inventory": 7694.7248
+        },
+        {
+          "ts": 1772385301,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 9.6774,
+          "price": 0.69,
+          "usdc": 6.6774,
+          "pos": {
+            "Cloud9": 7704.4023
+          },
+          "net_shares": 7704.4023,
+          "gross_inventory": 7704.4023
+        },
+        {
+          "ts": 1772385313,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100.0,
+          "price": 0.69,
+          "usdc": 69.0,
+          "pos": {
+            "Cloud9": 7804.4023
+          },
+          "net_shares": 7804.4023,
+          "gross_inventory": 7804.4023
+        },
+        {
+          "ts": 1772385327,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 4.6452,
+          "price": 0.69,
+          "usdc": 3.2052,
+          "pos": {
+            "Cloud9": 7809.0474
+          },
+          "net_shares": 7809.0474,
+          "gross_inventory": 7809.0474
+        },
+        {
+          "ts": 1772385327,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 4.6452,
+          "price": 0.69,
+          "usdc": 3.2052,
+          "pos": {
+            "Cloud9": 7813.6926
+          },
+          "net_shares": 7813.6926,
+          "gross_inventory": 7813.6926
+        },
+        {
+          "ts": 1772385331,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 3.2258,
+          "price": 0.69,
+          "usdc": 2.2258,
+          "pos": {
+            "Cloud9": 7816.9184
+          },
+          "net_shares": 7816.9184,
+          "gross_inventory": 7816.9184
+        },
+        {
+          "ts": 1772385335,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 33.88,
+          "price": 0.69,
+          "usdc": 23.3772,
+          "pos": {
+            "Cloud9": 7850.7984
+          },
+          "net_shares": 7850.7984,
+          "gross_inventory": 7850.7984
+        },
+        {
+          "ts": 1772385335,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 33.88,
+          "price": 0.69,
+          "usdc": 23.3772,
+          "pos": {
+            "Cloud9": 7884.6784
+          },
+          "net_shares": 7884.6784,
+          "gross_inventory": 7884.6784
+        },
+        {
+          "ts": 1772385347,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100.0,
+          "price": 0.69,
+          "usdc": 69.0,
+          "pos": {
+            "Cloud9": 7984.6784
+          },
+          "net_shares": 7984.6784,
+          "gross_inventory": 7984.6784
+        },
+        {
+          "ts": 1772385353,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 27.32,
+          "price": 0.69,
+          "usdc": 18.8508,
+          "pos": {
+            "Cloud9": 8011.9984
+          },
+          "net_shares": 8011.9984,
+          "gross_inventory": 8011.9984
+        },
+        {
+          "ts": 1772385355,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 14.4516,
+          "price": 0.69,
+          "usdc": 9.9716,
+          "pos": {
+            "Cloud9": 8026.45
+          },
+          "net_shares": 8026.45,
+          "gross_inventory": 8026.45
+        },
+        {
+          "ts": 1772385357,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 9.0,
+          "price": 0.69,
+          "usdc": 6.21,
+          "pos": {
+            "Cloud9": 8035.45
+          },
+          "net_shares": 8035.45,
+          "gross_inventory": 8035.45
+        },
+        {
+          "ts": 1772385361,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 27.32,
+          "price": 0.69,
+          "usdc": 18.8508,
+          "pos": {
+            "Cloud9": 8062.77
+          },
+          "net_shares": 8062.77,
+          "gross_inventory": 8062.77
+        },
+        {
+          "ts": 1772385395,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 161.2903,
+          "price": 0.69,
+          "usdc": 111.2903,
+          "pos": {
+            "Cloud9": 8224.0603
+          },
+          "net_shares": 8224.0603,
+          "gross_inventory": 8224.0603
+        },
+        {
+          "ts": 1772385695,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 30858.52,
+          "price": 0.7,
+          "usdc": 21600.964,
+          "pos": {
+            "Cloud9": 39082.5803
+          },
+          "net_shares": 39082.5803,
+          "gross_inventory": 39082.5803
+        },
+        {
+          "ts": 1772395167,
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 35604.21,
+          "price": 0.7,
+          "usdc": 24922.947,
+          "pos": {
+            "Cloud9": 74686.7903
+          },
+          "net_shares": 74686.7903,
+          "gross_inventory": 74686.7903
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1772384655,
+          "iso": "2026-03-01T17:04:15+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 7431.294192,
+          "price": 0.6900000001,
+          "usdc": 5127.593
+        },
+        {
+          "ts": 1772384847,
+          "iso": "2026-03-01T17:07:27+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 142.85,
+          "price": 0.69,
+          "usdc": 98.5665
+        },
+        {
+          "ts": 1772385299,
+          "iso": "2026-03-01T17:14:59+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 120.580644,
+          "price": 0.6900000053,
+          "usdc": 83.2006
+        },
+        {
+          "ts": 1772385301,
+          "iso": "2026-03-01T17:15:01+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 9.677418,
+          "price": 0.6900000599,
+          "usdc": 6.6774
+        },
+        {
+          "ts": 1772385313,
+          "iso": "2026-03-01T17:15:13+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100.0,
+          "price": 0.69,
+          "usdc": 69.0
+        },
+        {
+          "ts": 1772385327,
+          "iso": "2026-03-01T17:15:27+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 4.64516,
+          "price": 0.6900001292,
+          "usdc": 3.2052
+        },
+        {
+          "ts": 1772385327,
+          "iso": "2026-03-01T17:15:27+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 4.64516,
+          "price": 0.6900001292,
+          "usdc": 3.2052
+        },
+        {
+          "ts": 1772385331,
+          "iso": "2026-03-01T17:15:31+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 3.225805,
+          "price": 0.6900001705,
+          "usdc": 2.2258
+        },
+        {
+          "ts": 1772385335,
+          "iso": "2026-03-01T17:15:35+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 33.88,
+          "price": 0.69,
+          "usdc": 23.3772
+        },
+        {
+          "ts": 1772385335,
+          "iso": "2026-03-01T17:15:35+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 33.88,
+          "price": 0.69,
+          "usdc": 23.3772
+        },
+        {
+          "ts": 1772385347,
+          "iso": "2026-03-01T17:15:47+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 100.0,
+          "price": 0.69,
+          "usdc": 69.0
+        },
+        {
+          "ts": 1772385353,
+          "iso": "2026-03-01T17:15:53+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 27.32,
+          "price": 0.69,
+          "usdc": 18.8508
+        },
+        {
+          "ts": 1772385355,
+          "iso": "2026-03-01T17:15:55+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 14.451611,
+          "price": 0.6900000284,
+          "usdc": 9.9716
+        },
+        {
+          "ts": 1772385357,
+          "iso": "2026-03-01T17:15:57+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 9.0,
+          "price": 0.69,
+          "usdc": 6.21
+        },
+        {
+          "ts": 1772385361,
+          "iso": "2026-03-01T17:16:01+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 27.32,
+          "price": 0.69,
+          "usdc": 18.8508
+        },
+        {
+          "ts": 1772385395,
+          "iso": "2026-03-01T17:16:35+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 161.290321,
+          "price": 0.6900000032,
+          "usdc": 111.2903
+        },
+        {
+          "ts": 1772385695,
+          "iso": "2026-03-01T17:21:35+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 30858.52,
+          "price": 0.7,
+          "usdc": 21600.964
+        },
+        {
+          "ts": 1772395167,
+          "iso": "2026-03-01T19:59:27+00:00",
+          "side": "BUY",
+          "outcome": "Cloud9",
+          "size": 35604.21,
+          "price": 0.7,
+          "usdc": 24922.947
+        }
+      ]
+    },
+    {
+      "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+      "condition_id": "0x527de4494bcb3ff56711a28e643b5a0588ee158c019250de4e8d0a7261923b23",
+      "realized_pnl": -49989.7202,
+      "hold_seconds": 30052,
+      "n_fills": 254,
+      "n_buys": 254,
+      "n_sells": 0,
+      "buy_usdc": 50002.3178,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.3498,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_sub_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "multi_hour_position",
+      "scale_ins": 253,
+      "scale_outs": 0,
+      "max_inventory_shares": 142953.57,
+      "first_iso": "2026-02-07T09:39:23+00:00",
+      "last_iso": "2026-02-07T18:00:15+00:00",
+      "end_date": "2026-02-08",
+      "seconds_to_resolution": 107984,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.3556761787107143,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.3415294280576471,
+        "close_avg_sell": null,
+        "open_n": 84,
+        "middle_n": 85,
+        "close_n": 85
+      },
+      "outcomes_traded": [
+        "MOUZ"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1770457163,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 13012.97,
+          "price": 0.3568,
+          "usdc": 4643.0098,
+          "pos": {
+            "MOUZ": 13012.97
+          },
+          "net_shares": 13012.97,
+          "gross_inventory": 13012.97
+        },
+        {
+          "ts": 1770457177,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 101.0,
+          "price": 0.36,
+          "usdc": 36.36,
+          "pos": {
+            "MOUZ": 13303.0869
+          },
+          "net_shares": 13303.0869,
+          "gross_inventory": 13303.0869
+        },
+        {
+          "ts": 1770457223,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16,
+          "pos": {
+            "MOUZ": 26264.4669
+          },
+          "net_shares": 26264.4669,
+          "gross_inventory": 26264.4669
+        },
+        {
+          "ts": 1770457231,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 20.0,
+          "price": 0.36,
+          "usdc": 7.2,
+          "pos": {
+            "MOUZ": 32016.4669
+          },
+          "net_shares": 32016.4669,
+          "gross_inventory": 32016.4669
+        },
+        {
+          "ts": 1770457303,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16,
+          "pos": {
+            "MOUZ": 36269.815
+          },
+          "net_shares": 36269.815,
+          "gross_inventory": 36269.815
+        },
+        {
+          "ts": 1770457309,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16,
+          "pos": {
+            "MOUZ": 37170.815
+          },
+          "net_shares": 37170.815,
+          "gross_inventory": 37170.815
+        },
+        {
+          "ts": 1770457317,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16,
+          "pos": {
+            "MOUZ": 38262.815
+          },
+          "net_shares": 38262.815,
+          "gross_inventory": 38262.815
+        },
+        {
+          "ts": 1770457323,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16,
+          "pos": {
+            "MOUZ": 39198.815
+          },
+          "net_shares": 39198.815,
+          "gross_inventory": 39198.815
+        },
+        {
+          "ts": 1770457759,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 153.0,
+          "price": 0.35,
+          "usdc": 53.55,
+          "pos": {
+            "MOUZ": 42692.4781
+          },
+          "net_shares": 42692.4781,
+          "gross_inventory": 42692.4781
+        },
+        {
+          "ts": 1770458859,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 7.92,
+          "price": 0.35,
+          "usdc": 2.772,
+          "pos": {
+            "MOUZ": 45376.3981
+          },
+          "net_shares": 45376.3981,
+          "gross_inventory": 45376.3981
+        },
+        {
+          "ts": 1770459163,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 15.3846,
+          "price": 0.35,
+          "usdc": 5.3846,
+          "pos": {
+            "MOUZ": 45702.1981
+          },
+          "net_shares": 45702.1981,
+          "gross_inventory": 45702.1981
+        },
+        {
+          "ts": 1770460055,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 3695.4923,
+          "price": 0.35,
+          "usdc": 1293.4223,
+          "pos": {
+            "MOUZ": 49709.1696
+          },
+          "net_shares": 49709.1696,
+          "gross_inventory": 49709.1696
+        },
+        {
+          "ts": 1770461035,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 200.0,
+          "price": 0.35,
+          "usdc": 70.0,
+          "pos": {
+            "MOUZ": 71925.2081
+          },
+          "net_shares": 71925.2081,
+          "gross_inventory": 71925.2081
+        },
+        {
+          "ts": 1770462707,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 42.8308,
+          "price": 0.35,
+          "usdc": 14.9908,
+          "pos": {
+            "MOUZ": 74093.3934
+          },
+          "net_shares": 74093.3934,
+          "gross_inventory": 74093.3934
+        },
+        {
+          "ts": 1770463609,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.6154,
+          "price": 0.35,
+          "usdc": 0.5654,
+          "pos": {
+            "MOUZ": 75085.1011
+          },
+          "net_shares": 75085.1011,
+          "gross_inventory": 75085.1011
+        },
+        {
+          "ts": 1770463611,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 4.4923,
+          "price": 0.35,
+          "usdc": 1.5723,
+          "pos": {
+            "MOUZ": 75102.978
+          },
+          "net_shares": 75102.978,
+          "gross_inventory": 75102.978
+        },
+        {
+          "ts": 1770463611,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.6154,
+          "price": 0.35,
+          "usdc": 0.5654,
+          "pos": {
+            "MOUZ": 75113.1318
+          },
+          "net_shares": 75113.1318,
+          "gross_inventory": 75113.1318
+        },
+        {
+          "ts": 1770463611,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.6154,
+          "price": 0.35,
+          "usdc": 0.5654,
+          "pos": {
+            "MOUZ": 75124.6703
+          },
+          "net_shares": 75124.6703,
+          "gross_inventory": 75124.6703
+        },
+        {
+          "ts": 1770463611,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.6154,
+          "price": 0.35,
+          "usdc": 0.5654,
+          "pos": {
+            "MOUZ": 75140.8241
+          },
+          "net_shares": 75140.8241,
+          "gross_inventory": 75140.8241
+        },
+        {
+          "ts": 1770463619,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.6462,
+          "price": 0.35,
+          "usdc": 0.5762,
+          "pos": {
+            "MOUZ": 75191.1426
+          },
+          "net_shares": 75191.1426,
+          "gross_inventory": 75191.1426
+        },
+        {
+          "ts": 1770463621,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 3.0,
+          "price": 0.35,
+          "usdc": 1.05,
+          "pos": {
+            "MOUZ": 75204.481
+          },
+          "net_shares": 75204.481,
+          "gross_inventory": 75204.481
+        },
+        {
+          "ts": 1770463807,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 4376.0,
+          "price": 0.35,
+          "usdc": 1531.6,
+          "pos": {
+            "MOUZ": 79660.9379
+          },
+          "net_shares": 79660.9379,
+          "gross_inventory": 79660.9379
+        },
+        {
+          "ts": 1770464207,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 92.3077,
+          "price": 0.35,
+          "usdc": 32.3077,
+          "pos": {
+            "MOUZ": 79873.3533
+          },
+          "net_shares": 79873.3533,
+          "gross_inventory": 79873.3533
+        },
+        {
+          "ts": 1770470553,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.9545,
+          "price": 0.34,
+          "usdc": 1.0045,
+          "pos": {
+            "MOUZ": 83666.5727
+          },
+          "net_shares": 83666.5727,
+          "gross_inventory": 83666.5727
+        },
+        {
+          "ts": 1770470831,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 32.4091,
+          "price": 0.34,
+          "usdc": 11.0191,
+          "pos": {
+            "MOUZ": 84427.1636
+          },
+          "net_shares": 84427.1636,
+          "gross_inventory": 84427.1636
+        },
+        {
+          "ts": 1770471267,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 200.0,
+          "price": 0.34,
+          "usdc": 68.0,
+          "pos": {
+            "MOUZ": 84844.8909
+          },
+          "net_shares": 84844.8909,
+          "gross_inventory": 84844.8909
+        },
+        {
+          "ts": 1770472089,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 25.0,
+          "price": 0.35,
+          "usdc": 8.75,
+          "pos": {
+            "MOUZ": 90938.9122
+          },
+          "net_shares": 90938.9122,
+          "gross_inventory": 90938.9122
+        },
+        {
+          "ts": 1770472503,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1538.4615,
+          "price": 0.35,
+          "usdc": 538.4615,
+          "pos": {
+            "MOUZ": 93011.0814
+          },
+          "net_shares": 93011.0814,
+          "gross_inventory": 93011.0814
+        },
+        {
+          "ts": 1770473203,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1562.9846,
+          "price": 0.35,
+          "usdc": 547.0446,
+          "pos": {
+            "MOUZ": 97894.6814
+          },
+          "net_shares": 97894.6814,
+          "gross_inventory": 97894.6814
+        },
+        {
+          "ts": 1770473387,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 20.0,
+          "price": 0.35,
+          "usdc": 7.0,
+          "pos": {
+            "MOUZ": 101877.7429
+          },
+          "net_shares": 101877.7429,
+          "gross_inventory": 101877.7429
+        },
+        {
+          "ts": 1770473507,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 3.0769,
+          "price": 0.35,
+          "usdc": 1.0769,
+          "pos": {
+            "MOUZ": 102455.7452
+          },
+          "net_shares": 102455.7452,
+          "gross_inventory": 102455.7452
+        },
+        {
+          "ts": 1770473903,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 523.0769,
+          "price": 0.35,
+          "usdc": 183.0769,
+          "pos": {
+            "MOUZ": 106542.6991
+          },
+          "net_shares": 106542.6991,
+          "gross_inventory": 106542.6991
+        },
+        {
+          "ts": 1770474207,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.0303,
+          "price": 0.34,
+          "usdc": 0.6903,
+          "pos": {
+            "MOUZ": 110008.3578
+          },
+          "net_shares": 110008.3578,
+          "gross_inventory": 110008.3578
+        },
+        {
+          "ts": 1770474453,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 30.303,
+          "price": 0.34,
+          "usdc": 10.303,
+          "pos": {
+            "MOUZ": 117857.9033
+          },
+          "net_shares": 117857.9033,
+          "gross_inventory": 117857.9033
+        },
+        {
+          "ts": 1770474829,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 30.303,
+          "price": 0.34,
+          "usdc": 10.303,
+          "pos": {
+            "MOUZ": 118555.6608
+          },
+          "net_shares": 118555.6608,
+          "gross_inventory": 118555.6608
+        },
+        {
+          "ts": 1770475343,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 37.8788,
+          "price": 0.34,
+          "usdc": 12.8788,
+          "pos": {
+            "MOUZ": 118690.099
+          },
+          "net_shares": 118690.099,
+          "gross_inventory": 118690.099
+        },
+        {
+          "ts": 1770475833,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 15.1515,
+          "price": 0.34,
+          "usdc": 5.1515,
+          "pos": {
+            "MOUZ": 132321.5517
+          },
+          "net_shares": 132321.5517,
+          "gross_inventory": 132321.5517
+        },
+        {
+          "ts": 1770486595,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.4925,
+          "price": 0.33,
+          "usdc": 0.4925,
+          "pos": {
+            "MOUZ": 139071.9446
+          },
+          "net_shares": 139071.9446,
+          "gross_inventory": 139071.9446
+        },
+        {
+          "ts": 1770486833,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.791,
+          "price": 0.33,
+          "usdc": 0.921,
+          "pos": {
+            "MOUZ": 140519.1834
+          },
+          "net_shares": 140519.1834,
+          "gross_inventory": 140519.1834
+        },
+        {
+          "ts": 1770486947,
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.9851,
+          "price": 0.33,
+          "usdc": 0.9851,
+          "pos": {
+            "MOUZ": 142159.4968
+          },
+          "net_shares": 142159.4968,
+          "gross_inventory": 142159.4968
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1770457163,
+          "iso": "2026-02-07T09:39:23+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 13012.97,
+          "price": 0.3567986248,
+          "usdc": 4643.0098
+        },
+        {
+          "ts": 1770457167,
+          "iso": "2026-02-07T09:39:27+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 7.69,
+          "price": 0.36,
+          "usdc": 2.7684
+        },
+        {
+          "ts": 1770457167,
+          "iso": "2026-02-07T09:39:27+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 3.125,
+          "price": 0.36,
+          "usdc": 1.125
+        },
+        {
+          "ts": 1770457167,
+          "iso": "2026-02-07T09:39:27+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 39.921875,
+          "price": 0.36,
+          "usdc": 14.3719
+        },
+        {
+          "ts": 1770457173,
+          "iso": "2026-02-07T09:39:33+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 15.38,
+          "price": 0.36,
+          "usdc": 5.5368
+        },
+        {
+          "ts": 1770457173,
+          "iso": "2026-02-07T09:39:33+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 123.0,
+          "price": 0.36,
+          "usdc": 44.28
+        },
+        {
+          "ts": 1770457177,
+          "iso": "2026-02-07T09:39:37+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 101.0,
+          "price": 0.36,
+          "usdc": 36.36
+        },
+        {
+          "ts": 1770457185,
+          "iso": "2026-02-07T09:39:45+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 40.0,
+          "price": 0.36,
+          "usdc": 14.4
+        },
+        {
+          "ts": 1770457191,
+          "iso": "2026-02-07T09:39:51+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 5.03,
+          "price": 0.36,
+          "usdc": 1.8108
+        },
+        {
+          "ts": 1770457195,
+          "iso": "2026-02-07T09:39:55+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 4026.75,
+          "price": 0.36,
+          "usdc": 1449.63
+        },
+        {
+          "ts": 1770457217,
+          "iso": "2026-02-07T09:40:17+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 8577.6,
+          "price": 0.36,
+          "usdc": 3087.936
+        },
+        {
+          "ts": 1770457221,
+          "iso": "2026-02-07T09:40:21+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16
+        },
+        {
+          "ts": 1770457223,
+          "iso": "2026-02-07T09:40:23+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16
+        },
+        {
+          "ts": 1770457225,
+          "iso": "2026-02-07T09:40:25+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 5000.0,
+          "price": 0.36,
+          "usdc": 1800.0
+        },
+        {
+          "ts": 1770457225,
+          "iso": "2026-02-07T09:40:25+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 156.0,
+          "price": 0.36,
+          "usdc": 56.16
+        },
+        {
+          "ts": 1770486791,
+          "iso": "2026-02-07T17:53:11+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 52.0,
+          "price": 0.33,
+          "usdc": 17.16
+        },
+        {
+          "ts": 1770486793,
+          "iso": "2026-02-07T17:53:13+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 298.50746,
+          "price": 0.3300000007,
+          "usdc": 98.5075
+        },
+        {
+          "ts": 1770486833,
+          "iso": "2026-02-07T17:53:53+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.791042,
+          "price": 0.3300000502,
+          "usdc": 0.921
+        },
+        {
+          "ts": 1770486871,
+          "iso": "2026-02-07T17:54:31+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1159.716415,
+          "price": 0.33,
+          "usdc": 382.7064
+        },
+        {
+          "ts": 1770486879,
+          "iso": "2026-02-07T17:54:39+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.985072,
+          "price": 0.3300000804,
+          "usdc": 0.9851
+        },
+        {
+          "ts": 1770486881,
+          "iso": "2026-02-07T17:54:41+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 25.373133,
+          "price": 0.3300000043,
+          "usdc": 8.3731
+        },
+        {
+          "ts": 1770486895,
+          "iso": "2026-02-07T17:54:55+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 447.761193,
+          "price": 0.3300000007,
+          "usdc": 147.7612
+        },
+        {
+          "ts": 1770486913,
+          "iso": "2026-02-07T17:55:13+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.492536,
+          "price": 0.3300000804,
+          "usdc": 0.4925
+        },
+        {
+          "ts": 1770486947,
+          "iso": "2026-02-07T17:55:47+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.985072,
+          "price": 0.3300000804,
+          "usdc": 0.9851
+        },
+        {
+          "ts": 1770486969,
+          "iso": "2026-02-07T17:56:09+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 2.0,
+          "price": 0.33,
+          "usdc": 0.66
+        },
+        {
+          "ts": 1770487021,
+          "iso": "2026-02-07T17:57:01+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 17.402984,
+          "price": 0.3300000161,
+          "usdc": 5.743
+        },
+        {
+          "ts": 1770487109,
+          "iso": "2026-02-07T17:58:29+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 10.44776,
+          "price": 0.3300000191,
+          "usdc": 3.4478
+        },
+        {
+          "ts": 1770487123,
+          "iso": "2026-02-07T17:58:43+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 14.925372,
+          "price": 0.3300000161,
+          "usdc": 4.9254
+        },
+        {
+          "ts": 1770487147,
+          "iso": "2026-02-07T17:59:07+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 747.44776,
+          "price": 0.3300000003,
+          "usdc": 246.6578
+        },
+        {
+          "ts": 1770487215,
+          "iso": "2026-02-07T18:00:15+00:00",
+          "side": "BUY",
+          "outcome": "MOUZ",
+          "size": 1.850745,
+          "price": 0.330000081,
+          "usdc": 0.6107
+        }
+      ]
+    },
+    {
+      "title": "LoL: Dplus KIA vs DN Freecs - Game 3 Winner",
+      "condition_id": "0x39a7c58e846adb13d96fb25ff1dc783350fd2fce0bb5b01c6f2fc346a19b2172",
+      "realized_pnl": -47509.4556,
+      "hold_seconds": 178,
+      "n_fills": 50,
+      "n_buys": 50,
+      "n_sells": 0,
+      "buy_usdc": 47510.56,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.5985,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_above_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "scalp_sub_15m",
+      "scale_ins": 49,
+      "scale_outs": 0,
+      "max_inventory_shares": 79382.87,
+      "first_iso": "2026-02-20T10:06:54+00:00",
+      "last_iso": "2026-02-20T10:09:52+00:00",
+      "end_date": "2026-02-20",
+      "seconds_to_resolution": 49807,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.589863638125,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.6064415294588236,
+        "close_avg_sell": null,
+        "open_n": 16,
+        "middle_n": 17,
+        "close_n": 17
+      },
+      "outcomes_traded": [
+        "Dplus KIA"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1771582014,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12248.91,
+          "price": 0.5878,
+          "usdc": 7200.1298,
+          "pos": {
+            "Dplus KIA": 12248.91
+          },
+          "net_shares": 12248.91,
+          "gross_inventory": 12248.91
+        },
+        {
+          "ts": 1771582014,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 100.0,
+          "price": 0.59,
+          "usdc": 59.0,
+          "pos": {
+            "Dplus KIA": 12348.91
+          },
+          "net_shares": 12348.91,
+          "gross_inventory": 12348.91
+        },
+        {
+          "ts": 1771582018,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 34.0488,
+          "price": 0.59,
+          "usdc": 20.0888,
+          "pos": {
+            "Dplus KIA": 12382.9588
+          },
+          "net_shares": 12382.9588,
+          "gross_inventory": 12382.9588
+        },
+        {
+          "ts": 1771582018,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 4.8049,
+          "price": 0.59,
+          "usdc": 2.8349,
+          "pos": {
+            "Dplus KIA": 12387.7637
+          },
+          "net_shares": 12387.7637,
+          "gross_inventory": 12387.7637
+        },
+        {
+          "ts": 1771582020,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 753.33,
+          "price": 0.59,
+          "usdc": 444.4647,
+          "pos": {
+            "Dplus KIA": 13226.4595
+          },
+          "net_shares": 13226.4595,
+          "gross_inventory": 13226.4595
+        },
+        {
+          "ts": 1771582022,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1000.0,
+          "price": 0.59,
+          "usdc": 590.0,
+          "pos": {
+            "Dplus KIA": 14226.4595
+          },
+          "net_shares": 14226.4595,
+          "gross_inventory": 14226.4595
+        },
+        {
+          "ts": 1771582022,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 6.1463,
+          "price": 0.59,
+          "usdc": 3.6263,
+          "pos": {
+            "Dplus KIA": 14232.6058
+          },
+          "net_shares": 14232.6058,
+          "gross_inventory": 14232.6058
+        },
+        {
+          "ts": 1771582022,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 2439.0244,
+          "price": 0.59,
+          "usdc": 1439.0244,
+          "pos": {
+            "Dplus KIA": 16671.6302
+          },
+          "net_shares": 16671.6302,
+          "gross_inventory": 16671.6302
+        },
+        {
+          "ts": 1771582026,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1555.0,
+          "price": 0.59,
+          "usdc": 917.45,
+          "pos": {
+            "Dplus KIA": 18320.1424
+          },
+          "net_shares": 18320.1424,
+          "gross_inventory": 18320.1424
+        },
+        {
+          "ts": 1771582026,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 182.9268,
+          "price": 0.59,
+          "usdc": 107.9268,
+          "pos": {
+            "Dplus KIA": 18503.0693
+          },
+          "net_shares": 18503.0693,
+          "gross_inventory": 18503.0693
+        },
+        {
+          "ts": 1771582030,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.59,
+          "usdc": 29.5,
+          "pos": {
+            "Dplus KIA": 18553.0693
+          },
+          "net_shares": 18553.0693,
+          "gross_inventory": 18553.0693
+        },
+        {
+          "ts": 1771582030,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.59,
+          "usdc": 29.5,
+          "pos": {
+            "Dplus KIA": 18603.0693
+          },
+          "net_shares": 18603.0693,
+          "gross_inventory": 18603.0693
+        },
+        {
+          "ts": 1771582032,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 429.2683,
+          "price": 0.59,
+          "usdc": 253.2683,
+          "pos": {
+            "Dplus KIA": 19039.3376
+          },
+          "net_shares": 19039.3376,
+          "gross_inventory": 19039.3376
+        },
+        {
+          "ts": 1771582036,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 34.0976,
+          "price": 0.59,
+          "usdc": 20.1176,
+          "pos": {
+            "Dplus KIA": 19073.4351
+          },
+          "net_shares": 19073.4351,
+          "gross_inventory": 19073.4351
+        },
+        {
+          "ts": 1771582036,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 13.0,
+          "price": 0.59,
+          "usdc": 7.67,
+          "pos": {
+            "Dplus KIA": 19086.4351
+          },
+          "net_shares": 19086.4351,
+          "gross_inventory": 19086.4351
+        },
+        {
+          "ts": 1771582036,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 2650.65,
+          "price": 0.59,
+          "usdc": 1563.8835,
+          "pos": {
+            "Dplus KIA": 21737.0851
+          },
+          "net_shares": 21737.0851,
+          "gross_inventory": 21737.0851
+        },
+        {
+          "ts": 1771582056,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 2222.0,
+          "price": 0.6,
+          "usdc": 1333.2,
+          "pos": {
+            "Dplus KIA": 30195.3651
+          },
+          "net_shares": 30195.3651,
+          "gross_inventory": 30195.3651
+        },
+        {
+          "ts": 1771582058,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12388.9767,
+          "price": 0.6,
+          "usdc": 7433.386,
+          "pos": {
+            "Dplus KIA": 42584.3419
+          },
+          "net_shares": 42584.3419,
+          "gross_inventory": 42584.3419
+        },
+        {
+          "ts": 1771582060,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 11.25,
+          "price": 0.6,
+          "usdc": 6.75,
+          "pos": {
+            "Dplus KIA": 42595.5919
+          },
+          "net_shares": 42595.5919,
+          "gross_inventory": 42595.5919
+        },
+        {
+          "ts": 1771582060,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1670.26,
+          "price": 0.6,
+          "usdc": 1002.156,
+          "pos": {
+            "Dplus KIA": 44265.8519
+          },
+          "net_shares": 44265.8519,
+          "gross_inventory": 44265.8519
+        },
+        {
+          "ts": 1771582062,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 25.0,
+          "price": 0.6,
+          "usdc": 15.0,
+          "pos": {
+            "Dplus KIA": 44315.8519
+          },
+          "net_shares": 44315.8519,
+          "gross_inventory": 44315.8519
+        },
+        {
+          "ts": 1771582064,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 2000.0,
+          "price": 0.6,
+          "usdc": 1200.0,
+          "pos": {
+            "Dplus KIA": 46315.8519
+          },
+          "net_shares": 46315.8519,
+          "gross_inventory": 46315.8519
+        },
+        {
+          "ts": 1771582064,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.6,
+          "usdc": 30.0,
+          "pos": {
+            "Dplus KIA": 46365.8519
+          },
+          "net_shares": 46365.8519,
+          "gross_inventory": 46365.8519
+        },
+        {
+          "ts": 1771582070,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 300.0,
+          "price": 0.6,
+          "usdc": 180.0,
+          "pos": {
+            "Dplus KIA": 46665.8519
+          },
+          "net_shares": 46665.8519,
+          "gross_inventory": 46665.8519
+        },
+        {
+          "ts": 1771582072,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 100.0,
+          "price": 0.6,
+          "usdc": 60.0,
+          "pos": {
+            "Dplus KIA": 46790.8519
+          },
+          "net_shares": 46790.8519,
+          "gross_inventory": 46790.8519
+        },
+        {
+          "ts": 1771582072,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.6,
+          "usdc": 30.0,
+          "pos": {
+            "Dplus KIA": 46840.8519
+          },
+          "net_shares": 46840.8519,
+          "gross_inventory": 46840.8519
+        },
+        {
+          "ts": 1771582074,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 3432.36,
+          "price": 0.6,
+          "usdc": 2059.416,
+          "pos": {
+            "Dplus KIA": 50273.2119
+          },
+          "net_shares": 50273.2119,
+          "gross_inventory": 50273.2119
+        },
+        {
+          "ts": 1771582082,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1401.37,
+          "price": 0.6,
+          "usdc": 840.822,
+          "pos": {
+            "Dplus KIA": 51674.5819
+          },
+          "net_shares": 51674.5819,
+          "gross_inventory": 51674.5819
+        },
+        {
+          "ts": 1771582112,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 28.2051,
+          "price": 0.61,
+          "usdc": 17.2051,
+          "pos": {
+            "Dplus KIA": 51765.287
+          },
+          "net_shares": 51765.287,
+          "gross_inventory": 51765.287
+        },
+        {
+          "ts": 1771582112,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1711.98,
+          "price": 0.6,
+          "usdc": 1027.188,
+          "pos": {
+            "Dplus KIA": 53477.267
+          },
+          "net_shares": 53477.267,
+          "gross_inventory": 53477.267
+        },
+        {
+          "ts": 1771582118,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 42.0,
+          "price": 0.61,
+          "usdc": 25.62,
+          "pos": {
+            "Dplus KIA": 53519.267
+          },
+          "net_shares": 53519.267,
+          "gross_inventory": 53519.267
+        },
+        {
+          "ts": 1771582120,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 14.5385,
+          "price": 0.61,
+          "usdc": 8.8685,
+          "pos": {
+            "Dplus KIA": 53533.8054
+          },
+          "net_shares": 53533.8054,
+          "gross_inventory": 53533.8054
+        },
+        {
+          "ts": 1771582120,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 496.2,
+          "price": 0.61,
+          "usdc": 302.682,
+          "pos": {
+            "Dplus KIA": 66215.8754
+          },
+          "net_shares": 66215.8754,
+          "gross_inventory": 66215.8754
+        },
+        {
+          "ts": 1771582120,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5,
+          "pos": {
+            "Dplus KIA": 66265.8754
+          },
+          "net_shares": 66265.8754,
+          "gross_inventory": 66265.8754
+        },
+        {
+          "ts": 1771582120,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5,
+          "pos": {
+            "Dplus KIA": 66315.8754
+          },
+          "net_shares": 66315.8754,
+          "gross_inventory": 66315.8754
+        },
+        {
+          "ts": 1771582120,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5,
+          "pos": {
+            "Dplus KIA": 66365.8754
+          },
+          "net_shares": 66365.8754,
+          "gross_inventory": 66365.8754
+        },
+        {
+          "ts": 1771582126,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 307.6923,
+          "price": 0.61,
+          "usdc": 187.6923,
+          "pos": {
+            "Dplus KIA": 66686.0678
+          },
+          "net_shares": 66686.0678,
+          "gross_inventory": 66686.0678
+        },
+        {
+          "ts": 1771582130,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 51.0,
+          "price": 0.61,
+          "usdc": 31.11,
+          "pos": {
+            "Dplus KIA": 66737.0678
+          },
+          "net_shares": 66737.0678,
+          "gross_inventory": 66737.0678
+        },
+        {
+          "ts": 1771582188,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12589.5,
+          "price": 0.5995,
+          "usdc": 7547.4802,
+          "pos": {
+            "Dplus KIA": 79326.5678
+          },
+          "net_shares": 79326.5678,
+          "gross_inventory": 79326.5678
+        },
+        {
+          "ts": 1771582192,
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 6.3,
+          "price": 0.6,
+          "usdc": 3.78,
+          "pos": {
+            "Dplus KIA": 79332.8678
+          },
+          "net_shares": 79332.8678,
+          "gross_inventory": 79332.8678
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1771582014,
+          "iso": "2026-02-20T10:06:54+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12248.91,
+          "price": 0.5878180018,
+          "usdc": 7200.1298
+        },
+        {
+          "ts": 1771582014,
+          "iso": "2026-02-20T10:06:54+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 100.0,
+          "price": 0.59,
+          "usdc": 59.0
+        },
+        {
+          "ts": 1771582018,
+          "iso": "2026-02-20T10:06:58+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 34.048779,
+          "price": 0.5900000115,
+          "usdc": 20.0888
+        },
+        {
+          "ts": 1771582018,
+          "iso": "2026-02-20T10:06:58+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 4.804877,
+          "price": 0.5900001186,
+          "usdc": 2.8349
+        },
+        {
+          "ts": 1771582018,
+          "iso": "2026-02-20T10:06:58+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 85.365852,
+          "price": 0.5900000037,
+          "usdc": 50.3659
+        },
+        {
+          "ts": 1771582020,
+          "iso": "2026-02-20T10:07:00+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 753.33,
+          "price": 0.59,
+          "usdc": 444.4647
+        },
+        {
+          "ts": 1771582022,
+          "iso": "2026-02-20T10:07:02+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1000.0,
+          "price": 0.59,
+          "usdc": 590.0
+        },
+        {
+          "ts": 1771582022,
+          "iso": "2026-02-20T10:07:02+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 6.14634,
+          "price": 0.5900000651,
+          "usdc": 3.6263
+        },
+        {
+          "ts": 1771582022,
+          "iso": "2026-02-20T10:07:02+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 2439.024389,
+          "price": 0.5900000002,
+          "usdc": 1439.0244
+        },
+        {
+          "ts": 1771582024,
+          "iso": "2026-02-20T10:07:04+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 93.512194,
+          "price": 0.5900000058,
+          "usdc": 55.1722
+        },
+        {
+          "ts": 1771582026,
+          "iso": "2026-02-20T10:07:06+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1555.0,
+          "price": 0.59,
+          "usdc": 917.45
+        },
+        {
+          "ts": 1771582026,
+          "iso": "2026-02-20T10:07:06+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 182.926828,
+          "price": 0.5900000026,
+          "usdc": 107.9268
+        },
+        {
+          "ts": 1771582030,
+          "iso": "2026-02-20T10:07:10+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.59,
+          "usdc": 29.5
+        },
+        {
+          "ts": 1771582030,
+          "iso": "2026-02-20T10:07:10+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.59,
+          "usdc": 29.5
+        },
+        {
+          "ts": 1771582030,
+          "iso": "2026-02-20T10:07:10+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 7.0,
+          "price": 0.59,
+          "usdc": 4.13
+        },
+        {
+          "ts": 1771582112,
+          "iso": "2026-02-20T10:08:32+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 28.205127,
+          "price": 0.6100000188,
+          "usdc": 17.2051
+        },
+        {
+          "ts": 1771582112,
+          "iso": "2026-02-20T10:08:32+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 1711.98,
+          "price": 0.6,
+          "usdc": 1027.188
+        },
+        {
+          "ts": 1771582118,
+          "iso": "2026-02-20T10:08:38+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 42.0,
+          "price": 0.61,
+          "usdc": 25.62
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 14.53846,
+          "price": 0.6100000275,
+          "usdc": 8.8685
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12185.87,
+          "price": 0.61,
+          "usdc": 7433.3807
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 496.2,
+          "price": 0.61,
+          "usdc": 302.682
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5
+        },
+        {
+          "ts": 1771582120,
+          "iso": "2026-02-20T10:08:40+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.61,
+          "usdc": 30.5
+        },
+        {
+          "ts": 1771582126,
+          "iso": "2026-02-20T10:08:46+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12.5,
+          "price": 0.61,
+          "usdc": 7.625
+        },
+        {
+          "ts": 1771582126,
+          "iso": "2026-02-20T10:08:46+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 307.692306,
+          "price": 0.6100000011,
+          "usdc": 187.6923
+        },
+        {
+          "ts": 1771582130,
+          "iso": "2026-02-20T10:08:50+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 51.0,
+          "price": 0.61,
+          "usdc": 31.11
+        },
+        {
+          "ts": 1771582188,
+          "iso": "2026-02-20T10:09:48+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 12589.5,
+          "price": 0.5995059534,
+          "usdc": 7547.4802
+        },
+        {
+          "ts": 1771582192,
+          "iso": "2026-02-20T10:09:52+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 6.3,
+          "price": 0.6,
+          "usdc": 3.78
+        },
+        {
+          "ts": 1771582192,
+          "iso": "2026-02-20T10:09:52+00:00",
+          "side": "BUY",
+          "outcome": "Dplus KIA",
+          "size": 50.0,
+          "price": 0.6,
+          "usdc": 30.0
+        }
+      ]
+    },
+    {
+      "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+      "condition_id": "0x81a1ac67602761b91eb24de9dba24fd86311dd3b877c41fdb1ce1e9d4457a8da",
+      "realized_pnl": -45213.0619,
+      "hold_seconds": 100,
+      "n_fills": 108,
+      "n_buys": 108,
+      "n_sells": 0,
+      "buy_usdc": 45216.4919,
+      "sell_usdc": 0.0,
+      "avg_entry": 0.419,
+      "avg_exit": null,
+      "spread_captured": null,
+      "both_sides": false,
+      "entry_style": "directional_buy_sub_mid",
+      "exit_style": "hold_to_resolution_or_redeem",
+      "management_style": "scalp_sub_15m",
+      "scale_ins": 107,
+      "scale_outs": 0,
+      "max_inventory_shares": 107915.31,
+      "first_iso": "2026-02-24T07:04:46+00:00",
+      "last_iso": "2026-02-24T07:06:26+00:00",
+      "end_date": "2026-02-24",
+      "seconds_to_resolution": 60813,
+      "flattened_before_resolution": true,
+      "phases": {
+        "open_avg_buy": 0.41991036249722224,
+        "open_avg_sell": null,
+        "close_avg_buy": 0.4138889552194444,
+        "close_avg_sell": null,
+        "open_n": 36,
+        "middle_n": 36,
+        "close_n": 36
+      },
+      "outcomes_traded": [
+        "Top Esports"
+      ],
+      "inventory_timeline": [
+        {
+          "ts": 1771916686,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3000.0,
+          "price": 0.42,
+          "usdc": 1260.0,
+          "pos": {
+            "Top Esports": 3000.0
+          },
+          "net_shares": 3000.0,
+          "gross_inventory": 3000.0
+        },
+        {
+          "ts": 1771916688,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 194.5862,
+          "price": 0.42,
+          "usdc": 81.7262,
+          "pos": {
+            "Top Esports": 10008.1162
+          },
+          "net_shares": 10008.1162,
+          "gross_inventory": 10008.1162
+        },
+        {
+          "ts": 1771916692,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 241.3793,
+          "price": 0.42,
+          "usdc": 101.3793,
+          "pos": {
+            "Top Esports": 11921.9093
+          },
+          "net_shares": 11921.9093,
+          "gross_inventory": 11921.9093
+        },
+        {
+          "ts": 1771916694,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 15.0,
+          "price": 0.42,
+          "usdc": 6.3,
+          "pos": {
+            "Top Esports": 16962.7714
+          },
+          "net_shares": 16962.7714,
+          "gross_inventory": 16962.7714
+        },
+        {
+          "ts": 1771916696,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5000.0,
+          "price": 0.42,
+          "usdc": 2100.0,
+          "pos": {
+            "Top Esports": 22910.7714
+          },
+          "net_shares": 22910.7714,
+          "gross_inventory": 22910.7714
+        },
+        {
+          "ts": 1771916698,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5.0,
+          "price": 0.42,
+          "usdc": 2.1,
+          "pos": {
+            "Top Esports": 23420.7714
+          },
+          "net_shares": 23420.7714,
+          "gross_inventory": 23420.7714
+        },
+        {
+          "ts": 1771916700,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5000.0,
+          "price": 0.42,
+          "usdc": 2100.0,
+          "pos": {
+            "Top Esports": 37841.461
+          },
+          "net_shares": 37841.461,
+          "gross_inventory": 37841.461
+        },
+        {
+          "ts": 1771916702,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.8276,
+          "price": 0.42,
+          "usdc": 0.7676,
+          "pos": {
+            "Top Esports": 37845.099
+          },
+          "net_shares": 37845.099,
+          "gross_inventory": 37845.099
+        },
+        {
+          "ts": 1771916702,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.8103,
+          "price": 0.42,
+          "usdc": 0.7603,
+          "pos": {
+            "Top Esports": 37908.7024
+          },
+          "net_shares": 37908.7024,
+          "gross_inventory": 37908.7024
+        },
+        {
+          "ts": 1771916702,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.8621,
+          "price": 0.42,
+          "usdc": 0.7821,
+          "pos": {
+            "Top Esports": 37914.1851
+          },
+          "net_shares": 37914.1851,
+          "gross_inventory": 37914.1851
+        },
+        {
+          "ts": 1771916702,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3.3448,
+          "price": 0.42,
+          "usdc": 1.4048,
+          "pos": {
+            "Top Esports": 37921.1334
+          },
+          "net_shares": 37921.1334,
+          "gross_inventory": 37921.1334
+        },
+        {
+          "ts": 1771916702,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.7931,
+          "price": 0.42,
+          "usdc": 0.7531,
+          "pos": {
+            "Top Esports": 37924.7541
+          },
+          "net_shares": 37924.7541,
+          "gross_inventory": 37924.7541
+        },
+        {
+          "ts": 1771916706,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 900.9,
+          "price": 0.42,
+          "usdc": 378.378,
+          "pos": {
+            "Top Esports": 38999.8955
+          },
+          "net_shares": 38999.8955,
+          "gross_inventory": 38999.8955
+        },
+        {
+          "ts": 1771916716,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5000.0,
+          "price": 0.42,
+          "usdc": 2100.0,
+          "pos": {
+            "Top Esports": 61103.0855
+          },
+          "net_shares": 61103.0855,
+          "gross_inventory": 61103.0855
+        },
+        {
+          "ts": 1771916716,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3.39,
+          "price": 0.42,
+          "usdc": 1.4238,
+          "pos": {
+            "Top Esports": 61111.5555
+          },
+          "net_shares": 61111.5555,
+          "gross_inventory": 61111.5555
+        },
+        {
+          "ts": 1771916718,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 800.0,
+          "price": 0.42,
+          "usdc": 336.0,
+          "pos": {
+            "Top Esports": 61994.3141
+          },
+          "net_shares": 61994.3141,
+          "gross_inventory": 61994.3141
+        },
+        {
+          "ts": 1771916720,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 100.0,
+          "price": 0.42,
+          "usdc": 42.0,
+          "pos": {
+            "Top Esports": 67194.3141
+          },
+          "net_shares": 67194.3141,
+          "gross_inventory": 67194.3141
+        },
+        {
+          "ts": 1771916720,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 17.2414,
+          "price": 0.42,
+          "usdc": 7.2414,
+          "pos": {
+            "Top Esports": 69159.3855
+          },
+          "net_shares": 69159.3855,
+          "gross_inventory": 69159.3855
+        },
+        {
+          "ts": 1771916720,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 13.8965,
+          "price": 0.42,
+          "usdc": 5.8366,
+          "pos": {
+            "Top Esports": 74181.902
+          },
+          "net_shares": 74181.902,
+          "gross_inventory": 74181.902
+        },
+        {
+          "ts": 1771916722,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 500.0,
+          "price": 0.42,
+          "usdc": 210.0,
+          "pos": {
+            "Top Esports": 74988.842
+          },
+          "net_shares": 74988.842,
+          "gross_inventory": 74988.842
+        },
+        {
+          "ts": 1771916736,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3678.75,
+          "price": 0.4082,
+          "usdc": 1501.5028,
+          "pos": {
+            "Top Esports": 83678.622
+          },
+          "net_shares": 83678.622,
+          "gross_inventory": 83678.622
+        },
+        {
+          "ts": 1771916738,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 845.678,
+          "price": 0.41,
+          "usdc": 346.728,
+          "pos": {
+            "Top Esports": 84625.9949
+          },
+          "net_shares": 84625.9949,
+          "gross_inventory": 84625.9949
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84730.9102
+          },
+          "net_shares": 84730.9102,
+          "gross_inventory": 84730.9102
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84738.283
+          },
+          "net_shares": 84738.283,
+          "gross_inventory": 84738.283
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 127.1186,
+          "price": 0.41,
+          "usdc": 52.1186,
+          "pos": {
+            "Top Esports": 84867.8593
+          },
+          "net_shares": 84867.8593,
+          "gross_inventory": 84867.8593
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84875.2322
+          },
+          "net_shares": 84875.2322,
+          "gross_inventory": 84875.2322
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84882.6051
+          },
+          "net_shares": 84882.6051,
+          "gross_inventory": 84882.6051
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84887.5203
+          },
+          "net_shares": 84887.5203,
+          "gross_inventory": 84887.5203
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84894.8932
+          },
+          "net_shares": 84894.8932,
+          "gross_inventory": 84894.8932
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84902.2661
+          },
+          "net_shares": 84902.2661,
+          "gross_inventory": 84902.2661
+        },
+        {
+          "ts": 1771916742,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 84909.6389
+          },
+          "net_shares": 84909.6389,
+          "gross_inventory": 84909.6389
+        },
+        {
+          "ts": 1771916744,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 85512.0966
+          },
+          "net_shares": 85512.0966,
+          "gross_inventory": 85512.0966
+        },
+        {
+          "ts": 1771916746,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2.4576,
+          "price": 0.41,
+          "usdc": 1.0076,
+          "pos": {
+            "Top Esports": 85519.4695
+          },
+          "net_shares": 85519.4695,
+          "gross_inventory": 85519.4695
+        },
+        {
+          "ts": 1771916750,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 135.5932,
+          "price": 0.41,
+          "usdc": 55.5932,
+          "pos": {
+            "Top Esports": 85659.9779
+          },
+          "net_shares": 85659.9779,
+          "gross_inventory": 85659.9779
+        },
+        {
+          "ts": 1771916756,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 2153.0,
+          "price": 0.41,
+          "usdc": 882.73,
+          "pos": {
+            "Top Esports": 87820.9779
+          },
+          "net_shares": 87820.9779,
+          "gross_inventory": 87820.9779
+        },
+        {
+          "ts": 1771916770,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.7414,
+          "price": 0.42,
+          "usdc": 0.7314,
+          "pos": {
+            "Top Esports": 87917.0922
+          },
+          "net_shares": 87917.0922,
+          "gross_inventory": 87917.0922
+        },
+        {
+          "ts": 1771916776,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 7.5,
+          "price": 0.42,
+          "usdc": 3.15,
+          "pos": {
+            "Top Esports": 94149.6022
+          },
+          "net_shares": 94149.6022,
+          "gross_inventory": 94149.6022
+        },
+        {
+          "ts": 1771916778,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1000.0,
+          "price": 0.42,
+          "usdc": 420.0,
+          "pos": {
+            "Top Esports": 96097.6022
+          },
+          "net_shares": 96097.6022,
+          "gross_inventory": 96097.6022
+        },
+        {
+          "ts": 1771916780,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 258.6207,
+          "price": 0.42,
+          "usdc": 108.6207,
+          "pos": {
+            "Top Esports": 96932.9642
+          },
+          "net_shares": 96932.9642,
+          "gross_inventory": 96932.9642
+        },
+        {
+          "ts": 1771916784,
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 172.4138,
+          "price": 0.42,
+          "usdc": 72.4138,
+          "pos": {
+            "Top Esports": 98439.8608
+          },
+          "net_shares": 98439.8608,
+          "gross_inventory": 98439.8608
+        }
+      ],
+      "fills": [
+        {
+          "ts": 1771916686,
+          "iso": "2026-02-24T07:04:46+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3000.0,
+          "price": 0.42,
+          "usdc": 1260.0
+        },
+        {
+          "ts": 1771916686,
+          "iso": "2026-02-24T07:04:46+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 6813.53,
+          "price": 0.4167712478,
+          "usdc": 2839.6834
+        },
+        {
+          "ts": 1771916688,
+          "iso": "2026-02-24T07:04:48+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 194.586204,
+          "price": 0.4200000016,
+          "usdc": 81.7262
+        },
+        {
+          "ts": 1771916690,
+          "iso": "2026-02-24T07:04:50+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 172.413792,
+          "price": 0.4200000021,
+          "usdc": 72.4138
+        },
+        {
+          "ts": 1771916690,
+          "iso": "2026-02-24T07:04:50+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1500.0,
+          "price": 0.42,
+          "usdc": 630.0
+        },
+        {
+          "ts": 1771916692,
+          "iso": "2026-02-24T07:04:52+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 241.379309,
+          "price": 0.4200000009,
+          "usdc": 101.3793
+        },
+        {
+          "ts": 1771916692,
+          "iso": "2026-02-24T07:04:52+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5000.0,
+          "price": 0.42,
+          "usdc": 2100.0
+        },
+        {
+          "ts": 1771916692,
+          "iso": "2026-02-24T07:04:52+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 25.862066,
+          "price": 0.4200000108,
+          "usdc": 10.8621
+        },
+        {
+          "ts": 1771916694,
+          "iso": "2026-02-24T07:04:54+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 15.0,
+          "price": 0.42,
+          "usdc": 6.3
+        },
+        {
+          "ts": 1771916696,
+          "iso": "2026-02-24T07:04:56+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 948.0,
+          "price": 0.42,
+          "usdc": 398.16
+        },
+        {
+          "ts": 1771916696,
+          "iso": "2026-02-24T07:04:56+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5000.0,
+          "price": 0.42,
+          "usdc": 2100.0
+        },
+        {
+          "ts": 1771916696,
+          "iso": "2026-02-24T07:04:56+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 500.0,
+          "price": 0.42,
+          "usdc": 210.0
+        },
+        {
+          "ts": 1771916698,
+          "iso": "2026-02-24T07:04:58+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5.0,
+          "price": 0.42,
+          "usdc": 2.1
+        },
+        {
+          "ts": 1771916698,
+          "iso": "2026-02-24T07:04:58+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 5.0,
+          "price": 0.42,
+          "usdc": 2.1
+        },
+        {
+          "ts": 1771916698,
+          "iso": "2026-02-24T07:04:58+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 800.0,
+          "price": 0.42,
+          "usdc": 336.0
+        },
+        {
+          "ts": 1771916760,
+          "iso": "2026-02-24T07:06:00+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 19.796609,
+          "price": 0.4100000157,
+          "usdc": 8.1166
+        },
+        {
+          "ts": 1771916770,
+          "iso": "2026-02-24T07:06:10+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1.741378,
+          "price": 0.4200001378,
+          "usdc": 0.7314
+        },
+        {
+          "ts": 1771916770,
+          "iso": "2026-02-24T07:06:10+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3225.01,
+          "price": 0.42,
+          "usdc": 1354.5042
+        },
+        {
+          "ts": 1771916776,
+          "iso": "2026-02-24T07:06:16+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 3000.0,
+          "price": 0.42,
+          "usdc": 1260.0
+        },
+        {
+          "ts": 1771916776,
+          "iso": "2026-02-24T07:06:16+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 7.5,
+          "price": 0.42,
+          "usdc": 3.15
+        },
+        {
+          "ts": 1771916778,
+          "iso": "2026-02-24T07:06:18+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 948.0,
+          "price": 0.42,
+          "usdc": 398.16
+        },
+        {
+          "ts": 1771916778,
+          "iso": "2026-02-24T07:06:18+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1000.0,
+          "price": 0.42,
+          "usdc": 420.0
+        },
+        {
+          "ts": 1771916778,
+          "iso": "2026-02-24T07:06:18+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 32.775861,
+          "price": 0.4200000116,
+          "usdc": 13.7659
+        },
+        {
+          "ts": 1771916780,
+          "iso": "2026-02-24T07:06:20+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 543.965516,
+          "price": 0.4200000005,
+          "usdc": 228.4655
+        },
+        {
+          "ts": 1771916780,
+          "iso": "2026-02-24T07:06:20+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 258.620688,
+          "price": 0.4200000002,
+          "usdc": 108.6207
+        },
+        {
+          "ts": 1771916780,
+          "iso": "2026-02-24T07:06:20+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 34.482757,
+          "price": 0.4200000017,
+          "usdc": 14.4828
+        },
+        {
+          "ts": 1771916782,
+          "iso": "2026-02-24T07:06:22+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 1300.0,
+          "price": 0.42,
+          "usdc": 546.0
+        },
+        {
+          "ts": 1771916784,
+          "iso": "2026-02-24T07:06:24+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 172.413792,
+          "price": 0.4200000021,
+          "usdc": 72.4138
+        },
+        {
+          "ts": 1771916786,
+          "iso": "2026-02-24T07:06:26+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 9275.45,
+          "price": 0.42,
+          "usdc": 3895.689
+        },
+        {
+          "ts": 1771916786,
+          "iso": "2026-02-24T07:06:26+00:00",
+          "side": "BUY",
+          "outcome": "Top Esports",
+          "size": 200.0,
+          "price": 0.42,
+          "usdc": 84.0
+        }
+      ]
+    }
+  ]
+}

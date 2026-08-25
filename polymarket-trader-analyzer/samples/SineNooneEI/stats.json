@@ -1,0 +1,825 @@
+{
+  "username": "SineNooneEI",
+  "wallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+  "identity": "directional_hold_to_resolution",
+  "market_making": {
+    "score": 30,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Fast round-trips (<2h) in 100% of two-sided markets",
+      "High-frequency cadence (median gap 12s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0101,
+      "fast_roundtrip_rate": 1.0,
+      "spread_capture_rate": 0.0,
+      "size_cv": 3.1618,
+      "median_gap_seconds": 12,
+      "outcome_counts": {
+        "MOUZ": 1113,
+        "FURIA": 340,
+        "Spirit": 38,
+        "EDward Gaming": 63,
+        "Heroic": 127,
+        "OG": 95,
+        "Team Yandex": 740,
+        "Team Spirit": 137,
+        "Natus Vincere": 328,
+        "Top Esports": 164,
+        "JD Gaming": 508,
+        "Team Liquid": 689,
+        "Xtreme Gaming": 266,
+        "Tundra Esports": 363,
+        "DN Freecs": 186,
+        "Weibo Gaming": 193,
+        "OKSavingsBank BRION": 19,
+        "Anyones Legend": 132,
+        "Bilibili Gaming": 347,
+        "G2": 137,
+        "Ninjas in Pyjamas": 117,
+        "Movistar KOI": 383,
+        "Nongshim Red Force": 142,
+        "Team Heretics": 128,
+        "Karmine Corp Blue": 10,
+        "Team Falcons": 376,
+        "LOUD": 89,
+        "Karmine Corp": 422,
+        "DRX": 42,
+        "Los Ratones": 3,
+        "Shifters": 68,
+        "LOS": 77,
+        "G2 Esports": 545,
+        "Shopify Rebellion": 36,
+        "Cloud9": 180,
+        "Team WE": 95,
+        "Invictus Gaming": 130,
+        "DRX Challengers": 135,
+        "Hanwha Life Esports Challengers": 9,
+        "Oh My God": 45,
+        "LNG Esports": 192,
+        "Bushido Wildcats": 2,
+        "Dplus KIA": 715,
+        "ZYB Esport": 1,
+        "TLN Pirates": 20,
+        "Astralis": 75,
+        "FUT Esports": 174,
+        "paiN": 74,
+        "Vivo Keyd Stars": 38,
+        "Leviatan Esports": 26,
+        "BNK FEARX": 167,
+        "Vitality": 17,
+        "B8": 112,
+        "FaZe": 65,
+        "Execration": 34,
+        "Aurora Gaming": 98,
+        "Aurora": 216,
+        "paiN Gaming": 213,
+        "GamerLegion": 100,
+        "Yakutou Brothers": 8,
+        "BetBoom Team": 390,
+        "PARIVISION": 460,
+        "Gen.G": 192,
+        "Fnatic": 101,
+        "GIANTX": 68,
+        "T1": 61,
+        "FURIA Esports": 70,
+        "Team Vitality": 234,
+        "Sentinels": 63,
+        "T1 Academy": 42,
+        "Nongshim Esports Academy": 38,
+        "Passion UA": 2,
+        "NRG": 87,
+        "Liquid": 8,
+        "Vici Gaming": 186,
+        "3DMAX": 85,
+        "Yellow Submarine": 10,
+        "Jack Draper": 7,
+        "Legacy": 10,
+        "Yes": 100,
+        "No": 143,
+        "LYON": 26,
+        "TYLOO": 14,
+        "Wild": 10,
+        "Devils": 75,
+        "Flyers": 1,
+        "Alexander Zverev": 26,
+        "Ultra Prime": 17,
+        "SK Gaming": 49,
+        "Roman Andres Burruchaga": 15,
+        "DN SOOPers": 129,
+        "Eintracht Spandau": 1,
+        "Mariano Navone": 2,
+        "Darja Semenistaja": 1,
+        "Kiwoom DRX": 138,
+        "BC.Game Esports": 2,
+        "MIBR": 70,
+        "Wildcard": 30,
+        "FOKUS": 1,
+        "Hanwha Life Esports": 185,
+        "LGD Gaming": 174,
+        "Leviat\u00e1n Esports": 124,
+        "KT Rolster": 6,
+        "Gentle Mates": 10,
+        "ThunderTalk Gaming": 20,
+        "Virtus.pro": 23,
+        "Nongshim RedForce": 8,
+        "South America Rejects": 6,
+        "Kiwoom DRX Challengers": 14,
+        "Magic": 192,
+        "Pcific Esports": 2,
+        "Over": 73,
+        "Miomir Kecmanovic": 1,
+        "Daniel Altmaier": 3,
+        "HANJIN BRION": 87,
+        "Solary": 26,
+        "All Gamers": 95,
+        "Rex Regum Qeon": 7,
+        "FULL SENSE": 1,
+        "Galions": 65,
+        "Paper Rex": 25,
+        "magic": 16,
+        "Fluxo W7M": 28,
+        "9z": 24,
+        "Sinners": 24,
+        "TheMongolz": 42,
+        "Monte": 1,
+        "REKONIX": 35,
+        "PlayTime": 92,
+        "Nigma Galaxy": 24,
+        "ex-HEROIC": 17,
+        "Jaime Faria": 33,
+        "Kamil Majchrzak": 1,
+        "Lois Boisson": 2,
+        "Thomas Faurel": 1,
+        "GLYPH": 2,
+        "Luca Van Assche": 2,
+        "Alliance": 4,
+        "Raphael Collignon": 1,
+        "Hubert Hurkacz": 3,
+        "Sharks": 1,
+        "Stefanos Tsitsipas": 2,
+        "Jil Teichmann": 1,
+        "Pablo Carreno Busta": 35,
+        "Juan Manuel Cerundolo": 3,
+        "Maja Chwalinska": 35,
+        "Matteo Berrettini": 1,
+        "Chicago Cubs": 1,
+        "Under": 13,
+        "Jakub Mensik": 26,
+        "Matteo Arnaldi": 33,
+        "Flavio Cobolli": 1,
+        "Michele Ribecai": 1,
+        "Mark Lajal": 6,
+        "Coleman Wong": 1,
+        "Aleksandar Vukic": 39,
+        "James Duckworth": 19,
+        "Mackenzie McDonald": 1,
+        "Lynn Vision": 3,
+        "Sho Shimabukuro": 22,
+        "James McCabe": 1,
+        "Felix Auger-Aliassime": 3,
+        "Elias Ymer": 1,
+        "FlyQuest": 26,
+        "Mirra Andreeva": 165,
+        "Denis Shapovalov": 1,
+        "Tommy Paul": 1,
+        "Ekaterina Alexandrova": 1,
+        "Kimberly Birrell": 1,
+        "Daria Snigur": 2,
+        "McCartney Kessler": 4,
+        "Harriet Dart": 1,
+        "Jaqueline Cristian": 1,
+        "Alexis Galarneau": 35,
+        "BIG": 8,
+        "Global Esports": 16,
+        "XLG Gaming": 1,
+        "Rinky Hijikata": 1,
+        "Adrian Mannarino": 4,
+        "Alexander Shevchenko": 1,
+        "Anna Blinkova": 2,
+        "Hannah Klugman": 1,
+        "Viktorija Golubic": 1,
+        "Linda Noskova": 1,
+        "Marie Bouzkova": 1,
+        "Coco Gauff": 1,
+        "Alejandro Davidovich Fokina": 8,
+        "Mananchaya Sawangkaew": 2,
+        "Karen Khachanov": 1,
+        "Alexander Bublik": 1,
+        "Amanda Anisimova": 2,
+        "MIBR LOS": 1,
+        "L1ga Team": 11,
+        "Team Secret Whales": 1,
+        "1win": 4,
+        "Rune Eaters": 1,
+        "Poor Rangers": 3,
+        "Stefano Travaglia": 1,
+        "Casper Ruud": 1,
+        "Alycia Parks": 2,
+        "Clara Tauson": 2,
+        "Mayar Sherif": 1,
+        "Team Nemesis": 32,
+        "Facundo Acosta": 1,
+        "Simona Waltert": 1,
+        "Luciano Darderi": 1,
+        "100 Thieves": 18,
+        "Alex Michelsen": 1,
+        "Ashlyn Krueger": 1,
+        "Caty McNally": 2,
+        "Darja Vidmanova": 1,
+        "Diana Shnaider": 1,
+        "Team Envy": 1,
+        "Rafael Jodar": 3,
+        "Jessica Pegula": 6,
+        "Nuno Borges": 3,
+        "Corentin Moutet": 1,
+        "DN SOOPers Challengers": 24,
+        "Eintracht Frankfurt": 1,
+        "Joblife": 29,
+        "Arthur Rinderknech": 1,
+        "Enterprise Esports": 2,
+        "BoomBoys": 3,
+        "Nadia Podoroska": 1,
+        "JiJieHao": 1,
+        "Sara Bejlek": 1,
+        "Sharper Esport": 16,
+        "Team Resilience": 44,
+        "TEC Esports": 1,
+        "Fire Flux Esports": 1,
+        "TEAM VISION": 5,
+        "Xipto Esports": 1,
+        "Dignitas": 1,
+        "BESTIA": 1,
+        "Lorenzo Sonego": 1,
+        "Jan Choinski": 1,
+        "Roman Safiullin": 1
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "sports_match": 3639964.63,
+      "sports_totals": 94457.53,
+      "other": 27040.92
+    },
+    "category_counts": {
+      "sports_match": 1548,
+      "sports_totals": 29,
+      "other": 3
+    },
+    "slug_tokens": [
+      [
+        "atp",
+        62
+      ],
+      [
+        "wta",
+        41
+      ],
+      [
+        "mlb",
+        6
+      ],
+      [
+        "nhl",
+        3
+      ],
+      [
+        "nba",
+        2
+      ]
+    ],
+    "primary": "sports_match"
+  },
+  "counts": {
+    "activity": 17903,
+    "trades": 16603,
+    "buys": 16599,
+    "sells": 4,
+    "closed_positions": 1070,
+    "open_positions": 526,
+    "markets_traded": 1580,
+    "activity_types": {
+      "DEPOSIT": 4,
+      "TRADE": 16603,
+      "REDEEM": 1081,
+      "REWARD": 41,
+      "MAKER_REBATE": 106,
+      "WITHDRAWAL": 3,
+      "TAKER_REBATE": 65
+    }
+  },
+  "span": {
+    "first_ts": 1770123590,
+    "last_ts": 1787591512,
+    "first_iso": "2026-02-03T12:59:50+00:00",
+    "last_iso": "2026-08-24T17:11:52+00:00",
+    "days_active_span": 202.18
+  },
+  "pnl": {
+    "cashflow_realized": 541301.2799,
+    "cashflow_core": 523137.7892,
+    "cashflow_detail": {
+      "buys_usdc": 14979368.389143059,
+      "sells_usdc": 43765.65374,
+      "redeems_usdc": 15458740.524645988,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 5659.4295999999995,
+      "taker_rebates_usdc": 12275.9924,
+      "rewards_usdc": 228.0687,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 3761463.0818,
+    "closed_wins": 851,
+    "closed_losses": 219,
+    "closed_flat": 0,
+    "win_rate": 0.7953,
+    "profit_factor": 1.9658,
+    "win_pnl": 7656000.8005,
+    "loss_pnl": -3894537.7187,
+    "total_bought": 23329823.2324,
+    "open_cash_pnl": -2851007.4951,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -237056.6514,
+    "leaderboard_all": {
+      "rank": "318",
+      "proxyWallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+      "userName": "SineNooneEI",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 29168764.392193004,
+      "pnl": 639212.8736756515,
+      "profileImage": ""
+    }
+  },
+  "validation": {
+    "ok": false,
+    "all_checks_passed": false,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 639212.8736756515,
+        "ours": 541301.2799,
+        "ours_field": "cashflow_realized",
+        "diff": -97911.5938,
+        "match": false,
+        "volume_reference": 29168764.392193004
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 506308.1,
+        "ours": 523137.7892,
+        "ours_field": "cashflow_core",
+        "diff": 16829.6892,
+        "match": true
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 14776,
+        "ours": 16603,
+        "diff": 1827,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.5312,
+        "ours": 0.7953,
+        "diff": 0.2641,
+        "match": false
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": 3761463.0818,
+        "ours": 541301.2799,
+        "diff": -3220161.8019,
+        "match": false,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": 541301.2799,
+      "cashflow_core": 523137.7892,
+      "closed_positions_sum": 3761463.0818,
+      "trades": 16603,
+      "win_rate": 0.7953
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/SineNooneEI",
+      "raw_meta": {
+        "net_pnl": 506308.1,
+        "pos_realized_pnl": 506308.1,
+        "n_trades": 14776.0,
+        "total_buy": 8988452.55,
+        "total_sell": 2164096.95,
+        "total_redeem": 1611781.68,
+        "win_rate": 0.5312,
+        "profit_factor": 1.09,
+        "n_markets": 865.0,
+        "n_buys": 11730.0,
+        "n_sells": 3046.0,
+        "n_redeems": 120.0
+      },
+      "headline_pnl": 506308.0,
+      "win_rate_pct": 53,
+      "smart_score": 59,
+      "n_trades": 14776,
+      "realized_pnl": 506308.1
+    },
+    "leaderboard": {
+      "rank": "318",
+      "proxyWallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+      "userName": "SineNooneEI",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 29168764.392193004,
+      "pnl": 639212.8736756515,
+      "profileImage": ""
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/SineNooneEI",
+    "raw_meta": {
+      "net_pnl": 506308.1,
+      "pos_realized_pnl": 506308.1,
+      "n_trades": 14776.0,
+      "total_buy": 8988452.55,
+      "total_sell": 2164096.95,
+      "total_redeem": 1611781.68,
+      "win_rate": 0.5312,
+      "profit_factor": 1.09,
+      "n_markets": 865.0,
+      "n_buys": 11730.0,
+      "n_sells": 3046.0,
+      "n_redeems": 120.0
+    },
+    "headline_pnl": 506308.0,
+    "win_rate_pct": 53,
+    "smart_score": 59,
+    "n_trades": 14776,
+    "realized_pnl": 506308.1
+  },
+  "leaderboard": {
+    "rank": "318",
+    "proxyWallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+    "userName": "SineNooneEI",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 29168764.392193004,
+    "pnl": 639212.8736756515,
+    "profileImage": ""
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 1000,
+      "wins": 535,
+      "losses": 92,
+      "win_rate": 0.8533,
+      "total_pnl": 2659672.17,
+      "avg_pnl": 2659.67,
+      "median_pnl": 415.32
+    },
+    "30s-2m": {
+      "n": 303,
+      "wins": 150,
+      "losses": 55,
+      "win_rate": 0.7317,
+      "total_pnl": 349628.85,
+      "avg_pnl": 1153.89,
+      "median_pnl": 0.0
+    },
+    "2-5m": {
+      "n": 76,
+      "wins": 40,
+      "losses": 17,
+      "win_rate": 0.7018,
+      "total_pnl": 12785.85,
+      "avg_pnl": 168.23,
+      "median_pnl": 272.91
+    },
+    "5-15m": {
+      "n": 25,
+      "wins": 11,
+      "losses": 9,
+      "win_rate": 0.55,
+      "total_pnl": 16849.11,
+      "avg_pnl": 673.96,
+      "median_pnl": 0.0
+    },
+    "15m+": {
+      "n": 176,
+      "wins": 109,
+      "losses": 37,
+      "win_rate": 0.7466,
+      "total_pnl": 722527.1,
+      "avg_pnl": 4105.27,
+      "median_pnl": 3556.02
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 29,
+      "wins": 8,
+      "losses": 5,
+      "win_rate": 0.6154,
+      "total_pnl": 68889.33,
+      "avg_pnl": 2375.49,
+      "median_pnl": 0.0
+    },
+    "20-40\u00a2": {
+      "n": 382,
+      "wins": 151,
+      "losses": 65,
+      "win_rate": 0.6991,
+      "total_pnl": 1219824.16,
+      "avg_pnl": 3193.26,
+      "median_pnl": 0.0
+    },
+    "40-60\u00a2": {
+      "n": 664,
+      "wins": 314,
+      "losses": 100,
+      "win_rate": 0.7585,
+      "total_pnl": 994426.76,
+      "avg_pnl": 1497.63,
+      "median_pnl": 0.0
+    },
+    "60-80\u00a2": {
+      "n": 473,
+      "wins": 349,
+      "losses": 37,
+      "win_rate": 0.9041,
+      "total_pnl": 1410157.89,
+      "avg_pnl": 2981.31,
+      "median_pnl": 2782.39
+    },
+    "80-100\u00a2": {
+      "n": 32,
+      "wins": 23,
+      "losses": 3,
+      "win_rate": 0.8846,
+      "total_pnl": 68164.95,
+      "avg_pnl": 2130.15,
+      "median_pnl": 947.65
+    }
+  },
+  "family": {
+    "Other": {
+      "n": 1568,
+      "wins": 840,
+      "losses": 207,
+      "win_rate": 0.8023,
+      "total_pnl": 3759968.01,
+      "avg_pnl": 2397.94,
+      "median_pnl": 507.84
+    },
+    "Over/Under": {
+      "n": 7,
+      "wins": 4,
+      "losses": 1,
+      "win_rate": 0.8,
+      "total_pnl": 72156.06,
+      "avg_pnl": 10308.01,
+      "median_pnl": 33.94
+    },
+    "Yes/No moneyline": {
+      "n": 5,
+      "wins": 1,
+      "losses": 2,
+      "win_rate": 0.3333,
+      "total_pnl": -70660.99,
+      "avg_pnl": -14132.2,
+      "median_pnl": 0.0
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 6040506.91,
+      "taker_usdc": 8842477.65,
+      "maker_pct": 40.59,
+      "taker_pct": 59.41,
+      "maker_fills": 14924,
+      "taker_fills": 1675
+    },
+    "exit": {
+      "maker_usdc": 0.0,
+      "taker_usdc": 44281.26,
+      "maker_pct": 0.0,
+      "taker_pct": 100.0,
+      "maker_fills": 0,
+      "taker_fills": 4
+    },
+    "patterns": {
+      "enter_maker_exit_taker": 2,
+      "enter_taker_exit_taker": 2
+    },
+    "classified": true
+  },
+  "both_sides": {
+    "n": 16,
+    "rate": 0.0101
+  },
+  "clip_size_usdc": {
+    "median": 29.115,
+    "mean": 899.0704,
+    "p90": 2314.6342,
+    "p99": 13250.0,
+    "max": 86562.021
+  },
+  "campaigns": {
+    "n": 1,
+    "pct": 0.06,
+    "avg_entries": 2,
+    "pnl": 1245.03,
+    "avg_pnl": 1245.03,
+    "win_rate": 1.0,
+    "single_n": 1579,
+    "single_pnl": 3760218.05,
+    "single_avg_pnl": 2381.39
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.6677,
+    "hold_to_resolution_style_n": 1576,
+    "redeems_usdc": 15458740.524645988,
+    "merges_usdc": 0.0
+  },
+  "equity": {
+    "final": 541301.2799,
+    "max_drawdown": -414391.7601,
+    "max_drawdown_pct_of_peak": -6.3101,
+    "longest_drawdown_days": 6,
+    "daily_sharpe_ann": 0.853,
+    "n_days": 195
+  },
+  "contribution": {
+    "top10_winners_pnl": 815751.94,
+    "top10_winners_share_of_wins_pct": 10.79,
+    "top10_losers_pnl": -679068.23,
+    "top10_losers_share_of_losses_pct": 17.87,
+    "top10_winners": [
+      {
+        "title": "LoL: Fnatic vs SK Gaming - Game 2 Winner",
+        "pnl": 239727.93,
+        "hold_s": 2
+      },
+      {
+        "title": "Dota 2: Aurora vs MOUZ (BO3) - DreamLeague Stage 2",
+        "pnl": 129076.88,
+        "hold_s": 37238
+      },
+      {
+        "title": "LoL: T1 vs Dplus KIA (BO5) - LCK Cup Playoffs",
+        "pnl": 103788.42,
+        "hold_s": 14838
+      },
+      {
+        "title": "LoL: Dplus KIA vs DRX - Game 3 Winner",
+        "pnl": 66004.7,
+        "hold_s": 0
+      },
+      {
+        "title": "Toronto Blue Jays vs. Baltimore Orioles: O/U 7.5",
+        "pnl": 48354.78,
+        "hold_s": 3766
+      },
+      {
+        "title": "Roland Garros ATP: Jakub Mensik vs Andrey Rublev",
+        "pnl": 47048.83,
+        "hold_s": 11384
+      },
+      {
+        "title": "Roland Garros WTA: Marta Kostyuk vs Mirra Andreeva",
+        "pnl": 46860.92,
+        "hold_s": 0
+      },
+      {
+        "title": "LoL: Cloud9 vs FlyQuest (BO3) - LCS Lock In Group Stage",
+        "pnl": 45702.27,
+        "hold_s": 7980
+      },
+      {
+        "title": "LoL: DRX vs OKSavingsBank BRION - Game 2 Winner",
+        "pnl": 44785.59,
+        "hold_s": 48
+      },
+      {
+        "title": "San Diego Padres vs. Washington Nationals: O/U 7.5",
+        "pnl": 44401.63,
+        "hold_s": 9065
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+        "pnl": -45213.06,
+        "hold_s": 100
+      },
+      {
+        "title": "LoL: Dplus KIA vs DN Freecs - Game 3 Winner",
+        "pnl": -47509.46,
+        "hold_s": 178
+      },
+      {
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "pnl": -49989.72,
+        "hold_s": 30052
+      },
+      {
+        "title": "LoL: Cloud9 vs LYON (BO5) - LCS Lock In Playoffs",
+        "pnl": -52198.45,
+        "hold_s": 10512
+      },
+      {
+        "title": "Counter-Strike: FURIA vs Vitality (BO5) - IEM Krakow Playoffs",
+        "pnl": -59675.53,
+        "hold_s": 23200
+      },
+      {
+        "title": "LoL: DRX vs Nongshim Red Force - Game 1 Winner",
+        "pnl": -62131.89,
+        "hold_s": 82
+      },
+      {
+        "title": "LoL: Cloud9 vs LYON - Game 2 Winner",
+        "pnl": -69220.58,
+        "hold_s": 0
+      },
+      {
+        "title": "Will Chelsea FC win on 2026-03-14?",
+        "pnl": -81935.18,
+        "hold_s": 116
+      },
+      {
+        "title": "Counter-Strike: paiN vs Passion UA (BO3) - ESL Pro League Stage 1",
+        "pnl": -84487.84,
+        "hold_s": 20
+      },
+      {
+        "title": "Spread: Pistons (-8.5)",
+        "pnl": -126706.51,
+        "hold_s": 14298
+      }
+    ],
+    "profit_factor": 1.9658
+  },
+  "adverse_management": {
+    "n_early_adverse": 1,
+    "avg_pnl": 4415.07,
+    "median_t_first_sell": 82,
+    "median_hold": 82
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 0,
+    "avg_pnl": null,
+    "median_mfe_capture": null,
+    "mean_mfe_capture": null
+  },
+  "avg_down": {
+    "n_losers": 210,
+    "n_losers_with_red_buys": 27,
+    "pct_losers": 12.86,
+    "total_delta_if_skipped_on_losers": 0.0,
+    "global_fifo_sim": -1372.56,
+    "global_fifo_never_red_buy": -1372.56,
+    "global_delta": 0.0
+  },
+  "latency": {
+    "time_to_mfe_median": null,
+    "time_to_mfe_p25": null,
+    "time_to_mfe_p75": null,
+    "time_to_mfe_p90": null,
+    "mfe_ge_10c_n": 0,
+    "mfe_ge_10c_within_30s": 0,
+    "mfe_ge_10c_within_60s": 0,
+    "pct_big_within_60s": 0.0
+  },
+  "risk": {
+    "max_inventory_shares": 179555.21,
+    "max_dd": -414391.7601,
+    "max_dd_pct": -6.3101,
+    "longest_dd_days": 6
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -601.1817,
+    "time_to_mfe_med": 64
+  }
+}

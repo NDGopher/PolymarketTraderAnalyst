@@ -1,0 +1,4203 @@
+{
+  "username": "SineNooneEI",
+  "wallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+  "counts": {
+    "activity": 17903,
+    "trades": 16603,
+    "buys": 16599,
+    "sells": 4,
+    "closed_positions": 1070,
+    "open_positions": 526,
+    "markets_traded": 1580,
+    "activity_types": {
+      "DEPOSIT": 4,
+      "TRADE": 16603,
+      "REDEEM": 1081,
+      "REWARD": 41,
+      "MAKER_REBATE": 106,
+      "WITHDRAWAL": 3,
+      "TAKER_REBATE": 65
+    }
+  },
+  "span": {
+    "first_ts": 1770123590,
+    "last_ts": 1787591512,
+    "first_iso": "2026-02-03T12:59:50+00:00",
+    "last_iso": "2026-08-24T17:11:52+00:00",
+    "days_active_span": 202.18
+  },
+  "pnl": {
+    "cashflow_realized": 541301.2799,
+    "cashflow_core": 523137.7892,
+    "cashflow_detail": {
+      "buys_usdc": 14979368.389143059,
+      "sells_usdc": 43765.65374,
+      "redeems_usdc": 15458740.524645988,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 5659.4295999999995,
+      "taker_rebates_usdc": 12275.9924,
+      "rewards_usdc": 228.0687,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 3761463.0818,
+    "closed_wins": 851,
+    "closed_losses": 219,
+    "closed_flat": 0,
+    "win_rate": 0.7953,
+    "profit_factor": 1.9658,
+    "win_pnl": 7656000.8005,
+    "loss_pnl": -3894537.7187,
+    "total_bought": 23329823.2324,
+    "open_cash_pnl": -2851007.4951,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -237056.6514,
+    "leaderboard_all": {
+      "rank": "318",
+      "proxyWallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+      "userName": "SineNooneEI",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 29168764.392193004,
+      "pnl": 639212.8736756515,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 541301.2799,
+    "max_drawdown": -470522.9903,
+    "points": 17896,
+    "curve_sample": [
+      {
+        "timestamp": 1770123590,
+        "equity": -58603.8347,
+        "delta": -58603.8347,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs FaZe (BO3) - IEM Krakow Group B",
+        "usdc": 58603.8347
+      },
+      {
+        "timestamp": 1770196544,
+        "equity": -97398.3782,
+        "delta": -4763.4936,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: EDward Gaming vs Team WE - Game 1 Winner",
+        "usdc": 4763.4936
+      },
+      {
+        "timestamp": 1770289323,
+        "equity": 47706.990569,
+        "delta": -7.4359,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: MOUZ vs Team Yandex (BO1) - BLAST Slam Group Stage",
+        "usdc": 7.4359
+      },
+      {
+        "timestamp": 1770289615,
+        "equity": 40887.004395,
+        "delta": -36.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs GamerLegion (BO1) - BLAST Slam Group Stage",
+        "usdc": 36.75
+      },
+      {
+        "timestamp": 1770314783,
+        "equity": 21170.924918,
+        "delta": -640.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Heroic (BO1) - BLAST Slam Group Stage",
+        "usdc": 640.0
+      },
+      {
+        "timestamp": 1770322075,
+        "equity": 15425.350488,
+        "delta": -208.163265,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Tundra Esports (BO1) - BLAST Slam Group Stage",
+        "usdc": 208.163265
+      },
+      {
+        "timestamp": 1770366565,
+        "equity": -16343.269439,
+        "delta": -51761.4097,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Invictus Gaming vs Weibo Gaming - Game 2 Winner",
+        "usdc": 51761.4097
+      },
+      {
+        "timestamp": 1770369993,
+        "equity": -49145.921132,
+        "delta": -4.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs DN Freecs (BO3) - LCK Cup Play-In",
+        "usdc": 4.68
+      },
+      {
+        "timestamp": 1770373277,
+        "equity": -56835.45026,
+        "delta": -3.513513,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs DN Freecs (BO3) - LCK Cup Play-In",
+        "usdc": 3.513513
+      },
+      {
+        "timestamp": 1770375643,
+        "equity": -60785.512222,
+        "delta": -0.894838,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs DN Freecs - Game 1 Winner",
+        "usdc": 0.894838
+      },
+      {
+        "timestamp": 1770382095,
+        "equity": 90334.851987,
+        "delta": -55.714285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: GamerLegion vs MOUZ (BO3) - BLAST Slam Play-In",
+        "usdc": 55.714285
+      },
+      {
+        "timestamp": 1770391409,
+        "equity": 74299.88481,
+        "delta": -170.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: GamerLegion vs MOUZ (BO3) - BLAST Slam Play-In",
+        "usdc": 170.0
+      },
+      {
+        "timestamp": 1770457019,
+        "equity": 102772.738063,
+        "delta": 14598.31,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: KT Rolster vs DN Freecs - Game 2 Winner",
+        "usdc": 14598.31
+      },
+      {
+        "timestamp": 1770457323,
+        "equity": 98216.897696,
+        "delta": -56.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 56.16
+      },
+      {
+        "timestamp": 1770461065,
+        "equity": 82637.588349,
+        "delta": -1.615384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 1.615384
+      },
+      {
+        "timestamp": 1770463611,
+        "equity": 73856.080006,
+        "delta": -0.786153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 0.786153
+      },
+      {
+        "timestamp": 1770464029,
+        "equity": 72217.184026,
+        "delta": -26.788461,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 26.788461
+      },
+      {
+        "timestamp": 1770472833,
+        "equity": 42509.985752,
+        "delta": -357.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 357.7
+      },
+      {
+        "timestamp": 1770473903,
+        "equity": 29915.473033,
+        "delta": -183.076923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+        "usdc": 183.076923
+      },
+      {
+        "timestamp": 1770482803,
+        "equity": 59060.592736,
+        "delta": -3.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Shifters vs Karmine Corp Blue (BO1) - LEC Versus Regular Season",
+        "usdc": 3.3
+      },
+      {
+        "timestamp": 1770486819,
+        "equity": 42990.512276,
+        "delta": -63.753103,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Xtreme Gaming - Game 2 Winner",
+        "usdc": 63.753103
+      },
+      {
+        "timestamp": 1770495687,
+        "equity": 68220.546229,
+        "delta": -6600.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Karmine Corp vs GIANTX (BO1) - LEC Versus Regular Season",
+        "usdc": 6600.0
+      },
+      {
+        "timestamp": 1770544531,
+        "equity": 32635.572853,
+        "delta": -1320.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: DRX vs Nongshim Red Force - Game 3 Winner",
+        "usdc": 1320.0
+      },
+      {
+        "timestamp": 1770558151,
+        "equity": -29459.371074,
+        "delta": -23.529411,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs Vitality (BO5) - IEM Krakow Playoffs",
+        "usdc": 23.529411
+      },
+      {
+        "timestamp": 1770560405,
+        "equity": -52381.824017,
+        "delta": -5.510588,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs Vitality (BO5) - IEM Krakow Playoffs",
+        "usdc": 5.510588
+      },
+      {
+        "timestamp": 1770565323,
+        "equity": -60924.18234,
+        "delta": -71.3682,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs Heroic - Game 2 Winner",
+        "usdc": 71.3682
+      },
+      {
+        "timestamp": 1770569937,
+        "equity": -57039.578075,
+        "delta": -0.590625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs Vitality - Map 2 Winner",
+        "usdc": 0.590625
+      },
+      {
+        "timestamp": 1770570129,
+        "equity": -59295.591775,
+        "delta": -719.247,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs GamerLegion - Game 1 Winner",
+        "usdc": 719.247
+      },
+      {
+        "timestamp": 1770570499,
+        "equity": -81291.41886,
+        "delta": -51.1875,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs Vitality - Map 2 Winner",
+        "usdc": 51.1875
+      },
+      {
+        "timestamp": 1770573613,
+        "equity": -102138.775689,
+        "delta": -812.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs GamerLegion - Game 2 Winner",
+        "usdc": 812.5
+      },
+      {
+        "timestamp": 1770575897,
+        "equity": -117666.827593,
+        "delta": -112.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Natus Vincere vs Movistar KOI (BO1) - LEC Versus Regular Season",
+        "usdc": 112.0
+      },
+      {
+        "timestamp": 1770575951,
+        "equity": -132498.755807,
+        "delta": -284.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Natus Vincere vs Movistar KOI (BO1) - LEC Versus Regular Season",
+        "usdc": 284.2
+      },
+      {
+        "timestamp": 1770582455,
+        "equity": -162616.305684,
+        "delta": -12.73,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs G2 Esports (BO1) - LEC Versus Regular Season",
+        "usdc": 12.73
+      },
+      {
+        "timestamp": 1770588205,
+        "equity": -216604.704799,
+        "delta": 25313.735158,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Team Liquid vs GamerLegion - Game 2 Winner",
+        "usdc": 25313.735158
+      },
+      {
+        "timestamp": 1770598273,
+        "equity": -154586.615368,
+        "delta": -56.925,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Cloud9 vs FlyQuest (BO3) - LCS Lock In Group Stage",
+        "usdc": 56.925
+      },
+      {
+        "timestamp": 1770598321,
+        "equity": -203306.767026,
+        "delta": -1.795555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Cloud9 vs FlyQuest (BO3) - LCS Lock In Group Stage",
+        "usdc": 1.795555
+      },
+      {
+        "timestamp": 1770625421,
+        "equity": -5821.11636,
+        "delta": -3564.19,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Top Esports vs Team WE - Game 3 Winner",
+        "usdc": 3564.19
+      },
+      {
+        "timestamp": 1770710777,
+        "equity": 9718.021848,
+        "delta": -720.731,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Hanwha Life Esports Challengers vs DRX Challengers - Game 1 Winner",
+        "usdc": 720.731
+      },
+      {
+        "timestamp": 1770713931,
+        "equity": -6233.315242,
+        "delta": -6.37,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Hanwha Life Esports Challengers vs DRX Challengers - Game 2 Winner",
+        "usdc": 6.37
+      },
+      {
+        "timestamp": 1770723505,
+        "equity": -16186.712864,
+        "delta": -2.936507,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: EDward Gaming vs Oh My God - Game 3 Winner",
+        "usdc": 2.936507
+      },
+      {
+        "timestamp": 1770801465,
+        "equity": -24323.693587,
+        "delta": -1.908947,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team WE vs LNG Esports - Game 1 Winner",
+        "usdc": 1.908947
+      },
+      {
+        "timestamp": 1770805095,
+        "equity": -67354.26238,
+        "delta": -2.987435,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team WE vs LNG Esports - Game 2 Winner",
+        "usdc": 2.987435
+      },
+      {
+        "timestamp": 1770971225,
+        "equity": -133273.073888,
+        "delta": -40.9216,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Liquid (BO5) - BLAST Slam Playoffs",
+        "usdc": 40.9216
+      },
+      {
+        "timestamp": 1770975733,
+        "equity": -135671.673211,
+        "delta": -32.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Liquid (BO5) - BLAST Slam Playoffs",
+        "usdc": 32.64
+      },
+      {
+        "timestamp": 1770981155,
+        "equity": -178865.64695,
+        "delta": -2.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DRX - Game 4 Winner",
+        "usdc": 2.225806
+      },
+      {
+        "timestamp": 1770984099,
+        "equity": -199042.231175,
+        "delta": -2.125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DRX (BO5) - LCK Cup Playoffs",
+        "usdc": 2.125
+      },
+      {
+        "timestamp": 1770984161,
+        "equity": -228162.820037,
+        "delta": -70.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DRX (BO5) - LCK Cup Playoffs",
+        "usdc": 70.0
+      },
+      {
+        "timestamp": 1770988713,
+        "equity": -255754.746792,
+        "delta": -291.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Liquid - Game 1 Winner",
+        "usdc": 291.5
+      },
+      {
+        "timestamp": 1770997069,
+        "equity": -184319.932846,
+        "delta": -16.211739,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Liquid - Game 3 Winner",
+        "usdc": 16.211739
+      },
+      {
+        "timestamp": 1771002115,
+        "equity": -82847.738444,
+        "delta": -1.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Liquid - Game 4 Winner",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1771060985,
+        "equity": 17170.432007,
+        "delta": -61.290322,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Aurora Gaming vs FUT Esports - Map 2 Winner",
+        "usdc": 61.290322
+      },
+      {
+        "timestamp": 1771065633,
+        "equity": -45419.782585,
+        "delta": -105.49,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Vivo Keyd Stars vs Leviatan Esports (BO5) - CBLOL Cup Playoffs",
+        "usdc": 105.49
+      },
+      {
+        "timestamp": 1771091641,
+        "equity": -66527.605015,
+        "delta": -3537.413,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs paiN - Map 2 Winner",
+        "usdc": 3537.413
+      },
+      {
+        "timestamp": 1771094555,
+        "equity": -84599.052152,
+        "delta": -59.815263,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs paiN (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 59.815263
+      },
+      {
+        "timestamp": 1771166429,
+        "equity": -143196.444322,
+        "delta": -748.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs FUT Esports - Map 2 Winner",
+        "usdc": 748.92
+      },
+      {
+        "timestamp": 1771166659,
+        "equity": -163875.240072,
+        "delta": -10.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs FUT Esports - Map 2 Winner",
+        "usdc": 10.03
+      },
+      {
+        "timestamp": 1771181213,
+        "equity": -195547.523185,
+        "delta": -20.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Natus Vincere - Game 3 Winner",
+        "usdc": 20.5
+      },
+      {
+        "timestamp": 1771193701,
+        "equity": -213283.39026,
+        "delta": -10.72,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Cloud9 vs FlyQuest - Game 2 Winner",
+        "usdc": 10.72
+      },
+      {
+        "timestamp": 1771230035,
+        "equity": -4639.155102,
+        "delta": -4054.4415,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs B8 (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 4054.4415
+      },
+      {
+        "timestamp": 1771235007,
+        "equity": -19463.36686,
+        "delta": -18.77472,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FaZe vs PARIVISION (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 18.77472
+      },
+      {
+        "timestamp": 1771235649,
+        "equity": -24244.878228,
+        "delta": -787.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs B8 (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 787.36
+      },
+      {
+        "timestamp": 1771239793,
+        "equity": -27812.797355,
+        "delta": -15.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 15.5
+      },
+      {
+        "timestamp": 1771240539,
+        "equity": -36847.528119,
+        "delta": -44.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 44.64
+      },
+      {
+        "timestamp": 1771241703,
+        "equity": -45407.136402,
+        "delta": -13.927536,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 13.927536
+      },
+      {
+        "timestamp": 1771244263,
+        "equity": -60931.627553,
+        "delta": -2246.376811,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality (BO3) - PGL Cluj-Napoca Group Stage",
+        "usdc": 2246.376811
+      },
+      {
+        "timestamp": 1771246193,
+        "equity": -66638.856489,
+        "delta": -68.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Vitality vs Movistar KOI (BO3) - LEC Versus Playoffs",
+        "usdc": 68.4
+      },
+      {
+        "timestamp": 1771257747,
+        "equity": -75604.819132,
+        "delta": -3.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality - Map 2 Winner",
+        "usdc": 3.333333
+      },
+      {
+        "timestamp": 1771257801,
+        "equity": -78342.527184,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Vitality - Map 2 Winner",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1771263991,
+        "equity": -113399.362674,
+        "delta": -38.8996,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Vitality vs Movistar KOI - Game 1 Winner",
+        "usdc": 38.8996
+      },
+      {
+        "timestamp": 1771264037,
+        "equity": -132744.480949,
+        "delta": -473.67,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Vitality vs Movistar KOI - Game 1 Winner",
+        "usdc": 473.67
+      },
+      {
+        "timestamp": 1771325805,
+        "equity": 38816.820183,
+        "delta": -8.8832,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs FUT Esports - Map 2 Winner",
+        "usdc": 8.8832
+      },
+      {
+        "timestamp": 1771343731,
+        "equity": 1197.85688,
+        "delta": -10.285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Heretics vs G2 Esports - Game 1 Winner",
+        "usdc": 10.285
+      },
+      {
+        "timestamp": 1771352423,
+        "equity": -106408.63812,
+        "delta": -493.466153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Karmine Corp vs GIANTX - Game 2 Winner",
+        "usdc": 493.466153
+      },
+      {
+        "timestamp": 1771412228,
+        "equity": 144069.141003,
+        "delta": -2139.7922,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Aurora Gaming vs Astralis - Map 2 Winner",
+        "usdc": 2139.7922
+      },
+      {
+        "timestamp": 1771421968,
+        "equity": 131716.177914,
+        "delta": -95.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Xtreme Gaming vs Execration - Game 1 Winner",
+        "usdc": 95.7
+      },
+      {
+        "timestamp": 1771443342,
+        "equity": 122560.706101,
+        "delta": -41.571428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: MOUZ vs Execration - Game 2 Winner",
+        "usdc": 41.571428
+      },
+      {
+        "timestamp": 1771491550,
+        "equity": 130630.186437,
+        "delta": -230.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: DN Freecs vs DRX - Game 2 Winner",
+        "usdc": 230.16
+      },
+      {
+        "timestamp": 1771499332,
+        "equity": 112936.1187,
+        "delta": -2.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: paiN Gaming vs Yakutou Brothers - Game 1 Winner",
+        "usdc": 2.85
+      },
+      {
+        "timestamp": 1771505094,
+        "equity": 76924.983121,
+        "delta": -41.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Liquid - Game 2 Winner",
+        "usdc": 41.4
+      },
+      {
+        "timestamp": 1771518348,
+        "equity": 69920.478915,
+        "delta": -5.546666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: OG vs Team Liquid - Game 1 Winner",
+        "usdc": 5.546666
+      },
+      {
+        "timestamp": 1771518896,
+        "equity": 55908.858679,
+        "delta": -163.636363,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Aurora - Game 1 Winner",
+        "usdc": 163.636363
+      },
+      {
+        "timestamp": 1771519084,
+        "equity": 50768.391624,
+        "delta": -0.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs paiN Gaming - Game 1 Winner",
+        "usdc": 0.45
+      },
+      {
+        "timestamp": 1771519096,
+        "equity": 50740.165922,
+        "delta": -0.625714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs paiN Gaming - Game 1 Winner",
+        "usdc": 0.625714
+      },
+      {
+        "timestamp": 1771527350,
+        "equity": 34132.370323,
+        "delta": -1.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs Natus Vincere - Game 1 Winner",
+        "usdc": 1.35
+      },
+      {
+        "timestamp": 1771574038,
+        "equity": 79725.5462,
+        "delta": 7060.103086,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Team Yandex vs paiN Gaming - Game 1 Winner",
+        "usdc": 7060.103086
+      },
+      {
+        "timestamp": 1771578490,
+        "equity": 56286.220501,
+        "delta": -46.923076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DN Freecs - Game 2 Winner",
+        "usdc": 46.923076
+      },
+      {
+        "timestamp": 1771579294,
+        "equity": 30096.57107,
+        "delta": -28.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Team Falcons vs PARIVISION - Map 2 Winner",
+        "usdc": 28.8
+      },
+      {
+        "timestamp": 1771579364,
+        "equity": 27896.354632,
+        "delta": -0.687058,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Team Falcons vs PARIVISION - Map 2 Winner",
+        "usdc": 0.687058
+      },
+      {
+        "timestamp": 1771579374,
+        "equity": 27866.693395,
+        "delta": -0.687058,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Team Falcons vs PARIVISION - Map 2 Winner",
+        "usdc": 0.687058
+      },
+      {
+        "timestamp": 1771582022,
+        "equity": -13968.967956,
+        "delta": -3.626341,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DN Freecs - Game 3 Winner",
+        "usdc": 3.626341
+      },
+      {
+        "timestamp": 1771585344,
+        "equity": -54302.409271,
+        "delta": -151.09756,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs DN SOOPers - Game 4 Winner",
+        "usdc": 151.09756
+      },
+      {
+        "timestamp": 1771605250,
+        "equity": 35690.930489,
+        "delta": -8.554,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Disguised vs Team Liquid (BO5) - LCS Lock In Playoffs",
+        "usdc": 8.554
+      },
+      {
+        "timestamp": 1771606982,
+        "equity": 24447.915295,
+        "delta": -79.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Disguised vs Team Liquid (BO5) - LCS Lock In Playoffs",
+        "usdc": 79.2
+      },
+      {
+        "timestamp": 1771624930,
+        "equity": -8269.121724,
+        "delta": -5.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Disguised vs Team Liquid - Game 2 Winner",
+        "usdc": 5.76
+      },
+      {
+        "timestamp": 1771661398,
+        "equity": 41646.245661,
+        "delta": -37.619047,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Gen.G vs BNK FEARX - Game 1 Winner",
+        "usdc": 37.619047
+      },
+      {
+        "timestamp": 1771668366,
+        "equity": -29111.357083,
+        "delta": -8529.1068,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Gen.G vs BNK FEARX - Game 3 Winner",
+        "usdc": 8529.1068
+      },
+      {
+        "timestamp": 1771674508,
+        "equity": -71675.759233,
+        "delta": -1.0752,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Xtreme Gaming - Game 2 Winner",
+        "usdc": 1.0752
+      },
+      {
+        "timestamp": 1771685350,
+        "equity": -88986.563332,
+        "delta": -346.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: MOUZ vs Tundra Esports - Game 2 Winner",
+        "usdc": 346.32
+      },
+      {
+        "timestamp": 1771686714,
+        "equity": -100523.59455,
+        "delta": -63.529152,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs Team Vitality (BO3) - LEC Versus Playoffs",
+        "usdc": 63.529152
+      },
+      {
+        "timestamp": 1771689520,
+        "equity": -10001.580248,
+        "delta": -36.906666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: PARIVISION vs MOUZ - Map 2 Winner",
+        "usdc": 36.906666
+      },
+      {
+        "timestamp": 1771689716,
+        "equity": -32559.148443,
+        "delta": -9.285714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: PARIVISION vs MOUZ - Map 2 Winner",
+        "usdc": 9.285714
+      },
+      {
+        "timestamp": 1771694500,
+        "equity": -41759.721031,
+        "delta": -254.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs PARIVISION - Game 1 Winner",
+        "usdc": 254.4
+      },
+      {
+        "timestamp": 1771696058,
+        "equity": -59335.328316,
+        "delta": -3.5448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: GIANTX vs Team Heretics (BO3) - LEC Versus Playoffs",
+        "usdc": 3.5448
+      },
+      {
+        "timestamp": 1771699562,
+        "equity": -70969.726157,
+        "delta": -765.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs Team Vitality - Game 1 Winner",
+        "usdc": 765.0
+      },
+      {
+        "timestamp": 1771747776,
+        "equity": -31405.69908,
+        "delta": -545.8928,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: T1 vs Dplus KIA - Game 1 Winner",
+        "usdc": 545.8928
+      },
+      {
+        "timestamp": 1771747880,
+        "equity": -49679.978002,
+        "delta": -3376.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: T1 vs Dplus KIA - Game 1 Winner",
+        "usdc": 3376.48
+      },
+      {
+        "timestamp": 1771751400,
+        "equity": -67062.778085,
+        "delta": -37.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: T1 vs Dplus KIA - Game 2 Winner",
+        "usdc": 37.0
+      },
+      {
+        "timestamp": 1771761550,
+        "equity": -213265.856153,
+        "delta": -2.125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs MOUZ (BO3) - PGL Cluj-Napoca Playoffs",
+        "usdc": 2.125
+      },
+      {
+        "timestamp": 1771764130,
+        "equity": -260451.269575,
+        "delta": -350.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs MOUZ - Map 2 Winner",
+        "usdc": 350.0
+      },
+      {
+        "timestamp": 1771764384,
+        "equity": -292190.212234,
+        "delta": -2.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs MOUZ - Map 2 Winner",
+        "usdc": 2.333333
+      },
+      {
+        "timestamp": 1771782004,
+        "equity": 21563.626164,
+        "delta": -24.444444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Natus Vincere vs GIANTX (BO3) - LEC Versus Playoffs",
+        "usdc": 24.444444
+      },
+      {
+        "timestamp": 1771789168,
+        "equity": -21612.819005,
+        "delta": -34.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Karmine Corp vs Team Vitality - Game 2 Winner",
+        "usdc": 34.0
+      },
+      {
+        "timestamp": 1771793822,
+        "equity": -76228.267548,
+        "delta": -2.654166,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs Team Falcons - Game 2 Winner",
+        "usdc": 2.654166
+      },
+      {
+        "timestamp": 1771857870,
+        "equity": 12631.785568,
+        "delta": -7312.459,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Xtreme Gaming - Game 2 Winner",
+        "usdc": 7312.459
+      },
+      {
+        "timestamp": 1771892616,
+        "equity": -6835.546774,
+        "delta": 19999.905451,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: G2 Esports vs Movistar KOI - Game 2 Winner",
+        "usdc": 19999.905451
+      },
+      {
+        "timestamp": 1771916696,
+        "equity": -37693.963094,
+        "delta": -210.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+        "usdc": 210.0
+      },
+      {
+        "timestamp": 1771916736,
+        "equity": -63004.583089,
+        "delta": -41.694915,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+        "usdc": 41.694915
+      },
+      {
+        "timestamp": 1771916778,
+        "equity": -68150.258424,
+        "delta": -13.765862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+        "usdc": 13.765862
+      },
+      {
+        "timestamp": 1771943628,
+        "equity": -119438.879246,
+        "delta": -233.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs PARIVISION - Game 2 Winner",
+        "usdc": 233.2
+      },
+      {
+        "timestamp": 1771999522,
+        "equity": -43584.385952,
+        "delta": 29999.995293,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: BetBoom Team vs PARIVISION (BO3) - DreamLeague Stage 2",
+        "usdc": 29999.995293
+      },
+      {
+        "timestamp": 1772000030,
+        "equity": -7572.178653,
+        "delta": -377.192982,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Invictus Gaming - Game 1 Winner",
+        "usdc": 377.192982
+      },
+      {
+        "timestamp": 1772004016,
+        "equity": -13046.207654,
+        "delta": -61.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Invictus Gaming - Game 2 Winner",
+        "usdc": 61.48
+      },
+      {
+        "timestamp": 1772008568,
+        "equity": -30301.939568,
+        "delta": -71.073448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Tundra Esports (BO3) - DreamLeague Stage 2",
+        "usdc": 71.073448
+      },
+      {
+        "timestamp": 1772012870,
+        "equity": -64493.631152,
+        "delta": -202.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Xtreme Gaming (BO3) - DreamLeague Stage 2",
+        "usdc": 202.1
+      },
+      {
+        "timestamp": 1772025674,
+        "equity": -71628.068549,
+        "delta": -165.946382,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Xtreme Gaming (BO3) - DreamLeague Stage 2",
+        "usdc": 165.946382
+      },
+      {
+        "timestamp": 1772035454,
+        "equity": -135026.540839,
+        "delta": -9.850746,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs PARIVISION - Game 2 Winner",
+        "usdc": 9.850746
+      },
+      {
+        "timestamp": 1772068004,
+        "equity": -150765.993127,
+        "delta": -168.627567,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend (BO5) - LPL Playoffs",
+        "usdc": 168.627567
+      },
+      {
+        "timestamp": 1772069136,
+        "equity": -151818.413394,
+        "delta": -1.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend (BO5) - LPL Playoffs",
+        "usdc": 1.3
+      },
+      {
+        "timestamp": 1772073008,
+        "equity": -153221.659758,
+        "delta": -0.702702,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend (BO5) - LPL Playoffs",
+        "usdc": 0.702702
+      },
+      {
+        "timestamp": 1772076514,
+        "equity": -157308.323974,
+        "delta": -8.818918,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend (BO5) - LPL Playoffs",
+        "usdc": 8.818918
+      },
+      {
+        "timestamp": 1772097288,
+        "equity": -12338.683824,
+        "delta": -72.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend - Game 1 Winner",
+        "usdc": 72.6
+      },
+      {
+        "timestamp": 1772100576,
+        "equity": -49421.381157,
+        "delta": -25.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend - Game 2 Winner",
+        "usdc": 25.35
+      },
+      {
+        "timestamp": 1772107626,
+        "equity": -82058.522189,
+        "delta": -31.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Anyone's Legend - Game 4 Winner",
+        "usdc": 31.56
+      },
+      {
+        "timestamp": 1772133366,
+        "equity": -4439.592638,
+        "delta": 14999.96922,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: JD Gaming vs Anyone's Legend - Game 3 Winner",
+        "usdc": 14999.96922
+      },
+      {
+        "timestamp": 1772189013,
+        "equity": 64476.555953,
+        "delta": -2.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs Team Liquid - Game 1 Winner",
+        "usdc": 2.75
+      },
+      {
+        "timestamp": 1772202203,
+        "equity": 39351.845858,
+        "delta": -8580.2214,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Xtreme Gaming vs Team Falcons - Game 1 Winner",
+        "usdc": 8580.2214
+      },
+      {
+        "timestamp": 1772270207,
+        "equity": 4833.469331,
+        "delta": -17.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: BNK FEARX vs Dplus KIA - Game 2 Winner",
+        "usdc": 17.92
+      },
+      {
+        "timestamp": 1772285949,
+        "equity": -17294.130511,
+        "delta": -1653.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs Xtreme Gaming (BO3) - DreamLeague Playoffs",
+        "usdc": 1653.0
+      },
+      {
+        "timestamp": 1772301251,
+        "equity": 8673.312325,
+        "delta": -76.6224,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Tundra Esports - Game 1 Winner",
+        "usdc": 76.6224
+      },
+      {
+        "timestamp": 1772305355,
+        "equity": -35525.840902,
+        "delta": -10.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Movistar KOI vs Karmine Corp - Game 4 Winner",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1772308825,
+        "equity": -77508.81076,
+        "delta": -62.252195,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Movistar KOI vs Karmine Corp (BO5) - LEC Versus Playoffs",
+        "usdc": 62.252195
+      },
+      {
+        "timestamp": 1772353345,
+        "equity": 114567.541783,
+        "delta": -4612.6234,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Gen.G vs BNK FEARX - Game 1 Winner",
+        "usdc": 4612.6234
+      },
+      {
+        "timestamp": 1772358767,
+        "equity": 99644.396724,
+        "delta": -1.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Karmine Corp (BO5) - LEC Versus Playoffs",
+        "usdc": 1.333333
+      },
+      {
+        "timestamp": 1772368185,
+        "equity": 82694.103327,
+        "delta": -0.639344,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Karmine Corp (BO5) - LEC Versus Playoffs",
+        "usdc": 0.639344
+      },
+      {
+        "timestamp": 1772377795,
+        "equity": 77156.460518,
+        "delta": -15.747049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs Aurora - Game 1 Winner",
+        "usdc": 15.747049
+      },
+      {
+        "timestamp": 1772382147,
+        "equity": 101700.569179,
+        "delta": -753.1822,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs Aurora - Game 2 Winner",
+        "usdc": 753.1822
+      },
+      {
+        "timestamp": 1772385499,
+        "equity": 82008.122579,
+        "delta": -767.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Karmine Corp - Game 2 Winner",
+        "usdc": 767.0
+      },
+      {
+        "timestamp": 1772396121,
+        "equity": -27687.151858,
+        "delta": -204.90008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Karmine Corp (BO5) - LEC Versus Playoffs",
+        "usdc": 204.90008
+      },
+      {
+        "timestamp": 1772452739,
+        "equity": 44291.786341,
+        "delta": -795.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Top Esports - Game 4 Winner",
+        "usdc": 795.0
+      },
+      {
+        "timestamp": 1772452841,
+        "equity": 18019.03211,
+        "delta": -2.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Top Esports - Game 4 Winner",
+        "usdc": 2.6
+      },
+      {
+        "timestamp": 1772531985,
+        "equity": -104976.8432,
+        "delta": -938.6384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: T1 Academy vs Nongshim Esports Academy - Game 3 Winner",
+        "usdc": 938.6384
+      },
+      {
+        "timestamp": 1772619617,
+        "equity": -102081.524974,
+        "delta": -1.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Bilibili Gaming - Game 2 Winner",
+        "usdc": 1.8
+      },
+      {
+        "timestamp": 1772630029,
+        "equity": -122324.556101,
+        "delta": -1.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Bilibili Gaming (BO5) - LPL Playoffs",
+        "usdc": 1.9
+      },
+      {
+        "timestamp": 1772705513,
+        "equity": -86057.822714,
+        "delta": -5442.7905,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Anyone's Legend - Game 2 Winner",
+        "usdc": 5442.7905
+      },
+      {
+        "timestamp": 1772881145,
+        "equity": -90823.499451,
+        "delta": -3145.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs Aurora Gaming (BO3) - ESL Pro League Stage 2",
+        "usdc": 3145.12
+      },
+      {
+        "timestamp": 1772902393,
+        "equity": -96917.299687,
+        "delta": -108.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs Heroic - Game 2 Winner",
+        "usdc": 108.333333
+      },
+      {
+        "timestamp": 1772957765,
+        "equity": -44963.205641,
+        "delta": -1537.517241,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Xtreme Gaming vs Team Nemesis - Game 1 Winner",
+        "usdc": 1537.517241
+      },
+      {
+        "timestamp": 1772961561,
+        "equity": -77366.10548,
+        "delta": -4110.7008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Bilibili Gaming vs JD Gaming - Game 1 Winner",
+        "usdc": 4110.7008
+      },
+      {
+        "timestamp": 1772970347,
+        "equity": -115033.922389,
+        "delta": -12.3328,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: paiN vs Aurora Gaming - Map 2 Winner",
+        "usdc": 12.3328
+      },
+      {
+        "timestamp": 1772978539,
+        "equity": -151577.370244,
+        "delta": -262.23,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: OG vs BetBoom Team - Game 2 Winner",
+        "usdc": 262.23
+      },
+      {
+        "timestamp": 1772982827,
+        "equity": -153946.081574,
+        "delta": -35.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs TheMongolz (BO3) - ESL Pro League Stage 2",
+        "usdc": 35.0
+      },
+      {
+        "timestamp": 1772990077,
+        "equity": -125081.193345,
+        "delta": -139.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs TheMongolz - Map 2 Winner",
+        "usdc": 139.68
+      },
+      {
+        "timestamp": 1773051755,
+        "equity": -44644.094295,
+        "delta": -7.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs 3DMAX (BO3) - ESL Pro League Stage 2",
+        "usdc": 7.6
+      },
+      {
+        "timestamp": 1773052405,
+        "equity": -76921.497814,
+        "delta": -219.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: FURIA vs paiN (BO3) - ESL Pro League Stage 2",
+        "usdc": 219.0
+      },
+      {
+        "timestamp": 1773053127,
+        "equity": -104120.670798,
+        "delta": -2.346153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Heroic (BO3) - PGL Wallachia Group Stage",
+        "usdc": 2.346153
+      },
+      {
+        "timestamp": 1773055353,
+        "equity": -111641.514471,
+        "delta": -0.612903,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs 3DMAX (BO3) - ESL Pro League Stage 2",
+        "usdc": 0.612903
+      },
+      {
+        "timestamp": 1773057411,
+        "equity": -119551.369505,
+        "delta": -0.612903,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs 3DMAX (BO3) - ESL Pro League Stage 2",
+        "usdc": 0.612903
+      },
+      {
+        "timestamp": 1773063705,
+        "equity": -136116.690782,
+        "delta": -3.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Natus Vincere vs Vici Gaming (BO3) - PGL Wallachia Group Stage",
+        "usdc": 3.05
+      },
+      {
+        "timestamp": 1773083413,
+        "equity": -160940.520631,
+        "delta": -92.6477,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Heroic - Game 2 Winner",
+        "usdc": 92.6477
+      },
+      {
+        "timestamp": 1773135225,
+        "equity": 1962.725299,
+        "delta": -21.8694,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Team Yandex - Game 2 Winner",
+        "usdc": 21.8694
+      },
+      {
+        "timestamp": 1773140987,
+        "equity": -12977.171614,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Heroic vs Natus Vincere (BO3) - PGL Wallachia Group Stage",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1773241873,
+        "equity": -35334.380425,
+        "delta": -18.1104,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Tundra Esports - Game 2 Winner",
+        "usdc": 18.1104
+      },
+      {
+        "timestamp": 1773328647,
+        "equity": 160.904884,
+        "delta": 120.34205,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Team Spirit vs Vici Gaming - Game 2 Winner",
+        "usdc": 120.34205
+      },
+      {
+        "timestamp": 1773397533,
+        "equity": -15809.27912,
+        "delta": -6.363636,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Nongshim RedForce vs NRG (BO3) - VCT Masters Santiago Playoffs",
+        "usdc": 6.363636
+      },
+      {
+        "timestamp": 1773411225,
+        "equity": -51713.845525,
+        "delta": -1561.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs Tundra Esports (BO3) - PGL Wallachia Playoffs",
+        "usdc": 1561.16
+      },
+      {
+        "timestamp": 1773419293,
+        "equity": -68400.044117,
+        "delta": -0.733333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Spirit - Game 2 Winner",
+        "usdc": 0.733333
+      },
+      {
+        "timestamp": 1773448893,
+        "equity": -9418.389866,
+        "delta": 20494.62,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Counter-Strike: Astralis vs Spirit - Map 2 Winner",
+        "usdc": 20494.62
+      },
+      {
+        "timestamp": 1773476671,
+        "equity": -27242.654411,
+        "delta": -7065.454545,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Heroic vs Team Liquid (BO3) - PGL Wallachia Playoffs",
+        "usdc": 7065.454545
+      },
+      {
+        "timestamp": 1773502825,
+        "equity": -48309.062071,
+        "delta": -1.773584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 1.773584
+      },
+      {
+        "timestamp": 1773502839,
+        "equity": -48418.031463,
+        "delta": -1.028679,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 1.028679
+      },
+      {
+        "timestamp": 1773502849,
+        "equity": -49313.629922,
+        "delta": -50.680188,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 50.680188
+      },
+      {
+        "timestamp": 1773502851,
+        "equity": -49664.731787,
+        "delta": -8.867924,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 8.867924
+      },
+      {
+        "timestamp": 1773502855,
+        "equity": -50000.279484,
+        "delta": -2.066226,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 2.066226
+      },
+      {
+        "timestamp": 1773502859,
+        "equity": -51150.669817,
+        "delta": -19.86415,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 19.86415
+      },
+      {
+        "timestamp": 1773502859,
+        "equity": -51411.750364,
+        "delta": -2.678113,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Yandex - Game 2 Winner",
+        "usdc": 2.678113
+      },
+      {
+        "timestamp": 1773505361,
+        "equity": -70751.917182,
+        "delta": -2046.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea FC win on 2026-03-14?",
+        "usdc": 2046.1
+      },
+      {
+        "timestamp": 1773505443,
+        "equity": -112658.492958,
+        "delta": -13.4634,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea FC win on 2026-03-14?",
+        "usdc": 13.4634
+      },
+      {
+        "timestamp": 1773506179,
+        "equity": -140920.428614,
+        "delta": -7360.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Natus Vincere vs FUT Esports (BO3) - ESL Pro League Playoffs",
+        "usdc": 7360.0
+      },
+      {
+        "timestamp": 1773512175,
+        "equity": -156189.787402,
+        "delta": -13.662,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will AS Saint-\u00c9tienne win on 2026-03-14?",
+        "usdc": 13.662
+      },
+      {
+        "timestamp": 1773512243,
+        "equity": -160957.422133,
+        "delta": -93.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will AS Saint-\u00c9tienne win on 2026-03-14?",
+        "usdc": 93.38
+      },
+      {
+        "timestamp": 1773512467,
+        "equity": -171154.407049,
+        "delta": -1222.7582,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will AS Saint-\u00c9tienne win on 2026-03-14?",
+        "usdc": 1222.7582
+      },
+      {
+        "timestamp": 1773572405,
+        "equity": -92032.915562,
+        "delta": -33.139534,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Liquid - Game 2 Winner",
+        "usdc": 33.139534
+      },
+      {
+        "timestamp": 1773579055,
+        "equity": -96812.793623,
+        "delta": -10.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Liquid (BO3) - PGL Wallachia Playoffs",
+        "usdc": 10.12
+      },
+      {
+        "timestamp": 1773666653,
+        "equity": -96842.088231,
+        "delta": -17.908604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Bilibili Gaming vs BNK FEARX - Game 1 Winner",
+        "usdc": 17.908604
+      },
+      {
+        "timestamp": 1773678387,
+        "equity": -128712.315662,
+        "delta": -2201.927,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Bilibili Gaming vs BNK FEARX (BO5) - First Stand Group A",
+        "usdc": 2201.927
+      },
+      {
+        "timestamp": 1773688177,
+        "equity": -143741.46028,
+        "delta": -22.01,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Team Secret Whales - Game 3 Winner",
+        "usdc": 22.01
+      },
+      {
+        "timestamp": 1773918079,
+        "equity": -120567.840947,
+        "delta": -48.529411,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: PARIVISION vs NIP - Map 2 Winner",
+        "usdc": 48.529411
+      },
+      {
+        "timestamp": 1774111605,
+        "equity": -104648.958548,
+        "delta": -3882.352941,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Bilibili Gaming vs JD Gaming - Game 2 Winner",
+        "usdc": 3882.352941
+      },
+      {
+        "timestamp": 1774182195,
+        "equity": -87340.83187,
+        "delta": -33.47826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TYLOO vs Team Falcons - Map 2 Winner",
+        "usdc": 33.47826
+      },
+      {
+        "timestamp": 1774188957,
+        "equity": -102563.435847,
+        "delta": -2391.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Bilibili Gaming - Game 2 Winner",
+        "usdc": 2391.3
+      },
+      {
+        "timestamp": 1774194957,
+        "equity": -121890.57994,
+        "delta": -188.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Tundra Esports vs BetBoom Team - Game 2 Winner",
+        "usdc": 188.6
+      },
+      {
+        "timestamp": 1774195513,
+        "equity": -127457.456355,
+        "delta": -122.7306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Bilibili Gaming - Game 4 Winner",
+        "usdc": 122.7306
+      },
+      {
+        "timestamp": 1774203633,
+        "equity": -119161.374746,
+        "delta": -6.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: OG vs Nigma Galaxy - Game 1 Winner",
+        "usdc": 6.6
+      },
+      {
+        "timestamp": 1774276631,
+        "equity": -116815.254828,
+        "delta": -32.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Team Falcons vs FURIA - Map 2 Winner",
+        "usdc": 32.4
+      },
+      {
+        "timestamp": 1774367575,
+        "equity": -124322.657402,
+        "delta": -22.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs MOUZ - Game 2 Winner",
+        "usdc": 22.4
+      },
+      {
+        "timestamp": 1774382449,
+        "equity": -138724.266461,
+        "delta": -7.857142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Xtreme Gaming - Game 1 Winner",
+        "usdc": 7.857142
+      },
+      {
+        "timestamp": 1774382831,
+        "equity": -143909.012667,
+        "delta": -425.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs OG - Game 1 Winner",
+        "usdc": 425.78
+      },
+      {
+        "timestamp": 1774532261,
+        "equity": -125682.897948,
+        "delta": -960.784313,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs Team Spirit - Game 2 Winner",
+        "usdc": 960.784313
+      },
+      {
+        "timestamp": 1774542111,
+        "equity": -186099.267013,
+        "delta": -2495.717,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs Tundra Esports - Game 1 Winner",
+        "usdc": 2495.717
+      },
+      {
+        "timestamp": 1774544795,
+        "equity": -189826.905438,
+        "delta": -90.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Predators",
+        "usdc": 90.0
+      },
+      {
+        "timestamp": 1774623569,
+        "equity": -120023.586497,
+        "delta": -71.185714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Aurora Gaming vs TheMongolz - Map 2 Winner",
+        "usdc": 71.185714
+      },
+      {
+        "timestamp": 1774695393,
+        "equity": -73052.280212,
+        "delta": -4350.2318,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: LNG Esports vs ThunderTalk Gaming - Game 1 Winner",
+        "usdc": 4350.2318
+      },
+      {
+        "timestamp": 1774883299,
+        "equity": -69469.765921,
+        "delta": -32.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Natus Vincere vs SK Gaming - Game 1 Winner",
+        "usdc": 32.75
+      },
+      {
+        "timestamp": 1775128207,
+        "equity": -93620.636545,
+        "delta": -17.3964,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Kiwoom DRX vs DN SOOPers - Game 2 Winner",
+        "usdc": 17.3964
+      },
+      {
+        "timestamp": 1775296189,
+        "equity": -69170.915973,
+        "delta": -79.563513,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Kiwoom DRX vs Dplus KIA (BO3) - LCK Rounds 1-2",
+        "usdc": 79.563513
+      },
+      {
+        "timestamp": 1775318345,
+        "equity": -60365.645456,
+        "delta": -63.9768,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Natus Vincere vs Team Vitality - Game 1 Winner",
+        "usdc": 63.9768
+      },
+      {
+        "timestamp": 1775379875,
+        "equity": 5357.262711,
+        "delta": -4.255,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Nongshim Red Force vs DN SOOPers - Game 2 Winner",
+        "usdc": 4.255
+      },
+      {
+        "timestamp": 1775383749,
+        "equity": -23948.577486,
+        "delta": -1.422972,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Bilibili Gaming - Game 2 Winner",
+        "usdc": 1.422972
+      },
+      {
+        "timestamp": 1775411325,
+        "equity": -61376.579067,
+        "delta": -109.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs G2 Esports - Game 2 Winner",
+        "usdc": 109.8
+      },
+      {
+        "timestamp": 1775466405,
+        "equity": 4203.725802,
+        "delta": -10.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Legacy vs MIBR (BO3) - PGL Bucharest Group Stage",
+        "usdc": 10.8
+      },
+      {
+        "timestamp": 1775643519,
+        "equity": 17513.232814,
+        "delta": -68.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: T1 vs Gen.G - Game 1 Winner",
+        "usdc": 68.0
+      },
+      {
+        "timestamp": 1775811759,
+        "equity": 22584.268236,
+        "delta": -4572.1008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: DN SOOPers vs T1 - Game 2 Winner",
+        "usdc": 4572.1008
+      },
+      {
+        "timestamp": 1775923841,
+        "equity": -5846.398069,
+        "delta": -4.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Team Vitality (BO3) - LEC Regular Season",
+        "usdc": 4.55
+      },
+      {
+        "timestamp": 1775995413,
+        "equity": -35291.387824,
+        "delta": -20.01,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Bilibili Gaming - Game 1 Winner",
+        "usdc": 20.01
+      },
+      {
+        "timestamp": 1776042041,
+        "equity": 31458.86246,
+        "delta": 44.8735,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 44.8735
+      },
+      {
+        "timestamp": 1776157019,
+        "equity": 44106.748002,
+        "delta": -8.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team WE vs Oh My God (BO3) - Esports World Cup China Qualifier Phase 2",
+        "usdc": 8.2
+      },
+      {
+        "timestamp": 1776190470,
+        "equity": 25190.745772,
+        "delta": -16.315789,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs Aurora Gaming (BO3) - IEM Rio Group B",
+        "usdc": 16.315789
+      },
+      {
+        "timestamp": 1776237720,
+        "equity": 65408.644892,
+        "delta": -3.5415,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Nongshim Red Force vs BNK FEARX (BO3) - LCK Rounds 1-2",
+        "usdc": 3.5415
+      },
+      {
+        "timestamp": 1776247892,
+        "equity": 25059.60294,
+        "delta": -2.4516,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Dplus KIA - Game 1 Winner",
+        "usdc": 2.4516
+      },
+      {
+        "timestamp": 1776343270,
+        "equity": -15685.293766,
+        "delta": -21.6118,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Karmine Corp vs Team Heretics (BO3) - VCT EMEA Group Alpha",
+        "usdc": 21.6118
+      },
+      {
+        "timestamp": 1776347818,
+        "equity": -20819.467122,
+        "delta": -79.166666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Eternal Fire vs Team Vitality (BO3) - VCT EMEA Group Omega",
+        "usdc": 79.166666
+      },
+      {
+        "timestamp": 1776448610,
+        "equity": -96009.012118,
+        "delta": -8748.2745,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Vitality vs Natus Vincere - Map 1 Winner",
+        "usdc": 8748.2745
+      },
+      {
+        "timestamp": 1776538306,
+        "equity": -188310.099281,
+        "delta": -13.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs SK Gaming - Game 2 Winner",
+        "usdc": 13.12
+      },
+      {
+        "timestamp": 1776614758,
+        "equity": -113254.904243,
+        "delta": 22077.64251,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Xtreme Gaming vs Aurora (BO3) - PGL Wallachia Group Stage",
+        "usdc": 22077.64251
+      },
+      {
+        "timestamp": 1776671792,
+        "equity": -62556.217969,
+        "delta": -6.949152,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BetBoom Team vs Team Falcons (BO3) - PGL Wallachia Group Stage",
+        "usdc": 6.949152
+      },
+      {
+        "timestamp": 1776676468,
+        "equity": -71906.008943,
+        "delta": -7.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs Natus Vincere (BO3) - PGL Wallachia Group Stage",
+        "usdc": 7.5
+      },
+      {
+        "timestamp": 1776733214,
+        "equity": 4327.217622,
+        "delta": 66.7207,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 66.7207
+      },
+      {
+        "timestamp": 1776756646,
+        "equity": -25509.704285,
+        "delta": -4.450877,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Xtreme Gaming vs Vici Gaming (BO3) - PGL Wallachia Group Stage",
+        "usdc": 4.450877
+      },
+      {
+        "timestamp": 1776758794,
+        "equity": -37628.638625,
+        "delta": -96.078431,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA Challengers vs Kiwoom DRX Challengers - Game 1 Winner",
+        "usdc": 96.078431
+      },
+      {
+        "timestamp": 1776783048,
+        "equity": -24467.515217,
+        "delta": -29.26415,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Virtus.pro vs MOUZ (BO3) - PGL Wallachia Group Stage",
+        "usdc": 29.26415
+      },
+      {
+        "timestamp": 1776856428,
+        "equity": -95416.163764,
+        "delta": -3889.277,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 3889.277
+      },
+      {
+        "timestamp": 1776861086,
+        "equity": -96910.941802,
+        "delta": -0.960784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 0.960784
+      },
+      {
+        "timestamp": 1776864632,
+        "equity": -97672.56637,
+        "delta": -1.441176,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 1.441176
+      },
+      {
+        "timestamp": 1776866760,
+        "equity": -104817.534312,
+        "delta": -24.019607,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 24.019607
+      },
+      {
+        "timestamp": 1776869280,
+        "equity": -117269.890943,
+        "delta": -70.540784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Pistons (-8.5)",
+        "usdc": 70.540784
+      },
+      {
+        "timestamp": 1777019492,
+        "equity": -79678.668281,
+        "delta": -266.4612,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Team Spirit (BO3) - PGL Wallachia Playoffs",
+        "usdc": 266.4612
+      },
+      {
+        "timestamp": 1777050318,
+        "equity": -119236.084,
+        "delta": 28258.301657,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: JD Gaming vs Invictus Gaming - Game 2 Winner",
+        "usdc": 28258.301657
+      },
+      {
+        "timestamp": 1777125906,
+        "equity": -146451.389356,
+        "delta": -83.18204,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs BetBoom Team - Game 2 Winner",
+        "usdc": 83.18204
+      },
+      {
+        "timestamp": 1777190786,
+        "equity": -136950.643334,
+        "delta": -14.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs Team Falcons (BO3) - PGL Wallachia Playoffs",
+        "usdc": 14.7
+      },
+      {
+        "timestamp": 1777203136,
+        "equity": -165194.790305,
+        "delta": -4.246666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Weibo Gaming vs Bilibili Gaming - Game 1 Winner",
+        "usdc": 4.246666
+      },
+      {
+        "timestamp": 1777223490,
+        "equity": -196895.156028,
+        "delta": -10.71,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: FURIA Esports vs LOUD - Game 2 Winner",
+        "usdc": 10.71
+      },
+      {
+        "timestamp": 1777270862,
+        "equity": -174511.180565,
+        "delta": 21117.153022,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Aurora vs Team Falcons - Game 2 Winner",
+        "usdc": 21117.153022
+      },
+      {
+        "timestamp": 1777457864,
+        "equity": -159345.765076,
+        "delta": -2.451891,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Ninjas in Pyjamas vs JD Gaming - Game 2 Winner",
+        "usdc": 2.451891
+      },
+      {
+        "timestamp": 1777557950,
+        "equity": -222641.216443,
+        "delta": -6.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Ultra Prime vs EDward Gaming (BO3) - LPL Group Nirvana",
+        "usdc": 6.7
+      },
+      {
+        "timestamp": 1777705110,
+        "equity": -122384.143476,
+        "delta": -1491.91274,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: T1 vs FULL SENSE (BO3) - VCT Pacific Group Omega",
+        "usdc": 1491.91274
+      },
+      {
+        "timestamp": 1777707528,
+        "equity": -129493.437338,
+        "delta": -8.985507,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Kiwoom DRX vs Nongshim Red Force (BO3) - LCK Rounds 1-2",
+        "usdc": 8.985507
+      },
+      {
+        "timestamp": 1777712530,
+        "equity": -142649.100826,
+        "delta": -4491.4102,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Kiwoom DRX vs Nongshim Red Force (BO3) - LCK Rounds 1-2",
+        "usdc": 4491.4102
+      },
+      {
+        "timestamp": 1777738280,
+        "equity": -183945.039362,
+        "delta": -3244.4927,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Leviatan Esports vs paiN Gaming - Game 1 Winner",
+        "usdc": 3244.4927
+      },
+      {
+        "timestamp": 1777744856,
+        "equity": -109237.929508,
+        "delta": -3.620689,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: FURIA Esports vs RED Canids - Game 1 Winner",
+        "usdc": 3.620689
+      },
+      {
+        "timestamp": 1777800470,
+        "equity": -108395.378375,
+        "delta": -3.128205,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fluxo W7M vs LOS (BO3) - CBLOL Regular Season",
+        "usdc": 3.128205
+      },
+      {
+        "timestamp": 1777810072,
+        "equity": -136149.938129,
+        "delta": -0.754385,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: LOUD vs Vivo Keyd Stars (BO3) - CBLOL Regular Season",
+        "usdc": 0.754385
+      },
+      {
+        "timestamp": 1777816914,
+        "equity": -155245.123647,
+        "delta": -22.894736,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Ninjas in Pyjamas vs Bilibili Gaming (BO3) - LPL Group Ascend",
+        "usdc": 22.894736
+      },
+      {
+        "timestamp": 1777830274,
+        "equity": -157364.408754,
+        "delta": -620.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fluxo W7M vs LOS (BO3) - CBLOL Regular Season",
+        "usdc": 620.0
+      },
+      {
+        "timestamp": 1777914142,
+        "equity": -104138.055528,
+        "delta": -6328.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs Team Vitality (BO3) - LEC Regular Season",
+        "usdc": 6328.34
+      },
+      {
+        "timestamp": 1777973368,
+        "equity": -112943.719179,
+        "delta": -1.259245,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: TYLOO vs All Gamers (BO3) - VCT China Playoffs",
+        "usdc": 1.259245
+      },
+      {
+        "timestamp": 1777973422,
+        "equity": -113337.109154,
+        "delta": -4.034905,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: TYLOO vs All Gamers (BO3) - VCT China Playoffs",
+        "usdc": 4.034905
+      },
+      {
+        "timestamp": 1778056234,
+        "equity": -84985.665857,
+        "delta": -0.328571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team WE vs Invictus Gaming (BO3) - LPL Group Ascend",
+        "usdc": 0.328571
+      },
+      {
+        "timestamp": 1778069382,
+        "equity": -127319.759173,
+        "delta": -13187.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Top Esports vs JD Gaming - Game 1 Winner",
+        "usdc": 13187.2
+      },
+      {
+        "timestamp": 1778143162,
+        "equity": -91219.786475,
+        "delta": -456.7095,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: HANJIN BRION vs BNK FEARX (BO3) - LCK Rounds 1-2",
+        "usdc": 456.7095
+      },
+      {
+        "timestamp": 1778256994,
+        "equity": -100960.576703,
+        "delta": -117.460317,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: GIANTX vs Movistar KOI - Game 1 Winner",
+        "usdc": 117.460317
+      },
+      {
+        "timestamp": 1778373922,
+        "equity": -106055.390914,
+        "delta": 43.9735,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 43.9735
+      },
+      {
+        "timestamp": 1778413164,
+        "equity": -126325.163103,
+        "delta": -29.589041,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: LOUD vs Leviat\u00e1n Esports (BO3) - VCT Americas Stage 1 Group Alpha",
+        "usdc": 29.589041
+      },
+      {
+        "timestamp": 1778487978,
+        "equity": -69068.65343,
+        "delta": -20.0096,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MOUZ vs 9z (BO3) - PGL Astana Group Stage",
+        "usdc": 20.0096
+      },
+      {
+        "timestamp": 1778577844,
+        "equity": -91152.491489,
+        "delta": -5404.56767,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Passion UA vs Sinners (BO3) - IEM Atlanta Group B",
+        "usdc": 5404.56767
+      },
+      {
+        "timestamp": 1778579745,
+        "equity": -113661.917353,
+        "delta": -67.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: TheMongolz vs Team Falcons (BO3) - PGL Astana Group Stage",
+        "usdc": 67.36
+      },
+      {
+        "timestamp": 1778594424,
+        "equity": -108224.085821,
+        "delta": -770.668,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Invictus Gaming vs Bilibili Gaming (BO3) - LPL Group Ascend",
+        "usdc": 770.668
+      },
+      {
+        "timestamp": 1778715156,
+        "equity": -66748.612591,
+        "delta": 30299.329995,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: DN SOOPers vs Dplus KIA - Game 1 Winner",
+        "usdc": 30299.329995
+      },
+      {
+        "timestamp": 1778753203,
+        "equity": -43397.708233,
+        "delta": -8.496486,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: LNG Esports vs LGD Gaming - Game 2 Winner",
+        "usdc": 8.496486
+      },
+      {
+        "timestamp": 1778758465,
+        "equity": -54746.827986,
+        "delta": -1.227272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Xtreme Gaming vs Tundra Esports - Game 2 Winner",
+        "usdc": 1.227272
+      },
+      {
+        "timestamp": 1778831682,
+        "equity": 3302.924513,
+        "delta": -5104.99795,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Spirit vs G2 (BO3) - PGL Astana Playoffs",
+        "usdc": 5104.99795
+      },
+      {
+        "timestamp": 1778835448,
+        "equity": -27707.106199,
+        "delta": -2513.325,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: HANJIN BRION vs DN SOOPers (BO3) - LCK Rounds 1-2",
+        "usdc": 2513.325
+      },
+      {
+        "timestamp": 1778846604,
+        "equity": -60385.164893,
+        "delta": -7.034186,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: REKONIX vs Tundra Esports (BO3) - DreamLeague Group B",
+        "usdc": 7.034186
+      },
+      {
+        "timestamp": 1778848681,
+        "equity": -74606.583907,
+        "delta": -0.8162,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: REKONIX vs Tundra Esports (BO3) - DreamLeague Group B",
+        "usdc": 0.8162
+      },
+      {
+        "timestamp": 1778856885,
+        "equity": -102848.871795,
+        "delta": -57.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PlayTime vs BetBoom Team - Game 2 Winner",
+        "usdc": 57.0
+      },
+      {
+        "timestamp": 1778870939,
+        "equity": -144500.701335,
+        "delta": -10.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Team Falcons - Game 2 Winner",
+        "usdc": 10.4
+      },
+      {
+        "timestamp": 1778926351,
+        "equity": 14571.62679,
+        "delta": -216.24,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: REKONIX vs Xtreme Gaming - Game 1 Winner",
+        "usdc": 216.24
+      },
+      {
+        "timestamp": 1779006207,
+        "equity": 19719.84417,
+        "delta": -8.8245,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs ex-HEROIC (BO3) - DreamLeague Group A",
+        "usdc": 8.8245
+      },
+      {
+        "timestamp": 1779016774,
+        "equity": -26595.050789,
+        "delta": -11.47,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Vici Gaming - Game 2 Winner",
+        "usdc": 11.47
+      },
+      {
+        "timestamp": 1779095118,
+        "equity": -5725.710328,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs HANJIN BRION - Game 2 Winner",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1779099085,
+        "equity": -16797.525822,
+        "delta": -2.308032,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: DN SOOPers vs Nongshim Red Force - Game 1 Winner",
+        "usdc": 2.308032
+      },
+      {
+        "timestamp": 1779188580,
+        "equity": -2939.726691,
+        "delta": -0.87,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Tundra Esports - Game 1 Winner",
+        "usdc": 0.87
+      },
+      {
+        "timestamp": 1779265356,
+        "equity": 52781.1214,
+        "delta": -23.529411,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Nongshim Red Force vs KT Rolster (BO3) - LCK Rounds 1-2",
+        "usdc": 23.529411
+      },
+      {
+        "timestamp": 1779271173,
+        "equity": 36700.402118,
+        "delta": -302.709677,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Legacy vs TYLOO (BO3) - CS Asia Championships Group A",
+        "usdc": 302.709677
+      },
+      {
+        "timestamp": 1779362616,
+        "equity": -40942.807939,
+        "delta": -7356.23829,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Dplus KIA vs HANJIN BRION - Game 2 Winner",
+        "usdc": 7356.23829
+      },
+      {
+        "timestamp": 1779389141,
+        "equity": -68996.008541,
+        "delta": -70.91641,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Aurora - Game 2 Winner",
+        "usdc": 70.91641
+      },
+      {
+        "timestamp": 1779437651,
+        "equity": 35645.175366,
+        "delta": -6.851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Weibo Gaming (BO5) - Esports World Cup China Qualifier Phase 2",
+        "usdc": 6.851
+      },
+      {
+        "timestamp": 1779448373,
+        "equity": -29042.381453,
+        "delta": -1.0112,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Gen.G - Game 2 Winner",
+        "usdc": 1.0112
+      },
+      {
+        "timestamp": 1779527781,
+        "equity": 19069.742752,
+        "delta": -2.8125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MIBR vs Legacy - Map 1 Winner",
+        "usdc": 2.8125
+      },
+      {
+        "timestamp": 1779635322,
+        "equity": 30789.402889,
+        "delta": -1.325581,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Vitality vs Movistar KOI - Game 1 Winner",
+        "usdc": 1.325581
+      },
+      {
+        "timestamp": 1779775303,
+        "equity": -10159.272601,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros ATP: Jaime Faria vs Denis Shapovalov",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1779792066,
+        "equity": 13768.140609,
+        "delta": -2.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Team Yandex (BO1) - BLAST Slam Group Stage",
+        "usdc": 2.3
+      },
+      {
+        "timestamp": 1779800282,
+        "equity": 4747.607549,
+        "delta": -3.92037,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Xtreme Gaming (BO1) - BLAST Slam Group Stage",
+        "usdc": 3.92037
+      },
+      {
+        "timestamp": 1779814333,
+        "equity": -6871.857842,
+        "delta": -100.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: PARIVISION vs Team Yandex (BO1) - BLAST Slam Group Stage",
+        "usdc": 100.0
+      },
+      {
+        "timestamp": 1779873883,
+        "equity": 44994.122132,
+        "delta": -1520.13519,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: GLYPH vs Team Spirit (BO1) - BLAST Slam Group Stage",
+        "usdc": 1520.13519
+      },
+      {
+        "timestamp": 1779980167,
+        "equity": 11043.810864,
+        "delta": -6805.46041,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs BetBoom Team (BO1) - BLAST Slam Group Stage",
+        "usdc": 6805.46041
+      },
+      {
+        "timestamp": 1780045176,
+        "equity": 85725.852785,
+        "delta": -87.402028,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros ATP: Thiago Agustin Tirante vs Pablo Carreno Busta",
+        "usdc": 87.402028
+      },
+      {
+        "timestamp": 1780045612,
+        "equity": 69700.055272,
+        "delta": -4.492753,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros ATP: Thiago Agustin Tirante vs Pablo Carreno Busta",
+        "usdc": 4.492753
+      },
+      {
+        "timestamp": 1780162396,
+        "equity": -15808.365242,
+        "delta": -2.307692,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Liquid vs Aurora - Game 2 Winner",
+        "usdc": 2.307692
+      },
+      {
+        "timestamp": 1780169472,
+        "equity": -22417.154243,
+        "delta": -1388.9442,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Toronto Blue Jays vs. Baltimore Orioles: O/U 7.5",
+        "usdc": 1388.9442
+      },
+      {
+        "timestamp": 1780187474,
+        "equity": 164475.564443,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New York Yankees vs. Athletics: O/U 9.5",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1780224583,
+        "equity": 106247.521476,
+        "delta": -5.727272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros ATP: Jakub Mensik vs Andrey Rublev",
+        "usdc": 5.727272
+      },
+      {
+        "timestamp": 1780302304,
+        "equity": 152397.385673,
+        "delta": -10793.39293,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Birmingham: Coleman Wong vs Oliver Tarvet",
+        "usdc": 10793.39293
+      },
+      {
+        "timestamp": 1780307379,
+        "equity": 137832.381629,
+        "delta": -0.132,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Birmingham: Mark Lajal vs Leandro Riedi",
+        "usdc": 0.132
+      },
+      {
+        "timestamp": 1780333028,
+        "equity": 93192.104061,
+        "delta": -9.745454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Karmine Corp vs GIANTX - Game 3 Winner",
+        "usdc": 9.745454
+      },
+      {
+        "timestamp": 1780385702,
+        "equity": 136030.371943,
+        "delta": -633.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros ATP: Rafael Jodar vs Alexander Zverev",
+        "usdc": 633.333333
+      },
+      {
+        "timestamp": 1780401679,
+        "equity": 25633.6073,
+        "delta": -227.897142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Birmingham: Sho Shimabukuro vs Shintaro Mochizuki",
+        "usdc": 227.897142
+      },
+      {
+        "timestamp": 1780435895,
+        "equity": 284563.197475,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: Team Vitality vs Los Ratones (BO1) - LEC Versus Regular Season",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1780435900,
+        "equity": 284563.197475,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: BetBoom Team vs Aurora - Game 1 Winner",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1780435904,
+        "equity": 284563.197475,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Counter-Strike: TheMongolz vs paiN - Map 2 Winner",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1780435909,
+        "equity": 284563.197475,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: KT Rolster vs Nongshim Red Force (BO3) - LCK Rounds 1-2",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1780435913,
+        "equity": 284563.197475,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dota 2: Natus Vincere vs MOUZ - Game 1 Winner",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1780480147,
+        "equity": 274364.395034,
+        "delta": -4652.35907,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Liquid vs MIBR (BO1) - IEM Cologne Major Stage 1",
+        "usdc": 4652.35907
+      },
+      {
+        "timestamp": 1780520482,
+        "equity": 301724.683337,
+        "delta": 3208.93,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Birmingham: Elias Ymer vs Christopher O'Connell",
+        "usdc": 3208.93
+      },
+      {
+        "timestamp": 1780650907,
+        "equity": 391401.885105,
+        "delta": -323.82598,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Anyone's Legend vs LGD Gaming - Game 1 Winner",
+        "usdc": 323.82598
+      },
+      {
+        "timestamp": 1780650943,
+        "equity": 386863.767726,
+        "delta": -6.696,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Anyone's Legend vs LGD Gaming - Game 1 Winner",
+        "usdc": 6.696
+      },
+      {
+        "timestamp": 1780654443,
+        "equity": 365627.151113,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Anyone's Legend vs LGD Gaming - Game 2 Winner",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1780672297,
+        "equity": 319496.05689,
+        "delta": -129.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Liquid vs FlyQuest - Map 2 Winner",
+        "usdc": 129.0
+      },
+      {
+        "timestamp": 1780679893,
+        "equity": 300595.999874,
+        "delta": -5200.97653,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Falcons vs Aurora (BO3) - BLAST Slam Playoffs",
+        "usdc": 5200.97653
+      },
+      {
+        "timestamp": 1780698358,
+        "equity": 291917.128017,
+        "delta": -16.73913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros WTA: Maja Chwalinska vs Mirra Andreeva",
+        "usdc": 16.73913
+      },
+      {
+        "timestamp": 1780731406,
+        "equity": 249473.084997,
+        "delta": -3.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roland Garros WTA: Maja Chwalinska vs Mirra Andreeva",
+        "usdc": 3.347826
+      },
+      {
+        "timestamp": 1780746441,
+        "equity": 259667.595299,
+        "delta": -1433.333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Yandex vs BetBoom Team - Game 2 Winner",
+        "usdc": 1433.333
+      },
+      {
+        "timestamp": 1780753054,
+        "equity": 245233.334955,
+        "delta": -16.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Team Vitality vs Dragon Ranger Gaming (BO3) - VCT Masters London Group Stage",
+        "usdc": 16.6
+      },
+      {
+        "timestamp": 1780758180,
+        "equity": 225440.969628,
+        "delta": -4026.06118,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Aurora vs LGD Gaming (BO3) - BLAST Slam Playoffs",
+        "usdc": 4026.06118
+      },
+      {
+        "timestamp": 1780819858,
+        "equity": 357847.363002,
+        "delta": 14432.36,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: FlyQuest vs Team Liquid (BO5) - LCS Playoffs",
+        "usdc": 14432.36
+      },
+      {
+        "timestamp": 1780822699,
+        "equity": 321378.423991,
+        "delta": -4.614545,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Dplus KIA - Game 2 Winner",
+        "usdc": 4.614545
+      },
+      {
+        "timestamp": 1780822713,
+        "equity": 320462.978782,
+        "delta": -0.818181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Dplus KIA - Game 2 Winner",
+        "usdc": 0.818181
+      },
+      {
+        "timestamp": 1780826193,
+        "equity": 291781.328744,
+        "delta": -7.820512,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Dplus KIA - Game 3 Winner",
+        "usdc": 7.820512
+      },
+      {
+        "timestamp": 1780849609,
+        "equity": 312832.561742,
+        "delta": -34.597936,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Karmine Corp - Game 2 Winner",
+        "usdc": 34.597936
+      },
+      {
+        "timestamp": 1780983799,
+        "equity": 260963.385983,
+        "delta": -26.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stuttgart Open: Jan-Lennard Struff vs Alexis Galarneau",
+        "usdc": 26.4
+      },
+      {
+        "timestamp": 1781095852,
+        "equity": 304208.85097,
+        "delta": -468.055,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Global Esports vs XLG Gaming (BO3) - VCT Masters London Group Stage",
+        "usdc": 468.055
+      },
+      {
+        "timestamp": 1781263347,
+        "equity": 217530.015739,
+        "delta": -31.321818,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Hanwha Life Esports vs T1 - Game 4 Winner",
+        "usdc": 31.321818
+      },
+      {
+        "timestamp": 1781353027,
+        "equity": 301651.747985,
+        "delta": -595.222222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: EDward Gaming vs FUT Esports (BO3) - VCT Masters London Playoffs",
+        "usdc": 595.222222
+      },
+      {
+        "timestamp": 1781354349,
+        "equity": 294856.719222,
+        "delta": -3.373333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: EDward Gaming vs FUT Esports (BO3) - VCT Masters London Playoffs",
+        "usdc": 3.373333
+      },
+      {
+        "timestamp": 1781361714,
+        "equity": 283817.591226,
+        "delta": -825.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: EDward Gaming vs FUT Esports - Map 2 Winner",
+        "usdc": 825.0
+      },
+      {
+        "timestamp": 1781540796,
+        "equity": 303560.548542,
+        "delta": -3603.2815,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Natus Vincere vs G2 (BO3) - IEM Cologne Major Stage 3",
+        "usdc": 3603.2815
+      },
+      {
+        "timestamp": 1781617541,
+        "equity": 315400.934602,
+        "delta": -296.566666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: XLG Gaming vs Leviat\u00e1n Esports (BO3) - VCT Masters London Playoffs",
+        "usdc": 296.566666
+      },
+      {
+        "timestamp": 1781657132,
+        "equity": 352025.178633,
+        "delta": 72.7343,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 72.7343
+      },
+      {
+        "timestamp": 1782047480,
+        "equity": 338224.859182,
+        "delta": -356.380769,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Paper Rex vs Leviat\u00e1n Esports (BO5) - VCT Masters London Playoffs",
+        "usdc": 356.380769
+      },
+      {
+        "timestamp": 1782810007,
+        "equity": 340345.601116,
+        "delta": -10743.92644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Karmine Corp vs Team Liquid - Game 2 Winner",
+        "usdc": 10743.92644
+      },
+      {
+        "timestamp": 1783166606,
+        "equity": 291137.190678,
+        "delta": -2.58,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Alliance vs 9z - Map 2 Winner",
+        "usdc": 2.58
+      },
+      {
+        "timestamp": 1783431589,
+        "equity": 301281.572795,
+        "delta": -520.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: L1ga Team vs Nigma Galaxy - Game 2 Winner",
+        "usdc": 520.0
+      },
+      {
+        "timestamp": 1783770269,
+        "equity": 302665.792427,
+        "delta": -16.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Hanwha Life Esports vs LYON (BO5) - Mid-Season Invitational Playoffs",
+        "usdc": 16.5
+      },
+      {
+        "timestamp": 1783851535,
+        "equity": 295161.821122,
+        "delta": -51.0044,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Bilibili Gaming vs Hanwha Life Esports - Game 4 Winner",
+        "usdc": 51.0044
+      },
+      {
+        "timestamp": 1784141249,
+        "equity": 312084.325955,
+        "delta": 13933.93,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Valorant: FUT Esports vs Natus Vincere (BO3) - VCT EMEA Group Alpha",
+        "usdc": 13933.93
+      },
+      {
+        "timestamp": 1784228642,
+        "equity": 300358.510824,
+        "delta": -12009.17687,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: Pcific Esports vs Gentle Mates (BO3) - VCT EMEA Group Alpha",
+        "usdc": 12009.17687
+      },
+      {
+        "timestamp": 1784304495,
+        "equity": 328342.498929,
+        "delta": 28894.599844,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: Bilibili Gaming vs Dplus KIA - Game 1 Winner",
+        "usdc": 28894.599844
+      },
+      {
+        "timestamp": 1784626767,
+        "equity": 434244.654242,
+        "delta": -1.278688,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Team Nemesis vs Astralis (BO3) - BLAST Bounty Qualifier",
+        "usdc": 1.278688
+      },
+      {
+        "timestamp": 1784797170,
+        "equity": 407795.864999,
+        "delta": -3326.16276,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Estoril Open: Luca Van Assche vs Pablo Carreno Busta",
+        "usdc": 3326.16276
+      },
+      {
+        "timestamp": 1784908435,
+        "equity": 346512.587348,
+        "delta": -12635.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: G2 Esports vs Movistar KOI - Game 2 Winner",
+        "usdc": 12635.6
+      },
+      {
+        "timestamp": 1784969845,
+        "equity": 454429.995415,
+        "delta": -38.823529,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Liquid vs G2 (BO3) - BLAST Bounty Qualifier",
+        "usdc": 38.823529
+      },
+      {
+        "timestamp": 1784973826,
+        "equity": 434200.011851,
+        "delta": -24.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Liquid vs G2 (BO3) - BLAST Bounty Qualifier",
+        "usdc": 24.75
+      },
+      {
+        "timestamp": 1784987941,
+        "equity": 437924.283033,
+        "delta": -140.95238,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: LOUD vs paiN Gaming (BO3) - CBLOL Regular Season",
+        "usdc": 140.95238
+      },
+      {
+        "timestamp": 1785051552,
+        "equity": 454326.371609,
+        "delta": -11.884,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: BBL Esports vs Natus Vincere (BO3) - VCT EMEA Group Alpha",
+        "usdc": 11.884
+      },
+      {
+        "timestamp": 1785053148,
+        "equity": 444675.73848,
+        "delta": -198.062222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: LNG Esports vs Ninjas in Pyjamas - Game 2 Winner",
+        "usdc": 198.062222
+      },
+      {
+        "timestamp": 1785061035,
+        "equity": 416547.984067,
+        "delta": -6331.425,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: ThunderTalk Gaming vs EDward Gaming - Game 2 Winner",
+        "usdc": 6331.425
+      },
+      {
+        "timestamp": 1785103323,
+        "equity": 392519.817694,
+        "delta": 4999.969993,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Valorant: Team Heretics vs Karmine Corp (BO3) - VCT EMEA Group Omega",
+        "usdc": 4999.969993
+      },
+      {
+        "timestamp": 1785430287,
+        "equity": 370292.021111,
+        "delta": 35000.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: Hanwha Life Esports vs Dplus KIA (BO3) - LCK Round 3-4 Legend Group",
+        "usdc": 35000.0
+      },
+      {
+        "timestamp": 1785599972,
+        "equity": 380474.164118,
+        "delta": -48.585,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: FUT Esports vs Team Vitality - Map 2 Winner",
+        "usdc": 48.585
+      },
+      {
+        "timestamp": 1785687170,
+        "equity": 317239.194928,
+        "delta": -47.03184,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fluxo W7M vs LOUD - Game 1 Winner",
+        "usdc": 47.03184
+      },
+      {
+        "timestamp": 1785697314,
+        "equity": 339740.38818,
+        "delta": -3109.475,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Fnatic vs Movistar KOI (BO3) - LEC Regular Season",
+        "usdc": 3109.475
+      },
+      {
+        "timestamp": 1785800429,
+        "equity": 449843.848194,
+        "delta": 22758.355,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LoL: Karmine Corp vs Team Heretics - Game 2 Winner",
+        "usdc": 22758.355
+      },
+      {
+        "timestamp": 1786003799,
+        "equity": 460425.00117,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Kiwoom DRX vs DN SOOPers - Game 1 Winner",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1786089511,
+        "equity": 466992.058366,
+        "delta": -4.993333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: KT Rolster vs Gen.G (BO3) - LCK Round 3-4 Legend Group",
+        "usdc": 4.993333
+      },
+      {
+        "timestamp": 1786125538,
+        "equity": 521321.638295,
+        "delta": -5947.28288,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Heretics vs Fnatic - Game 1 Winner",
+        "usdc": 5947.28288
+      },
+      {
+        "timestamp": 1786177731,
+        "equity": 454581.818514,
+        "delta": -3446.2992,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: RED Canids vs paiN Gaming (BO3) - CBLOL Regular Season",
+        "usdc": 3446.2992
+      },
+      {
+        "timestamp": 1786188039,
+        "equity": 434526.813624,
+        "delta": -20.79,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: RED Canids vs paiN Gaming (BO3) - CBLOL Regular Season",
+        "usdc": 20.79
+      },
+      {
+        "timestamp": 1786208748,
+        "equity": 443411.418579,
+        "delta": -3013.7613,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: RED Canids vs paiN Gaming - Game 2 Winner",
+        "usdc": 3013.7613
+      },
+      {
+        "timestamp": 1786278567,
+        "equity": 454504.07076,
+        "delta": -6844.75671,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: JD Gaming vs Team WE - Game 2 Winner",
+        "usdc": 6844.75671
+      },
+      {
+        "timestamp": 1786374502,
+        "equity": 472460.570914,
+        "delta": -228.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: SK Gaming vs Team Vitality - Game 1 Winner",
+        "usdc": 228.0
+      },
+      {
+        "timestamp": 1786551873,
+        "equity": 454759.845683,
+        "delta": -9.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: MIBR vs Astralis (BO1) - Esports World Cup Group B",
+        "usdc": 9.2
+      },
+      {
+        "timestamp": 1786694967,
+        "equity": 498084.726542,
+        "delta": -1.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: EDward Gaming vs LGD Gaming - Game 2 Winner",
+        "usdc": 1.98
+      },
+      {
+        "timestamp": 1786778511,
+        "equity": 507780.686337,
+        "delta": -22488.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Hanwha Life Esports vs KT Rolster (BO3) - LCK Round 3-4 Legend Group",
+        "usdc": 22488.6
+      },
+      {
+        "timestamp": 1786784166,
+        "equity": 443757.170009,
+        "delta": -8141.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Counter-Strike: Wildcard vs paiN (BO3) - Esports World Cup Group D",
+        "usdc": 8141.76
+      },
+      {
+        "timestamp": 1786788306,
+        "equity": 376168.986128,
+        "delta": -3.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: ThunderTalk Gaming vs Anyone's Legend - Game 1 Winner",
+        "usdc": 3.333333
+      },
+      {
+        "timestamp": 1786796596,
+        "equity": 342112.181369,
+        "delta": -148.150588,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Shopify Rebellion vs Dignitas (BO3) - LCS Regular Season",
+        "usdc": 148.150588
+      },
+      {
+        "timestamp": 1786800255,
+        "equity": 390967.869195,
+        "delta": -1.078,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: BoomBoys vs Team Falcons (BO3) - The International Group Stage",
+        "usdc": 1.078
+      },
+      {
+        "timestamp": 1786810359,
+        "equity": 437886.161072,
+        "delta": -395.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: FURIA Esports vs RED Canids - Game 1 Winner",
+        "usdc": 395.0
+      },
+      {
+        "timestamp": 1786863873,
+        "equity": 620582.521193,
+        "delta": -48.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: Team Spirit vs Team Resilience (BO3) - The International Elimination Round",
+        "usdc": 48.0
+      },
+      {
+        "timestamp": 1786872612,
+        "equity": 580137.577474,
+        "delta": -1.380952,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: LGD Gaming vs Team Yandex - Game 2 Winner",
+        "usdc": 1.380952
+      },
+      {
+        "timestamp": 1786876788,
+        "equity": 543790.305061,
+        "delta": -8.412857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: LGD Gaming vs Team Yandex (BO3) - The International Elimination Round",
+        "usdc": 8.412857
+      },
+      {
+        "timestamp": 1786886958,
+        "equity": 540631.701743,
+        "delta": -15.483076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: FURIA Esports vs G2 Esports (BO3) - VCT Americas Stage 2 Play-In",
+        "usdc": 15.483076
+      },
+      {
+        "timestamp": 1786888224,
+        "equity": 538674.701877,
+        "delta": -5.692307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: FURIA Esports vs G2 Esports (BO3) - VCT Americas Stage 2 Play-In",
+        "usdc": 5.692307
+      },
+      {
+        "timestamp": 1786894711,
+        "equity": 612889.470259,
+        "delta": -116.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Valorant: FURIA Esports vs G2 Esports (BO3) - VCT Americas Stage 2 Play-In",
+        "usdc": 116.92
+      },
+      {
+        "timestamp": 1786906009,
+        "equity": 609267.060986,
+        "delta": -220.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: paiN Gaming vs Fluxo W7M - Game 2 Winner",
+        "usdc": 220.0
+      },
+      {
+        "timestamp": 1787186751,
+        "equity": 645463.488498,
+        "delta": 60.4286,
+        "type": "MAKER_REBATE",
+        "side": null,
+        "title": "",
+        "usdc": 60.4286
+      },
+      {
+        "timestamp": 1787383303,
+        "equity": 601664.766428,
+        "delta": -2.4986,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dota 2: TEAM VISION vs Team Yandex (BO3) - The International Playoffs",
+        "usdc": 2.4986
+      },
+      {
+        "timestamp": 1787429547,
+        "equity": 607108.205463,
+        "delta": 42.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Counter-Strike: Legacy vs Spirit - Map 2 Winner",
+        "usdc": 42.0
+      },
+      {
+        "timestamp": 1787484315,
+        "equity": 536626.134715,
+        "delta": -2.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: EDward Gaming vs JD Gaming (BO3) - LPL Group Ascend",
+        "usdc": 2.38
+      },
+      {
+        "timestamp": 1787497729,
+        "equity": 498167.417848,
+        "delta": -2.823529,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LoL: Team Heretics vs GIANTX - Game 1 Winner",
+        "usdc": 2.823529
+      },
+      {
+        "timestamp": 1787629932,
+        "equity": 541301.279943,
+        "delta": 6125.38,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Monterrey Open: Clara Tauson vs Renata Zarazua",
+        "usdc": 6125.38
+      }
+    ]
+  },
+  "market_making": {
+    "score": 30,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Fast round-trips (<2h) in 100% of two-sided markets",
+      "High-frequency cadence (median gap 12s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.0101,
+      "fast_roundtrip_rate": 1.0,
+      "spread_capture_rate": 0.0,
+      "size_cv": 3.1618,
+      "median_gap_seconds": 12,
+      "outcome_counts": {
+        "MOUZ": 1113,
+        "FURIA": 340,
+        "Spirit": 38,
+        "EDward Gaming": 63,
+        "Heroic": 127,
+        "OG": 95,
+        "Team Yandex": 740,
+        "Team Spirit": 137,
+        "Natus Vincere": 328,
+        "Top Esports": 164,
+        "JD Gaming": 508,
+        "Team Liquid": 689,
+        "Xtreme Gaming": 266,
+        "Tundra Esports": 363,
+        "DN Freecs": 186,
+        "Weibo Gaming": 193,
+        "OKSavingsBank BRION": 19,
+        "Anyones Legend": 132,
+        "Bilibili Gaming": 347,
+        "G2": 137,
+        "Ninjas in Pyjamas": 117,
+        "Movistar KOI": 383,
+        "Nongshim Red Force": 142,
+        "Team Heretics": 128,
+        "Karmine Corp Blue": 10,
+        "Team Falcons": 376,
+        "LOUD": 89,
+        "Karmine Corp": 422,
+        "DRX": 42,
+        "Los Ratones": 3,
+        "Shifters": 68,
+        "LOS": 77,
+        "G2 Esports": 545,
+        "Shopify Rebellion": 36,
+        "Cloud9": 180,
+        "Team WE": 95,
+        "Invictus Gaming": 130,
+        "DRX Challengers": 135,
+        "Hanwha Life Esports Challengers": 9,
+        "Oh My God": 45,
+        "LNG Esports": 192,
+        "Bushido Wildcats": 2,
+        "Dplus KIA": 715,
+        "ZYB Esport": 1,
+        "TLN Pirates": 20,
+        "Astralis": 75,
+        "FUT Esports": 174,
+        "paiN": 74,
+        "Vivo Keyd Stars": 38,
+        "Leviatan Esports": 26,
+        "BNK FEARX": 167,
+        "Vitality": 17,
+        "B8": 112,
+        "FaZe": 65,
+        "Execration": 34,
+        "Aurora Gaming": 98,
+        "Aurora": 216,
+        "paiN Gaming": 213,
+        "GamerLegion": 100,
+        "Yakutou Brothers": 8,
+        "BetBoom Team": 390,
+        "PARIVISION": 460,
+        "Gen.G": 192,
+        "Fnatic": 101,
+        "GIANTX": 68,
+        "T1": 61,
+        "FURIA Esports": 70,
+        "Team Vitality": 234,
+        "Sentinels": 63,
+        "T1 Academy": 42,
+        "Nongshim Esports Academy": 38,
+        "Passion UA": 2,
+        "NRG": 87,
+        "Liquid": 8,
+        "Vici Gaming": 186,
+        "3DMAX": 85,
+        "Yellow Submarine": 10,
+        "Jack Draper": 7,
+        "Legacy": 10,
+        "Yes": 100,
+        "No": 143,
+        "LYON": 26,
+        "TYLOO": 14,
+        "Wild": 10,
+        "Devils": 75,
+        "Flyers": 1,
+        "Alexander Zverev": 26,
+        "Ultra Prime": 17,
+        "SK Gaming": 49,
+        "Roman Andres Burruchaga": 15,
+        "DN SOOPers": 129,
+        "Eintracht Spandau": 1,
+        "Mariano Navone": 2,
+        "Darja Semenistaja": 1,
+        "Kiwoom DRX": 138,
+        "BC.Game Esports": 2,
+        "MIBR": 70,
+        "Wildcard": 30,
+        "FOKUS": 1,
+        "Hanwha Life Esports": 185,
+        "LGD Gaming": 174,
+        "Leviat\u00e1n Esports": 124,
+        "KT Rolster": 6,
+        "Gentle Mates": 10,
+        "ThunderTalk Gaming": 20,
+        "Virtus.pro": 23,
+        "Nongshim RedForce": 8,
+        "South America Rejects": 6,
+        "Kiwoom DRX Challengers": 14,
+        "Magic": 192,
+        "Pcific Esports": 2,
+        "Over": 73,
+        "Miomir Kecmanovic": 1,
+        "Daniel Altmaier": 3,
+        "HANJIN BRION": 87,
+        "Solary": 26,
+        "All Gamers": 95,
+        "Rex Regum Qeon": 7,
+        "FULL SENSE": 1,
+        "Galions": 65,
+        "Paper Rex": 25,
+        "magic": 16,
+        "Fluxo W7M": 28,
+        "9z": 24,
+        "Sinners": 24,
+        "TheMongolz": 42,
+        "Monte": 1,
+        "REKONIX": 35,
+        "PlayTime": 92,
+        "Nigma Galaxy": 24,
+        "ex-HEROIC": 17,
+        "Jaime Faria": 33,
+        "Kamil Majchrzak": 1,
+        "Lois Boisson": 2,
+        "Thomas Faurel": 1,
+        "GLYPH": 2,
+        "Luca Van Assche": 2,
+        "Alliance": 4,
+        "Raphael Collignon": 1,
+        "Hubert Hurkacz": 3,
+        "Sharks": 1,
+        "Stefanos Tsitsipas": 2,
+        "Jil Teichmann": 1,
+        "Pablo Carreno Busta": 35,
+        "Juan Manuel Cerundolo": 3,
+        "Maja Chwalinska": 35,
+        "Matteo Berrettini": 1,
+        "Chicago Cubs": 1,
+        "Under": 13,
+        "Jakub Mensik": 26,
+        "Matteo Arnaldi": 33,
+        "Flavio Cobolli": 1,
+        "Michele Ribecai": 1,
+        "Mark Lajal": 6,
+        "Coleman Wong": 1,
+        "Aleksandar Vukic": 39,
+        "James Duckworth": 19,
+        "Mackenzie McDonald": 1,
+        "Lynn Vision": 3,
+        "Sho Shimabukuro": 22,
+        "James McCabe": 1,
+        "Felix Auger-Aliassime": 3,
+        "Elias Ymer": 1,
+        "FlyQuest": 26,
+        "Mirra Andreeva": 165,
+        "Denis Shapovalov": 1,
+        "Tommy Paul": 1,
+        "Ekaterina Alexandrova": 1,
+        "Kimberly Birrell": 1,
+        "Daria Snigur": 2,
+        "McCartney Kessler": 4,
+        "Harriet Dart": 1,
+        "Jaqueline Cristian": 1,
+        "Alexis Galarneau": 35,
+        "BIG": 8,
+        "Global Esports": 16,
+        "XLG Gaming": 1,
+        "Rinky Hijikata": 1,
+        "Adrian Mannarino": 4,
+        "Alexander Shevchenko": 1,
+        "Anna Blinkova": 2,
+        "Hannah Klugman": 1,
+        "Viktorija Golubic": 1,
+        "Linda Noskova": 1,
+        "Marie Bouzkova": 1,
+        "Coco Gauff": 1,
+        "Alejandro Davidovich Fokina": 8,
+        "Mananchaya Sawangkaew": 2,
+        "Karen Khachanov": 1,
+        "Alexander Bublik": 1,
+        "Amanda Anisimova": 2,
+        "MIBR LOS": 1,
+        "L1ga Team": 11,
+        "Team Secret Whales": 1,
+        "1win": 4,
+        "Rune Eaters": 1,
+        "Poor Rangers": 3,
+        "Stefano Travaglia": 1,
+        "Casper Ruud": 1,
+        "Alycia Parks": 2,
+        "Clara Tauson": 2,
+        "Mayar Sherif": 1,
+        "Team Nemesis": 32,
+        "Facundo Acosta": 1,
+        "Simona Waltert": 1,
+        "Luciano Darderi": 1,
+        "100 Thieves": 18,
+        "Alex Michelsen": 1,
+        "Ashlyn Krueger": 1,
+        "Caty McNally": 2,
+        "Darja Vidmanova": 1,
+        "Diana Shnaider": 1,
+        "Team Envy": 1,
+        "Rafael Jodar": 3,
+        "Jessica Pegula": 6,
+        "Nuno Borges": 3,
+        "Corentin Moutet": 1,
+        "DN SOOPers Challengers": 24,
+        "Eintracht Frankfurt": 1,
+        "Joblife": 29,
+        "Arthur Rinderknech": 1,
+        "Enterprise Esports": 2,
+        "BoomBoys": 3,
+        "Nadia Podoroska": 1,
+        "JiJieHao": 1,
+        "Sara Bejlek": 1,
+        "Sharper Esport": 16,
+        "Team Resilience": 44,
+        "TEC Esports": 1,
+        "Fire Flux Esports": 1,
+        "TEAM VISION": 5,
+        "Xipto Esports": 1,
+        "Dignitas": 1,
+        "BESTIA": 1,
+        "Lorenzo Sonego": 1,
+        "Jan Choinski": 1,
+        "Roman Safiullin": 1
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 86,
+      "1": 94,
+      "2": 54,
+      "3": 47,
+      "4": 19,
+      "5": 53,
+      "6": 131,
+      "7": 747,
+      "8": 1595,
+      "9": 2138,
+      "10": 1338,
+      "11": 1539,
+      "12": 1234,
+      "13": 1089,
+      "14": 1041,
+      "15": 1127,
+      "16": 1262,
+      "17": 1022,
+      "18": 895,
+      "19": 442,
+      "20": 352,
+      "21": 79,
+      "22": 127,
+      "23": 92
+    },
+    "dow_utc": {
+      "0": 1819,
+      "1": 1860,
+      "2": 1417,
+      "3": 1784,
+      "4": 2374,
+      "5": 3622,
+      "6": 3727
+    },
+    "peak_hours": [
+      9,
+      8,
+      11,
+      10,
+      16
+    ],
+    "peak_dows": [
+      6,
+      5,
+      4
+    ]
+  },
+  "sizing": {
+    "n": 16603,
+    "mean_usdc": 899.0704,
+    "median_usdc": 29.115,
+    "p10_usdc": 1.3478,
+    "p90_usdc": 2314.6342,
+    "max_usdc": 86562.021,
+    "mean_shares": 1759.377,
+    "median_shares": 56.0
+  },
+  "categories": {
+    "pnl": {
+      "sports_match": 3639964.6309,
+      "sports_totals": 94457.5334,
+      "other": 27040.9175
+    },
+    "counts": {
+      "sports_match": 1053,
+      "other": 1,
+      "sports_totals": 16
+    }
+  },
+  "top_wins": [
+    {
+      "title": "LoL: Fnatic vs SK Gaming - Game 2 Winner",
+      "pnl": 239727.9348,
+      "buy_usdc": 6306.2003,
+      "sell_usdc": 0.0,
+      "n_buys": 5,
+      "n_sells": 0,
+      "hold_seconds": 2,
+      "avg_buy": 0.3466,
+      "avg_sell": null
+    },
+    {
+      "title": "Dota 2: Aurora vs MOUZ (BO3) - DreamLeague Stage 2",
+      "pnl": 129076.8816,
+      "buy_usdc": 37501.8973,
+      "sell_usdc": 0.0,
+      "n_buys": 19,
+      "n_sells": 0,
+      "hold_seconds": 37238,
+      "avg_buy": 0.2251,
+      "avg_sell": null
+    },
+    {
+      "title": "LoL: T1 vs Dplus KIA (BO5) - LCK Cup Playoffs",
+      "pnl": 103788.4163,
+      "buy_usdc": 56917.5833,
+      "sell_usdc": 0.0,
+      "n_buys": 35,
+      "n_sells": 0,
+      "hold_seconds": 14838,
+      "avg_buy": 0.3542,
+      "avg_sell": null
+    },
+    {
+      "title": "LoL: Dplus KIA vs DRX - Game 3 Winner",
+      "pnl": 66004.7,
+      "buy_usdc": 33995.3076,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0,
+      "avg_buy": 0.34,
+      "avg_sell": null
+    },
+    {
+      "title": "Toronto Blue Jays vs. Baltimore Orioles: O/U 7.5",
+      "pnl": 48354.7829,
+      "buy_usdc": 50390.8556,
+      "sell_usdc": 0.0,
+      "n_buys": 65,
+      "n_sells": 0,
+      "hold_seconds": 3766,
+      "avg_buy": 0.509,
+      "avg_sell": null
+    },
+    {
+      "title": "Roland Garros ATP: Jakub Mensik vs Andrey Rublev",
+      "pnl": 47048.8253,
+      "buy_usdc": 39905.0818,
+      "sell_usdc": 0.0,
+      "n_buys": 26,
+      "n_sells": 0,
+      "hold_seconds": 11384,
+      "avg_buy": 0.4563,
+      "avg_sell": null
+    },
+    {
+      "title": "Roland Garros WTA: Marta Kostyuk vs Mirra Andreeva",
+      "pnl": 46860.9157,
+      "buy_usdc": 36850.2322,
+      "sell_usdc": 0.0,
+      "n_buys": 2,
+      "n_sells": 0,
+      "hold_seconds": 0,
+      "avg_buy": 0.437,
+      "avg_sell": null
+    },
+    {
+      "title": "LoL: Cloud9 vs FlyQuest (BO3) - LCS Lock In Group Stage",
+      "pnl": 45702.2655,
+      "buy_usdc": 89898.8718,
+      "sell_usdc": 0.0,
+      "n_buys": 86,
+      "n_sells": 0,
+      "hold_seconds": 7980,
+      "avg_buy": 0.663,
+      "avg_sell": null
+    },
+    {
+      "title": "LoL: DRX vs OKSavingsBank BRION - Game 2 Winner",
+      "pnl": 44785.5888,
+      "buy_usdc": 31202.2824,
+      "sell_usdc": 0.0,
+      "n_buys": 19,
+      "n_sells": 0,
+      "hold_seconds": 48,
+      "avg_buy": 0.4106,
+      "avg_sell": null
+    },
+    {
+      "title": "San Diego Padres vs. Washington Nationals: O/U 7.5",
+      "pnl": 44401.6307,
+      "buy_usdc": 46298.0346,
+      "sell_usdc": 0.0,
+      "n_buys": 2,
+      "n_sells": 0,
+      "hold_seconds": 9065,
+      "avg_buy": 0.51,
+      "avg_sell": null
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Spread: Pistons (-8.5)",
+      "pnl": -126706.5129,
+      "buy_usdc": 77472.3029,
+      "sell_usdc": 0.0,
+      "n_buys": 192,
+      "n_sells": 0,
+      "hold_seconds": 14298
+    },
+    {
+      "title": "Counter-Strike: paiN vs Passion UA (BO3) - ESL Pro League Stage 1",
+      "pnl": -84487.8396,
+      "buy_usdc": 84487.8396,
+      "sell_usdc": 0.0,
+      "n_buys": 2,
+      "n_sells": 0,
+      "hold_seconds": 20
+    },
+    {
+      "title": "Will Chelsea FC win on 2026-03-14?",
+      "pnl": -81935.1814,
+      "buy_usdc": 81938.9402,
+      "sell_usdc": 0.0,
+      "n_buys": 100,
+      "n_sells": 0,
+      "hold_seconds": 116
+    },
+    {
+      "title": "LoL: Cloud9 vs LYON - Game 2 Winner",
+      "pnl": -69220.5819,
+      "buy_usdc": 69220.6671,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0
+    },
+    {
+      "title": "LoL: DRX vs Nongshim Red Force - Game 1 Winner",
+      "pnl": -62131.8939,
+      "buy_usdc": 62132.0639,
+      "sell_usdc": 0.0,
+      "n_buys": 8,
+      "n_sells": 0,
+      "hold_seconds": 82
+    },
+    {
+      "title": "Counter-Strike: FURIA vs Vitality (BO5) - IEM Krakow Playoffs",
+      "pnl": -59675.5343,
+      "buy_usdc": 59683.5095,
+      "sell_usdc": 0.0,
+      "n_buys": 116,
+      "n_sells": 0,
+      "hold_seconds": 23200
+    },
+    {
+      "title": "LoL: Cloud9 vs LYON (BO5) - LCS Lock In Playoffs",
+      "pnl": -52198.4483,
+      "buy_usdc": 52198.5126,
+      "sell_usdc": 0.0,
+      "n_buys": 18,
+      "n_sells": 0,
+      "hold_seconds": 10512
+    },
+    {
+      "title": "Counter-Strike: Vitality vs MOUZ (BO3) - IEM Krakow Playoffs",
+      "pnl": -49989.7202,
+      "buy_usdc": 50002.3178,
+      "sell_usdc": 0.0,
+      "n_buys": 254,
+      "n_sells": 0,
+      "hold_seconds": 30052
+    },
+    {
+      "title": "LoL: Dplus KIA vs DN Freecs - Game 3 Winner",
+      "pnl": -47509.4556,
+      "buy_usdc": 47510.56,
+      "sell_usdc": 0.0,
+      "n_buys": 50,
+      "n_sells": 0,
+      "hold_seconds": 178
+    },
+    {
+      "title": "LoL: JD Gaming vs Top Esports - Game 2 Winner",
+      "pnl": -45213.0619,
+      "buy_usdc": 45216.4919,
+      "sell_usdc": 0.0,
+      "n_buys": 108,
+      "n_sells": 0,
+      "hold_seconds": 100
+    }
+  ],
+  "strategy_vignettes": []
+}

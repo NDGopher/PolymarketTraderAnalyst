@@ -13,7 +13,14 @@ sys.path.insert(0, str(ROOT / "src"))
 from polyanalyst.mega_report import generate_master  # noqa: E402
 from polyanalyst.pipeline import AnalyzerApp  # noqa: E402
 
-TRADERS = ["polika72", "HomeRunHazard", "Winnertraders", "WTSA"]
+TRADERS = [
+    "polika72",
+    "HomeRunHazard",
+    "Winnertraders",
+    "WTSA",
+    "SineNooneEI",
+    "Anjun",
+]
 
 
 def _cmp_row(master: dict) -> dict:

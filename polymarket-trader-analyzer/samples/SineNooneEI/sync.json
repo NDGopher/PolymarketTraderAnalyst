@@ -1,0 +1,18 @@
+{
+  "wallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1",
+  "username": "SineNooneEI",
+  "mode": "full",
+  "duration_s": 92.62,
+  "counts": {
+    "activity": 17903,
+    "trades": 16603,
+    "closed_positions": 1070,
+    "open_positions": 526
+  },
+  "last_activity_ts": 1787629932,
+  "last_trade_ts": 1787591512,
+  "resolved": {
+    "username": "SineNooneEI",
+    "wallet": "0x38337de21ff0bb0a11a40761507d51e318d633d1"
+  }
+}

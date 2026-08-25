@@ -1,0 +1,95 @@
+{
+  "ok": false,
+  "all_checks_passed": false,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 861718.3206124196,
+      "ours": 4747733.5925,
+      "ours_field": "closed_positions_sum",
+      "diff": 3886015.2719,
+      "match": false,
+      "volume_reference": 180326675.11211303
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 736777.34,
+      "ours": 4747733.5925,
+      "ours_field": "closed_positions_sum",
+      "diff": 4010956.2525,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 353745,
+      "ours": 293079,
+      "diff": -60666,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.5994,
+      "ours": 0.5965,
+      "diff": -0.0029,
+      "match": true
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 4747733.5925,
+      "ours": -16535033.0665,
+      "diff": -21282766.659,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": -16535033.0665,
+    "cashflow_core": -16744017.334,
+    "closed_positions_sum": 4747733.5925,
+    "trades": 293079,
+    "win_rate": 0.5965
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/Anjun",
+    "raw_meta": {
+      "net_pnl": 736777.34,
+      "pos_realized_pnl": 736777.34,
+      "n_trades": 353745.0,
+      "total_buy": 78687745.13,
+      "total_sell": 8434949.97,
+      "total_redeem": 2575652.93,
+      "win_rate": 0.5994,
+      "profit_factor": 1.08,
+      "n_markets": 11652.0,
+      "n_buys": 274677.0,
+      "n_sells": 79068.0,
+      "n_redeems": 205.0
+    },
+    "headline_pnl": 736777.0,
+    "win_rate_pct": 60,
+    "smart_score": 33,
+    "n_trades": 353745,
+    "realized_pnl": 736777.34
+  },
+  "leaderboard": {
+    "rank": "229",
+    "proxyWallet": "0x43372356634781eea88d61bbdd7824cdce958882",
+    "userName": "Anjun",
+    "xUsername": "AnjunPoly",
+    "verifiedBadge": false,
+    "vol": 180326675.11211303,
+    "pnl": 861718.3206124196,
+    "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/luffy_%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%E5%93%A6_1706802143401.png"
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}
