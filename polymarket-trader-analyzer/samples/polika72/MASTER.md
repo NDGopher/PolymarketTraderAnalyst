@@ -3,12 +3,12 @@
 > Single file for humans **and** bots. Machine-readable twin: `MASTER.json` · Equity: `equity_curve.csv`.
 
 - Wallet: `0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8`
-- Generated: `2026-08-25T16:46:52.435409+00:00`
+- Generated: `2026-08-25T21:55:26.311503+00:00`
 - Identity class: **`one_sided_informed_scalper`**
 
 ## 0. Executive verdict
 
-This trader is classified as **one_sided_informed_scalper** with primary focus **sports_totals**. Preferred PnL (**cashflow_core**) **$57,699.08** (leaderboard ALL $57,338.72; MATCH). Unique trades **19,978**. Copy difficulty **8/10** · ease **3/10**. Requires live event latency + execution; pattern is clear but edge is speed/data.
+This trader is classified as **one_sided_informed_scalper** with primary focus **sports_totals**. Preferred PnL (**cashflow_core**) **$57,699.08** (leaderboard ALL $57,431.61; MATCH). Unique trades **19,978**. Copy difficulty **8/10** · ease **3/10**. Requires live event latency + execution; pattern is clear but edge is speed/data.
 
 **Exit mechanics:** `sell_secondary_market`
 **Kalshi two-sided MM fit:** MEDIUM — use as taker/impulse overlay on a Kalshi MM core, not as the core itself
@@ -18,14 +18,14 @@ This trader is classified as **one_sided_informed_scalper** with primary focus *
 
 | Source | PnL | Extra |
 |---|---:|---|
-| **Preferred (cashflow_core)** | **$57,699.08** | vs LB diff=360.36 |
+| **Preferred (cashflow_core)** | **$57,699.08** | vs LB diff=267.47 |
 | Ours cashflow realized | $58,204.98 | trades=19,978 buy_only=False |
 | Ours core (ex-rebate) | $57,699.08 | WR legs=80.08% |
 | Ours closed-legs sum | $61,909.37 | PF=3.2979 |
-| Polymarket leaderboard ALL | $57,338.72 | vol=$1,049,905.19 rank=3244 |
+| Polymarket leaderboard ALL | $57,431.61 | vol=$1,050,695.46 rank=3240 |
 | PolyData | $52,640.69 | trades=24078 WR=0.6567 |
 
-- MATCH: `polymarket_leaderboard_ALL` pnl ours=57699.0816 field=cashflow_core ref=57338.716846567695 diff=360.3648
+- MATCH: `polymarket_leaderboard_ALL` pnl ours=57699.0816 field=cashflow_core ref=57431.607979187625 diff=267.4736
 - DRIFT: `polydata` realized_pnl ours=57699.0816 field=cashflow_core ref=52640.69 diff=5058.3916
 - DRIFT: `polydata` n_trades ours=19978 field=None ref=24078 diff=-4100
 - DRIFT: `polydata` win_rate ours=0.8008 field=None ref=0.6567 diff=0.1441
@@ -528,11 +528,11 @@ Top10 winners $6,051.67 (6.82% of wins) · Top10 losers -$4,429.46 (16.48% of lo
 | Profit factor | 3.2979 |
 | Gross wins / losses | $88,851.53 / -$26,942.16 |
 | Equity max drawdown | -$2,214.97 |
-| Polymarket leaderboard (ALL) | $57,338.72 PnL · vol $1,049,905.19 · rank 3244 |
+| Polymarket leaderboard (ALL) | $57,431.61 PnL · vol $1,050,695.46 · rank 3240 |
 
 ## Source validation
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57338.716846567695 diff=360.3648
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57431.607979187625 diff=267.4736
 - **DRIFT** `polydata` realized_pnl: ours=57699.0816 ref=52640.69 diff=5058.3916
 - **DRIFT** `polydata` n_trades: ours=19978 ref=24078 diff=-4100
 - **DRIFT** `polydata` win_rate: ours=0.8008 ref=0.6567 diff=0.1441
@@ -662,7 +662,7 @@ These vignettes are reconstructed from fills: average entry, average exit, hold 
 - Maker rebates: $481.53
 - Taker rebates: $24.37
 
-_Generated 2026-08-25T16:46:52.153099+00:00_
+_Generated 2026-08-25T21:55:26.000306+00:00_
 
 
 ## 7. Bot / copy playbook
@@ -709,8 +709,8 @@ Heuristic label from the scanner may still say `likely_market_maker` because of 
 | Core cashflow (ex-rebates) | $57,699.08 |
 | Closed-position legs sum | $61,909.37 |
 | Leg win rate / profit factor | 80.08% / 3.2979 |
-| Polymarket leaderboard ALL | $57,338.72 · vol $1,049,905.19 · rank 3244 |
-| polymarket_leaderboard_ALL pnl | ref=57338.716846567695 ours=57699.0816 (MATCH) |
+| Polymarket leaderboard ALL | $57,431.61 · vol $1,050,695.46 · rank 3240 |
+| polymarket_leaderboard_ALL pnl | ref=57431.607979187625 ours=57699.0816 (MATCH) |
 | polydata realized_pnl | ref=52640.69 ours=57699.0816 (DRIFT) |
 | polydata n_trades | ref=24078 ours=19978 (DRIFT) |
 | polydata win_rate | ref=0.6567 ours=0.8008 (DRIFT) |
@@ -1076,7 +1076,7 @@ flatten_before_resolution: true
 
 _Research only. Latency, fee tier, and sports-data quality decide whether this edge is yours._
 
-_Generated 2026-08-25T16:46:52.153331+00:00_
+_Generated 2026-08-25T21:55:26.000575+00:00_
 
 
 ## 8. Structured autopsy (A–G)
@@ -1087,7 +1087,7 @@ _Generated 2026-08-25T16:46:52.153331+00:00_
 - Identity: **`one_sided_informed_scalper`**
 - Primary focus: **sports_totals**
 - Span: 2026-03-12T17:59:13+00:00 → 2026-08-25T15:48:07+00:00 (165.91 days)
-- Generated: 2026-08-25T16:46:52.152804+00:00
+- Generated: 2026-08-25T21:55:25.999959+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -1096,10 +1096,10 @@ _Generated 2026-08-25T16:46:52.153331+00:00_
 | Our cashflow realized | $58,204.98 | trades=19,978 |
 | Our core cashflow | $57,699.08 | buys=9,077 sells=10,901 |
 | Our closed-legs sum | $61,909.37 | closed=5,035 WR=80.1% |
-| Polymarket leaderboard ALL | $57,338.72 | vol=$1,049,905.19 rank=3244 |
+| Polymarket leaderboard ALL | $57,431.61 | vol=$1,050,695.46 rank=3240 |
 | PolyData | $52,640.69 | trades=24078 WR=0.6567 |
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57338.716846567695 diff=360.3648
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=57699.0816 ref=57431.607979187625 diff=267.4736
 - **DRIFT** `polydata` realized_pnl: ours=57699.0816 ref=52640.69 diff=5058.3916
 - **DRIFT** `polydata` n_trades: ours=19978 ref=24078 diff=-4100
 - **DRIFT** `polydata` win_rate: ours=0.8008 ref=0.6567 diff=0.1441
@@ -1216,11 +1216,11 @@ _Generated 2026-08-25T16:46:52.153331+00:00_
 | trades | 19978 | 19978 |
 | cashflow_pnl | 58204.9839 | 58204.9839 |
 | win_rate | 0.8008 | 0.8008 |
-| entry_taker_pct | 61.62 | 61.6 |
-| both_sides_rate | 0.0068 | 0.008 |
+| entry_taker_pct | 61.62 | 61.62 |
+| both_sides_rate | 0.0068 | 0.0068 |
 | median_clip | 10.567 | 11.29 |
 | campaign_pct | 5.85 | 5.85 |
-| max_dd | -601.1817 | -2214.9721 |
+| max_dd | -601.1817 | -601.1817 |
 | time_to_mfe_med | 64 | 64 |
 
 ### Steal / avoid

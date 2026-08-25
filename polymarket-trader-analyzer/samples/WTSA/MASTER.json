@@ -2,7 +2,7 @@
   "meta": {
     "username": "WTSA",
     "wallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
-    "generated_at": "2026-08-25T16:47:02.868253+00:00",
+    "generated_at": "2026-08-25T21:55:38.099141+00:00",
     "schema_version": "1.1",
     "purpose": "human+bot consumable master autopsy"
   },
@@ -10,7 +10,7 @@
     "preferred_pnl": {
       "field": "cashflow_realized",
       "value": 169030.3377,
-      "leaderboard_all": 442550.5051193265,
+      "leaderboard_all": 445687.5427547153,
       "match": false,
       "note": "For buy-only / merge-redeem traders, cashflow equity can look deeply negative while closed-legs + leaderboard show true realized edge."
     },
@@ -27,13 +27,13 @@
       "note_buy_only": true
     },
     "polymarket_leaderboard_ALL": {
-      "rank": "471",
+      "rank": "468",
       "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
       "userName": "WTSA",
       "xUsername": "",
       "verifiedBadge": false,
-      "vol": 14224366.922521997,
-      "pnl": 442550.5051193265,
+      "vol": 14298289.835262999,
+      "pnl": 445687.5427547153,
       "profileImage": ""
     },
     "polydata": {
@@ -66,12 +66,12 @@
         {
           "source": "polymarket_leaderboard_ALL",
           "metric": "pnl",
-          "reference": 442550.5051193265,
+          "reference": 445687.5427547153,
           "ours": 169030.3377,
           "ours_field": "cashflow_realized",
-          "diff": -273520.1674,
+          "diff": -276657.2051,
           "match": false,
-          "volume_reference": 14224366.922521997
+          "volume_reference": 14298289.835262999
         },
         {
           "source": "polydata",
@@ -138,13 +138,13 @@
         "realized_pnl": 519173.09
       },
       "leaderboard": {
-        "rank": "471",
+        "rank": "468",
         "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
         "userName": "WTSA",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 14224366.922521997,
-        "pnl": 442550.5051193265,
+        "vol": 14298289.835262999,
+        "pnl": 445687.5427547153,
         "profileImage": ""
       },
       "notes": [
@@ -252,13 +252,13 @@
       "open_current_value": 51477.1829,
       "open_realized_pnl": -42449.5417,
       "leaderboard_all": {
-        "rank": "471",
+        "rank": "468",
         "proxyWallet": "0x04d5524a0a5af2eca6e39e03defc261d42fe66d8",
         "userName": "WTSA",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 14224366.922521997,
-        "pnl": 442550.5051193265,
+        "vol": 14298289.835262999,
+        "pnl": 445687.5427547153,
         "profileImage": ""
       }
     },

@@ -2,7 +2,7 @@
   "meta": {
     "username": "Winnertraders",
     "wallet": "0x13464aabec792c36b062316f474713e681330448",
-    "generated_at": "2026-08-25T16:47:01.382465+00:00",
+    "generated_at": "2026-08-25T21:55:36.446261+00:00",
     "schema_version": "1.1",
     "purpose": "human+bot consumable master autopsy"
   },
@@ -10,7 +10,7 @@
     "preferred_pnl": {
       "field": "cashflow_realized",
       "value": 16661.9043,
-      "leaderboard_all": 17578.63184561259,
+      "leaderboard_all": 17578.63221507959,
       "match": true,
       "note": "Cashflow usually tracks leaderboard for buy+sell scalpers."
     },
@@ -27,13 +27,13 @@
       "note_buy_only": false
     },
     "polymarket_leaderboard_ALL": {
-      "rank": "9026",
+      "rank": "9024",
       "proxyWallet": "0x13464aabec792c36b062316f474713e681330448",
       "userName": "Winnertraders",
       "xUsername": "",
       "verifiedBadge": false,
-      "vol": 2032708.1231980002,
-      "pnl": 17578.63184561259,
+      "vol": 2032708.1231980005,
+      "pnl": 17578.63221507959,
       "profileImage": ""
     },
     "polydata": {
@@ -66,12 +66,12 @@
         {
           "source": "polymarket_leaderboard_ALL",
           "metric": "pnl",
-          "reference": 17578.63184561259,
+          "reference": 17578.63221507959,
           "ours": 16661.9043,
           "ours_field": "cashflow_realized",
-          "diff": -916.7275,
+          "diff": -916.7279,
           "match": true,
-          "volume_reference": 2032708.1231980002
+          "volume_reference": 2032708.1231980005
         },
         {
           "source": "polydata",
@@ -138,13 +138,13 @@
         "realized_pnl": 17655.63
       },
       "leaderboard": {
-        "rank": "9026",
+        "rank": "9024",
         "proxyWallet": "0x13464aabec792c36b062316f474713e681330448",
         "userName": "Winnertraders",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 2032708.1231980002,
-        "pnl": 17578.63184561259,
+        "vol": 2032708.1231980005,
+        "pnl": 17578.63221507959,
         "profileImage": ""
       },
       "notes": [
@@ -653,13 +653,13 @@
       "open_current_value": 0,
       "open_realized_pnl": 0,
       "leaderboard_all": {
-        "rank": "9026",
+        "rank": "9024",
         "proxyWallet": "0x13464aabec792c36b062316f474713e681330448",
         "userName": "Winnertraders",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 2032708.1231980002,
-        "pnl": 17578.63184561259,
+        "vol": 2032708.1231980005,
+        "pnl": 17578.63221507959,
         "profileImage": ""
       }
     },

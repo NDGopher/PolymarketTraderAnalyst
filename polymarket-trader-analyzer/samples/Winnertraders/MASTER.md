@@ -3,7 +3,7 @@
 > Single file for humans **and** bots. Machine-readable twin: `MASTER.json` · Equity: `equity_curve.csv`.
 
 - Wallet: `0x13464aabec792c36b062316f474713e681330448`
-- Generated: `2026-08-25T16:47:01.382465+00:00`
+- Generated: `2026-08-25T21:55:36.446261+00:00`
 - Identity class: **`hybrid_liquidity_scalper`**
 
 ## 0. Executive verdict
@@ -22,10 +22,10 @@ This trader is classified as **hybrid_liquidity_scalper** with primary focus **s
 | Ours cashflow realized | $16,661.90 | trades=20,475 buy_only=False |
 | Ours core (ex-rebate) | $16,180.10 | WR legs=65.11% |
 | Ours closed-legs sum | -$844.29 | PF=0.9845 |
-| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9026 |
+| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9024 |
 | PolyData | $17,655.63 | trades=16162 WR=0.5926 |
 
-- MATCH: `polymarket_leaderboard_ALL` pnl ours=16661.9043 field=cashflow_realized ref=17578.63184561259 diff=-916.7275
+- MATCH: `polymarket_leaderboard_ALL` pnl ours=16661.9043 field=cashflow_realized ref=17578.63221507959 diff=-916.7279
 - MATCH: `polydata` realized_pnl ours=16661.9043 field=cashflow_realized ref=17655.63 diff=-993.7257
 - DRIFT: `polydata` n_trades ours=20475 field=None ref=16162 diff=4313
 - DRIFT: `polydata` win_rate ours=0.6511 field=None ref=0.5926 diff=0.0585
@@ -629,11 +629,11 @@ Top10 winners $8,931.07 (17.76% of wins) · Top10 losers -$12,751.24 (24.93% of 
 | Profit factor | 0.9845 |
 | Gross wins / losses | $53,716.10 / -$54,560.40 |
 | Equity max drawdown | -$1,644.51 |
-| Polymarket leaderboard (ALL) | $17,578.63 PnL · vol $2,032,708.12 · rank 9026 |
+| Polymarket leaderboard (ALL) | $17,578.63 PnL · vol $2,032,708.12 · rank 9024 |
 
 ## Source validation
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63184561259 diff=-916.7275
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63221507959 diff=-916.7279
 - **MATCH** `polydata` realized_pnl: ours=16661.9043 ref=17655.63 diff=-993.7257
 - **DRIFT** `polydata` n_trades: ours=20475 ref=16162 diff=4313
 - **DRIFT** `polydata` win_rate: ours=0.6511 ref=0.5926 diff=0.0585
@@ -763,7 +763,7 @@ These vignettes are reconstructed from fills: average entry, average exit, hold 
 - Maker rebates: $378.60
 - Taker rebates: $15.58
 
-_Generated 2026-08-25T16:47:01.145390+00:00_
+_Generated 2026-08-25T21:55:36.206160+00:00_
 
 
 ## 7. Bot / copy playbook
@@ -805,8 +805,8 @@ Heuristic label from the scanner may still say `likely_market_maker` because of 
 | Core cashflow (ex-rebates) | $16,180.10 |
 | Closed-position legs sum | -$844.29 |
 | Leg win rate / profit factor | 65.11% / 0.9845 |
-| Polymarket leaderboard ALL | $17,578.63 · vol $2,032,708.12 · rank 9026 |
-| polymarket_leaderboard_ALL pnl | ref=17578.63184561259 ours=16661.9043 (MATCH) |
+| Polymarket leaderboard ALL | $17,578.63 · vol $2,032,708.12 · rank 9024 |
+| polymarket_leaderboard_ALL pnl | ref=17578.63221507959 ours=16661.9043 (MATCH) |
 | polydata realized_pnl | ref=17655.63 ours=16661.9043 (MATCH) |
 | polydata n_trades | ref=16162 ours=20475 (DRIFT) |
 | polydata win_rate | ref=0.5926 ours=0.6511 (DRIFT) |
@@ -1171,7 +1171,7 @@ flatten_before_resolution: true
 
 _Research only. Latency, fee tier, and sports-data quality decide whether this edge is yours._
 
-_Generated 2026-08-25T16:47:01.145867+00:00_
+_Generated 2026-08-25T21:55:36.206664+00:00_
 
 
 ## 8. Structured autopsy (A–G)
@@ -1182,7 +1182,7 @@ _Generated 2026-08-25T16:47:01.145867+00:00_
 - Identity: **`hybrid_liquidity_scalper`**
 - Primary focus: **sports_totals**
 - Span: 2026-01-16T07:37:14+00:00 → 2026-08-23T03:42:52+00:00 (218.84 days)
-- Generated: 2026-08-25T16:47:01.145115+00:00
+- Generated: 2026-08-25T21:55:36.205871+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -1191,10 +1191,10 @@ _Generated 2026-08-25T16:47:01.145867+00:00_
 | Our cashflow realized | $16,661.90 | trades=20,475 |
 | Our core cashflow | $16,180.10 | buys=11,909 sells=8,566 |
 | Our closed-legs sum | -$844.29 | closed=3,001 WR=65.1% |
-| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9026 |
+| Polymarket leaderboard ALL | $17,578.63 | vol=$2,032,708.12 rank=9024 |
 | PolyData | $17,655.63 | trades=16162 WR=0.5926 |
 
-- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63184561259 diff=-916.7275
+- **MATCH** `polymarket_leaderboard_ALL` pnl: ours=16661.9043 ref=17578.63221507959 diff=-916.7279
 - **MATCH** `polydata` realized_pnl: ours=16661.9043 ref=17655.63 diff=-993.7257
 - **DRIFT** `polydata` n_trades: ours=20475 ref=16162 diff=4313
 - **DRIFT** `polydata` win_rate: ours=0.6511 ref=0.5926 diff=0.0585

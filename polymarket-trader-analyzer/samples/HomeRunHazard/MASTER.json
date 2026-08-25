@@ -2,7 +2,7 @@
   "meta": {
     "username": "HomeRunHazard",
     "wallet": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
-    "generated_at": "2026-08-25T16:46:55.188350+00:00",
+    "generated_at": "2026-08-25T21:55:29.831599+00:00",
     "schema_version": "1.1",
     "purpose": "human+bot consumable master autopsy"
   },
@@ -10,7 +10,7 @@
     "preferred_pnl": {
       "field": "closed_positions_sum",
       "value": 2231236.7279,
-      "leaderboard_all": 2248711.8139243205,
+      "leaderboard_all": 2246399.481092342,
       "match": true,
       "note": "For buy-only / merge-redeem traders, cashflow equity can look deeply negative while closed-legs + leaderboard show true realized edge."
     },
@@ -32,31 +32,31 @@
       "userName": "HomeRunHazard",
       "xUsername": "",
       "verifiedBadge": false,
-      "vol": 264797406.18681303,
-      "pnl": 2248711.8139243205,
+      "vol": 265604734.45106998,
+      "pnl": 2246399.481092342,
       "profileImage": ""
     },
     "polydata": {
       "source": "https://polydata.pro/traders/HomeRunHazard",
       "raw_meta": {
-        "net_pnl": 2250300.68,
-        "pos_realized_pnl": 2250300.68,
-        "n_trades": 268747.0,
-        "total_buy": 4661238.79,
-        "total_sell": 1491265.38,
+        "net_pnl": 2267102.44,
+        "pos_realized_pnl": 2267102.44,
+        "n_trades": 269390.0,
+        "total_buy": 4671058.19,
+        "total_sell": 1499293.51,
         "total_redeem": 1193.27,
-        "win_rate": 0.5418,
+        "win_rate": 0.5416,
         "profit_factor": 1.05,
-        "n_markets": 5245.0,
-        "n_buys": 20074.0,
-        "n_sells": 7154.0,
+        "n_markets": 5255.0,
+        "n_buys": 20116.0,
+        "n_sells": 7201.0,
         "n_redeems": 25964.0
       },
-      "headline_pnl": 2250301.0,
+      "headline_pnl": 2267102.0,
       "win_rate_pct": 54,
       "smart_score": 60,
-      "n_trades": 268747,
-      "realized_pnl": 2250300.68
+      "n_trades": 269390,
+      "realized_pnl": 2267102.44
     },
     "validation": {
       "ok": true,
@@ -66,36 +66,36 @@
         {
           "source": "polymarket_leaderboard_ALL",
           "metric": "pnl",
-          "reference": 2248711.8139243205,
+          "reference": 2246399.481092342,
           "ours": 2231236.7279,
           "ours_field": "closed_positions_sum",
-          "diff": -17475.086,
+          "diff": -15162.7532,
           "match": true,
-          "volume_reference": 264797406.18681303
+          "volume_reference": 265604734.45106998
         },
         {
           "source": "polydata",
           "metric": "realized_pnl",
-          "reference": 2250300.68,
+          "reference": 2267102.44,
           "ours": 2231236.7279,
           "ours_field": "closed_positions_sum",
-          "diff": -19063.9521,
+          "diff": -35865.7121,
           "match": true
         },
         {
           "source": "polydata",
           "metric": "n_trades",
-          "reference": 268747,
+          "reference": 269390,
           "ours": 26170,
-          "diff": -242577,
+          "diff": -243220,
           "match": false
         },
         {
           "source": "polydata",
           "metric": "win_rate",
-          "reference": 0.5418,
+          "reference": 0.5416,
           "ours": 0.5402,
-          "diff": -0.0016,
+          "diff": -0.0014,
           "match": true
         },
         {
@@ -118,24 +118,24 @@
       "polydata": {
         "source": "https://polydata.pro/traders/HomeRunHazard",
         "raw_meta": {
-          "net_pnl": 2250300.68,
-          "pos_realized_pnl": 2250300.68,
-          "n_trades": 268747.0,
-          "total_buy": 4661238.79,
-          "total_sell": 1491265.38,
+          "net_pnl": 2267102.44,
+          "pos_realized_pnl": 2267102.44,
+          "n_trades": 269390.0,
+          "total_buy": 4671058.19,
+          "total_sell": 1499293.51,
           "total_redeem": 1193.27,
-          "win_rate": 0.5418,
+          "win_rate": 0.5416,
           "profit_factor": 1.05,
-          "n_markets": 5245.0,
-          "n_buys": 20074.0,
-          "n_sells": 7154.0,
+          "n_markets": 5255.0,
+          "n_buys": 20116.0,
+          "n_sells": 7201.0,
           "n_redeems": 25964.0
         },
-        "headline_pnl": 2250301.0,
+        "headline_pnl": 2267102.0,
         "win_rate_pct": 54,
         "smart_score": 60,
-        "n_trades": 268747,
-        "realized_pnl": 2250300.68
+        "n_trades": 269390,
+        "realized_pnl": 2267102.44
       },
       "leaderboard": {
         "rank": "67",
@@ -143,8 +143,8 @@
         "userName": "HomeRunHazard",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 264797406.18681303,
-        "pnl": 2248711.8139243205,
+        "vol": 265604734.45106998,
+        "pnl": 2246399.481092342,
         "profileImage": ""
       },
       "notes": [
@@ -755,8 +755,8 @@
         "userName": "HomeRunHazard",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 264797406.18681303,
-        "pnl": 2248711.8139243205,
+        "vol": 265604734.45106998,
+        "pnl": 2246399.481092342,
         "profileImage": ""
       }
     },

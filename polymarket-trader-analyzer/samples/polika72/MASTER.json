@@ -2,7 +2,7 @@
   "meta": {
     "username": "polika72",
     "wallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
-    "generated_at": "2026-08-25T16:46:52.435409+00:00",
+    "generated_at": "2026-08-25T21:55:26.311503+00:00",
     "schema_version": "1.1",
     "purpose": "human+bot consumable master autopsy"
   },
@@ -10,7 +10,7 @@
     "preferred_pnl": {
       "field": "cashflow_core",
       "value": 57699.0816,
-      "leaderboard_all": 57338.716846567695,
+      "leaderboard_all": 57431.607979187625,
       "match": true,
       "note": "Cashflow usually tracks leaderboard for buy+sell scalpers."
     },
@@ -27,13 +27,13 @@
       "note_buy_only": false
     },
     "polymarket_leaderboard_ALL": {
-      "rank": "3244",
+      "rank": "3240",
       "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
       "userName": "polika72",
       "xUsername": "",
       "verifiedBadge": false,
-      "vol": 1049905.188565,
-      "pnl": 57338.716846567695,
+      "vol": 1050695.455305,
+      "pnl": 57431.607979187625,
       "profileImage": ""
     },
     "polydata": {
@@ -66,12 +66,12 @@
         {
           "source": "polymarket_leaderboard_ALL",
           "metric": "pnl",
-          "reference": 57338.716846567695,
+          "reference": 57431.607979187625,
           "ours": 57699.0816,
           "ours_field": "cashflow_core",
-          "diff": 360.3648,
+          "diff": 267.4736,
           "match": true,
-          "volume_reference": 1049905.188565
+          "volume_reference": 1050695.455305
         },
         {
           "source": "polydata",
@@ -138,13 +138,13 @@
         "realized_pnl": 52640.69
       },
       "leaderboard": {
-        "rank": "3244",
+        "rank": "3240",
         "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
         "userName": "polika72",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 1049905.188565,
-        "pnl": 57338.716846567695,
+        "vol": 1050695.455305,
+        "pnl": 57431.607979187625,
         "profileImage": ""
       },
       "notes": [
@@ -411,13 +411,13 @@
       "open_current_value": 0.0,
       "open_realized_pnl": -1917.627,
       "leaderboard_all": {
-        "rank": "3244",
+        "rank": "3240",
         "proxyWallet": "0x13997bdbf1b291b7ba65afaf1f0d8e4719ee48c8",
         "userName": "polika72",
         "xUsername": "",
         "verifiedBadge": false,
-        "vol": 1049905.188565,
-        "pnl": 57338.716846567695,
+        "vol": 1050695.455305,
+        "pnl": 57431.607979187625,
         "profileImage": ""
       }
     },
@@ -4967,11 +4967,11 @@
     "trades": 19978,
     "cashflow_pnl": 58204.9839,
     "win_rate": 0.8008,
-    "entry_taker_pct": 61.6,
-    "both_sides_rate": 0.008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
     "median_clip": 11.29,
     "campaign_pct": 5.85,
-    "max_dd": -2214.9721,
+    "max_dd": -601.1817,
     "time_to_mfe_med": 64
   },
   "equity_curve_daily": [

@@ -3,12 +3,12 @@
 > Single file for humans **and** bots. Machine-readable twin: `MASTER.json` · Equity: `equity_curve.csv`.
 
 - Wallet: `0x04d5524a0a5af2eca6e39e03defc261d42fe66d8`
-- Generated: `2026-08-25T16:47:02.868253+00:00`
+- Generated: `2026-08-25T21:55:38.099141+00:00`
 - Identity class: **`directional_hold_to_resolution`**
 
 ## 0. Executive verdict
 
-This trader is classified as **directional_hold_to_resolution** with primary focus **other**. Preferred PnL (**cashflow_realized**) **$169,030.34** (leaderboard ALL $442,550.51; REVIEW). Unique trades **17,934**. Copy difficulty **9/10** · ease **2/10**. Buy-and-hold / resolution harvesting at large notional. Easy mechanically (buy → wait → redeem) but edge is selection + bankroll + path risk, not a simple rule.
+This trader is classified as **directional_hold_to_resolution** with primary focus **other**. Preferred PnL (**cashflow_realized**) **$169,030.34** (leaderboard ALL $445,687.54; REVIEW). Unique trades **17,934**. Copy difficulty **9/10** · ease **2/10**. Buy-and-hold / resolution harvesting at large notional. Easy mechanically (buy → wait → redeem) but edge is selection + bankroll + path risk, not a simple rule.
 
 **Exit mechanics:** `merge_and_or_redeem_dominant`
 **Kalshi two-sided MM fit:** MEDIUM — extract risk + hold rules; re-fit microstructure on Kalshi
@@ -18,14 +18,14 @@ This trader is classified as **directional_hold_to_resolution** with primary foc
 
 | Source | PnL | Extra |
 |---|---:|---|
-| **Preferred (cashflow_realized)** | **$169,030.34** | vs LB diff=-273520.17 |
+| **Preferred (cashflow_realized)** | **$169,030.34** | vs LB diff=-276657.21 |
 | Ours cashflow realized | $169,030.34 | trades=17,934 buy_only=True |
 | Ours core (ex-rebate) | $160,372.00 | WR legs=98.70% |
 | Ours closed-legs sum | $3,581,052.07 | PF=122.4517 |
-| Polymarket leaderboard ALL | $442,550.51 | vol=$14,224,366.92 rank=471 |
+| Polymarket leaderboard ALL | $445,687.54 | vol=$14,298,289.84 rank=468 |
 | PolyData | $519,173.09 | trades=29173 WR=0.5402 |
 
-- DRIFT: `polymarket_leaderboard_ALL` pnl ours=169030.3377 field=cashflow_realized ref=442550.5051193265 diff=-273520.1674
+- DRIFT: `polymarket_leaderboard_ALL` pnl ours=169030.3377 field=cashflow_realized ref=445687.5427547153 diff=-276657.2051
 - DRIFT: `polydata` realized_pnl ours=169030.3377 field=cashflow_realized ref=519173.09 diff=-350142.7523
 - DRIFT: `polydata` n_trades ours=17934 field=None ref=29173 diff=-11239
 - DRIFT: `polydata` win_rate ours=0.987 field=None ref=0.5402 diff=0.4468
@@ -218,11 +218,11 @@ Top10 winners $833,981.93 (63.64% of wins) · Top10 losers $0.00 (None% of losse
 | Profit factor | 122.4517 |
 | Gross wins / losses | $3,610,537.47 / -$29,485.40 |
 | Equity max drawdown | -$834,196.15 |
-| Polymarket leaderboard (ALL) | $442,550.51 PnL · vol $14,224,366.92 · rank 471 |
+| Polymarket leaderboard (ALL) | $445,687.54 PnL · vol $14,298,289.84 · rank 468 |
 
 ## Source validation
 
-- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=442550.5051193265 diff=-273520.1674
+- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=445687.5427547153 diff=-276657.2051
 - **DRIFT** `polydata` realized_pnl: ours=169030.3377 ref=519173.09 diff=-350142.7523
 - **DRIFT** `polydata` n_trades: ours=17934 ref=29173 diff=-11239
 - **DRIFT** `polydata` win_rate: ours=0.987 ref=0.5402 diff=0.4468
@@ -294,7 +294,7 @@ These vignettes are reconstructed from fills: average entry, average exit, hold 
 - Maker rebates: $4,798.42
 - Taker rebates: $3,859.92
 
-_Generated 2026-08-25T16:47:02.752373+00:00_
+_Generated 2026-08-25T21:55:37.988812+00:00_
 
 
 ## 7. Bot / copy playbook
@@ -337,8 +337,8 @@ Heuristic label from the scanner may still say `likely_market_maker` because of 
 | Core cashflow (ex-rebates) | $160,372.00 |
 | Closed-position legs sum | $3,581,052.07 |
 | Leg win rate / profit factor | 98.70% / 122.4517 |
-| Polymarket leaderboard ALL | $442,550.51 · vol $14,224,366.92 · rank 471 |
-| polymarket_leaderboard_ALL pnl | ref=442550.5051193265 ours=169030.3377 (DRIFT) |
+| Polymarket leaderboard ALL | $445,687.54 · vol $14,298,289.84 · rank 468 |
+| polymarket_leaderboard_ALL pnl | ref=445687.5427547153 ours=169030.3377 (DRIFT) |
 | polydata realized_pnl | ref=519173.09 ours=169030.3377 (DRIFT) |
 | polydata n_trades | ref=29173 ours=17934 (DRIFT) |
 | polydata win_rate | ref=0.5402 ours=0.987 (DRIFT) |
@@ -565,7 +565,7 @@ flatten_before_resolution: true
 
 _Research only. Latency, fee tier, and sports-data quality decide whether this edge is yours._
 
-_Generated 2026-08-25T16:47:02.752495+00:00_
+_Generated 2026-08-25T21:55:37.988914+00:00_
 
 
 ## 8. Structured autopsy (A–G)
@@ -576,7 +576,7 @@ _Generated 2026-08-25T16:47:02.752495+00:00_
 - Identity: **`directional_hold_to_resolution`**
 - Primary focus: **other**
 - Span: 2026-07-16T05:26:52+00:00 → 2026-07-29T16:12:36+00:00 (13.45 days)
-- Generated: 2026-08-25T16:47:02.752161+00:00
+- Generated: 2026-08-25T21:55:37.988626+00:00
 
 ## A. Data integrity / reconciliation
 
@@ -585,10 +585,10 @@ _Generated 2026-08-25T16:47:02.752495+00:00_
 | Our cashflow realized | $169,030.34 | trades=17,934 |
 | Our core cashflow | $160,372.00 | buys=17,934 sells=0 |
 | Our closed-legs sum | $3,581,052.07 | closed=77 WR=98.7% |
-| Polymarket leaderboard ALL | $442,550.51 | vol=$14,224,366.92 rank=471 |
+| Polymarket leaderboard ALL | $445,687.54 | vol=$14,298,289.84 rank=468 |
 | PolyData | $519,173.09 | trades=29173 WR=0.5402 |
 
-- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=442550.5051193265 diff=-273520.1674
+- **DRIFT** `polymarket_leaderboard_ALL` pnl: ours=169030.3377 ref=445687.5427547153 diff=-276657.2051
 - **DRIFT** `polydata` realized_pnl: ours=169030.3377 ref=519173.09 diff=-350142.7523
 - **DRIFT** `polydata` n_trades: ours=17934 ref=29173 diff=-11239
 - **DRIFT** `polydata` win_rate: ours=0.987 ref=0.5402 diff=0.4468
