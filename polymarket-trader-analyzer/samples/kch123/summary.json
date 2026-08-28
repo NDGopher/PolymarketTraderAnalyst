@@ -1,0 +1,4212 @@
+{
+  "username": "kch123",
+  "wallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+  "counts": {
+    "activity": 108210,
+    "trades": 106103,
+    "buys": 106005,
+    "sells": 98,
+    "closed_positions": 4033,
+    "open_positions": 39,
+    "markets_traded": 1755,
+    "activity_types": {
+      "DEPOSIT": 74,
+      "TRADE": 106103,
+      "REDEEM": 1506,
+      "MERGE": 482,
+      "REWARD": 6,
+      "WITHDRAWAL": 39
+    }
+  },
+  "span": {
+    "first_ts": 1750878886,
+    "last_ts": 1769547211,
+    "first_iso": "2025-06-25T19:14:46+00:00",
+    "last_iso": "2026-01-27T20:53:31+00:00",
+    "days_active_span": 216.07
+  },
+  "pnl": {
+    "cashflow_realized": 3628200.6939,
+    "cashflow_core": 3628142.0524,
+    "cashflow_detail": {
+      "buys_usdc": 105598225.60008904,
+      "sells_usdc": 1464956.7994009985,
+      "redeems_usdc": 107761410.85309803,
+      "merges_usdc": 7872136.964500999,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 58.6415,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 13390318.5232,
+    "closed_wins": 2122,
+    "closed_losses": 1907,
+    "closed_flat": 4,
+    "win_rate": 0.5267,
+    "profit_factor": 1.2366,
+    "win_pnl": 69995176.5378,
+    "loss_pnl": -56604858.0146,
+    "total_bought": 289007937.9734,
+    "open_cash_pnl": -1465862.6801,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -148748.9738,
+    "leaderboard_all": {
+      "rank": "5",
+      "proxyWallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+      "userName": "kch123",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 298637138.564484,
+      "pnl": 11386690.875513867,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 11500337.6584,
+    "max_drawdown": -2929265.9472,
+    "points": 108097,
+    "curve_sample": [
+      {
+        "timestamp": 1750878886,
+        "equity": -3.2976,
+        "delta": -3.2976,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Diamondbacks vs. White Sox",
+        "usdc": 3.2976
+      },
+      {
+        "timestamp": 1756762853,
+        "equity": 12920.127708,
+        "delta": -0.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Phillies vs. Brewers",
+        "usdc": 0.85
+      },
+      {
+        "timestamp": 1757122162,
+        "equity": -116176.194517,
+        "delta": 20280.242702,
+        "type": "MERGE",
+        "side": null,
+        "title": "Chiefs vs. Chargers",
+        "usdc": 20280.242702
+      },
+      {
+        "timestamp": 1757267506,
+        "equity": -203878.367802,
+        "delta": -1244.756,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bengals vs. Browns",
+        "usdc": 1244.756
+      },
+      {
+        "timestamp": 1757271612,
+        "equity": -223358.564428,
+        "delta": -0.964,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cardinals vs. Saints",
+        "usdc": 0.964
+      },
+      {
+        "timestamp": 1757278318,
+        "equity": -260989.434422,
+        "delta": -1350.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lions vs. Packers",
+        "usdc": 1350.0
+      },
+      {
+        "timestamp": 1757294766,
+        "equity": -277001.289403,
+        "delta": -810.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ravens vs. Bills",
+        "usdc": 810.0
+      },
+      {
+        "timestamp": 1757870382,
+        "equity": -314282.820814,
+        "delta": -10.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Dolphins",
+        "usdc": 10.5
+      },
+      {
+        "timestamp": 1757876560,
+        "equity": -412447.742358,
+        "delta": -2.3406,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bears vs. Lions",
+        "usdc": 2.3406
+      },
+      {
+        "timestamp": 1757883844,
+        "equity": -416065.782423,
+        "delta": -15.83129,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Chiefs",
+        "usdc": 15.83129
+      },
+      {
+        "timestamp": 1757903918,
+        "equity": -332256.641127,
+        "delta": -232.9473,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Falcons vs. Vikings",
+        "usdc": 232.9473
+      },
+      {
+        "timestamp": 1758475276,
+        "equity": -339252.28946,
+        "delta": -209.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Falcons vs. Panthers",
+        "usdc": 209.56
+      },
+      {
+        "timestamp": 1758481810,
+        "equity": -456873.814977,
+        "delta": -1.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Browns",
+        "usdc": 1.12
+      },
+      {
+        "timestamp": 1758493592,
+        "equity": -474829.737986,
+        "delta": -8.090909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cowboys vs. Bears",
+        "usdc": 8.090909
+      },
+      {
+        "timestamp": 1759070093,
+        "equity": -343521.870733,
+        "delta": -30.977727,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vikings vs. Steelers",
+        "usdc": 30.977727
+      },
+      {
+        "timestamp": 1759084659,
+        "equity": -416174.98855,
+        "delta": -3217.7124,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Falcons",
+        "usdc": 3217.7124
+      },
+      {
+        "timestamp": 1759095905,
+        "equity": -439658.204416,
+        "delta": -1540.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jaguars vs. 49ers",
+        "usdc": 1540.0
+      },
+      {
+        "timestamp": 1759113933,
+        "equity": -305810.841419,
+        "delta": -1.535172,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Cowboys",
+        "usdc": 1.535172
+      },
+      {
+        "timestamp": 1759684845,
+        "equity": -346218.536632,
+        "delta": -368.0985,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Eagles",
+        "usdc": 368.0985
+      },
+      {
+        "timestamp": 1759696693,
+        "equity": -362169.696688,
+        "delta": -292.405063,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Bills",
+        "usdc": 292.405063
+      },
+      {
+        "timestamp": 1759700903,
+        "equity": -478314.363807,
+        "delta": -2250.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Chargers",
+        "usdc": 2250.0
+      },
+      {
+        "timestamp": 1759757601,
+        "equity": 13207.605158,
+        "delta": -81.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chiefs vs. Jaguars",
+        "usdc": 81.0
+      },
+      {
+        "timestamp": 1759889950,
+        "equity": -55263.842396,
+        "delta": -5.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Penguins vs. Rangers",
+        "usdc": 5.2
+      },
+      {
+        "timestamp": 1760055675,
+        "equity": -57215.7312,
+        "delta": -80.07,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Penguins",
+        "usdc": 80.07
+      },
+      {
+        "timestamp": 1760066377,
+        "equity": -112613.234167,
+        "delta": -24.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Kraken",
+        "usdc": 24.8
+      },
+      {
+        "timestamp": 1760227493,
+        "equity": 171101.271268,
+        "delta": -20.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Blackhawks",
+        "usdc": 20.5
+      },
+      {
+        "timestamp": 1760282959,
+        "equity": 163859.020095,
+        "delta": -33.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Jets",
+        "usdc": 33.32
+      },
+      {
+        "timestamp": 1760295117,
+        "equity": 17044.115268,
+        "delta": -104.5305,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Jaguars",
+        "usdc": 104.5305
+      },
+      {
+        "timestamp": 1760307575,
+        "equity": -9802.148028,
+        "delta": -70.542222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Buccaneers",
+        "usdc": 70.542222
+      },
+      {
+        "timestamp": 1760363763,
+        "equity": 294038.28727,
+        "delta": 32777.38078,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Capitals vs. Rangers",
+        "usdc": 32777.38078
+      },
+      {
+        "timestamp": 1760399841,
+        "equity": 198862.002091,
+        "delta": -166.901538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Falcons",
+        "usdc": 166.901538
+      },
+      {
+        "timestamp": 1760408521,
+        "equity": 129980.02259,
+        "delta": -1748.99,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bears vs. Commanders",
+        "usdc": 1748.99
+      },
+      {
+        "timestamp": 1760572719,
+        "equity": 36355.520933,
+        "delta": -275.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jays vs. Mariners",
+        "usdc": 275.0
+      },
+      {
+        "timestamp": 1760659973,
+        "equity": -382483.765375,
+        "delta": -140.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Senators",
+        "usdc": 140.0
+      },
+      {
+        "timestamp": 1760673630,
+        "equity": -12856.325292,
+        "delta": -391.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Golden Knights",
+        "usdc": 391.666666
+      },
+      {
+        "timestamp": 1760827472,
+        "equity": 57508.158103,
+        "delta": -2682.174,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lightning vs. Blue Jackets",
+        "usdc": 2682.174
+      },
+      {
+        "timestamp": 1760884141,
+        "equity": 199152.412547,
+        "delta": -831.74,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Jaguars",
+        "usdc": 831.74
+      },
+      {
+        "timestamp": 1760896621,
+        "equity": 42705.160821,
+        "delta": -6.005,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Saints vs. Bears",
+        "usdc": 6.005
+      },
+      {
+        "timestamp": 1760906127,
+        "equity": -50725.527639,
+        "delta": -30.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Giants vs. Broncos",
+        "usdc": 30.75
+      },
+      {
+        "timestamp": 1760910281,
+        "equity": -169184.479183,
+        "delta": -333.234827,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Giants vs. Broncos",
+        "usdc": 333.234827
+      },
+      {
+        "timestamp": 1760921981,
+        "equity": -180758.447926,
+        "delta": -0.9593,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Blackhawks",
+        "usdc": 0.9593
+      },
+      {
+        "timestamp": 1760930195,
+        "equity": -253075.473205,
+        "delta": -1400.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Lions",
+        "usdc": 1400.0
+      },
+      {
+        "timestamp": 1761014838,
+        "equity": -399047.574547,
+        "delta": -134.631,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Seahawks",
+        "usdc": 134.631
+      },
+      {
+        "timestamp": 1761093631,
+        "equity": -7003.82357,
+        "delta": -11.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Senators",
+        "usdc": 11.9
+      },
+      {
+        "timestamp": 1761098598,
+        "equity": -193202.204755,
+        "delta": -10.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Los Angeles Dodgers win the 2025 World Series?",
+        "usdc": 10.35
+      },
+      {
+        "timestamp": 1761206823,
+        "equity": -291431.120124,
+        "delta": -1.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vikings vs. Chargers",
+        "usdc": 1.85
+      },
+      {
+        "timestamp": 1761266473,
+        "equity": -364923.99744,
+        "delta": -130.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Lightning",
+        "usdc": 130.0
+      },
+      {
+        "timestamp": 1761271839,
+        "equity": -404626.836757,
+        "delta": -0.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Avalanche",
+        "usdc": 0.88
+      },
+      {
+        "timestamp": 1761314443,
+        "equity": -425722.658455,
+        "delta": -11.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Texans",
+        "usdc": 11.0
+      },
+      {
+        "timestamp": 1761349278,
+        "equity": -225600.028518,
+        "delta": -3.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Blue Jackets",
+        "usdc": 3.06
+      },
+      {
+        "timestamp": 1761408115,
+        "equity": -243153.08293,
+        "delta": -6.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kansas State vs. Kansas",
+        "usdc": 6.0
+      },
+      {
+        "timestamp": 1761436641,
+        "equity": -387351.898481,
+        "delta": -16.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Canucks",
+        "usdc": 16.75
+      },
+      {
+        "timestamp": 1761498757,
+        "equity": -295908.066675,
+        "delta": -60.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Browns vs. Patriots",
+        "usdc": 60.0
+      },
+      {
+        "timestamp": 1761503035,
+        "equity": -424973.749896,
+        "delta": -89.382857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dolphins vs. Falcons",
+        "usdc": 89.382857
+      },
+      {
+        "timestamp": 1761513813,
+        "equity": -544045.176934,
+        "delta": -60.0624,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Saints",
+        "usdc": 60.0624
+      },
+      {
+        "timestamp": 1761529835,
+        "equity": -343170.973187,
+        "delta": -2.571428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Steelers",
+        "usdc": 2.571428
+      },
+      {
+        "timestamp": 1761615663,
+        "equity": -344682.44777,
+        "delta": -104.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Chiefs",
+        "usdc": 104.0
+      },
+      {
+        "timestamp": 1761697921,
+        "equity": -97690.862985,
+        "delta": -23.9715,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Hurricanes",
+        "usdc": 23.9715
+      },
+      {
+        "timestamp": 1761778695,
+        "equity": -475368.538552,
+        "delta": -1.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Jets",
+        "usdc": 1.6
+      },
+      {
+        "timestamp": 1761868511,
+        "equity": -555664.774218,
+        "delta": -0.851851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Flyers",
+        "usdc": 0.851851
+      },
+      {
+        "timestamp": 1761880915,
+        "equity": -640699.806526,
+        "delta": -2.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Ducks",
+        "usdc": 2.3
+      },
+      {
+        "timestamp": 1761931688,
+        "equity": -401694.344234,
+        "delta": -283.8212,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Los Angeles Dodgers vs. Toronto Blue Jays: O/U 7.5",
+        "usdc": 283.8212
+      },
+      {
+        "timestamp": 1762016431,
+        "equity": -469808.348673,
+        "delta": -1205.3544,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Kings",
+        "usdc": 1205.3544
+      },
+      {
+        "timestamp": 1762051936,
+        "equity": -593803.01354,
+        "delta": -5.564516,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Oilers",
+        "usdc": 5.564516
+      },
+      {
+        "timestamp": 1762110205,
+        "equity": -298896.378326,
+        "delta": -19.411764,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Steelers",
+        "usdc": 19.411764
+      },
+      {
+        "timestamp": 1762116823,
+        "equity": -488113.280999,
+        "delta": -184.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Packers",
+        "usdc": 184.8
+      },
+      {
+        "timestamp": 1762128205,
+        "equity": -671566.09955,
+        "delta": -7289.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chiefs vs. Bills",
+        "usdc": 7289.05
+      },
+      {
+        "timestamp": 1762176625,
+        "equity": -674480.963331,
+        "delta": -250.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Andrew Cuomo win the 2025 NYC mayoral election?",
+        "usdc": 250.0
+      },
+      {
+        "timestamp": 1762213649,
+        "equity": -407529.667736,
+        "delta": -142.198,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Predators",
+        "usdc": 142.198
+      },
+      {
+        "timestamp": 1762276169,
+        "equity": -357079.743874,
+        "delta": -240.5777,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Golden Knights",
+        "usdc": 240.5777
+      },
+      {
+        "timestamp": 1762394207,
+        "equity": -344826.607482,
+        "delta": -32.6368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Maple Leafs",
+        "usdc": 32.6368
+      },
+      {
+        "timestamp": 1762476949,
+        "equity": -527301.178492,
+        "delta": -0.4736,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Hurricanes",
+        "usdc": 0.4736
+      },
+      {
+        "timestamp": 1762490331,
+        "equity": -653052.887564,
+        "delta": -221.84,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lightning vs. Golden Knights",
+        "usdc": 221.84
+      },
+      {
+        "timestamp": 1762527883,
+        "equity": -417768.31071,
+        "delta": -25.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Red Wings",
+        "usdc": 25.0
+      },
+      {
+        "timestamp": 1762626239,
+        "equity": -479407.176965,
+        "delta": -60.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Penguins vs. Devils",
+        "usdc": 60.0
+      },
+      {
+        "timestamp": 1762700081,
+        "equity": -477933.400741,
+        "delta": 52645.945552,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Kraken vs. Blues: O/U 5.5",
+        "usdc": 52645.945552
+      },
+      {
+        "timestamp": 1762715283,
+        "equity": -492515.393926,
+        "delta": -2298.7488,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Browns vs. Jets",
+        "usdc": 2298.7488
+      },
+      {
+        "timestamp": 1762722895,
+        "equity": -534612.008223,
+        "delta": -107.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jaguars vs. Texans",
+        "usdc": 107.5
+      },
+      {
+        "timestamp": 1762745273,
+        "equity": -476135.119783,
+        "delta": -316.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Steelers vs. Chargers",
+        "usdc": 316.8
+      },
+      {
+        "timestamp": 1762770906,
+        "equity": -416791.037501,
+        "delta": -11.07,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Devils",
+        "usdc": 11.07
+      },
+      {
+        "timestamp": 1762827318,
+        "equity": -453044.379682,
+        "delta": -1125.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Devils",
+        "usdc": 1125.0
+      },
+      {
+        "timestamp": 1762856807,
+        "equity": -401590.450037,
+        "delta": -8.33,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Canadiens",
+        "usdc": 8.33
+      },
+      {
+        "timestamp": 1762883287,
+        "equity": -291310.821586,
+        "delta": -220.629629,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Senators",
+        "usdc": 220.629629
+      },
+      {
+        "timestamp": 1762908477,
+        "equity": -358379.738679,
+        "delta": -12.547647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Senators",
+        "usdc": 12.547647
+      },
+      {
+        "timestamp": 1762919859,
+        "equity": -481153.83307,
+        "delta": -0.428571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Kraken",
+        "usdc": 0.428571
+      },
+      {
+        "timestamp": 1762977405,
+        "equity": 44516.717458,
+        "delta": -35.852727,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Lightning",
+        "usdc": 35.852727
+      },
+      {
+        "timestamp": 1763029478,
+        "equity": 88965.935857,
+        "delta": -5.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Maple Leafs",
+        "usdc": 5.3
+      },
+      {
+        "timestamp": 1763047338,
+        "equity": 111738.433968,
+        "delta": -5840.956,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Maple Leafs",
+        "usdc": 5840.956
+      },
+      {
+        "timestamp": 1763069860,
+        "equity": -15622.393181,
+        "delta": -90.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Jazz",
+        "usdc": 90.0
+      },
+      {
+        "timestamp": 1763072328,
+        "equity": -33190.470816,
+        "delta": -57.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Jazz",
+        "usdc": 57.6
+      },
+      {
+        "timestamp": 1763081170,
+        "equity": -103117.196186,
+        "delta": -380.0412,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Canadiens",
+        "usdc": 380.0412
+      },
+      {
+        "timestamp": 1763087766,
+        "equity": -239651.035605,
+        "delta": -612.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jets vs. Patriots",
+        "usdc": 612.43
+      },
+      {
+        "timestamp": 1763146130,
+        "equity": 91965.363485,
+        "delta": -3272.727272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Penguins vs. Predators",
+        "usdc": 3272.727272
+      },
+      {
+        "timestamp": 1763161688,
+        "equity": -236522.012991,
+        "delta": -0.0088,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Clemson vs. Louisville",
+        "usdc": 0.0088
+      },
+      {
+        "timestamp": 1763242503,
+        "equity": 166374.472009,
+        "delta": -153.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Senators",
+        "usdc": 153.0
+      },
+      {
+        "timestamp": 1763256191,
+        "equity": -215954.820151,
+        "delta": -25.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Canadiens",
+        "usdc": 25.76
+      },
+      {
+        "timestamp": 1763305263,
+        "equity": 570782.369068,
+        "delta": -43.569354,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Penguins",
+        "usdc": 43.569354
+      },
+      {
+        "timestamp": 1763319723,
+        "equity": -70581.973828,
+        "delta": -3.921176,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Bills",
+        "usdc": 3.921176
+      },
+      {
+        "timestamp": 1763322015,
+        "equity": -266501.953648,
+        "delta": -2900.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Giants",
+        "usdc": 2900.0
+      },
+      {
+        "timestamp": 1763326711,
+        "equity": -240355.764948,
+        "delta": -24.5322,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Cardinals",
+        "usdc": 24.5322
+      },
+      {
+        "timestamp": 1763340735,
+        "equity": 391572.348996,
+        "delta": -2.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Rangers",
+        "usdc": 2.75
+      },
+      {
+        "timestamp": 1763348821,
+        "equity": 407776.596485,
+        "delta": -25.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Avalanche",
+        "usdc": 25.5
+      },
+      {
+        "timestamp": 1763425463,
+        "equity": 638194.748113,
+        "delta": -194.0356,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Bruins",
+        "usdc": 194.0356
+      },
+      {
+        "timestamp": 1763430717,
+        "equity": 371726.393803,
+        "delta": -19.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Panthers",
+        "usdc": 19.0
+      },
+      {
+        "timestamp": 1763441839,
+        "equity": 273136.33847,
+        "delta": -45.6612,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Ducks",
+        "usdc": 45.6612
+      },
+      {
+        "timestamp": 1763509395,
+        "equity": 216603.615862,
+        "delta": -3.122448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blues vs. Maple Leafs",
+        "usdc": 3.122448
+      },
+      {
+        "timestamp": 1763524651,
+        "equity": 116215.442997,
+        "delta": -25.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Sharks",
+        "usdc": 25.0
+      },
+      {
+        "timestamp": 1763527973,
+        "equity": 100701.914531,
+        "delta": -6.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Sharks",
+        "usdc": 6.0
+      },
+      {
+        "timestamp": 1763550189,
+        "equity": 562931.776024,
+        "delta": -4.330212,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Capitals",
+        "usdc": 4.330212
+      },
+      {
+        "timestamp": 1763567583,
+        "equity": 442194.200486,
+        "delta": -6.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Sabres",
+        "usdc": 6.56
+      },
+      {
+        "timestamp": 1763603493,
+        "equity": 327855.871042,
+        "delta": -7420.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Ducks: O/U 6.5",
+        "usdc": 7420.0
+      },
+      {
+        "timestamp": 1763625855,
+        "equity": 536338.753897,
+        "delta": -185.3796,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Panthers",
+        "usdc": 185.3796
+      },
+      {
+        "timestamp": 1763658235,
+        "equity": 574272.743942,
+        "delta": -20.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Texans",
+        "usdc": 20.3
+      },
+      {
+        "timestamp": 1763686715,
+        "equity": 370760.032816,
+        "delta": -3858.24,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Red Wings",
+        "usdc": 3858.24
+      },
+      {
+        "timestamp": 1763696429,
+        "equity": 258542.253137,
+        "delta": -1725.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Ducks",
+        "usdc": 1725.0
+      },
+      {
+        "timestamp": 1763700251,
+        "equity": 145568.85648,
+        "delta": -296.1564,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Canucks",
+        "usdc": 296.1564
+      },
+      {
+        "timestamp": 1763772633,
+        "equity": 758614.902556,
+        "delta": -2150.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Sabres",
+        "usdc": 2150.0
+      },
+      {
+        "timestamp": 1763825677,
+        "equity": 1554570.493357,
+        "delta": -3.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Red Wings: O/U 6.5",
+        "usdc": 3.06
+      },
+      {
+        "timestamp": 1763856583,
+        "equity": 1549199.740886,
+        "delta": -19.509433,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Flyers",
+        "usdc": 19.509433
+      },
+      {
+        "timestamp": 1763870035,
+        "equity": 1645199.550011,
+        "delta": -4.692307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Flames",
+        "usdc": 4.692307
+      },
+      {
+        "timestamp": 1763920337,
+        "equity": 1064009.425135,
+        "delta": -9.54,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Sabres: O/U 6.5",
+        "usdc": 9.54
+      },
+      {
+        "timestamp": 1763926835,
+        "equity": 944063.640033,
+        "delta": -326.315789,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Steelers vs. Bears",
+        "usdc": 326.315789
+      },
+      {
+        "timestamp": 1763932005,
+        "equity": 744509.451372,
+        "delta": -6.692307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Bengals",
+        "usdc": 6.692307
+      },
+      {
+        "timestamp": 1763935951,
+        "equity": 490398.701517,
+        "delta": -2.856,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jaguars vs. Cardinals",
+        "usdc": 2.856
+      },
+      {
+        "timestamp": 1763944311,
+        "equity": 1552120.414291,
+        "delta": -113.22,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Cowboys",
+        "usdc": 113.22
+      },
+      {
+        "timestamp": 1764006173,
+        "equity": 1865794.559672,
+        "delta": -195.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Utah: O/U 5.5",
+        "usdc": 195.555555
+      },
+      {
+        "timestamp": 1764027863,
+        "equity": 1737324.593848,
+        "delta": -5.39,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. 49ers",
+        "usdc": 5.39
+      },
+      {
+        "timestamp": 1764028455,
+        "equity": 1689095.844721,
+        "delta": -77.77,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. 49ers",
+        "usdc": 77.77
+      },
+      {
+        "timestamp": 1764029349,
+        "equity": 1644896.334697,
+        "delta": -2.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Lightning",
+        "usdc": 2.52
+      },
+      {
+        "timestamp": 1764038833,
+        "equity": 1466226.694141,
+        "delta": -5.904,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Utah",
+        "usdc": 5.904
+      },
+      {
+        "timestamp": 1764125197,
+        "equity": 1367152.657663,
+        "delta": -31.6635,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Oilers",
+        "usdc": 31.6635
+      },
+      {
+        "timestamp": 1764204399,
+        "equity": 2298067.788837,
+        "delta": -1225.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Blue Jackets",
+        "usdc": 1225.0
+      },
+      {
+        "timestamp": 1764211445,
+        "equity": 2400590.330884,
+        "delta": -49.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Blackhawks",
+        "usdc": 49.5
+      },
+      {
+        "timestamp": 1764217343,
+        "equity": 2167790.756265,
+        "delta": -33.47826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Utah",
+        "usdc": 33.47826
+      },
+      {
+        "timestamp": 1764275665,
+        "equity": 2905802.81335,
+        "delta": -122.413793,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Lions",
+        "usdc": 122.413793
+      },
+      {
+        "timestamp": 1764299063,
+        "equity": 2301860.772666,
+        "delta": -3700.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bengals vs. Ravens",
+        "usdc": 3700.0
+      },
+      {
+        "timestamp": 1764344619,
+        "equity": 2383524.608646,
+        "delta": -11.2336,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jets vs. Hurricanes",
+        "usdc": 11.2336
+      },
+      {
+        "timestamp": 1764361531,
+        "equity": 1907889.646991,
+        "delta": -7.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Ducks",
+        "usdc": 7.7
+      },
+      {
+        "timestamp": 1764367849,
+        "equity": 1936172.182219,
+        "delta": 41.153843,
+        "type": "MERGE",
+        "side": null,
+        "title": "Canucks vs. Sharks",
+        "usdc": 41.153843
+      },
+      {
+        "timestamp": 1764382831,
+        "equity": 2056721.479956,
+        "delta": -7.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Stars",
+        "usdc": 7.2
+      },
+      {
+        "timestamp": 1764440279,
+        "equity": 2628031.15252,
+        "delta": -108.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lightning vs. Rangers",
+        "usdc": 108.9
+      },
+      {
+        "timestamp": 1764465253,
+        "equity": 2173537.584475,
+        "delta": -8.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Devils",
+        "usdc": 8.2
+      },
+      {
+        "timestamp": 1764478949,
+        "equity": 1855535.355231,
+        "delta": -225.2039,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Kings",
+        "usdc": 225.2039
+      },
+      {
+        "timestamp": 1764527888,
+        "equity": 2573645.607281,
+        "delta": -5.384615,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "LAR vs. Panthers",
+        "usdc": 5.384615
+      },
+      {
+        "timestamp": 1764531394,
+        "equity": 2406439.954115,
+        "delta": -13.809523,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Colts",
+        "usdc": 13.809523
+      },
+      {
+        "timestamp": 1764534542,
+        "equity": 2307610.674415,
+        "delta": -7.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Blackhawks",
+        "usdc": 7.35
+      },
+      {
+        "timestamp": 1764540266,
+        "equity": 2187605.505621,
+        "delta": -216.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Steelers",
+        "usdc": 216.666666
+      },
+      {
+        "timestamp": 1764555180,
+        "equity": 2485266.736992,
+        "delta": -401.087368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Commanders",
+        "usdc": 401.087368
+      },
+      {
+        "timestamp": 1764586718,
+        "equity": 2795270.542281,
+        "delta": -21.235964,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Penguins vs. Flyers",
+        "usdc": 21.235964
+      },
+      {
+        "timestamp": 1764631284,
+        "equity": 2763222.458542,
+        "delta": -6.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Penguins vs. Flyers",
+        "usdc": 6.9
+      },
+      {
+        "timestamp": 1764636122,
+        "equity": 2423660.408231,
+        "delta": -38.22,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Blues: O/U 6.5",
+        "usdc": 38.22
+      },
+      {
+        "timestamp": 1764664270,
+        "equity": 2899453.365887,
+        "delta": -10.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Panthers",
+        "usdc": 10.4
+      },
+      {
+        "timestamp": 1764717187,
+        "equity": 3074323.82272,
+        "delta": -27.54,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Red Wings: O/U 5.5",
+        "usdc": 27.54
+      },
+      {
+        "timestamp": 1764723445,
+        "equity": 2839805.156524,
+        "delta": -47.3286,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Canadiens",
+        "usdc": 47.3286
+      },
+      {
+        "timestamp": 1764728531,
+        "equity": 2671732.129187,
+        "delta": -48.79,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Panthers",
+        "usdc": 48.79
+      },
+      {
+        "timestamp": 1764794317,
+        "equity": 3232059.798506,
+        "delta": -18221.538461,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jets vs. Canadiens: O/U 6.5",
+        "usdc": 18221.538461
+      },
+      {
+        "timestamp": 1764812323,
+        "equity": 2654777.328634,
+        "delta": -4.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Devils",
+        "usdc": 4.55
+      },
+      {
+        "timestamp": 1764833877,
+        "equity": 3128253.134799,
+        "delta": -1.992307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Hurricanes",
+        "usdc": 1.992307
+      },
+      {
+        "timestamp": 1764875181,
+        "equity": 3068500.168647,
+        "delta": -1.505454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Senators",
+        "usdc": 1.505454
+      },
+      {
+        "timestamp": 1764897589,
+        "equity": 2262656.039287,
+        "delta": -8.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Senators",
+        "usdc": 8.3
+      },
+      {
+        "timestamp": 1764903117,
+        "equity": 2080570.105901,
+        "delta": -5.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Flames",
+        "usdc": 5.1
+      },
+      {
+        "timestamp": 1764910529,
+        "equity": 2858946.735456,
+        "delta": -4.9622,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Kings",
+        "usdc": 4.9622
+      },
+      {
+        "timestamp": 1764943347,
+        "equity": 3308882.629886,
+        "delta": -9.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Canucks",
+        "usdc": 9.35
+      },
+      {
+        "timestamp": 1764952081,
+        "equity": 3287424.365539,
+        "delta": -31.4013,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Ducks",
+        "usdc": 31.4013
+      },
+      {
+        "timestamp": 1764985801,
+        "equity": 2375642.383692,
+        "delta": -78.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Devils",
+        "usdc": 78.0
+      },
+      {
+        "timestamp": 1765038315,
+        "equity": 3360189.456645,
+        "delta": -1.74,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Panthers",
+        "usdc": 1.74
+      },
+      {
+        "timestamp": 1765051751,
+        "equity": 3292162.478589,
+        "delta": -483.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Panthers",
+        "usdc": 483.2
+      },
+      {
+        "timestamp": 1765058195,
+        "equity": 3026478.582102,
+        "delta": -7.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Panthers",
+        "usdc": 7.9
+      },
+      {
+        "timestamp": 1765072575,
+        "equity": 2459894.544942,
+        "delta": -4.896551,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blues vs. Senators",
+        "usdc": 4.896551
+      },
+      {
+        "timestamp": 1765121551,
+        "equity": 2243142.694904,
+        "delta": -5.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Panthers",
+        "usdc": 5.2
+      },
+      {
+        "timestamp": 1765133125,
+        "equity": 2401850.676459,
+        "delta": -0.204819,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Vikings",
+        "usdc": 0.204819
+      },
+      {
+        "timestamp": 1765137399,
+        "equity": 2294284.449557,
+        "delta": -129.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Saints vs. Buccaneers",
+        "usdc": 129.0
+      },
+      {
+        "timestamp": 1765145807,
+        "equity": 2090542.552312,
+        "delta": -1475.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Hurricanes",
+        "usdc": 1475.0
+      },
+      {
+        "timestamp": 1765158839,
+        "equity": 2683221.10284,
+        "delta": -448.944,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Chiefs",
+        "usdc": 448.944
+      },
+      {
+        "timestamp": 1765166767,
+        "equity": 2587219.040379,
+        "delta": -11.384615,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Chiefs",
+        "usdc": 11.384615
+      },
+      {
+        "timestamp": 1765238439,
+        "equity": 2883237.23611,
+        "delta": -20.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lightning vs. Maple Leafs: O/U 6.5",
+        "usdc": 20.0
+      },
+      {
+        "timestamp": 1765246917,
+        "equity": 2805657.203932,
+        "delta": -0.204,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Chargers",
+        "usdc": 0.204
+      },
+      {
+        "timestamp": 1765252979,
+        "equity": 2619351.212927,
+        "delta": -0.617977,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sabres vs. Flames",
+        "usdc": 0.617977
+      },
+      {
+        "timestamp": 1765305356,
+        "equity": 3054609.599994,
+        "delta": -1009.29,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sabres vs. Oilers: O/U 6.5",
+        "usdc": 1009.29
+      },
+      {
+        "timestamp": 1765318042,
+        "equity": 2909078.576309,
+        "delta": -6.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Blues",
+        "usdc": 6.44
+      },
+      {
+        "timestamp": 1765325818,
+        "equity": 2762738.844501,
+        "delta": -65.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Hurricanes: O/U 6.5",
+        "usdc": 65.0
+      },
+      {
+        "timestamp": 1765331420,
+        "equity": 2516954.986404,
+        "delta": -13.285714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Flyers",
+        "usdc": 13.285714
+      },
+      {
+        "timestamp": 1765337683,
+        "equity": 2405305.449576,
+        "delta": -5.831,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Avalanche vs. Predators",
+        "usdc": 5.831
+      },
+      {
+        "timestamp": 1765407152,
+        "equity": 3215227.975466,
+        "delta": -37.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Utah",
+        "usdc": 37.5
+      },
+      {
+        "timestamp": 1765425199,
+        "equity": 3041226.906759,
+        "delta": -3.1212,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Utah",
+        "usdc": 3.1212
+      },
+      {
+        "timestamp": 1765477925,
+        "equity": 2843178.281739,
+        "delta": -56.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Blue Jackets",
+        "usdc": 56.35
+      },
+      {
+        "timestamp": 1765499348,
+        "equity": 2852616.033201,
+        "delta": -90.6336,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Islanders",
+        "usdc": 90.6336
+      },
+      {
+        "timestamp": 1765505670,
+        "equity": 2771080.814524,
+        "delta": -6100.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Falcons vs. Buccaneers",
+        "usdc": 6100.0
+      },
+      {
+        "timestamp": 1765509506,
+        "equity": 2505605.093147,
+        "delta": -755.055,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Jets",
+        "usdc": 755.055
+      },
+      {
+        "timestamp": 1765565347,
+        "equity": 3430460.178135,
+        "delta": -9.31,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Utah: O/U 5.5",
+        "usdc": 9.31
+      },
+      {
+        "timestamp": 1765646097,
+        "equity": 3677588.860413,
+        "delta": -48.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Devils: O/U 6.5",
+        "usdc": 48.02
+      },
+      {
+        "timestamp": 1765655479,
+        "equity": 3629429.749755,
+        "delta": -37.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Wild",
+        "usdc": 37.5
+      },
+      {
+        "timestamp": 1765666803,
+        "equity": 3593682.702656,
+        "delta": -3.87,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Blue Jackets",
+        "usdc": 3.87
+      },
+      {
+        "timestamp": 1765673405,
+        "equity": 3482025.546356,
+        "delta": -436.8858,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Rangers",
+        "usdc": 436.8858
+      },
+      {
+        "timestamp": 1765678541,
+        "equity": 3356943.32098,
+        "delta": -40.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Blue Jackets",
+        "usdc": 40.32
+      },
+      {
+        "timestamp": 1765733809,
+        "equity": 3223466.965528,
+        "delta": -9.078333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Canadiens: O/U 6.5",
+        "usdc": 9.078333
+      },
+      {
+        "timestamp": 1765738239,
+        "equity": 3138080.472055,
+        "delta": -480.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Giants",
+        "usdc": 480.0
+      },
+      {
+        "timestamp": 1765743373,
+        "equity": 2983313.451702,
+        "delta": -14.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Canadiens: O/U 6.5",
+        "usdc": 14.43
+      },
+      {
+        "timestamp": 1765748665,
+        "equity": 2444888.252949,
+        "delta": -16.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Canadiens",
+        "usdc": 16.8
+      },
+      {
+        "timestamp": 1765752675,
+        "equity": 2427675.912313,
+        "delta": -4.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Hurricanes",
+        "usdc": 4.555555
+      },
+      {
+        "timestamp": 1765755661,
+        "equity": 2087027.880306,
+        "delta": -81.2664,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Seahawks",
+        "usdc": 81.2664
+      },
+      {
+        "timestamp": 1765766263,
+        "equity": 1848047.357699,
+        "delta": -4.23,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vikings vs. Cowboys",
+        "usdc": 4.23
+      },
+      {
+        "timestamp": 1765828409,
+        "equity": 3502679.019761,
+        "delta": -11.73913,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Lightning: O/U 5.5",
+        "usdc": 11.73913
+      },
+      {
+        "timestamp": 1765846525,
+        "equity": 3351953.636249,
+        "delta": -4.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Blues: O/U 5.5",
+        "usdc": 4.32
+      },
+      {
+        "timestamp": 1765850587,
+        "equity": 2772068.459157,
+        "delta": -81.1816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Rangers",
+        "usdc": 81.1816
+      },
+      {
+        "timestamp": 1765853703,
+        "equity": 2433951.621842,
+        "delta": -350.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Stars",
+        "usdc": 350.88
+      },
+      {
+        "timestamp": 1765919177,
+        "equity": 3189155.429582,
+        "delta": -15.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Blue Jackets",
+        "usdc": 15.96
+      },
+      {
+        "timestamp": 1765931169,
+        "equity": 3010750.424541,
+        "delta": -36.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Penguins: O/U 6.5",
+        "usdc": 36.4
+      },
+      {
+        "timestamp": 1765932607,
+        "equity": 2933454.478883,
+        "delta": -6.090909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Rangers",
+        "usdc": 6.090909
+      },
+      {
+        "timestamp": 1765933113,
+        "equity": 2904119.159134,
+        "delta": -1.192222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Red Wings",
+        "usdc": 1.192222
+      },
+      {
+        "timestamp": 1765933647,
+        "equity": 2850662.91762,
+        "delta": -2.0859,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Bruins",
+        "usdc": 2.0859
+      },
+      {
+        "timestamp": 1765934835,
+        "equity": 2649009.898912,
+        "delta": -38.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Knicks",
+        "usdc": 38.34
+      },
+      {
+        "timestamp": 1765936167,
+        "equity": 2539249.512994,
+        "delta": -439.4654,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Penguins",
+        "usdc": 439.4654
+      },
+      {
+        "timestamp": 1765944965,
+        "equity": 2330854.445172,
+        "delta": -4.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Avalanche vs. Kraken",
+        "usdc": 4.1
+      },
+      {
+        "timestamp": 1766013133,
+        "equity": 3771606.70016,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Golden Knights",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1766022502,
+        "equity": 3727364.91485,
+        "delta": -3.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Predators",
+        "usdc": 3.347826
+      },
+      {
+        "timestamp": 1766024356,
+        "equity": 3644104.944393,
+        "delta": -270.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Red Wings",
+        "usdc": 270.0
+      },
+      {
+        "timestamp": 1766027372,
+        "equity": 3562174.29493,
+        "delta": -509.994688,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Golden Knights",
+        "usdc": 509.994688
+      },
+      {
+        "timestamp": 1766075990,
+        "equity": 3866626.503949,
+        "delta": -3.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Blue Jackets",
+        "usdc": 3.76
+      },
+      {
+        "timestamp": 1766104963,
+        "equity": 3221233.113361,
+        "delta": -4.3766,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Lightning",
+        "usdc": 4.3766
+      },
+      {
+        "timestamp": 1766108631,
+        "equity": 2870346.12883,
+        "delta": -14485.5221,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Flames: O/U 5.5",
+        "usdc": 14485.5221
+      },
+      {
+        "timestamp": 1766113467,
+        "equity": 2491919.233478,
+        "delta": -2.675423,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Flames",
+        "usdc": 2.675423
+      },
+      {
+        "timestamp": 1766175827,
+        "equity": 3487861.109864,
+        "delta": -53.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Alabama vs. Oklahoma",
+        "usdc": 53.0
+      },
+      {
+        "timestamp": 1766195126,
+        "equity": 3296360.417979,
+        "delta": -4.0964,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Panthers",
+        "usdc": 4.0964
+      },
+      {
+        "timestamp": 1766203192,
+        "equity": 3232994.932342,
+        "delta": -690.47619,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Utah",
+        "usdc": 690.47619
+      },
+      {
+        "timestamp": 1766267231,
+        "equity": 2991574.116081,
+        "delta": -19.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Wild",
+        "usdc": 19.5
+      },
+      {
+        "timestamp": 1766274327,
+        "equity": 2983453.905284,
+        "delta": -113.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Commanders",
+        "usdc": 113.52
+      },
+      {
+        "timestamp": 1766279967,
+        "equity": 2774651.213419,
+        "delta": -22.26,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Ducks",
+        "usdc": 22.26
+      },
+      {
+        "timestamp": 1766284737,
+        "equity": 2557721.161422,
+        "delta": -6.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Bears",
+        "usdc": 6.75
+      },
+      {
+        "timestamp": 1766292524,
+        "equity": 2991159.522649,
+        "delta": -40.615384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Sharks",
+        "usdc": 40.615384
+      },
+      {
+        "timestamp": 1766345404,
+        "equity": 3486445.177245,
+        "delta": -1024.1259,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Panthers",
+        "usdc": 1024.1259
+      },
+      {
+        "timestamp": 1766351878,
+        "equity": 3071357.822254,
+        "delta": -1.89,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jaguars vs. Broncos",
+        "usdc": 1.89
+      },
+      {
+        "timestamp": 1766359620,
+        "equity": 2950004.215531,
+        "delta": -300.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Avalanche vs. Wild",
+        "usdc": 300.0
+      },
+      {
+        "timestamp": 1766365364,
+        "equity": 2767008.338423,
+        "delta": -1.201791,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Penguins",
+        "usdc": 1.201791
+      },
+      {
+        "timestamp": 1766374094,
+        "equity": 2585295.76541,
+        "delta": -5738.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Ravens",
+        "usdc": 5738.52
+      },
+      {
+        "timestamp": 1766448989,
+        "equity": 2896736.957054,
+        "delta": -367.4369,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blues vs. Lightning",
+        "usdc": 367.4369
+      },
+      {
+        "timestamp": 1766462901,
+        "equity": 3142297.931179,
+        "delta": -36.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Kings",
+        "usdc": 36.34
+      },
+      {
+        "timestamp": 1766512003,
+        "equity": 3251669.642938,
+        "delta": -2.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Golden Knights",
+        "usdc": 2.45
+      },
+      {
+        "timestamp": 1766521961,
+        "equity": 3115860.831761,
+        "delta": -1.910769,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Blackhawks",
+        "usdc": 1.910769
+      },
+      {
+        "timestamp": 1766536907,
+        "equity": 2942898.055414,
+        "delta": -1012.142127,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Oilers: O/U 6.5",
+        "usdc": 1012.142127
+      },
+      {
+        "timestamp": 1766544567,
+        "equity": 2776770.351872,
+        "delta": -3.495,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Wild",
+        "usdc": 3.495
+      },
+      {
+        "timestamp": 1766554095,
+        "equity": 2821866.068806,
+        "delta": -395.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Kings",
+        "usdc": 395.0
+      },
+      {
+        "timestamp": 1766712433,
+        "equity": 3123213.894967,
+        "delta": -6.757142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Chiefs",
+        "usdc": 6.757142
+      },
+      {
+        "timestamp": 1766784069,
+        "equity": 2676464.146797,
+        "delta": -500.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "New Mexico vs. Minnesota",
+        "usdc": 500.0
+      },
+      {
+        "timestamp": 1766870897,
+        "equity": 3233518.442354,
+        "delta": -104.081632,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Chargers",
+        "usdc": 104.081632
+      },
+      {
+        "timestamp": 1766878987,
+        "equity": 2917562.440046,
+        "delta": -6000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Magic",
+        "usdc": 6000.0
+      },
+      {
+        "timestamp": 1766886607,
+        "equity": 2172966.708857,
+        "delta": -3.3379,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Stars",
+        "usdc": 3.3379
+      },
+      {
+        "timestamp": 1766890073,
+        "equity": 2072310.763672,
+        "delta": -2.349402,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blackhawks vs. Stars",
+        "usdc": 2.349402
+      },
+      {
+        "timestamp": 1766899675,
+        "equity": 2060506.513876,
+        "delta": -66.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Canucks",
+        "usdc": 66.0
+      },
+      {
+        "timestamp": 1766948797,
+        "equity": 2392953.618616,
+        "delta": -113.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Dolphins",
+        "usdc": 113.4
+      },
+      {
+        "timestamp": 1766957567,
+        "equity": 2182272.757397,
+        "delta": -1.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Giants vs. Raiders",
+        "usdc": 1.9
+      },
+      {
+        "timestamp": 1766970603,
+        "equity": 2161512.18404,
+        "delta": -177.321803,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Kraken",
+        "usdc": 177.321803
+      },
+      {
+        "timestamp": 1766981937,
+        "equity": 1799125.421618,
+        "delta": -33.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bears vs. 49ers",
+        "usdc": 33.0
+      },
+      {
+        "timestamp": 1767062321,
+        "equity": 1798015.929286,
+        "delta": -1868.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Jets",
+        "usdc": 1868.4
+      },
+      {
+        "timestamp": 1767066857,
+        "equity": 1669886.441239,
+        "delta": -0.754385,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Falcons",
+        "usdc": 0.754385
+      },
+      {
+        "timestamp": 1767136621,
+        "equity": 3040506.443054,
+        "delta": -2.578888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Canucks",
+        "usdc": 2.578888
+      },
+      {
+        "timestamp": 1767150879,
+        "equity": 2995525.198377,
+        "delta": -851.851851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Blackhawks",
+        "usdc": 851.851851
+      },
+      {
+        "timestamp": 1767222495,
+        "equity": 2433243.634749,
+        "delta": -125.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Sharks",
+        "usdc": 125.0
+      },
+      {
+        "timestamp": 1767293391,
+        "equity": 3993426.161275,
+        "delta": -9.0636,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Senators",
+        "usdc": 9.0636
+      },
+      {
+        "timestamp": 1767315541,
+        "equity": 3919939.76818,
+        "delta": -15.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jets vs. Maple Leafs",
+        "usdc": 15.8
+      },
+      {
+        "timestamp": 1767319283,
+        "equity": 3806768.773326,
+        "delta": -1.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Penguins",
+        "usdc": 1.4
+      },
+      {
+        "timestamp": 1767390397,
+        "equity": 3896905.850172,
+        "delta": -126.1734,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Blues",
+        "usdc": 126.1734
+      },
+      {
+        "timestamp": 1767447107,
+        "equity": 3871985.786757,
+        "delta": -39.826451,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Oilers",
+        "usdc": 39.826451
+      },
+      {
+        "timestamp": 1767473313,
+        "equity": 3589730.241621,
+        "delta": -0.0084,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Utah vs. Devils",
+        "usdc": 0.0084
+      },
+      {
+        "timestamp": 1767479223,
+        "equity": 3527001.974299,
+        "delta": -6.677419,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Oilers",
+        "usdc": 6.677419
+      },
+      {
+        "timestamp": 1767491407,
+        "equity": 3428777.297559,
+        "delta": -4.26,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Flames",
+        "usdc": 4.26
+      },
+      {
+        "timestamp": 1767498799,
+        "equity": 4514449.954686,
+        "delta": -533.3256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Kings",
+        "usdc": 533.3256
+      },
+      {
+        "timestamp": 1767551815,
+        "equity": 4870625.47865,
+        "delta": -1.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Titans vs. Jaguars",
+        "usdc": 1.1
+      },
+      {
+        "timestamp": 1767555643,
+        "equity": 4797053.409163,
+        "delta": -54.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Texans",
+        "usdc": 54.0
+      },
+      {
+        "timestamp": 1767557431,
+        "equity": 4693465.422535,
+        "delta": -13.95,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cowboys vs. Giants",
+        "usdc": 13.95
+      },
+      {
+        "timestamp": 1767565359,
+        "equity": 4213857.823779,
+        "delta": -96.465,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Commanders vs. Eagles",
+        "usdc": 96.465
+      },
+      {
+        "timestamp": 1767569773,
+        "equity": 4123422.884127,
+        "delta": -7.523809,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lions vs. Bears",
+        "usdc": 7.523809
+      },
+      {
+        "timestamp": 1767577543,
+        "equity": 4008552.390846,
+        "delta": -5.5632,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Devils",
+        "usdc": 5.5632
+      },
+      {
+        "timestamp": 1767583087,
+        "equity": 3904568.400172,
+        "delta": -6.3453,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ravens vs. Steelers",
+        "usdc": 6.3453
+      },
+      {
+        "timestamp": 1767661417,
+        "equity": 4243090.308266,
+        "delta": -3.2592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Senators",
+        "usdc": 3.2592
+      },
+      {
+        "timestamp": 1767669479,
+        "equity": 3705386.784561,
+        "delta": 540.5406,
+        "type": "MERGE",
+        "side": null,
+        "title": "Red Wings vs. Senators",
+        "usdc": 540.5406
+      },
+      {
+        "timestamp": 1767721803,
+        "equity": 5606314.590347,
+        "delta": -4.41,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Avalanche vs. Lightning",
+        "usdc": 4.41
+      },
+      {
+        "timestamp": 1767746259,
+        "equity": 5278155.237322,
+        "delta": -22.5591,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Sabres",
+        "usdc": 22.5591
+      },
+      {
+        "timestamp": 1767750757,
+        "equity": 4946505.177069,
+        "delta": -0.207,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Jets",
+        "usdc": 0.207
+      },
+      {
+        "timestamp": 1767759003,
+        "equity": 4894226.037512,
+        "delta": -1.1875,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Oilers",
+        "usdc": 1.1875
+      },
+      {
+        "timestamp": 1767796027,
+        "equity": 5673213.056465,
+        "delta": 249999.9925,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: Magic (-8.5)",
+        "usdc": 249999.9925
+      },
+      {
+        "timestamp": 1767846791,
+        "equity": 5113605.773515,
+        "delta": -36.439368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Kings",
+        "usdc": 36.439368
+      },
+      {
+        "timestamp": 1767920614,
+        "equity": 5963565.819506,
+        "delta": -202.299,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canucks vs. Red Wings",
+        "usdc": 202.299
+      },
+      {
+        "timestamp": 1767923952,
+        "equity": 5247760.995159,
+        "delta": -4.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Hurricanes",
+        "usdc": 4.555555
+      },
+      {
+        "timestamp": 1767932680,
+        "equity": 5093357.006968,
+        "delta": -9.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wild vs. Kraken",
+        "usdc": 9.0
+      },
+      {
+        "timestamp": 1768002362,
+        "equity": 5825397.552042,
+        "delta": -0.0043,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rider Broncs vs. Fairfield Stags: O/U 142.5",
+        "usdc": 0.0043
+      },
+      {
+        "timestamp": 1768007196,
+        "equity": 5177375.930766,
+        "delta": -12.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Blackhawks",
+        "usdc": 12.9
+      },
+      {
+        "timestamp": 1768072272,
+        "equity": 6523804.350489,
+        "delta": -0.084,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Bruins",
+        "usdc": 0.084
+      },
+      {
+        "timestamp": 1768085286,
+        "equity": 6124101.002591,
+        "delta": -9.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Sharks",
+        "usdc": 9.02
+      },
+      {
+        "timestamp": 1768091858,
+        "equity": 5876736.868562,
+        "delta": -17.037037,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon State Beavers vs. Portland Pilots",
+        "usdc": 17.037037
+      },
+      {
+        "timestamp": 1768095208,
+        "equity": 5558789.134833,
+        "delta": -192.104,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Sabres",
+        "usdc": 192.104
+      },
+      {
+        "timestamp": 1768100032,
+        "equity": 5660569.538657,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Stars vs. Sharks",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1768111154,
+        "equity": 5870314.789995,
+        "delta": -15.087719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Oilers",
+        "usdc": 15.087719
+      },
+      {
+        "timestamp": 1768162464,
+        "equity": 5826222.529757,
+        "delta": -3.66,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars",
+        "usdc": 3.66
+      },
+      {
+        "timestamp": 1768173622,
+        "equity": 6746532.704716,
+        "delta": -1.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Eagles",
+        "usdc": 1.35
+      },
+      {
+        "timestamp": 1768180884,
+        "equity": 6488909.155718,
+        "delta": -19.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chargers vs. Patriots",
+        "usdc": 19.0
+      },
+      {
+        "timestamp": 1768185040,
+        "equity": 6008320.918493,
+        "delta": -1000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Blue Jackets vs. Utah",
+        "usdc": 1000.0
+      },
+      {
+        "timestamp": 1768264125,
+        "equity": 7564661.224892,
+        "delta": -0.378,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Rangers",
+        "usdc": 0.378
+      },
+      {
+        "timestamp": 1768265481,
+        "equity": 7459738.110969,
+        "delta": -966.57,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Rangers",
+        "usdc": 966.57
+      },
+      {
+        "timestamp": 1768268341,
+        "equity": 7141736.490424,
+        "delta": -2.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Sabres",
+        "usdc": 2.45
+      },
+      {
+        "timestamp": 1768272009,
+        "equity": 7052835.212136,
+        "delta": -142.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Blackhawks",
+        "usdc": 142.4
+      },
+      {
+        "timestamp": 1768280453,
+        "equity": 6957581.777821,
+        "delta": -0.0546,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Avalanche",
+        "usdc": 0.0546
+      },
+      {
+        "timestamp": 1768354856,
+        "equity": 7681931.0066,
+        "delta": -2240.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lightning vs. Penguins",
+        "usdc": 2240.0
+      },
+      {
+        "timestamp": 1768359526,
+        "equity": 7429866.308468,
+        "delta": -120000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Lakers",
+        "usdc": 120000.0
+      },
+      {
+        "timestamp": 1768363148,
+        "equity": 7242548.042681,
+        "delta": -0.023,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Ducks",
+        "usdc": 0.023
+      },
+      {
+        "timestamp": 1768367280,
+        "equity": 7219338.352513,
+        "delta": -82.548,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Stars vs. Ducks",
+        "usdc": 82.548
+      },
+      {
+        "timestamp": 1768442878,
+        "equity": 6933222.97003,
+        "delta": -2.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Devils",
+        "usdc": 2.347826
+      },
+      {
+        "timestamp": 1768457578,
+        "equity": 8592718.048639,
+        "delta": -1.094166,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Blackhawks",
+        "usdc": 1.094166
+      },
+      {
+        "timestamp": 1768458482,
+        "equity": 8589616.243488,
+        "delta": -2.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Blackhawks",
+        "usdc": 2.6
+      },
+      {
+        "timestamp": 1768494146,
+        "equity": 8586672.737065,
+        "delta": -14.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Blackhawks",
+        "usdc": 14.43
+      },
+      {
+        "timestamp": 1768522692,
+        "equity": 7692233.726912,
+        "delta": -1.582926,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Capitals",
+        "usdc": 1.582926
+      },
+      {
+        "timestamp": 1768526434,
+        "equity": 6967029.538633,
+        "delta": -5.775,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Bruins",
+        "usdc": 5.775
+      },
+      {
+        "timestamp": 1768528566,
+        "equity": 6863302.985826,
+        "delta": -0.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Bruins",
+        "usdc": 0.333333
+      },
+      {
+        "timestamp": 1768532720,
+        "equity": 6622978.427993,
+        "delta": -0.1296,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Blackhawks",
+        "usdc": 0.1296
+      },
+      {
+        "timestamp": 1768535078,
+        "equity": 6338376.454209,
+        "delta": -16.72,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flames vs. Blackhawks",
+        "usdc": 16.72
+      },
+      {
+        "timestamp": 1768540084,
+        "equity": 6260723.47811,
+        "delta": -6.757142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Golden Knights",
+        "usdc": 6.757142
+      },
+      {
+        "timestamp": 1768591826,
+        "equity": 7563392.910248,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-8.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768598324,
+        "equity": 7498437.856486,
+        "delta": -2.846153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 2.846153
+      },
+      {
+        "timestamp": 1768598474,
+        "equity": 7497639.264326,
+        "delta": -2.846153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 2.846153
+      },
+      {
+        "timestamp": 1768599564,
+        "equity": 7496081.796187,
+        "delta": -2.846153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 2.846153
+      },
+      {
+        "timestamp": 1768600294,
+        "equity": 7471101.9069,
+        "delta": -2.846153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 2.846153
+      },
+      {
+        "timestamp": 1768602282,
+        "equity": 7425143.783382,
+        "delta": -2.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 2.96
+      },
+      {
+        "timestamp": 1768608068,
+        "equity": 7126807.742457,
+        "delta": -3.128205,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Red Wings",
+        "usdc": 3.128205
+      },
+      {
+        "timestamp": 1768614070,
+        "equity": 6798725.522277,
+        "delta": -4.65,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Hurricanes",
+        "usdc": 4.65
+      },
+      {
+        "timestamp": 1768619236,
+        "equity": 6676253.054825,
+        "delta": -81.428571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Predators vs. Avalanche",
+        "usdc": 81.428571
+      },
+      {
+        "timestamp": 1768623700,
+        "equity": 8050454.999887,
+        "delta": -724.694807,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Kings",
+        "usdc": 724.694807
+      },
+      {
+        "timestamp": 1768681330,
+        "equity": 8889568.211794,
+        "delta": -94000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "UT Arlington Mavericks vs. Utah Valley Wolverines: O/U 143.5",
+        "usdc": 94000.0
+      },
+      {
+        "timestamp": 1768691024,
+        "equity": 7770895.365105,
+        "delta": -1.794736,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Utah",
+        "usdc": 1.794736
+      },
+      {
+        "timestamp": 1768697994,
+        "equity": 7023238.229891,
+        "delta": -3.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Senators",
+        "usdc": 3.85
+      },
+      {
+        "timestamp": 1768700950,
+        "equity": 6999882.895931,
+        "delta": -0.0924,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Jets",
+        "usdc": 0.0924
+      },
+      {
+        "timestamp": 1768704186,
+        "equity": 6983578.835724,
+        "delta": -529.5114,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maple Leafs vs. Jets",
+        "usdc": 529.5114
+      },
+      {
+        "timestamp": 1768710370,
+        "equity": 7859378.822661,
+        "delta": -130.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 130.0
+      },
+      {
+        "timestamp": 1768711142,
+        "equity": 7840574.368005,
+        "delta": -8.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 8.45
+      },
+      {
+        "timestamp": 1768711756,
+        "equity": 7790583.842753,
+        "delta": -16.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 16.9
+      },
+      {
+        "timestamp": 1768712584,
+        "equity": 7758371.757599,
+        "delta": -3.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 3.25
+      },
+      {
+        "timestamp": 1768716386,
+        "equity": 7598440.077347,
+        "delta": -9.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 9.1
+      },
+      {
+        "timestamp": 1768721338,
+        "equity": 7574356.018284,
+        "delta": -42.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 42.25
+      },
+      {
+        "timestamp": 1768723758,
+        "equity": 7544739.091428,
+        "delta": -8.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 8.45
+      },
+      {
+        "timestamp": 1768726706,
+        "equity": 7522323.18586,
+        "delta": -60.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 60.45
+      },
+      {
+        "timestamp": 1768730598,
+        "equity": 7491475.388364,
+        "delta": -16.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 16.9
+      },
+      {
+        "timestamp": 1768735238,
+        "equity": 7468673.681802,
+        "delta": -6.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 6.5
+      },
+      {
+        "timestamp": 1768752774,
+        "equity": 9139345.607537,
+        "delta": -47.361702,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 47.361702
+      },
+      {
+        "timestamp": 1768767020,
+        "equity": 7363763.969453,
+        "delta": -4.2588,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Patriots",
+        "usdc": 4.2588
+      },
+      {
+        "timestamp": 1768771920,
+        "equity": 6899468.635047,
+        "delta": -10.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Patriots",
+        "usdc": 10.8
+      },
+      {
+        "timestamp": 1768782368,
+        "equity": 7624544.453673,
+        "delta": -53.227,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 53.227
+      },
+      {
+        "timestamp": 1768784268,
+        "equity": 7566556.400654,
+        "delta": -24.545454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 24.545454
+      },
+      {
+        "timestamp": 1768787212,
+        "equity": 7486837.607241,
+        "delta": -5.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 5.4
+      },
+      {
+        "timestamp": 1768850134,
+        "equity": 8421524.278713,
+        "delta": -4.9166,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sabres vs. Hurricanes",
+        "usdc": 4.9166
+      },
+      {
+        "timestamp": 1768862842,
+        "equity": 8070807.723749,
+        "delta": -8.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Avalanche",
+        "usdc": 8.2
+      },
+      {
+        "timestamp": 1768875090,
+        "equity": 8689470.903337,
+        "delta": -57000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Canucks: O/U 6.5",
+        "usdc": 57000.0
+      },
+      {
+        "timestamp": 1768880930,
+        "equity": 8636691.194969,
+        "delta": -23.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Devils vs. Flames",
+        "usdc": 23.0
+      },
+      {
+        "timestamp": 1768952608,
+        "equity": 8874483.137121,
+        "delta": -5.39,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Florida Gators (-15.5)",
+        "usdc": 5.39
+      },
+      {
+        "timestamp": 1768965362,
+        "equity": 10903376.330971,
+        "delta": -2.625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rangers vs. Kings",
+        "usdc": 2.625
+      },
+      {
+        "timestamp": 1769051150,
+        "equity": 9502428.210055,
+        "delta": -3.3453,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Canucks",
+        "usdc": 3.3453
+      },
+      {
+        "timestamp": 1769056370,
+        "equity": 10078081.437208,
+        "delta": -0.09,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Kraken",
+        "usdc": 0.09
+      },
+      {
+        "timestamp": 1769127818,
+        "equity": 11086985.857714,
+        "delta": -49.14,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Bruins",
+        "usdc": 49.14
+      },
+      {
+        "timestamp": 1769136860,
+        "equity": 10624039.641735,
+        "delta": -15.087719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Wild",
+        "usdc": 15.087719
+      },
+      {
+        "timestamp": 1769213324,
+        "equity": 12276886.314274,
+        "delta": -1.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Maple Leafs",
+        "usdc": 1.1
+      },
+      {
+        "timestamp": 1769219690,
+        "equity": 12245785.240944,
+        "delta": -12.051351,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Golden Knights vs. Maple Leafs",
+        "usdc": 12.051351
+      },
+      {
+        "timestamp": 1769226154,
+        "equity": 12097928.091858,
+        "delta": -0.7222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Capitals vs. Flames",
+        "usdc": 0.7222
+      },
+      {
+        "timestamp": 1769272182,
+        "equity": 11695733.976542,
+        "delta": -65.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Maryland Terrapins vs. Michigan State Spartans: O/U 140.5",
+        "usdc": 65.0
+      },
+      {
+        "timestamp": 1769301130,
+        "equity": 11900784.086561,
+        "delta": -0.705033,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Red Wings vs. Jets",
+        "usdc": 0.705033
+      },
+      {
+        "timestamp": 1769303880,
+        "equity": 11881941.532705,
+        "delta": -0.886792,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Southern Utah Thunderbirds vs. Utah Tech Trailblazers: O/U 149.5",
+        "usdc": 0.886792
+      },
+      {
+        "timestamp": 1769313862,
+        "equity": 12221977.340787,
+        "delta": -21.6482,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Wild",
+        "usdc": 21.6482
+      },
+      {
+        "timestamp": 1769375566,
+        "equity": 12315877.134948,
+        "delta": -0.1443,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Broncos",
+        "usdc": 0.1443
+      },
+      {
+        "timestamp": 1769385264,
+        "equity": 12298051.038813,
+        "delta": -1.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Raptors vs. Thunder: O/U 224.5",
+        "usdc": 1.35
+      },
+      {
+        "timestamp": 1769390628,
+        "equity": 12245996.095962,
+        "delta": -18.571428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Seahawks",
+        "usdc": 18.571428
+      },
+      {
+        "timestamp": 1769393198,
+        "equity": 12203369.128941,
+        "delta": -1.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Seahawks",
+        "usdc": 1.6
+      },
+      {
+        "timestamp": 1769395254,
+        "equity": 12150487.046996,
+        "delta": -0.0576,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Flames",
+        "usdc": 0.0576
+      },
+      {
+        "timestamp": 1769396282,
+        "equity": 12103367.654075,
+        "delta": -0.0912,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Flames",
+        "usdc": 0.0912
+      },
+      {
+        "timestamp": 1769475467,
+        "equity": 12497158.521078,
+        "delta": -0.574285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Flyers",
+        "usdc": 0.574285
+      },
+      {
+        "timestamp": 1769475865,
+        "equity": 12478231.139663,
+        "delta": -0.5625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Rangers",
+        "usdc": 0.5625
+      },
+      {
+        "timestamp": 1769479173,
+        "equity": 12425030.059983,
+        "delta": -3.347826,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bruins vs. Rangers",
+        "usdc": 3.347826
+      },
+      {
+        "timestamp": 1769484457,
+        "equity": 12318636.803147,
+        "delta": -94.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Oilers",
+        "usdc": 94.0
+      },
+      {
+        "timestamp": 1769535903,
+        "equity": 11942094.157597,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769536185,
+        "equity": 11547686.726517,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769536651,
+        "equity": 11545702.468317,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769537233,
+        "equity": 11544947.275367,
+        "delta": -3.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 3.4
+      },
+      {
+        "timestamp": 1769537873,
+        "equity": 11544119.566067,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769539447,
+        "equity": 11530942.604617,
+        "delta": -4.82,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 4.82
+      },
+      {
+        "timestamp": 1769539841,
+        "equity": 11530577.662217,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769540217,
+        "equity": 11529445.028817,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769540501,
+        "equity": 11528646.155816,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769540843,
+        "equity": 11511881.614816,
+        "delta": -4.9232,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 4.9232
+      },
+      {
+        "timestamp": 1769541217,
+        "equity": 11511580.114816,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769541537,
+        "equity": 11511274.401016,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769541865,
+        "equity": 11510692.996016,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769542191,
+        "equity": 11510270.246016,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769542477,
+        "equity": 11509698.741016,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769542751,
+        "equity": 11509255.743416,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769543025,
+        "equity": 11505138.589816,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769543285,
+        "equity": 11504399.868216,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769543617,
+        "equity": 11504037.060616,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769543905,
+        "equity": 11503708.851416,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769544343,
+        "equity": 11503433.185416,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769545347,
+        "equity": 11502888.992216,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769545745,
+        "equity": 11502584.138616,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769546109,
+        "equity": 11501577.775816,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769546501,
+        "equity": 11501216.390216,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1769547211,
+        "equity": 11500337.658416,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.0
+      }
+    ]
+  },
+  "market_making": {
+    "score": 70,
+    "label": "strong_market_maker",
+    "signals": [
+      "Trades both outcomes in 57% of markets (inventory/MM signature)",
+      "Avg sell > avg buy in 91% of markets (spread capture)",
+      "High-frequency cadence (median gap 12s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.5664,
+      "fast_roundtrip_rate": 0.0625,
+      "spread_capture_rate": 0.9062,
+      "size_cv": 8.9585,
+      "median_gap_seconds": 12.0,
+      "outcome_counts": {
+        "White Sox": 4,
+        "Diamondbacks": 22,
+        "Red Sox": 14,
+        "Angels": 5,
+        "Marlins": 22,
+        "Giants": 1187,
+        "Blue Jays": 74,
+        "Guardians": 5,
+        "Phillies": 25,
+        "Astros": 5,
+        "Mets": 9,
+        "Rangers": 2028,
+        "No": 108,
+        "Yes": 831,
+        "Mariners": 127,
+        "Royals": 9,
+        "Rockies": 1,
+        "Yankees": 17,
+        "Tigers": 8,
+        "Barrios": 14,
+        "Ohio State": 32,
+        "Brewers": 1,
+        "Over": 3490,
+        "Cowboys": 852,
+        "Eagles": 835,
+        "Chiefs": 812,
+        "Chargers": 819,
+        "Sinner": 11,
+        "Steelers": 781,
+        "Patriots": 1224,
+        "Panthers": 1871,
+        "Raiders": 991,
+        "Saints": 589,
+        "Jaguars": 705,
+        "Commanders": 810,
+        "Falcons": 779,
+        "Browns": 730,
+        "Dolphins": 858,
+        "Buccaneers": 208,
+        "Bengals": 633,
+        "Jets": 2300,
+        "Cardinals": 546,
+        "Seahawks": 9793,
+        "Titans": 371,
+        "49ers": 1372,
+        "Texans": 1872,
+        "Rams": 3568,
+        "Lions": 1127,
+        "Packers": 929,
+        "Broncos": 962,
+        "Bills": 703,
+        "Ravens": 593,
+        "Bears": 1495,
+        "Vikings": 739,
+        "Colts": 779,
+        "Kings": 2370,
+        "Blackhawks": 2389,
+        "Penguins": 1845,
+        "Avalanche": 1390,
+        "Capitals": 2050,
+        "Canadiens": 1351,
+        "Maple Leafs": 1783,
+        "Bruins": 2007,
+        "Flames": 2533,
+        "Golden Knights": 920,
+        "Oilers": 1818,
+        "Senators": 1615,
+        "Flyers": 1767,
+        "Islanders": 1419,
+        "Red Wings": 1408,
+        "Lightning": 1874,
+        "Sabres": 1026,
+        "Devils": 1283,
+        "Wild": 1277,
+        "Predators": 1319,
+        "Blue Jackets": 3747,
+        "Stars": 1671,
+        "Blues": 1442,
+        "Utah": 3241,
+        "Hurricanes": 1952,
+        "Kraken": 1372,
+        "Ducks": 1494,
+        "Sharks": 1229,
+        "Canucks": 1871,
+        "Dodgers": 61,
+        "Under": 2464,
+        "Warriors": 39,
+        "Celtics": 43,
+        "Clippers": 151,
+        "Kansas": 9,
+        "Illinois": 31,
+        "Kansas State": 3,
+        "Buffalo": 1,
+        "Hornets": 51,
+        "Rice": 15,
+        "Raptors": 141,
+        "Purdue Boilermakers": 3,
+        "Jazz": 291,
+        "Clemson": 94,
+        "Texas State": 32,
+        "Central Michigan": 34,
+        "76ers": 9,
+        "Grizzlies": 14,
+        "Thunder": 23,
+        "Tulane": 1,
+        "Alabama Crimson Tide": 23,
+        "Tennessee Volunteers": 3,
+        "Boise State Broncos": 12,
+        "Eastern Michigan": 8,
+        "Notre Dame Fighting Irish": 9,
+        "Kansas Jayhawks": 49,
+        "Michigan Wolverines": 2,
+        "Oregon": 4,
+        "Vanderbilt": 1,
+        "Bulls": 4,
+        "Pelicans": 74,
+        "LAR": 85,
+        "Pacers": 43,
+        "Pistons": 22,
+        "Suns": 20,
+        "Nuggets": 69,
+        "Rockets": 46,
+        "Indiana": 143,
+        "Timberwolves": 117,
+        "Trail Blazers": 10,
+        "Mavericks": 57,
+        "Army": 26,
+        "Knicks": 45,
+        "Spurs": 1,
+        "Bucks": 31,
+        "Western Michigan": 3,
+        "Oklahoma": 84,
+        "Memphis": 2,
+        "Miami": 266,
+        "James Madison": 4,
+        "Washington State": 51,
+        "Southern Miss": 237,
+        "Ohio": 30,
+        "Hawaii": 53,
+        "New Mexico": 117,
+        "East Carolina": 26,
+        "Heat": 10,
+        "Appalachian State": 2,
+        "Tennessee": 10,
+        "Iowa": 15,
+        "Duke": 9,
+        "Texas": 1,
+        "Navy": 17,
+        "Arizona": 16,
+        "SMU Mustangs": 3,
+        "Cornell Big Red": 1,
+        "Wizards": 6,
+        "Ole Miss": 5,
+        "Montana State Bobcats": 1,
+        "Saint Peters Peacocks": 1,
+        "Wisconsin Badgers": 10,
+        "Villanova Wildcats": 2,
+        "Florida Gulf Coast Eagles": 1,
+        "Saint Marys Gaels": 1,
+        "Texas Tech Red Raiders": 11,
+        "UC Riverside Highlanders": 1,
+        "Oregon State Beavers": 3,
+        "Nevada Wolf Pack": 2,
+        "BYU Cougars": 5,
+        "Green Bay Phoenix": 3,
+        "Manhattan Jaspers": 2,
+        "Rider Broncs": 1,
+        "Quinnipiac Bobcats": 1,
+        "Siena Saints": 4,
+        "Hawks": 3,
+        "Morgan State Bears": 2,
+        "Maryland Eastern Shore Hawks": 1,
+        "North Carolina Central Eagles": 2,
+        "Coppin State Eagles": 14,
+        "Southeastern Louisiana Lions": 1,
+        "Western Michigan Broncos": 3,
+        "Fresno State Bulldogs": 2,
+        "Oklahoma Sooners": 2,
+        "Richmond Spiders": 4,
+        "Furman Paladins": 3,
+        "Coastal Carolina Chanticleers": 5,
+        "George Washington Revolutionaries": 2,
+        "Colorado Buffaloes": 3,
+        "California Golden Bears": 2,
+        "Detroit Titans": 2,
+        "North Carolina A&T Aggies": 5,
+        "Delaware Fightin Blue Hens": 1,
+        "Wright State Raiders": 3,
+        "Cleveland State Vikings": 1,
+        "Charleston Cougars": 3,
+        "South Alabama Jaguars": 2,
+        "Lipscomb Bisons": 1,
+        "Florida Atlantic Owls": 3,
+        "San Diego Toreros": 2,
+        "Gonzaga Bulldogs": 2,
+        "Lakers": 7,
+        "Toledo Rockets": 17,
+        "DePaul Blue Demons": 1,
+        "Jacksonville Dolphins": 4,
+        "Alcorn State Braves": 1,
+        "South Carolina Gamecocks": 11,
+        "Pittsburgh Panthers": 1,
+        "Loyola Marymount Lions": 1,
+        "Sacramento State Hornets": 3,
+        "Maryland Terrapins": 14,
+        "Wichita State Shockers": 1,
+        "Tulane Green Wave": 4,
+        "Mercyhurst Lakers": 2,
+        "Cavaliers": 7,
+        "Providence Friars": 3,
+        "Lamar Cardinals": 2,
+        "LSU Tigers": 177,
+        "Baylor Bears": 37,
+        "San Jose State Spartans": 25,
+        "Old Dominion Monarchs": 6,
+        "Army Black Knights": 1,
+        "Texas Longhorns": 1,
+        "Washington Huskies": 11,
+        "Louisiana-Monroe Warhawks": 44,
+        "Milwaukee Panthers": 2,
+        "Stony Brook Seawolves": 1,
+        "Denver Pioneers": 2,
+        "New Mexico State Aggies": 1,
+        "Long Beach State Beach": 2,
+        "UNCG Spartans": 17,
+        "Rutgers Scarlet Knights": 1,
+        "Colorado State Rams": 14,
+        "Towson Tigers": 1,
+        "Bethune-Cookman Wildcats": 1,
+        "UC Irvine Anteaters": 1,
+        "South Florida Bulls": 16
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 10284,
+      "1": 13503,
+      "2": 10973,
+      "3": 7771,
+      "4": 5730,
+      "5": 2092,
+      "6": 1016,
+      "7": 658,
+      "8": 731,
+      "9": 665,
+      "10": 631,
+      "11": 767,
+      "12": 411,
+      "13": 908,
+      "14": 1174,
+      "15": 1533,
+      "16": 1507,
+      "17": 4561,
+      "18": 6812,
+      "19": 8964,
+      "20": 6831,
+      "21": 6480,
+      "22": 5152,
+      "23": 6949
+    },
+    "dow_utc": {
+      "0": 11481,
+      "1": 20156,
+      "2": 10647,
+      "3": 9652,
+      "4": 15295,
+      "5": 10618,
+      "6": 28254
+    },
+    "peak_hours": [
+      1,
+      2,
+      0,
+      19,
+      3
+    ],
+    "peak_dows": [
+      6,
+      1,
+      4
+    ]
+  },
+  "sizing": {
+    "n": 106103,
+    "mean_usdc": 1009.0495,
+    "median_usdc": 15.0877,
+    "p10_usdc": 1.0,
+    "p90_usdc": 1078.0,
+    "max_usdc": 729628.7742,
+    "mean_shares": 1988.3305,
+    "median_shares": 30.0
+  },
+  "categories": {
+    "pnl": {
+      "sports_match": 11368340.5213,
+      "sports_totals": 1718753.7413,
+      "other": 365327.4493,
+      "politics": -62103.1887
+    },
+    "counts": {
+      "sports_match": 3569,
+      "other": 16,
+      "sports_totals": 447,
+      "politics": 1
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Will Villarreal CF win on 2026-01-20?",
+      "pnl": 1095000.0,
+      "buy_usdc": 405000.0,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0,
+      "avg_buy": 0.27,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Seahawks (-4.5)",
+      "pnl": 986792.146,
+      "buy_usdc": 262924.5,
+      "sell_usdc": 0.0,
+      "n_buys": 7073,
+      "n_sells": 0,
+      "hold_seconds": 12812,
+      "avg_buy": 0.5,
+      "avg_sell": null
+    },
+    {
+      "title": "Will Paris Saint-Germain FC win on 2026-01-20?",
+      "pnl": 580000.0,
+      "buy_usdc": 420000.0,
+      "sell_usdc": 0.0,
+      "n_buys": 3,
+      "n_sells": 0,
+      "hold_seconds": 1338,
+      "avg_buy": 0.42,
+      "avg_sell": null
+    },
+    {
+      "title": "Stars vs. Oilers",
+      "pnl": 481040.3903,
+      "buy_usdc": 425738.0706,
+      "sell_usdc": 0.0,
+      "n_buys": 217,
+      "n_sells": 0,
+      "hold_seconds": 69074,
+      "avg_buy": 0.4689,
+      "avg_sell": null
+    },
+    {
+      "title": "Texas State vs. Southern Miss",
+      "pnl": 417465.1389,
+      "buy_usdc": 265539.8936,
+      "sell_usdc": 0.0,
+      "n_buys": 32,
+      "n_sells": 0,
+      "hold_seconds": 7724,
+      "avg_buy": 0.3888,
+      "avg_sell": null
+    },
+    {
+      "title": "Wild vs. Penguins",
+      "pnl": 375013.176,
+      "buy_usdc": 336415.8286,
+      "sell_usdc": 0.0,
+      "n_buys": 94,
+      "n_sells": 0,
+      "hold_seconds": 41794,
+      "avg_buy": 0.4729,
+      "avg_sell": null
+    },
+    {
+      "title": "Will Stade Rennais FC 1901 win on 2026-01-18?",
+      "pnl": 371663.819,
+      "buy_usdc": 228000.0,
+      "sell_usdc": 335844.7291,
+      "n_buys": 3,
+      "n_sells": 1,
+      "hold_seconds": 21728,
+      "avg_buy": 0.38,
+      "avg_sell": 0.999
+    },
+    {
+      "title": "Capitals vs. Blackhawks",
+      "pnl": 357255.7013,
+      "buy_usdc": 472223.8512,
+      "sell_usdc": 0.0,
+      "n_buys": 68,
+      "n_sells": 0,
+      "hold_seconds": 7770,
+      "avg_buy": 0.5478,
+      "avg_sell": null
+    },
+    {
+      "title": "Clemson vs. Louisville",
+      "pnl": 345950.6323,
+      "buy_usdc": 271818.354,
+      "sell_usdc": 0.0,
+      "n_buys": 94,
+      "n_sells": 0,
+      "hold_seconds": 2284,
+      "avg_buy": 0.44,
+      "avg_sell": null
+    },
+    {
+      "title": "Flames vs. Sharks",
+      "pnl": 345772.2977,
+      "buy_usdc": 305245.3624,
+      "sell_usdc": 0.0,
+      "n_buys": 158,
+      "n_sells": 0,
+      "hold_seconds": 8750,
+      "avg_buy": 0.4496,
+      "avg_sell": null
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Will FC Barcelona win on 2026-01-18?",
+      "pnl": -713998.797,
+      "buy_usdc": 713999.997,
+      "sell_usdc": 0.0,
+      "n_buys": 9,
+      "n_sells": 0,
+      "hold_seconds": 1282
+    },
+    {
+      "title": "Blue Jays vs. Mariners",
+      "pnl": -665499.9841,
+      "buy_usdc": 665499.9841,
+      "sell_usdc": 0.0,
+      "n_buys": 69,
+      "n_sells": 0,
+      "hold_seconds": 33944
+    },
+    {
+      "title": "Bills vs. Jaguars",
+      "pnl": -549430.4511,
+      "buy_usdc": 567079.5934,
+      "sell_usdc": 0.0,
+      "n_buys": 118,
+      "n_sells": 0,
+      "hold_seconds": 18758
+    },
+    {
+      "title": "Chiefs vs. Cowboys",
+      "pnl": -533797.484,
+      "buy_usdc": 768946.3122,
+      "sell_usdc": 0.0,
+      "n_buys": 204,
+      "n_sells": 0,
+      "hold_seconds": 12956
+    },
+    {
+      "title": "Blue Jays vs. Dodgers",
+      "pnl": -519406.0385,
+      "buy_usdc": 519409.9214,
+      "sell_usdc": 0.0,
+      "n_buys": 17,
+      "n_sells": 0,
+      "hold_seconds": 3016
+    },
+    {
+      "title": "Will Olympiak\u00f3s SFP win on 2026-01-20?",
+      "pnl": -510999.3,
+      "buy_usdc": 511000.0,
+      "sell_usdc": 0.0,
+      "n_buys": 3,
+      "n_sells": 0,
+      "hold_seconds": 554
+    },
+    {
+      "title": "Spread: Lions (-3.5)",
+      "pnl": -456849.9832,
+      "buy_usdc": 456850.6832,
+      "sell_usdc": 0.0,
+      "n_buys": 8,
+      "n_sells": 0,
+      "hold_seconds": 23796
+    },
+    {
+      "title": "Patriots vs. Ravens",
+      "pnl": -430358.4858,
+      "buy_usdc": 482210.293,
+      "sell_usdc": 0.0,
+      "n_buys": 108,
+      "n_sells": 0,
+      "hold_seconds": 16676
+    },
+    {
+      "title": "Ravens vs. Packers",
+      "pnl": -430296.7063,
+      "buy_usdc": 452587.5194,
+      "sell_usdc": 0.0,
+      "n_buys": 171,
+      "n_sells": 0,
+      "hold_seconds": 9566
+    },
+    {
+      "title": "Alabama vs. Oklahoma",
+      "pnl": -412300.0136,
+      "buy_usdc": 412318.7062,
+      "sell_usdc": 0.0,
+      "n_buys": 84,
+      "n_sells": 0,
+      "hold_seconds": 11450
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "Will Aston Villa FC win on 2026-01-18?",
+      "avg_buy": 0.4869,
+      "avg_sell": 0.999,
+      "spread": 0.5121,
+      "pnl": 164044.1514,
+      "n_buys": 7,
+      "n_sells": 38,
+      "hold_seconds": 16616,
+      "both_sides": true
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "all_checks_passed": true,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 4055413.259574452,
+      "ours": 4175613.5447,
+      "ours_field": "cashflow_core",
+      "diff": 120200.2851,
+      "match": true,
+      "volume_reference": 248548251.18206796
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 4055413.26,
+      "ours": 4175613.5447,
+      "ours_field": "cashflow_core",
+      "diff": 120200.2847,
+      "match": true
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 272027,
+      "ours": 64290,
+      "diff": -207737,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.481,
+      "ours": 0.9022,
+      "diff": 0.4212,
+      "match": false
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 46297730.9682,
+      "ours": 4176633.543,
+      "diff": -42121097.4252,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": 4176633.543,
+    "cashflow_core": 4175613.5447,
+    "closed_positions_sum": 46297730.9682,
+    "trades": 64290,
+    "win_rate": 0.9022
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/DrPufferfish",
+    "raw_meta": {
+      "net_pnl": 4055413.26,
+      "pos_realized_pnl": 4055413.26,
+      "n_trades": 272027.0,
+      "total_buy": 8622815.04,
+      "total_sell": 420954.0,
+      "total_redeem": 6518780.74,
+      "win_rate": 0.481,
+      "profit_factor": 0.96,
+      "n_markets": 1008.0,
+      "n_buys": 24904.0,
+      "n_sells": 2382.0,
+      "n_redeems": 59.0
+    },
+    "headline_pnl": 4055413.0,
+    "win_rate_pct": 48,
+    "smart_score": 26,
+    "n_trades": 272027,
+    "realized_pnl": 4055413.26
+  },
+  "leaderboard": {
+    "rank": "30",
+    "proxyWallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+    "userName": "DrPufferfish",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 248548251.18206796,
+    "pnl": 4055413.259574452,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}

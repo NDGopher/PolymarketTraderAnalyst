@@ -1,0 +1,4291 @@
+{
+  "username": "ImJustKen",
+  "wallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+  "counts": {
+    "activity": 370628,
+    "trades": 320389,
+    "buys": 279362,
+    "sells": 41027,
+    "closed_positions": 17542,
+    "open_positions": 953,
+    "markets_traded": 5257,
+    "activity_types": {
+      "MERGE": 43637,
+      "REDEEM": 5390,
+      "TRADE": 320389,
+      "SPLIT": 23,
+      "WITHDRAWAL": 80,
+      "DEPOSIT": 67,
+      "REWARD": 221,
+      "CONVERSION": 821
+    }
+  },
+  "span": {
+    "first_ts": 1670878701,
+    "last_ts": 1729716437,
+    "first_iso": "2022-12-12T20:58:21+00:00",
+    "last_iso": "2024-10-23T20:47:17+00:00",
+    "days_active_span": 680.99
+  },
+  "pnl": {
+    "cashflow_realized": -43822026.8674,
+    "cashflow_core": -44806140.8029,
+    "cashflow_detail": {
+      "buys_usdc": 71990498.81530878,
+      "sells_usdc": 17195487.691492926,
+      "redeems_usdc": 9988870.320941005,
+      "merges_usdc": 53557823.91026923,
+      "splits_usdc": 29989.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 984113.9354999994,
+      "conversions_usdc": 3980538.3031909983
+    },
+    "closed_positions_sum": -27767466.7259,
+    "closed_wins": 7601,
+    "closed_losses": 9179,
+    "closed_flat": 762,
+    "win_rate": 0.453,
+    "profit_factor": 0.4002,
+    "win_pnl": 18524140.2144,
+    "loss_pnl": -46291606.9403,
+    "total_bought": 317768901.3084,
+    "open_cash_pnl": -16460071.6344,
+    "open_current_value": 1013579.6187,
+    "open_realized_pnl": -631680.4276,
+    "leaderboard_all": {
+      "rank": "44",
+      "proxyWallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "userName": "ImJustKen",
+      "xUsername": "Domahhhh",
+      "verifiedBadge": true,
+      "vol": 499524708.3609771,
+      "pnl": 3291874.409581338,
+      "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-82662-8ddbc8e8-0500-44b7-bb13-c0b32a40a45d.jpg"
+    }
+  },
+  "equity": {
+    "final": 9705808.0429,
+    "max_drawdown": -3669479.0347,
+    "points": 369660,
+    "curve_sample": [
+      {
+        "timestamp": 1642625256,
+        "equity": 1186.968669,
+        "delta": 1186.968669,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will President Biden mention \"anti-vaxxers\" in his press conference on January 19?",
+        "usdc": 1186.968669
+      },
+      {
+        "timestamp": 1649627563,
+        "equity": 3246081.606452,
+        "delta": 19020.812985,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Nikola Joki\u0107 win NBA \u201921-\u201922 MVP?",
+        "usdc": 19020.812985
+      },
+      {
+        "timestamp": 1654631884,
+        "equity": 6787505.92052,
+        "delta": 1364.238591,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Russia expand its number of federal subjects by October 1, 2022?",
+        "usdc": 1364.238591
+      },
+      {
+        "timestamp": 1670944976,
+        "equity": 13192084.147133,
+        "delta": -59.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will SBF be federally indicted by EOY?",
+        "usdc": 59.85
+      },
+      {
+        "timestamp": 1679402505,
+        "equity": 13221594.195246,
+        "delta": -620.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Fed decrease interest rates by 25 bps after its March meeting?",
+        "usdc": 620.4
+      },
+      {
+        "timestamp": 1685614731,
+        "equity": 13274317.435174,
+        "delta": -2008.9282,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "US debt ceiling hike by June 1?",
+        "usdc": 2008.9282
+      },
+      {
+        "timestamp": 1687608690,
+        "equity": 13266129.493748,
+        "delta": -68.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Prigozhin be arrested by July 15?",
+        "usdc": 68.0
+      },
+      {
+        "timestamp": 1688454720,
+        "equity": 13233249.326198,
+        "delta": -15.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will EthCC be postponed?",
+        "usdc": 15.0
+      },
+      {
+        "timestamp": 1689947762,
+        "equity": 13238728.076248,
+        "delta": -19.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Biden additional aid to Ukraine by July 31?",
+        "usdc": 19.5
+      },
+      {
+        "timestamp": 1690549987,
+        "equity": 13271733.338174,
+        "delta": -1.410256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Fed raise interest rates by 25 bps after its September meeting?",
+        "usdc": 1.410256
+      },
+      {
+        "timestamp": 1691385106,
+        "equity": 13273267.399549,
+        "delta": -108.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kane sign for Bayern Munich?",
+        "usdc": 108.0
+      },
+      {
+        "timestamp": 1692105991,
+        "equity": 13247860.743028,
+        "delta": -0.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Zuck answer the door?",
+        "usdc": 0.25
+      },
+      {
+        "timestamp": 1692887469,
+        "equity": 13252139.541436,
+        "delta": -189.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Dillon Danis back out of Logan Paul fight?",
+        "usdc": 189.0
+      },
+      {
+        "timestamp": 1695069893,
+        "equity": 13293975.569643,
+        "delta": -0.079999,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will there be a US government shutdown by October 2?",
+        "usdc": 0.079999
+      },
+      {
+        "timestamp": 1695781924,
+        "equity": 13272113.881589,
+        "delta": -0.63,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will \"Trump\" be said by every candidate in the 2nd RNC primary debate?",
+        "usdc": 0.63
+      },
+      {
+        "timestamp": 1696512134,
+        "equity": 13271770.93373,
+        "delta": -69.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will there be a US government shutdown by November 19?",
+        "usdc": 69.7
+      },
+      {
+        "timestamp": 1696911425,
+        "equity": 13250378.837061,
+        "delta": -222.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jim Jordan be the next Speaker?",
+        "usdc": 222.0
+      },
+      {
+        "timestamp": 1697188401,
+        "equity": 13228944.564725,
+        "delta": -30.19848,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Did Israeli intelligence have advanced knowledge of the Attack?",
+        "usdc": 30.19848
+      },
+      {
+        "timestamp": 1697483885,
+        "equity": 13224006.069705,
+        "delta": -4.945054,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the US rescue at least one American hostage from Hamas by Oct 31?",
+        "usdc": 4.945054
+      },
+      {
+        "timestamp": 1697747910,
+        "equity": 13233462.9919,
+        "delta": -31.628888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hamas still in power in Gaza by Oct 31?",
+        "usdc": 31.628888
+      },
+      {
+        "timestamp": 1698149333,
+        "equity": 13219662.661,
+        "delta": -3.405405,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tom Emmer be the next Speaker?",
+        "usdc": 3.405405
+      },
+      {
+        "timestamp": 1698750802,
+        "equity": 13242387.332512,
+        "delta": -45.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will US attack Iran by Nov 30?",
+        "usdc": 45.0
+      },
+      {
+        "timestamp": 1699226723,
+        "equity": 13217793.521225,
+        "delta": -43.668,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fuel shipments to Gaza by Nov 30?",
+        "usdc": 43.668
+      },
+      {
+        "timestamp": 1699527772,
+        "equity": 13206934.786989,
+        "delta": -9.3812,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Temporary ceasefire for hostages deal by Nov 10?",
+        "usdc": 9.3812
+      },
+      {
+        "timestamp": 1700026711,
+        "equity": 13199659.340771,
+        "delta": -53.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'The Hunger Games: The Ballad of Songbirds & Snakes' gross over $50m opening weekend?",
+        "usdc": 53.3
+      },
+      {
+        "timestamp": 1700310155,
+        "equity": 13198064.409682,
+        "delta": -80.90909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sam Altman announces new company by Nov 24?",
+        "usdc": 80.90909
+      },
+      {
+        "timestamp": 1700521971,
+        "equity": 13222826.775095,
+        "delta": -5.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the SEC approve BlackRock's Bitcoin ETF by December 31?",
+        "usdc": 5.555555
+      },
+      {
+        "timestamp": 1700966704,
+        "equity": 13250690.256702,
+        "delta": -94.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Josh Giddey's contract be terminated?",
+        "usdc": 94.0
+      },
+      {
+        "timestamp": 1701494998,
+        "equity": 13280288.506513,
+        "delta": -0.686,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Israel launch a major ground offensive in South Gaza by Dec 8?",
+        "usdc": 0.686
+      },
+      {
+        "timestamp": 1701923947,
+        "equity": 13268221.883596,
+        "delta": 5000.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will any Republican congressman come out as gay before March?",
+        "usdc": 5000.0
+      },
+      {
+        "timestamp": 1702325559,
+        "equity": 13238632.489037,
+        "delta": -445.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sally Kornbluth still MIT President by end of 2023?",
+        "usdc": 445.0
+      },
+      {
+        "timestamp": 1702668322,
+        "equity": 13193843.865233,
+        "delta": 72.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Hunter Biden arrested before April?",
+        "usdc": 72.0
+      },
+      {
+        "timestamp": 1703142326,
+        "equity": 13200733.642914,
+        "delta": -0.999998,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "US Congress approve more Ukraine aid in 2023?",
+        "usdc": 0.999998
+      },
+      {
+        "timestamp": 1703815361,
+        "equity": 13193829.167092,
+        "delta": -40.12094,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Taiwan Presidential Election: Will Hou Yu-ih win?",
+        "usdc": 40.12094
+      },
+      {
+        "timestamp": 1704150525,
+        "equity": 13270559.462024,
+        "delta": -316.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump appear on Maine primary ballot?",
+        "usdc": 316.0
+      },
+      {
+        "timestamp": 1704378850,
+        "equity": 13235924.715279,
+        "delta": -720.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bitcoin ETF approved by Jan 15?",
+        "usdc": 720.0
+      },
+      {
+        "timestamp": 1704574409,
+        "equity": 13185400.591737,
+        "delta": -990.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will any other Democratic Politician win the 2024 US Presidential Election?",
+        "usdc": 990.0
+      },
+      {
+        "timestamp": 1704785237,
+        "equity": 13020256.382532,
+        "delta": -775.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will DeSantis place 2nd in the 2024 Iowa Caucus?",
+        "usdc": 775.5
+      },
+      {
+        "timestamp": 1704924731,
+        "equity": 12977207.126997,
+        "delta": 450.003507,
+        "type": "MERGE",
+        "side": null,
+        "title": "Trump wins every state in Rep. Nomination?",
+        "usdc": 450.003507
+      },
+      {
+        "timestamp": 1705058602,
+        "equity": 12945108.14701,
+        "delta": 151.344824,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Sweden join NATO by February 29?",
+        "usdc": 151.344824
+      },
+      {
+        "timestamp": 1705230735,
+        "equity": 12943926.784472,
+        "delta": 950.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will BTC or ETH reach all-time high first?",
+        "usdc": 950.0
+      },
+      {
+        "timestamp": 1705382083,
+        "equity": 12916296.477283,
+        "delta": -0.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Bob Odenkirk win Lead Drama Actor at the 75th Emmys?",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1705613087,
+        "equity": 12924294.488783,
+        "delta": 0.5,
+        "type": "REDEEM",
+        "side": null,
+        "title": "$BTC price between $45,000-47,500 1 hour after ETF approval?",
+        "usdc": 0.5
+      },
+      {
+        "timestamp": 1705873611,
+        "equity": 12884240.478591,
+        "delta": -167.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lions vs. Buccaneers",
+        "usdc": 167.5
+      },
+      {
+        "timestamp": 1706071987,
+        "equity": 12780938.970066,
+        "delta": 7500.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Trump margin of victory in New Hampshire Primary >15%",
+        "usdc": 7500.0
+      },
+      {
+        "timestamp": 1706296392,
+        "equity": 12736718.162244,
+        "delta": -37.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Another Israel x Hamas ceasefire before February?",
+        "usdc": 37.5
+      },
+      {
+        "timestamp": 1706482155,
+        "equity": 12601726.857466,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Baltimore Ravens win Super Bowl LVIII?",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1706674375,
+        "equity": 12519082.156925,
+        "delta": -60.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jim Cramer tweet bitcoin 0 times Jan 26-Feb 1?",
+        "usdc": 60.0
+      },
+      {
+        "timestamp": 1706832594,
+        "equity": 12524739.432284,
+        "delta": -959.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed rate cut by March 20?",
+        "usdc": 959.25
+      },
+      {
+        "timestamp": 1707138860,
+        "equity": 12499626.666124,
+        "delta": -3.2448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 Republican VP nomination?",
+        "usdc": 3.2448
+      },
+      {
+        "timestamp": 1707354790,
+        "equity": 12458845.23489,
+        "delta": 7.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will FTX payouts start in Q1 2024?",
+        "usdc": 7.0
+      },
+      {
+        "timestamp": 1707483124,
+        "equity": 12419959.339459,
+        "delta": -13.435584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SBF sentenced to 50+ years?",
+        "usdc": 13.435584
+      },
+      {
+        "timestamp": 1707654156,
+        "equity": 12381555.857391,
+        "delta": 4.382966,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Sam Altman raise >$1 trillion in Q1 2024?",
+        "usdc": 4.382966
+      },
+      {
+        "timestamp": 1707747243,
+        "equity": 12377014.397026,
+        "delta": 4000.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Joe Biden impeached before 2024 election?",
+        "usdc": 4000.0
+      },
+      {
+        "timestamp": 1707872204,
+        "equity": 12333785.022359,
+        "delta": -0.0943,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mayorkas impeached by Feb 15?",
+        "usdc": 0.0943
+      },
+      {
+        "timestamp": 1708033033,
+        "equity": 12318276.332317,
+        "delta": 250.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Pudgy Penguins flip BAYC in February?",
+        "usdc": 250.0
+      },
+      {
+        "timestamp": 1708225438,
+        "equity": 12305414.627822,
+        "delta": -4.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Pudgy Penguins flip BAYC in February?",
+        "usdc": 4.0
+      },
+      {
+        "timestamp": 1708440079,
+        "equity": 12281385.921799,
+        "delta": 250.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will OpenAI launch a Web Search Product by March 31?",
+        "usdc": 250.0
+      },
+      {
+        "timestamp": 1708629423,
+        "equity": 12233314.219416,
+        "delta": 124.08,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Mbapp\u00e9 sign for Real Madrid?",
+        "usdc": 124.08
+      },
+      {
+        "timestamp": 1708778313,
+        "equity": 12232089.86854,
+        "delta": 330.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Trump win the South Carolina Primary by between 30-40% of the vote?",
+        "usdc": 330.0
+      },
+      {
+        "timestamp": 1708953922,
+        "equity": 12251983.473674,
+        "delta": -14.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anatomy of a Fall win the Oscar for Best Original Screenplay?",
+        "usdc": 14.0
+      },
+      {
+        "timestamp": 1709121806,
+        "equity": 12240527.832664,
+        "delta": -195.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 2024 have the hottest February on record?",
+        "usdc": 195.0
+      },
+      {
+        "timestamp": 1709254152,
+        "equity": 12253880.46319,
+        "delta": -182.222222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Netanyahu out by June 30?",
+        "usdc": 182.222222
+      },
+      {
+        "timestamp": 1709407595,
+        "equity": 12279879.622037,
+        "delta": -9.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Emma Stone win the Oscar for Best Actress?",
+        "usdc": 9.6
+      },
+      {
+        "timestamp": 1709584344,
+        "equity": 12205862.388291,
+        "delta": -39.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bitcoin all time high today?",
+        "usdc": 39.96
+      },
+      {
+        "timestamp": 1709675591,
+        "equity": 12254459.836973,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "No BTC all time high in 2024?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1709753356,
+        "equity": 12220077.43112,
+        "delta": -667.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Steve Garvey get first place in the California Senate Primary?",
+        "usdc": 667.5
+      },
+      {
+        "timestamp": 1709853994,
+        "equity": 12209805.152413,
+        "delta": -30.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Biden say \"border\" three or more times during his State of the Union address?",
+        "usdc": 30.0
+      },
+      {
+        "timestamp": 1710005125,
+        "equity": 12213707.377209,
+        "delta": -86.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will there be a US government shutdown by Mar 23?",
+        "usdc": 86.64
+      },
+      {
+        "timestamp": 1710162078,
+        "equity": 12232383.551013,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will California have highest margin of victory for Trump in Super Tuesday Republican Primaries?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1710306739,
+        "equity": 12190379.046635,
+        "delta": 400.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Vivek Ramaswamy win the 2024 Republican VP nomination?",
+        "usdc": 400.0
+      },
+      {
+        "timestamp": 1710516949,
+        "equity": 12211864.353026,
+        "delta": -370.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "TikTok sale announced before August?",
+        "usdc": 370.0
+      },
+      {
+        "timestamp": 1710714769,
+        "equity": 12204584.634267,
+        "delta": -271.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SBF sentence between 30 and 40 years?",
+        "usdc": 271.0
+      },
+      {
+        "timestamp": 1710849186,
+        "equity": 12185896.475294,
+        "delta": 2446.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will BTC hit $90,000 in March?",
+        "usdc": 2446.0
+      },
+      {
+        "timestamp": 1710970754,
+        "equity": 12185887.293392,
+        "delta": -11.166666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "RFK Jr. picks Nicole Shanahan as running mate?",
+        "usdc": 11.166666
+      },
+      {
+        "timestamp": 1711121724,
+        "equity": 12192524.216571,
+        "delta": 474.566233,
+        "type": "MERGE",
+        "side": null,
+        "title": "Biden drops out of presidential race?",
+        "usdc": 474.566233
+      },
+      {
+        "timestamp": 1711343361,
+        "equity": 12184896.689951,
+        "delta": -4.416,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Creighton win the NCAA tournament?",
+        "usdc": 4.416
+      },
+      {
+        "timestamp": 1711491552,
+        "equity": 12169713.355324,
+        "delta": 26.989999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Purdue win the NCAA tournament?",
+        "usdc": 26.989999
+      },
+      {
+        "timestamp": 1711644320,
+        "equity": 12168356.595873,
+        "delta": -76.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Godzilla x Kong: The New Empire' gross more than $65m opening weekend?",
+        "usdc": 76.0
+      },
+      {
+        "timestamp": 1711928453,
+        "equity": 12161093.073577,
+        "delta": -227.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Luka Doncic win the 2023-24 NBA MVP?",
+        "usdc": 227.5
+      },
+      {
+        "timestamp": 1712120555,
+        "equity": 12136994.939356,
+        "delta": -3.9204,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ethereum ETF approved by May 31?",
+        "usdc": 3.9204
+      },
+      {
+        "timestamp": 1712290092,
+        "equity": 12096326.382746,
+        "delta": -22.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Rhode Island Presidential Election?",
+        "usdc": 22.5
+      },
+      {
+        "timestamp": 1712503481,
+        "equity": 12097009.650329,
+        "delta": 1856.547,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Bitcoin hit $250k in 2024?",
+        "usdc": 1856.547
+      },
+      {
+        "timestamp": 1712752929,
+        "equity": 11965947.897228,
+        "delta": 248.8394,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Fed rate cut by May 1?",
+        "usdc": 248.8394
+      },
+      {
+        "timestamp": 1712971831,
+        "equity": 11951377.198618,
+        "delta": -134.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Angela Alsobrooks win Maryland US Senate Democratic Primary?",
+        "usdc": 134.9
+      },
+      {
+        "timestamp": 1713215611,
+        "equity": 11929205.413616,
+        "delta": -50.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will WIF hit $5 by April 30?",
+        "usdc": 50.64
+      },
+      {
+        "timestamp": 1713447469,
+        "equity": 11931820.948311,
+        "delta": -0.319917,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel military action against Iran by Friday?",
+        "usdc": 0.319917
+      },
+      {
+        "timestamp": 1713560848,
+        "equity": 11928412.617079,
+        "delta": 1200.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 1200.0
+      },
+      {
+        "timestamp": 1713778532,
+        "equity": 11919250.539366,
+        "delta": -27.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will another ANC candidate be the next President of South Africa?",
+        "usdc": 27.5
+      },
+      {
+        "timestamp": 1713964152,
+        "equity": 11900359.669088,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Chicago Bulls be 2023-24 NBA Champions?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1714078935,
+        "equity": 11842086.799591,
+        "delta": -23.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Patriots draft J.J. McCarthy?",
+        "usdc": 23.1
+      },
+      {
+        "timestamp": 1714181872,
+        "equity": 11830397.26663,
+        "delta": 3.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will AOC win the popular vote in the 2024 Presidential Election?",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1714381854,
+        "equity": 11800002.062774,
+        "delta": -24.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eigenlayer market cap (FDV) between $10-15b one day after launch?",
+        "usdc": 24.42
+      },
+      {
+        "timestamp": 1714515865,
+        "equity": 11793580.579802,
+        "delta": -659.2666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump wins a solid blue state?",
+        "usdc": 659.2666
+      },
+      {
+        "timestamp": 1714627859,
+        "equity": 11743703.913678,
+        "delta": -40.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Joseph Kony found by May 31?",
+        "usdc": 40.0
+      },
+      {
+        "timestamp": 1714777161,
+        "equity": 11744585.588588,
+        "delta": 2774.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "NBA: Orlando Magic vs. Cleveland Cavaliers 2024-05-03",
+        "usdc": 2774.0
+      },
+      {
+        "timestamp": 1714926167,
+        "equity": 11696563.020312,
+        "delta": 483.880137,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Bitcoin reach $75,000 in May?",
+        "usdc": 483.880137
+      },
+      {
+        "timestamp": 1715102941,
+        "equity": 11607500.092191,
+        "delta": -1.975074,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kendrick drops new track by Friday?",
+        "usdc": 1.975074
+      },
+      {
+        "timestamp": 1715268702,
+        "equity": 11546853.058725,
+        "delta": -8.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kanye drop Vultures 2 by Friday?",
+        "usdc": 8.4
+      },
+      {
+        "timestamp": 1715492932,
+        "equity": 11596980.9471,
+        "delta": -0.688,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will John Ratcliffe win the 2024 Republican VP nomination?",
+        "usdc": 0.688
+      },
+      {
+        "timestamp": 1715654768,
+        "equity": 11540653.377399,
+        "delta": -2.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elon tweet 75-89 times?",
+        "usdc": 2.48
+      },
+      {
+        "timestamp": 1715777773,
+        "equity": 11542645.815085,
+        "delta": 8.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Roaring Kitty tweet 100 or more times?",
+        "usdc": 8.0
+      },
+      {
+        "timestamp": 1715876279,
+        "equity": 11546116.174603,
+        "delta": -14115.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mexican Presidential Election: Will X\u00f3chitl G\u00e1lvez win?",
+        "usdc": 14115.0
+      },
+      {
+        "timestamp": 1715953904,
+        "equity": 11524697.693325,
+        "delta": -0.882352,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel and Saudi Arabia normalize relations before U.S. election?",
+        "usdc": 0.882352
+      },
+      {
+        "timestamp": 1716022539,
+        "equity": 11491513.096276,
+        "delta": 4.347824,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Trump mention $boden before July?",
+        "usdc": 4.347824
+      },
+      {
+        "timestamp": 1716084858,
+        "equity": 11482917.951186,
+        "delta": -0.537837,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Dean Phillips win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.537837
+      },
+      {
+        "timestamp": 1716162259,
+        "equity": 11495358.58496,
+        "delta": -1066.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 1066.56
+      },
+      {
+        "timestamp": 1716213762,
+        "equity": 11465027.339076,
+        "delta": -76.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Deadpool & Wolverine' gross between $150m and $170m opening weekend?",
+        "usdc": 76.0
+      },
+      {
+        "timestamp": 1716280903,
+        "equity": 11458578.497774,
+        "delta": -0.052631,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bitcoin above $65,000 on May 24?",
+        "usdc": 0.052631
+      },
+      {
+        "timestamp": 1716331559,
+        "equity": 11425708.708256,
+        "delta": -25.8064,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Despicable Me 4' gross most in 2024?",
+        "usdc": 25.8064
+      },
+      {
+        "timestamp": 1716391568,
+        "equity": 11405611.301494,
+        "delta": 6.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will any other Republican Politician win the popular vote in the 2024 Presidential Election?",
+        "usdc": 6.0
+      },
+      {
+        "timestamp": 1716459882,
+        "equity": 11364946.948953,
+        "delta": 1.099999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Elon tweet 55-64 times?",
+        "usdc": 1.099999
+      },
+      {
+        "timestamp": 1716530129,
+        "equity": 11339463.24998,
+        "delta": 0.7968,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Liberal Democrats wins the most seats in next UK election? ",
+        "usdc": 0.7968
+      },
+      {
+        "timestamp": 1716601556,
+        "equity": 11360745.635313,
+        "delta": 250.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Scarlett Johansson sues OpenAI in May?",
+        "usdc": 250.0
+      },
+      {
+        "timestamp": 1716641446,
+        "equity": 11355238.87156,
+        "delta": -0.7956,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "'The Garfield Movie' between $26-30m Opening Weekend?",
+        "usdc": 0.7956
+      },
+      {
+        "timestamp": 1716748931,
+        "equity": 11360396.315954,
+        "delta": 15.384614,
+        "type": "MERGE",
+        "side": null,
+        "title": "Solana all time high in Q4?",
+        "usdc": 15.384614
+      },
+      {
+        "timestamp": 1716802844,
+        "equity": 11349320.864064,
+        "delta": 5.5539,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 5.5539
+      },
+      {
+        "timestamp": 1716863634,
+        "equity": 11328119.609476,
+        "delta": -15.69409,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Joe Biden win the 2024 Democratic Presidential Nomination?",
+        "usdc": 15.69409
+      },
+      {
+        "timestamp": 1716889194,
+        "equity": 11315556.24641,
+        "delta": -4.505625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Joe Biden win the 2024 US Presidential Election?",
+        "usdc": 4.505625
+      },
+      {
+        "timestamp": 1716940805,
+        "equity": 11315243.136258,
+        "delta": 4229.8582,
+        "type": "REWARD",
+        "side": null,
+        "title": "",
+        "usdc": 4229.8582
+      },
+      {
+        "timestamp": 1716968034,
+        "equity": 11303672.545947,
+        "delta": 0.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Biden wins the Popular Vote?",
+        "usdc": 0.999998
+      },
+      {
+        "timestamp": 1716986985,
+        "equity": 11301336.574984,
+        "delta": 4.989999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the NDA win 351-375 seats?",
+        "usdc": 4.989999
+      },
+      {
+        "timestamp": 1717037511,
+        "equity": 11333532.30842,
+        "delta": 0.16016,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Hillary Clinton win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.16016
+      },
+      {
+        "timestamp": 1717060939,
+        "equity": 11333988.570125,
+        "delta": -157.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "zkSync airdrop by June 30?",
+        "usdc": 157.5
+      },
+      {
+        "timestamp": 1717104163,
+        "equity": 11307422.208216,
+        "delta": -1089.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 1089.0
+      },
+      {
+        "timestamp": 1717148338,
+        "equity": 11351627.132517,
+        "delta": -50.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mexican Presidential Election: Will Claudia Sheinbaum win?",
+        "usdc": 50.0
+      },
+      {
+        "timestamp": 1717209633,
+        "equity": 11336439.287679,
+        "delta": -0.68657,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Diddy arrested in May?",
+        "usdc": 0.68657
+      },
+      {
+        "timestamp": 1717272274,
+        "equity": 11304716.832917,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Trump lead Biden by 1.6-1.9 or more in RCP on May 31?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1717333945,
+        "equity": 11314638.351958,
+        "delta": 1.35135,
+        "type": "MERGE",
+        "side": null,
+        "title": "Trump's July 11 sentencing pushed back?",
+        "usdc": 1.35135
+      },
+      {
+        "timestamp": 1717406245,
+        "equity": 11290152.367958,
+        "delta": -58.343684,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fauci wear a mask during June 3 hearing?",
+        "usdc": 58.343684
+      },
+      {
+        "timestamp": 1717467236,
+        "equity": 11205067.669414,
+        "delta": 0.03516,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Elizabeth Warren win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.03516
+      },
+      {
+        "timestamp": 1717519432,
+        "equity": 11216971.74313,
+        "delta": -101.515151,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Israel invade Lebanon before September?",
+        "usdc": 101.515151
+      },
+      {
+        "timestamp": 1717590194,
+        "equity": 11197164.616462,
+        "delta": 0.099999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a Democrat win Wyoming Presidential Election?",
+        "usdc": 0.099999
+      },
+      {
+        "timestamp": 1717668510,
+        "equity": 11180059.714567,
+        "delta": 112.5,
+        "type": "MERGE",
+        "side": null,
+        "title": "Bitcoin all time high in June?",
+        "usdc": 112.5
+      },
+      {
+        "timestamp": 1717726849,
+        "equity": 11123960.262219,
+        "delta": -0.01,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Wesley Hunt win the 2024 Republican VP nomination?",
+        "usdc": 0.01
+      },
+      {
+        "timestamp": 1717760880,
+        "equity": 11120626.856993,
+        "delta": -94.431645,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Michelle Obama win the 2024 Democratic Presidential Nomination?",
+        "usdc": 94.431645
+      },
+      {
+        "timestamp": 1717818049,
+        "equity": 11131678.800964,
+        "delta": -0.202202,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will AOC win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.202202
+      },
+      {
+        "timestamp": 1717861647,
+        "equity": 11101562.875675,
+        "delta": -0.057057,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Hillary Clinton win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.057057
+      },
+      {
+        "timestamp": 1717944177,
+        "equity": 11090907.750647,
+        "delta": -0.027037,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elon post 60-69 times?",
+        "usdc": 0.027037
+      },
+      {
+        "timestamp": 1718005149,
+        "equity": 11080236.629793,
+        "delta": -0.263643,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Henry McMaster win the 2024 Republican VP nomination?",
+        "usdc": 0.263643
+      },
+      {
+        "timestamp": 1718065946,
+        "equity": 11102740.735751,
+        "delta": -104.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senate control after 2024 election?",
+        "usdc": 104.0
+      },
+      {
+        "timestamp": 1718098807,
+        "equity": 11092323.091771,
+        "delta": 0.009999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Nikki Haley win the 2024 Republican Presidential Nomination?",
+        "usdc": 0.009999
+      },
+      {
+        "timestamp": 1718147766,
+        "equity": 11077580.193101,
+        "delta": 38.051279,
+        "type": "MERGE",
+        "side": null,
+        "title": "GME halted on Wednesday?",
+        "usdc": 38.051279
+      },
+      {
+        "timestamp": 1718183382,
+        "equity": 11053472.180502,
+        "delta": 6.319999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a Democrat win Pennsylvania Presidential Election?",
+        "usdc": 6.319999
+      },
+      {
+        "timestamp": 1718223200,
+        "equity": 11079420.513621,
+        "delta": -2.494,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Elon Musk bans Apple devices at his companies?",
+        "usdc": 2.494
+      },
+      {
+        "timestamp": 1718264165,
+        "equity": 11135518.069413,
+        "delta": -31.0576,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "NVIDIA largest company before June 15?",
+        "usdc": 31.0576
+      },
+      {
+        "timestamp": 1718313353,
+        "equity": 11103746.541403,
+        "delta": -1399.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Renaissance win the most seats in the National Assembly?",
+        "usdc": 1399.5
+      },
+      {
+        "timestamp": 1718351088,
+        "equity": 11096174.011845,
+        "delta": -17.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trent Staggs win the Utah Republican Primary?",
+        "usdc": 17.0
+      },
+      {
+        "timestamp": 1718405356,
+        "equity": 11085668.645187,
+        "delta": -0.47828,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Trump family member win the 2024 Republican VP nomination?",
+        "usdc": 0.47828
+      },
+      {
+        "timestamp": 1718444300,
+        "equity": 11081407.410777,
+        "delta": -8.0808,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 8.0808
+      },
+      {
+        "timestamp": 1718512274,
+        "equity": 11078316.675318,
+        "delta": -0.182562,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Bernie Sanders win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.182562
+      },
+      {
+        "timestamp": 1718565892,
+        "equity": 11067591.059532,
+        "delta": 64.860464,
+        "type": "MERGE",
+        "side": null,
+        "title": "Tesla Robotaxi unveiling delayed?",
+        "usdc": 64.860464
+      },
+      {
+        "timestamp": 1718611210,
+        "equity": 11087638.716162,
+        "delta": -0.203203,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Wesley Hunt win the 2024 Republican VP nomination?",
+        "usdc": 0.203203
+      },
+      {
+        "timestamp": 1718680877,
+        "equity": 11066397.220955,
+        "delta": -2.846153,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ethereum ETF begins trading by July 4?",
+        "usdc": 2.846153
+      },
+      {
+        "timestamp": 1718718060,
+        "equity": 11046149.2963,
+        "delta": -8.225,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Is $DJT real?",
+        "usdc": 8.225
+      },
+      {
+        "timestamp": 1718786283,
+        "equity": 10972611.683781,
+        "delta": -0.008008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kari Lake win the 2024 Republican VP nomination?",
+        "usdc": 0.008008
+      },
+      {
+        "timestamp": 1718850429,
+        "equity": 10993041.470401,
+        "delta": -0.006,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kari Lake win the 2024 Republican VP nomination?",
+        "usdc": 0.006
+      },
+      {
+        "timestamp": 1718892948,
+        "equity": 11005604.19258,
+        "delta": -2522.982,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Michelle Obama win the 2024 Democratic Presidential Nomination?",
+        "usdc": 2522.982
+      },
+      {
+        "timestamp": 1718960417,
+        "equity": 10970935.988557,
+        "delta": -0.49,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Reform wins <7% of votes?",
+        "usdc": 0.49
+      },
+      {
+        "timestamp": 1719023345,
+        "equity": 10931430.770061,
+        "delta": -0.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kari Lake win the 2024 Republican VP nomination?",
+        "usdc": 0.5
+      },
+      {
+        "timestamp": 1719090187,
+        "equity": 10948279.910304,
+        "delta": 283.99999,
+        "type": "MERGE",
+        "side": null,
+        "title": "Biden stumbles during debate?",
+        "usdc": 283.99999
+      },
+      {
+        "timestamp": 1719147337,
+        "equity": 10931477.765697,
+        "delta": -0.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ninja biggest loser?",
+        "usdc": 0.03
+      },
+      {
+        "timestamp": 1719201804,
+        "equity": 10924493.489701,
+        "delta": 7779.290762,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Vivek Ramaswamy win the 2024 Republican VP nomination?",
+        "usdc": 7779.290762
+      },
+      {
+        "timestamp": 1719247718,
+        "equity": 10918882.341322,
+        "delta": -8.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Marco Rubio win the 2024 Republican VP nomination?",
+        "usdc": 8.2
+      },
+      {
+        "timestamp": 1719301475,
+        "equity": 10900439.231519,
+        "delta": -2.727272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Deadpool 3' gross most in 2024?",
+        "usdc": 2.727272
+      },
+      {
+        "timestamp": 1719349506,
+        "equity": 10892843.740313,
+        "delta": -5.88252,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Marco Rubio win the 2024 Republican VP nomination?",
+        "usdc": 5.88252
+      },
+      {
+        "timestamp": 1719377049,
+        "equity": 10921259.588954,
+        "delta": -0.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kristi Noem win the 2024 Republican VP nomination?",
+        "usdc": 0.4
+      },
+      {
+        "timestamp": 1719413902,
+        "equity": 10907776.525376,
+        "delta": -8.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Marco Rubio win the 2024 Republican VP nomination?",
+        "usdc": 8.6
+      },
+      {
+        "timestamp": 1719458385,
+        "equity": 10893943.542148,
+        "delta": 89.993589,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Hillary Clinton win the 2024 Democratic Presidential Nomination?",
+        "usdc": 89.993589
+      },
+      {
+        "timestamp": 1719478731,
+        "equity": 10898005.226843,
+        "delta": -6.55158,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Byron Donalds win the 2024 Republican VP nomination?",
+        "usdc": 6.55158
+      },
+      {
+        "timestamp": 1719505967,
+        "equity": 10873117.350824,
+        "delta": -1.877258,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald J. Trump win the 2024 Republican presidential nomination?",
+        "usdc": 1.877258
+      },
+      {
+        "timestamp": 1719531803,
+        "equity": 10820820.825973,
+        "delta": -0.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 Republican VP nomination?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1719562157,
+        "equity": 10858575.192208,
+        "delta": -0.601805,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 Republican VP nomination?",
+        "usdc": 0.601805
+      },
+      {
+        "timestamp": 1719596559,
+        "equity": 10853712.055803,
+        "delta": 5.208325,
+        "type": "MERGE",
+        "side": null,
+        "title": "Doge ETF approved in 2024?",
+        "usdc": 5.208325
+      },
+      {
+        "timestamp": 1719646417,
+        "equity": 10824804.03004,
+        "delta": -0.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1719689934,
+        "equity": 10818193.700222,
+        "delta": -0.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Dean Phillips win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1719727754,
+        "equity": 10811033.86813,
+        "delta": -819.6015,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Joe Biden win the 2024 US Presidential Election?",
+        "usdc": 819.6015
+      },
+      {
+        "timestamp": 1719771517,
+        "equity": 10828585.4927,
+        "delta": 400.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Biden drops out of presidential race?",
+        "usdc": 400.0
+      },
+      {
+        "timestamp": 1719816780,
+        "equity": 10826910.992301,
+        "delta": 101.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 101.999998
+      },
+      {
+        "timestamp": 1719858517,
+        "equity": 10865554.750275,
+        "delta": 53.191483,
+        "type": "MERGE",
+        "side": null,
+        "title": "Nasrallah remains leader of Hezbollah through July?",
+        "usdc": 53.191483
+      },
+      {
+        "timestamp": 1719900904,
+        "equity": 10898397.134497,
+        "delta": -9.80995,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Byron Donalds win the 2024 Republican VP nomination?",
+        "usdc": 9.80995
+      },
+      {
+        "timestamp": 1719949367,
+        "equity": 10866684.426231,
+        "delta": -0.264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ron DeSantis win the 2024 Republican VP nomination?",
+        "usdc": 0.264
+      },
+      {
+        "timestamp": 1720000448,
+        "equity": 10885406.952101,
+        "delta": -0.01624,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Trump family member win the 2024 Republican VP nomination?",
+        "usdc": 0.01624
+      },
+      {
+        "timestamp": 1720033632,
+        "equity": 10911917.57713,
+        "delta": -0.22211,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Greg Abbott win the 2024 Republican VP nomination?",
+        "usdc": 0.22211
+      },
+      {
+        "timestamp": 1720092013,
+        "equity": 10896804.766375,
+        "delta": -0.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Robert F. Kennedy Jr. win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.35
+      },
+      {
+        "timestamp": 1720135760,
+        "equity": 10890119.653734,
+        "delta": -555.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Biden drops out before the Democratic convention?",
+        "usdc": 555.0
+      },
+      {
+        "timestamp": 1720180633,
+        "equity": 10874052.347157,
+        "delta": 18.949999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 18.949999
+      },
+      {
+        "timestamp": 1720226171,
+        "equity": 10884090.439064,
+        "delta": -81.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Derivatives_Ape/Prometheus arrested this year?",
+        "usdc": 81.0
+      },
+      {
+        "timestamp": 1720277605,
+        "equity": 10873484.242976,
+        "delta": 0.005,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Chris Christie win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.005
+      },
+      {
+        "timestamp": 1720324856,
+        "equity": 10871309.967615,
+        "delta": 46.989999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Joe Biden win the 2024 Democratic Presidential Nomination?",
+        "usdc": 46.989999
+      },
+      {
+        "timestamp": 1720401771,
+        "equity": 10850469.89603,
+        "delta": 27.51,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Biden drops out by July 12?",
+        "usdc": 27.51
+      },
+      {
+        "timestamp": 1720443199,
+        "equity": 10877393.920654,
+        "delta": 0.26,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Elizabeth Warren win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.26
+      },
+      {
+        "timestamp": 1720494106,
+        "equity": 10853241.809804,
+        "delta": -3.987341,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Biden finish his term?",
+        "usdc": 3.987341
+      },
+      {
+        "timestamp": 1720535891,
+        "equity": 10820198.439238,
+        "delta": -199.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed rate cut by July 31?",
+        "usdc": 199.98
+      },
+      {
+        "timestamp": 1720575594,
+        "equity": 10819257.658043,
+        "delta": -5.58663,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tim Scott win the 2024 Republican VP nomination?",
+        "usdc": 5.58663
+      },
+      {
+        "timestamp": 1720620500,
+        "equity": 10841874.126045,
+        "delta": -0.2655,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eigenlayer market cap (FDV) between $20-25b one day after launch?",
+        "usdc": 0.2655
+      },
+      {
+        "timestamp": 1720681257,
+        "equity": 10868796.788723,
+        "delta": -1.41288,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Byron Donalds win the 2024 Republican VP nomination?",
+        "usdc": 1.41288
+      },
+      {
+        "timestamp": 1720752659,
+        "equity": 10736028.785433,
+        "delta": -0.141841,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ron DeSantis win the 2024 US Presidential Election?",
+        "usdc": 0.141841
+      },
+      {
+        "timestamp": 1720803478,
+        "equity": 10711477.515731,
+        "delta": -5.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "House control after 2024 election?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1720863718,
+        "equity": 10688606.163077,
+        "delta": -0.16016,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Katie Britt win the 2024 Republican VP nomination?",
+        "usdc": 0.16016
+      },
+      {
+        "timestamp": 1720922109,
+        "equity": 10695764.206466,
+        "delta": -10.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ivanka Trump speak at the RNC?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1720951907,
+        "equity": 10660209.100306,
+        "delta": -0.523,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kristi Noem win the 2024 Republican VP nomination?",
+        "usdc": 0.523
+      },
+      {
+        "timestamp": 1721011273,
+        "equity": 10684888.59949,
+        "delta": 0.599998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 0.599998
+      },
+      {
+        "timestamp": 1721105560,
+        "equity": 10527461.524201,
+        "delta": -1.0848,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Democrat other than Biden wins the Election?",
+        "usdc": 1.0848
+      },
+      {
+        "timestamp": 1721235655,
+        "equity": 11172781.150523,
+        "delta": -52.46,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Another New Popular Front member next Prime Minister of France? ",
+        "usdc": 52.46
+      },
+      {
+        "timestamp": 1721287384,
+        "equity": 11101821.363796,
+        "delta": -19.787,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ukraine join NATO in 2024?",
+        "usdc": 19.787
+      },
+      {
+        "timestamp": 1721322099,
+        "equity": 10962832.203831,
+        "delta": -61.3629,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 presidential election: GOP wins by 155-214",
+        "usdc": 61.3629
+      },
+      {
+        "timestamp": 1721376278,
+        "equity": 10768040.377088,
+        "delta": -0.5442,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Joe Biden win the 2024 US Presidential Election?",
+        "usdc": 0.5442
+      },
+      {
+        "timestamp": 1721448375,
+        "equity": 10708145.479413,
+        "delta": -0.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Robert F. Kennedy Jr. win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1721582352,
+        "equity": 10638441.933568,
+        "delta": -40.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Oregon Presidential Election?",
+        "usdc": 40.0
+      },
+      {
+        "timestamp": 1721619089,
+        "equity": 10914604.413665,
+        "delta": -10.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win the popular vote and the Presidency? ",
+        "usdc": 10.5
+      },
+      {
+        "timestamp": 1721685171,
+        "equity": 10717021.359766,
+        "delta": -0.744,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump and Harris agree to Fox News debate?",
+        "usdc": 0.744
+      },
+      {
+        "timestamp": 1721741827,
+        "equity": 10650635.255262,
+        "delta": -25.82112,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "CrowdStrike caused by a hack?",
+        "usdc": 25.82112
+      },
+      {
+        "timestamp": 1721803466,
+        "equity": 10483319.633068,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gavin Newsom win the 2024 US Presidential Election?",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1721878471,
+        "equity": 10411959.211062,
+        "delta": -226.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fed cut interest rates 2 times in 2024?",
+        "usdc": 226.78
+      },
+      {
+        "timestamp": 1721927404,
+        "equity": 10292863.232284,
+        "delta": -10.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Biden diagnosed with \"medical condition\" before DNC?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1721973359,
+        "equity": 10259452.592792,
+        "delta": -0.007,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gavin Newsom win the 2024 US Presidential Election?",
+        "usdc": 0.007
+      },
+      {
+        "timestamp": 1722012806,
+        "equity": 10248017.963818,
+        "delta": -6.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Josh Shapiro be the 2024 Democratic VP nominee?",
+        "usdc": 6.25
+      },
+      {
+        "timestamp": 1722063325,
+        "equity": 10231965.757944,
+        "delta": -0.063829,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Roaring Kitty jail in 2024?",
+        "usdc": 0.063829
+      },
+      {
+        "timestamp": 1722139401,
+        "equity": 10216140.909139,
+        "delta": -0.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Mark Cuban be the 2024 Democratic VP nominee?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1722231230,
+        "equity": 10168142.833675,
+        "delta": -1.38983,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "GPT-5 not announced in 2024?",
+        "usdc": 1.38983
+      },
+      {
+        "timestamp": 1722346540,
+        "equity": 10195786.083802,
+        "delta": -0.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Despicable Me 4' gross most in 2024?",
+        "usdc": 0.02
+      },
+      {
+        "timestamp": 1722386666,
+        "equity": 10198009.914095,
+        "delta": -6.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Pete Buttigieg be the 2024 Democratic VP nominee?",
+        "usdc": 6.88
+      },
+      {
+        "timestamp": 1722418488,
+        "equity": 10192289.09585,
+        "delta": -0.0002,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump be Speaker by August 1?",
+        "usdc": 0.0002
+      },
+      {
+        "timestamp": 1722444477,
+        "equity": 10243020.813008,
+        "delta": 72.156,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 72.156
+      },
+      {
+        "timestamp": 1722479380,
+        "equity": 10365760.928642,
+        "delta": -4359.26226,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris win the 2024 US Presidential Election?",
+        "usdc": 4359.26226
+      },
+      {
+        "timestamp": 1722516566,
+        "equity": 10473405.708713,
+        "delta": -0.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will any other Republican Politician win the 2024 US Presidential Election?",
+        "usdc": 0.4
+      },
+      {
+        "timestamp": 1722537753,
+        "equity": 10446920.509229,
+        "delta": -0.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gavin Newsom be the 2024 Democratic VP nominee?",
+        "usdc": 0.3
+      },
+      {
+        "timestamp": 1722567237,
+        "equity": 10407226.671119,
+        "delta": -2.342592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 2.342592
+      },
+      {
+        "timestamp": 1722589771,
+        "equity": 10373602.192233,
+        "delta": -1.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will \u226510% of Votes go to 3rd Party Candidates in the 2024 US Presidential Election?",
+        "usdc": 1.98
+      },
+      {
+        "timestamp": 1722620806,
+        "equity": 10290121.15437,
+        "delta": -19.79152,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Mark Kelly be the 2024 Democratic VP nominee?",
+        "usdc": 19.79152
+      },
+      {
+        "timestamp": 1722654908,
+        "equity": 10327165.704199,
+        "delta": -0.0342,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will someone else win the 2024 Democratic Presidential Nomination?",
+        "usdc": 0.0342
+      },
+      {
+        "timestamp": 1722703562,
+        "equity": 10305935.985163,
+        "delta": 5.234019,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Michelle Obama win the popular vote in the 2024 Presidential Election?",
+        "usdc": 5.234019
+      },
+      {
+        "timestamp": 1722768068,
+        "equity": 10190171.670872,
+        "delta": -0.3012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will any other Republican Politician win the 2024 US Presidential Election?",
+        "usdc": 0.3012
+      },
+      {
+        "timestamp": 1722817373,
+        "equity": 10183428.011233,
+        "delta": -477.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tim Walz be the 2024 Democratic VP nominee?",
+        "usdc": 477.5
+      },
+      {
+        "timestamp": 1722871657,
+        "equity": 10117094.358034,
+        "delta": -850.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fed cut interest rates 3 times in 2024?",
+        "usdc": 850.0
+      },
+      {
+        "timestamp": 1722911713,
+        "equity": 10131613.037842,
+        "delta": -0.206865,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mar\u00eda Corina Machado arrested before October?",
+        "usdc": 0.206865
+      },
+      {
+        "timestamp": 1722963688,
+        "equity": 11397589.011057,
+        "delta": -0.308,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Alaska Presidential Election?",
+        "usdc": 0.308
+      },
+      {
+        "timestamp": 1723065418,
+        "equity": 11454177.302847,
+        "delta": -0.9916,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Iran military response by Friday?",
+        "usdc": 0.9916
+      },
+      {
+        "timestamp": 1723127566,
+        "equity": 11339403.163373,
+        "delta": -2.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump say \"MAGA\" during Elon interview?",
+        "usdc": 2.8
+      },
+      {
+        "timestamp": 1723177215,
+        "equity": 11211732.438755,
+        "delta": -5.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed decreases interest rates by 25 bps after November 2024 meeting?",
+        "usdc": 5.8
+      },
+      {
+        "timestamp": 1723223117,
+        "equity": 11113330.002207,
+        "delta": -0.02002,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "USA wins the most medals in 2024 Paris Olympics?",
+        "usdc": 0.02002
+      },
+      {
+        "timestamp": 1723264748,
+        "equity": 11112847.884532,
+        "delta": 5.99,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Trump Family launches coin by Friday?",
+        "usdc": 5.99
+      },
+      {
+        "timestamp": 1723297423,
+        "equity": 11053013.929021,
+        "delta": -0.078279,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Monkeypox pandemic in 2024?",
+        "usdc": 0.078279
+      },
+      {
+        "timestamp": 1723322499,
+        "equity": 11105245.481232,
+        "delta": 1.11111,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Taylor Swift endorse Kamala Harris?",
+        "usdc": 1.11111
+      },
+      {
+        "timestamp": 1723375904,
+        "equity": 11093814.982779,
+        "delta": 100.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Yahya Sinwar still Hamas leader before September?",
+        "usdc": 100.0
+      },
+      {
+        "timestamp": 1723416459,
+        "equity": 11147360.13965,
+        "delta": -1.583333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Mike Tyson win his boxing match against Jake Paul?",
+        "usdc": 1.583333
+      },
+      {
+        "timestamp": 1723459950,
+        "equity": 11081650.530275,
+        "delta": 100.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Brandon Aiyuk stay on the 49ers?",
+        "usdc": 100.0
+      },
+      {
+        "timestamp": 1723499947,
+        "equity": 10998491.000682,
+        "delta": -232.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump say \"Trans\" during Elon interview?",
+        "usdc": 232.0
+      },
+      {
+        "timestamp": 1723539593,
+        "equity": 11088683.781863,
+        "delta": -155.924266,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed emergency rate cut in August?",
+        "usdc": 155.924266
+      },
+      {
+        "timestamp": 1723586684,
+        "equity": 11239359.988335,
+        "delta": -1.326,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Bengals win Super Bowl 2025?",
+        "usdc": 1.326
+      },
+      {
+        "timestamp": 1723631239,
+        "equity": 11206765.275682,
+        "delta": -3.384615,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Real Madrid vs. Atalanta: UEFA Super Cup",
+        "usdc": 3.384615
+      },
+      {
+        "timestamp": 1723705078,
+        "equity": 11135402.289677,
+        "delta": -196.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump fires campaign manager in August? ",
+        "usdc": 196.0
+      },
+      {
+        "timestamp": 1723748025,
+        "equity": 11128796.509998,
+        "delta": -0.017,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Hillary Clinton announce presidential run before DNC?",
+        "usdc": 0.017
+      },
+      {
+        "timestamp": 1723803828,
+        "equity": 11150111.609811,
+        "delta": 1543.37,
+        "type": "MERGE",
+        "side": null,
+        "title": "1 Trump vs. Harris debate before election?",
+        "usdc": 1543.37
+      },
+      {
+        "timestamp": 1723835169,
+        "equity": 11061924.245899,
+        "delta": 500.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Taylor Swift attend the DNC?",
+        "usdc": 500.0
+      },
+      {
+        "timestamp": 1723896297,
+        "equity": 11007707.411756,
+        "delta": -4.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump say \"Drill baby drill\" at his rally?",
+        "usdc": 4.555555
+      },
+      {
+        "timestamp": 1723921824,
+        "equity": 10725678.496804,
+        "delta": -0.91,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris say \"Jew\" during DNC speech?",
+        "usdc": 0.91
+      },
+      {
+        "timestamp": 1723965261,
+        "equity": 10519763.152188,
+        "delta": -211.831,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump in jail before election day?",
+        "usdc": 211.831
+      },
+      {
+        "timestamp": 1724001414,
+        "equity": 10518941.034546,
+        "delta": -3.6861,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Confirmed case of monkeypox in US by Aug 31?",
+        "usdc": 3.6861
+      },
+      {
+        "timestamp": 1724046989,
+        "equity": 10394930.953699,
+        "delta": -1.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 1.0
+      },
+      {
+        "timestamp": 1724076753,
+        "equity": 10477625.263622,
+        "delta": -0.069518,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Harris-Walz Democratic ticket on election day?",
+        "usdc": 0.069518
+      },
+      {
+        "timestamp": 1724111433,
+        "equity": 10430863.865222,
+        "delta": 63.456789,
+        "type": "MERGE",
+        "side": null,
+        "title": "Fed decreases interest rates by 25 bps after September 2024 meeting?",
+        "usdc": 63.456789
+      },
+      {
+        "timestamp": 1724142252,
+        "equity": 10420173.257267,
+        "delta": -0.055775,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.055775
+      },
+      {
+        "timestamp": 1724166853,
+        "equity": 10444993.341087,
+        "delta": 787.627053,
+        "type": "MERGE",
+        "side": null,
+        "title": "Israel x Hamas ceasefire before September?",
+        "usdc": 787.627053
+      },
+      {
+        "timestamp": 1724201500,
+        "equity": 10428232.620844,
+        "delta": 64.743588,
+        "type": "MERGE",
+        "side": null,
+        "title": "House control after 2024 election?",
+        "usdc": 64.743588
+      },
+      {
+        "timestamp": 1724235172,
+        "equity": 10292994.427629,
+        "delta": -3.09264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kamala Harris DNC speech 75-90 minutes?",
+        "usdc": 3.09264
+      },
+      {
+        "timestamp": 1724263741,
+        "equity": 10299073.761009,
+        "delta": -3.515608,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Eagles win Super Bowl 2025?",
+        "usdc": 3.515608
+      },
+      {
+        "timestamp": 1724297274,
+        "equity": 10243291.413698,
+        "delta": -121.606774,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 121.606774
+      },
+      {
+        "timestamp": 1724322834,
+        "equity": 10234740.84711,
+        "delta": -0.028,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suella Braverman next Conservative party leader?",
+        "usdc": 0.028
+      },
+      {
+        "timestamp": 1724350066,
+        "equity": 10277272.796796,
+        "delta": -90.381,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Pennsylvania Presidential Election?",
+        "usdc": 90.381
+      },
+      {
+        "timestamp": 1724380453,
+        "equity": 10167323.908124,
+        "delta": -7.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Taylor Swift speak at the DNC?",
+        "usdc": 7.0
+      },
+      {
+        "timestamp": 1724408399,
+        "equity": 10235154.47973,
+        "delta": 0.48,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.48
+      },
+      {
+        "timestamp": 1724439697,
+        "equity": 10418698.235325,
+        "delta": -180.18504,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will RFK Jr. drop out by Friday?",
+        "usdc": 180.18504
+      },
+      {
+        "timestamp": 1724486799,
+        "equity": 10454250.487081,
+        "delta": -1.134,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will China invade Taiwan in 2024?",
+        "usdc": 1.134
+      },
+      {
+        "timestamp": 1724533653,
+        "equity": 10382959.821286,
+        "delta": -5.9849,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris win the 2024 US Presidential Election?",
+        "usdc": 5.9849
+      },
+      {
+        "timestamp": 1724564560,
+        "equity": 10331068.091491,
+        "delta": -0.943397,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 Balance of Power: D Prez, D Senate, R House",
+        "usdc": 0.943397
+      },
+      {
+        "timestamp": 1724619486,
+        "equity": 10330554.624901,
+        "delta": -36.1638,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 36.1638
+      },
+      {
+        "timestamp": 1724656048,
+        "equity": 10399507.183199,
+        "delta": -240.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel x Hamas ceasefire before September?",
+        "usdc": 240.0
+      },
+      {
+        "timestamp": 1724702852,
+        "equity": 10286754.05587,
+        "delta": -0.067,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Florida Presidential Election?",
+        "usdc": 0.067
+      },
+      {
+        "timestamp": 1724763836,
+        "equity": 10346637.567791,
+        "delta": -14.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump fires campaign manager in August? ",
+        "usdc": 14.0
+      },
+      {
+        "timestamp": 1724813540,
+        "equity": 10286184.995167,
+        "delta": -139.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Donald & Melania Trump seen together in August?",
+        "usdc": 139.5
+      },
+      {
+        "timestamp": 1724871140,
+        "equity": 10254204.121469,
+        "delta": -0.0063,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Mauricio Pochettino be England's next manager?",
+        "usdc": 0.0063
+      },
+      {
+        "timestamp": 1724941822,
+        "equity": 10193825.182887,
+        "delta": -0.04485,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gretchen Whitmer be D-nom for VP on Election Day?",
+        "usdc": 0.04485
+      },
+      {
+        "timestamp": 1725023630,
+        "equity": 10231645.096997,
+        "delta": -82.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "ICC issues an arrest warrant for Netanyahu?",
+        "usdc": 82.0
+      },
+      {
+        "timestamp": 1725099801,
+        "equity": 10236334.910216,
+        "delta": -0.05448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gina Raimondo be D-nom for VP on Election Day?",
+        "usdc": 0.05448
+      },
+      {
+        "timestamp": 1725193359,
+        "equity": 10178090.956894,
+        "delta": -0.219512,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump nominates RFK Jr. to Cabinet?",
+        "usdc": 0.219512
+      },
+      {
+        "timestamp": 1725298260,
+        "equity": 10197440.168388,
+        "delta": -5.090526,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "House control after 2024 election?",
+        "usdc": 5.090526
+      },
+      {
+        "timestamp": 1725352633,
+        "equity": 10189630.856764,
+        "delta": -0.04592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a 3rd party candidate win the popular vote or the Presidency?",
+        "usdc": 0.04592
+      },
+      {
+        "timestamp": 1725436368,
+        "equity": 10263259.317996,
+        "delta": -98.09,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Biden finish his term?",
+        "usdc": 98.09
+      },
+      {
+        "timestamp": 1725522626,
+        "equity": 10128984.882466,
+        "delta": -0.05101,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will J.B. Pritzker be D-nom for VP on Election Day?",
+        "usdc": 0.05101
+      },
+      {
+        "timestamp": 1725585009,
+        "equity": 10111847.461134,
+        "delta": 0.27185,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will another candidate be D-nom for VP on Election Day?",
+        "usdc": 0.27185
+      },
+      {
+        "timestamp": 1725638012,
+        "equity": 10082393.780714,
+        "delta": -4.5414,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Inside Out 2' gross most in 2024?",
+        "usdc": 4.5414
+      },
+      {
+        "timestamp": 1725682153,
+        "equity": 10235298.553111,
+        "delta": -9.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Michigan Presidential Election?",
+        "usdc": 9.2
+      },
+      {
+        "timestamp": 1725732716,
+        "equity": 10268635.036554,
+        "delta": -539.714057,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed decreases interest rates by 50+ bps after September 2024 meeting?",
+        "usdc": 539.714057
+      },
+      {
+        "timestamp": 1725769641,
+        "equity": 10154579.559408,
+        "delta": -0.266266,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fed increases interest rates by 25+ bps after September 2024 meeting?",
+        "usdc": 0.266266
+      },
+      {
+        "timestamp": 1725821472,
+        "equity": 10060775.786799,
+        "delta": -15.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 15.0
+      },
+      {
+        "timestamp": 1725864572,
+        "equity": 10077291.791345,
+        "delta": -15.5287,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "US adds between 200k and 250k jobs in September?",
+        "usdc": 15.5287
+      },
+      {
+        "timestamp": 1725908073,
+        "equity": 10077594.055918,
+        "delta": -11.3887,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Aleo airdrop by September 30?",
+        "usdc": 11.3887
+      },
+      {
+        "timestamp": 1725950829,
+        "equity": 10191724.907994,
+        "delta": -66.279069,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala say \"convicted felon\" at debate?",
+        "usdc": 66.279069
+      },
+      {
+        "timestamp": 1725984277,
+        "equity": 10097630.084755,
+        "delta": -1425.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala say \"convicted felon\" at debate?",
+        "usdc": 1425.0
+      },
+      {
+        "timestamp": 1726006486,
+        "equity": 10114122.534352,
+        "delta": 0.25732,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win North Carolina Presidential Election?",
+        "usdc": 0.25732
+      },
+      {
+        "timestamp": 1726026408,
+        "equity": 10066163.595056,
+        "delta": -35.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fed cut interest rates 3 times in 2024?",
+        "usdc": 35.5
+      },
+      {
+        "timestamp": 1726059415,
+        "equity": 10154931.233109,
+        "delta": -1.142857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Who will gain more in polls after the debate?",
+        "usdc": 1.142857
+      },
+      {
+        "timestamp": 1726083549,
+        "equity": 10160982.999865,
+        "delta": -51.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the debate have 65-70 million viewers?",
+        "usdc": 51.1
+      },
+      {
+        "timestamp": 1726109770,
+        "equity": 10319654.89817,
+        "delta": -5.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1726139897,
+        "equity": 10319216.929075,
+        "delta": 2.941174,
+        "type": "MERGE",
+        "side": null,
+        "title": "No prison time for Hunter Biden in gun case? ",
+        "usdc": 2.941174
+      },
+      {
+        "timestamp": 1726183066,
+        "equity": 10212902.30231,
+        "delta": -0.012222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Who's out first: Benjamin Netanyahu or Yahya Sinwar?",
+        "usdc": 0.012222
+      },
+      {
+        "timestamp": 1726214287,
+        "equity": 10229361.545005,
+        "delta": -0.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.03
+      },
+      {
+        "timestamp": 1726245074,
+        "equity": 10197924.603896,
+        "delta": -100.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Florida's abortion protection measure pass?",
+        "usdc": 100.0
+      },
+      {
+        "timestamp": 1726297385,
+        "equity": 10176944.255549,
+        "delta": -1.508771,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel x Hamas ceasefire in 2024?",
+        "usdc": 1.508771
+      },
+      {
+        "timestamp": 1726335192,
+        "equity": 10191732.611221,
+        "delta": 100.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Trump say \"Border\" during the X space?",
+        "usdc": 100.0
+      },
+      {
+        "timestamp": 1726384184,
+        "equity": 10170869.606425,
+        "delta": -0.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will any other Republican Politician win the 2024 US Presidential Election?",
+        "usdc": 0.12
+      },
+      {
+        "timestamp": 1726406542,
+        "equity": 10044924.625428,
+        "delta": -525.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Iowa Presidential Election?",
+        "usdc": 525.0
+      },
+      {
+        "timestamp": 1726429908,
+        "equity": 10272905.415498,
+        "delta": -1.27063,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 presidential election: GOP wins by 105-154",
+        "usdc": 1.27063
+      },
+      {
+        "timestamp": 1726497469,
+        "equity": 10191016.295575,
+        "delta": -37.74,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump say \"Rug\" or \"Rugged\" during the X space?",
+        "usdc": 37.74
+      },
+      {
+        "timestamp": 1726575152,
+        "equity": 10057451.225625,
+        "delta": -0.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Playboi Carti release new album in 2024?",
+        "usdc": 0.1
+      },
+      {
+        "timestamp": 1726627494,
+        "equity": 10120925.875665,
+        "delta": -7.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump pictured with Loomer again in September?",
+        "usdc": 7.2
+      },
+      {
+        "timestamp": 1726681974,
+        "equity": 9990863.477389,
+        "delta": 84.399999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Fed decreases interest rates by 25 bps after September 2024 meeting?",
+        "usdc": 84.399999
+      },
+      {
+        "timestamp": 1726746565,
+        "equity": 10793795.963092,
+        "delta": -0.135319,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris say \"border\" during Oprah livestream?",
+        "usdc": 0.135319
+      },
+      {
+        "timestamp": 1726805519,
+        "equity": 10774179.895233,
+        "delta": 3300.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 3300.0
+      },
+      {
+        "timestamp": 1726863186,
+        "equity": 10724106.244414,
+        "delta": -222.8976,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U.S. evacuates Beirut Embassy by September 30?",
+        "usdc": 222.8976
+      },
+      {
+        "timestamp": 1726931616,
+        "equity": 10733964.271,
+        "delta": -0.037368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "COVID lab leak confirmed by US in 2024?",
+        "usdc": 0.037368
+      },
+      {
+        "timestamp": 1726997016,
+        "equity": 10703227.430735,
+        "delta": -663.0008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Caroline Ellison sentenced to prison?",
+        "usdc": 663.0008
+      },
+      {
+        "timestamp": 1727027532,
+        "equity": 10704269.135107,
+        "delta": -25.714285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. 49ers",
+        "usdc": 25.714285
+      },
+      {
+        "timestamp": 1727082629,
+        "equity": 10514737.04251,
+        "delta": 2.0408,
+        "type": "MERGE",
+        "side": null,
+        "title": "Another Trump x Musk space before October?",
+        "usdc": 2.0408
+      },
+      {
+        "timestamp": 1727125353,
+        "equity": 10388862.716134,
+        "delta": -0.1301,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win New York Presidential Election?",
+        "usdc": 0.1301
+      },
+      {
+        "timestamp": 1727176647,
+        "equity": 10435174.485804,
+        "delta": -9.1308,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 Balance of Power: R Prez R Senate R House",
+        "usdc": 9.1308
+      },
+      {
+        "timestamp": 1727224375,
+        "equity": 10402369.238144,
+        "delta": -0.029529,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump sentenced to between 36 and 47 months prison time?",
+        "usdc": 0.029529
+      },
+      {
+        "timestamp": 1727284885,
+        "equity": 10299653.638342,
+        "delta": -75.66,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2 Trump vs. Harris debates before election?",
+        "usdc": 75.66
+      },
+      {
+        "timestamp": 1727338606,
+        "equity": 10245415.593909,
+        "delta": -50.555555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a nuclear weapon detonate in 2024?",
+        "usdc": 50.555555
+      },
+      {
+        "timestamp": 1727373993,
+        "equity": 10195528.782335,
+        "delta": 0.005,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Kanye West win the 2024 US Presidential Election?",
+        "usdc": 0.005
+      },
+      {
+        "timestamp": 1727445657,
+        "equity": 10178547.8838,
+        "delta": -0.013636,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Virginia Presidential Election?",
+        "usdc": 0.013636
+      },
+      {
+        "timestamp": 1727486249,
+        "equity": 10137304.284269,
+        "delta": -291.17647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Bengals",
+        "usdc": 291.17647
+      },
+      {
+        "timestamp": 1727533804,
+        "equity": 10109185.960091,
+        "delta": -53.5804,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 53.5804
+      },
+      {
+        "timestamp": 1727563371,
+        "equity": 10136056.28349,
+        "delta": -29.13,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U.S. evacuates Beirut Embassy by September 30?",
+        "usdc": 29.13
+      },
+      {
+        "timestamp": 1727588836,
+        "equity": 9994784.386062,
+        "delta": -0.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.06
+      },
+      {
+        "timestamp": 1727619864,
+        "equity": 10053160.222083,
+        "delta": -0.03081,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump sentenced to between 36 and 47 months prison time?",
+        "usdc": 0.03081
+      },
+      {
+        "timestamp": 1727632622,
+        "equity": 10040418.129777,
+        "delta": -0.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.05
+      },
+      {
+        "timestamp": 1727662310,
+        "equity": 10083649.97122,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Buccaneers vs. Eagles",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1727684319,
+        "equity": 10081436.091253,
+        "delta": -0.024482,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 Balance of Power: D Prez, R Senate, D House",
+        "usdc": 0.024482
+      },
+      {
+        "timestamp": 1727708001,
+        "equity": 10097810.077729,
+        "delta": 0.08856,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Trump sentenced to between 36 and 47 months prison time?",
+        "usdc": 0.08856
+      },
+      {
+        "timestamp": 1727744319,
+        "equity": 10038844.341943,
+        "delta": -0.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nikki Haley win the 2024 US Presidential Election?",
+        "usdc": 0.06
+      },
+      {
+        "timestamp": 1727786078,
+        "equity": 10198815.99565,
+        "delta": -2.862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kamala flips a 2020 Trump state?",
+        "usdc": 2.862
+      },
+      {
+        "timestamp": 1727837748,
+        "equity": 10282898.703204,
+        "delta": -11.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trump gets more black voters than in 2020?",
+        "usdc": 11.0
+      },
+      {
+        "timestamp": 1727906987,
+        "equity": 10227906.399318,
+        "delta": -133.0019,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will there be another debate?",
+        "usdc": 133.0019
+      },
+      {
+        "timestamp": 1727962583,
+        "equity": 10191374.084404,
+        "delta": -72.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Israel target an Iranian oil or gas facility?",
+        "usdc": 72.0
+      },
+      {
+        "timestamp": 1728032571,
+        "equity": 10155433.189195,
+        "delta": -25.2868,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "2024 Balance of Power: R Prez R Senate R House",
+        "usdc": 25.2868
+      },
+      {
+        "timestamp": 1728096084,
+        "equity": 9995582.904148,
+        "delta": 473.529999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Kamala Harris win the 2024 US Presidential Election?",
+        "usdc": 473.529999
+      },
+      {
+        "timestamp": 1728195725,
+        "equity": 10036440.018155,
+        "delta": -0.018333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Andrew Tate guilty of human trafficking in 2024?",
+        "usdc": 0.018333
+      },
+      {
+        "timestamp": 1728245966,
+        "equity": 9991712.52276,
+        "delta": -0.28028,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 'Joker: Folie \u00e0 Deux' gross less than $105m opening weekend?",
+        "usdc": 0.28028
+      },
+      {
+        "timestamp": 1728301862,
+        "equity": 10063925.078653,
+        "delta": -0.19,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will any other Republican Politician win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.19
+      },
+      {
+        "timestamp": 1728345286,
+        "equity": 10081252.054146,
+        "delta": -1e-05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Texas Presidential Election?",
+        "usdc": 1e-05
+      },
+      {
+        "timestamp": 1728376344,
+        "equity": 10121331.107945,
+        "delta": -0.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Michelle Obama win the 2024 US Presidential Election?",
+        "usdc": 0.06
+      },
+      {
+        "timestamp": 1728445124,
+        "equity": 10122728.696657,
+        "delta": -293.93,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel military response against Iran by Friday?",
+        "usdc": 293.93
+      },
+      {
+        "timestamp": 1728466479,
+        "equity": 10064723.08145,
+        "delta": -0.012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win New Hampshire Presidential Election?",
+        "usdc": 0.012
+      },
+      {
+        "timestamp": 1728487976,
+        "equity": 10069311.724589,
+        "delta": -0.004878,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Someone else announced as next BlackRock CEO?",
+        "usdc": 0.004878
+      },
+      {
+        "timestamp": 1728513182,
+        "equity": 10050676.769115,
+        "delta": -0.012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Texas US Senate Election?",
+        "usdc": 0.012
+      },
+      {
+        "timestamp": 1728531417,
+        "equity": 10003306.63045,
+        "delta": 0.022,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win Texas US Senate Election?",
+        "usdc": 0.022
+      },
+      {
+        "timestamp": 1728560638,
+        "equity": 9957898.92699,
+        "delta": -0.074,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win New Hampshire Governor Election?",
+        "usdc": 0.074
+      },
+      {
+        "timestamp": 1728597430,
+        "equity": 9873560.214505,
+        "delta": -294.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Florida US Senate Election?",
+        "usdc": 294.6
+      },
+      {
+        "timestamp": 1728623725,
+        "equity": 9931261.529638,
+        "delta": 0.032,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win Montana US Senate Election?",
+        "usdc": 0.032
+      },
+      {
+        "timestamp": 1728654745,
+        "equity": 9963302.251395,
+        "delta": -15.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Nevada Presidential Election?",
+        "usdc": 15.7
+      },
+      {
+        "timestamp": 1728672531,
+        "equity": 9972563.953252,
+        "delta": -1.249055,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 1.249055
+      },
+      {
+        "timestamp": 1728692432,
+        "equity": 9993899.783828,
+        "delta": -0.421034,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.421034
+      },
+      {
+        "timestamp": 1728703153,
+        "equity": 9977785.72946,
+        "delta": -0.185862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the popular vote in the 2024 Presidential Election?",
+        "usdc": 0.185862
+      },
+      {
+        "timestamp": 1728756163,
+        "equity": 9911538.278511,
+        "delta": -2.93265,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Henry Cavill announced as next James Bond?",
+        "usdc": 2.93265
+      },
+      {
+        "timestamp": 1728800308,
+        "equity": 9760221.543772,
+        "delta": 35.714284,
+        "type": "MERGE",
+        "side": null,
+        "title": "Commanders vs. Ravens",
+        "usdc": 35.714284
+      },
+      {
+        "timestamp": 1728830158,
+        "equity": 9831990.346711,
+        "delta": -4.8852,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will ETH or SOL reach all-time high first?",
+        "usdc": 4.8852
+      },
+      {
+        "timestamp": 1728847974,
+        "equity": 9857684.444866,
+        "delta": -227.2725,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump go on Joe Rogan before election?",
+        "usdc": 227.2725
+      },
+      {
+        "timestamp": 1728860777,
+        "equity": 9859193.891755,
+        "delta": -11.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win the popular vote and a Republican win the Presidency?",
+        "usdc": 11.666666
+      },
+      {
+        "timestamp": 1728878226,
+        "equity": 9830717.791197,
+        "delta": -0.013013,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Panthers win Super Bowl 2025?",
+        "usdc": 0.013013
+      },
+      {
+        "timestamp": 1728914942,
+        "equity": 9824936.751321,
+        "delta": -2.269014,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kamala Harris wins the popular vote?",
+        "usdc": 2.269014
+      },
+      {
+        "timestamp": 1728936539,
+        "equity": 9808437.284984,
+        "delta": -2.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Israel strike Iran on Friday Oct 18?",
+        "usdc": 2.8
+      },
+      {
+        "timestamp": 1728970346,
+        "equity": 9790517.014616,
+        "delta": -0.6644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris win the 2024 US Presidential Election?",
+        "usdc": 0.6644
+      },
+      {
+        "timestamp": 1728991660,
+        "equity": 9778731.316323,
+        "delta": -2.867368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump go on Joe Rogan before election?",
+        "usdc": 2.867368
+      },
+      {
+        "timestamp": 1729031196,
+        "equity": 9781989.644189,
+        "delta": 1500.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will FTX payouts start in Q4 2024?",
+        "usdc": 1500.0
+      },
+      {
+        "timestamp": 1729077484,
+        "equity": 9740828.528843,
+        "delta": -56.58,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Republican win Wisconsin Presidential Election?",
+        "usdc": 56.58
+      },
+      {
+        "timestamp": 1729113111,
+        "equity": 9697501.325119,
+        "delta": 1.9476,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "COVID lab leak confirmed by US in 2024?",
+        "usdc": 1.9476
+      },
+      {
+        "timestamp": 1729171870,
+        "equity": 9698066.169313,
+        "delta": 121.009998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Biden finish his term?",
+        "usdc": 121.009998
+      },
+      {
+        "timestamp": 1729235906,
+        "equity": 10013632.296553,
+        "delta": -0.039507,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "U.S. military strike on Lebanon before November?",
+        "usdc": 0.039507
+      },
+      {
+        "timestamp": 1729282467,
+        "equity": 9968177.674906,
+        "delta": 0.102,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win California Presidential Election?",
+        "usdc": 0.102
+      },
+      {
+        "timestamp": 1729334050,
+        "equity": 9986721.596018,
+        "delta": 2.15,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a Democrat win Pennsylvania Presidential Election?",
+        "usdc": 2.15
+      },
+      {
+        "timestamp": 1729373539,
+        "equity": 10023157.314519,
+        "delta": -425.31275,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel military response against Iran in October?",
+        "usdc": 425.31275
+      },
+      {
+        "timestamp": 1729412918,
+        "equity": 10144311.012582,
+        "delta": -1.278688,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Who will go on Rogan first?",
+        "usdc": 1.278688
+      },
+      {
+        "timestamp": 1729441023,
+        "equity": 10063414.569865,
+        "delta": -99.83012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump win the 2024 US Presidential Election?",
+        "usdc": 99.83012
+      },
+      {
+        "timestamp": 1729455228,
+        "equity": 10100834.349088,
+        "delta": 0.148,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win Wisconsin US Senate Election?",
+        "usdc": 0.148
+      },
+      {
+        "timestamp": 1729472244,
+        "equity": 10100990.121775,
+        "delta": -1.505376,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Israel x Iran peace deal in 2024?",
+        "usdc": 1.505376
+      },
+      {
+        "timestamp": 1729504631,
+        "equity": 10018501.953915,
+        "delta": 400.552922,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Who will start week 7 for the Steelers?",
+        "usdc": 400.552922
+      },
+      {
+        "timestamp": 1729528240,
+        "equity": 9992122.356312,
+        "delta": -2.305882,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "OpenAI becomes a for-profit before April 2025?",
+        "usdc": 2.305882
+      },
+      {
+        "timestamp": 1729542595,
+        "equity": 10008727.862988,
+        "delta": -0.039,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Pennsylvania US Senate Election?",
+        "usdc": 0.039
+      },
+      {
+        "timestamp": 1729577722,
+        "equity": 9944022.815489,
+        "delta": -169.6072,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Michigan Presidential Election?",
+        "usdc": 169.6072
+      },
+      {
+        "timestamp": 1729598678,
+        "equity": 9828225.591708,
+        "delta": -737.828701,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Trump go on Joe Rogan before election?",
+        "usdc": 737.828701
+      },
+      {
+        "timestamp": 1729615029,
+        "equity": 9804080.725325,
+        "delta": -0.960784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "House control after 2024 election?",
+        "usdc": 0.960784
+      },
+      {
+        "timestamp": 1729638694,
+        "equity": 9728669.559941,
+        "delta": -0.009,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Wisconsin Presidential Election?",
+        "usdc": 0.009
+      },
+      {
+        "timestamp": 1729656594,
+        "equity": 9675838.601337,
+        "delta": 0.494,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will a candidate from another party win Texas US Senate Election?",
+        "usdc": 0.494
+      },
+      {
+        "timestamp": 1729669073,
+        "equity": 9689342.754862,
+        "delta": -85.546744,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala Harris win the 2024 US Presidential Election?",
+        "usdc": 85.546744
+      },
+      {
+        "timestamp": 1729679164,
+        "equity": 9662767.316847,
+        "delta": -1.2064,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a Democrat win Michigan Presidential Election?",
+        "usdc": 1.2064
+      },
+      {
+        "timestamp": 1729685624,
+        "equity": 9708599.665507,
+        "delta": -44.083714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Kamala go on Joe Rogan before election?",
+        "usdc": 44.083714
+      },
+      {
+        "timestamp": 1729716437,
+        "equity": 9705808.042901,
+        "delta": -0.043,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will a candidate from another party win Washington DC Presidential Election?",
+        "usdc": 0.043
+      }
+    ]
+  },
+  "market_making": {
+    "score": 35,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Trades both outcomes in 83% of markets (inventory/MM signature)",
+      "High-frequency cadence (median gap 40s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.8273,
+      "fast_roundtrip_rate": 0.0071,
+      "spread_capture_rate": 0.2866,
+      "size_cv": 10.104,
+      "median_gap_seconds": 40,
+      "outcome_counts": {
+        "Yes": 209525,
+        "No": 97878,
+        "Fury": 12,
+        "Putin": 92,
+        "Wagner": 76,
+        "Zuck": 24,
+        "Musk": 85,
+        "Police": 6,
+        "Nahel": 9,
+        "Oppenheimer": 9,
+        "Barbie": 10,
+        "Austin": 9,
+        "Utopia": 5,
+        "Paul": 37,
+        "Diaz": 13,
+        "Jingtao": 8,
+        "Zata": 9,
+        "Danis": 10,
+        "Sprite": 13,
+        "Charlotte": 15,
+        "Pochettino": 5,
+        "Izi Prime": 6,
+        "Zherka": 3,
+        "ten Hag": 3,
+        "Haaland": 9,
+        "Chelsea": 17,
+        "Democrats": 481,
+        "Republicans": 261,
+        "KSI": 11,
+        "Israel": 64,
+        "Palestine": 46,
+        "Killers": 20,
+        "Taylor Swift": 14,
+        "South Africa": 11,
+        "Ngannou": 6,
+        "New Zealand": 5,
+        "Reeves": 22,
+        "Presley": 17,
+        "India": 19,
+        "Australia": 29,
+        "$2200": 12,
+        "$1800": 12,
+        "$2000": 59,
+        "$2500": 3,
+        "United States": 1,
+        "South Korea": 6,
+        "Progrias": 4,
+        "Haney": 3,
+        "Netanyahu": 147,
+        "Sinwar": 117,
+        "Wen-je": 86,
+        "Yu-ih": 81,
+        "Washington": 6,
+        "Michigan": 7,
+        "BTC": 7,
+        "ETH": 207,
+        "Chiefs": 60,
+        "Republican": 909,
+        "Steelers": 107,
+        "Texans": 104,
+        "Dolphins": 128,
+        "Browns": 169,
+        "Packers": 90,
+        "Democratic": 1646,
+        "Rams": 99,
+        "Cowboys": 173,
+        "Bills": 230,
+        "Buccaneers": 144,
+        "DeSantis": 16,
+        "Haley": 15,
+        "Ravens": 200,
+        "Lions": 140,
+        "Pilip": 44,
+        "Suozzi": 17,
+        "49ers": 188,
+        "Du Plessis": 1,
+        "Sinner": 5,
+        "Medvedev": 4,
+        "Pass": 11,
+        "Tails": 11,
+        "Heads": 5,
+        "Biden": 116,
+        "NVIDIA": 29,
+        "Google": 33,
+        "Ansem": 171,
+        "$BITCOIN": 12,
+        "$MOG": 16,
+        "Axe": 15,
+        "Barney": 136,
+        "Alex Wice": 13,
+        "$boden": 2,
+        "Hsaka": 12,
+        "SOL": 171,
+        "SDSU": 6,
+        "Clemson": 3,
+        "Alabama": 2,
+        "UConn": 4,
+        "ISU": 3,
+        "UNC": 2,
+        "Arizona": 1,
+        "Tennessee": 17,
+        "Purdue": 5,
+        "NC St.": 1,
+        "Creighton": 6,
+        "Duke": 8,
+        "Marquette": 6,
+        "Gonzaga": 4,
+        "Houston": 5,
+        "NC State": 7,
+        "Reese": 9,
+        "LSU": 2,
+        "Iowa": 20,
+        "Carolina": 7,
+        "Kyle": 3,
+        "Higher": 12,
+        "Su": 4,
+        "Lower": 6,
+        "Maye": 9,
+        "Pendarovski": 16,
+        "Knicks": 8,
+        "76ers": 2,
+        "Nuggets": 8,
+        "Twolves": 1,
+        "Cavaliers": 8,
+        "Magic": 2,
+        "PSG": 10,
+        "Timberwolves": 47,
+        "Kendrick": 22,
+        "Drake": 10,
+        "Siljanovska": 5,
+        "Pacers": 1,
+        "Dortmund": 174,
+        "Bayern": 1,
+        "Real Madrid": 24,
+        "Boden": 11,
+        "Trump": 742,
+        "$PEPE": 11,
+        "$WIF": 28,
+        "JennerSOL": 10,
+        "JennerETH": 3,
+        "Smic": 29,
+        "BitBoy": 19,
+        "Tate": 14,
+        "Clark": 4,
+        "France": 28,
+        "Portugal": 6,
+        "Switzerland": 25,
+        "England": 186,
+        "Turkey": 1,
+        "Spain": 285,
+        "Netherlands": 24,
+        "True": 11,
+        "False": 8,
+        "Democrat": 63,
+        "Lettuce": 15,
+        "Carter": 1,
+        "Kuhn": 9,
+        "Kamala": 422,
+        "Bears": 87,
+        "Girl": 41,
+        "USA": 10,
+        "Kent": 15,
+        "Perez": 19,
+        "Atalanta": 53,
+        "$4000": 54,
+        "Over": 43,
+        "Under": 37,
+        "Boy": 42,
+        "Harris": 136,
+        "Peltola": 10,
+        "Kamala ": 225,
+        "Begich": 5,
+        "Jets": 187,
+        "Raiders": 34,
+        "Commanders": 106,
+        "Giants": 119,
+        "Jaguars": 124,
+        "Panthers": 69,
+        "Colts": 110,
+        "Chargers": 113,
+        "Mitch": 50,
+        "Vikings": 96,
+        "Rektober": 74,
+        "Eagles": 66,
+        "Falcons": 49,
+        "Broncos": 95,
+        "Seahawks": 56,
+        "Patriots": 56,
+        "Cardinals": 136,
+        "Bengals": 110,
+        "Titans": 70,
+        "Saints": 54,
+        " Blonde Broker": 15,
+        "Ashley": 16,
+        "Harris ": 1,
+        "Bitboy": 4,
+        "Vance": 153,
+        "\u7537\u4eba (Man)": 38,
+        "\u5973\u4eba (Woman)": 33,
+        "Walz": 129,
+        "Iggy": 4,
+        "threadguy": 18,
+        "MINH": 2,
+        "OG Shoots": 6,
+        "Rasmr": 28,
+        "Profits": 24,
+        "Mungo": 4,
+        "Wilson": 10,
+        "Fields": 13
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 11523,
+      "1": 12476,
+      "2": 13768,
+      "3": 14585,
+      "4": 12596,
+      "5": 11839,
+      "6": 14307,
+      "7": 15393,
+      "8": 14499,
+      "9": 13937,
+      "10": 12247,
+      "11": 12295,
+      "12": 13255,
+      "13": 14269,
+      "14": 15090,
+      "15": 15219,
+      "16": 14291,
+      "17": 14140,
+      "18": 13551,
+      "19": 12363,
+      "20": 13036,
+      "21": 12155,
+      "22": 11935,
+      "23": 11620
+    },
+    "dow_utc": {
+      "0": 44196,
+      "1": 47712,
+      "2": 51013,
+      "3": 47613,
+      "4": 45822,
+      "5": 39585,
+      "6": 44448
+    },
+    "peak_hours": [
+      7,
+      15,
+      14,
+      3,
+      8
+    ],
+    "peak_dows": [
+      2,
+      1,
+      3
+    ]
+  },
+  "sizing": {
+    "n": 320389,
+    "mean_usdc": 278.3678,
+    "median_usdc": 6.269,
+    "p10_usdc": 0.044,
+    "p90_usdc": 364.1796,
+    "max_usdc": 257495.5265,
+    "mean_shares": 1017.5798,
+    "median_shares": 100.0
+  },
+  "categories": {
+    "pnl": {
+      "crypto": -36485.8356,
+      "sports_totals": -103374.2157,
+      "other": -2020177.5705,
+      "politics": -7063659.5734,
+      "sports_match": -18543769.5307
+    },
+    "counts": {
+      "sports_match": 2952,
+      "crypto": 640,
+      "other": 9844,
+      "politics": 3531,
+      "sports_totals": 575
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Will Kamala Harris win the 2024 Democratic Presidential Nomination?",
+      "pnl": 326714.6832,
+      "buy_usdc": 614346.4249,
+      "sell_usdc": 345794.1932,
+      "n_buys": 199,
+      "n_sells": 168,
+      "hold_seconds": 17689277,
+      "avg_buy": 0.6739,
+      "avg_sell": 0.4388
+    },
+    {
+      "title": "Will JD Vance win the 2024 Republican VP nomination?",
+      "pnl": 232267.7776,
+      "buy_usdc": 70812.2184,
+      "sell_usdc": 63162.6173,
+      "n_buys": 254,
+      "n_sells": 188,
+      "hold_seconds": 13365580,
+      "avg_buy": 0.1544,
+      "avg_sell": 0.1406
+    },
+    {
+      "title": "No change in Fed interest rates after 2024 September meeting?",
+      "pnl": 123657.7165,
+      "buy_usdc": 557727.646,
+      "sell_usdc": 159595.6888,
+      "n_buys": 277,
+      "n_sells": 2,
+      "hold_seconds": 4588704,
+      "avg_buy": 0.6764,
+      "avg_sell": 0.9872
+    },
+    {
+      "title": "Fed decreases interest rates by 50+ bps after September 2024 meeting?",
+      "pnl": 105343.0827,
+      "buy_usdc": 255285.9925,
+      "sell_usdc": 66389.0966,
+      "n_buys": 463,
+      "n_sells": 36,
+      "hold_seconds": 4613971,
+      "avg_buy": 0.3941,
+      "avg_sell": 0.3834
+    },
+    {
+      "title": "Biden drops out of presidential race?",
+      "pnl": 89816.4772,
+      "buy_usdc": 864637.4375,
+      "sell_usdc": 412414.9935,
+      "n_buys": 1104,
+      "n_sells": 437,
+      "hold_seconds": 26075004,
+      "avg_buy": 0.4957,
+      "avg_sell": 0.5024
+    },
+    {
+      "title": "Will another candidate win the 2024 Republican VP nomination?",
+      "pnl": 89328.7341,
+      "buy_usdc": 14511.0413,
+      "sell_usdc": 0.0,
+      "n_buys": 108,
+      "n_sells": 0,
+      "hold_seconds": 5711260,
+      "avg_buy": 0.5892,
+      "avg_sell": null
+    },
+    {
+      "title": "Will Fed cut interest rates 4 times in 2024?",
+      "pnl": 81513.1032,
+      "buy_usdc": 105218.8874,
+      "sell_usdc": 25021.7642,
+      "n_buys": 295,
+      "n_sells": 33,
+      "hold_seconds": 18476398,
+      "avg_buy": 0.3613,
+      "avg_sell": 0.2511
+    },
+    {
+      "title": "Will 'Inside Out 2' gross most in 2024?",
+      "pnl": 71576.9338,
+      "buy_usdc": 108825.6635,
+      "sell_usdc": 930.0528,
+      "n_buys": 740,
+      "n_sells": 8,
+      "hold_seconds": 22121402,
+      "avg_buy": 0.6409,
+      "avg_sell": 0.372
+    },
+    {
+      "title": "Fed decreases interest rates by 25 bps after November 2024 meeting?",
+      "pnl": 65890.5606,
+      "buy_usdc": 33469.3263,
+      "sell_usdc": 1720.0,
+      "n_buys": 127,
+      "n_sells": 2,
+      "hold_seconds": 6834183,
+      "avg_buy": 0.4855,
+      "avg_sell": 0.86
+    },
+    {
+      "title": "Will Erdo\u011fan win the 2023 Turkish presidential election?",
+      "pnl": 62824.9035,
+      "buy_usdc": 256759.8,
+      "sell_usdc": 152295.7484,
+      "n_buys": 208,
+      "n_sells": 13,
+      "hold_seconds": 7522579,
+      "avg_buy": 0.6231,
+      "avg_sell": 0.9468
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Will Chris Christie win the 2024 US Presidential Election?",
+      "pnl": -702380.8386,
+      "buy_usdc": 556.9774,
+      "sell_usdc": 1320.7351,
+      "n_buys": 7,
+      "n_sells": 25,
+      "hold_seconds": 13756310
+    },
+    {
+      "title": "Will Elizabeth Warren win the 2024 US Presidential Election?",
+      "pnl": -702031.3249,
+      "buy_usdc": 2481.0315,
+      "sell_usdc": 3420.7788,
+      "n_buys": 131,
+      "n_sells": 33,
+      "hold_seconds": 15163682
+    },
+    {
+      "title": "Will Bernie Sanders win the 2024 US Presidential Election?",
+      "pnl": -701513.7189,
+      "buy_usdc": 2632.6555,
+      "sell_usdc": 1562.3384,
+      "n_buys": 66,
+      "n_sells": 65,
+      "hold_seconds": 16875396
+    },
+    {
+      "title": "Will Vivek Ramaswamy win the 2024 US Presidential Election?",
+      "pnl": -700142.4992,
+      "buy_usdc": 8236.9779,
+      "sell_usdc": 6554.2049,
+      "n_buys": 147,
+      "n_sells": 74,
+      "hold_seconds": 15156827
+    },
+    {
+      "title": "Will Kanye West win the 2024 US Presidential Election?",
+      "pnl": -698953.4205,
+      "buy_usdc": 5865.8176,
+      "sell_usdc": 2441.1033,
+      "n_buys": 44,
+      "n_sells": 285,
+      "hold_seconds": 23294731
+    },
+    {
+      "title": "Will any other Republican Politician win the 2024 US Presidential Election?",
+      "pnl": -693213.9337,
+      "buy_usdc": 9231.404,
+      "sell_usdc": 13154.06,
+      "n_buys": 1583,
+      "n_sells": 59,
+      "hold_seconds": 25029975
+    },
+    {
+      "title": "Will Hillary Clinton win the 2024 US Presidential Election?",
+      "pnl": -688153.04,
+      "buy_usdc": 41642.2449,
+      "sell_usdc": 3925.0949,
+      "n_buys": 170,
+      "n_sells": 28,
+      "hold_seconds": 18730478
+    },
+    {
+      "title": "Will AOC win the 2024 US Presidential Election?",
+      "pnl": -687759.6893,
+      "buy_usdc": 102557.4494,
+      "sell_usdc": 8764.2947,
+      "n_buys": 199,
+      "n_sells": 28,
+      "hold_seconds": 13941585
+    },
+    {
+      "title": "Will Ron DeSantis win the 2024 US Presidential Election?",
+      "pnl": -685841.9752,
+      "buy_usdc": 65307.6702,
+      "sell_usdc": 40319.3513,
+      "n_buys": 372,
+      "n_sells": 66,
+      "hold_seconds": 23871144
+    },
+    {
+      "title": "Will any other Democratic Politician win the 2024 US Presidential Election?",
+      "pnl": -680019.5981,
+      "buy_usdc": 58680.7654,
+      "sell_usdc": 29439.1789,
+      "n_buys": 541,
+      "n_sells": 100,
+      "hold_seconds": 24425501
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "No change in Fed interest rates after 2024 September meeting?",
+      "avg_buy": 0.6764,
+      "avg_sell": 0.9872,
+      "spread": 0.3108,
+      "pnl": 123657.7165,
+      "n_buys": 277,
+      "n_sells": 2,
+      "hold_seconds": 4588704,
+      "both_sides": true
+    },
+    {
+      "title": "Biden drops out of presidential race?",
+      "avg_buy": 0.4957,
+      "avg_sell": 0.5024,
+      "spread": 0.0067,
+      "pnl": 89816.4772,
+      "n_buys": 1104,
+      "n_sells": 437,
+      "hold_seconds": 26075004,
+      "both_sides": true
+    },
+    {
+      "title": "Fed decreases interest rates by 25 bps after November 2024 meeting?",
+      "avg_buy": 0.4855,
+      "avg_sell": 0.86,
+      "spread": 0.3745,
+      "pnl": 65890.5606,
+      "n_buys": 127,
+      "n_sells": 2,
+      "hold_seconds": 6834183,
+      "both_sides": true
+    },
+    {
+      "title": "Will Erdo\u011fan win the 2023 Turkish presidential election?",
+      "avg_buy": 0.6231,
+      "avg_sell": 0.9468,
+      "spread": 0.3237,
+      "pnl": 62824.9035,
+      "n_buys": 208,
+      "n_sells": 13,
+      "hold_seconds": 7522579,
+      "both_sides": true
+    },
+    {
+      "title": "Will there be between 16 and 20 named storms during Atlantic Hurricane Season?",
+      "avg_buy": 0.4156,
+      "avg_sell": 0.4243,
+      "spread": 0.0087,
+      "pnl": 50754.9581,
+      "n_buys": 171,
+      "n_sells": 9,
+      "hold_seconds": 14140163,
+      "both_sides": true
+    },
+    {
+      "title": "Will weed be rescheduled in 2024?",
+      "avg_buy": 0.5552,
+      "avg_sell": 0.8888,
+      "spread": 0.3336,
+      "pnl": 48042.0451,
+      "n_buys": 411,
+      "n_sells": 9,
+      "hold_seconds": 24150736,
+      "both_sides": true
+    },
+    {
+      "title": "Trump sentenced to no prison time?",
+      "avg_buy": 0.5403,
+      "avg_sell": 0.9611,
+      "spread": 0.4208,
+      "pnl": 45639.9491,
+      "n_buys": 390,
+      "n_sells": 5,
+      "hold_seconds": 12449743,
+      "both_sides": true
+    },
+    {
+      "title": "Will Israel invade Lebanon in September?",
+      "avg_buy": 0.4471,
+      "avg_sell": 0.457,
+      "spread": 0.0099,
+      "pnl": 44296.4517,
+      "n_buys": 433,
+      "n_sells": 7,
+      "hold_seconds": 1654114,
+      "both_sides": true
+    },
+    {
+      "title": "Will Nicolas Maduro Win the 2024 Venezuela presidential election?",
+      "avg_buy": 0.3306,
+      "avg_sell": 0.3541,
+      "spread": 0.0235,
+      "pnl": 40905.8155,
+      "n_buys": 258,
+      "n_sells": 80,
+      "hold_seconds": 5751383,
+      "both_sides": true
+    },
+    {
+      "title": "CZ sentenced to less than 6 months in prison?",
+      "avg_buy": 0.3047,
+      "avg_sell": 0.3687,
+      "spread": 0.064,
+      "pnl": 36001.7334,
+      "n_buys": 40,
+      "n_sells": 19,
+      "hold_seconds": 516669,
+      "both_sides": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "wallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+  "username": "sovereign2013",
+  "mode": "full",
+  "duration_s": 1297.63,
+  "counts": {
+    "activity": 130129,
+    "trades": 119316,
+    "closed_positions": 71299,
+    "open_positions": 1
+  },
+  "last_activity_ts": 1764505678,
+  "last_trade_ts": 1764505678,
+  "resolved": {
+    "username": "sovereign2013",
+    "wallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf"
+  }
+}

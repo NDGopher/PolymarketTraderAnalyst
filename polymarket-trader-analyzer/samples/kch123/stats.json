@@ -1,0 +1,839 @@
+{
+  "username": "kch123",
+  "wallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+  "identity": "two_sided_inventory_mm",
+  "market_making": {
+    "score": 70,
+    "label": "strong_market_maker",
+    "signals": [
+      "Trades both outcomes in 57% of markets (inventory/MM signature)",
+      "Avg sell > avg buy in 91% of markets (spread capture)",
+      "High-frequency cadence (median gap 12s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.5664,
+      "fast_roundtrip_rate": 0.0625,
+      "spread_capture_rate": 0.9062,
+      "size_cv": 8.9585,
+      "median_gap_seconds": 12.0,
+      "outcome_counts": {
+        "White Sox": 4,
+        "Diamondbacks": 22,
+        "Red Sox": 14,
+        "Angels": 5,
+        "Marlins": 22,
+        "Giants": 1187,
+        "Blue Jays": 74,
+        "Guardians": 5,
+        "Phillies": 25,
+        "Astros": 5,
+        "Mets": 9,
+        "Rangers": 2028,
+        "No": 108,
+        "Yes": 831,
+        "Mariners": 127,
+        "Royals": 9,
+        "Rockies": 1,
+        "Yankees": 17,
+        "Tigers": 8,
+        "Barrios": 14,
+        "Ohio State": 32,
+        "Brewers": 1,
+        "Over": 3490,
+        "Cowboys": 852,
+        "Eagles": 835,
+        "Chiefs": 812,
+        "Chargers": 819,
+        "Sinner": 11,
+        "Steelers": 781,
+        "Patriots": 1224,
+        "Panthers": 1871,
+        "Raiders": 991,
+        "Saints": 589,
+        "Jaguars": 705,
+        "Commanders": 810,
+        "Falcons": 779,
+        "Browns": 730,
+        "Dolphins": 858,
+        "Buccaneers": 208,
+        "Bengals": 633,
+        "Jets": 2300,
+        "Cardinals": 546,
+        "Seahawks": 9793,
+        "Titans": 371,
+        "49ers": 1372,
+        "Texans": 1872,
+        "Rams": 3568,
+        "Lions": 1127,
+        "Packers": 929,
+        "Broncos": 962,
+        "Bills": 703,
+        "Ravens": 593,
+        "Bears": 1495,
+        "Vikings": 739,
+        "Colts": 779,
+        "Kings": 2370,
+        "Blackhawks": 2389,
+        "Penguins": 1845,
+        "Avalanche": 1390,
+        "Capitals": 2050,
+        "Canadiens": 1351,
+        "Maple Leafs": 1783,
+        "Bruins": 2007,
+        "Flames": 2533,
+        "Golden Knights": 920,
+        "Oilers": 1818,
+        "Senators": 1615,
+        "Flyers": 1767,
+        "Islanders": 1419,
+        "Red Wings": 1408,
+        "Lightning": 1874,
+        "Sabres": 1026,
+        "Devils": 1283,
+        "Wild": 1277,
+        "Predators": 1319,
+        "Blue Jackets": 3747,
+        "Stars": 1671,
+        "Blues": 1442,
+        "Utah": 3241,
+        "Hurricanes": 1952,
+        "Kraken": 1372,
+        "Ducks": 1494,
+        "Sharks": 1229,
+        "Canucks": 1871,
+        "Dodgers": 61,
+        "Under": 2464,
+        "Warriors": 39,
+        "Celtics": 43,
+        "Clippers": 151,
+        "Kansas": 9,
+        "Illinois": 31,
+        "Kansas State": 3,
+        "Buffalo": 1,
+        "Hornets": 51,
+        "Rice": 15,
+        "Raptors": 141,
+        "Purdue Boilermakers": 3,
+        "Jazz": 291,
+        "Clemson": 94,
+        "Texas State": 32,
+        "Central Michigan": 34,
+        "76ers": 9,
+        "Grizzlies": 14,
+        "Thunder": 23,
+        "Tulane": 1,
+        "Alabama Crimson Tide": 23,
+        "Tennessee Volunteers": 3,
+        "Boise State Broncos": 12,
+        "Eastern Michigan": 8,
+        "Notre Dame Fighting Irish": 9,
+        "Kansas Jayhawks": 49,
+        "Michigan Wolverines": 2,
+        "Oregon": 4,
+        "Vanderbilt": 1,
+        "Bulls": 4,
+        "Pelicans": 74,
+        "LAR": 85,
+        "Pacers": 43,
+        "Pistons": 22,
+        "Suns": 20,
+        "Nuggets": 69,
+        "Rockets": 46,
+        "Indiana": 143,
+        "Timberwolves": 117,
+        "Trail Blazers": 10,
+        "Mavericks": 57,
+        "Army": 26,
+        "Knicks": 45,
+        "Spurs": 1,
+        "Bucks": 31,
+        "Western Michigan": 3,
+        "Oklahoma": 84,
+        "Memphis": 2,
+        "Miami": 266,
+        "James Madison": 4,
+        "Washington State": 51,
+        "Southern Miss": 237,
+        "Ohio": 30,
+        "Hawaii": 53,
+        "New Mexico": 117,
+        "East Carolina": 26,
+        "Heat": 10,
+        "Appalachian State": 2,
+        "Tennessee": 10,
+        "Iowa": 15,
+        "Duke": 9,
+        "Texas": 1,
+        "Navy": 17,
+        "Arizona": 16,
+        "SMU Mustangs": 3,
+        "Cornell Big Red": 1,
+        "Wizards": 6,
+        "Ole Miss": 5,
+        "Montana State Bobcats": 1,
+        "Saint Peters Peacocks": 1,
+        "Wisconsin Badgers": 10,
+        "Villanova Wildcats": 2,
+        "Florida Gulf Coast Eagles": 1,
+        "Saint Marys Gaels": 1,
+        "Texas Tech Red Raiders": 11,
+        "UC Riverside Highlanders": 1,
+        "Oregon State Beavers": 3,
+        "Nevada Wolf Pack": 2,
+        "BYU Cougars": 5,
+        "Green Bay Phoenix": 3,
+        "Manhattan Jaspers": 2,
+        "Rider Broncs": 1,
+        "Quinnipiac Bobcats": 1,
+        "Siena Saints": 4,
+        "Hawks": 3,
+        "Morgan State Bears": 2,
+        "Maryland Eastern Shore Hawks": 1,
+        "North Carolina Central Eagles": 2,
+        "Coppin State Eagles": 14,
+        "Southeastern Louisiana Lions": 1,
+        "Western Michigan Broncos": 3,
+        "Fresno State Bulldogs": 2,
+        "Oklahoma Sooners": 2,
+        "Richmond Spiders": 4,
+        "Furman Paladins": 3,
+        "Coastal Carolina Chanticleers": 5,
+        "George Washington Revolutionaries": 2,
+        "Colorado Buffaloes": 3,
+        "California Golden Bears": 2,
+        "Detroit Titans": 2,
+        "North Carolina A&T Aggies": 5,
+        "Delaware Fightin Blue Hens": 1,
+        "Wright State Raiders": 3,
+        "Cleveland State Vikings": 1,
+        "Charleston Cougars": 3,
+        "South Alabama Jaguars": 2,
+        "Lipscomb Bisons": 1,
+        "Florida Atlantic Owls": 3,
+        "San Diego Toreros": 2,
+        "Gonzaga Bulldogs": 2,
+        "Lakers": 7,
+        "Toledo Rockets": 17,
+        "DePaul Blue Demons": 1,
+        "Jacksonville Dolphins": 4,
+        "Alcorn State Braves": 1,
+        "South Carolina Gamecocks": 11,
+        "Pittsburgh Panthers": 1,
+        "Loyola Marymount Lions": 1,
+        "Sacramento State Hornets": 3,
+        "Maryland Terrapins": 14,
+        "Wichita State Shockers": 1,
+        "Tulane Green Wave": 4,
+        "Mercyhurst Lakers": 2,
+        "Cavaliers": 7,
+        "Providence Friars": 3,
+        "Lamar Cardinals": 2,
+        "LSU Tigers": 177,
+        "Baylor Bears": 37,
+        "San Jose State Spartans": 25,
+        "Old Dominion Monarchs": 6,
+        "Army Black Knights": 1,
+        "Texas Longhorns": 1,
+        "Washington Huskies": 11,
+        "Louisiana-Monroe Warhawks": 44,
+        "Milwaukee Panthers": 2,
+        "Stony Brook Seawolves": 1,
+        "Denver Pioneers": 2,
+        "New Mexico State Aggies": 1,
+        "Long Beach State Beach": 2,
+        "UNCG Spartans": 17,
+        "Rutgers Scarlet Knights": 1,
+        "Colorado State Rams": 14,
+        "Towson Tigers": 1,
+        "Bethune-Cookman Wildcats": 1,
+        "UC Irvine Anteaters": 1,
+        "South Florida Bulls": 16
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "sports_match": 8091620.88,
+      "sports_totals": 1458261.66,
+      "other": 401529.48,
+      "politics": -62103.19
+    },
+    "category_counts": {
+      "sports_match": 1437,
+      "sports_totals": 308,
+      "other": 9,
+      "politics": 1
+    },
+    "slug_tokens": [
+      [
+        "nhl",
+        953
+      ],
+      [
+        "nfl",
+        328
+      ],
+      [
+        "nba",
+        151
+      ],
+      [
+        "mlb",
+        34
+      ],
+      [
+        "ten",
+        24
+      ],
+      [
+        "mma",
+        18
+      ],
+      [
+        "lal",
+        14
+      ],
+      [
+        "ucl",
+        6
+      ],
+      [
+        "bun",
+        1
+      ]
+    ],
+    "primary": "sports_match"
+  },
+  "counts": {
+    "activity": 108210,
+    "trades": 106103,
+    "buys": 106005,
+    "sells": 98,
+    "closed_positions": 4033,
+    "open_positions": 39,
+    "markets_traded": 1755,
+    "activity_types": {
+      "DEPOSIT": 74,
+      "TRADE": 106103,
+      "REDEEM": 1506,
+      "MERGE": 482,
+      "REWARD": 6,
+      "WITHDRAWAL": 39
+    }
+  },
+  "span": {
+    "first_ts": 1750878886,
+    "last_ts": 1769547211,
+    "first_iso": "2025-06-25T19:14:46+00:00",
+    "last_iso": "2026-01-27T20:53:31+00:00",
+    "days_active_span": 216.07
+  },
+  "pnl": {
+    "cashflow_realized": 3628200.6939,
+    "cashflow_core": 3628142.0524,
+    "cashflow_detail": {
+      "buys_usdc": 105598225.60008904,
+      "sells_usdc": 1464956.7994009985,
+      "redeems_usdc": 107761410.85309803,
+      "merges_usdc": 7872136.964500999,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 58.6415,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 13390318.5232,
+    "closed_wins": 2122,
+    "closed_losses": 1907,
+    "closed_flat": 4,
+    "win_rate": 0.5267,
+    "profit_factor": 1.2366,
+    "win_pnl": 69995176.5378,
+    "loss_pnl": -56604858.0146,
+    "total_bought": 289007937.9734,
+    "open_cash_pnl": -1465862.6801,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -148748.9738,
+    "leaderboard_all": {
+      "rank": "5",
+      "proxyWallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+      "userName": "kch123",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 298637138.564484,
+      "pnl": 11386690.875513867,
+      "profileImage": ""
+    }
+  },
+  "validation": {
+    "ok": false,
+    "all_checks_passed": false,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 11386690.875513867,
+        "ours": 13390318.5232,
+        "ours_field": "closed_positions_sum",
+        "diff": 2003627.6477,
+        "match": false,
+        "volume_reference": 298637138.564484
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 11386690.88,
+        "ours": 13390318.5232,
+        "ours_field": "closed_positions_sum",
+        "diff": 2003627.6432,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 171115,
+        "ours": 106103,
+        "diff": -65012,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.5467,
+        "ours": 0.5267,
+        "diff": -0.02,
+        "match": true
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": 13390318.5232,
+        "ours": 3628200.6939,
+        "diff": -9762117.8293,
+        "match": false,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": 3628200.6939,
+      "cashflow_core": 3628142.0524,
+      "closed_positions_sum": 13390318.5232,
+      "trades": 106103,
+      "win_rate": 0.5267
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/kch123",
+      "raw_meta": {
+        "net_pnl": 11386690.88,
+        "pos_realized_pnl": 11386690.88,
+        "n_trades": 171115.0,
+        "total_buy": 14009434.16,
+        "total_sell": 514909.45,
+        "total_redeem": 9304356.07,
+        "win_rate": 0.5467,
+        "profit_factor": 1.12,
+        "n_markets": 1851.0,
+        "n_buys": 16443.0,
+        "n_sells": 672.0,
+        "n_redeems": 297.0
+      },
+      "headline_pnl": 11386691.0,
+      "win_rate_pct": 55,
+      "smart_score": 59,
+      "n_trades": 171115,
+      "realized_pnl": 11386690.88
+    },
+    "leaderboard": {
+      "rank": "5",
+      "proxyWallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+      "userName": "kch123",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 298637138.564484,
+      "pnl": 11386690.875513867,
+      "profileImage": ""
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/kch123",
+    "raw_meta": {
+      "net_pnl": 11386690.88,
+      "pos_realized_pnl": 11386690.88,
+      "n_trades": 171115.0,
+      "total_buy": 14009434.16,
+      "total_sell": 514909.45,
+      "total_redeem": 9304356.07,
+      "win_rate": 0.5467,
+      "profit_factor": 1.12,
+      "n_markets": 1851.0,
+      "n_buys": 16443.0,
+      "n_sells": 672.0,
+      "n_redeems": 297.0
+    },
+    "headline_pnl": 11386691.0,
+    "win_rate_pct": 55,
+    "smart_score": 59,
+    "n_trades": 171115,
+    "realized_pnl": 11386690.88
+  },
+  "leaderboard": {
+    "rank": "5",
+    "proxyWallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+    "userName": "kch123",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 298637138.564484,
+    "pnl": 11386690.875513867,
+    "profileImage": ""
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 254,
+      "wins": 135,
+      "losses": 119,
+      "win_rate": 0.5315,
+      "total_pnl": 5821482.0,
+      "avg_pnl": 22919.22,
+      "median_pnl": 2.65
+    },
+    "30s-2m": {
+      "n": 52,
+      "wins": 25,
+      "losses": 27,
+      "win_rate": 0.4808,
+      "total_pnl": -1208686.98,
+      "avg_pnl": -23243.98,
+      "median_pnl": -118.35
+    },
+    "2-5m": {
+      "n": 52,
+      "wins": 29,
+      "losses": 23,
+      "win_rate": 0.5577,
+      "total_pnl": 1515090.46,
+      "avg_pnl": 29136.36,
+      "median_pnl": 174.86
+    },
+    "5-15m": {
+      "n": 84,
+      "wins": 44,
+      "losses": 40,
+      "win_rate": 0.5238,
+      "total_pnl": 860994.02,
+      "avg_pnl": 10249.93,
+      "median_pnl": 8.0
+    },
+    "15m+": {
+      "n": 1313,
+      "wins": 727,
+      "losses": 586,
+      "win_rate": 0.5537,
+      "total_pnl": 2900429.31,
+      "avg_pnl": 2209.01,
+      "median_pnl": 435.38
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 43,
+      "wins": 3,
+      "losses": 40,
+      "win_rate": 0.0698,
+      "total_pnl": -338837.48,
+      "avg_pnl": -7879.94,
+      "median_pnl": -993.91
+    },
+    "20-40\u00a2": {
+      "n": 186,
+      "wins": 59,
+      "losses": 127,
+      "win_rate": 0.3172,
+      "total_pnl": 1882927.07,
+      "avg_pnl": 10123.26,
+      "median_pnl": -2245.98
+    },
+    "40-60\u00a2": {
+      "n": 1094,
+      "wins": 581,
+      "losses": 513,
+      "win_rate": 0.5311,
+      "total_pnl": 6760241.7,
+      "avg_pnl": 6179.38,
+      "median_pnl": 103.15
+    },
+    "60-80\u00a2": {
+      "n": 354,
+      "wins": 244,
+      "losses": 110,
+      "win_rate": 0.6893,
+      "total_pnl": 1565063.73,
+      "avg_pnl": 4421.08,
+      "median_pnl": 1832.33
+    },
+    "80-100\u00a2": {
+      "n": 78,
+      "wins": 73,
+      "losses": 5,
+      "win_rate": 0.9359,
+      "total_pnl": 19913.8,
+      "avg_pnl": 255.31,
+      "median_pnl": 1322.83
+    }
+  },
+  "family": {
+    "Yes/No moneyline": {
+      "n": 25,
+      "wins": 11,
+      "losses": 14,
+      "win_rate": 0.44,
+      "total_pnl": 967341.36,
+      "avg_pnl": 38693.65,
+      "median_pnl": -160.0
+    },
+    "Other": {
+      "n": 1435,
+      "wins": 789,
+      "losses": 646,
+      "win_rate": 0.5498,
+      "total_pnl": 7312709.81,
+      "avg_pnl": 5095.97,
+      "median_pnl": 308.93
+    },
+    "Over/Under": {
+      "n": 295,
+      "wins": 160,
+      "losses": 135,
+      "win_rate": 0.5424,
+      "total_pnl": 1609257.66,
+      "avg_pnl": 5455.11,
+      "median_pnl": 8.3
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 76547648.95,
+      "taker_usdc": 29050576.65,
+      "maker_pct": 72.49,
+      "taker_pct": 27.51,
+      "maker_fills": 96876,
+      "taker_fills": 9129
+    },
+    "exit": {
+      "maker_usdc": 11851.27,
+      "taker_usdc": 1453105.53,
+      "maker_pct": 0.81,
+      "taker_pct": 99.19,
+      "maker_fills": 66,
+      "taker_fills": 32
+    },
+    "patterns": {
+      "enter_maker_exit_taker": 29,
+      "enter_maker_exit_maker": 2,
+      "enter_taker_exit_taker": 1
+    },
+    "classified": true
+  },
+  "both_sides": {
+    "n": 994,
+    "rate": 0.5664
+  },
+  "clip_size_usdc": {
+    "median": 15.0877,
+    "mean": 1009.0495,
+    "p90": 1078.0,
+    "p99": 11231.0286,
+    "max": 729628.7742
+  },
+  "campaigns": {
+    "n": 0,
+    "pct": 0.0,
+    "avg_entries": null,
+    "pnl": 0,
+    "avg_pnl": null,
+    "win_rate": null,
+    "single_n": 1755,
+    "single_pnl": 9889308.83,
+    "single_avg_pnl": 5634.93
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.7635,
+    "hold_to_resolution_style_n": 1723,
+    "redeems_usdc": 107761410.85309803,
+    "merges_usdc": 7872136.964500999
+  },
+  "equity": {
+    "final": 11500337.6584,
+    "max_drawdown": -1702683.9473,
+    "max_drawdown_pct_of_peak": -36.4361,
+    "longest_drawdown_days": 0,
+    "daily_sharpe_ann": 3.126,
+    "n_days": 157
+  },
+  "contribution": {
+    "top10_winners_pnl": 5355953.3,
+    "top10_winners_share_of_wins_pct": 10.71,
+    "top10_losers_pnl": -5222937.24,
+    "top10_losers_share_of_losses_pct": 13.02,
+    "top10_winners": [
+      {
+        "title": "Will Villarreal CF win on 2026-01-20?",
+        "pnl": 1095000.0,
+        "hold_s": 0
+      },
+      {
+        "title": "Spread: Seahawks (-4.5)",
+        "pnl": 986792.15,
+        "hold_s": 12812
+      },
+      {
+        "title": "Will Paris Saint-Germain FC win on 2026-01-20?",
+        "pnl": 580000.0,
+        "hold_s": 1338
+      },
+      {
+        "title": "Stars vs. Oilers",
+        "pnl": 481040.39,
+        "hold_s": 69074
+      },
+      {
+        "title": "Texas State vs. Southern Miss",
+        "pnl": 417465.14,
+        "hold_s": 7724
+      },
+      {
+        "title": "Wild vs. Penguins",
+        "pnl": 375013.18,
+        "hold_s": 41794
+      },
+      {
+        "title": "Will Stade Rennais FC 1901 win on 2026-01-18?",
+        "pnl": 371663.82,
+        "hold_s": 21728
+      },
+      {
+        "title": "Capitals vs. Blackhawks",
+        "pnl": 357255.7,
+        "hold_s": 7770
+      },
+      {
+        "title": "Clemson vs. Louisville",
+        "pnl": 345950.63,
+        "hold_s": 2284
+      },
+      {
+        "title": "Flames vs. Sharks",
+        "pnl": 345772.3,
+        "hold_s": 8750
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "Alabama vs. Oklahoma",
+        "pnl": -412300.01,
+        "hold_s": 11450
+      },
+      {
+        "title": "Ravens vs. Packers",
+        "pnl": -430296.71,
+        "hold_s": 9566
+      },
+      {
+        "title": "Patriots vs. Ravens",
+        "pnl": -430358.49,
+        "hold_s": 16676
+      },
+      {
+        "title": "Spread: Lions (-3.5)",
+        "pnl": -456849.98,
+        "hold_s": 23796
+      },
+      {
+        "title": "Will Olympiak\u00f3s SFP win on 2026-01-20?",
+        "pnl": -510999.3,
+        "hold_s": 554
+      },
+      {
+        "title": "Blue Jays vs. Dodgers",
+        "pnl": -519406.04,
+        "hold_s": 3016
+      },
+      {
+        "title": "Chiefs vs. Cowboys",
+        "pnl": -533797.48,
+        "hold_s": 12956
+      },
+      {
+        "title": "Bills vs. Jaguars",
+        "pnl": -549430.45,
+        "hold_s": 18758
+      },
+      {
+        "title": "Blue Jays vs. Mariners",
+        "pnl": -665499.98,
+        "hold_s": 33944
+      },
+      {
+        "title": "Will FC Barcelona win on 2026-01-18?",
+        "pnl": -713998.8,
+        "hold_s": 1282
+      }
+    ],
+    "profit_factor": 1.2366
+  },
+  "adverse_management": {
+    "n_early_adverse": 0,
+    "avg_pnl": null,
+    "median_t_first_sell": null,
+    "median_hold": null
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 27,
+    "avg_pnl": 33436.69,
+    "median_mfe_capture": 1.0,
+    "mean_mfe_capture": 1.0
+  },
+  "avg_down": {
+    "n_losers": 795,
+    "n_losers_with_red_buys": 488,
+    "pct_losers": 61.38,
+    "total_delta_if_skipped_on_losers": -561.19,
+    "global_fifo_sim": 738767.45,
+    "global_fifo_never_red_buy": 636612.84,
+    "global_delta": -102154.61
+  },
+  "latency": {
+    "time_to_mfe_median": 14664,
+    "time_to_mfe_p25": 12818,
+    "time_to_mfe_p75": 16960,
+    "time_to_mfe_p90": 17576,
+    "mfe_ge_10c_n": 22,
+    "mfe_ge_10c_within_30s": 0,
+    "mfe_ge_10c_within_60s": 0,
+    "pct_big_within_60s": 0.0
+  },
+  "risk": {
+    "max_inventory_shares": 1716198.77,
+    "max_dd": -1702683.9473,
+    "max_dd_pct": -36.4361,
+    "longest_dd_days": 0
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -601.1817,
+    "time_to_mfe_med": 64
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "wallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee",
+  "username": "kch123",
+  "mode": "full",
+  "duration_s": 239.4,
+  "counts": {
+    "activity": 108210,
+    "trades": 106103,
+    "closed_positions": 4033,
+    "open_positions": 39
+  },
+  "last_activity_ts": 1769547211,
+  "last_trade_ts": 1769547211,
+  "resolved": {
+    "username": "kch123",
+    "wallet": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee"
+  }
+}

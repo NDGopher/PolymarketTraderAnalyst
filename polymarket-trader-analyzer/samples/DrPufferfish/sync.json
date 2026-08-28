@@ -1,0 +1,18 @@
+{
+  "wallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+  "username": "DrPufferfish",
+  "mode": "full",
+  "duration_s": 155.71,
+  "counts": {
+    "activity": 64770,
+    "trades": 64290,
+    "closed_positions": 881,
+    "open_positions": 848
+  },
+  "last_activity_ts": 1768250951,
+  "last_trade_ts": 1768250951,
+  "resolved": {
+    "username": "DrPufferfish",
+    "wallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e"
+  }
+}

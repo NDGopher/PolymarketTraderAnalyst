@@ -1,0 +1,4187 @@
+{
+  "username": "DrPufferfish",
+  "wallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+  "counts": {
+    "activity": 64770,
+    "trades": 64290,
+    "buys": 60876,
+    "sells": 3414,
+    "closed_positions": 881,
+    "open_positions": 848,
+    "markets_traded": 719,
+    "activity_types": {
+      "DEPOSIT": 25,
+      "TRADE": 64290,
+      "REWARD": 36,
+      "REDEEM": 380,
+      "CONVERSION": 4,
+      "WITHDRAWAL": 35
+    }
+  },
+  "span": {
+    "first_ts": 1748551963,
+    "last_ts": 1768250951,
+    "first_iso": "2025-05-29T20:52:43+00:00",
+    "last_iso": "2026-01-12T20:49:11+00:00",
+    "days_active_span": 228.0
+  },
+  "pnl": {
+    "cashflow_realized": 4176633.543,
+    "cashflow_core": 4175613.5447,
+    "cashflow_detail": {
+      "buys_usdc": 25315785.937227156,
+      "sells_usdc": 1397272.1775600063,
+      "redeems_usdc": 28094127.304343987,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 1019.9983000000001,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 46297730.9682,
+    "closed_wins": 793,
+    "closed_losses": 86,
+    "closed_flat": 2,
+    "win_rate": 0.9022,
+    "profit_factor": 21.0256,
+    "win_pnl": 48609653.8031,
+    "loss_pnl": -2311922.8349,
+    "total_bought": 105270550.111,
+    "open_cash_pnl": -45465201.4852,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -465072.9831,
+    "leaderboard_all": {
+      "rank": "30",
+      "proxyWallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+      "userName": "DrPufferfish",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 248548251.18206796,
+      "pnl": 4055413.259574452,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 4176633.543,
+    "max_drawdown": -1608581.7706,
+    "points": 64706,
+    "curve_sample": [
+      {
+        "timestamp": 1748551963,
+        "equity": -16.5,
+        "delta": -16.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Microsoft be the largest company in the world by market cap on May 31?",
+        "usdc": 16.5
+      },
+      {
+        "timestamp": 1748801013,
+        "equity": -133897.434692,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "French Open: Alcaraz vs. Shelton ",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1757437786,
+        "equity": -320635.306481,
+        "delta": -2.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Romania win on 2025-09-09?",
+        "usdc": 2.2
+      },
+      {
+        "timestamp": 1757792518,
+        "equity": -173361.744358,
+        "delta": 100000.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Crystal Palace win on 2025-09-13?",
+        "usdc": 100000.0
+      },
+      {
+        "timestamp": 1757825380,
+        "equity": -209737.022513,
+        "delta": -13.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boxing: Will Canelo vs. Crawford end in a Draw?",
+        "usdc": 13.8
+      },
+      {
+        "timestamp": 1757921298,
+        "equity": -150698.620666,
+        "delta": 962.9172,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Kansas City Chiefs win Super Bowl 2026?",
+        "usdc": 962.9172
+      },
+      {
+        "timestamp": 1758048398,
+        "equity": -493692.739558,
+        "delta": -19.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tottenham Hotspur win on 2025-09-16?",
+        "usdc": 19.6
+      },
+      {
+        "timestamp": 1758204562,
+        "equity": -535163.803759,
+        "delta": -138.68421,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Barcelona win on 2025-09-18?",
+        "usdc": 138.68421
+      },
+      {
+        "timestamp": 1758391518,
+        "equity": -495718.900562,
+        "delta": -6.904761,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Athletic Club win on 2025-09-20?",
+        "usdc": 6.904761
+      },
+      {
+        "timestamp": 1759913914,
+        "equity": -626236.524718,
+        "delta": 18.6,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Kansas City Chiefs win Super Bowl 2026?",
+        "usdc": 18.6
+      },
+      {
+        "timestamp": 1760005547,
+        "equity": -623206.986554,
+        "delta": 3.569999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Atlanta Falcons win Super Bowl 2026?",
+        "usdc": 3.569999
+      },
+      {
+        "timestamp": 1760049705,
+        "equity": -620957.428187,
+        "delta": -13.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Milwaukee Brewers win the 2025 World Series?",
+        "usdc": 13.68
+      },
+      {
+        "timestamp": 1760111372,
+        "equity": -623562.742673,
+        "delta": -0.0638,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Los Angeles Dodgers win the 2025 World Series?",
+        "usdc": 0.0638
+      },
+      {
+        "timestamp": 1760255947,
+        "equity": -716868.2699,
+        "delta": 1.672,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Los Angeles Chargers win Super Bowl 2026?",
+        "usdc": 1.672
+      },
+      {
+        "timestamp": 1760298959,
+        "equity": -848554.905276,
+        "delta": -8.888888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Titans vs. Raiders",
+        "usdc": 8.888888
+      },
+      {
+        "timestamp": 1760378705,
+        "equity": -757327.84732,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Seattle Mariners win the 2025 World Series?",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1760382069,
+        "equity": -752382.945002,
+        "delta": -2.29245,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Blue Jays win the 2025 World Series?",
+        "usdc": 2.29245
+      },
+      {
+        "timestamp": 1760396727,
+        "equity": -751935.788367,
+        "delta": 99.9978,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Los Angeles Dodgers win the 2025 World Series?",
+        "usdc": 99.9978
+      },
+      {
+        "timestamp": 1760633597,
+        "equity": -761512.022172,
+        "delta": -0.300925,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Lions win Super Bowl 2026?",
+        "usdc": 0.300925
+      },
+      {
+        "timestamp": 1760726758,
+        "equity": -778139.588215,
+        "delta": 0.77095,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Jacksonville Jaguars win Super Bowl 2026?",
+        "usdc": 0.77095
+      },
+      {
+        "timestamp": 1760886917,
+        "equity": -778011.567776,
+        "delta": -560.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Liverpool vs. Manchester United: O/U 3.5",
+        "usdc": 560.0
+      },
+      {
+        "timestamp": 1762226321,
+        "equity": -688738.824215,
+        "delta": -7954.721111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cardinals vs. Cowboys",
+        "usdc": 7954.721111
+      },
+      {
+        "timestamp": 1762284397,
+        "equity": -776993.297559,
+        "delta": -20.949323,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Paris Saint-Germain FC win on 2025-11-04?",
+        "usdc": 20.949323
+      },
+      {
+        "timestamp": 1762372795,
+        "equity": -541606.792768,
+        "delta": -1.944444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2025-11-05?",
+        "usdc": 1.944444
+      },
+      {
+        "timestamp": 1762639715,
+        "equity": -711535.579291,
+        "delta": 0.90068,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the San Francisco 49ers win Super Bowl 2026?",
+        "usdc": 0.90068
+      },
+      {
+        "timestamp": 1763002106,
+        "equity": -722673.188502,
+        "delta": 3.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Philadelphia Eagles win Super Bowl 2026?",
+        "usdc": 3.999999
+      },
+      {
+        "timestamp": 1763061226,
+        "equity": -724617.170671,
+        "delta": 0.09816,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Jacksonville Jaguars win Super Bowl 2026?",
+        "usdc": 0.09816
+      },
+      {
+        "timestamp": 1763243637,
+        "equity": -650577.054133,
+        "delta": -2668.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chris Eubank Jr. vs Conor Benn Nov 15, 2025",
+        "usdc": 2668.0
+      },
+      {
+        "timestamp": 1763337149,
+        "equity": -783906.025617,
+        "delta": -2.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Warriors vs. Pelicans",
+        "usdc": 2.7
+      },
+      {
+        "timestamp": 1763404207,
+        "equity": -637636.76276,
+        "delta": -1165.1256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Poland win on 2025-11-17?",
+        "usdc": 1165.1256
+      },
+      {
+        "timestamp": 1763407927,
+        "equity": -696570.700539,
+        "delta": -29.870129,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Germany win on 2025-11-17?",
+        "usdc": 29.870129
+      },
+      {
+        "timestamp": 1763411137,
+        "equity": -718843.788827,
+        "delta": -865.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pacers vs. Pistons",
+        "usdc": 865.64
+      },
+      {
+        "timestamp": 1763421659,
+        "equity": -822929.132651,
+        "delta": -61.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pacers vs. Pistons",
+        "usdc": 61.25
+      },
+      {
+        "timestamp": 1763493949,
+        "equity": -615048.358188,
+        "delta": -16.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Switzerland win on 2025-11-18?",
+        "usdc": 16.8
+      },
+      {
+        "timestamp": 1763676581,
+        "equity": -610533.789399,
+        "delta": -11.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Texans",
+        "usdc": 11.02
+      },
+      {
+        "timestamp": 1763679981,
+        "equity": -634595.979327,
+        "delta": 2.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Hawks vs. Spurs",
+        "usdc": 2.999999
+      },
+      {
+        "timestamp": 1763682047,
+        "equity": -686327.446011,
+        "delta": 421.72,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Hawks vs. Spurs",
+        "usdc": 421.72
+      },
+      {
+        "timestamp": 1763759657,
+        "equity": -527409.884212,
+        "delta": -9.589775,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Celtics",
+        "usdc": 9.589775
+      },
+      {
+        "timestamp": 1763823093,
+        "equity": -451180.490611,
+        "delta": -4.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Barcelona win on 2025-11-22?",
+        "usdc": 4.03
+      },
+      {
+        "timestamp": 1763832515,
+        "equity": -586881.651677,
+        "delta": -18.13,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City win on 2025-11-22?",
+        "usdc": 18.13
+      },
+      {
+        "timestamp": 1763840917,
+        "equity": -662592.077517,
+        "delta": -221.53372,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "UFC Fight Night: Hooker vs. Tsarukyan (Lightweight, Main Card)",
+        "usdc": 221.53372
+      },
+      {
+        "timestamp": 1763926601,
+        "equity": -658728.291535,
+        "delta": -8.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid win on 2025-11-23?",
+        "usdc": 8.4
+      },
+      {
+        "timestamp": 1764096079,
+        "equity": -366922.182414,
+        "delta": -2653.0325,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2025-11-25?",
+        "usdc": 2653.0325
+      },
+      {
+        "timestamp": 1764105061,
+        "equity": -485311.897228,
+        "delta": -2.167142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Magic vs. 76ers",
+        "usdc": 2.167142
+      },
+      {
+        "timestamp": 1764646492,
+        "equity": -619652.685945,
+        "delta": -7.968,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Burnley FC vs. Crystal Palace: O/U 2.5",
+        "usdc": 7.968
+      },
+      {
+        "timestamp": 1764647014,
+        "equity": -622713.94982,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Burnley FC vs. Crystal Palace: O/U 2.5",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1764648772,
+        "equity": -625049.468702,
+        "delta": -6.432,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Burnley FC vs. Crystal Palace: O/U 2.5",
+        "usdc": 6.432
+      },
+      {
+        "timestamp": 1764654086,
+        "equity": -477879.842704,
+        "delta": -4.28,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fulham vs. Manchester City: O/U 1.5",
+        "usdc": 4.28
+      },
+      {
+        "timestamp": 1764673448,
+        "equity": -491430.277195,
+        "delta": -23.45679,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fulham vs. Manchester City: O/U 1.5",
+        "usdc": 23.45679
+      },
+      {
+        "timestamp": 1764713757,
+        "equity": -330267.73077,
+        "delta": -2.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea win on 2025-12-03?",
+        "usdc": 2.3
+      },
+      {
+        "timestamp": 1764728391,
+        "equity": -378143.452713,
+        "delta": -45.9264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea win on 2025-12-03?",
+        "usdc": 45.9264
+      },
+      {
+        "timestamp": 1764732721,
+        "equity": -386994.484465,
+        "delta": -7.82,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea win on 2025-12-03?",
+        "usdc": 7.82
+      },
+      {
+        "timestamp": 1764736155,
+        "equity": -426421.71911,
+        "delta": -111.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea win on 2025-12-03?",
+        "usdc": 111.32
+      },
+      {
+        "timestamp": 1764740681,
+        "equity": -434208.647931,
+        "delta": -0.851851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea win on 2025-12-03?",
+        "usdc": 0.851851
+      },
+      {
+        "timestamp": 1764743073,
+        "equity": -456009.302974,
+        "delta": -1209.935,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Burnley FC vs. Crystal Palace: O/U 3.5",
+        "usdc": 1209.935
+      },
+      {
+        "timestamp": 1764744365,
+        "equity": -485318.612304,
+        "delta": -363.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid win on 2025-12-03?",
+        "usdc": 363.35
+      },
+      {
+        "timestamp": 1764747517,
+        "equity": -545568.653229,
+        "delta": -28.214035,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid win on 2025-12-03?",
+        "usdc": 28.214035
+      },
+      {
+        "timestamp": 1764758267,
+        "equity": -552300.117864,
+        "delta": -6.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid win on 2025-12-03?",
+        "usdc": 6.88
+      },
+      {
+        "timestamp": 1764765391,
+        "equity": -570653.955682,
+        "delta": -3.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid win on 2025-12-03?",
+        "usdc": 3.44
+      },
+      {
+        "timestamp": 1764786415,
+        "equity": -614118.511768,
+        "delta": -0.351351,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Bulls",
+        "usdc": 0.351351
+      },
+      {
+        "timestamp": 1764796185,
+        "equity": -661830.443295,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Bulls",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1764797165,
+        "equity": -670052.96437,
+        "delta": -2.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Arsenal win on 2025-12-06?",
+        "usdc": 2.55
+      },
+      {
+        "timestamp": 1764798031,
+        "equity": -674348.111609,
+        "delta": -2.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Arsenal win on 2025-12-06?",
+        "usdc": 2.55
+      },
+      {
+        "timestamp": 1764806421,
+        "equity": -714672.241656,
+        "delta": -3.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Bulls",
+        "usdc": 3.38
+      },
+      {
+        "timestamp": 1764893157,
+        "equity": -373173.063381,
+        "delta": -1623.421052,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cowboys vs. Lions",
+        "usdc": 1623.421052
+      },
+      {
+        "timestamp": 1765031143,
+        "equity": -104177.29745,
+        "delta": -0.468961,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City win on 2025-12-06?",
+        "usdc": 0.468961
+      },
+      {
+        "timestamp": 1765044345,
+        "equity": -168755.426613,
+        "delta": -3.28395,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Clippers vs. Timberwolves",
+        "usdc": 3.28395
+      },
+      {
+        "timestamp": 1765064549,
+        "equity": -332458.813329,
+        "delta": -0.08,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Wizards",
+        "usdc": 0.08
+      },
+      {
+        "timestamp": 1765112623,
+        "equity": -100651.584987,
+        "delta": -0.763492,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. 76ers",
+        "usdc": 0.763492
+      },
+      {
+        "timestamp": 1765130989,
+        "equity": -20254.760543,
+        "delta": -31.967213,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. 76ers",
+        "usdc": 31.967213
+      },
+      {
+        "timestamp": 1765147687,
+        "equity": 140127.353396,
+        "delta": -447.659215,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Nuggets (-10.5)",
+        "usdc": 447.659215
+      },
+      {
+        "timestamp": 1765153737,
+        "equity": -138.454862,
+        "delta": -45.263157,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. 76ers",
+        "usdc": 45.263157
+      },
+      {
+        "timestamp": 1765154165,
+        "equity": -36380.86627,
+        "delta": -322.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. 76ers",
+        "usdc": 322.5
+      },
+      {
+        "timestamp": 1765209173,
+        "equity": 377151.934798,
+        "delta": -0.8525,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Timberwolves",
+        "usdc": 0.8525
+      },
+      {
+        "timestamp": 1765219703,
+        "equity": 291659.066884,
+        "delta": -245.508,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester United win on 2025-12-08?",
+        "usdc": 245.508
+      },
+      {
+        "timestamp": 1765237523,
+        "equity": 130213.276606,
+        "delta": -4.666734,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 4.666734
+      },
+      {
+        "timestamp": 1765241241,
+        "equity": 19550.167685,
+        "delta": -2.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Pelicans",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1765241931,
+        "equity": 6317.689747,
+        "delta": -0.797468,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Pelicans",
+        "usdc": 0.797468
+      },
+      {
+        "timestamp": 1765254513,
+        "equity": 1200.491764,
+        "delta": -0.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.9
+      },
+      {
+        "timestamp": 1765265917,
+        "equity": 3616.388934,
+        "delta": -1.232727,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 1.232727
+      },
+      {
+        "timestamp": 1765272315,
+        "equity": -9226.298852,
+        "delta": -1.126226,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Magic",
+        "usdc": 1.126226
+      },
+      {
+        "timestamp": 1765274443,
+        "equity": -32999.062106,
+        "delta": -121.814814,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Magic",
+        "usdc": 121.814814
+      },
+      {
+        "timestamp": 1765292264,
+        "equity": -55956.650194,
+        "delta": -3.060351,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 3.060351
+      },
+      {
+        "timestamp": 1765300948,
+        "equity": 207498.17644,
+        "delta": -92.743456,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FC Bayern M\u00fcnchen win on 2025-12-09?",
+        "usdc": 92.743456
+      },
+      {
+        "timestamp": 1765307038,
+        "equity": 138986.991335,
+        "delta": -18.925925,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FC Internazionale Milano vs. Liverpool FC end in a draw?",
+        "usdc": 18.925925
+      },
+      {
+        "timestamp": 1765326568,
+        "equity": 87506.676372,
+        "delta": -3.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Raptors",
+        "usdc": 3.1
+      },
+      {
+        "timestamp": 1765338875,
+        "equity": -118164.135853,
+        "delta": -1.691083,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 1.691083
+      },
+      {
+        "timestamp": 1765359454,
+        "equity": 214014.049227,
+        "delta": 332513.06,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Knicks vs. Raptors",
+        "usdc": 332513.06
+      },
+      {
+        "timestamp": 1765374700,
+        "equity": 374096.950223,
+        "delta": -23.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Lakers",
+        "usdc": 23.7
+      },
+      {
+        "timestamp": 1765382332,
+        "equity": 335418.198071,
+        "delta": -2.030303,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid CF win on 2025-12-10?",
+        "usdc": 2.030303
+      },
+      {
+        "timestamp": 1765385104,
+        "equity": 300966.473887,
+        "delta": -1.29751,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.29751
+      },
+      {
+        "timestamp": 1765389208,
+        "equity": 283242.074861,
+        "delta": -0.470588,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Real Madrid CF win on 2025-12-10?",
+        "usdc": 0.470588
+      },
+      {
+        "timestamp": 1765394722,
+        "equity": 218386.580827,
+        "delta": -2.65,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2025-12-10?",
+        "usdc": 2.65
+      },
+      {
+        "timestamp": 1765395602,
+        "equity": 183920.987204,
+        "delta": -2246.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Paris Saint-Germain FC win on 2025-12-10?",
+        "usdc": 2246.4
+      },
+      {
+        "timestamp": 1765396478,
+        "equity": 44216.846901,
+        "delta": -79605.1724,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2025-12-10?",
+        "usdc": 79605.1724
+      },
+      {
+        "timestamp": 1765408444,
+        "equity": -70810.143512,
+        "delta": -11.698326,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Thunder",
+        "usdc": 11.698326
+      },
+      {
+        "timestamp": 1765412995,
+        "equity": -141718.726211,
+        "delta": -0.111111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Thunder",
+        "usdc": 0.111111
+      },
+      {
+        "timestamp": 1765423109,
+        "equity": 70759.079972,
+        "delta": -0.265842,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.265842
+      },
+      {
+        "timestamp": 1765426857,
+        "equity": 70498.766953,
+        "delta": -1.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 1.43
+      },
+      {
+        "timestamp": 1765427513,
+        "equity": 70280.755707,
+        "delta": -0.15004,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.15004
+      },
+      {
+        "timestamp": 1765440183,
+        "equity": 67503.380691,
+        "delta": -0.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.15
+      },
+      {
+        "timestamp": 1765483379,
+        "equity": 3263.609162,
+        "delta": -0.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.04
+      },
+      {
+        "timestamp": 1765498362,
+        "equity": 384269.581743,
+        "delta": -2.73,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Trail Blazers vs. Pelicans",
+        "usdc": 2.73
+      },
+      {
+        "timestamp": 1765501020,
+        "equity": 338956.932014,
+        "delta": -0.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.42
+      },
+      {
+        "timestamp": 1765507606,
+        "equity": 232112.30689,
+        "delta": -0.438268,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.438268
+      },
+      {
+        "timestamp": 1765511812,
+        "equity": 201271.052619,
+        "delta": -0.973055,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.973055
+      },
+      {
+        "timestamp": 1765556010,
+        "equity": 507450.215809,
+        "delta": -18844.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Warriors",
+        "usdc": 18844.15
+      },
+      {
+        "timestamp": 1765558718,
+        "equity": 502474.960689,
+        "delta": -3.23961,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 3.23961
+      },
+      {
+        "timestamp": 1765560700,
+        "equity": 499699.334596,
+        "delta": -2.883319,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 2.883319
+      },
+      {
+        "timestamp": 1765563091,
+        "equity": 496718.427682,
+        "delta": -0.41,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.41
+      },
+      {
+        "timestamp": 1765563245,
+        "equity": 495491.610493,
+        "delta": -0.369812,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.369812
+      },
+      {
+        "timestamp": 1765563455,
+        "equity": 495277.490706,
+        "delta": -0.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.42
+      },
+      {
+        "timestamp": 1765563799,
+        "equity": 494932.942746,
+        "delta": -0.18,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.18
+      },
+      {
+        "timestamp": 1765563965,
+        "equity": 494139.535224,
+        "delta": -2.80008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 2.80008
+      },
+      {
+        "timestamp": 1765566433,
+        "equity": 493135.185282,
+        "delta": -1.036315,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the New York Knicks win the 2026 NBA Finals?",
+        "usdc": 1.036315
+      },
+      {
+        "timestamp": 1765568311,
+        "equity": 492973.224861,
+        "delta": -0.16667,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.16667
+      },
+      {
+        "timestamp": 1765581514,
+        "equity": 450687.16026,
+        "delta": -2.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Pistons",
+        "usdc": 2.03
+      },
+      {
+        "timestamp": 1765583312,
+        "equity": 355482.036656,
+        "delta": -47.058823,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pacers vs. 76ers",
+        "usdc": 47.058823
+      },
+      {
+        "timestamp": 1765591865,
+        "equity": 236942.518253,
+        "delta": -2.2116,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 2.2116
+      },
+      {
+        "timestamp": 1765605616,
+        "equity": 236705.796231,
+        "delta": -1.137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the New York Knicks win the 2026 NBA Finals?",
+        "usdc": 1.137
+      },
+      {
+        "timestamp": 1765607780,
+        "equity": 236174.104756,
+        "delta": -0.518,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.518
+      },
+      {
+        "timestamp": 1765611348,
+        "equity": 235828.973678,
+        "delta": -1.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the New York Knicks win the 2026 NBA Finals?",
+        "usdc": 1.25
+      },
+      {
+        "timestamp": 1765612662,
+        "equity": 233270.384724,
+        "delta": -0.441,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.441
+      },
+      {
+        "timestamp": 1765612752,
+        "equity": 232867.143561,
+        "delta": -0.253,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.253
+      },
+      {
+        "timestamp": 1765619581,
+        "equity": 231575.683943,
+        "delta": -2.575757,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Magic",
+        "usdc": 2.575757
+      },
+      {
+        "timestamp": 1765634895,
+        "equity": 231012.974434,
+        "delta": -0.21,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.21
+      },
+      {
+        "timestamp": 1765635005,
+        "equity": 230444.728633,
+        "delta": -3.402,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 3.402
+      },
+      {
+        "timestamp": 1765635075,
+        "equity": 230060.337293,
+        "delta": -0.342,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.342
+      },
+      {
+        "timestamp": 1765635189,
+        "equity": 229505.085283,
+        "delta": -4.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 4.32
+      },
+      {
+        "timestamp": 1765644447,
+        "equity": 193320.854336,
+        "delta": -112.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Magic",
+        "usdc": 112.5
+      },
+      {
+        "timestamp": 1765646019,
+        "equity": 178371.411324,
+        "delta": -68.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will FC Barcelona win on 2025-12-13?",
+        "usdc": 68.0
+      },
+      {
+        "timestamp": 1765652893,
+        "equity": 108813.815796,
+        "delta": -10817.942633,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Arsenal FC win on 2025-12-13?",
+        "usdc": 10817.942633
+      },
+      {
+        "timestamp": 1765663217,
+        "equity": -74261.822174,
+        "delta": -0.5625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Magic",
+        "usdc": 0.5625
+      },
+      {
+        "timestamp": 1765687511,
+        "equity": -32349.923808,
+        "delta": -1.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 1.98
+      },
+      {
+        "timestamp": 1765689357,
+        "equity": -33299.812622,
+        "delta": -0.26668,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.26668
+      },
+      {
+        "timestamp": 1765691265,
+        "equity": -33507.391573,
+        "delta": -0.828,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.828
+      },
+      {
+        "timestamp": 1765693499,
+        "equity": -33657.358804,
+        "delta": -0.864,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.864
+      },
+      {
+        "timestamp": 1765696023,
+        "equity": -33945.825544,
+        "delta": -0.432,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.432
+      },
+      {
+        "timestamp": 1765697199,
+        "equity": -34154.731118,
+        "delta": -0.09,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.09
+      },
+      {
+        "timestamp": 1765700187,
+        "equity": -34467.214593,
+        "delta": -2.660929,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 2.660929
+      },
+      {
+        "timestamp": 1765703931,
+        "equity": -34590.57094,
+        "delta": -1.578757,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.578757
+      },
+      {
+        "timestamp": 1765716287,
+        "equity": -34769.500122,
+        "delta": -0.930306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.930306
+      },
+      {
+        "timestamp": 1765733671,
+        "equity": -50320.507324,
+        "delta": -0.05852,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.05852
+      },
+      {
+        "timestamp": 1765739985,
+        "equity": -83944.298446,
+        "delta": -2.548085,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 2.548085
+      },
+      {
+        "timestamp": 1765741089,
+        "equity": -92252.123989,
+        "delta": -13.705,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Luke Littler win the PDC World Darts Championship?",
+        "usdc": 13.705
+      },
+      {
+        "timestamp": 1765743129,
+        "equity": -106917.490188,
+        "delta": -1.20465,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 1.20465
+      },
+      {
+        "timestamp": 1765746951,
+        "equity": -115181.472935,
+        "delta": -105.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Seahawks",
+        "usdc": 105.0
+      },
+      {
+        "timestamp": 1765747615,
+        "equity": -194141.471152,
+        "delta": -76.82,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Broncos",
+        "usdc": 76.82
+      },
+      {
+        "timestamp": 1765765091,
+        "equity": -211429.654299,
+        "delta": -0.455,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.455
+      },
+      {
+        "timestamp": 1765784389,
+        "equity": -98421.142544,
+        "delta": -0.221489,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.221489
+      },
+      {
+        "timestamp": 1765796105,
+        "equity": -101003.700451,
+        "delta": -0.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.6
+      },
+      {
+        "timestamp": 1765803597,
+        "equity": -107941.196192,
+        "delta": -6.384905,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Nuggets",
+        "usdc": 6.384905
+      },
+      {
+        "timestamp": 1765815441,
+        "equity": -136323.825778,
+        "delta": -1.268235,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Nuggets",
+        "usdc": 1.268235
+      },
+      {
+        "timestamp": 1765821877,
+        "equity": -144141.563153,
+        "delta": -1.518039,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Nuggets",
+        "usdc": 1.518039
+      },
+      {
+        "timestamp": 1765824183,
+        "equity": -147162.001776,
+        "delta": -1.127659,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Celtics",
+        "usdc": 1.127659
+      },
+      {
+        "timestamp": 1765825607,
+        "equity": -162019.30879,
+        "delta": -81.818181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester United FC win on 2025-12-15?",
+        "usdc": 81.818181
+      },
+      {
+        "timestamp": 1765829145,
+        "equity": -174226.344748,
+        "delta": -13.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Celtics",
+        "usdc": 13.78
+      },
+      {
+        "timestamp": 1765831755,
+        "equity": -200280.766782,
+        "delta": -11.276595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Celtics",
+        "usdc": 11.276595
+      },
+      {
+        "timestamp": 1765835665,
+        "equity": -253390.898559,
+        "delta": -22.553191,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Celtics",
+        "usdc": 22.553191
+      },
+      {
+        "timestamp": 1765843433,
+        "equity": -358060.717329,
+        "delta": -9403.5916,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Celtics",
+        "usdc": 9403.5916
+      },
+      {
+        "timestamp": 1765873479,
+        "equity": -358381.558093,
+        "delta": -0.02132,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.02132
+      },
+      {
+        "timestamp": 1765888111,
+        "equity": -358541.368811,
+        "delta": -0.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.2
+      },
+      {
+        "timestamp": 1765903355,
+        "equity": -359110.743418,
+        "delta": -0.128264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.128264
+      },
+      {
+        "timestamp": 1765907709,
+        "equity": -237211.147271,
+        "delta": -0.082248,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.082248
+      },
+      {
+        "timestamp": 1765918229,
+        "equity": -254923.402291,
+        "delta": -0.195397,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.195397
+      },
+      {
+        "timestamp": 1765932429,
+        "equity": -254092.927974,
+        "delta": -2.009289,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 2.009289
+      },
+      {
+        "timestamp": 1765936791,
+        "equity": -254218.349279,
+        "delta": -0.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.42
+      },
+      {
+        "timestamp": 1765953781,
+        "equity": -254990.842532,
+        "delta": -0.168,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.168
+      },
+      {
+        "timestamp": 1765990820,
+        "equity": -254817.200465,
+        "delta": -4.179092,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 4.179092
+      },
+      {
+        "timestamp": 1766012025,
+        "equity": -294159.338718,
+        "delta": -2.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Timberwolves",
+        "usdc": 2.32
+      },
+      {
+        "timestamp": 1766034274,
+        "equity": -355182.272815,
+        "delta": -31.654285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthony Joshua win by KO/TKO/DQ?",
+        "usdc": 31.654285
+      },
+      {
+        "timestamp": 1766073820,
+        "equity": -358178.163109,
+        "delta": 0.22185,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.22185
+      },
+      {
+        "timestamp": 1766089991,
+        "equity": -154683.379553,
+        "delta": -1.764,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 1.764
+      },
+      {
+        "timestamp": 1766100489,
+        "equity": -187014.915371,
+        "delta": -187.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthony Joshua win by KO/TKO/DQ?",
+        "usdc": 187.2
+      },
+      {
+        "timestamp": 1766117639,
+        "equity": -393122.83717,
+        "delta": -0.42,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 0.42
+      },
+      {
+        "timestamp": 1766133156,
+        "equity": -390669.606188,
+        "delta": -0.518113,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 0.518113
+      },
+      {
+        "timestamp": 1766154088,
+        "equity": -356591.942033,
+        "delta": -2.107212,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by KO/TKO/DQ?",
+        "usdc": 2.107212
+      },
+      {
+        "timestamp": 1766162957,
+        "equity": -158484.275875,
+        "delta": -7.33625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by KO/TKO/DQ?",
+        "usdc": 7.33625
+      },
+      {
+        "timestamp": 1766167309,
+        "equity": -209439.038643,
+        "delta": -6.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Thunder vs. Timberwolves",
+        "usdc": 6.75
+      },
+      {
+        "timestamp": 1766169079,
+        "equity": -207493.377808,
+        "delta": -73.235294,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in Round 3?",
+        "usdc": 73.235294
+      },
+      {
+        "timestamp": 1766170863,
+        "equity": -295363.601942,
+        "delta": -3.97644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by KO/TKO/DQ?",
+        "usdc": 3.97644
+      },
+      {
+        "timestamp": 1766171995,
+        "equity": -296733.245218,
+        "delta": -33.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 33.44
+      },
+      {
+        "timestamp": 1766176931,
+        "equity": -367023.897483,
+        "delta": -0.66,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 0.66
+      },
+      {
+        "timestamp": 1766178999,
+        "equity": -367801.467764,
+        "delta": -5.2555,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 5.2555
+      },
+      {
+        "timestamp": 1766184339,
+        "equity": -369134.561427,
+        "delta": -3.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 3.5
+      },
+      {
+        "timestamp": 1766185247,
+        "equity": -369564.931497,
+        "delta": -1.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 1.3
+      },
+      {
+        "timestamp": 1766185873,
+        "equity": -370551.896498,
+        "delta": -5.99148,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 5.99148
+      },
+      {
+        "timestamp": 1766193409,
+        "equity": -371681.667795,
+        "delta": -1.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 1.16
+      },
+      {
+        "timestamp": 1766196068,
+        "equity": -372489.055118,
+        "delta": -0.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 0.45
+      },
+      {
+        "timestamp": 1766198344,
+        "equity": -366655.969233,
+        "delta": -3.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 3.5
+      },
+      {
+        "timestamp": 1766200202,
+        "equity": -369862.044727,
+        "delta": -0.55986,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 0.55986
+      },
+      {
+        "timestamp": 1766203040,
+        "equity": -371417.774339,
+        "delta": -2.35708,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 2.35708
+      },
+      {
+        "timestamp": 1766203454,
+        "equity": -373424.536664,
+        "delta": -0.162165,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the fight end in a draw?",
+        "usdc": 0.162165
+      },
+      {
+        "timestamp": 1766204246,
+        "equity": -376505.713586,
+        "delta": -0.46,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jake Paul win by decision or technical decision?",
+        "usdc": 0.46
+      },
+      {
+        "timestamp": 1766215024,
+        "equity": -222977.355501,
+        "delta": -0.168635,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.168635
+      },
+      {
+        "timestamp": 1766251853,
+        "equity": 13488.621632,
+        "delta": 2064.388937,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the fight end in Round 6?",
+        "usdc": 2064.388937
+      },
+      {
+        "timestamp": 1766255583,
+        "equity": -101283.631181,
+        "delta": -0.61074,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.61074
+      },
+      {
+        "timestamp": 1766257749,
+        "equity": -115575.650621,
+        "delta": -3.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. Clippers",
+        "usdc": 3.76
+      },
+      {
+        "timestamp": 1766262041,
+        "equity": -128423.5794,
+        "delta": -318.1007,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. Clippers",
+        "usdc": 318.1007
+      },
+      {
+        "timestamp": 1766264969,
+        "equity": -146707.626705,
+        "delta": -136.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Warriors",
+        "usdc": 136.0
+      },
+      {
+        "timestamp": 1766271393,
+        "equity": -226448.359212,
+        "delta": -162.424242,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Warriors",
+        "usdc": 162.424242
+      },
+      {
+        "timestamp": 1766277365,
+        "equity": -291138.913055,
+        "delta": -17.037037,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. Clippers",
+        "usdc": 17.037037
+      },
+      {
+        "timestamp": 1766285233,
+        "equity": -301995.884254,
+        "delta": -0.4488,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.4488
+      },
+      {
+        "timestamp": 1766340445,
+        "equity": 261074.583831,
+        "delta": -0.4896,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.4896
+      },
+      {
+        "timestamp": 1766415387,
+        "equity": 255678.207365,
+        "delta": -19.215686,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Mavericks vs. Pelicans",
+        "usdc": 19.215686
+      },
+      {
+        "timestamp": 1766428493,
+        "equity": 185423.626433,
+        "delta": -1320.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Magic vs. Warriors",
+        "usdc": 1320.0
+      },
+      {
+        "timestamp": 1766455775,
+        "equity": 121307.029571,
+        "delta": -28.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jazz vs. Nuggets",
+        "usdc": 28.5
+      },
+      {
+        "timestamp": 1766458199,
+        "equity": 30977.588637,
+        "delta": -29.117647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Magic vs. Warriors",
+        "usdc": 29.117647
+      },
+      {
+        "timestamp": 1766501307,
+        "equity": -21498.03926,
+        "delta": -0.726938,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.726938
+      },
+      {
+        "timestamp": 1766515741,
+        "equity": 192716.036721,
+        "delta": -0.085,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.085
+      },
+      {
+        "timestamp": 1766528353,
+        "equity": 177095.502489,
+        "delta": -28.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. 76ers",
+        "usdc": 28.6
+      },
+      {
+        "timestamp": 1766529491,
+        "equity": 163477.495455,
+        "delta": -46.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. 76ers",
+        "usdc": 46.0
+      },
+      {
+        "timestamp": 1766532089,
+        "equity": 146908.234354,
+        "delta": -4.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Mavericks",
+        "usdc": 4.34
+      },
+      {
+        "timestamp": 1766533407,
+        "equity": 140920.534885,
+        "delta": -2.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. 76ers",
+        "usdc": 2.76
+      },
+      {
+        "timestamp": 1766535035,
+        "equity": 71453.917256,
+        "delta": -400.21,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Mavericks",
+        "usdc": 400.21
+      },
+      {
+        "timestamp": 1766550929,
+        "equity": -173102.685576,
+        "delta": -0.216,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.216
+      },
+      {
+        "timestamp": 1766565019,
+        "equity": 43962.905242,
+        "delta": -0.178128,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.178128
+      },
+      {
+        "timestamp": 1766585435,
+        "equity": 43779.285831,
+        "delta": -0.06792,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.06792
+      },
+      {
+        "timestamp": 1766616471,
+        "equity": 815894.837053,
+        "delta": -0.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.36
+      },
+      {
+        "timestamp": 1766647169,
+        "equity": 809812.9611,
+        "delta": -0.125502,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.125502
+      },
+      {
+        "timestamp": 1766691363,
+        "equity": 751783.116343,
+        "delta": 0.3363,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.3363
+      },
+      {
+        "timestamp": 1766698503,
+        "equity": 743634.372366,
+        "delta": -2.282553,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 2.282553
+      },
+      {
+        "timestamp": 1766704033,
+        "equity": 615812.109498,
+        "delta": -0.055,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rockets vs. Lakers",
+        "usdc": 0.055
+      },
+      {
+        "timestamp": 1766709277,
+        "equity": 564912.651758,
+        "delta": -167.307692,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Chiefs",
+        "usdc": 167.307692
+      },
+      {
+        "timestamp": 1766711949,
+        "equity": 199788.82021,
+        "delta": -439.371627,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Chiefs",
+        "usdc": 439.371627
+      },
+      {
+        "timestamp": 1766773811,
+        "equity": 198864.977919,
+        "delta": -0.16064,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.16064
+      },
+      {
+        "timestamp": 1766791569,
+        "equity": 1013813.554047,
+        "delta": -0.78,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.78
+      },
+      {
+        "timestamp": 1766792633,
+        "equity": 968086.02273,
+        "delta": -50.806088,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Hawks",
+        "usdc": 50.806088
+      },
+      {
+        "timestamp": 1766798275,
+        "equity": 690391.801247,
+        "delta": -0.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.6
+      },
+      {
+        "timestamp": 1766806545,
+        "equity": 690118.625021,
+        "delta": -2.413404,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 2.413404
+      },
+      {
+        "timestamp": 1766823425,
+        "equity": 689956.088731,
+        "delta": -0.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 0.6
+      },
+      {
+        "timestamp": 1766851759,
+        "equity": 689866.348559,
+        "delta": -0.01888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.01888
+      },
+      {
+        "timestamp": 1766858553,
+        "equity": 1301022.663544,
+        "delta": -14.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pacers vs. Heat",
+        "usdc": 14.0
+      },
+      {
+        "timestamp": 1766870033,
+        "equity": 1180800.559175,
+        "delta": -0.91936,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.91936
+      },
+      {
+        "timestamp": 1766878743,
+        "equity": 1037269.388942,
+        "delta": -9.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bucks vs. Bulls",
+        "usdc": 9.0
+      },
+      {
+        "timestamp": 1766883167,
+        "equity": 683599.152929,
+        "delta": 11.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Bucks vs. Bulls",
+        "usdc": 11.999999
+      },
+      {
+        "timestamp": 1766899555,
+        "equity": 683717.147204,
+        "delta": -0.06,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.06
+      },
+      {
+        "timestamp": 1766944023,
+        "equity": 1136264.112601,
+        "delta": -1240.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Dolphins",
+        "usdc": 1240.0
+      },
+      {
+        "timestamp": 1766953011,
+        "equity": 884373.648541,
+        "delta": -2.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Giants vs. Raiders",
+        "usdc": 2.6
+      },
+      {
+        "timestamp": 1766999283,
+        "equity": 868024.326929,
+        "delta": -0.306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.306
+      },
+      {
+        "timestamp": 1767006403,
+        "equity": 867896.952329,
+        "delta": -0.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.02
+      },
+      {
+        "timestamp": 1767019527,
+        "equity": 1164470.8847,
+        "delta": -110.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Heat",
+        "usdc": 110.0
+      },
+      {
+        "timestamp": 1767023665,
+        "equity": 1132052.431306,
+        "delta": -19.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Heat",
+        "usdc": 19.8
+      },
+      {
+        "timestamp": 1767025657,
+        "equity": 1111888.127081,
+        "delta": -13.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bucks vs. Hornets",
+        "usdc": 13.12
+      },
+      {
+        "timestamp": 1767027033,
+        "equity": 1108444.092558,
+        "delta": -0.785714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Heat",
+        "usdc": 0.785714
+      },
+      {
+        "timestamp": 1767029829,
+        "equity": 1083232.179406,
+        "delta": -1.292,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.292
+      },
+      {
+        "timestamp": 1767037931,
+        "equity": 1000537.040576,
+        "delta": -1484.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Rockets (-14.5)",
+        "usdc": 1484.0
+      },
+      {
+        "timestamp": 1767042359,
+        "equity": 965672.309765,
+        "delta": -14.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Heat",
+        "usdc": 14.52
+      },
+      {
+        "timestamp": 1767044503,
+        "equity": 942597.147387,
+        "delta": -0.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Thunder",
+        "usdc": 0.55
+      },
+      {
+        "timestamp": 1767049403,
+        "equity": 888686.44533,
+        "delta": -13.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Thunder",
+        "usdc": 13.2
+      },
+      {
+        "timestamp": 1767053393,
+        "equity": 750788.835334,
+        "delta": -12.364385,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bucks vs. Hornets",
+        "usdc": 12.364385
+      },
+      {
+        "timestamp": 1767062065,
+        "equity": 486900.302234,
+        "delta": -20.628,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 20.628
+      },
+      {
+        "timestamp": 1767062891,
+        "equity": 485719.207763,
+        "delta": -0.396,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.396
+      },
+      {
+        "timestamp": 1767075271,
+        "equity": 436180.805359,
+        "delta": -1.54,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 1.54
+      },
+      {
+        "timestamp": 1767088179,
+        "equity": 435806.796477,
+        "delta": -0.025125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.025125
+      },
+      {
+        "timestamp": 1767111149,
+        "equity": 435619.573436,
+        "delta": -0.959,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.959
+      },
+      {
+        "timestamp": 1767118915,
+        "equity": 1313915.354981,
+        "delta": -518.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea FC win on 2025-12-30?",
+        "usdc": 518.0
+      },
+      {
+        "timestamp": 1767120943,
+        "equity": 1014983.891488,
+        "delta": -6.129032,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea FC win on 2025-12-30?",
+        "usdc": 6.129032
+      },
+      {
+        "timestamp": 1767122605,
+        "equity": 975580.674515,
+        "delta": -306.451612,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Chelsea FC win on 2025-12-30?",
+        "usdc": 306.451612
+      },
+      {
+        "timestamp": 1767123729,
+        "equity": 941655.2081,
+        "delta": -4.8582,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 4.8582
+      },
+      {
+        "timestamp": 1767128279,
+        "equity": 789657.793884,
+        "delta": -0.186746,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.186746
+      },
+      {
+        "timestamp": 1767133469,
+        "equity": 755817.432064,
+        "delta": -24.444444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Lakers",
+        "usdc": 24.444444
+      },
+      {
+        "timestamp": 1767139985,
+        "equity": 738821.348857,
+        "delta": -86.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Grizzlies",
+        "usdc": 86.88
+      },
+      {
+        "timestamp": 1767146833,
+        "equity": 1415341.717407,
+        "delta": -34.225714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. Jazz",
+        "usdc": 34.225714
+      },
+      {
+        "timestamp": 1767150745,
+        "equity": 1517290.193481,
+        "delta": -1.527272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Lakers",
+        "usdc": 1.527272
+      },
+      {
+        "timestamp": 1767151243,
+        "equity": 1511155.46228,
+        "delta": -1.667272,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pistons vs. Lakers",
+        "usdc": 1.667272
+      },
+      {
+        "timestamp": 1767166605,
+        "equity": 1480538.907069,
+        "delta": -1.113326,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Miami Heat win the 2026 NBA Finals?",
+        "usdc": 1.113326
+      },
+      {
+        "timestamp": 1767185773,
+        "equity": 1480440.074898,
+        "delta": -0.3092,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.3092
+      },
+      {
+        "timestamp": 1767200267,
+        "equity": 1869402.901299,
+        "delta": -0.40848,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.40848
+      },
+      {
+        "timestamp": 1767204593,
+        "equity": 1820469.746064,
+        "delta": -0.81,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Warriors vs. Hornets",
+        "usdc": 0.81
+      },
+      {
+        "timestamp": 1767212439,
+        "equity": 1682491.203649,
+        "delta": -0.5798,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Golden State Warriors win the 2026 NBA Finals?",
+        "usdc": 0.5798
+      },
+      {
+        "timestamp": 1767241235,
+        "equity": 1682332.867531,
+        "delta": -0.0564,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.0564
+      },
+      {
+        "timestamp": 1767266561,
+        "equity": 1682217.04023,
+        "delta": -0.396,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.396
+      },
+      {
+        "timestamp": 1767282437,
+        "equity": 1682114.487047,
+        "delta": -0.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.12
+      },
+      {
+        "timestamp": 1767286417,
+        "equity": 1992732.710836,
+        "delta": -0.557537,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Miami Heat win the 2026 NBA Finals?",
+        "usdc": 0.557537
+      },
+      {
+        "timestamp": 1767291475,
+        "equity": 1869867.102283,
+        "delta": -0.275251,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.275251
+      },
+      {
+        "timestamp": 1767296273,
+        "equity": 1845328.326622,
+        "delta": -29.8428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. Kings",
+        "usdc": 29.8428
+      },
+      {
+        "timestamp": 1767298679,
+        "equity": 1805777.510536,
+        "delta": -0.250623,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.250623
+      },
+      {
+        "timestamp": 1767301841,
+        "equity": 1785345.393568,
+        "delta": -0.25719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.25719
+      },
+      {
+        "timestamp": 1767303517,
+        "equity": 1766445.259239,
+        "delta": -3.545454,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. Kings",
+        "usdc": 3.545454
+      },
+      {
+        "timestamp": 1767304601,
+        "equity": 1766150.412607,
+        "delta": -0.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.04
+      },
+      {
+        "timestamp": 1767305873,
+        "equity": 1764924.60317,
+        "delta": -2.58222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 2.58222
+      },
+      {
+        "timestamp": 1767309521,
+        "equity": 1741903.698342,
+        "delta": -33.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Pistons",
+        "usdc": 33.12
+      },
+      {
+        "timestamp": 1767310819,
+        "equity": 2103973.557926,
+        "delta": -5.625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Pistons",
+        "usdc": 5.625
+      },
+      {
+        "timestamp": 1767312465,
+        "equity": 2033038.293454,
+        "delta": -0.148,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.148
+      },
+      {
+        "timestamp": 1767316845,
+        "equity": 1972273.291629,
+        "delta": -641.441818,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Mavericks",
+        "usdc": 641.441818
+      },
+      {
+        "timestamp": 1767319267,
+        "equity": 1878319.749747,
+        "delta": -0.425,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.425
+      },
+      {
+        "timestamp": 1767320321,
+        "equity": 1878064.865703,
+        "delta": -0.212,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.212
+      },
+      {
+        "timestamp": 1767322535,
+        "equity": 1859569.831343,
+        "delta": 4949.9476,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Tottenham Hotspur FC win on 2026-01-01?",
+        "usdc": 4949.9476
+      },
+      {
+        "timestamp": 1767328883,
+        "equity": 1859439.862653,
+        "delta": -0.10892,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.10892
+      },
+      {
+        "timestamp": 1767363751,
+        "equity": 1847048.331028,
+        "delta": -8.950819,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 8.950819
+      },
+      {
+        "timestamp": 1767369985,
+        "equity": 2777557.614067,
+        "delta": -73.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Thunder vs. Warriors",
+        "usdc": 73.333333
+      },
+      {
+        "timestamp": 1767377715,
+        "equity": 2660955.129474,
+        "delta": -10.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Thunder (-7.5)",
+        "usdc": 10.45
+      },
+      {
+        "timestamp": 1767383985,
+        "equity": 2597317.612704,
+        "delta": -0.7956,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nuggets vs. Cavaliers",
+        "usdc": 0.7956
+      },
+      {
+        "timestamp": 1767388813,
+        "equity": 2586521.541399,
+        "delta": -8.97,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 8.97
+      },
+      {
+        "timestamp": 1767391003,
+        "equity": 2571991.165816,
+        "delta": -26.91,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 26.91
+      },
+      {
+        "timestamp": 1767394633,
+        "equity": 2528124.646375,
+        "delta": -12.09,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 12.09
+      },
+      {
+        "timestamp": 1767398405,
+        "equity": 2392718.828426,
+        "delta": -5.83,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Bucks (-6.5)",
+        "usdc": 5.83
+      },
+      {
+        "timestamp": 1767399677,
+        "equity": 2334243.511445,
+        "delta": -1.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Knicks",
+        "usdc": 1.75
+      },
+      {
+        "timestamp": 1767403081,
+        "equity": 2019378.397987,
+        "delta": -0.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.04
+      },
+      {
+        "timestamp": 1767408085,
+        "equity": 1994234.981394,
+        "delta": -0.38514,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.38514
+      },
+      {
+        "timestamp": 1767410619,
+        "equity": 1633814.488654,
+        "delta": -5.22994,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 5.22994
+      },
+      {
+        "timestamp": 1767423973,
+        "equity": 1633835.104064,
+        "delta": -0.5874,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.5874
+      },
+      {
+        "timestamp": 1767457079,
+        "equity": 2873533.576365,
+        "delta": -0.0314,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.0314
+      },
+      {
+        "timestamp": 1767460979,
+        "equity": 2824565.547583,
+        "delta": -86.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Heat",
+        "usdc": 86.0
+      },
+      {
+        "timestamp": 1767464293,
+        "equity": 2755955.479139,
+        "delta": 1.039999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 1.039999
+      },
+      {
+        "timestamp": 1767464325,
+        "equity": 2755990.616148,
+        "delta": -0.01652,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.01652
+      },
+      {
+        "timestamp": 1767476545,
+        "equity": 2699897.534583,
+        "delta": -0.852456,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Heat",
+        "usdc": 0.852456
+      },
+      {
+        "timestamp": 1767482165,
+        "equity": 2473633.738925,
+        "delta": -0.2595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.2595
+      },
+      {
+        "timestamp": 1767485987,
+        "equity": 2408601.804487,
+        "delta": -5.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "76ers vs. Knicks",
+        "usdc": 5.85
+      },
+      {
+        "timestamp": 1767486377,
+        "equity": 2380445.630144,
+        "delta": -1.130625,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Raptors",
+        "usdc": 1.130625
+      },
+      {
+        "timestamp": 1767488159,
+        "equity": 2238354.826851,
+        "delta": -26.407407,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hornets vs. Bulls",
+        "usdc": 26.407407
+      },
+      {
+        "timestamp": 1767575071,
+        "equity": 2823767.677587,
+        "delta": -61.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 61.05
+      },
+      {
+        "timestamp": 1767577051,
+        "equity": 2744326.13416,
+        "delta": -4.389,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Lakers",
+        "usdc": 4.389
+      },
+      {
+        "timestamp": 1767596299,
+        "equity": 2530403.713155,
+        "delta": -0.39763,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.39763
+      },
+      {
+        "timestamp": 1767606897,
+        "equity": 2530462.129953,
+        "delta": -0.69332,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.69332
+      },
+      {
+        "timestamp": 1767627443,
+        "equity": 2872557.73857,
+        "delta": -0.724137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hawks vs. Raptors",
+        "usdc": 0.724137
+      },
+      {
+        "timestamp": 1767632941,
+        "equity": 2852598.730436,
+        "delta": -9.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Warriors vs. Clippers",
+        "usdc": 9.88
+      },
+      {
+        "timestamp": 1767656873,
+        "equity": 2661075.730389,
+        "delta": -1.127659,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Pistons",
+        "usdc": 1.127659
+      },
+      {
+        "timestamp": 1767683543,
+        "equity": 2194836.306777,
+        "delta": -0.11186,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.11186
+      },
+      {
+        "timestamp": 1767730969,
+        "equity": 2194628.426152,
+        "delta": -0.05033,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.05033
+      },
+      {
+        "timestamp": 1767745151,
+        "equity": 2743710.7528,
+        "delta": -1.751,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.751
+      },
+      {
+        "timestamp": 1767755785,
+        "equity": 2600813.508018,
+        "delta": -1.923784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.923784
+      },
+      {
+        "timestamp": 1767785283,
+        "equity": 2600689.664992,
+        "delta": -0.280722,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.280722
+      },
+      {
+        "timestamp": 1767794839,
+        "equity": 2600680.020899,
+        "delta": -0.1078,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.1078
+      },
+      {
+        "timestamp": 1767813955,
+        "equity": 2554012.870749,
+        "delta": -141.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Brentford FC win on 2026-01-07?",
+        "usdc": 141.0
+      },
+      {
+        "timestamp": 1767822269,
+        "equity": 2462999.092151,
+        "delta": -0.64108,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.64108
+      },
+      {
+        "timestamp": 1767829487,
+        "equity": 2196731.596603,
+        "delta": -0.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bulls vs. Pistons",
+        "usdc": 0.333333
+      },
+      {
+        "timestamp": 1767832965,
+        "equity": 2232558.537751,
+        "delta": -2.575757,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Grizzlies",
+        "usdc": 2.575757
+      },
+      {
+        "timestamp": 1767837723,
+        "equity": 2484170.41534,
+        "delta": -0.14007,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+        "usdc": 0.14007
+      },
+      {
+        "timestamp": 1767848031,
+        "equity": 2559785.591763,
+        "delta": -0.08084,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.08084
+      },
+      {
+        "timestamp": 1767854617,
+        "equity": 2559623.935441,
+        "delta": -8.63155,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 8.63155
+      },
+      {
+        "timestamp": 1767858141,
+        "equity": 2559519.057685,
+        "delta": -0.492,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.492
+      },
+      {
+        "timestamp": 1767860679,
+        "equity": 2559434.593387,
+        "delta": -0.096,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.096
+      },
+      {
+        "timestamp": 1767862987,
+        "equity": 2559353.809917,
+        "delta": -0.00916,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.00916
+      },
+      {
+        "timestamp": 1767892804,
+        "equity": 2559156.595833,
+        "delta": -0.640817,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Pistons win the 2026 NBA Finals?",
+        "usdc": 0.640817
+      },
+      {
+        "timestamp": 1767902068,
+        "equity": 3171484.147799,
+        "delta": -0.228571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Liverpool FC win on 2026-01-08?",
+        "usdc": 0.228571
+      },
+      {
+        "timestamp": 1767902118,
+        "equity": 3151095.501564,
+        "delta": -4.805714,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Liverpool FC win on 2026-01-08?",
+        "usdc": 4.805714
+      },
+      {
+        "timestamp": 1767902352,
+        "equity": 3138293.465294,
+        "delta": -0.388571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Liverpool FC win on 2026-01-08?",
+        "usdc": 0.388571
+      },
+      {
+        "timestamp": 1767917388,
+        "equity": 3088148.336555,
+        "delta": -0.14056,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.14056
+      },
+      {
+        "timestamp": 1767932326,
+        "equity": 3089163.607944,
+        "delta": -2.08208,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 2.08208
+      },
+      {
+        "timestamp": 1767991242,
+        "equity": 3088941.737645,
+        "delta": -0.449477,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.449477
+      },
+      {
+        "timestamp": 1768063694,
+        "equity": 3088576.386734,
+        "delta": -1.17072,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 1.17072
+      },
+      {
+        "timestamp": 1768066244,
+        "equity": 3013505.047518,
+        "delta": -25.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 25.0
+      },
+      {
+        "timestamp": 1768067852,
+        "equity": 2932933.461111,
+        "delta": -50.848,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Cavaliers",
+        "usdc": 50.848
+      },
+      {
+        "timestamp": 1768070336,
+        "equity": 2856336.167765,
+        "delta": -1.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1768072456,
+        "equity": 2812874.371743,
+        "delta": -34.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 34.0
+      },
+      {
+        "timestamp": 1768075904,
+        "equity": 2784658.430365,
+        "delta": -200.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 200.0
+      },
+      {
+        "timestamp": 1768078136,
+        "equity": 2767266.635547,
+        "delta": -150.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 150.0
+      },
+      {
+        "timestamp": 1768083020,
+        "equity": 2663191.732246,
+        "delta": -44.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Celtics",
+        "usdc": 44.7
+      },
+      {
+        "timestamp": 1768084928,
+        "equity": 2654488.234427,
+        "delta": -43.74,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Heat (-7.5)",
+        "usdc": 43.74
+      },
+      {
+        "timestamp": 1768087782,
+        "equity": 2643516.045381,
+        "delta": -0.485217,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Heat vs. Pacers",
+        "usdc": 0.485217
+      },
+      {
+        "timestamp": 1768089304,
+        "equity": 2634532.818518,
+        "delta": -50.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Spurs (-1.5)",
+        "usdc": 50.96
+      },
+      {
+        "timestamp": 1768117270,
+        "equity": 2923828.846967,
+        "delta": -0.129598,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.129598
+      },
+      {
+        "timestamp": 1768133918,
+        "equity": 3071155.931304,
+        "delta": -402.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Nets vs. Grizzlies",
+        "usdc": 402.3
+      },
+      {
+        "timestamp": 1768139488,
+        "equity": 3034400.895563,
+        "delta": -0.12,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.12
+      },
+      {
+        "timestamp": 1768141790,
+        "equity": 2958741.197985,
+        "delta": -9.624,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pelicans vs. Magic",
+        "usdc": 9.624
+      },
+      {
+        "timestamp": 1768144202,
+        "equity": 2924908.77424,
+        "delta": -5.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pelicans vs. Magic",
+        "usdc": 5.1
+      },
+      {
+        "timestamp": 1768146892,
+        "equity": 2745083.227844,
+        "delta": -0.176,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+        "usdc": 0.176
+      },
+      {
+        "timestamp": 1768150010,
+        "equity": 2729985.622403,
+        "delta": -0.886792,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 76ers (-3.5)",
+        "usdc": 0.886792
+      },
+      {
+        "timestamp": 1768151408,
+        "equity": 2728750.928491,
+        "delta": -0.052,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.052
+      },
+      {
+        "timestamp": 1768156622,
+        "equity": 2658109.94518,
+        "delta": -256.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chargers vs. Patriots",
+        "usdc": 256.0
+      },
+      {
+        "timestamp": 1768158168,
+        "equity": 2657019.053874,
+        "delta": -28.984285,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Eagles",
+        "usdc": 28.984285
+      },
+      {
+        "timestamp": 1768161608,
+        "equity": 2637334.939695,
+        "delta": -0.4263,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Pelicans vs. Magic",
+        "usdc": 0.4263
+      },
+      {
+        "timestamp": 1768165828,
+        "equity": 2613465.222726,
+        "delta": -0.0031,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Eagles",
+        "usdc": 0.0031
+      },
+      {
+        "timestamp": 1768166448,
+        "equity": 2590785.773382,
+        "delta": -0.14728,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.14728
+      },
+      {
+        "timestamp": 1768167048,
+        "equity": 2472813.386259,
+        "delta": -22.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 22.8
+      },
+      {
+        "timestamp": 1768167804,
+        "equity": 2471583.884619,
+        "delta": -0.00804,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.00804
+      },
+      {
+        "timestamp": 1768169792,
+        "equity": 2468870.32392,
+        "delta": -3.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 3.92
+      },
+      {
+        "timestamp": 1768169924,
+        "equity": 2468805.458594,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1768170010,
+        "equity": 2468813.335966,
+        "delta": -0.00748,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.00748
+      },
+      {
+        "timestamp": 1768170118,
+        "equity": 2468822.627743,
+        "delta": 0.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.999999
+      },
+      {
+        "timestamp": 1768170234,
+        "equity": 2468816.191,
+        "delta": -0.536378,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.536378
+      },
+      {
+        "timestamp": 1768170552,
+        "equity": 2468752.612135,
+        "delta": -0.00732,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.00732
+      },
+      {
+        "timestamp": 1768171988,
+        "equity": 2279964.800278,
+        "delta": -1000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 1000.0
+      },
+      {
+        "timestamp": 1768173414,
+        "equity": 2156973.062001,
+        "delta": -4.888888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Timberwolves",
+        "usdc": 4.888888
+      },
+      {
+        "timestamp": 1768175096,
+        "equity": 2232009.309772,
+        "delta": -24.444444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spurs vs. Timberwolves",
+        "usdc": 24.444444
+      },
+      {
+        "timestamp": 1768176570,
+        "equity": 2065656.065035,
+        "delta": -11.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bucks vs. Nuggets",
+        "usdc": 11.4
+      },
+      {
+        "timestamp": 1768178356,
+        "equity": 1978221.051566,
+        "delta": -61.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 61.5
+      },
+      {
+        "timestamp": 1768180562,
+        "equity": 2162726.880196,
+        "delta": -0.18151,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Toronto Raptors win the 2026 NBA Finals?",
+        "usdc": 0.18151
+      },
+      {
+        "timestamp": 1768181840,
+        "equity": 2162667.209141,
+        "delta": -0.448965,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.448965
+      },
+      {
+        "timestamp": 1768183654,
+        "equity": 2162576.654902,
+        "delta": -0.56412,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.56412
+      },
+      {
+        "timestamp": 1768185408,
+        "equity": 2162519.150084,
+        "delta": -0.2167,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+        "usdc": 0.2167
+      },
+      {
+        "timestamp": 1768187744,
+        "equity": 2162426.820949,
+        "delta": -0.68222,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+        "usdc": 0.68222
+      },
+      {
+        "timestamp": 1768188636,
+        "equity": 2162315.780622,
+        "delta": -1.18902,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 1.18902
+      },
+      {
+        "timestamp": 1768195000,
+        "equity": 2162177.549884,
+        "delta": -0.17856,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.17856
+      },
+      {
+        "timestamp": 1768196728,
+        "equity": 2162075.467778,
+        "delta": -0.14,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Miami Heat win the 2026 NBA Finals?",
+        "usdc": 0.14
+      },
+      {
+        "timestamp": 1768199056,
+        "equity": 2162012.612858,
+        "delta": -0.252,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.252
+      },
+      {
+        "timestamp": 1768200582,
+        "equity": 2161949.543197,
+        "delta": -1.59657,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 1.59657
+      },
+      {
+        "timestamp": 1768202252,
+        "equity": 2161870.452224,
+        "delta": -0.03696,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+        "usdc": 0.03696
+      },
+      {
+        "timestamp": 1768205788,
+        "equity": 2161671.661097,
+        "delta": -0.04016,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.04016
+      },
+      {
+        "timestamp": 1768213210,
+        "equity": 2161599.963262,
+        "delta": -0.83413,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+        "usdc": 0.83413
+      },
+      {
+        "timestamp": 1768227788,
+        "equity": 2161156.68978,
+        "delta": 0.02346,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Memphis Grizzlies win the 2026 NBA Finals?",
+        "usdc": 0.02346
+      },
+      {
+        "timestamp": 1768239379,
+        "equity": 4220595.107294,
+        "delta": -0.113732,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Orlando Magic win the 2026 NBA Finals?",
+        "usdc": 0.113732
+      },
+      {
+        "timestamp": 1768242887,
+        "equity": 4220486.974518,
+        "delta": -0.64139,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.64139
+      },
+      {
+        "timestamp": 1768244429,
+        "equity": 4220397.168514,
+        "delta": -1.4142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Houston Rockets win the 2026 NBA Finals?",
+        "usdc": 1.4142
+      },
+      {
+        "timestamp": 1768246003,
+        "equity": 4220401.061233,
+        "delta": -0.972,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.972
+      },
+      {
+        "timestamp": 1768247549,
+        "equity": 4176978.614683,
+        "delta": -0.46872,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.46872
+      },
+      {
+        "timestamp": 1768248359,
+        "equity": 4176887.841788,
+        "delta": -0.66278,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+        "usdc": 0.66278
+      },
+      {
+        "timestamp": 1768250951,
+        "equity": 4176633.542978,
+        "delta": -0.918,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "usdc": 0.918
+      }
+    ]
+  },
+  "market_making": {
+    "score": 55,
+    "label": "likely_market_maker",
+    "signals": [
+      "Fast round-trips (<2h) in 30% of two-sided markets",
+      "Avg sell > avg buy in 62% of markets (spread capture)",
+      "High-frequency cadence (median gap 14s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.1127,
+      "fast_roundtrip_rate": 0.2976,
+      "spread_capture_rate": 0.619,
+      "size_cv": 9.0643,
+      "median_gap_seconds": 14.0,
+      "outcome_counts": {
+        "No": 6422,
+        "Yes": 33951,
+        "Cubs": 19,
+        "Mumbai Indians": 2,
+        "Gujarat Titans": 16,
+        "Phillies": 10,
+        "Reds": 3,
+        "Inter": 13,
+        "Alcaraz": 7,
+        "Shelton ": 13,
+        "Punjab Kings": 6,
+        "Rays": 2,
+        "Thunder": 69,
+        "Angels": 2,
+        "Rockies": 12,
+        "Dodgers": 4,
+        "Mariners": 5,
+        "Athletics": 3,
+        "Astros": 1,
+        "Rangers": 2,
+        "Vikings": 28,
+        "Bears": 2,
+        "Yankees": 6,
+        "Packers": 83,
+        "Crawford": 39,
+        "Canelo": 52,
+        "Saints": 22,
+        "Lions": 41,
+        "Jaguars": 21,
+        "Rams": 8,
+        "Panthers": 2,
+        "Eagles": 63,
+        "Falcons": 21,
+        "Raiders": 230,
+        "Texans": 185,
+        "Dolphins": 83,
+        "Bills": 4,
+        "Bengals": 13,
+        "Mets": 1,
+        "Orioles": 3,
+        "Diamondbacks": 2,
+        "Steelers": 2,
+        "49ers": 340,
+        "Blue Jays": 4,
+        "Commanders": 5,
+        "Under": 358,
+        "Chiefs": 99,
+        "Devils": 46,
+        "Canucks": 4,
+        "Capitals": 2,
+        "Cardinals": 67,
+        "Cowboys": 30,
+        "Trail Blazers": 121,
+        "Heat": 1535,
+        "Bucks": 198,
+        "Kings": 142,
+        "Warriors": 768,
+        "Musetti": 21,
+        "Minaur": 7,
+        "Raptors": 285,
+        "Bulls": 148,
+        "Rockets": 676,
+        "Spurs": 532,
+        "Suns": 350,
+        "Zverev": 1,
+        "Shevchenko": 68,
+        "Edwards": 8,
+        "Benn": 19,
+        "Della Maddalena": 9,
+        "Prates": 1,
+        "Broncos": 102,
+        "Ravens": 1,
+        "Pelicans": 938,
+        "Pacers": 1525,
+        "76ers": 1494,
+        "Nuggets": 225,
+        "Pistons": 610,
+        "Cavaliers": 149,
+        "Mavericks": 318,
+        "Maple Leafs": 1,
+        "Clippers": 946,
+        "Canadiens": 23,
+        "Grizzlies": 1626,
+        "Hawks": 1585,
+        "Nets": 1298,
+        "Sabres": 2,
+        "Hooker": 116,
+        "Topuria": 5,
+        "Jazz": 85,
+        "Naurdiev": 1,
+        "Muhammad": 68,
+        "Newcastle": 1,
+        "Over": 570,
+        "Hornets": 890,
+        "Machado Garry": 2,
+        "Magic": 631,
+        "Colts": 70,
+        "Seahawks": 185,
+        "Wizards": 302,
+        "Patriots": 456,
+        "Lakers": 121,
+        "Celtics": 1867,
+        "Yan": 1,
+        "Knicks": 309,
+        "Chargers": 11,
+        "Buccaneers": 24,
+        "Timberwolves": 389,
+        "Titans": 26
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 4712,
+      "1": 2246,
+      "2": 2853,
+      "3": 2434,
+      "4": 2572,
+      "5": 1757,
+      "6": 2128,
+      "7": 2138,
+      "8": 1271,
+      "9": 1255,
+      "10": 727,
+      "11": 949,
+      "12": 991,
+      "13": 1347,
+      "14": 2312,
+      "15": 1596,
+      "16": 2616,
+      "17": 3689,
+      "18": 4851,
+      "19": 6301,
+      "20": 3096,
+      "21": 4106,
+      "22": 3969,
+      "23": 4374
+    },
+    "dow_utc": {
+      "0": 10651,
+      "1": 8412,
+      "2": 8163,
+      "3": 7783,
+      "4": 8581,
+      "5": 10856,
+      "6": 9844
+    },
+    "peak_hours": [
+      19,
+      18,
+      0,
+      23,
+      21
+    ],
+    "peak_dows": [
+      5,
+      0,
+      6
+    ]
+  },
+  "sizing": {
+    "n": 64290,
+    "mean_usdc": 415.5088,
+    "median_usdc": 1.976,
+    "p10_usdc": 0.1,
+    "p90_usdc": 108.4222,
+    "max_usdc": 248000.0,
+    "mean_shares": 1043.8585,
+    "median_shares": 27.0
+  },
+  "categories": {
+    "pnl": {
+      "sports_match": 43141219.1483,
+      "sports_totals": 2456274.1842,
+      "other": 647948.0518,
+      "crypto": 52289.5839
+    },
+    "counts": {
+      "other": 133,
+      "sports_match": 701,
+      "sports_totals": 36,
+      "crypto": 11
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Will the New York Knicks win the 2026 NBA Finals?",
+      "pnl": 600658.7464,
+      "buy_usdc": 2239.0376,
+      "sell_usdc": 0.0,
+      "n_buys": 547,
+      "n_sells": 0,
+      "hold_seconds": 375476,
+      "avg_buy": 0.05,
+      "avg_sell": null
+    },
+    {
+      "title": "Hawks vs. Knicks",
+      "pnl": 495581.9325,
+      "buy_usdc": 268046.9815,
+      "sell_usdc": 175.513,
+      "n_buys": 233,
+      "n_sells": 7,
+      "hold_seconds": 35470,
+      "avg_buy": 0.3508,
+      "avg_sell": 0.3
+    },
+    {
+      "title": "Hornets vs. Thunder",
+      "pnl": 315612.416,
+      "buy_usdc": 39008.2761,
+      "sell_usdc": 0.0,
+      "n_buys": 11,
+      "n_sells": 0,
+      "hold_seconds": 912,
+      "avg_buy": 0.11,
+      "avg_sell": null
+    },
+    {
+      "title": "Will Liverpool FC win on 2026-01-01?",
+      "pnl": 299232.9918,
+      "buy_usdc": 151877.4,
+      "sell_usdc": 0.0,
+      "n_buys": 3,
+      "n_sells": 0,
+      "hold_seconds": 1276,
+      "avg_buy": 0.3367,
+      "avg_sell": null
+    },
+    {
+      "title": "Nuggets vs. Mavericks",
+      "pnl": 289219.2128,
+      "buy_usdc": 127072.1615,
+      "sell_usdc": 0.0,
+      "n_buys": 99,
+      "n_sells": 0,
+      "hold_seconds": 10340,
+      "avg_buy": 0.3052,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Patriots (-3.5)",
+      "pnl": 270717.1777,
+      "buy_usdc": 270858.7304,
+      "sell_usdc": 0.0,
+      "n_buys": 228,
+      "n_sells": 0,
+      "hold_seconds": 42838,
+      "avg_buy": 0.5002,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Eagles (-4.5)",
+      "pnl": 261750.139,
+      "buy_usdc": 218805.3,
+      "sell_usdc": 0.0,
+      "n_buys": 5,
+      "n_sells": 0,
+      "hold_seconds": 20960,
+      "avg_buy": 0.4553,
+      "avg_sell": null
+    },
+    {
+      "title": "Spurs vs. Lakers",
+      "pnl": 255573.0865,
+      "buy_usdc": 111321.0913,
+      "sell_usdc": 8199.4757,
+      "n_buys": 334,
+      "n_sells": 104,
+      "hold_seconds": 80508,
+      "avg_buy": 0.3007,
+      "avg_sell": 0.71
+    },
+    {
+      "title": "Spread: Broncos (-13.5)",
+      "pnl": 252076.1514,
+      "buy_usdc": 248929.3136,
+      "sell_usdc": 0.0,
+      "n_buys": 70,
+      "n_sells": 0,
+      "hold_seconds": 840,
+      "avg_buy": 0.4969,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Raptors (-2.5)",
+      "pnl": 233888.5,
+      "buy_usdc": 233888.5,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0,
+      "avg_buy": 0.5,
+      "avg_sell": null
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Pistons vs. Celtics",
+      "pnl": -123412.1164,
+      "buy_usdc": 130983.1501,
+      "sell_usdc": 7555.479,
+      "n_buys": 521,
+      "n_sells": 101,
+      "hold_seconds": 48760
+    },
+    {
+      "title": "Spread: Pistons (-9.5)",
+      "pnl": -108248.0483,
+      "buy_usdc": 108715.9168,
+      "sell_usdc": 0.0,
+      "n_buys": 6,
+      "n_sells": 0,
+      "hold_seconds": 506
+    },
+    {
+      "title": "Chiefs vs. Broncos",
+      "pnl": -87922.182,
+      "buy_usdc": 93485.1194,
+      "sell_usdc": 0.0,
+      "n_buys": 19,
+      "n_sells": 0,
+      "hold_seconds": 820
+    },
+    {
+      "title": "Spread: Thunder (-11.5)",
+      "pnl": -84368.7443,
+      "buy_usdc": 124688.78,
+      "sell_usdc": 16320.0,
+      "n_buys": 3,
+      "n_sells": 1,
+      "hold_seconds": 1208
+    },
+    {
+      "title": "Falcons vs. Vikings",
+      "pnl": -67653.9251,
+      "buy_usdc": 76706.6073,
+      "sell_usdc": 0.0,
+      "n_buys": 15,
+      "n_sells": 0,
+      "hold_seconds": 1804
+    },
+    {
+      "title": "Eagles vs. Chargers",
+      "pnl": -65540.8713,
+      "buy_usdc": 103386.9515,
+      "sell_usdc": 0.0,
+      "n_buys": 24,
+      "n_sells": 0,
+      "hold_seconds": 2680
+    },
+    {
+      "title": "Thunder vs. Jazz",
+      "pnl": -39793.9341,
+      "buy_usdc": 50169.6542,
+      "sell_usdc": 0.0,
+      "n_buys": 30,
+      "n_sells": 0,
+      "hold_seconds": 3964
+    },
+    {
+      "title": "Champions League Final: 3+ goals?",
+      "pnl": -32532.08,
+      "buy_usdc": 32532.08,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0
+    },
+    {
+      "title": "Will the Seattle Mariners win the 2025 World Series?",
+      "pnl": -29671.9158,
+      "buy_usdc": 7886.0229,
+      "sell_usdc": 42955.6209,
+      "n_buys": 4,
+      "n_sells": 6,
+      "hold_seconds": 462692
+    },
+    {
+      "title": "UFC Fight Night: Muhammad vs. Machado Garry (Welterweight, Main Card)",
+      "pnl": -29143.0692,
+      "buy_usdc": 32589.644,
+      "sell_usdc": 0.0,
+      "n_buys": 70,
+      "n_sells": 0,
+      "hold_seconds": 57318
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "Spurs vs. Lakers",
+      "avg_buy": 0.3007,
+      "avg_sell": 0.71,
+      "spread": 0.4093,
+      "pnl": 255573.0865,
+      "n_buys": 334,
+      "n_sells": 104,
+      "hold_seconds": 80508,
+      "both_sides": true
+    },
+    {
+      "title": "Bucks vs. Bulls",
+      "avg_buy": 0.4413,
+      "avg_sell": 0.46,
+      "spread": 0.0187,
+      "pnl": 158514.0374,
+      "n_buys": 39,
+      "n_sells": 29,
+      "hold_seconds": 26790,
+      "both_sides": false
+    },
+    {
+      "title": "Magic vs. Knicks",
+      "avg_buy": 0.4799,
+      "avg_sell": 0.5578,
+      "spread": 0.0779,
+      "pnl": 138921.0594,
+      "n_buys": 10,
+      "n_sells": 53,
+      "hold_seconds": 6648,
+      "both_sides": true
+    },
+    {
+      "title": "Will Real Madrid win on 2025-11-23?",
+      "avg_buy": 0.3034,
+      "avg_sell": 0.32,
+      "spread": 0.0166,
+      "pnl": 117445.1748,
+      "n_buys": 162,
+      "n_sells": 2,
+      "hold_seconds": 5220,
+      "both_sides": false
+    },
+    {
+      "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+      "avg_buy": 0.2193,
+      "avg_sell": 0.4446,
+      "spread": 0.2253,
+      "pnl": 114649.2886,
+      "n_buys": 87,
+      "n_sells": 4,
+      "hold_seconds": 33958,
+      "both_sides": true
+    },
+    {
+      "title": "Pelicans vs. Nets",
+      "avg_buy": 0.5915,
+      "avg_sell": 0.6002,
+      "spread": 0.0087,
+      "pnl": 102314.6169,
+      "n_buys": 28,
+      "n_sells": 17,
+      "hold_seconds": 20300,
+      "both_sides": false
+    },
+    {
+      "title": "Heat vs. Magic",
+      "avg_buy": 0.4769,
+      "avg_sell": 0.52,
+      "spread": 0.0431,
+      "pnl": 90919.0068,
+      "n_buys": 360,
+      "n_sells": 7,
+      "hold_seconds": 171623,
+      "both_sides": true
+    },
+    {
+      "title": "Cardinals vs. Cowboys",
+      "avg_buy": 0.3329,
+      "avg_sell": 0.8956,
+      "spread": 0.5627,
+      "pnl": 82072.6314,
+      "n_buys": 75,
+      "n_sells": 16,
+      "hold_seconds": 9860,
+      "both_sides": true
+    },
+    {
+      "title": "Rockets vs. Lakers",
+      "avg_buy": 0.5342,
+      "avg_sell": 0.56,
+      "spread": 0.0258,
+      "pnl": 75885.1082,
+      "n_buys": 195,
+      "n_sells": 79,
+      "hold_seconds": 85662,
+      "both_sides": false
+    },
+    {
+      "title": "Cavaliers vs. Pacers",
+      "avg_buy": 0.61,
+      "avg_sell": 0.63,
+      "spread": 0.02,
+      "pnl": 58668.8039,
+      "n_buys": 3,
+      "n_sells": 13,
+      "hold_seconds": 780,
+      "both_sides": false
+    }
+  ]
+}

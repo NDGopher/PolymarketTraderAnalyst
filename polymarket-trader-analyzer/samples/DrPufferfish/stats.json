@@ -1,0 +1,724 @@
+{
+  "username": "DrPufferfish",
+  "wallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+  "identity": "hybrid_liquidity_scalper",
+  "market_making": {
+    "score": 55,
+    "label": "likely_market_maker",
+    "signals": [
+      "Fast round-trips (<2h) in 30% of two-sided markets",
+      "Avg sell > avg buy in 62% of markets (spread capture)",
+      "High-frequency cadence (median gap 14s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.1127,
+      "fast_roundtrip_rate": 0.2976,
+      "spread_capture_rate": 0.619,
+      "size_cv": 9.0643,
+      "median_gap_seconds": 14.0,
+      "outcome_counts": {
+        "No": 6422,
+        "Yes": 33951,
+        "Cubs": 19,
+        "Mumbai Indians": 2,
+        "Gujarat Titans": 16,
+        "Phillies": 10,
+        "Reds": 3,
+        "Inter": 13,
+        "Alcaraz": 7,
+        "Shelton ": 13,
+        "Punjab Kings": 6,
+        "Rays": 2,
+        "Thunder": 69,
+        "Angels": 2,
+        "Rockies": 12,
+        "Dodgers": 4,
+        "Mariners": 5,
+        "Athletics": 3,
+        "Astros": 1,
+        "Rangers": 2,
+        "Vikings": 28,
+        "Bears": 2,
+        "Yankees": 6,
+        "Packers": 83,
+        "Crawford": 39,
+        "Canelo": 52,
+        "Saints": 22,
+        "Lions": 41,
+        "Jaguars": 21,
+        "Rams": 8,
+        "Panthers": 2,
+        "Eagles": 63,
+        "Falcons": 21,
+        "Raiders": 230,
+        "Texans": 185,
+        "Dolphins": 83,
+        "Bills": 4,
+        "Bengals": 13,
+        "Mets": 1,
+        "Orioles": 3,
+        "Diamondbacks": 2,
+        "Steelers": 2,
+        "49ers": 340,
+        "Blue Jays": 4,
+        "Commanders": 5,
+        "Under": 358,
+        "Chiefs": 99,
+        "Devils": 46,
+        "Canucks": 4,
+        "Capitals": 2,
+        "Cardinals": 67,
+        "Cowboys": 30,
+        "Trail Blazers": 121,
+        "Heat": 1535,
+        "Bucks": 198,
+        "Kings": 142,
+        "Warriors": 768,
+        "Musetti": 21,
+        "Minaur": 7,
+        "Raptors": 285,
+        "Bulls": 148,
+        "Rockets": 676,
+        "Spurs": 532,
+        "Suns": 350,
+        "Zverev": 1,
+        "Shevchenko": 68,
+        "Edwards": 8,
+        "Benn": 19,
+        "Della Maddalena": 9,
+        "Prates": 1,
+        "Broncos": 102,
+        "Ravens": 1,
+        "Pelicans": 938,
+        "Pacers": 1525,
+        "76ers": 1494,
+        "Nuggets": 225,
+        "Pistons": 610,
+        "Cavaliers": 149,
+        "Mavericks": 318,
+        "Maple Leafs": 1,
+        "Clippers": 946,
+        "Canadiens": 23,
+        "Grizzlies": 1626,
+        "Hawks": 1585,
+        "Nets": 1298,
+        "Sabres": 2,
+        "Hooker": 116,
+        "Topuria": 5,
+        "Jazz": 85,
+        "Naurdiev": 1,
+        "Muhammad": 68,
+        "Newcastle": 1,
+        "Over": 570,
+        "Hornets": 890,
+        "Machado Garry": 2,
+        "Magic": 631,
+        "Colts": 70,
+        "Seahawks": 185,
+        "Wizards": 302,
+        "Patriots": 456,
+        "Lakers": 121,
+        "Celtics": 1867,
+        "Yan": 1,
+        "Knicks": 309,
+        "Chargers": 11,
+        "Buccaneers": 24,
+        "Timberwolves": 389,
+        "Titans": 26
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "sports_match": 12701974.54,
+      "sports_totals": 501166.19,
+      "other": 198386.06,
+      "crypto": 51128.55
+    },
+    "category_counts": {
+      "sports_match": 511,
+      "sports_totals": 42,
+      "other": 155,
+      "crypto": 11
+    },
+    "slug_tokens": [
+      [
+        "nba",
+        286
+      ],
+      [
+        "nfl",
+        64
+      ],
+      [
+        "ucl",
+        55
+      ],
+      [
+        "lal",
+        43
+      ],
+      [
+        "mlb",
+        19
+      ],
+      [
+        "ufc",
+        15
+      ],
+      [
+        "ten",
+        11
+      ],
+      [
+        "bun",
+        7
+      ],
+      [
+        "nhl",
+        6
+      ],
+      [
+        "mma",
+        6
+      ],
+      [
+        "atp",
+        2
+      ]
+    ],
+    "primary": "sports_match"
+  },
+  "counts": {
+    "activity": 64770,
+    "trades": 64290,
+    "buys": 60876,
+    "sells": 3414,
+    "closed_positions": 881,
+    "open_positions": 848,
+    "markets_traded": 719,
+    "activity_types": {
+      "DEPOSIT": 25,
+      "TRADE": 64290,
+      "REWARD": 36,
+      "REDEEM": 380,
+      "CONVERSION": 4,
+      "WITHDRAWAL": 35
+    }
+  },
+  "span": {
+    "first_ts": 1748551963,
+    "last_ts": 1768250951,
+    "first_iso": "2025-05-29T20:52:43+00:00",
+    "last_iso": "2026-01-12T20:49:11+00:00",
+    "days_active_span": 228.0
+  },
+  "pnl": {
+    "cashflow_realized": 4176633.543,
+    "cashflow_core": 4175613.5447,
+    "cashflow_detail": {
+      "buys_usdc": 25315785.937227156,
+      "sells_usdc": 1397272.1775600063,
+      "redeems_usdc": 28094127.304343987,
+      "merges_usdc": 0.0,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 1019.9983000000001,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 46297730.9682,
+    "closed_wins": 793,
+    "closed_losses": 86,
+    "closed_flat": 2,
+    "win_rate": 0.9022,
+    "profit_factor": 21.0256,
+    "win_pnl": 48609653.8031,
+    "loss_pnl": -2311922.8349,
+    "total_bought": 105270550.111,
+    "open_cash_pnl": -45465201.4852,
+    "open_current_value": 0.0,
+    "open_realized_pnl": -465072.9831,
+    "leaderboard_all": {
+      "rank": "30",
+      "proxyWallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+      "userName": "DrPufferfish",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 248548251.18206796,
+      "pnl": 4055413.259574452,
+      "profileImage": ""
+    }
+  },
+  "validation": {
+    "ok": true,
+    "all_checks_passed": true,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 4055413.259574452,
+        "ours": 4175613.5447,
+        "ours_field": "cashflow_core",
+        "diff": 120200.2851,
+        "match": true,
+        "volume_reference": 248548251.18206796
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 4055413.26,
+        "ours": 4175613.5447,
+        "ours_field": "cashflow_core",
+        "diff": 120200.2847,
+        "match": true
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 272027,
+        "ours": 64290,
+        "diff": -207737,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.481,
+        "ours": 0.9022,
+        "diff": 0.4212,
+        "match": false
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": 46297730.9682,
+        "ours": 4176633.543,
+        "diff": -42121097.4252,
+        "match": false,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": 4176633.543,
+      "cashflow_core": 4175613.5447,
+      "closed_positions_sum": 46297730.9682,
+      "trades": 64290,
+      "win_rate": 0.9022
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/DrPufferfish",
+      "raw_meta": {
+        "net_pnl": 4055413.26,
+        "pos_realized_pnl": 4055413.26,
+        "n_trades": 272027.0,
+        "total_buy": 8622815.04,
+        "total_sell": 420954.0,
+        "total_redeem": 6518780.74,
+        "win_rate": 0.481,
+        "profit_factor": 0.96,
+        "n_markets": 1008.0,
+        "n_buys": 24904.0,
+        "n_sells": 2382.0,
+        "n_redeems": 59.0
+      },
+      "headline_pnl": 4055413.0,
+      "win_rate_pct": 48,
+      "smart_score": 26,
+      "n_trades": 272027,
+      "realized_pnl": 4055413.26
+    },
+    "leaderboard": {
+      "rank": "30",
+      "proxyWallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+      "userName": "DrPufferfish",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 248548251.18206796,
+      "pnl": 4055413.259574452,
+      "profileImage": ""
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/DrPufferfish",
+    "raw_meta": {
+      "net_pnl": 4055413.26,
+      "pos_realized_pnl": 4055413.26,
+      "n_trades": 272027.0,
+      "total_buy": 8622815.04,
+      "total_sell": 420954.0,
+      "total_redeem": 6518780.74,
+      "win_rate": 0.481,
+      "profit_factor": 0.96,
+      "n_markets": 1008.0,
+      "n_buys": 24904.0,
+      "n_sells": 2382.0,
+      "n_redeems": 59.0
+    },
+    "headline_pnl": 4055413.0,
+    "win_rate_pct": 48,
+    "smart_score": 26,
+    "n_trades": 272027,
+    "realized_pnl": 4055413.26
+  },
+  "leaderboard": {
+    "rank": "30",
+    "proxyWallet": "0xdb27bf2ac5d428a9c63dbc914611036855a6c56e",
+    "userName": "DrPufferfish",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 248548251.18206796,
+    "pnl": 4055413.259574452,
+    "profileImage": ""
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 181,
+      "wins": 100,
+      "losses": 12,
+      "win_rate": 0.8929,
+      "total_pnl": 2124933.99,
+      "avg_pnl": 11739.97,
+      "median_pnl": 42.75
+    },
+    "30s-2m": {
+      "n": 37,
+      "wins": 19,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 669395.66,
+      "avg_pnl": 18091.77,
+      "median_pnl": 24.23
+    },
+    "2-5m": {
+      "n": 41,
+      "wins": 23,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 944608.13,
+      "avg_pnl": 23039.22,
+      "median_pnl": 894.72
+    },
+    "5-15m": {
+      "n": 68,
+      "wins": 33,
+      "losses": 4,
+      "win_rate": 0.8919,
+      "total_pnl": 847113.77,
+      "avg_pnl": 12457.56,
+      "median_pnl": 0.0
+    },
+    "15m+": {
+      "n": 392,
+      "wins": 180,
+      "losses": 29,
+      "win_rate": 0.8612,
+      "total_pnl": 8866603.79,
+      "avg_pnl": 22618.89,
+      "median_pnl": 0.0
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 127,
+      "wins": 23,
+      "losses": 8,
+      "win_rate": 0.7419,
+      "total_pnl": 1108752.75,
+      "avg_pnl": 8730.34,
+      "median_pnl": 0.0
+    },
+    "20-40\u00a2": {
+      "n": 151,
+      "wins": 61,
+      "losses": 7,
+      "win_rate": 0.8971,
+      "total_pnl": 4540068.24,
+      "avg_pnl": 30066.68,
+      "median_pnl": 0.0
+    },
+    "40-60\u00a2": {
+      "n": 266,
+      "wins": 153,
+      "losses": 14,
+      "win_rate": 0.9162,
+      "total_pnl": 6532097.53,
+      "avg_pnl": 24556.76,
+      "median_pnl": 724.06
+    },
+    "60-80\u00a2": {
+      "n": 113,
+      "wins": 84,
+      "losses": 2,
+      "win_rate": 0.9767,
+      "total_pnl": 1356925.63,
+      "avg_pnl": 12008.19,
+      "median_pnl": 1956.79
+    },
+    "80-100\u00a2": {
+      "n": 42,
+      "wins": 33,
+      "losses": 1,
+      "win_rate": 0.9706,
+      "total_pnl": 144351.35,
+      "avg_pnl": 3436.94,
+      "median_pnl": 221.13
+    }
+  },
+  "family": {
+    "Yes/No moneyline": {
+      "n": 332,
+      "wins": 156,
+      "losses": 27,
+      "win_rate": 0.8525,
+      "total_pnl": 2807111.09,
+      "avg_pnl": 8455.15,
+      "median_pnl": 0.0
+    },
+    "Other": {
+      "n": 375,
+      "wins": 195,
+      "losses": 18,
+      "win_rate": 0.9155,
+      "total_pnl": 10619619.38,
+      "avg_pnl": 28318.99,
+      "median_pnl": 90.66
+    },
+    "Over/Under": {
+      "n": 12,
+      "wins": 4,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl": 25924.87,
+      "avg_pnl": 2160.41,
+      "median_pnl": 0.0
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 19655420.2,
+      "taker_usdc": 5660365.73,
+      "maker_pct": 77.64,
+      "taker_pct": 22.36,
+      "maker_fills": 60385,
+      "taker_fills": 491
+    },
+    "exit": {
+      "maker_usdc": 1120719.97,
+      "taker_usdc": 276552.21,
+      "maker_pct": 80.21,
+      "taker_pct": 19.79,
+      "maker_fills": 3367,
+      "taker_fills": 47
+    },
+    "patterns": {
+      "enter_maker_exit_maker": 55,
+      "enter_maker_exit_taker": 17,
+      "enter_taker_exit_taker": 8,
+      "enter_taker_exit_maker": 4
+    },
+    "classified": true
+  },
+  "both_sides": {
+    "n": 81,
+    "rate": 0.1127
+  },
+  "clip_size_usdc": {
+    "median": 1.976,
+    "mean": 415.5088,
+    "p90": 108.4222,
+    "p99": 8559.128,
+    "max": 248000.0
+  },
+  "campaigns": {
+    "n": 8,
+    "pct": 1.11,
+    "avg_entries": 2.25,
+    "pnl": 130448.55,
+    "avg_pnl": 16306.07,
+    "win_rate": 0.625,
+    "single_n": 711,
+    "single_pnl": 13322206.78,
+    "single_avg_pnl": 18737.28
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.5396,
+    "hold_to_resolution_style_n": 615,
+    "redeems_usdc": 28094127.304343987,
+    "merges_usdc": 0.0
+  },
+  "equity": {
+    "final": 4176633.543,
+    "max_drawdown": -1021203.6444,
+    "max_drawdown_pct_of_peak": -1.9504,
+    "longest_drawdown_days": 0,
+    "daily_sharpe_ann": 2.377,
+    "n_days": 112
+  },
+  "contribution": {
+    "top10_winners_pnl": 3274310.35,
+    "top10_winners_share_of_wins_pct": 22.37,
+    "top10_losers_pnl": -668286.89,
+    "top10_losers_share_of_losses_pct": 56.52,
+    "top10_winners": [
+      {
+        "title": "Will the New York Knicks win the 2026 NBA Finals?",
+        "pnl": 600658.75,
+        "hold_s": 375476
+      },
+      {
+        "title": "Hawks vs. Knicks",
+        "pnl": 495581.93,
+        "hold_s": 35470
+      },
+      {
+        "title": "Hornets vs. Thunder",
+        "pnl": 315612.42,
+        "hold_s": 912
+      },
+      {
+        "title": "Will Liverpool FC win on 2026-01-01?",
+        "pnl": 299232.99,
+        "hold_s": 1276
+      },
+      {
+        "title": "Nuggets vs. Mavericks",
+        "pnl": 289219.21,
+        "hold_s": 10340
+      },
+      {
+        "title": "Spread: Patriots (-3.5)",
+        "pnl": 270717.18,
+        "hold_s": 42838
+      },
+      {
+        "title": "Spread: Eagles (-4.5)",
+        "pnl": 261750.14,
+        "hold_s": 20960
+      },
+      {
+        "title": "Spurs vs. Lakers",
+        "pnl": 255573.09,
+        "hold_s": 80508
+      },
+      {
+        "title": "Spread: Broncos (-13.5)",
+        "pnl": 252076.15,
+        "hold_s": 840
+      },
+      {
+        "title": "Spread: Raptors (-2.5)",
+        "pnl": 233888.5,
+        "hold_s": 0
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "UFC Fight Night: Muhammad vs. Machado Garry (Welterweight, Main Card)",
+        "pnl": -29143.07,
+        "hold_s": 57318
+      },
+      {
+        "title": "Will the Seattle Mariners win the 2025 World Series?",
+        "pnl": -29671.92,
+        "hold_s": 462692
+      },
+      {
+        "title": "Champions League Final: 3+ goals?",
+        "pnl": -32532.08,
+        "hold_s": 0
+      },
+      {
+        "title": "Thunder vs. Jazz",
+        "pnl": -39793.93,
+        "hold_s": 3964
+      },
+      {
+        "title": "Eagles vs. Chargers",
+        "pnl": -65540.87,
+        "hold_s": 2680
+      },
+      {
+        "title": "Falcons vs. Vikings",
+        "pnl": -67653.93,
+        "hold_s": 1804
+      },
+      {
+        "title": "Spread: Thunder (-11.5)",
+        "pnl": -84368.74,
+        "hold_s": 1208
+      },
+      {
+        "title": "Chiefs vs. Broncos",
+        "pnl": -87922.18,
+        "hold_s": 820
+      },
+      {
+        "title": "Spread: Pistons (-9.5)",
+        "pnl": -108248.05,
+        "hold_s": 506
+      },
+      {
+        "title": "Pistons vs. Celtics",
+        "pnl": -123412.12,
+        "hold_s": 48760
+      }
+    ],
+    "profit_factor": 21.0256
+  },
+  "adverse_management": {
+    "n_early_adverse": 0,
+    "avg_pnl": null,
+    "median_t_first_sell": null,
+    "median_hold": null
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 23,
+    "avg_pnl": 64298.24,
+    "median_mfe_capture": 1.0,
+    "mean_mfe_capture": 0.7448
+  },
+  "avg_down": {
+    "n_losers": 45,
+    "n_losers_with_red_buys": 9,
+    "pct_losers": 20.0,
+    "total_delta_if_skipped_on_losers": -2007.97,
+    "global_fifo_sim": 64977.34,
+    "global_fifo_never_red_buy": 46914.89,
+    "global_delta": -18062.45
+  },
+  "latency": {
+    "time_to_mfe_median": 18729,
+    "time_to_mfe_p25": 5998,
+    "time_to_mfe_p75": 66642,
+    "time_to_mfe_p90": 180256,
+    "mfe_ge_10c_n": 15,
+    "mfe_ge_10c_within_30s": 0,
+    "mfe_ge_10c_within_60s": 0,
+    "pct_big_within_60s": 0.0
+  },
+  "risk": {
+    "max_inventory_shares": 763421.99,
+    "max_dd": -1021203.6444,
+    "max_dd_pct": -1.9504,
+    "longest_dd_days": 0
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -601.1817,
+    "time_to_mfe_med": 64
+  }
+}

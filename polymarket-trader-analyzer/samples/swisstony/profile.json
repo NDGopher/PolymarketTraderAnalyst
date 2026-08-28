@@ -1,0 +1,51 @@
+{
+  "username": "swisstony",
+  "wallet": "0x204f72f35326db932158cba6adff0b9a1da95e14",
+  "leaderboard_ALL": {
+    "rank": "1",
+    "proxyWallet": "0x204f72f35326db932158cba6adff0b9a1da95e14",
+    "userName": "swisstony",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 1854632178.9554567,
+    "pnl": 23628034.73095604,
+    "profileImage": ""
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/swisstony",
+    "raw_meta": {
+      "net_pnl": 23628150.03,
+      "pos_realized_pnl": 23628150.03,
+      "n_trades": 6395515.0,
+      "total_buy": 13560359.57,
+      "total_sell": 4759630.62,
+      "total_redeem": 19578510.24,
+      "win_rate": 0.5803,
+      "profit_factor": 1.15,
+      "n_markets": 47171.0,
+      "n_buys": 96028.0,
+      "n_sells": 32106.0,
+      "n_redeems": 23137.0
+    },
+    "headline_pnl": 23628150.0,
+    "win_rate_pct": 58,
+    "smart_score": 73,
+    "n_trades": 6395515,
+    "realized_pnl": 23628150.03
+  },
+  "recent_30d": {
+    "activity_rows": 17285,
+    "trades": 16112,
+    "buys": 16112,
+    "sells": 0,
+    "category_mix": {
+      "other": 5087,
+      "sports_match": 5129,
+      "sports_totals": 5896
+    },
+    "first": "2026-07-29T14:13:57+00:00",
+    "last": "2026-07-30T14:13:24+00:00"
+  },
+  "research_note": "Full autopsy skipped due to 203k markets / $1.8B vol; profile from LB + PolyData + 30d tape",
+  "archetype": "oracle_anchored_sports_taker_bot"
+}

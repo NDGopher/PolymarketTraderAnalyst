@@ -20,6 +20,10 @@ TRADERS = [
     "WTSA",
     "SineNooneEI",
     "Anjun",
+    "kch123",
+    "sovereign2013",
+    "DrPufferfish",
+    "ImJustKen",
 ]
 
 
@@ -73,7 +77,7 @@ def write_comparison(masters: list[dict], out_dir: Path) -> Path:
     (out_dir / "comparison.json").write_text(json.dumps(payload, indent=2))
 
     lines = [
-        "# Cross-trader comparison — polika72 · HomeRunHazard · Winnertraders · WTSA",
+        "# Cross-trader comparison — MM/taker research batch",
         "",
         "Preferred PnL = field closest to Polymarket leaderboard ALL (ground truth).",
         "",

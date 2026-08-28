@@ -1,0 +1,816 @@
+{
+  "username": "ImJustKen",
+  "wallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+  "identity": "directional_or_unclear",
+  "market_making": {
+    "score": 35,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Trades both outcomes in 83% of markets (inventory/MM signature)",
+      "High-frequency cadence (median gap 40s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.8273,
+      "fast_roundtrip_rate": 0.0071,
+      "spread_capture_rate": 0.2866,
+      "size_cv": 10.104,
+      "median_gap_seconds": 40,
+      "outcome_counts": {
+        "Yes": 209525,
+        "No": 97878,
+        "Fury": 12,
+        "Putin": 92,
+        "Wagner": 76,
+        "Zuck": 24,
+        "Musk": 85,
+        "Police": 6,
+        "Nahel": 9,
+        "Oppenheimer": 9,
+        "Barbie": 10,
+        "Austin": 9,
+        "Utopia": 5,
+        "Paul": 37,
+        "Diaz": 13,
+        "Jingtao": 8,
+        "Zata": 9,
+        "Danis": 10,
+        "Sprite": 13,
+        "Charlotte": 15,
+        "Pochettino": 5,
+        "Izi Prime": 6,
+        "Zherka": 3,
+        "ten Hag": 3,
+        "Haaland": 9,
+        "Chelsea": 17,
+        "Democrats": 481,
+        "Republicans": 261,
+        "KSI": 11,
+        "Israel": 64,
+        "Palestine": 46,
+        "Killers": 20,
+        "Taylor Swift": 14,
+        "South Africa": 11,
+        "Ngannou": 6,
+        "New Zealand": 5,
+        "Reeves": 22,
+        "Presley": 17,
+        "India": 19,
+        "Australia": 29,
+        "$2200": 12,
+        "$1800": 12,
+        "$2000": 59,
+        "$2500": 3,
+        "United States": 1,
+        "South Korea": 6,
+        "Progrias": 4,
+        "Haney": 3,
+        "Netanyahu": 147,
+        "Sinwar": 117,
+        "Wen-je": 86,
+        "Yu-ih": 81,
+        "Washington": 6,
+        "Michigan": 7,
+        "BTC": 7,
+        "ETH": 207,
+        "Chiefs": 60,
+        "Republican": 909,
+        "Steelers": 107,
+        "Texans": 104,
+        "Dolphins": 128,
+        "Browns": 169,
+        "Packers": 90,
+        "Democratic": 1646,
+        "Rams": 99,
+        "Cowboys": 173,
+        "Bills": 230,
+        "Buccaneers": 144,
+        "DeSantis": 16,
+        "Haley": 15,
+        "Ravens": 200,
+        "Lions": 140,
+        "Pilip": 44,
+        "Suozzi": 17,
+        "49ers": 188,
+        "Du Plessis": 1,
+        "Sinner": 5,
+        "Medvedev": 4,
+        "Pass": 11,
+        "Tails": 11,
+        "Heads": 5,
+        "Biden": 116,
+        "NVIDIA": 29,
+        "Google": 33,
+        "Ansem": 171,
+        "$BITCOIN": 12,
+        "$MOG": 16,
+        "Axe": 15,
+        "Barney": 136,
+        "Alex Wice": 13,
+        "$boden": 2,
+        "Hsaka": 12,
+        "SOL": 171,
+        "SDSU": 6,
+        "Clemson": 3,
+        "Alabama": 2,
+        "UConn": 4,
+        "ISU": 3,
+        "UNC": 2,
+        "Arizona": 1,
+        "Tennessee": 17,
+        "Purdue": 5,
+        "NC St.": 1,
+        "Creighton": 6,
+        "Duke": 8,
+        "Marquette": 6,
+        "Gonzaga": 4,
+        "Houston": 5,
+        "NC State": 7,
+        "Reese": 9,
+        "LSU": 2,
+        "Iowa": 20,
+        "Carolina": 7,
+        "Kyle": 3,
+        "Higher": 12,
+        "Su": 4,
+        "Lower": 6,
+        "Maye": 9,
+        "Pendarovski": 16,
+        "Knicks": 8,
+        "76ers": 2,
+        "Nuggets": 8,
+        "Twolves": 1,
+        "Cavaliers": 8,
+        "Magic": 2,
+        "PSG": 10,
+        "Timberwolves": 47,
+        "Kendrick": 22,
+        "Drake": 10,
+        "Siljanovska": 5,
+        "Pacers": 1,
+        "Dortmund": 174,
+        "Bayern": 1,
+        "Real Madrid": 24,
+        "Boden": 11,
+        "Trump": 742,
+        "$PEPE": 11,
+        "$WIF": 28,
+        "JennerSOL": 10,
+        "JennerETH": 3,
+        "Smic": 29,
+        "BitBoy": 19,
+        "Tate": 14,
+        "Clark": 4,
+        "France": 28,
+        "Portugal": 6,
+        "Switzerland": 25,
+        "England": 186,
+        "Turkey": 1,
+        "Spain": 285,
+        "Netherlands": 24,
+        "True": 11,
+        "False": 8,
+        "Democrat": 63,
+        "Lettuce": 15,
+        "Carter": 1,
+        "Kuhn": 9,
+        "Kamala": 422,
+        "Bears": 87,
+        "Girl": 41,
+        "USA": 10,
+        "Kent": 15,
+        "Perez": 19,
+        "Atalanta": 53,
+        "$4000": 54,
+        "Over": 43,
+        "Under": 37,
+        "Boy": 42,
+        "Harris": 136,
+        "Peltola": 10,
+        "Kamala ": 225,
+        "Begich": 5,
+        "Jets": 187,
+        "Raiders": 34,
+        "Commanders": 106,
+        "Giants": 119,
+        "Jaguars": 124,
+        "Panthers": 69,
+        "Colts": 110,
+        "Chargers": 113,
+        "Mitch": 50,
+        "Vikings": 96,
+        "Rektober": 74,
+        "Eagles": 66,
+        "Falcons": 49,
+        "Broncos": 95,
+        "Seahawks": 56,
+        "Patriots": 56,
+        "Cardinals": 136,
+        "Bengals": 110,
+        "Titans": 70,
+        "Saints": 54,
+        " Blonde Broker": 15,
+        "Ashley": 16,
+        "Harris ": 1,
+        "Bitboy": 4,
+        "Vance": 153,
+        "\u7537\u4eba (Man)": 38,
+        "\u5973\u4eba (Woman)": 33,
+        "Walz": 129,
+        "Iggy": 4,
+        "threadguy": 18,
+        "MINH": 2,
+        "OG Shoots": 6,
+        "Rasmr": 28,
+        "Profits": 24,
+        "Mungo": 4,
+        "Wilson": 10,
+        "Fields": 13
+      }
+    }
+  },
+  "sport_focus": {
+    "category_pnl": {
+      "other": 19220.4,
+      "sports_totals": -16085.98,
+      "crypto": -121139.39,
+      "politics": -7245792.84,
+      "sports_match": -16967287.73
+    },
+    "category_counts": {
+      "sports_match": 907,
+      "politics": 1043,
+      "other": 2878,
+      "crypto": 263,
+      "sports_totals": 166
+    },
+    "slug_tokens": [
+      [
+        "nfl",
+        190
+      ],
+      [
+        "ten",
+        88
+      ],
+      [
+        "nba",
+        57
+      ],
+      [
+        "ucl",
+        18
+      ],
+      [
+        "mma",
+        15
+      ],
+      [
+        "nhl",
+        13
+      ],
+      [
+        "ufc",
+        2
+      ],
+      [
+        "bun",
+        2
+      ]
+    ],
+    "primary": "other"
+  },
+  "counts": {
+    "activity": 370628,
+    "trades": 320389,
+    "buys": 279362,
+    "sells": 41027,
+    "closed_positions": 17542,
+    "open_positions": 953,
+    "markets_traded": 5257,
+    "activity_types": {
+      "MERGE": 43637,
+      "REDEEM": 5390,
+      "TRADE": 320389,
+      "SPLIT": 23,
+      "WITHDRAWAL": 80,
+      "DEPOSIT": 67,
+      "REWARD": 221,
+      "CONVERSION": 821
+    }
+  },
+  "span": {
+    "first_ts": 1670878701,
+    "last_ts": 1729716437,
+    "first_iso": "2022-12-12T20:58:21+00:00",
+    "last_iso": "2024-10-23T20:47:17+00:00",
+    "days_active_span": 680.99
+  },
+  "pnl": {
+    "cashflow_realized": -43822026.8674,
+    "cashflow_core": -44806140.8029,
+    "cashflow_detail": {
+      "buys_usdc": 71990498.81530878,
+      "sells_usdc": 17195487.691492926,
+      "redeems_usdc": 9988870.320941005,
+      "merges_usdc": 53557823.91026923,
+      "splits_usdc": 29989.0,
+      "maker_rebates_usdc": 0.0,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 984113.9354999994,
+      "conversions_usdc": 3980538.3031909983
+    },
+    "closed_positions_sum": -27767466.7259,
+    "closed_wins": 7601,
+    "closed_losses": 9179,
+    "closed_flat": 762,
+    "win_rate": 0.453,
+    "profit_factor": 0.4002,
+    "win_pnl": 18524140.2144,
+    "loss_pnl": -46291606.9403,
+    "total_bought": 317768901.3084,
+    "open_cash_pnl": -16460071.6344,
+    "open_current_value": 1013579.6187,
+    "open_realized_pnl": -631680.4276,
+    "leaderboard_all": {
+      "rank": "44",
+      "proxyWallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "userName": "ImJustKen",
+      "xUsername": "Domahhhh",
+      "verifiedBadge": true,
+      "vol": 499524708.3609771,
+      "pnl": 3291874.409581338,
+      "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-82662-8ddbc8e8-0500-44b7-bb13-c0b32a40a45d.jpg"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "all_checks_passed": false,
+    "primary_source": "polymarket_leaderboard_ALL",
+    "checks": [
+      {
+        "source": "polymarket_leaderboard_ALL",
+        "metric": "pnl",
+        "reference": 3291874.409581338,
+        "ours": -27767466.7259,
+        "ours_field": "closed_positions_sum",
+        "diff": -31059341.1355,
+        "match": false,
+        "volume_reference": 499524708.3609771
+      },
+      {
+        "source": "polydata",
+        "metric": "realized_pnl",
+        "reference": 3289074.81,
+        "ours": -27767466.7259,
+        "ours_field": "closed_positions_sum",
+        "diff": -31056541.5359,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "n_trades",
+        "reference": 606672,
+        "ours": 320389,
+        "diff": -286283,
+        "match": false
+      },
+      {
+        "source": "polydata",
+        "metric": "win_rate",
+        "reference": 0.6133,
+        "ours": 0.453,
+        "diff": -0.1603,
+        "match": false
+      },
+      {
+        "source": "internal",
+        "metric": "cashflow_vs_closed",
+        "reference": -27767466.7259,
+        "ours": -43822026.8674,
+        "diff": -16054560.1415,
+        "match": false,
+        "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+      }
+    ],
+    "ours": {
+      "cashflow_realized": -43822026.8674,
+      "cashflow_core": -44806140.8029,
+      "closed_positions_sum": -27767466.7259,
+      "trades": 320389,
+      "win_rate": 0.453
+    },
+    "polydata": {
+      "source": "https://polydata.pro/traders/ImJustKen",
+      "raw_meta": {
+        "net_pnl": 3289074.81,
+        "pos_realized_pnl": 3289074.81,
+        "n_trades": 606672.0,
+        "total_buy": 2118298.49,
+        "total_sell": 837484.06,
+        "total_redeem": 110608.0,
+        "win_rate": 0.6133,
+        "profit_factor": 0.87,
+        "n_markets": 3647.0,
+        "n_buys": 9842.0,
+        "n_sells": 2260.0,
+        "n_redeems": 10.0
+      },
+      "headline_pnl": 3289075.0,
+      "win_rate_pct": 61,
+      "smart_score": 22,
+      "n_trades": 606672,
+      "realized_pnl": 3289074.81
+    },
+    "leaderboard": {
+      "rank": "44",
+      "proxyWallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "userName": "ImJustKen",
+      "xUsername": "Domahhhh",
+      "verifiedBadge": true,
+      "vol": 499524708.3609771,
+      "pnl": 3291874.409581338,
+      "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-82662-8ddbc8e8-0500-44b7-bb13-c0b32a40a45d.jpg"
+    },
+    "notes": [
+      "Leaderboard ALL is the primary PnL validation target.",
+      "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+      "Spot-checks showed 0 missing unique fills vs Data API day samples."
+    ]
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/ImJustKen",
+    "raw_meta": {
+      "net_pnl": 3289074.81,
+      "pos_realized_pnl": 3289074.81,
+      "n_trades": 606672.0,
+      "total_buy": 2118298.49,
+      "total_sell": 837484.06,
+      "total_redeem": 110608.0,
+      "win_rate": 0.6133,
+      "profit_factor": 0.87,
+      "n_markets": 3647.0,
+      "n_buys": 9842.0,
+      "n_sells": 2260.0,
+      "n_redeems": 10.0
+    },
+    "headline_pnl": 3289075.0,
+    "win_rate_pct": 61,
+    "smart_score": 22,
+    "n_trades": 606672,
+    "realized_pnl": 3289074.81
+  },
+  "leaderboard": {
+    "rank": "44",
+    "proxyWallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+    "userName": "ImJustKen",
+    "xUsername": "Domahhhh",
+    "verifiedBadge": true,
+    "vol": 499524708.3609771,
+    "pnl": 3291874.409581338,
+    "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-82662-8ddbc8e8-0500-44b7-bb13-c0b32a40a45d.jpg"
+  },
+  "hold_time": {
+    "<30s": {
+      "n": 245,
+      "wins": 93,
+      "losses": 145,
+      "win_rate": 0.3908,
+      "total_pnl": -50813.07,
+      "avg_pnl": -207.4,
+      "median_pnl": -1.0
+    },
+    "30s-2m": {
+      "n": 16,
+      "wins": 4,
+      "losses": 10,
+      "win_rate": 0.2857,
+      "total_pnl": -15015.2,
+      "avg_pnl": -938.45,
+      "median_pnl": -2.33
+    },
+    "2-5m": {
+      "n": 18,
+      "wins": 8,
+      "losses": 9,
+      "win_rate": 0.4706,
+      "total_pnl": -9418.72,
+      "avg_pnl": -523.26,
+      "median_pnl": -0.57
+    },
+    "5-15m": {
+      "n": 18,
+      "wins": 8,
+      "losses": 9,
+      "win_rate": 0.4706,
+      "total_pnl": -3525.05,
+      "avg_pnl": -195.84,
+      "median_pnl": -0.12
+    },
+    "15m+": {
+      "n": 4960,
+      "wins": 2571,
+      "losses": 2359,
+      "win_rate": 0.5215,
+      "total_pnl": -24252313.51,
+      "avg_pnl": -4889.58,
+      "median_pnl": 2.08
+    }
+  },
+  "entry_price_band": {
+    "0-20\u00a2": {
+      "n": 1003,
+      "wins": 148,
+      "losses": 841,
+      "win_rate": 0.1496,
+      "total_pnl": -20215081.46,
+      "avg_pnl": -20154.62,
+      "median_pnl": -42.0
+    },
+    "20-40\u00a2": {
+      "n": 1006,
+      "wins": 422,
+      "losses": 583,
+      "win_rate": 0.4199,
+      "total_pnl": -1992145.43,
+      "avg_pnl": -1980.26,
+      "median_pnl": -18.04
+    },
+    "40-60\u00a2": {
+      "n": 2207,
+      "wins": 1385,
+      "losses": 817,
+      "win_rate": 0.629,
+      "total_pnl": -2238783.34,
+      "avg_pnl": -1014.4,
+      "median_pnl": 31.05
+    },
+    "60-80\u00a2": {
+      "n": 600,
+      "wins": 424,
+      "losses": 172,
+      "win_rate": 0.7114,
+      "total_pnl": 263988.01,
+      "avg_pnl": 439.98,
+      "median_pnl": 97.13
+    },
+    "80-100\u00a2": {
+      "n": 430,
+      "wins": 303,
+      "losses": 110,
+      "win_rate": 0.7337,
+      "total_pnl": -54463.06,
+      "avg_pnl": -126.66,
+      "median_pnl": 12.75
+    }
+  },
+  "family": {
+    "Yes/No moneyline": {
+      "n": 5018,
+      "wins": 2540,
+      "losses": 2440,
+      "win_rate": 0.51,
+      "total_pnl": -24267477.04,
+      "avg_pnl": -4836.09,
+      "median_pnl": 0.54
+    },
+    "Other": {
+      "n": 235,
+      "wins": 143,
+      "losses": 89,
+      "win_rate": 0.6164,
+      "total_pnl": -62275.02,
+      "avg_pnl": -265.0,
+      "median_pnl": 20.5
+    },
+    "Over/Under": {
+      "n": 4,
+      "wins": 1,
+      "losses": 3,
+      "win_rate": 0.25,
+      "total_pnl": -1333.49,
+      "avg_pnl": -333.37,
+      "median_pnl": -207.73
+    }
+  },
+  "maker_taker": {
+    "entry": {
+      "maker_usdc": 53538283.7,
+      "taker_usdc": 18452215.12,
+      "maker_pct": 74.37,
+      "taker_pct": 25.63,
+      "maker_fills": 263209,
+      "taker_fills": 16153
+    },
+    "exit": {
+      "maker_usdc": 12183222.88,
+      "taker_usdc": 5012264.81,
+      "maker_pct": 70.85,
+      "taker_pct": 29.15,
+      "maker_fills": 38814,
+      "taker_fills": 2213
+    },
+    "patterns": {
+      "enter_maker_exit_maker": 709,
+      "enter_maker_exit_taker": 493,
+      "enter_taker_exit_maker": 181,
+      "enter_taker_exit_taker": 173
+    },
+    "classified": true
+  },
+  "both_sides": {
+    "n": 4349,
+    "rate": 0.8273
+  },
+  "clip_size_usdc": {
+    "median": 6.269,
+    "mean": 278.3678,
+    "p90": 364.1796,
+    "p99": 5058.4547,
+    "max": 257495.5265
+  },
+  "campaigns": {
+    "n": 79,
+    "pct": 1.5,
+    "avg_entries": 2.09,
+    "pnl": -328879.88,
+    "avg_pnl": -4163.04,
+    "win_rate": 0.4684,
+    "single_n": 5178,
+    "single_pnl": -24002205.68,
+    "single_avg_pnl": -4635.42
+  },
+  "resolution_behavior": {
+    "flattened_before_flag_rate": 0.6761,
+    "hold_to_resolution_style_n": 3690,
+    "redeems_usdc": 9988870.320941005,
+    "merges_usdc": 53557823.91026923
+  },
+  "equity": {
+    "final": 9705808.0429,
+    "max_drawdown": -3612434.0531,
+    "max_drawdown_pct_of_peak": -0.2712,
+    "longest_drawdown_days": 496,
+    "daily_sharpe_ann": 2.49,
+    "n_days": 918
+  },
+  "contribution": {
+    "top10_winners_pnl": 1248933.97,
+    "top10_winners_share_of_wins_pct": 27.62,
+    "top10_losers_pnl": -6940010.04,
+    "top10_losers_share_of_losses_pct": 24.05,
+    "top10_winners": [
+      {
+        "title": "Will Kamala Harris win the 2024 Democratic Presidential Nomination?",
+        "pnl": 326714.68,
+        "hold_s": 17689277
+      },
+      {
+        "title": "Will JD Vance win the 2024 Republican VP nomination?",
+        "pnl": 232267.78,
+        "hold_s": 13365580
+      },
+      {
+        "title": "No change in Fed interest rates after 2024 September meeting?",
+        "pnl": 123657.72,
+        "hold_s": 4588704
+      },
+      {
+        "title": "Fed decreases interest rates by 50+ bps after September 2024 meeting?",
+        "pnl": 105343.08,
+        "hold_s": 4613971
+      },
+      {
+        "title": "Biden drops out of presidential race?",
+        "pnl": 89816.48,
+        "hold_s": 26075004
+      },
+      {
+        "title": "Will another candidate win the 2024 Republican VP nomination?",
+        "pnl": 89328.73,
+        "hold_s": 5711260
+      },
+      {
+        "title": "Will Fed cut interest rates 4 times in 2024?",
+        "pnl": 81513.1,
+        "hold_s": 18476398
+      },
+      {
+        "title": "Will 'Inside Out 2' gross most in 2024?",
+        "pnl": 71576.93,
+        "hold_s": 22121402
+      },
+      {
+        "title": "Fed decreases interest rates by 25 bps after November 2024 meeting?",
+        "pnl": 65890.56,
+        "hold_s": 6834183
+      },
+      {
+        "title": "Will Erdo\u011fan win the 2023 Turkish presidential election?",
+        "pnl": 62824.9,
+        "hold_s": 7522579
+      }
+    ],
+    "top10_losers": [
+      {
+        "title": "Will any other Democratic Politician win the 2024 US Presidential Election?",
+        "pnl": -680019.6,
+        "hold_s": 24425501
+      },
+      {
+        "title": "Will Ron DeSantis win the 2024 US Presidential Election?",
+        "pnl": -685841.98,
+        "hold_s": 23871144
+      },
+      {
+        "title": "Will AOC win the 2024 US Presidential Election?",
+        "pnl": -687759.69,
+        "hold_s": 13941585
+      },
+      {
+        "title": "Will Hillary Clinton win the 2024 US Presidential Election?",
+        "pnl": -688153.04,
+        "hold_s": 18730478
+      },
+      {
+        "title": "Will any other Republican Politician win the 2024 US Presidential Election?",
+        "pnl": -693213.93,
+        "hold_s": 25029975
+      },
+      {
+        "title": "Will Kanye West win the 2024 US Presidential Election?",
+        "pnl": -698953.42,
+        "hold_s": 23294731
+      },
+      {
+        "title": "Will Vivek Ramaswamy win the 2024 US Presidential Election?",
+        "pnl": -700142.5,
+        "hold_s": 15156827
+      },
+      {
+        "title": "Will Bernie Sanders win the 2024 US Presidential Election?",
+        "pnl": -701513.72,
+        "hold_s": 16875396
+      },
+      {
+        "title": "Will Elizabeth Warren win the 2024 US Presidential Election?",
+        "pnl": -702031.32,
+        "hold_s": 15163682
+      },
+      {
+        "title": "Will Chris Christie win the 2024 US Presidential Election?",
+        "pnl": -702380.84,
+        "hold_s": 13756310
+      }
+    ],
+    "profit_factor": 0.4002
+  },
+  "adverse_management": {
+    "n_early_adverse": 0,
+    "avg_pnl": null,
+    "median_t_first_sell": null,
+    "median_hold": null
+  },
+  "favorable_management": {
+    "n_first_sell_up_2c": 321,
+    "avg_pnl": 498.54,
+    "median_mfe_capture": 1.0,
+    "mean_mfe_capture": -1.8993
+  },
+  "avg_down": {
+    "n_losers": 2532,
+    "n_losers_with_red_buys": 1838,
+    "pct_losers": 72.59,
+    "total_delta_if_skipped_on_losers": 252487.45,
+    "global_fifo_sim": -4394396.61,
+    "global_fifo_never_red_buy": -4471458.86,
+    "global_delta": -77062.25
+  },
+  "latency": {
+    "time_to_mfe_median": 2951454,
+    "time_to_mfe_p25": 491848,
+    "time_to_mfe_p75": 9886034,
+    "time_to_mfe_p90": 16457248,
+    "mfe_ge_10c_n": 244,
+    "mfe_ge_10c_within_30s": 0,
+    "mfe_ge_10c_within_60s": 0,
+    "pct_big_within_60s": 0.0
+  },
+  "risk": {
+    "max_inventory_shares": 5577209.17,
+    "max_dd": -3612434.0531,
+    "max_dd_pct": -0.2712,
+    "longest_dd_days": 496
+  },
+  "polika_benchmark": {
+    "identity": "one_sided_informed_scalper",
+    "trades": 19978,
+    "cashflow_pnl": 58204.9839,
+    "win_rate": 0.8008,
+    "entry_taker_pct": 61.62,
+    "both_sides_rate": 0.0068,
+    "median_clip": 11.29,
+    "campaign_pct": 5.85,
+    "max_dd": -601.1817,
+    "time_to_mfe_med": 64
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "wallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+  "username": "ImJustKen",
+  "mode": "full",
+  "duration_s": 891.41,
+  "counts": {
+    "activity": 370628,
+    "trades": 320389,
+    "closed_positions": 17542,
+    "open_positions": 953
+  },
+  "last_activity_ts": 1729716437,
+  "last_trade_ts": 1729716437,
+  "resolved": {
+    "username": "ImJustKen",
+    "wallet": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344"
+  }
+}

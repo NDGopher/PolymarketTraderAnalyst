@@ -1,0 +1,95 @@
+{
+  "ok": false,
+  "all_checks_passed": false,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 3588720.2180176293,
+      "ours": 2198738.7126,
+      "ours_field": "closed_positions_sum",
+      "diff": -1389981.5054,
+      "match": false,
+      "volume_reference": 402071822.9374131
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 3588720.22,
+      "ours": 2198738.7126,
+      "ours_field": "closed_positions_sum",
+      "diff": -1389981.5074,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 1047862,
+      "ours": 119316,
+      "diff": -928546,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.5174,
+      "ours": 0.5115,
+      "diff": -0.0059,
+      "match": true
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 2198738.7126,
+      "ours": -4392612.2757,
+      "diff": -6591350.9883,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": -4392612.2757,
+    "cashflow_core": -4392657.336,
+    "closed_positions_sum": 2198738.7126,
+    "trades": 119316,
+    "win_rate": 0.5115
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/sovereign2013",
+    "raw_meta": {
+      "net_pnl": 3588720.22,
+      "pos_realized_pnl": 3588720.22,
+      "n_trades": 1047862.0,
+      "total_buy": 3908826.42,
+      "total_sell": 23979.14,
+      "total_redeem": 9729697.92,
+      "win_rate": 0.5174,
+      "profit_factor": 1.11,
+      "n_markets": 10353.0,
+      "n_buys": 21149.0,
+      "n_sells": 83.0,
+      "n_redeems": 3813.0
+    },
+    "headline_pnl": 3588720.0,
+    "win_rate_pct": 52,
+    "smart_score": 63,
+    "n_trades": 1047862,
+    "realized_pnl": 3588720.22
+  },
+  "leaderboard": {
+    "rank": "38",
+    "proxyWallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+    "userName": "sovereign2013",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 402071822.9374131,
+    "pnl": 3588720.2180176293,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}
