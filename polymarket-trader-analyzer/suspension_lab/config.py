@@ -32,6 +32,11 @@ GOAL_MIN_PREV_BID_CENTS = 15  # ignore startup / bond noise
 GOAL_ASK_CONFIRM_CENTS = 3  # ask must step up with bid (full book reprice)
 GOAL_SIGNAL_COOLDOWN_MS = 45_000
 GOAL_HIGHLIGHT_SECONDS = 45
+GOAL_ASK_LOOKBACK_MS = 2_500  # ask-led-bid: ask moved in prior ~2.5s
+GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS = 5  # allow small bid drift while ask leads
+BOND_HOLD_BID_CENTS = 88  # bid here -> hold to 99 / resolution, not +7 scalp
+VAR_REVERT_CENTS = 10  # peak-to-trough drop triggers VAR/cancelled alert
+VAR_REVERT_WINDOW_MS = 120_000
 
 
 @dataclass

@@ -7,13 +7,15 @@ from datetime import datetime, timezone
 from tkinter import messagebox, scrolledtext, ttk
 
 from suspension_lab.config import BOND_MID_THRESHOLD, GOAL_HIGHLIGHT_SECONDS, LabConfig
-from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector
+from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector, VarRevertAlert
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.market_labels import MarketLabel, MarketLabelCache
 from suspension_lab.session import SessionLogger
 
 GOAL_BORDER = "#16a34a"
 GOAL_BORDER_WIDTH = 6
+VAR_BORDER = "#dc2626"
+VAR_BORDER_WIDTH = 6
 IDLE_BORDER = "#d1d5db"
 IDLE_BORDER_WIDTH = 2
 
@@ -33,7 +35,9 @@ class SuspensionLabApp:
         self._goal_detector = GoalSignalDetector()
         self._labels = MarketLabelCache(config.tickers, rest_base=config.rest_base)
         self._highlight_until: dict[str, float] = {}
+        self._var_until: dict[str, float] = {}
         self._ticker_panels: dict[str, dict] = {}
+        self._active_tickers: list[str] = list(config.tickers)
 
         self.root = tk.Tk()
         self.root.title("Suspension Edge Lab")
@@ -58,6 +62,20 @@ class SuspensionLabApp:
 
         self.status_var = tk.StringVar(value="Starting…")
         ttk.Label(self.root, textvariable=self.status_var, foreground="#444").pack(anchor="w")
+
+        ticker_frame = ttk.LabelFrame(self.root, text="Tickers (add while running — also logged to books_long.csv)")
+        ticker_frame.pack(fill="x", pady=(4, 4))
+        ticker_row = ttk.Frame(ticker_frame)
+        ticker_row.pack(fill="x", padx=4, pady=4)
+        self._ticker_entry = ttk.Entry(ticker_row)
+        self._ticker_entry.pack(side="left", fill="x", expand=True, padx=(0, 4))
+        self._ticker_entry.insert(0, "Paste Kalshi ticker(s), comma-separated")
+        self._ticker_entry.bind("<FocusIn>", self._clear_ticker_placeholder)
+        ttk.Button(ticker_row, text="Add ticker", command=self._add_ticker_from_ui).pack(side="left")
+        self._active_ticker_var = tk.StringVar(value=self._ticker_summary())
+        ttk.Label(ticker_frame, textvariable=self._active_ticker_var, font=("Consolas", 8)).pack(
+            anchor="w", padx=4, pady=(0, 4)
+        )
 
         books_frame = ttk.LabelFrame(self.root, text="Kalshi orderbooks (live)")
         books_frame.pack(fill="both", expand=True, pady=8)
@@ -108,9 +126,46 @@ class SuspensionLabApp:
 
         help_text = (
             "B = bet365 · F = FanDuel · D = DraftKings · "
-            f"Green box = bid jump goal signal (≥10¢ + size) · Bond skip: {BOND_MID_THRESHOLD:.0%}"
+            "Add tickers above while running (logged to books_long.csv) · "
+            f"Green = bid jump goal signal · Bond skip: {BOND_MID_THRESHOLD:.0%}"
         )
         ttk.Label(self.root, text=help_text, foreground="#666").pack(anchor="w", pady=(4, 0))
+
+    def _clear_ticker_placeholder(self, _event=None) -> None:
+        if self._ticker_entry.get() == "Paste Kalshi ticker(s), comma-separated":
+            self._ticker_entry.delete(0, tk.END)
+
+    def _ticker_summary(self) -> str:
+        if not self._active_tickers:
+            return "Tracking: (none yet — add tickers above)"
+        return f"Tracking {len(self._active_tickers)}: " + ", ".join(
+            t.rsplit("-", 1)[-1] if "-" in t else t for t in self._active_tickers
+        )
+
+    def _add_ticker_from_ui(self) -> None:
+        raw = self._ticker_entry.get().strip()
+        if not raw or raw == "Paste Kalshi ticker(s), comma-separated":
+            return
+        parts = [p.strip() for p in raw.replace("\n", ",").split(",") if p.strip()]
+        added = 0
+        for ticker in parts:
+            if ticker in self._ticker_panels:
+                continue
+            if not self.feed.add_ticker(ticker):
+                continue
+            self.logger.register_ticker(ticker)
+            self._labels.register_ticker(ticker)
+            self._active_tickers.append(ticker)
+            self._create_ticker_panel(ticker)
+            self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
+            added += 1
+        if added:
+            self.log_text.insert(tk.END, f"Added {added} ticker(s): {', '.join(parts)}\n")
+            self.log_text.see(tk.END)
+            self._ticker_entry.delete(0, tk.END)
+            self._active_ticker_var.set(self._ticker_summary())
+        else:
+            messagebox.showinfo("Add ticker", "Ticker already tracked or invalid.")
 
     def _create_ticker_panel(self, ticker: str) -> None:
         label = self._labels.get(ticker)
@@ -190,19 +245,29 @@ class SuspensionLabApp:
         return out
 
     def _on_book(self, ticker: str, book) -> None:
-        signal = self._goal_detector.evaluate(ticker, book)
-        if signal:
-            self.root.after(0, lambda s=signal: self._on_goal_signal(s))
+        result = self._goal_detector.evaluate(ticker, book)
+        if isinstance(result, GoalSignal):
+            self.root.after(0, lambda s=result: self._on_goal_signal(s))
+        elif isinstance(result, VarRevertAlert):
+            self.root.after(0, lambda v=result: self._on_var_alert(v))
         self.root.after(0, self._refresh_display)
 
     def _on_goal_signal(self, signal: GoalSignal) -> None:
         label = self._labels.get(signal.ticker)
         self._highlight_until[signal.ticker] = time.time() + GOAL_HIGHLIGHT_SECONDS
+        self._var_until.pop(signal.ticker, None)
         panel = self._ticker_panels.get(signal.ticker)
         if panel:
             banner: tk.Label = panel["signal_banner"]
+            mode_hint = {
+                "hold_bond": "HOLD to 99¢ / resolution",
+                "scalp": "scalp +7¢ limit",
+                "var_watch": "watch for VAR revert 90s",
+            }.get(signal.exit_mode, signal.exit_mode)
             banner.config(
-                text=f"⚽ GOAL SIGNAL — {signal.summary}",
+                text=f"⚽ GOAL SIGNAL — {signal.summary}\n→ {mode_hint}",
+                fg="#166534",
+                bg="#dcfce7",
             )
             banner.pack(fill="x", pady=(6, 0))
             panel["border"].config(
@@ -219,6 +284,7 @@ class SuspensionLabApp:
             prev_ask=f"{signal.prev_ask:.4f}" if signal.prev_ask is not None else "",
             new_ask=f"{signal.new_ask:.4f}" if signal.new_ask is not None else "",
             reason=signal.reason,
+            exit_mode=signal.exit_mode,
             ts_ms=signal.ts_ms,
         )
         msg = f"{label.display}\n{signal.summary}"
@@ -229,12 +295,39 @@ class SuspensionLabApp:
         except tk.TclError:
             pass
 
+    def _on_var_alert(self, alert: VarRevertAlert) -> None:
+        label = self._labels.get(alert.ticker)
+        self._var_until[alert.ticker] = time.time() + GOAL_HIGHLIGHT_SECONDS
+        self._highlight_until.pop(alert.ticker, None)
+        panel = self._ticker_panels.get(alert.ticker)
+        if panel:
+            banner: tk.Label = panel["signal_banner"]
+            banner.config(
+                text=(
+                    f"⚠️ VAR / CANCELLED? — bid fell {alert.drop_cents}¢ from peak "
+                    f"({alert.peak_bid:.2f}→{alert.current_bid:.2f}) in {alert.seconds_since_signal:.0f}s"
+                ),
+                fg="#991b1b",
+                bg="#fee2e2",
+            )
+            banner.pack(fill="x", pady=(6, 0))
+            panel["border"].config(
+                highlightbackground=VAR_BORDER,
+                highlightthickness=VAR_BORDER_WIDTH,
+            )
+        self.log_text.insert(
+            tk.END,
+            f"VAR ALERT @ {datetime.now().strftime('%H:%M:%S')} — {label.display} — "
+            f"-{alert.drop_cents}c from peak\n",
+        )
+        self.log_text.see(tk.END)
+
     def _on_status(self, msg: str) -> None:
         self.root.after(0, lambda: self.status_var.set(msg))
 
     def _refresh_display(self) -> None:
         now = time.time()
-        for ticker in self.config.tickers:
+        for ticker in list(self.feed.books.keys()):
             book = self.feed.books.get(ticker)
             panel = self._ticker_panels.get(ticker)
             if not book or not panel:
@@ -257,6 +350,9 @@ class SuspensionLabApp:
             panel["body"].config(text=body_text)
 
             until = self._highlight_until.get(ticker, 0)
+            var_until = self._var_until.get(ticker, 0)
+            if var_until > now:
+                continue
             if until <= now:
                 panel["border"].config(
                     highlightbackground=IDLE_BORDER,
@@ -331,7 +427,5 @@ class SuspensionLabApp:
 
 
 def run_app(config: LabConfig) -> None:
-    if not config.tickers:
-        raise SystemExit("At least one ticker required")
     app = SuspensionLabApp(config)
     app.run()

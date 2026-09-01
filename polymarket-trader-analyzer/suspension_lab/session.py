@@ -40,6 +40,7 @@ class SessionLogger:
 
     def __post_init__(self) -> None:
         self.session_dir.mkdir(parents=True, exist_ok=True)
+        self._initial_tickers = list(self.tickers)
         meta = {
             "game_label": self.game_label,
             "tickers": self.tickers,
@@ -67,9 +68,32 @@ class SessionLogger:
                 "prev_ask",
                 "new_ask",
                 "reason",
+                "exit_mode",
             ],
         )
         self._signal_id = 0
+        self._books_long_path = self.session_dir / "books_long.csv"
+        self._init_csv(
+            self._books_long_path,
+            [
+                "ts_ms",
+                "ts_iso",
+                "ticker",
+                "yes_bid",
+                "yes_ask",
+                "yes_mid",
+                "spread_cents",
+                "yes_bid_qty",
+                "yes_ask_qty",
+                "tight_spread",
+                "wide_spread",
+                "untradeable",
+                "b365_state",
+                "fd_state",
+                "dk_state",
+            ],
+        )
+        self._ticker_added_at: dict[str, str] = {}
 
     def bind_book_provider(self, fn) -> None:
         self._get_books = fn
@@ -156,13 +180,57 @@ class SessionLogger:
         ]
 
     def log_book_sample(self, books: dict[str, dict]) -> None:
-        row = [_now_ms(), _iso(_now_ms())]
-        for t in self.tickers:
+        ts = _now_ms()
+        iso = _iso(ts)
+        row = [ts, iso]
+        for t in self._initial_tickers:
             row.extend(self._book_row_values(books.get(t, {})))
         row.extend([self.flags.b365, self.flags.fanduel, self.flags.draftkings])
+        long_rows: list[list[Any]] = []
+        for ticker, b in books.items():
+            long_rows.append(
+                [
+                    ts,
+                    iso,
+                    ticker,
+                    b.get("yes_bid", ""),
+                    b.get("yes_ask", ""),
+                    b.get("yes_mid", ""),
+                    b.get("spread_cents", ""),
+                    b.get("yes_bid_qty", ""),
+                    b.get("yes_ask_qty", ""),
+                    b.get("tight_spread", ""),
+                    b.get("wide_spread", ""),
+                    b.get("untradeable", ""),
+                    self.flags.b365,
+                    self.flags.fanduel,
+                    self.flags.draftkings,
+                ]
+            )
         with self._lock:
             with self._books_path.open("a", newline="", encoding="utf-8") as f:
                 csv.writer(f).writerow(row)
+            if long_rows:
+                with self._books_long_path.open("a", newline="", encoding="utf-8") as f:
+                    csv.writer(f).writerows(long_rows)
+
+    def register_ticker(self, ticker: str) -> None:
+        """Track a ticker added after session start (logged via books_long.csv)."""
+        if ticker in self.tickers:
+            return
+        with self._lock:
+            if ticker not in self.tickers:
+                self.tickers.append(ticker)
+            self._ticker_added_at[ticker] = _iso(_now_ms())
+            meta_path = self.session_dir / "session.json"
+            meta: dict[str, Any] = {}
+            if meta_path.exists():
+                meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            meta["tickers"] = list(self.tickers)
+            additions = meta.get("tickers_added_late", [])
+            additions.append({"ticker": ticker, "added_at": self._ticker_added_at[ticker]})
+            meta["tickers_added_late"] = additions
+            meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
     def toggle_book(self, book: str) -> str:
         mapping = {
@@ -234,6 +302,7 @@ class SessionLogger:
         prev_ask: str,
         new_ask: str,
         reason: str,
+        exit_mode: str = "",
         ts_ms: int | None = None,
     ) -> int:
         ts = ts_ms if ts_ms is not None else _now_ms()
@@ -253,6 +322,7 @@ class SessionLogger:
             prev_ask,
             new_ask,
             reason,
+            exit_mode,
         ]
         with self._lock:
             with self._signals_path.open("a", newline="", encoding="utf-8") as f:

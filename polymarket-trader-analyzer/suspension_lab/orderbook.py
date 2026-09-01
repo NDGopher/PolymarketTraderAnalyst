@@ -168,3 +168,22 @@ class OrderBook:
 
     def full_json(self, depth: int = 20) -> str:
         return json.dumps(self.top_levels(depth), separators=(",", ":"))
+
+    def set_from_top(
+        self,
+        *,
+        bid: str | Decimal,
+        ask: str | Decimal,
+        bid_qty: str | Decimal = "0",
+        ask_qty: str | Decimal = "0",
+        updated_ms: int,
+    ) -> None:
+        """Seed book from top-of-book snapshot (replay / REST)."""
+        self.yes_bids.clear()
+        self.no_bids.clear()
+        if bid not in ("", None):
+            self.yes_bids[_price_key(bid)] = _d(bid_qty)
+        if ask not in ("", None):
+            no_price = Decimal(1) - _d(ask)
+            self.no_bids[_price_key(no_price)] = _d(ask_qty)
+        self.updated_ms = updated_ms

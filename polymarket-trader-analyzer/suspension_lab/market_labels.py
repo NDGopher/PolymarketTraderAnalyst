@@ -113,6 +113,23 @@ class MarketLabelCache:
             if on_update:
                 on_update(ticker, label)
 
+    def register_ticker(self, ticker: str) -> None:
+        with self._lock:
+            if ticker not in self._labels:
+                self._labels[ticker] = MarketLabel.fallback(ticker)
+
+    def fetch_one_async(self, ticker: str, on_update=None) -> threading.Thread:
+        def _run() -> None:
+            label = fetch_market_label(ticker, rest_base=self._rest_base, session=self._session)
+            with self._lock:
+                self._labels[ticker] = label
+            if on_update:
+                on_update(ticker, label)
+
+        thread = threading.Thread(target=_run, name=f"label-{ticker[:12]}", daemon=True)
+        thread.start()
+        return thread
+
     def load_all_async(self, on_update=None) -> threading.Thread:
         thread = threading.Thread(
             target=self.load_all,
