@@ -79,6 +79,28 @@ class OrderBook:
         yes_ask = Decimal(1) - _d(no_bid_price)
         return yes_ask, self.no_bids[no_bid_price]
 
+    def best_no_bid(self) -> tuple[Decimal | None, Decimal]:
+        if not self.no_bids:
+            return None, Decimal(0)
+        price = max(self.no_bids, key=lambda p: _d(p))
+        return _d(price), self.no_bids[price]
+
+    def best_no_ask(self) -> tuple[Decimal | None, Decimal]:
+        """Implied NO ask = 1 - YES bid (lift NO by selling YES)."""
+        yes_bid, yes_bid_qty = self.best_yes_bid()
+        if yes_bid is None:
+            return None, Decimal(0)
+        return Decimal(1) - yes_bid, yes_bid_qty
+
+    def no_asks(self, depth: int = 10) -> list[list[str]]:
+        """NO asks derived from YES bids (inverse prices)."""
+        levels: list[tuple[Decimal, Decimal]] = []
+        for yes_price, qty in self.yes_bids.items():
+            no_ask = Decimal(1) - _d(yes_price)
+            levels.append((no_ask, qty))
+        levels.sort(key=lambda x: x[0])
+        return [[str(p), str(q)] for p, q in levels[:depth]]
+
     def yes_mid(self) -> Decimal | None:
         bid, _ = self.best_yes_bid()
         ask, _ = self.best_yes_ask()
@@ -130,20 +152,26 @@ class OrderBook:
         no_sorted = sorted(self.no_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
         bid, bid_qty = self.best_yes_bid()
         ask, ask_qty = self.best_yes_ask()
+        no_bid, no_bid_qty = self.best_no_bid()
+        no_ask, no_ask_qty = self.best_no_ask()
         sp = self.spread()
         sp_cents = self.spread_cents()
         tight = sp_cents is not None and sp_cents <= TIGHT_SPREAD_CENTS
         wide = sp_cents is not None and sp_cents >= WIDE_SPREAD_CENTS
         bond = self.is_bond()
         suggested_bid = ""
+        suggested_bid_plus_1c = ""
         if bid is not None:
             candidate = bid + Decimal("0.02")
             if ask is not None and not tight:
-                # Wide book: bid +2¢ but never cross the ask (don't hit 65 on a 42 bid)
                 candidate = min(candidate, ask - Decimal("0.01"))
             elif ask is not None:
                 candidate = min(candidate, ask)
             suggested_bid = str(max(candidate, bid))
+            plus1 = bid + Decimal("0.01")
+            if ask is not None:
+                plus1 = min(plus1, ask - Decimal("0.01")) if not tight else min(plus1, ask)
+            suggested_bid_plus_1c = str(max(plus1, bid))
         return {
             "ticker": self.ticker,
             "yes_bid": str(bid) if bid is not None else "",
@@ -159,10 +187,16 @@ class OrderBook:
             "wide_spread": wide,
             "untradeable": bond or wide or sp is None,
             "suggested_bid_plus_2c": suggested_bid,
+            "suggested_bid_plus_1c": suggested_bid_plus_1c,
             "is_bond": bond,
+            "no_bid": str(no_bid) if no_bid is not None else "",
+            "no_ask": str(no_ask) if no_ask is not None else "",
+            "no_bid_qty": str(no_bid_qty),
+            "no_ask_qty": str(no_ask_qty),
             "yes_bids": [[p, str(q)] for p, q in yes_sorted],
             "yes_asks": self.yes_asks(depth),
             "no_bids": [[p, str(q)] for p, q in no_sorted],
+            "no_asks": self.no_asks(depth),
             "updated_ms": self.updated_ms,
         }
 

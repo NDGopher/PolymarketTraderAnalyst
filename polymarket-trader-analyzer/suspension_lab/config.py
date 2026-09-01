@@ -38,6 +38,10 @@ BOND_HOLD_BID_CENTS = 88  # bid here -> hold to 99 / resolution, not +7 scalp
 VAR_REVERT_CENTS = 10  # peak-to-trough drop triggers VAR/cancelled alert
 VAR_REVERT_WINDOW_MS = 120_000
 
+# Paper auto-trader (off by default — set LAB_TRADER_ENABLED=1 to paper-trade)
+TRADER_DEFAULT_CONTRACTS = 50
+TRADER_DEFAULT_BID_OFFSET_CENTS = 1
+
 
 @dataclass
 class LabConfig:

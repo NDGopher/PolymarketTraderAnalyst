@@ -34,8 +34,10 @@ class TradeEntry:
     ts_iso: str
     ticker: str
     entry_cents: int
+    signal_bid_cents: int
     exit_mode: str
     bid_jump_cents: int
+    entry_offset_cents: int = 0
 
 
 @dataclass
@@ -53,7 +55,9 @@ class TradeResult:
         return self.pnl_cents / 100.0
 
 
-def _load_tape(session_dir: Path) -> tuple[dict[str, list[TapePoint]], list[TradeEntry]]:
+def _load_tape(
+    session_dir: Path, *, entry_offset_cents: int = 0
+) -> tuple[dict[str, list[TapePoint]], list[TradeEntry]]:
     books_path = session_dir / "books.csv"
     with books_path.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -96,14 +100,18 @@ def _load_tape(session_dir: Path) -> tuple[dict[str, list[TapePoint]], list[Trad
             )
             result = detectors[prefix].evaluate(prefix, book)
             if isinstance(result, GoalSignal):
+                signal_cents = int(round(result.new_bid * 100))
+                entry_cents = min(signal_cents + entry_offset_cents, 99)
                 entries.append(
                     TradeEntry(
                         ts_ms=ts_ms,
                         ts_iso=row["ts_iso"],
                         ticker=prefix,
-                        entry_cents=int(round(result.new_bid * 100)),
+                        entry_cents=entry_cents,
+                        signal_bid_cents=signal_cents,
                         exit_mode=result.exit_mode,
                         bid_jump_cents=result.bid_jump_cents,
+                        entry_offset_cents=entry_offset_cents,
                     )
                 )
     return tape, entries
@@ -363,12 +371,13 @@ def _simulate_recommended(entry: TradeEntry, tape: list[TapePoint]) -> TradeResu
     return _simulate_time_collar(entry, tape, stall_sec=20.0, progress_min_cents=3)
 
 
-def backtest_session(session_dir: Path) -> str:
-    tape, entries = _load_tape(session_dir)
+def backtest_session(session_dir: Path, *, entry_offset_cents: int = 0) -> str:
+    tape, entries = _load_tape(session_dir, entry_offset_cents=entry_offset_cents)
     lines: list[str] = []
     lines.append(f"# Exit backtest: {session_dir.name}")
     lines.append("")
-    lines.append(f"Goal signals detected: **{len(entries)}**")
+    offset_label = f"+{entry_offset_cents}c" if entry_offset_cents else "join bid"
+    lines.append(f"Entry assumption: **{offset_label}** on signal bid")
     lines.append("")
 
     strategies = ["limit_+7c", "hold_bond", "time_collar_20s", "var_watch_collar", "recommended"]
@@ -379,7 +388,8 @@ def backtest_session(session_dir: Path) -> str:
         short = _short_ticker(entry.ticker)
         lines.append(f"## Trade {i}: {short} @ {entry.ts_iso[:19]}")
         lines.append(
-            f"- Entry: **{entry.entry_cents}¢** | jump +{entry.bid_jump_cents}¢ | mode: `{entry.exit_mode}`"
+            f"- Entry: **{entry.entry_cents}¢** (signal {entry.signal_bid_cents}¢) | "
+            f"jump +{entry.bid_jump_cents}¢ | mode: `{entry.exit_mode}`"
         )
         markout_parts = []
         for sec in (15, 20, 25, 30):
@@ -426,9 +436,10 @@ def backtest_session(session_dir: Path) -> str:
     return "\n".join(lines)
 
 
-def run_backtest(session_dir: Path) -> Path:
-    report = backtest_session(session_dir)
-    out = session_dir / "exit_backtest.md"
+def run_backtest(session_dir: Path, *, entry_offset_cents: int = 0) -> Path:
+    report = backtest_session(session_dir, entry_offset_cents=entry_offset_cents)
+    suffix = f"_bidplus{entry_offset_cents}" if entry_offset_cents else ""
+    out = session_dir / f"exit_backtest{suffix}.md"
     out.write_text(report, encoding="utf-8")
     return out
 
@@ -437,9 +448,10 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 2:
-        print("Usage: python -m suspension_lab.backtest_exits <session_folder>")
+        print("Usage: python -m suspension_lab.backtest_exits <session_folder> [bid_offset_cents]")
         raise SystemExit(1)
     folder = Path(sys.argv[1]).resolve()
-    print(backtest_session(folder))
-    path = run_backtest(folder)
+    offset = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    print(backtest_session(folder, entry_offset_cents=offset))
+    path = run_backtest(folder, entry_offset_cents=offset)
     print(f"\nSaved: {path}")

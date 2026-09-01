@@ -60,44 +60,47 @@ def load_session(session_dir: Path) -> tuple[dict, list[LabEvent], list[BookRow]
     tickers: list[str] = meta.get("tickers", [])
 
     events: list[LabEvent] = []
-    with (session_dir / "events.csv").open(encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        headers = reader.fieldnames or []
-        prefixes = _ticker_prefixes(headers) or [t.replace(",", "_") for t in tickers]
+    events_path = session_dir / "events.csv"
+    prefixes: list[str] = []
+    if events_path.exists():
+        with events_path.open(encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            headers = reader.fieldnames or []
+            prefixes = _ticker_prefixes(headers) or [t.replace(",", "_") for t in tickers]
 
-        for row in reader:
-            td: dict[str, dict[str, Any]] = {}
-            mo: dict[str, dict[int, dict[str, Any]]] = {}
-            for prefix in prefixes:
-                td[prefix] = {
-                    "yes_bid": row.get(f"{prefix}_yes_bid", ""),
-                    "yes_ask": row.get(f"{prefix}_yes_ask", ""),
-                    "yes_mid": _f(row.get(f"{prefix}_yes_mid")),
-                    "spread_cents": row.get(f"{prefix}_spread_cents", ""),
-                    "wide_spread": _bool(row.get(f"{prefix}_wide_spread")),
-                    "tight_spread": _bool(row.get(f"{prefix}_tight_spread")),
-                    "untradeable": _bool(row.get(f"{prefix}_untradeable")),
-                    "suggested_bid": row.get(f"{prefix}_suggested_bid_plus_2c", ""),
-                }
-                mo[prefix] = {}
-                for sec in MARKOUT_SECONDS:
-                    mo[prefix][sec] = {
-                        "yes_mid": _f(row.get(f"{prefix}_mid_{sec}s")),
-                        "spread_cents": row.get(f"{prefix}_spread_cents_{sec}s", ""),
+            for row in reader:
+                td: dict[str, dict[str, Any]] = {}
+                mo: dict[str, dict[int, dict[str, Any]]] = {}
+                for prefix in prefixes:
+                    td[prefix] = {
+                        "yes_bid": row.get(f"{prefix}_yes_bid", ""),
+                        "yes_ask": row.get(f"{prefix}_yes_ask", ""),
+                        "yes_mid": _f(row.get(f"{prefix}_yes_mid")),
+                        "spread_cents": row.get(f"{prefix}_spread_cents", ""),
+                        "wide_spread": _bool(row.get(f"{prefix}_wide_spread")),
+                        "tight_spread": _bool(row.get(f"{prefix}_tight_spread")),
+                        "untradeable": _bool(row.get(f"{prefix}_untradeable")),
+                        "suggested_bid": row.get(f"{prefix}_suggested_bid_plus_2c", ""),
                     }
+                    mo[prefix] = {}
+                    for sec in MARKOUT_SECONDS:
+                        mo[prefix][sec] = {
+                            "yes_mid": _f(row.get(f"{prefix}_mid_{sec}s")),
+                            "spread_cents": row.get(f"{prefix}_spread_cents_{sec}s", ""),
+                        }
 
-            events.append(
-                LabEvent(
-                    event_id=int(row["event_id"]),
-                    ts_ms=int(row["event_ts_ms"]),
-                    event_type=row["event_type"],
-                    b365=row["b365_state"],
-                    fd=row["fd_state"],
-                    dk=row["dk_state"],
-                    ticker_data=td,
-                    markouts=mo,
+                events.append(
+                    LabEvent(
+                        event_id=int(row["event_id"]),
+                        ts_ms=int(row["event_ts_ms"]),
+                        event_type=row["event_type"],
+                        b365=row["b365_state"],
+                        fd=row["fd_state"],
+                        dk=row["dk_state"],
+                        ticker_data=td,
+                        markouts=mo,
+                    )
                 )
-            )
 
     books: list[BookRow] = []
     with (session_dir / "books.csv").open(encoding="utf-8") as f:

@@ -18,38 +18,52 @@ START_SUSPENSION_LAB.bat
    ```
 3. Run the launcher again. Each run creates a new session folder.
 
-**Runtime tickers:** Use the text box at the top of the UI to add Kalshi tickers while the session runs. Late adds log to `books_long.csv` (wide `books.csv` stays frozen to session-start tickers).
+**Runtime tickers:** Use the text box at the top of the UI to add Kalshi tickers while the session runs.
+
+## Notes (replaces book flags)
+
+- Type observations in the **Notes** pad at the bottom
+- Click **Add note** (or press Enter in the note field) to append a timestamped line
+- You can also type freely in the notes area — everything saves to `notes.txt` on close
+
+## Paper auto-trader (no live orders yet)
+
+Enable the checkbox in the UI, or set in `.env`:
+
+```env
+LAB_TRADER_ENABLED=1
+LAB_TRADER_CONTRACTS=50
+LAB_TRADER_BID_OFFSET_CENTS=1
+```
+
+- Enters at **signal bid + 1¢** (queue priority)
+- **Mode-aware exits:** hold_bond / scalp / var_watch
+- **VAR protection:** exits on revert, limbo, trailing stop
+- Logs to `paper_trades.csv` in the session folder
 
 ## Close session
 
 | Button | Action |
 |--------|--------|
-| **Yes** | Save logs under `data/suspension_lab/sessions/` |
+| **Yes** | Save logs + notes under `data/suspension_lab/sessions/` |
 | **No** | Delete this session folder |
 | **Cancel** | Keep running |
 
 ## Live goal signal (green box)
 
-When a ticker’s **bid jumps ≥10¢ in one update** with **≥100 contracts** and the **ask confirms** (full book reprice, not ask-only scares), that market panel gets a **green border** and a goal banner.
+When a ticker’s **bid jumps ≥10¢** with **≥100 contracts** and **ask confirms**, the panel gets a green border.
 
-- Human-readable title from Kalshi API (e.g. `EFL Championship — Swansea vs Watford — Over 3.5`)
-- Ticker still shown underneath
-- Signals logged to `goal_signals.csv` in the session folder
-- 45s cooldown per ticker to avoid repeat flashes
-
-Tape-only sessions work — no B/F clicking required.
+- Shows **YES and NO** sides of the book
+- Signals logged to `goal_signals.csv`
+- VAR revert → red border
 
 ## Replay & backtest (after a session)
 
 ```powershell
-# Re-run goal-signal detector on saved tape
 python -m suspension_lab.replay_goal_signals data/suspension_lab/sessions/YOUR_SESSION
-
-# Simulate exit strategies (limit +7¢, hold bond, 20s time collar, recommended)
-python -m suspension_lab.backtest_exits data/suspension_lab/sessions/YOUR_SESSION
+python -m suspension_lab.backtest_exits data/suspension_lab/sessions/YOUR_SESSION 0    # join bid
+python -m suspension_lab.backtest_exits data/suspension_lab/sessions/YOUR_SESSION 1    # bid+1¢
+python -m suspension_lab.analyze_fills data/suspension_lab/sessions/YOUR_SESSION 100
 ```
 
-Exit modes on the green banner:
-- **hold_bond** — line crossing / near-won; hold toward 99¢
-- **scalp** — open line (e.g. 1-1 → 2-1 on O2.5); take +7¢, don't need 95¢
-- **var_watch** — suspicious spike; 25s limbo check + trailing stop
+Exit modes: **hold_bond** (near-won), **scalp** (+7¢), **var_watch** (VAR protection).

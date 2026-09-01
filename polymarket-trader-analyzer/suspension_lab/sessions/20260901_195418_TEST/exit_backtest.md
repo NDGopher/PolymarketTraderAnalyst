@@ -1,9 +1,9 @@
 # Exit backtest: 20260901_195418_TEST
 
-Goal signals detected: **7**
+Entry assumption: **join bid** on signal bid
 
 ## Trade 1: 26SEP01WHUWOL-4 @ 2026-09-01T19:56:05
-- Entry: **90¢** | jump +11¢ | mode: `hold_bond`
+- Entry: **90¢** (signal 90¢) | jump +11¢ | mode: `hold_bond`
 - Markouts: +15s: 98¢ (+8¢)
 
 | Strategy | Exit | P&L | Reason |
@@ -14,7 +14,7 @@ Goal signals detected: **7**
 | recommended | 98¢ @ 17s | **+8¢** | bond @ 98c |
 
 ## Trade 2: 26SEP01WHUWOL-5 @ 2026-09-01T19:56:05
-- Entry: **64¢** | jump +21¢ | mode: `scalp`
+- Entry: **64¢** (signal 64¢) | jump +21¢ | mode: `scalp`
 - Markouts: +15s: 73¢ (+9¢) | +20s: 73¢ (+9¢) | +25s: 73¢ (+9¢) | +30s: 74¢ (+10¢)
 
 | Strategy | Exit | P&L | Reason |
@@ -25,7 +25,7 @@ Goal signals detected: **7**
 | recommended | 71¢ @ 6s | **+7¢** | scalp limit +7c |
 
 ## Trade 3: 26SEP01FCZYB-6 @ 2026-09-01T19:57:55
-- Entry: **60¢** | jump +20¢ | mode: `scalp`
+- Entry: **60¢** (signal 60¢) | jump +20¢ | mode: `scalp`
 - Markouts: +15s: 41¢ (-19¢) | +20s: 41¢ (-19¢) | +25s: 41¢ (-19¢) | +30s: 40¢ (-20¢)
 
 | Strategy | Exit | P&L | Reason |
@@ -36,7 +36,7 @@ Goal signals detected: **7**
 | recommended | 41¢ @ 20s | **-19¢** | stall @ 20s (peak 60c, bid 41c) |
 
 ## Trade 4: 26SEP01FCZYB-6 @ 2026-09-01T20:06:08
-- Entry: **46¢** | jump +20¢ | mode: `scalp`
+- Entry: **46¢** (signal 46¢) | jump +20¢ | mode: `scalp`
 - Markouts: +15s: 53¢ (+7¢) | +20s: 55¢ (+9¢) | +25s: 56¢ (+10¢) | +30s: 56¢ (+10¢)
 
 | Strategy | Exit | P&L | Reason |
@@ -47,7 +47,7 @@ Goal signals detected: **7**
 | recommended | 53¢ @ 12s | **+7¢** | scalp limit +7c |
 
 ## Trade 5: 26SEP01WHUWOL-5 @ 2026-09-01T20:07:30
-- Entry: **88¢** | jump +17¢ | mode: `hold_bond`
+- Entry: **88¢** (signal 88¢) | jump +17¢ | mode: `hold_bond`
 
 | Strategy | Exit | P&L | Reason |
 |----------|------|-----|--------|
@@ -57,7 +57,7 @@ Goal signals detected: **7**
 | recommended | 92¢ @ 120s | **+4¢** | held 120s |
 
 ## Trade 6: 26SEP01BCSOU-3 @ 2026-09-01T20:13:50
-- Entry: **58¢** | jump +18¢ | mode: `scalp`
+- Entry: **58¢** (signal 58¢) | jump +18¢ | mode: `scalp`
 - Markouts: +15s: 64¢ (+6¢) | +20s: 64¢ (+6¢) | +25s: 66¢ (+8¢) | +30s: 68¢ (+10¢)
 
 | Strategy | Exit | P&L | Reason |
@@ -68,7 +68,7 @@ Goal signals detected: **7**
 | recommended | 65¢ @ 24s | **+7¢** | scalp limit +7c |
 
 ## Trade 7: 26SEP01FCZYB-6 @ 2026-09-01T20:14:51
-- Entry: **80¢** | jump +31¢ | mode: `var_watch`
+- Entry: **80¢** (signal 80¢) | jump +31¢ | mode: `var_watch`
 - Markouts: +15s: 82¢ (+2¢) | +20s: 83¢ (+3¢) | +25s: 81¢ (+1¢) | +30s: 81¢ (+1¢)
 
 | Strategy | Exit | P&L | Reason |
