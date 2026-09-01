@@ -51,6 +51,12 @@ class SuspensionLabApp:
         self.root.bind("<KeyPress-F>", lambda _e: self._toggle("fanduel"))
         self.root.bind("<KeyPress-d>", lambda _e: self._toggle("draftkings"))
         self.root.bind("<KeyPress-D>", lambda _e: self._toggle("draftkings"))
+        self.root.bind("<KeyPress-p>", lambda _e: self._mark_event("PENALTY_REVIEW"))
+        self.root.bind("<KeyPress-P>", lambda _e: self._mark_event("PENALTY_REVIEW"))
+        self.root.bind("<KeyPress-n>", lambda _e: self._mark_event("NO_PENALTY"))
+        self.root.bind("<KeyPress-N>", lambda _e: self._mark_event("NO_PENALTY"))
+        self.root.bind("<KeyPress-v>", lambda _e: self._mark_event("VAR_CHECK"))
+        self.root.bind("<KeyPress-V>", lambda _e: self._mark_event("VAR_CHECK"))
 
         self._labels.load_all_async(on_update=self._on_label_loaded)
 
@@ -119,6 +125,18 @@ class SuspensionLabApp:
         )
         ttk.Label(btn_row, textvariable=self.dk_var, width=8, font=("Consolas", 12, "bold")).pack(side="left")
 
+        marker_row = ttk.Frame(flags_frame)
+        marker_row.pack(fill="x", pady=(0, 4))
+        ttk.Button(marker_row, text="Penalty review (P)", command=lambda: self._mark_event("PENALTY_REVIEW"), width=20).pack(
+            side="left", padx=4
+        )
+        ttk.Button(marker_row, text="No penalty (N)", command=lambda: self._mark_event("NO_PENALTY"), width=16).pack(
+            side="left", padx=4
+        )
+        ttk.Button(marker_row, text="VAR check (V)", command=lambda: self._mark_event("VAR_CHECK"), width=14).pack(
+            side="left", padx=4
+        )
+
         log_frame = ttk.LabelFrame(self.root, text="Event log")
         log_frame.pack(fill="both", expand=True, pady=4)
         self.log_text = scrolledtext.ScrolledText(log_frame, height=8, font=("Consolas", 9))
@@ -126,6 +144,7 @@ class SuspensionLabApp:
 
         help_text = (
             "B = bet365 · F = FanDuel · D = DraftKings · "
+            "P = penalty review · N = no penalty · V = VAR check · "
             "Add tickers above while running (logged to books_long.csv) · "
             f"Green = bid jump goal signal · Bond skip: {BOND_MID_THRESHOLD:.0%}"
         )
@@ -370,6 +389,12 @@ class SuspensionLabApp:
     def _toggle(self, book: str) -> None:
         event_type = self.logger.toggle_book(book)
         self._sync_flag_labels()
+        msg = f"{event_type} @ {datetime.now().strftime('%H:%M:%S.%f')[:-3]}"
+        self.log_text.insert(tk.END, msg + "\n")
+        self.log_text.see(tk.END)
+
+    def _mark_event(self, event_type: str) -> None:
+        self.logger.log_custom_event(event_type)
         msg = f"{event_type} @ {datetime.now().strftime('%H:%M:%S.%f')[:-3]}"
         self.log_text.insert(tk.END, msg + "\n")
         self.log_text.see(tk.END)

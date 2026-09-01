@@ -254,6 +254,10 @@ class SessionLogger:
         self.log_event(event_type)
         return event_type
 
+    def log_custom_event(self, event_type: str) -> int:
+        """Log a timestamped marker (penalty review, VAR, etc.) with full book snapshot."""
+        return self.log_event(event_type)
+
     def log_event(self, event_type: str, *, extra_books: dict[str, dict] | None = None) -> int:
         books = extra_books or (self._get_books() if self._get_books else {})
         ts = _now_ms()
