@@ -8,21 +8,16 @@ import typer
 from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
 from suspension_lab.env_loader import load_project_env, project_root
 
-# Load .env before Typer parses anything (LAB_TICKERS, LAB_GAME, Kalshi keys)
 load_project_env()
 
-app = typer.Typer(add_completion=False, no_args_is_help=True, help="Manual suspension edge lab")
 
-
-@app.callback(invoke_without_command=True)
 def main(
-    ctx: typer.Context,
     tickers: str = typer.Option(
         "",
         "--tickers",
         "-t",
         envvar="LAB_TICKERS",
-        help="Comma-separated Kalshi tickers. Or set LAB_TICKERS in .env",
+        help="Comma-separated Kalshi tickers (or set LAB_TICKERS in .env)",
     ),
     game: str = typer.Option("", "--game", "-g", envvar="LAB_GAME", help="Match label"),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
@@ -35,28 +30,25 @@ def main(
     ),
 ) -> None:
     """Launch the manual B/F click logger with live Kalshi orderbooks."""
-    if ctx.invoked_subcommand is not None:
-        return
+    load_project_env()
 
     ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
     if not ticker_str:
         typer.echo(
-            "No tickers provided.\n"
-            "  Add LAB_TICKERS=TICKER1,TICKER2 to your .env file\n"
-            "  Or: python -m suspension_lab.cli --tickers TICKER1,TICKER2",
+            "No tickers found.\n"
+            "Add this to your .env file:\n"
+            "  LAB_TICKERS=TICKER1,TICKER2,TICKER3\n"
+            "  LAB_GAME=Your-Game-Name",
             err=True,
         )
         raise typer.Exit(1)
 
     if ticker_str.lower() == "run":
-        typer.echo(
-            "Tickers was set to 'run' by mistake. Set LAB_TICKERS in .env to your Kalshi tickers.",
-            err=True,
-        )
+        typer.echo("LAB_TICKERS must be Kalshi tickers, not the word 'run'.", err=True)
         raise typer.Exit(1)
 
     ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()]
-    game_label = game or os.environ.get("LAB_GAME", "")
+    game_label = (game or os.environ.get("LAB_GAME", "")).strip()
 
     config = LabConfig.from_env(
         ticker_list,
@@ -86,4 +78,4 @@ def main(
 
 
 if __name__ == "__main__":
-    app()
+    typer.run(main)
