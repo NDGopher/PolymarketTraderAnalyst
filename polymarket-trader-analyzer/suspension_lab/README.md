@@ -25,3 +25,14 @@ START_SUSPENSION_LAB.bat
 | **Yes** | Save logs under `data/suspension_lab/sessions/` |
 | **No** | Delete this session folder |
 | **Cancel** | Keep running |
+
+## Live goal signal (green box)
+
+When a ticker’s **bid jumps ≥10¢ in one update** with **≥100 contracts** and the **ask confirms** (full book reprice, not ask-only scares), that market panel gets a **green border** and a goal banner.
+
+- Human-readable title from Kalshi API (e.g. `EFL Championship — Swansea vs Watford — Over 3.5`)
+- Ticker still shown underneath
+- Signals logged to `goal_signals.csv` in the session folder
+- 45s cooldown per ticker to avoid repeat flashes
+
+Tape-only sessions work — no B/F clicking required.
