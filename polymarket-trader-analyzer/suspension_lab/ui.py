@@ -51,7 +51,7 @@ class SuspensionLabApp:
         self.book_text = scrolledtext.ScrolledText(books_frame, height=16, font=("Consolas", 10))
         self.book_text.pack(fill="both", expand=True)
 
-        flags_frame = ttk.LabelFrame(self.root, text="Book flags — click or press B / F / D")
+        flags_frame = ttk.LabelFrame(self.root, text="Book flags - click or press B / F / D")
         flags_frame.pack(fill="x", pady=4)
         self.b365_var = tk.StringVar(value="UP")
         self.fd_var = tk.StringVar(value="UP")
@@ -105,9 +105,9 @@ class SuspensionLabApp:
                 continue
             lv = book.top_levels()
             self._book_cache[ticker] = lv
-            bond = " [BOND — skip]" if lv.get("is_bond") else ""
-            wide = " [WIDE — no taker]" if lv.get("wide_spread") else ""
-            tight = " [TIGHT — ok]" if lv.get("tight_spread") else ""
+            bond = " [BOND - skip]" if lv.get("is_bond") else ""
+            wide = " [WIDE - no taker]" if lv.get("wide_spread") else ""
+            tight = " [TIGHT - ok]" if lv.get("tight_spread") else ""
             lines.append(
                 f"{ticker}{bond}{wide}{tight}\n"
                 f"  bid {lv.get('yes_bid','?')} x {lv.get('yes_bid_qty','?')} (3lvl {lv.get('bid_depth_3','?')})  |  "
@@ -148,10 +148,40 @@ class SuspensionLabApp:
         self.root.mainloop()
 
     def _on_close(self) -> None:
-        if messagebox.askokcancel("Quit", "Stop session and save logs?"):
-            self._sample_stop.set()
-            self.feed.stop()
-            self.root.destroy()
+        events = self.logger.event_count
+        session_name = self.logger.session_dir.name
+        hint = ""
+        if events == 0:
+            hint = "\n\nNo B/F clicks logged - Delete is fine for empty sessions."
+
+        choice = messagebox.askyesnocancel(
+            "End session",
+            f"Session: {session_name}\n"
+            f"Events logged: {events}\n"
+            f"Folder: {self.logger.session_dir}"
+            f"{hint}\n\n"
+            "Yes = Save logs\n"
+            "No = Delete this session folder\n"
+            "Cancel = Keep running",
+        )
+        if choice is None:
+            return
+
+        self._sample_stop.set()
+        self.feed.stop()
+
+        if choice:
+            self.logger.finalize(saved=True)
+            messagebox.showinfo(
+                "Session saved",
+                f"Logs saved to:\n{self.logger.session_dir}",
+            )
+        else:
+            folder = self.logger.session_dir
+            self.logger.delete_session()
+            messagebox.showinfo("Session deleted", f"Removed:\n{folder}")
+
+        self.root.destroy()
 
 
 def run_app(config: LabConfig) -> None:

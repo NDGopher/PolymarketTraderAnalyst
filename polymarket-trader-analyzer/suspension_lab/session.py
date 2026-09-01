@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import shutil
 import threading
 import time
 from dataclasses import dataclass, field
@@ -235,3 +236,21 @@ class SessionLogger:
             with self._events_path.open("w", newline="", encoding="utf-8") as f:
                 writer = csv.writer(f)
                 writer.writerows(rows)
+
+    @property
+    def event_count(self) -> int:
+        return self._event_id
+
+    def finalize(self, *, saved: bool) -> None:
+        meta_path = self.session_dir / "session.json"
+        meta: dict[str, Any] = {}
+        if meta_path.exists():
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        meta["ended_at"] = _iso(_now_ms())
+        meta["saved"] = saved
+        meta["event_count"] = self.event_count
+        meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+
+    def delete_session(self) -> None:
+        if self.session_dir.exists():
+            shutil.rmtree(self.session_dir)
