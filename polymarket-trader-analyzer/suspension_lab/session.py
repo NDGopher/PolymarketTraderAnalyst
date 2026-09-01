@@ -51,6 +51,25 @@ class SessionLogger:
         self._books_path = self.session_dir / "books.csv"
         self._init_csv(self._events_path, self._event_headers())
         self._init_csv(self._books_path, self._book_headers())
+        self._signals_path = self.session_dir / "goal_signals.csv"
+        self._init_csv(
+            self._signals_path,
+            [
+                "signal_id",
+                "signal_ts_ms",
+                "signal_ts_iso",
+                "ticker",
+                "market_label",
+                "prev_bid",
+                "new_bid",
+                "bid_jump_cents",
+                "bid_qty",
+                "prev_ask",
+                "new_ask",
+                "reason",
+            ],
+        )
+        self._signal_id = 0
 
     def bind_book_provider(self, fn) -> None:
         self._get_books = fn
@@ -202,6 +221,43 @@ class SessionLogger:
             name=f"markout-{eid}",
         ).start()
         return eid
+
+    def log_goal_signal(
+        self,
+        *,
+        ticker: str,
+        market_label: str,
+        prev_bid: str,
+        new_bid: str,
+        bid_jump_cents: int,
+        bid_qty: str,
+        prev_ask: str,
+        new_ask: str,
+        reason: str,
+        ts_ms: int | None = None,
+    ) -> int:
+        ts = ts_ms if ts_ms is not None else _now_ms()
+        with self._lock:
+            self._signal_id += 1
+            sid = self._signal_id
+        row = [
+            sid,
+            ts,
+            _iso(ts),
+            ticker,
+            market_label,
+            prev_bid,
+            new_bid,
+            bid_jump_cents,
+            bid_qty,
+            prev_ask,
+            new_ask,
+            reason,
+        ]
+        with self._lock:
+            with self._signals_path.open("a", newline="", encoding="utf-8") as f:
+                csv.writer(f).writerow(row)
+        return sid
 
     def _fill_markouts(self, event_id: int, event_ts: int, baseline: dict[str, dict]) -> None:
         snapshots: dict[int, dict[str, dict]] = {}

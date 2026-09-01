@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from decimal import Decimal
+from typing import Any
+
 from suspension_lab.config import TIGHT_SPREAD_CENTS, WIDE_SPREAD_CENTS
 
 

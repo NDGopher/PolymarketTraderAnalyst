@@ -25,6 +25,14 @@ WIDE_SPREAD_CENTS = 10
 MARKOUT_SECONDS = (1, 3, 5, 10, 30)
 BOOK_SAMPLE_MS = 200
 
+# Live goal-signal detector (bid momentum, not ask-only scares)
+GOAL_BID_JUMP_CENTS = 10
+GOAL_MIN_BID_QTY = 100
+GOAL_MIN_PREV_BID_CENTS = 15  # ignore startup / bond noise
+GOAL_ASK_CONFIRM_CENTS = 3  # ask must step up with bid (full book reprice)
+GOAL_SIGNAL_COOLDOWN_MS = 45_000
+GOAL_HIGHLIGHT_SECONDS = 45
+
 
 @dataclass
 class LabConfig:
