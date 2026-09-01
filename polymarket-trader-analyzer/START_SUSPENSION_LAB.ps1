@@ -1,4 +1,4 @@
-# Suspension Edge Lab — PowerShell launcher (use this in PowerShell)
+# Suspension Edge Lab - PowerShell launcher
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
@@ -23,7 +23,7 @@ if (-not (Test-Path ".venv\Scripts\python.exe")) {
 
 Write-Host "[2/3] Installing dependencies..."
 & .\.venv\Scripts\python.exe -m pip install -U pip -q
-& .\.venv\Scripts\pip.exe install -e . -q
+& .\.venv\Scripts\python.exe -m pip install -e . -q
 
 if (-not (Test-Path ".env")) {
     Write-Host ""
@@ -31,7 +31,7 @@ if (-not (Test-Path ".env")) {
     Write-Host "Copy .env.example to .env and add your Kalshi credentials + LAB_TICKERS."
     if (Test-Path ".env.example") {
         Copy-Item ".env.example" ".env"
-        Write-Host "Created .env from .env.example — edit it, then run this script again."
+        Write-Host "Created .env from .env.example - edit it, then run this script again."
     }
     Read-Host "Press Enter to exit"
     exit 1
@@ -41,9 +41,10 @@ Write-Host "[3/3] Launching Suspension Edge Lab..."
 Write-Host ""
 $env:PYTHONPATH = $PWD.Path
 & .\.venv\Scripts\python.exe -m suspension_lab.cli run
-if ($LASTEXITCODE -ne 0) {
+$exitCode = $LASTEXITCODE
+if ($exitCode -ne 0) {
     Write-Host ""
-    Write-Host "Lab exited with code $LASTEXITCODE" -ForegroundColor Red
+    Write-Host "Lab exited with code $exitCode" -ForegroundColor Red
     Read-Host "Press Enter to exit"
 }
-exit $LASTEXITCODE
+exit $exitCode

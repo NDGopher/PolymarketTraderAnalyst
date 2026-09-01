@@ -29,9 +29,8 @@ if not exist ".venv\Scripts\python.exe" (
 )
 
 echo [2/3] Installing dependencies...
-call ".venv\Scripts\activate.bat"
-python -m pip install -U pip -q
-pip install -e . -q
+".venv\Scripts\python.exe" -m pip install -U pip -q
+".venv\Scripts\python.exe" -m pip install -e . -q
 if errorlevel 1 (
   echo [ERROR] pip install failed.
   pause
@@ -58,7 +57,7 @@ if not exist ".env" (
 echo [3/3] Launching Suspension Edge Lab...
 echo.
 set "PYTHONPATH=%CD%"
-python -m suspension_lab.cli run
+".venv\Scripts\python.exe" -m suspension_lab.cli run
 set EXITCODE=%ERRORLEVEL%
 if not %EXITCODE%==0 (
   echo.
