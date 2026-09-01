@@ -12,6 +12,8 @@ WS_URL_PROD = "wss://external-api-ws.kalshi.com/trade-api/ws/v2"
 WS_URL_DEMO = "wss://external-api-ws.demo.kalshi.co/trade-api/ws/v2"
 
 BOND_MID_THRESHOLD = 0.90
+TIGHT_SPREAD_CENTS = 3
+WIDE_SPREAD_CENTS = 10
 MARKOUT_SECONDS = (1, 3, 5, 10, 30)
 BOOK_SAMPLE_MS = 200
 

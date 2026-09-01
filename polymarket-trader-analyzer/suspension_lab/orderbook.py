@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Any
+from suspension_lab.config import TIGHT_SPREAD_CENTS, WIDE_SPREAD_CENTS
 
 
 def _d(value: str | int | float | Decimal) -> Decimal:
@@ -101,21 +101,65 @@ class OrderBook:
             return False
         return mid >= threshold or mid <= (Decimal(1) - threshold)
 
+    def yes_asks(self, depth: int = 10) -> list[list[str]]:
+        """YES-side asks derived from NO bids (Kalshi binary book)."""
+        asks: list[tuple[Decimal, Decimal]] = []
+        for no_price, qty in self.no_bids.items():
+            yes_ask = Decimal(1) - _d(no_price)
+            asks.append((yes_ask, qty))
+        asks.sort(key=lambda x: x[0])
+        return [[str(p), str(q)] for p, q in asks[:depth]]
+
+    def depth_top_n(self, side: str, n: int = 3) -> Decimal:
+        if side == "bid":
+            levels = sorted(self.yes_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:n]
+        else:
+            levels = sorted(self.no_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:n]
+        return sum((qty for _, qty in levels), Decimal(0))
+
+    def spread_cents(self) -> int | None:
+        sp = self.spread()
+        if sp is None:
+            return None
+        return int(round(sp * 100))
+
     def top_levels(self, depth: int = 10) -> dict[str, Any]:
         yes_sorted = sorted(self.yes_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
         no_sorted = sorted(self.no_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
         bid, bid_qty = self.best_yes_bid()
         ask, ask_qty = self.best_yes_ask()
+        sp = self.spread()
+        sp_cents = self.spread_cents()
+        tight = sp_cents is not None and sp_cents <= TIGHT_SPREAD_CENTS
+        wide = sp_cents is not None and sp_cents >= WIDE_SPREAD_CENTS
+        bond = self.is_bond()
+        suggested_bid = ""
+        if bid is not None:
+            candidate = bid + Decimal("0.02")
+            if ask is not None and not tight:
+                # Wide book: bid +2¢ but never cross the ask (don't hit 65 on a 42 bid)
+                candidate = min(candidate, ask - Decimal("0.01"))
+            elif ask is not None:
+                candidate = min(candidate, ask)
+            suggested_bid = str(max(candidate, bid))
         return {
             "ticker": self.ticker,
             "yes_bid": str(bid) if bid is not None else "",
             "yes_ask": str(ask) if ask is not None else "",
             "yes_mid": str(self.yes_mid()) if self.yes_mid() is not None else "",
-            "spread": str(self.spread()) if self.spread() is not None else "",
+            "spread": str(sp) if sp is not None else "",
+            "spread_cents": sp_cents if sp_cents is not None else "",
             "yes_bid_qty": str(bid_qty),
             "yes_ask_qty": str(ask_qty),
-            "is_bond": self.is_bond(),
+            "bid_depth_3": str(self.depth_top_n("bid", 3)),
+            "ask_depth_3": str(self.depth_top_n("ask", 3)),
+            "tight_spread": tight,
+            "wide_spread": wide,
+            "untradeable": bond or wide or sp is None,
+            "suggested_bid_plus_2c": suggested_bid,
+            "is_bond": bond,
             "yes_bids": [[p, str(q)] for p, q in yes_sorted],
+            "yes_asks": self.yes_asks(depth),
             "no_bids": [[p, str(q)] for p, q in no_sorted],
             "updated_ms": self.updated_ms,
         }

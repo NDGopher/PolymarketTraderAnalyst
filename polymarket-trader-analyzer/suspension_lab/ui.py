@@ -106,11 +106,14 @@ class SuspensionLabApp:
             lv = book.top_levels()
             self._book_cache[ticker] = lv
             bond = " [BOND — skip]" if lv.get("is_bond") else ""
+            wide = " [WIDE — no taker]" if lv.get("wide_spread") else ""
+            tight = " [TIGHT — ok]" if lv.get("tight_spread") else ""
             lines.append(
-                f"{ticker}{bond}\n"
-                f"  YES bid {lv.get('yes_bid','?')} x {lv.get('yes_bid_qty','?')}  |  "
-                f"YES ask {lv.get('yes_ask','?')} x {lv.get('yes_ask_qty','?')}  |  "
-                f"mid {lv.get('yes_mid','?')}  spread {lv.get('spread','?')}\n"
+                f"{ticker}{bond}{wide}{tight}\n"
+                f"  bid {lv.get('yes_bid','?')} x {lv.get('yes_bid_qty','?')} (3lvl {lv.get('bid_depth_3','?')})  |  "
+                f"ask {lv.get('yes_ask','?')} x {lv.get('yes_ask_qty','?')} (3lvl {lv.get('ask_depth_3','?')})\n"
+                f"  spread {lv.get('spread_cents','?')}¢  mid {lv.get('yes_mid','?')}  "
+                f"suggest bid {lv.get('suggested_bid_plus_2c','?')}\n"
             )
         self.book_text.delete("1.0", tk.END)
         self.book_text.insert(tk.END, "\n".join(lines) if lines else "Waiting for books…")

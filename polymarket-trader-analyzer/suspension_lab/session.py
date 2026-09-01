@@ -59,6 +59,25 @@ class SessionLogger:
             with path.open("w", newline="", encoding="utf-8") as f:
                 csv.writer(f).writerow(headers)
 
+    def _ticker_cols(self) -> list[str]:
+        return [
+            "yes_bid",
+            "yes_ask",
+            "yes_mid",
+            "spread",
+            "spread_cents",
+            "yes_bid_qty",
+            "yes_ask_qty",
+            "bid_depth_3",
+            "ask_depth_3",
+            "tight_spread",
+            "wide_spread",
+            "untradeable",
+            "suggested_bid_plus_2c",
+            "is_bond",
+            "book_json",
+        ]
+
     def _event_headers(self) -> list[str]:
         cols = [
             "event_id",
@@ -71,23 +90,15 @@ class SessionLogger:
         ]
         for t in self.tickers:
             safe = t.replace(",", "_")
-            cols.extend(
-                [
-                    f"{safe}_yes_bid",
-                    f"{safe}_yes_ask",
-                    f"{safe}_yes_mid",
-                    f"{safe}_spread",
-                    f"{safe}_is_bond",
-                    f"{safe}_book_json",
-                ]
-            )
+            for col in self._ticker_cols():
+                cols.append(f"{safe}_{col}")
         for sec in MARKOUT_SECONDS:
             for t in self.tickers:
                 safe = t.replace(",", "_")
                 cols.extend(
                     [
                         f"{safe}_mid_{sec}s",
-                        f"{safe}_spread_{sec}s",
+                        f"{safe}_spread_cents_{sec}s",
                     ]
                 )
         return cols
@@ -96,31 +107,38 @@ class SessionLogger:
         cols = ["ts_ms", "ts_iso"]
         for t in self.tickers:
             safe = t.replace(",", "_")
-            cols.extend(
-                [
-                    f"{safe}_yes_bid",
-                    f"{safe}_yes_ask",
-                    f"{safe}_yes_mid",
-                    f"{safe}_spread",
-                    f"{safe}_is_bond",
-                ]
-            )
+            for col in (
+                "yes_bid",
+                "yes_ask",
+                "yes_mid",
+                "spread_cents",
+                "yes_bid_qty",
+                "yes_ask_qty",
+                "tight_spread",
+                "wide_spread",
+                "untradeable",
+            ):
+                cols.append(f"{safe}_{col}")
         cols.extend(["b365_state", "fd_state", "dk_state"])
         return cols
+
+    def _book_row_values(self, b: dict) -> list[Any]:
+        return [
+            b.get("yes_bid", ""),
+            b.get("yes_ask", ""),
+            b.get("yes_mid", ""),
+            b.get("spread_cents", ""),
+            b.get("yes_bid_qty", ""),
+            b.get("yes_ask_qty", ""),
+            b.get("tight_spread", ""),
+            b.get("wide_spread", ""),
+            b.get("untradeable", ""),
+        ]
 
     def log_book_sample(self, books: dict[str, dict]) -> None:
         row = [_now_ms(), _iso(_now_ms())]
         for t in self.tickers:
-            b = books.get(t, {})
-            row.extend(
-                [
-                    b.get("yes_bid", ""),
-                    b.get("yes_ask", ""),
-                    b.get("yes_mid", ""),
-                    b.get("spread", ""),
-                    b.get("is_bond", ""),
-                ]
-            )
+            row.extend(self._book_row_values(books.get(t, {})))
         row.extend([self.flags.b365, self.flags.fanduel, self.flags.draftkings])
         with self._lock:
             with self._books_path.open("a", newline="", encoding="utf-8") as f:
@@ -166,16 +184,8 @@ class SessionLogger:
         ]
         for t in self.tickers:
             b = books.get(t, {})
-            row.extend(
-                [
-                    b.get("yes_bid", ""),
-                    b.get("yes_ask", ""),
-                    b.get("yes_mid", ""),
-                    b.get("spread", ""),
-                    b.get("is_bond", ""),
-                    b.get("book_json", json.dumps(b, separators=(",", ":"))),
-                ]
-            )
+            row.extend([b.get(col, "") for col in self._ticker_cols()[:-1]])
+            row.append(b.get("book_json", json.dumps(b, separators=(",", ":"))))
         for _ in MARKOUT_SECONDS:
             for _t in self.tickers:
                 row.extend(["", ""])
@@ -211,14 +221,14 @@ class SessionLogger:
 
         header = rows[0]
         row = rows[event_id]
-        idx = 7 + len(self.tickers) * 6
+        idx = 7 + len(self.tickers) * len(self._ticker_cols())
         for sec in MARKOUT_SECONDS:
             snap = snapshots.get(sec, {})
             for t in self.tickers:
                 b = snap.get(t, {})
                 if idx + 1 < len(row):
                     row[idx] = b.get("yes_mid", "")
-                    row[idx + 1] = b.get("spread", "")
+                    row[idx + 1] = b.get("spread_cents", "")
                 idx += 2
 
         with self._lock:
