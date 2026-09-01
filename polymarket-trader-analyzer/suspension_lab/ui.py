@@ -8,7 +8,7 @@ from tkinter import messagebox, scrolledtext, ttk
 
 from suspension_lab.auto_trader import PaperAutoTrader, TraderConfig
 from suspension_lab.config import BOND_MID_THRESHOLD, GOAL_HIGHLIGHT_SECONDS, LabConfig
-from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector, VarRevertAlert
+from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector, SpoofBidNotice, VarRevertAlert
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.market_labels import MarketLabel, MarketLabelCache
 from suspension_lab.session import SessionLogger
@@ -232,12 +232,17 @@ class SuspensionLabApp:
             self.root.after(0, lambda s=result: self._on_goal_signal(s))
         elif isinstance(result, VarRevertAlert):
             self.root.after(0, lambda v=result: self._on_var_alert(v))
+        elif isinstance(result, SpoofBidNotice):
+            self.root.after(0, lambda s=result: self._on_spoof_notice(s))
 
         lv = book.top_levels()
         bid_s = lv.get("yes_bid", "")
         if bid_s and self.trader.config.enabled:
             bid_cents = int(round(float(bid_s) * 100))
-            closed = self.trader.on_book(ticker, bid_cents)
+            ask_s = lv.get("yes_ask", "")
+            ask_cents = int(round(float(ask_s) * 100)) if ask_s else None
+            bid_qty = float(lv.get("yes_bid_qty") or 0)
+            closed = self.trader.on_book(ticker, bid_cents, ask_cents=ask_cents, bid_qty=bid_qty)
             if closed:
                 self.root.after(0, lambda c=closed: self._on_paper_exit(c))
 
@@ -326,6 +331,27 @@ class SuspensionLabApp:
         self.notes_text.insert(
             tk.END,
             f"[VAR ALERT] {label.display} -{alert.drop_cents}c from peak\n",
+        )
+        self.notes_text.see(tk.END)
+
+    def _on_spoof_notice(self, notice: SpoofBidNotice) -> None:
+        label = self._labels.get(notice.ticker)
+        panel = self._ticker_panels.get(notice.ticker)
+        if panel:
+            banner: tk.Label = panel["signal_banner"]
+            banner.config(
+                text=(
+                    f"ℹ️ SPOOF BID? — {notice.current_bid:.2f} x {notice.bid_qty:.0f} "
+                    f"but ask still {notice.current_ask:.2f} (bonded market, not VAR)"
+                ),
+                fg="#92400e",
+                bg="#fef3c7",
+            )
+            banner.pack(fill="x", pady=(6, 0))
+        self.notes_text.insert(
+            tk.END,
+            f"[SPOOF BID] {label.display if label else notice.ticker} "
+            f"bid {notice.current_bid:.2f} ask {notice.current_ask:.2f} — hold, not VAR\n",
         )
         self.notes_text.see(tk.END)
 

@@ -7,7 +7,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector, VarRevertAlert
+from suspension_lab.goal_signal import GoalSignal, GoalSignalDetector, SpoofBidNotice, VarRevertAlert
 from suspension_lab.orderbook import OrderBook
 
 
@@ -23,16 +23,8 @@ def _ticker_prefixes(headers: list[str]) -> list[str]:
     return [h[: -len("_yes_bid")] for h in headers if h.endswith("_yes_bid")]
 
 
-def replay_session(session_dir: Path) -> list[ReplayEvent]:
+def _replay_from_wide(session_dir: Path, tickers: list[str]) -> list[ReplayEvent]:
     books_path = session_dir / "books.csv"
-    if not books_path.exists():
-        raise FileNotFoundError(books_path)
-
-    meta_path = session_dir / "session.json"
-    tickers = []
-    if meta_path.exists():
-        tickers = json.loads(meta_path.read_text(encoding="utf-8")).get("tickers", [])
-
     with books_path.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
         headers = reader.fieldnames or []
@@ -58,29 +50,78 @@ def replay_session(session_dir: Path) -> list[ReplayEvent]:
                 ask_qty=row.get(f"{prefix}_yes_ask_qty", "0") or "0",
                 updated_ms=ts_ms,
             )
-            result = detectors[prefix].evaluate(prefix, book)
-            if isinstance(result, GoalSignal):
-                events.append(
-                    ReplayEvent(
-                        ts_iso=ts_iso,
-                        ticker=prefix,
-                        kind="GOAL",
-                        detail=result.summary,
-                    )
-                )
-            elif isinstance(result, VarRevertAlert):
-                events.append(
-                    ReplayEvent(
-                        ts_iso=ts_iso,
-                        ticker=prefix,
-                        kind="VAR",
-                        detail=(
-                            f"peak {result.peak_bid:.2f} -> {result.current_bid:.2f} "
-                            f"(-{result.drop_cents}c in {result.seconds_since_signal:.0f}s)"
-                        ),
-                    )
-                )
+            events.extend(_collect_event(detectors[prefix].evaluate(prefix, book), ts_iso, prefix))
     return events
+
+
+def _replay_from_long(session_dir: Path) -> list[ReplayEvent]:
+    long_path = session_dir / "books_long.csv"
+    with long_path.open(encoding="utf-8") as f:
+        rows = [r for r in csv.DictReader(f) if r.get("yes_bid") and r.get("yes_ask")]
+
+    tickers = sorted({r["ticker"] for r in rows})
+    detectors: dict[str, GoalSignalDetector] = {t: GoalSignalDetector() for t in tickers}
+    events: list[ReplayEvent] = []
+
+    for row in rows:
+        ticker = row["ticker"]
+        ts_ms = int(row["ts_ms"])
+        book = OrderBook(ticker)
+        book.set_from_top(
+            bid=row["yes_bid"],
+            ask=row["yes_ask"],
+            bid_qty=row.get("yes_bid_qty", "0") or "0",
+            ask_qty=row.get("yes_ask_qty", "0") or "0",
+            updated_ms=ts_ms,
+        )
+        events.extend(_collect_event(detectors[ticker].evaluate(ticker, book), row["ts_iso"], ticker))
+    return events
+
+
+def _collect_event(result, ts_iso: str, ticker: str) -> list[ReplayEvent]:
+    if isinstance(result, GoalSignal):
+        return [ReplayEvent(ts_iso=ts_iso, ticker=ticker, kind="GOAL", detail=result.summary)]
+    if isinstance(result, VarRevertAlert):
+        return [
+            ReplayEvent(
+                ts_iso=ts_iso,
+                ticker=ticker,
+                kind="VAR",
+                detail=(
+                    f"peak {result.peak_bid:.2f} -> {result.current_bid:.2f} "
+                    f"(-{result.drop_cents}c in {result.seconds_since_signal:.0f}s)"
+                ),
+            )
+        ]
+    if isinstance(result, SpoofBidNotice):
+        return [
+            ReplayEvent(
+                ts_iso=ts_iso,
+                ticker=ticker,
+                kind="SPOOF",
+                detail=(
+                    f"bid {result.current_bid:.2f} x{result.bid_qty:.0f} "
+                    f"ask {result.current_ask:.2f} (-{result.drop_cents}c from peak, bonded)"
+                ),
+            )
+        ]
+    return []
+
+
+def replay_session(session_dir: Path) -> list[ReplayEvent]:
+    long_path = session_dir / "books_long.csv"
+    if long_path.exists():
+        return _replay_from_long(session_dir)
+
+    books_path = session_dir / "books.csv"
+    if not books_path.exists():
+        raise FileNotFoundError(f"No books.csv or books_long.csv in {session_dir}")
+
+    meta_path = session_dir / "session.json"
+    tickers: list[str] = []
+    if meta_path.exists():
+        tickers = json.loads(meta_path.read_text(encoding="utf-8")).get("tickers", [])
+    return _replay_from_wide(session_dir, tickers)
 
 
 def print_replay(session_dir: Path) -> None:
