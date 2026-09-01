@@ -1,0 +1,18 @@
+{
+  "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
+  "username": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+  "mode": "full",
+  "duration_s": 1272.02,
+  "counts": {
+    "activity": 78171,
+    "trades": 351490,
+    "closed_positions": 9489,
+    "open_positions": 1376
+  },
+  "last_activity_ts": 1781298502,
+  "last_trade_ts": 1783201147,
+  "resolved": {
+    "username": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+    "wallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563"
+  }
+}

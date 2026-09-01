@@ -1,0 +1,4085 @@
+{
+  "username": "Mysaria",
+  "wallet": "0xe40aaa5ce1dac0b7dc24c9d0284f27e17c3fe4a2",
+  "counts": {
+    "activity": 32629,
+    "trades": 266027,
+    "buys": 239470,
+    "sells": 26557,
+    "closed_positions": 49842,
+    "open_positions": 4481,
+    "markets_traded": 29195,
+    "activity_types": {
+      "TRADE": 22007,
+      "CONVERSION": 4890,
+      "MERGE": 4786,
+      "REDEEM": 934,
+      "REWARD": 4,
+      "MAKER_REBATE": 3,
+      "TAKER_REBATE": 3,
+      "WITHDRAWAL": 1,
+      "YIELD": 1
+    }
+  },
+  "span": {
+    "first_ts": 1785945704,
+    "last_ts": 1788273016,
+    "first_iso": "2026-08-05T16:01:44+00:00",
+    "last_iso": "2026-09-01T14:30:16+00:00",
+    "days_active_span": 26.94
+  },
+  "pnl": {
+    "cashflow_realized": -390114.7655,
+    "cashflow_core": -390557.0797,
+    "cashflow_detail": {
+      "buys_usdc": 394979.0212069986,
+      "sells_usdc": 4202.420024000002,
+      "redeems_usdc": 219.521453,
+      "merges_usdc": 38349.301659999604,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 121.9275,
+      "taker_rebates_usdc": 33.9341,
+      "rewards_usdc": 286.45259999999996,
+      "conversions_usdc": 351318.42784500105
+    },
+    "closed_positions_sum": -611424.9602,
+    "closed_wins": 12022,
+    "closed_losses": 30400,
+    "closed_flat": 7420,
+    "win_rate": 0.2834,
+    "profit_factor": 0.6293,
+    "win_pnl": 1037938.0546,
+    "loss_pnl": -1649363.0148,
+    "total_bought": 8019861.6921,
+    "open_cash_pnl": -198815.9574,
+    "open_current_value": 4872.0559,
+    "open_realized_pnl": 31604.0475,
+    "leaderboard_all": {
+      "rank": "323",
+      "proxyWallet": "0xe40aaa5ce1dac0b7dc24c9d0284f27e17c3fe4a2",
+      "userName": "Mysaria",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 7379689.243795001,
+      "pnl": 635298.6729157614,
+      "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-9454294-b41426ea-b9d8-4cd3-819f-b8a1419fa95e.gif"
+    }
+  },
+  "equity": {
+    "final": -351765.4639,
+    "max_drawdown": -351914.6457,
+    "points": 27737,
+    "curve_sample": [
+      {
+        "timestamp": 1785945704,
+        "equity": -4.96673,
+        "delta": -4.96673,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 37\u00b0C on August 7?",
+        "usdc": 4.96673
+      },
+      {
+        "timestamp": 1785945762,
+        "equity": -2206.21615,
+        "delta": -19.2384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 007 First Light win Best Audio Design at the 2026 Game Awards?",
+        "usdc": 19.2384
+      },
+      {
+        "timestamp": 1785946364,
+        "equity": -3168.111166,
+        "delta": -2.28477,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Tokyo be 24\u00b0C on August 6?",
+        "usdc": 2.28477
+      },
+      {
+        "timestamp": 1785946845,
+        "equity": -4374.212228,
+        "delta": -34.96674,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Hong Kong be 30\u00b0C on August 7?",
+        "usdc": 34.96674
+      },
+      {
+        "timestamp": 1785947364,
+        "equity": -5249.517378,
+        "delta": -48.144,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Republicans win the Nevada governor race in 2026?",
+        "usdc": 48.144
+      },
+      {
+        "timestamp": 1785948101,
+        "equity": -6318.505788,
+        "delta": -28.83816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 26\u00b0C on August 6?",
+        "usdc": 28.83816
+      },
+      {
+        "timestamp": 1785948915,
+        "equity": -7857.999578,
+        "delta": -37.3302,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Rodri stay at Manchester City?",
+        "usdc": 37.3302
+      },
+      {
+        "timestamp": 1785949509,
+        "equity": -8496.791449,
+        "delta": -11.88594,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Dallas be between 104-105\u00b0F on August 5?",
+        "usdc": 11.88594
+      },
+      {
+        "timestamp": 1785949787,
+        "equity": -10336.711269,
+        "delta": -13.02894,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 23\u00b0C or below on August 7?",
+        "usdc": 13.02894
+      },
+      {
+        "timestamp": 1785950303,
+        "equity": -11757.546834,
+        "delta": -4.99049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Guangzhou be 40\u00b0C or higher on August 7?",
+        "usdc": 4.99049
+      },
+      {
+        "timestamp": 1785950903,
+        "equity": -13628.33515,
+        "delta": 4.14,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the lowest temperature in London be 19\u00b0C on August 5?",
+        "usdc": 4.14
+      },
+      {
+        "timestamp": 1785951216,
+        "equity": -15037.87329,
+        "delta": 29.2,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Paris be 29\u00b0C on August 6?",
+        "usdc": 29.2
+      },
+      {
+        "timestamp": 1785951719,
+        "equity": -15846.622785,
+        "delta": -3.25374,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the next Google Gemini Pro model be released on August 19, 2026?",
+        "usdc": 3.25374
+      },
+      {
+        "timestamp": 1785952100,
+        "equity": -16287.619241,
+        "delta": -4.56583,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Miami be between 92-93\u00b0F on August 6?",
+        "usdc": 4.56583
+      },
+      {
+        "timestamp": 1785952857,
+        "equity": -17282.183121,
+        "delta": 1.94,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Singapore be 31\u00b0C on August 6?",
+        "usdc": 1.94
+      },
+      {
+        "timestamp": 1785952941,
+        "equity": -17747.445981,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Busan be 40\u00b0C on August 7?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1785953748,
+        "equity": -18356.80356,
+        "delta": -5.39914,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 35\u00b0C on August 7?",
+        "usdc": 5.39914
+      },
+      {
+        "timestamp": 1785954537,
+        "equity": -18945.78578,
+        "delta": 1.94,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Singapore be 30\u00b0C on August 6?",
+        "usdc": 1.94
+      },
+      {
+        "timestamp": 1785954912,
+        "equity": -19776.22336,
+        "delta": -4.66627,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 35\u00b0C on August 6?",
+        "usdc": 4.66627
+      },
+      {
+        "timestamp": 1785955833,
+        "equity": -20511.573028,
+        "delta": -14.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Tokyo be 26\u00b0C on August 7?",
+        "usdc": 14.25
+      },
+      {
+        "timestamp": 1785957378,
+        "equity": -21105.359692,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Madrid be 44\u00b0C on August 7?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1785958140,
+        "equity": -22623.801797,
+        "delta": -3.01637,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Republicans win the Michigan Senate race in 2026?",
+        "usdc": 3.01637
+      },
+      {
+        "timestamp": 1785959355,
+        "equity": -25171.734897,
+        "delta": 15.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Subnautica 2 win Best Multiplayer at the 2026 Game Awards?",
+        "usdc": 15.0
+      },
+      {
+        "timestamp": 1785960702,
+        "equity": -26544.415883,
+        "delta": -55.94623,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Citizens' Coalition (MED) win the most seats in the 2026 Swedish parliamentary election?",
+        "usdc": 55.94623
+      },
+      {
+        "timestamp": 1785961517,
+        "equity": -27420.032904,
+        "delta": -9.50875,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 30\u00b0C on August 7?",
+        "usdc": 9.50875
+      },
+      {
+        "timestamp": 1785961929,
+        "equity": -27938.300583,
+        "delta": -70.93254,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Austin be between 102-103\u00b0F on August 5?",
+        "usdc": 70.93254
+      },
+      {
+        "timestamp": 1785963491,
+        "equity": -29828.196399,
+        "delta": -12.80782,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Austin be between 104-105\u00b0F on August 5?",
+        "usdc": 12.80782
+      },
+      {
+        "timestamp": 1785964257,
+        "equity": -30319.091499,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Austin be between 104-105\u00b0F on August 5?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1785965124,
+        "equity": -30754.742384,
+        "delta": -4.95247,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 23\u00b0C on August 6?",
+        "usdc": 4.95247
+      },
+      {
+        "timestamp": 1785966120,
+        "equity": -31222.670385,
+        "delta": -1.21878,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ed Case be the HI-01 Democratic nominee?",
+        "usdc": 1.21878
+      },
+      {
+        "timestamp": 1785967845,
+        "equity": -31768.212137,
+        "delta": -18.2819,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will ISM Manufacturing PMI be between 52.0 and 52.9 in August?",
+        "usdc": 18.2819
+      },
+      {
+        "timestamp": 1785968663,
+        "equity": -32828.52231,
+        "delta": -3.01403,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Republican Party win the MI-04 House seat?",
+        "usdc": 3.01403
+      },
+      {
+        "timestamp": 1785969593,
+        "equity": -34071.421488,
+        "delta": -46.46716,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Hong Kong be 24\u00b0C on August 7?",
+        "usdc": 46.46716
+      },
+      {
+        "timestamp": 1785970091,
+        "equity": -34483.276803,
+        "delta": -39.339,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Hong Kong be 26\u00b0C on August 6?",
+        "usdc": 39.339
+      },
+      {
+        "timestamp": 1785971108,
+        "equity": -34883.394058,
+        "delta": -5.99429,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Damson Idris be the #1 searched actor on Google this year?",
+        "usdc": 5.99429
+      },
+      {
+        "timestamp": 1785971405,
+        "equity": -36383.117672,
+        "delta": -44.60758,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 22\u00b0C on August 6?",
+        "usdc": 44.60758
+      },
+      {
+        "timestamp": 1785972342,
+        "equity": -38100.735526,
+        "delta": -19.96199,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 36\u00b0C on August 6?",
+        "usdc": 19.96199
+      },
+      {
+        "timestamp": 1785972600,
+        "equity": -40500.059783,
+        "delta": -6.61375,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Jeddah be 40\u00b0C on August 6?",
+        "usdc": 6.61375
+      },
+      {
+        "timestamp": 1785972819,
+        "equity": -41752.887621,
+        "delta": -213.99435,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Saudi Aramco be the largest company in the world by market cap on September 30?",
+        "usdc": 213.99435
+      },
+      {
+        "timestamp": 1785973301,
+        "equity": -44412.010192,
+        "delta": -23.75406,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 33\u00b0C on August 6?",
+        "usdc": 23.75406
+      },
+      {
+        "timestamp": 1785973577,
+        "equity": -45009.923712,
+        "delta": -1.58576,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wuhan be 37\u00b0C on August 7?",
+        "usdc": 1.58576
+      },
+      {
+        "timestamp": 1785973757,
+        "equity": -45739.034208,
+        "delta": -7.98479,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Channing Tatum be the #1 searched actor on Google this year?",
+        "usdc": 7.98479
+      },
+      {
+        "timestamp": 1785973907,
+        "equity": -45893.522258,
+        "delta": -13.9224,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 10\u00b0C on August 6?",
+        "usdc": 13.9224
+      },
+      {
+        "timestamp": 1785974652,
+        "equity": -46842.119884,
+        "delta": -34.93349,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 28\u00b0C or below on August 7?",
+        "usdc": 34.93349
+      },
+      {
+        "timestamp": 1785975222,
+        "equity": -47516.267907,
+        "delta": 0.606059,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Qingdao be 35\u00b0C on August 6?",
+        "usdc": 0.606059
+      },
+      {
+        "timestamp": 1785976169,
+        "equity": -48154.355778,
+        "delta": -2.99429,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will White House post 140-159 posts from August 4 to August 11, 2026?",
+        "usdc": 2.99429
+      },
+      {
+        "timestamp": 1785977282,
+        "equity": -48951.720432,
+        "delta": -10.79639,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Guangzhou be 34\u00b0C on August 7?",
+        "usdc": 10.79639
+      },
+      {
+        "timestamp": 1785977862,
+        "equity": -49562.948824,
+        "delta": -4.99049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 31\u00b0C on August 6?",
+        "usdc": 4.99049
+      },
+      {
+        "timestamp": 1785978912,
+        "equity": -50216.798435,
+        "delta": -35.93087,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Broadcom be the third-largest company in the world by market cap on September 30?",
+        "usdc": 35.93087
+      },
+      {
+        "timestamp": 1785979878,
+        "equity": -51001.015651,
+        "delta": -65.41863,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Seoul (Incheon) be 37\u00b0C or higher on August 6?",
+        "usdc": 65.41863
+      },
+      {
+        "timestamp": 1785980667,
+        "equity": -53372.317082,
+        "delta": -160.5782,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the US strike 15 or more countries in 2026?",
+        "usdc": 160.5782
+      },
+      {
+        "timestamp": 1785981207,
+        "equity": -54611.684557,
+        "delta": 0.953105,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Manila be 30\u00b0C on August 6?",
+        "usdc": 0.953105
+      },
+      {
+        "timestamp": 1785981915,
+        "equity": -55278.917703,
+        "delta": -1.98432,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Paris be 12\u00b0C or below on August 6?",
+        "usdc": 1.98432
+      },
+      {
+        "timestamp": 1785982400,
+        "equity": -55711.885833,
+        "delta": -7.16684,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 36\u00b0C on August 6?",
+        "usdc": 7.16684
+      },
+      {
+        "timestamp": 1785982988,
+        "equity": -56912.902127,
+        "delta": -3.67215,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Tokyo be 33\u00b0C on August 6?",
+        "usdc": 3.67215
+      },
+      {
+        "timestamp": 1785984441,
+        "equity": -57655.99952,
+        "delta": -17.84897,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 36\u00b0C on August 6?",
+        "usdc": 17.84897
+      },
+      {
+        "timestamp": 1785985421,
+        "equity": -58660.669829,
+        "delta": -372.30404,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+        "usdc": 372.30404
+      },
+      {
+        "timestamp": 1785985647,
+        "equity": -60220.098036,
+        "delta": -7.82256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chengdu be 34\u00b0C on August 6?",
+        "usdc": 7.82256
+      },
+      {
+        "timestamp": 1785986243,
+        "equity": -61755.220139,
+        "delta": -95.65068,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the total domestic gross for Spider-Man: Brand New Day be between 700m and 800m by August 31?",
+        "usdc": 95.65068
+      },
+      {
+        "timestamp": 1785986832,
+        "equity": -62039.239644,
+        "delta": 1.2,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Singapore be 31\u00b0C on August 7?",
+        "usdc": 1.2
+      },
+      {
+        "timestamp": 1785987393,
+        "equity": -63886.607192,
+        "delta": -9.99039,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Nvidia be the #3 AI Lab at the end of August 2026 (Style Control On)?",
+        "usdc": 9.99039
+      },
+      {
+        "timestamp": 1785987761,
+        "equity": -64084.849673,
+        "delta": -4.95235,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Guangzhou be 39\u00b0C on August 7?",
+        "usdc": 4.95235
+      },
+      {
+        "timestamp": 1785988259,
+        "equity": -65101.197604,
+        "delta": -14.78593,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 36\u00b0C on August 6?",
+        "usdc": 14.78593
+      },
+      {
+        "timestamp": 1785988934,
+        "equity": -64699.557984,
+        "delta": 4.1,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Wellington be 10\u00b0C on August 6?",
+        "usdc": 4.1
+      },
+      {
+        "timestamp": 1785989336,
+        "equity": -65199.731988,
+        "delta": -6.03,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chengdu be 30\u00b0C on August 6?",
+        "usdc": 6.03
+      },
+      {
+        "timestamp": 1785989978,
+        "equity": -66110.037115,
+        "delta": -4.57047,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Tokyo be 33\u00b0C on August 6?",
+        "usdc": 4.57047
+      },
+      {
+        "timestamp": 1785990488,
+        "equity": -66538.05409,
+        "delta": -5.19039,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Tokyo be 32\u00b0C on August 6?",
+        "usdc": 5.19039
+      },
+      {
+        "timestamp": 1785991233,
+        "equity": -66941.719883,
+        "delta": -3.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Amsterdam be 22\u00b0C on August 7?",
+        "usdc": 3.05
+      },
+      {
+        "timestamp": 1785991308,
+        "equity": -68363.839266,
+        "delta": -10.75546,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 37\u00b0C on August 7?",
+        "usdc": 10.75546
+      },
+      {
+        "timestamp": 1785991947,
+        "equity": -68976.458361,
+        "delta": -66.2547,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Los Angeles be between 72-73\u00b0F on August 7?",
+        "usdc": 66.2547
+      },
+      {
+        "timestamp": 1785992436,
+        "equity": -69858.456184,
+        "delta": -4.57986,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Qingdao be 37\u00b0C on August 6?",
+        "usdc": 4.57986
+      },
+      {
+        "timestamp": 1785992799,
+        "equity": -70297.633785,
+        "delta": -8.157894,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 14\u00b0C on August 7?",
+        "usdc": 8.157894
+      },
+      {
+        "timestamp": 1785993203,
+        "equity": -70922.086221,
+        "delta": 10.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shanghai be 37\u00b0C or higher on August 6?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1785993432,
+        "equity": -71783.639423,
+        "delta": -110.1952,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 35\u00b0C on August 6?",
+        "usdc": 110.1952
+      },
+      {
+        "timestamp": 1785993621,
+        "equity": -72841.994712,
+        "delta": -13.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 34\u00b0C on August 7?",
+        "usdc": 13.68
+      },
+      {
+        "timestamp": 1785994241,
+        "equity": -73970.423808,
+        "delta": -24.64495,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 32\u00b0C on August 8?",
+        "usdc": 24.64495
+      },
+      {
+        "timestamp": 1785995007,
+        "equity": -74579.065594,
+        "delta": -12.98764,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 40\u00b0C on August 8?",
+        "usdc": 12.98764
+      },
+      {
+        "timestamp": 1785995274,
+        "equity": -75950.004069,
+        "delta": 10.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Sao Paulo be 28\u00b0C on August 7?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1785995474,
+        "equity": -78093.83537,
+        "delta": -11.32922,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Houston be between 102-103\u00b0F on August 7?",
+        "usdc": 11.32922
+      },
+      {
+        "timestamp": 1785995783,
+        "equity": -79182.886912,
+        "delta": 2.016665,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Paris be 23\u00b0C on August 6?",
+        "usdc": 2.016665
+      },
+      {
+        "timestamp": 1785996213,
+        "equity": -80534.356636,
+        "delta": -2.7621,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 33\u00b0C on August 7?",
+        "usdc": 2.7621
+      },
+      {
+        "timestamp": 1785996435,
+        "equity": -80886.286373,
+        "delta": -10.50142,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Denver be between 100-101\u00b0F on August 7?",
+        "usdc": 10.50142
+      },
+      {
+        "timestamp": 1785996702,
+        "equity": -82430.824833,
+        "delta": -5.59467,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 29\u00b0C or below on August 7?",
+        "usdc": 5.59467
+      },
+      {
+        "timestamp": 1785997469,
+        "equity": -82768.948399,
+        "delta": -112.78527,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 35\u00b0C on August 6?",
+        "usdc": 112.78527
+      },
+      {
+        "timestamp": 1785997926,
+        "equity": -83444.419583,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 41\u00b0C or higher on August 8?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1785998490,
+        "equity": -84164.524336,
+        "delta": -4.3301,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 25\u00b0C on August 7?",
+        "usdc": 4.3301
+      },
+      {
+        "timestamp": 1785999066,
+        "equity": -84856.445097,
+        "delta": -10.95231,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 21\u00b0C on August 6?",
+        "usdc": 10.95231
+      },
+      {
+        "timestamp": 1785999434,
+        "equity": -85348.240622,
+        "delta": -7.68536,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 29\u00b0C on August 7?",
+        "usdc": 7.68536
+      },
+      {
+        "timestamp": 1785999804,
+        "equity": -86077.875186,
+        "delta": -20.82,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Guangzhou be 37\u00b0C on August 6?",
+        "usdc": 20.82
+      },
+      {
+        "timestamp": 1786000179,
+        "equity": -87357.894421,
+        "delta": 12.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Sao Paulo be 31\u00b0C on August 7?",
+        "usdc": 12.0
+      },
+      {
+        "timestamp": 1786000328,
+        "equity": -88021.065231,
+        "delta": 4.99,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Guangzhou be 36\u00b0C on August 6?",
+        "usdc": 4.99
+      },
+      {
+        "timestamp": 1786000439,
+        "equity": -88775.549835,
+        "delta": 0.007893,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Buenos Aires be 16\u00b0C on August 7?",
+        "usdc": 0.007893
+      },
+      {
+        "timestamp": 1786000688,
+        "equity": -89247.987539,
+        "delta": -4.69095,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 33\u00b0C on August 8?",
+        "usdc": 4.69095
+      },
+      {
+        "timestamp": 1786000871,
+        "equity": -89801.939112,
+        "delta": -4.37827,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Taipei be 33\u00b0C on August 7?",
+        "usdc": 4.37827
+      },
+      {
+        "timestamp": 1786001180,
+        "equity": -90377.158279,
+        "delta": -4.04,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 37\u00b0C on August 8?",
+        "usdc": 4.04
+      },
+      {
+        "timestamp": 1786001805,
+        "equity": -90810.732421,
+        "delta": 0.88,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Lucknow be 31\u00b0C on August 6?",
+        "usdc": 0.88
+      },
+      {
+        "timestamp": 1786002276,
+        "equity": -91178.675447,
+        "delta": -13.61008,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Lucknow be 31\u00b0C on August 6?",
+        "usdc": 13.61008
+      },
+      {
+        "timestamp": 1786002551,
+        "equity": -91755.657873,
+        "delta": 0.61,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in London be 24\u00b0C on August 7?",
+        "usdc": 0.61
+      },
+      {
+        "timestamp": 1786003014,
+        "equity": -93136.891304,
+        "delta": -15.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 36\u00b0C on August 6?",
+        "usdc": 15.6
+      },
+      {
+        "timestamp": 1786003305,
+        "equity": -93571.667773,
+        "delta": 0.88,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Lucknow be 31\u00b0C on August 6?",
+        "usdc": 0.88
+      },
+      {
+        "timestamp": 1786003539,
+        "equity": -95833.277274,
+        "delta": -2.08736,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Milan be 35\u00b0C on August 6?",
+        "usdc": 2.08736
+      },
+      {
+        "timestamp": 1786003812,
+        "equity": -96016.699142,
+        "delta": -9.045,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 29\u00b0C or higher on August 6?",
+        "usdc": 9.045
+      },
+      {
+        "timestamp": 1786004172,
+        "equity": -96464.561008,
+        "delta": -3.5525,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 27\u00b0C on August 6?",
+        "usdc": 3.5525
+      },
+      {
+        "timestamp": 1786004228,
+        "equity": -98804.414555,
+        "delta": -19.98079,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Heather McElwain win the most votes in the Alaska Senate primary final round?",
+        "usdc": 19.98079
+      },
+      {
+        "timestamp": 1786004741,
+        "equity": -101516.459681,
+        "delta": -7.39855,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Manila be 30\u00b0C on August 8?",
+        "usdc": 7.39855
+      },
+      {
+        "timestamp": 1786005017,
+        "equity": -101970.108486,
+        "delta": -1.98132,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 22\u00b0C on August 6?",
+        "usdc": 1.98132
+      },
+      {
+        "timestamp": 1786005209,
+        "equity": -102173.23467,
+        "delta": -6.3178,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 15\u00b0C on August 6?",
+        "usdc": 6.3178
+      },
+      {
+        "timestamp": 1786005519,
+        "equity": -102668.429016,
+        "delta": -9.99049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 18\u00b0C or higher on August 6?",
+        "usdc": 9.99049
+      },
+      {
+        "timestamp": 1786005909,
+        "equity": -104079.650107,
+        "delta": -0.6536,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in New York City be between 78-79\u00b0F on August 6?",
+        "usdc": 0.6536
+      },
+      {
+        "timestamp": 1786005996,
+        "equity": -104772.457327,
+        "delta": -12.47808,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Milan be 34\u00b0C on August 8?",
+        "usdc": 12.47808
+      },
+      {
+        "timestamp": 1786006131,
+        "equity": -105299.809104,
+        "delta": -1.91137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Madrid be 38\u00b0C on August 8?",
+        "usdc": 1.91137
+      },
+      {
+        "timestamp": 1786006410,
+        "equity": -105869.114647,
+        "delta": 0.9,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Milan be 35\u00b0C on August 6?",
+        "usdc": 0.9
+      },
+      {
+        "timestamp": 1786006641,
+        "equity": -106511.94976,
+        "delta": -14.07395,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 23\u00b0C on August 6?",
+        "usdc": 14.07395
+      },
+      {
+        "timestamp": 1786006943,
+        "equity": -106755.739627,
+        "delta": -9.9038,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Jeddah be 34\u00b0C on August 8?",
+        "usdc": 9.9038
+      },
+      {
+        "timestamp": 1786007589,
+        "equity": -107008.082378,
+        "delta": 0.654,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Paris be 25\u00b0C on August 6?",
+        "usdc": 0.654
+      },
+      {
+        "timestamp": 1786008071,
+        "equity": -107827.548288,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Seoul (Incheon) be 41\u00b0C or higher on August 8?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1786008300,
+        "equity": -108413.319773,
+        "delta": 1.2,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Singapore be 34\u00b0C on August 7?",
+        "usdc": 1.2
+      },
+      {
+        "timestamp": 1786008857,
+        "equity": -109047.808465,
+        "delta": -5.99429,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Seoul (Incheon) be 41\u00b0C or higher on August 8?",
+        "usdc": 5.99429
+      },
+      {
+        "timestamp": 1786009208,
+        "equity": -109979.480903,
+        "delta": -7.84784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Lucknow be 31\u00b0C on August 6?",
+        "usdc": 7.84784
+      },
+      {
+        "timestamp": 1786009935,
+        "equity": -110205.742579,
+        "delta": -3.89427,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 35\u00b0C on August 8?",
+        "usdc": 3.89427
+      },
+      {
+        "timestamp": 1786010310,
+        "equity": -110908.72605,
+        "delta": -3.10947,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 37\u00b0C on August 7?",
+        "usdc": 3.10947
+      },
+      {
+        "timestamp": 1786011048,
+        "equity": -112655.007625,
+        "delta": 0.159,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Madrid be 39\u00b0C on August 6?",
+        "usdc": 0.159
+      },
+      {
+        "timestamp": 1786011567,
+        "equity": -114037.215092,
+        "delta": -133.35643,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will DeepSeek have the best Chinese AI model at the end of September 2026?",
+        "usdc": 133.35643
+      },
+      {
+        "timestamp": 1786011750,
+        "equity": -115685.724218,
+        "delta": -5.07166,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Helsinki be 24\u00b0C on August 8?",
+        "usdc": 5.07166
+      },
+      {
+        "timestamp": 1786012092,
+        "equity": -116548.649499,
+        "delta": -66.36499,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Guangzhou be 37\u00b0C on August 8?",
+        "usdc": 66.36499
+      },
+      {
+        "timestamp": 1786012527,
+        "equity": -116977.330089,
+        "delta": -16.95576,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Moscow be 32\u00b0C on August 6?",
+        "usdc": 16.95576
+      },
+      {
+        "timestamp": 1786013264,
+        "equity": -117377.049987,
+        "delta": -4.86033,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Cape Town be 16\u00b0C on August 6?",
+        "usdc": 4.86033
+      },
+      {
+        "timestamp": 1786013966,
+        "equity": -117835.599567,
+        "delta": -7.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 25\u00b0C on August 6?",
+        "usdc": 7.0
+      },
+      {
+        "timestamp": 1786014398,
+        "equity": -118136.358222,
+        "delta": 2.22,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Cape Town be 15\u00b0C on August 6?",
+        "usdc": 2.22
+      },
+      {
+        "timestamp": 1786015043,
+        "equity": -118776.195595,
+        "delta": -4.95247,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Madrid be 36\u00b0C on August 8?",
+        "usdc": 4.95247
+      },
+      {
+        "timestamp": 1786015325,
+        "equity": -119185.569062,
+        "delta": -17.4122,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 25\u00b0C on August 6?",
+        "usdc": 17.4122
+      },
+      {
+        "timestamp": 1786015644,
+        "equity": -119610.970228,
+        "delta": 0.002707,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Amsterdam be 21\u00b0C on August 6?",
+        "usdc": 0.002707
+      },
+      {
+        "timestamp": 1786016519,
+        "equity": -120697.914142,
+        "delta": -4.97149,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Amsterdam be 23\u00b0C on August 6?",
+        "usdc": 4.97149
+      },
+      {
+        "timestamp": 1786016976,
+        "equity": -121364.205883,
+        "delta": -29.4453,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 26\u00b0C on August 7?",
+        "usdc": 29.4453
+      },
+      {
+        "timestamp": 1786017432,
+        "equity": -125273.431273,
+        "delta": -29.92081,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will July 2026 be the 2nd hottest on record?",
+        "usdc": 29.92081
+      },
+      {
+        "timestamp": 1786017869,
+        "equity": -126039.393416,
+        "delta": -13.67089,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 25\u00b0C on August 7?",
+        "usdc": 13.67089
+      },
+      {
+        "timestamp": 1786018125,
+        "equity": -127615.11133,
+        "delta": 3.736506,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Amazon have the best AI model at the end of September 2026?",
+        "usdc": 3.736506
+      },
+      {
+        "timestamp": 1786018310,
+        "equity": -128573.369542,
+        "delta": -4.73517,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Miami be between 86-87\u00b0F on August 7?",
+        "usdc": 4.73517
+      },
+      {
+        "timestamp": 1786018610,
+        "equity": -129330.639038,
+        "delta": 4.003335,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Paris be 24\u00b0C on August 6?",
+        "usdc": 4.003335
+      },
+      {
+        "timestamp": 1786019066,
+        "equity": -129861.402634,
+        "delta": -11.2443,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 25\u00b0C on August 7?",
+        "usdc": 11.2443
+      },
+      {
+        "timestamp": 1786019375,
+        "equity": -131071.645675,
+        "delta": -7.92396,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 29\u00b0C or higher on August 6?",
+        "usdc": 7.92396
+      },
+      {
+        "timestamp": 1786019742,
+        "equity": -131471.998447,
+        "delta": -14.95497,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Z.ai have the best AI model on LiveBench (Overall) at the end of August 2026?",
+        "usdc": 14.95497
+      },
+      {
+        "timestamp": 1786020045,
+        "equity": -131982.142154,
+        "delta": -51.19896,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Taipei be 33\u00b0C on August 7?",
+        "usdc": 51.19896
+      },
+      {
+        "timestamp": 1786020575,
+        "equity": -133448.482641,
+        "delta": -37.95595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tereza Cristina be the VP candidate of Flavio Bolsonaro?",
+        "usdc": 37.95595
+      },
+      {
+        "timestamp": 1786021092,
+        "equity": -133368.016089,
+        "delta": -4.70859,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 24\u00b0C on August 6?",
+        "usdc": 4.70859
+      },
+      {
+        "timestamp": 1786021584,
+        "equity": -132784.852004,
+        "delta": -43.59769,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 27\u00b0C on August 7?",
+        "usdc": 43.59769
+      },
+      {
+        "timestamp": 1786022333,
+        "equity": -134151.460115,
+        "delta": -54.79068,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthropic be the second-best AI lab at the end of August 2026?",
+        "usdc": 54.79068
+      },
+      {
+        "timestamp": 1786022420,
+        "equity": -134481.647265,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Miami be between 86-87\u00b0F on August 5?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786022444,
+        "equity": -134481.526265,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will John Saulie-Rohman earn the most votes in the WA-03 primary?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786022454,
+        "equity": -134481.526265,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Chicago be 94\u00b0F or higher on August 5?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786022588,
+        "equity": -134569.906215,
+        "delta": 5.9,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Bridget Phillipson be the first to leave the Burnham cabinet?",
+        "usdc": 5.9
+      },
+      {
+        "timestamp": 1786023123,
+        "equity": -134909.347834,
+        "delta": -10.1304,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Moscow be 31\u00b0C on August 6?",
+        "usdc": 10.1304
+      },
+      {
+        "timestamp": 1786023386,
+        "equity": -136332.460771,
+        "delta": -1.93988,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 26\u00b0C on August 6?",
+        "usdc": 1.93988
+      },
+      {
+        "timestamp": 1786023696,
+        "equity": -138163.429672,
+        "delta": -18.36466,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Microsoft be the second-best AI lab at the end of August 2026?",
+        "usdc": 18.36466
+      },
+      {
+        "timestamp": 1786024002,
+        "equity": -139147.38394,
+        "delta": 1.59,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in New York City be between 86-87\u00b0F on August 6?",
+        "usdc": 1.59
+      },
+      {
+        "timestamp": 1786024952,
+        "equity": -139400.811078,
+        "delta": -5.3607,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Rodri join Barcelona?",
+        "usdc": 5.3607
+      },
+      {
+        "timestamp": 1786025634,
+        "equity": -140017.492343,
+        "delta": -6.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in New York City be between 90-91\u00b0F on August 6?",
+        "usdc": 6.2
+      },
+      {
+        "timestamp": 1786025895,
+        "equity": -140391.607263,
+        "delta": 0.052943,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Miami be between 86-87\u00b0F on August 6?",
+        "usdc": 0.052943
+      },
+      {
+        "timestamp": 1786026281,
+        "equity": -140700.354751,
+        "delta": -5.87316,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Pete Buttigieg be the 2028 Democratic Vice-Presidential nominee?",
+        "usdc": 5.87316
+      },
+      {
+        "timestamp": 1786026614,
+        "equity": -141303.398507,
+        "delta": 0.56098,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Ro Khanna be the 2028 Democratic Vice-Presidential nominee?",
+        "usdc": 0.56098
+      },
+      {
+        "timestamp": 1786026908,
+        "equity": -142043.290874,
+        "delta": 4.67,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in London be 22\u00b0C on August 6?",
+        "usdc": 4.67
+      },
+      {
+        "timestamp": 1786027802,
+        "equity": -142280.589354,
+        "delta": -4.98916,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 33\u00b0C on August 7?",
+        "usdc": 4.98916
+      },
+      {
+        "timestamp": 1786028688,
+        "equity": -143167.998543,
+        "delta": -6.3635,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Busan be 33\u00b0C on August 7?",
+        "usdc": 6.3635
+      },
+      {
+        "timestamp": 1786029183,
+        "equity": -144104.778907,
+        "delta": 14.44,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Munich be 28\u00b0C on August 6?",
+        "usdc": 14.44
+      },
+      {
+        "timestamp": 1786029771,
+        "equity": -144706.654461,
+        "delta": -7.96959,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 31\u00b0C or higher on August 6?",
+        "usdc": 7.96959
+      },
+      {
+        "timestamp": 1786030283,
+        "equity": -145211.642229,
+        "delta": 0.002856,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Munich be 26\u00b0C on August 6?",
+        "usdc": 0.002856
+      },
+      {
+        "timestamp": 1786030737,
+        "equity": -145471.079328,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will J.K. Dobbins finish the 2026-27 NFL regular season with the most rushing touchdowns?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786031288,
+        "equity": -145736.310728,
+        "delta": -11.28926,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 37\u00b0C or higher on August 8?",
+        "usdc": 11.28926
+      },
+      {
+        "timestamp": 1786031661,
+        "equity": -146002.634148,
+        "delta": -5.48954,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Rachid Meziane win the 2026 WNBA Coach of the Year award?",
+        "usdc": 5.48954
+      },
+      {
+        "timestamp": 1786032128,
+        "equity": -146613.319546,
+        "delta": -6.04626,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Paris be 26\u00b0C on August 6?",
+        "usdc": 6.04626
+      },
+      {
+        "timestamp": 1786033397,
+        "equity": -147087.314915,
+        "delta": -4.98574,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will 007 First Light win Game of the Year at the 2026 Game Awards?",
+        "usdc": 4.98574
+      },
+      {
+        "timestamp": 1786033781,
+        "equity": -147384.934282,
+        "delta": 22.2,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Madrid be 40\u00b0C on August 8?",
+        "usdc": 22.2
+      },
+      {
+        "timestamp": 1786033959,
+        "equity": -147708.440765,
+        "delta": 1.52,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Dallas be between 96-97\u00b0F on August 6?",
+        "usdc": 1.52
+      },
+      {
+        "timestamp": 1786034328,
+        "equity": -148496.613692,
+        "delta": -12.60343,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Steve Garcia be the UFC Featherweight Champion on December 31, 2026?",
+        "usdc": 12.60343
+      },
+      {
+        "timestamp": 1786034658,
+        "equity": -149466.024443,
+        "delta": -4.03165,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Toronto be 30\u00b0C on August 6?",
+        "usdc": 4.03165
+      },
+      {
+        "timestamp": 1786035117,
+        "equity": -149987.493083,
+        "delta": -3.19327,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Seattle be between 86-87\u00b0F on August 6?",
+        "usdc": 3.19327
+      },
+      {
+        "timestamp": 1786035507,
+        "equity": -150722.778547,
+        "delta": 0.005183,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in New York City be between 90-91\u00b0F on August 6?",
+        "usdc": 0.005183
+      },
+      {
+        "timestamp": 1786035984,
+        "equity": -151513.769989,
+        "delta": -9.42012,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Tokyo be 34\u00b0C on August 8?",
+        "usdc": 9.42012
+      },
+      {
+        "timestamp": 1786036208,
+        "equity": -152734.750908,
+        "delta": -9.88118,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Ted Cruz post 20-39 posts from August 7 to August 14, 2026?",
+        "usdc": 9.88118
+      },
+      {
+        "timestamp": 1786036662,
+        "equity": -154584.505115,
+        "delta": -374.13051,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Vinicius Junior join Manchester City?",
+        "usdc": 374.13051
+      },
+      {
+        "timestamp": 1786037051,
+        "equity": -160243.6837,
+        "delta": -78.98856,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Vinicius Junior join Arsenal?",
+        "usdc": 78.98856
+      },
+      {
+        "timestamp": 1786037609,
+        "equity": -160997.230063,
+        "delta": -5.49381,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Catherine O'Hara be the #1 searched passing on Google in the US this year?",
+        "usdc": 5.49381
+      },
+      {
+        "timestamp": 1786037871,
+        "equity": -160890.579763,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Shenzhen be 29\u00b0C on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786037871,
+        "equity": -160890.579763,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Guangzhou be 33\u00b0C on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786037879,
+        "equity": -161070.109273,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the price of Ethereum be between $1,700 and $1,800 on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786038128,
+        "equity": -161219.295603,
+        "delta": 0.008967,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Vinicius Junior join Arsenal?",
+        "usdc": 0.008967
+      },
+      {
+        "timestamp": 1786039202,
+        "equity": -161836.85886,
+        "delta": 1.436193,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Houston be between 92-93\u00b0F on August 6?",
+        "usdc": 1.436193
+      },
+      {
+        "timestamp": 1786039734,
+        "equity": -163408.639784,
+        "delta": -33.21,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in New York City be between 88-89\u00b0F on August 6?",
+        "usdc": 33.21
+      },
+      {
+        "timestamp": 1786039914,
+        "equity": -166088.638571,
+        "delta": -6.18809,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will ByteDance be the second-best Math AI lab at the end of August 2026?",
+        "usdc": 6.18809
+      },
+      {
+        "timestamp": 1786040561,
+        "equity": -169443.034795,
+        "delta": -138.73587,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Vinicius Junior join Arsenal?",
+        "usdc": 138.73587
+      },
+      {
+        "timestamp": 1786041174,
+        "equity": -183194.048165,
+        "delta": -51.3295,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Alibaba be the second-best Chinese AI company at the end of September 2026?",
+        "usdc": 51.3295
+      },
+      {
+        "timestamp": 1786041522,
+        "equity": -183955.267085,
+        "delta": 0.63,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Amazon have the best AI model on LiveBench (Overall) at the end of August 2026?",
+        "usdc": 0.63
+      },
+      {
+        "timestamp": 1786042082,
+        "equity": -184146.237279,
+        "delta": -6.38175,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Forza Horizon 6 win Best Multiplayer at the 2026 Game Awards?",
+        "usdc": 6.38175
+      },
+      {
+        "timestamp": 1786043550,
+        "equity": -184519.913933,
+        "delta": -6.4188,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Replaced win Best Independent Game at the 2026 Game Awards?",
+        "usdc": 6.4188
+      },
+      {
+        "timestamp": 1786045265,
+        "equity": -185022.414399,
+        "delta": -33.76755,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Taofeek Adeleke win the 2026 Osun State gubernatorial elections?",
+        "usdc": 33.76755
+      },
+      {
+        "timestamp": 1786046721,
+        "equity": -185292.799946,
+        "delta": -9.98099,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will The Whisper Man win Best Cinematography at the 99th Academy Awards?",
+        "usdc": 9.98099
+      },
+      {
+        "timestamp": 1786048158,
+        "equity": -186356.583879,
+        "delta": -30.67044,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chengdu be 30\u00b0C on August 7?",
+        "usdc": 30.67044
+      },
+      {
+        "timestamp": 1786049781,
+        "equity": -187091.936852,
+        "delta": -3.93158,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Core CPI MoM be 0.1% in July?",
+        "usdc": 3.93158
+      },
+      {
+        "timestamp": 1786050768,
+        "equity": -187835.933093,
+        "delta": -10.82822,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 14\u00b0C on August 7?",
+        "usdc": 10.82822
+      },
+      {
+        "timestamp": 1786052472,
+        "equity": -188690.436686,
+        "delta": -9.00359,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Lucknow be 30\u00b0C on August 7?",
+        "usdc": 9.00359
+      },
+      {
+        "timestamp": 1786053318,
+        "equity": -191727.330476,
+        "delta": -30.753,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Istanbul be 30\u00b0C on August 7?",
+        "usdc": 30.753
+      },
+      {
+        "timestamp": 1786054298,
+        "equity": -193334.405155,
+        "delta": -92.0125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 16\u00b0C on August 7?",
+        "usdc": 92.0125
+      },
+      {
+        "timestamp": 1786054880,
+        "equity": -193956.191681,
+        "delta": -8.16986,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 32\u00b0C on August 8?",
+        "usdc": 8.16986
+      },
+      {
+        "timestamp": 1786055843,
+        "equity": -194457.568307,
+        "delta": -8.84616,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elon Musk\u2019s net worth be between $600B and $700B on August 31?",
+        "usdc": 8.84616
+      },
+      {
+        "timestamp": 1786056299,
+        "equity": -195266.245507,
+        "delta": 0.05803,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in London be 30\u00b0C on August 7?",
+        "usdc": 0.05803
+      },
+      {
+        "timestamp": 1786057806,
+        "equity": -196423.666648,
+        "delta": -19.98079,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Bia Kicis be the VP candidate of Flavio Bolsonaro?",
+        "usdc": 19.98079
+      },
+      {
+        "timestamp": 1786058091,
+        "equity": -197395.169828,
+        "delta": -19.36313,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jan-Lennard Struff Win the Cincinnati Open?",
+        "usdc": 19.36313
+      },
+      {
+        "timestamp": 1786059131,
+        "equity": -198200.058284,
+        "delta": -8.08444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tarcisio de Freitas finish in second place in the first round of the 2026 Brazilian presidential election?",
+        "usdc": 8.08444
+      },
+      {
+        "timestamp": 1786059195,
+        "equity": -198848.954164,
+        "delta": 0.31,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Ronaldo Caiado finish in second place in the first round of the 2026 Brazilian presidential election?",
+        "usdc": 0.31
+      },
+      {
+        "timestamp": 1786059665,
+        "equity": -201030.384714,
+        "delta": 19.4,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Jaume Munar Win the Cincinnati Open?",
+        "usdc": 19.4
+      },
+      {
+        "timestamp": 1786059923,
+        "equity": -202177.755926,
+        "delta": 0.003185,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shanghai be 33\u00b0C on August 7?",
+        "usdc": 0.003185
+      },
+      {
+        "timestamp": 1786060431,
+        "equity": -202885.722026,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Amsterdam be 19\u00b0C or below on August 7?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786060743,
+        "equity": -203396.442374,
+        "delta": 4.97,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Wellington be 14\u00b0C on August 7?",
+        "usdc": 4.97
+      },
+      {
+        "timestamp": 1786061615,
+        "equity": -203890.230335,
+        "delta": -45.05715,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in New York City be between 82-83\u00b0F on August 7?",
+        "usdc": 45.05715
+      },
+      {
+        "timestamp": 1786062501,
+        "equity": -204294.408057,
+        "delta": -12.75274,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will David O. Russell win Best Director at the 99th Academy Awards?",
+        "usdc": 12.75274
+      },
+      {
+        "timestamp": 1786063688,
+        "equity": -205745.97612,
+        "delta": -9.17388,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 35\u00b0C on August 8?",
+        "usdc": 9.17388
+      },
+      {
+        "timestamp": 1786064538,
+        "equity": -206605.2517,
+        "delta": -78.32551,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in London be 10\u00b0C or below on August 8?",
+        "usdc": 78.32551
+      },
+      {
+        "timestamp": 1786064812,
+        "equity": -207150.576075,
+        "delta": -5.76236,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Manila be 28\u00b0C on August 7?",
+        "usdc": 5.76236
+      },
+      {
+        "timestamp": 1786065187,
+        "equity": -207812.677775,
+        "delta": 1.9,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Hong Kong be 32\u00b0C on August 7?",
+        "usdc": 1.9
+      },
+      {
+        "timestamp": 1786065622,
+        "equity": -209028.925582,
+        "delta": -7.99239,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 30\u00b0C on August 7?",
+        "usdc": 7.99239
+      },
+      {
+        "timestamp": 1786066381,
+        "equity": -209191.684228,
+        "delta": -5.78897,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 22\u00b0C or below on August 7?",
+        "usdc": 5.78897
+      },
+      {
+        "timestamp": 1786067065,
+        "equity": -210200.044101,
+        "delta": 81.96,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Napheesa Collier win the 2026 WNBA MVP award?",
+        "usdc": 81.96
+      },
+      {
+        "timestamp": 1786068025,
+        "equity": -210726.544773,
+        "delta": -23.90878,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 24\u00b0C on August 7?",
+        "usdc": 23.90878
+      },
+      {
+        "timestamp": 1786068303,
+        "equity": -211976.616513,
+        "delta": -3.6504,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 29\u00b0C on August 8?",
+        "usdc": 3.6504
+      },
+      {
+        "timestamp": 1786069467,
+        "equity": -212465.245676,
+        "delta": -4.4264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 24\u00b0C on August 7?",
+        "usdc": 4.4264
+      },
+      {
+        "timestamp": 1786070080,
+        "equity": -212958.432155,
+        "delta": -15.14002,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Milan be 34\u00b0C on August 7?",
+        "usdc": 15.14002
+      },
+      {
+        "timestamp": 1786070740,
+        "equity": -213436.517032,
+        "delta": -5.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Sao Paulo be 25\u00b0C on August 7?",
+        "usdc": 5.6
+      },
+      {
+        "timestamp": 1786071435,
+        "equity": -214069.059007,
+        "delta": -15.98479,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Julian Alvarez join Manchester City?",
+        "usdc": 15.98479
+      },
+      {
+        "timestamp": 1786071475,
+        "equity": -216825.961387,
+        "delta": -50.75173,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elche win the 2026-27 LALIGA Championship?",
+        "usdc": 50.75173
+      },
+      {
+        "timestamp": 1786071582,
+        "equity": -216637.088393,
+        "delta": -78.92494,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Alav\u00e9s win the 2026-27 LALIGA Championship?",
+        "usdc": 78.92494
+      },
+      {
+        "timestamp": 1786071909,
+        "equity": -217177.529633,
+        "delta": -168.43982,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Hong Kong be 25\u00b0C on August 7?",
+        "usdc": 168.43982
+      },
+      {
+        "timestamp": 1786072528,
+        "equity": -217766.370508,
+        "delta": -10.87612,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in New York City be between 86-87\u00b0F on August 8?",
+        "usdc": 10.87612
+      },
+      {
+        "timestamp": 1786072993,
+        "equity": -217477.264595,
+        "delta": -9.89049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Xiaomi be the #3 AI Lab at the end of August 2026 (Style Control On)?",
+        "usdc": 9.89049
+      },
+      {
+        "timestamp": 1786073068,
+        "equity": -217785.084795,
+        "delta": 0.06623,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Buenos Aires be 10\u00b0C on August 7?",
+        "usdc": 0.06623
+      },
+      {
+        "timestamp": 1786073326,
+        "equity": -218123.53338,
+        "delta": -4.19193,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tencent be the #3 AI Lab at the end of September 2026 (Style Control On)?",
+        "usdc": 4.19193
+      },
+      {
+        "timestamp": 1786073557,
+        "equity": -218924.455234,
+        "delta": -57.64518,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 8\u00b0C or below on August 8?",
+        "usdc": 57.64518
+      },
+      {
+        "timestamp": 1786074048,
+        "equity": -219254.786297,
+        "delta": -6.28185,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will ByteDance be the #3 AI Lab at the end of September 2026 (Style Control On)?",
+        "usdc": 6.28185
+      },
+      {
+        "timestamp": 1786074210,
+        "equity": -219687.679445,
+        "delta": -11.60572,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Typhoon Dolphin be a \"Severe Tropical Storm\" at Japan landfall?",
+        "usdc": 11.60572
+      },
+      {
+        "timestamp": 1786074958,
+        "equity": -219885.296689,
+        "delta": -2.42644,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 37\u00b0C on August 7?",
+        "usdc": 2.42644
+      },
+      {
+        "timestamp": 1786075203,
+        "equity": -221034.607839,
+        "delta": 17.3,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the Baltimore Orioles win the 2026 World Series?",
+        "usdc": 17.3
+      },
+      {
+        "timestamp": 1786075273,
+        "equity": -220872.539233,
+        "delta": 51.3,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the St. Louis Cardinals win the 2026 World Series?",
+        "usdc": 51.3
+      },
+      {
+        "timestamp": 1786075881,
+        "equity": -220635.116668,
+        "delta": -9.81067,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Miami be 90\u00b0F or higher on August 8?",
+        "usdc": 9.81067
+      },
+      {
+        "timestamp": 1786076932,
+        "equity": -221017.684923,
+        "delta": -17.26524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Dallas be between 104-105\u00b0F on August 8?",
+        "usdc": 17.26524
+      },
+      {
+        "timestamp": 1786078486,
+        "equity": -221603.87447,
+        "delta": 1.459283,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Madrid be 37\u00b0C on August 7?",
+        "usdc": 1.459283
+      },
+      {
+        "timestamp": 1786079302,
+        "equity": -221916.443944,
+        "delta": -2.54711,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 12\u00b0C on August 7?",
+        "usdc": 2.54711
+      },
+      {
+        "timestamp": 1786080160,
+        "equity": -222346.081413,
+        "delta": -0.714761,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Warsaw be 24\u00b0C on August 7?",
+        "usdc": 0.714761
+      },
+      {
+        "timestamp": 1786081350,
+        "equity": -222760.125919,
+        "delta": -30.79741,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 35\u00b0C on August 7?",
+        "usdc": 30.79741
+      },
+      {
+        "timestamp": 1786081878,
+        "equity": -223228.505114,
+        "delta": -7.97695,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Microsoft be the #2 AI lab at the end of August 2026?",
+        "usdc": 7.97695
+      },
+      {
+        "timestamp": 1786082601,
+        "equity": -224004.909653,
+        "delta": -4.8096,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 16\u00b0C on August 9?",
+        "usdc": 4.8096
+      },
+      {
+        "timestamp": 1786083204,
+        "equity": -224566.925978,
+        "delta": -7.31276,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 35\u00b0C on August 7?",
+        "usdc": 7.31276
+      },
+      {
+        "timestamp": 1786083739,
+        "equity": -225222.488558,
+        "delta": -9.97119,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Meta be the third-best Math AI lab at the end of September 2026?",
+        "usdc": 9.97119
+      },
+      {
+        "timestamp": 1786084636,
+        "equity": -225610.954634,
+        "delta": 18.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Mexico City be 21\u00b0C on August 8?",
+        "usdc": 18.0
+      },
+      {
+        "timestamp": 1786085860,
+        "equity": -227487.372338,
+        "delta": 24.26,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will 8 Fed rate cuts happen in 2026?",
+        "usdc": 24.26
+      },
+      {
+        "timestamp": 1786086889,
+        "equity": -228074.880353,
+        "delta": -18.44797,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Karachi be 34\u00b0C on August 9?",
+        "usdc": 18.44797
+      },
+      {
+        "timestamp": 1786088419,
+        "equity": -228698.654165,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Austin be between 98-99\u00b0F on August 8?",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1786088757,
+        "equity": -229131.675425,
+        "delta": -8.78154,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Donald Trump post 100-119 Truth Social posts from August 4 to August 11, 2026?",
+        "usdc": 8.78154
+      },
+      {
+        "timestamp": 1786090536,
+        "equity": -229406.765799,
+        "delta": 0.12979,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Guangzhou be 40\u00b0C or higher on August 7?",
+        "usdc": 0.12979
+      },
+      {
+        "timestamp": 1786091929,
+        "equity": -231265.957589,
+        "delta": -5.09515,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Kuala Lumpur be 37\u00b0C or higher on August 9?",
+        "usdc": 5.09515
+      },
+      {
+        "timestamp": 1786092769,
+        "equity": -232142.694534,
+        "delta": -4.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chengdu be 34\u00b0C on August 7?",
+        "usdc": 4.88
+      },
+      {
+        "timestamp": 1786093458,
+        "equity": -232980.52934,
+        "delta": -3.30687,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in San Francisco be between 72-73\u00b0F on August 8?",
+        "usdc": 3.30687
+      },
+      {
+        "timestamp": 1786095070,
+        "equity": -234599.321106,
+        "delta": -65.83739,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Dallas be between 110-111\u00b0F on August 8?",
+        "usdc": 65.83739
+      },
+      {
+        "timestamp": 1786095096,
+        "equity": -236142.479447,
+        "delta": -19.98099,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in New York City be between 82-83\u00b0F on August 8?",
+        "usdc": 19.98099
+      },
+      {
+        "timestamp": 1786095141,
+        "equity": -236730.193497,
+        "delta": -9.99049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chengdu be 27\u00b0C or below on August 9?",
+        "usdc": 9.99049
+      },
+      {
+        "timestamp": 1786095655,
+        "equity": -237339.028623,
+        "delta": -15.3075,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the next Google Gemini Pro model be released on August 12, 2026?",
+        "usdc": 15.3075
+      },
+      {
+        "timestamp": 1786095714,
+        "equity": -237682.503933,
+        "delta": -6.1659,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Toronto be 25\u00b0C on August 7?",
+        "usdc": 6.1659
+      },
+      {
+        "timestamp": 1786095996,
+        "equity": -238034.338202,
+        "delta": 4.361704,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Cape Town be 19\u00b0C on August 7?",
+        "usdc": 4.361704
+      },
+      {
+        "timestamp": 1786096767,
+        "equity": -238332.936524,
+        "delta": -4.8096,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wuhan be 37\u00b0C on August 9?",
+        "usdc": 4.8096
+      },
+      {
+        "timestamp": 1786097260,
+        "equity": -238568.897744,
+        "delta": -9.33255,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 34\u00b0C on August 9?",
+        "usdc": 9.33255
+      },
+      {
+        "timestamp": 1786097953,
+        "equity": -239503.524674,
+        "delta": -21.21345,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Taipei be 30\u00b0C on August 8?",
+        "usdc": 21.21345
+      },
+      {
+        "timestamp": 1786098561,
+        "equity": -240723.048496,
+        "delta": -17.65764,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Busan be 34\u00b0C on August 9?",
+        "usdc": 17.65764
+      },
+      {
+        "timestamp": 1786098961,
+        "equity": -241149.224676,
+        "delta": 1.88,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Core CPI MoM be 0.1% in July?",
+        "usdc": 1.88
+      },
+      {
+        "timestamp": 1786099378,
+        "equity": -241629.053006,
+        "delta": -4.2307,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 37\u00b0C on August 9?",
+        "usdc": 4.2307
+      },
+      {
+        "timestamp": 1786100494,
+        "equity": -242205.126616,
+        "delta": -15.98479,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Moscow be 32\u00b0C on August 7?",
+        "usdc": 15.98479
+      },
+      {
+        "timestamp": 1786101100,
+        "equity": -242831.836326,
+        "delta": 0.13091,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Moscow be 31\u00b0C on August 7?",
+        "usdc": 0.13091
+      },
+      {
+        "timestamp": 1786102359,
+        "equity": -245158.495662,
+        "delta": -169.2194,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Jay Collins be the Republican nominee for Florida Governor?",
+        "usdc": 169.2194
+      },
+      {
+        "timestamp": 1786102743,
+        "equity": -248432.381233,
+        "delta": -5.33909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 25\u00b0C on August 9?",
+        "usdc": 5.33909
+      },
+      {
+        "timestamp": 1786103761,
+        "equity": -249697.484506,
+        "delta": -1.6396,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Istanbul be 28\u00b0C on August 7?",
+        "usdc": 1.6396
+      },
+      {
+        "timestamp": 1786104744,
+        "equity": -250100.14936,
+        "delta": -4.17822,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthropic be the second-best Code Arena | WebDev AI lab at the end of September 2026?",
+        "usdc": 4.17822
+      },
+      {
+        "timestamp": 1786105864,
+        "equity": -256366.990338,
+        "delta": -285.26256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+        "usdc": 285.26256
+      },
+      {
+        "timestamp": 1786106557,
+        "equity": -262522.140878,
+        "delta": 3.38,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Miami be between 88-89\u00b0F on August 7?",
+        "usdc": 3.38
+      },
+      {
+        "timestamp": 1786107144,
+        "equity": -263607.759642,
+        "delta": -69.93349,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Jeddah be 41\u00b0C or higher on August 7?",
+        "usdc": 69.93349
+      },
+      {
+        "timestamp": 1786107679,
+        "equity": -264523.386728,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Ankara be 36\u00b0C on August 8?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786108929,
+        "equity": -265088.588275,
+        "delta": -54.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Kuala Lumpur be 33\u00b0C on August 8?",
+        "usdc": 54.02
+      },
+      {
+        "timestamp": 1786109884,
+        "equity": -266237.964238,
+        "delta": -8.99144,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Max Clark win the 2026 AL Rookie of the Year award?",
+        "usdc": 8.99144
+      },
+      {
+        "timestamp": 1786109995,
+        "equity": -266767.062178,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Warsaw be 39\u00b0C or higher on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786109995,
+        "equity": -266767.062178,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Istanbul be 22\u00b0C or below on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786110004,
+        "equity": -266767.057634,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Moscow be 33\u00b0C or higher on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786110015,
+        "equity": -266767.057634,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in San Francisco be between 66-67\u00b0F on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786110024,
+        "equity": -266767.057634,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Amsterdam be 19\u00b0C on August 6?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786110465,
+        "equity": -267756.310079,
+        "delta": 12.2476,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Emiliano Martinez stay at Aston Villa?",
+        "usdc": 12.2476
+      },
+      {
+        "timestamp": 1786111146,
+        "equity": -269422.242584,
+        "delta": -13.09735,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Z.ai have the best Chinese AI model at the end of September 2026?",
+        "usdc": 13.09735
+      },
+      {
+        "timestamp": 1786112001,
+        "equity": -271259.708418,
+        "delta": -9.045,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Panama City be 32\u00b0C on August 7?",
+        "usdc": 9.045
+      },
+      {
+        "timestamp": 1786113331,
+        "equity": -272205.246604,
+        "delta": -6.28185,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Eli Cohen win the 2026 Likud party primary elections?",
+        "usdc": 6.28185
+      },
+      {
+        "timestamp": 1786114288,
+        "equity": -273116.276695,
+        "delta": -2.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Todd Blanche be the next Attorney General?",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1786115131,
+        "equity": -274150.924145,
+        "delta": -9.11255,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Houston be between 88-89\u00b0F on August 8?",
+        "usdc": 9.11255
+      },
+      {
+        "timestamp": 1786115763,
+        "equity": -274052.61664,
+        "delta": -5.29496,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Denver be between 106-107\u00b0F on August 8?",
+        "usdc": 5.29496
+      },
+      {
+        "timestamp": 1786116378,
+        "equity": -274259.874243,
+        "delta": 10.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the upper bound of the target federal funds rate be 1.5% at the end of 2026?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1786116460,
+        "equity": -274440.738456,
+        "delta": -4.92869,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the upper bound of the target federal funds rate be 3.25% at the end of 2026?",
+        "usdc": 4.92869
+      },
+      {
+        "timestamp": 1786117449,
+        "equity": -274923.992374,
+        "delta": -5.45592,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Istanbul be 30\u00b0C on August 8?",
+        "usdc": 5.45592
+      },
+      {
+        "timestamp": 1786118077,
+        "equity": -277477.439544,
+        "delta": -8.05464,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will there be exactly 1 earthquake of magnitude 6.5 or higher worldwide from August 10 - August 16?",
+        "usdc": 8.05464
+      },
+      {
+        "timestamp": 1786118524,
+        "equity": -277915.963387,
+        "delta": 10.7,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will there be exactly 13 earthquakes of magnitude 5.5 or higher worldwide from August 10 - August 16?",
+        "usdc": 10.7
+      },
+      {
+        "timestamp": 1786119025,
+        "equity": -278934.248768,
+        "delta": -4.98099,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the upper bound of the target federal funds rate be 2.0% at the end of 2026?",
+        "usdc": 4.98099
+      },
+      {
+        "timestamp": 1786119034,
+        "equity": -279122.646091,
+        "delta": -5.97719,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the upper bound of the target federal funds rate be 2.25% at the end of 2026?",
+        "usdc": 5.97719
+      },
+      {
+        "timestamp": 1786119351,
+        "equity": -279573.654305,
+        "delta": -3.60147,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Mexico City be 25\u00b0C on August 8?",
+        "usdc": 3.60147
+      },
+      {
+        "timestamp": 1786120132,
+        "equity": -280361.551216,
+        "delta": -0.17931,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 26\u00b0C on August 7?",
+        "usdc": 0.17931
+      },
+      {
+        "timestamp": 1786120666,
+        "equity": -280681.018129,
+        "delta": -48.35401,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Houston be 102\u00b0F or higher on August 8?",
+        "usdc": 48.35401
+      },
+      {
+        "timestamp": 1786121275,
+        "equity": -281579.845591,
+        "delta": -4.23016,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Cape Town be 13\u00b0C on August 9?",
+        "usdc": 4.23016
+      },
+      {
+        "timestamp": 1786122688,
+        "equity": -282226.145018,
+        "delta": -4.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Zelenskyy post 40-59 posts from August 4 to August 11, 2026?",
+        "usdc": 4.1
+      },
+      {
+        "timestamp": 1786123075,
+        "equity": -282515.216443,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the lowest temperature in Shanghai be 32\u00b0C on August 7?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786123075,
+        "equity": -282515.216443,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will Ted Cruz post 60-79 posts from August 4 to August 11, 2026?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786123143,
+        "equity": -282720.096613,
+        "delta": -34.72669,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will \"Super Troopers 3\" Opening Weekend Box Office be between 7m and 8m?",
+        "usdc": 34.72669
+      },
+      {
+        "timestamp": 1786123983,
+        "equity": -283263.18948,
+        "delta": -0.31559,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Munich be 28\u00b0C on August 7?",
+        "usdc": 0.31559
+      },
+      {
+        "timestamp": 1786125637,
+        "equity": -285390.72896,
+        "delta": -19.8099,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 25\u00b0C on August 8?",
+        "usdc": 19.8099
+      },
+      {
+        "timestamp": 1786125961,
+        "equity": -286651.281021,
+        "delta": -19.98099,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Mexico City be 28\u00b0C or higher on August 8?",
+        "usdc": 19.98099
+      },
+      {
+        "timestamp": 1786126438,
+        "equity": -287038.567109,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will CZ post 60-79 posts from July 31 to August 7, 2026?",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1786126959,
+        "equity": -287924.122733,
+        "delta": -16.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Adrienn Lacz\u00f3 be the next President of Hungary?",
+        "usdc": 16.32
+      },
+      {
+        "timestamp": 1786128133,
+        "equity": -288480.681391,
+        "delta": 0.9888,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Boston Red Sox win the 2026 World Series?",
+        "usdc": 0.9888
+      },
+      {
+        "timestamp": 1786129279,
+        "equity": -289221.444278,
+        "delta": -62.71671,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Kuala Lumpur be 36\u00b0C on August 9?",
+        "usdc": 62.71671
+      },
+      {
+        "timestamp": 1786129708,
+        "equity": -290113.179343,
+        "delta": 0.13918,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Denver be between 88-89\u00b0F on August 7?",
+        "usdc": 0.13918
+      },
+      {
+        "timestamp": 1786132459,
+        "equity": -291126.347516,
+        "delta": -47.65694,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Amsterdam be 24\u00b0C on August 8?",
+        "usdc": 47.65694
+      },
+      {
+        "timestamp": 1786133523,
+        "equity": -292460.790713,
+        "delta": -7.44681,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Seoul (Incheon) be 27\u00b0C on August 8?",
+        "usdc": 7.44681
+      },
+      {
+        "timestamp": 1786133745,
+        "equity": -293933.054113,
+        "delta": 19.8,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will Nvidia have the best AI model on LiveBench (Overall) at the end of September 2026?",
+        "usdc": 19.8
+      },
+      {
+        "timestamp": 1786135236,
+        "equity": -293460.653699,
+        "delta": -2.31779,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Mexico City be 20\u00b0C on August 8?",
+        "usdc": 2.31779
+      },
+      {
+        "timestamp": 1786136020,
+        "equity": -293891.612141,
+        "delta": -4.648,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Austin be between 96-97\u00b0F on August 7?",
+        "usdc": 4.648
+      },
+      {
+        "timestamp": 1786136812,
+        "equity": -294397.002636,
+        "delta": -10.3638,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 37\u00b0C on August 8?",
+        "usdc": 10.3638
+      },
+      {
+        "timestamp": 1786137678,
+        "equity": -294856.51986,
+        "delta": -10.23884,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 27\u00b0C on August 8?",
+        "usdc": 10.23884
+      },
+      {
+        "timestamp": 1786139971,
+        "equity": -295402.349871,
+        "delta": -7.94678,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 31\u00b0C on August 8?",
+        "usdc": 7.94678
+      },
+      {
+        "timestamp": 1786140145,
+        "equity": -296104.885073,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Madrid be 34\u00b0C on August 9?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786140445,
+        "equity": -296644.047626,
+        "delta": 2.1,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the highest temperature in Ankara be 33\u00b0C on August 7?",
+        "usdc": 2.1
+      },
+      {
+        "timestamp": 1786141434,
+        "equity": -298465.856317,
+        "delta": -6.27006,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the upper bound of the target federal funds rate be 1.25% at the end of 2026?",
+        "usdc": 6.27006
+      },
+      {
+        "timestamp": 1786141527,
+        "equity": -299054.538392,
+        "delta": -29.91448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will annual inflation be 3.7% in July?",
+        "usdc": 29.91448
+      },
+      {
+        "timestamp": 1786141732,
+        "equity": -300291.083343,
+        "delta": -4.83243,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 34\u00b0C on August 8?",
+        "usdc": 4.83243
+      },
+      {
+        "timestamp": 1786141906,
+        "equity": -300507.795666,
+        "delta": -1.25758,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Partido Democr\u00e1tico Trabalhista (PDT) hold the most seats as a result of the next Brazilian Senate election?",
+        "usdc": 1.25758
+      },
+      {
+        "timestamp": 1786142137,
+        "equity": -301946.317467,
+        "delta": -14.47215,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Republicanos (REPUBLICANOS) hold the most seats as a result of the next Brazilian Senate election?",
+        "usdc": 14.47215
+      },
+      {
+        "timestamp": 1786142389,
+        "equity": -302533.506977,
+        "delta": -4.02,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 34\u00b0C on August 8?",
+        "usdc": 4.02
+      },
+      {
+        "timestamp": 1786142703,
+        "equity": -303021.81481,
+        "delta": -44.47322,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Buenos Aires be 11\u00b0C on August 8?",
+        "usdc": 44.47322
+      },
+      {
+        "timestamp": 1786142898,
+        "equity": -303614.543002,
+        "delta": -0.2196,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shenzhen be 36\u00b0C on August 9?",
+        "usdc": 0.2196
+      },
+      {
+        "timestamp": 1786143160,
+        "equity": -304607.629922,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Miami be 98\u00b0F or higher on August 8?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786143450,
+        "equity": -305476.973418,
+        "delta": -6.08242,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Baidu have the #1 AI model at the end of September 2026?",
+        "usdc": 6.08242
+      },
+      {
+        "timestamp": 1786143672,
+        "equity": -306454.755361,
+        "delta": -9.90495,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Manila be 31\u00b0C on August 8?",
+        "usdc": 9.90495
+      },
+      {
+        "timestamp": 1786143952,
+        "equity": -308304.599662,
+        "delta": -16.90306,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 30\u00b0C on August 8?",
+        "usdc": 16.90306
+      },
+      {
+        "timestamp": 1786144111,
+        "equity": -308785.765119,
+        "delta": 2.035557,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shanghai be 31\u00b0C on August 8?",
+        "usdc": 2.035557
+      },
+      {
+        "timestamp": 1786144245,
+        "equity": -309070.482627,
+        "delta": -14.75502,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Gleidson Azevedo win the 2026 Minas Gerais gubernatorial election?",
+        "usdc": 14.75502
+      },
+      {
+        "timestamp": 1786144467,
+        "equity": -309379.542845,
+        "delta": -7.67805,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Tokyo be 36\u00b0C on August 8?",
+        "usdc": 7.67805
+      },
+      {
+        "timestamp": 1786144543,
+        "equity": -309942.776975,
+        "delta": -3.6504,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 30\u00b0C on August 9?",
+        "usdc": 3.6504
+      },
+      {
+        "timestamp": 1786144732,
+        "equity": -310880.421944,
+        "delta": -8.39193,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will StepFun have the best AI model on LiveBench (Overall) at the end of August 2026?",
+        "usdc": 8.39193
+      },
+      {
+        "timestamp": 1786144935,
+        "equity": -311182.170644,
+        "delta": -4.99524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 36\u00b0C or higher on August 8?",
+        "usdc": 4.99524
+      },
+      {
+        "timestamp": 1786145307,
+        "equity": -312049.009819,
+        "delta": 0.692662,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shanghai be 34\u00b0C on August 8?",
+        "usdc": 0.692662
+      },
+      {
+        "timestamp": 1786145511,
+        "equity": -312504.149939,
+        "delta": -35.76563,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Partido Socialista Brasileiro (PSB) hold the most seats in the Brazilian Chamber of Deputies after the 2026 election?",
+        "usdc": 35.76563
+      },
+      {
+        "timestamp": 1786145881,
+        "equity": -313489.696647,
+        "delta": -4.59562,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 25\u00b0C on August 8?",
+        "usdc": 4.59562
+      },
+      {
+        "timestamp": 1786146097,
+        "equity": -314133.971505,
+        "delta": -69.43767,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the price of Bitcoin be between $66,000 and $68,000 on August 8?",
+        "usdc": 69.43767
+      },
+      {
+        "timestamp": 1786146436,
+        "equity": -314627.342652,
+        "delta": -0.684098,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 33\u00b0C on August 8?",
+        "usdc": 0.684098
+      },
+      {
+        "timestamp": 1786146984,
+        "equity": -315195.287397,
+        "delta": -14.98574,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 31\u00b0C on August 8?",
+        "usdc": 14.98574
+      },
+      {
+        "timestamp": 1786147276,
+        "equity": -315364.250212,
+        "delta": -3.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Atlanta be between 90-91\u00b0F on August 8?",
+        "usdc": 3.0
+      },
+      {
+        "timestamp": 1786147413,
+        "equity": -315813.890517,
+        "delta": -15.1875,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Canada's GDP growth rate MoM in June 2026 be between 0.2% and 0.3%?",
+        "usdc": 15.1875
+      },
+      {
+        "timestamp": 1786147533,
+        "equity": -317203.523024,
+        "delta": -25.67532,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Tarcisio de Freitas finish in second place in the first round of the 2026 Brazilian presidential election?",
+        "usdc": 25.67532
+      },
+      {
+        "timestamp": 1786147815,
+        "equity": -317914.448034,
+        "delta": -0.941538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Singapore be 32\u00b0C on August 9?",
+        "usdc": 0.941538
+      },
+      {
+        "timestamp": 1786148061,
+        "equity": -318182.99705,
+        "delta": -9.92317,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will P\u00e9ter B\u00e1r\u00e1ndy be the next President of Hungary?",
+        "usdc": 9.92317
+      },
+      {
+        "timestamp": 1786148322,
+        "equity": -320350.087265,
+        "delta": -9.54137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the lowest temperature in Hong Kong be 29\u00b0C on August 9?",
+        "usdc": 9.54137
+      },
+      {
+        "timestamp": 1786148559,
+        "equity": -321109.777989,
+        "delta": -9.519,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Fl\u00e1vio Roscoe win the 2026 Minas Gerais gubernatorial election?",
+        "usdc": 9.519
+      },
+      {
+        "timestamp": 1786148649,
+        "equity": -321691.309367,
+        "delta": 10.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the price of Bitcoin be between $68,000 and $70,000 on August 8?",
+        "usdc": 10.0
+      },
+      {
+        "timestamp": 1786148919,
+        "equity": -322351.873191,
+        "delta": -31.56997,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Helsinki be 18\u00b0C or below on August 9?",
+        "usdc": 31.56997
+      },
+      {
+        "timestamp": 1786149163,
+        "equity": -323083.640562,
+        "delta": -15.69058,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 35\u00b0C on August 8?",
+        "usdc": 15.69058
+      },
+      {
+        "timestamp": 1786149430,
+        "equity": -324213.523964,
+        "delta": 5.0,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Helsinki be 18\u00b0C or below on August 9?",
+        "usdc": 5.0
+      },
+      {
+        "timestamp": 1786149876,
+        "equity": -324671.677641,
+        "delta": -6.93,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 13\u00b0C on August 8?",
+        "usdc": 6.93
+      },
+      {
+        "timestamp": 1786150033,
+        "equity": -325153.438449,
+        "delta": 2.08,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Karachi be 37\u00b0C on August 9?",
+        "usdc": 2.08
+      },
+      {
+        "timestamp": 1786150179,
+        "equity": -325524.594011,
+        "delta": -24.9516,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 27\u00b0C on August 8?",
+        "usdc": 24.9516
+      },
+      {
+        "timestamp": 1786150455,
+        "equity": -326031.312032,
+        "delta": 3.46,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Qingdao be 36\u00b0C on August 8?",
+        "usdc": 3.46
+      },
+      {
+        "timestamp": 1786150746,
+        "equity": -326929.641172,
+        "delta": -20.46104,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Kuala Lumpur be 30\u00b0C on August 9?",
+        "usdc": 20.46104
+      },
+      {
+        "timestamp": 1786150980,
+        "equity": -327241.664334,
+        "delta": -8.17689,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Ankara be 31\u00b0C on August 9?",
+        "usdc": 8.17689
+      },
+      {
+        "timestamp": 1786151353,
+        "equity": -327843.565105,
+        "delta": -4.28298,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Helsinki be 22\u00b0C on August 9?",
+        "usdc": 4.28298
+      },
+      {
+        "timestamp": 1786151640,
+        "equity": -328224.790804,
+        "delta": 31.3,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Helsinki be 26\u00b0C on August 9?",
+        "usdc": 31.3
+      },
+      {
+        "timestamp": 1786151767,
+        "equity": -328620.7593,
+        "delta": -4.54649,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Argentina's monthly inflation in July 2026 be between 2.4% and 2.6%?",
+        "usdc": 4.54649
+      },
+      {
+        "timestamp": 1786152091,
+        "equity": -329244.795573,
+        "delta": -5.98271,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthropic be the #3 AI Lab at the end of August 2026 (Style Control On)?",
+        "usdc": 5.98271
+      },
+      {
+        "timestamp": 1786152307,
+        "equity": -330004.111307,
+        "delta": -1.60541,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wellington be 15\u00b0C on August 8?",
+        "usdc": 1.60541
+      },
+      {
+        "timestamp": 1786152781,
+        "equity": -331464.645381,
+        "delta": -4.524,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in London be 28\u00b0C on August 8?",
+        "usdc": 4.524
+      },
+      {
+        "timestamp": 1786153033,
+        "equity": -332161.788585,
+        "delta": -1.16157,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Milan be 34\u00b0C on August 8?",
+        "usdc": 1.16157
+      },
+      {
+        "timestamp": 1786153261,
+        "equity": -332888.835683,
+        "delta": -7.66696,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wuhan be 39\u00b0C on August 8?",
+        "usdc": 7.66696
+      },
+      {
+        "timestamp": 1786153582,
+        "equity": -333768.476083,
+        "delta": -1.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elon Musk post 40-64 tweets from August 6 to August 8, 2026?",
+        "usdc": 1.25
+      },
+      {
+        "timestamp": 1786153779,
+        "equity": -333983.021078,
+        "delta": -1.96231,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Karachi be 35\u00b0C on August 9?",
+        "usdc": 1.96231
+      },
+      {
+        "timestamp": 1786153968,
+        "equity": -334456.385683,
+        "delta": 6.1152,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the Detroit Tigers win the 2026 World Series?",
+        "usdc": 6.1152
+      },
+      {
+        "timestamp": 1786154269,
+        "equity": -334946.131679,
+        "delta": -3.22207,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Hong Kong be 35\u00b0C on August 9?",
+        "usdc": 3.22207
+      },
+      {
+        "timestamp": 1786154484,
+        "equity": -335311.217399,
+        "delta": -32.71241,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Enzo Fernandez join Atletico Madrid?",
+        "usdc": 32.71241
+      },
+      {
+        "timestamp": 1786154809,
+        "equity": -336333.363402,
+        "delta": 2.04,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Karachi be 31\u00b0C on August 9?",
+        "usdc": 2.04
+      },
+      {
+        "timestamp": 1786155250,
+        "equity": -337688.455316,
+        "delta": -9.13824,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Wuhan be 37\u00b0C on August 9?",
+        "usdc": 9.13824
+      },
+      {
+        "timestamp": 1786155571,
+        "equity": -337837.523441,
+        "delta": -4.95247,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 29\u00b0C on August 8?",
+        "usdc": 4.95247
+      },
+      {
+        "timestamp": 1786155705,
+        "equity": -338439.587756,
+        "delta": -5.98884,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Amsterdam be 26\u00b0C on August 8?",
+        "usdc": 5.98884
+      },
+      {
+        "timestamp": 1786155859,
+        "equity": -339643.281054,
+        "delta": -3.48096,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Elon Musk post 40-64 tweets from August 6 to August 8, 2026?",
+        "usdc": 3.48096
+      },
+      {
+        "timestamp": 1786156435,
+        "equity": -341445.11585,
+        "delta": -4.95247,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Qingdao be 38\u00b0C on August 8?",
+        "usdc": 4.95247
+      },
+      {
+        "timestamp": 1786156789,
+        "equity": -342112.788888,
+        "delta": 0.007271,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will \"Spider-Man: Brand New Day\" 2nd Weekend Box Office be between 140m and 150m?",
+        "usdc": 0.007271
+      },
+      {
+        "timestamp": 1786157470,
+        "equity": -342765.394132,
+        "delta": 3.75,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Atlanta be between 90-91\u00b0F on August 9?",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1786158048,
+        "equity": -343338.961596,
+        "delta": 0.86,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shenzhen be 33\u00b0C on August 8?",
+        "usdc": 0.86
+      },
+      {
+        "timestamp": 1786158399,
+        "equity": -343774.167269,
+        "delta": -1.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Helsinki be 21\u00b0C on August 8?",
+        "usdc": 1.9
+      },
+      {
+        "timestamp": 1786158652,
+        "equity": -344989.586213,
+        "delta": -3.58409,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Chicago be between 80-81\u00b0F on August 9?",
+        "usdc": 3.58409
+      },
+      {
+        "timestamp": 1786158943,
+        "equity": -345977.177285,
+        "delta": -0.1935,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Shanghai be 33\u00b0C on August 8?",
+        "usdc": 0.1935
+      },
+      {
+        "timestamp": 1786159060,
+        "equity": -346803.259604,
+        "delta": 0.86,
+        "type": "MERGE",
+        "side": null,
+        "title": "Will the highest temperature in Shenzhen be 34\u00b0C on August 8?",
+        "usdc": 0.86
+      },
+      {
+        "timestamp": 1786159618,
+        "equity": -348222.345461,
+        "delta": -1.26922,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Seoul (Incheon) be 35\u00b0C on August 8?",
+        "usdc": 1.26922
+      },
+      {
+        "timestamp": 1786159809,
+        "equity": -348631.347699,
+        "delta": -5.01901,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the highest temperature in Beijing be 34\u00b0C on August 8?",
+        "usdc": 5.01901
+      },
+      {
+        "timestamp": 1786160352,
+        "equity": -349272.475481,
+        "delta": 0.03609,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will Microsoft be the third-best AI lab at the end of August 2026?",
+        "usdc": 0.03609
+      },
+      {
+        "timestamp": 1786161663,
+        "equity": -351765.46387,
+        "delta": 14.9483,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Will the highest temperature in Busan be 35\u00b0C on August 8?",
+        "usdc": 14.9483
+      }
+    ]
+  },
+  "market_making": {
+    "score": 35,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Trades both outcomes in 37% of markets (inventory/MM signature)",
+      "High-frequency cadence (median gap 12s)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.3678,
+      "fast_roundtrip_rate": 0.0196,
+      "spread_capture_rate": 0.0896,
+      "size_cv": 3.5933,
+      "median_gap_seconds": 12.0,
+      "outcome_counts": {
+        "No": 239311,
+        "Yes": 26716
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 11216,
+      "1": 10096,
+      "2": 10017,
+      "3": 11105,
+      "4": 10283,
+      "5": 10157,
+      "6": 12333,
+      "7": 11940,
+      "8": 11514,
+      "9": 9572,
+      "10": 10639,
+      "11": 9957,
+      "12": 10783,
+      "13": 11214,
+      "14": 11185,
+      "15": 12349,
+      "16": 13191,
+      "17": 11579,
+      "18": 12009,
+      "19": 9606,
+      "20": 9782,
+      "21": 9413,
+      "22": 12155,
+      "23": 13932
+    },
+    "dow_utc": {
+      "0": 43998,
+      "1": 38791,
+      "2": 32682,
+      "3": 40683,
+      "4": 39610,
+      "5": 33316,
+      "6": 36947
+    },
+    "peak_hours": [
+      23,
+      16,
+      15,
+      6,
+      22
+    ],
+    "peak_dows": [
+      0,
+      3,
+      4
+    ]
+  },
+  "sizing": {
+    "n": 266027,
+    "mean_usdc": 19.3428,
+    "median_usdc": 7.7922,
+    "p10_usdc": 1.55,
+    "p90_usdc": 41.496,
+    "max_usdc": 991.0,
+    "mean_shares": 27.7726,
+    "median_shares": 10.0
+  },
+  "categories": {
+    "pnl": {
+      "sports_totals": 457055.2121,
+      "politics": 113895.7409,
+      "crypto": -16376.754,
+      "sports_match": -93425.8272,
+      "other": -1072573.332
+    },
+    "counts": {
+      "other": 40949,
+      "politics": 4707,
+      "sports_totals": 1194,
+      "sports_match": 2357,
+      "crypto": 635
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+      "pnl": 15433.8871,
+      "buy_usdc": 14595.5298,
+      "sell_usdc": 371.4634,
+      "n_buys": 165,
+      "n_sells": 8,
+      "hold_seconds": 1945807,
+      "avg_buy": 0.3424,
+      "avg_sell": 0.6372
+    },
+    {
+      "title": "Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential election?",
+      "pnl": 9349.8074,
+      "buy_usdc": 15640.0133,
+      "sell_usdc": 114.846,
+      "n_buys": 379,
+      "n_sells": 2,
+      "hold_seconds": 1725663,
+      "avg_buy": 0.3661,
+      "avg_sell": 0.6099
+    },
+    {
+      "title": "Will Melissa Agard win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6371.8029,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.7314,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Mandela Barnes win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6323.5638,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.6544,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Brett Hulsey win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6182.8415,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.93,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Joel Brennan win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6171.3049,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.6066,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Chris Larson win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6153.9115,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.93,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Missy Hughes win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6127.4665,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.93,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Tim Jacobson win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6126.2165,
+      "buy_usdc": 0.0,
+      "sell_usdc": 0.93,
+      "n_buys": 0,
+      "n_sells": 1,
+      "hold_seconds": 0,
+      "avg_buy": null,
+      "avg_sell": 0.001
+    },
+    {
+      "title": "Will Kelda Roys win the 2026 Wisconsin Governor Democratic primary election?",
+      "pnl": 6012.0895,
+      "buy_usdc": 0.0,
+      "sell_usdc": 1.003,
+      "n_buys": 0,
+      "n_sells": 4,
+      "hold_seconds": 14410,
+      "avg_buy": null,
+      "avg_sell": 0.0012
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Will Augusto Cury win the 2026 Brazilian presidential election?",
+      "pnl": -14026.858,
+      "buy_usdc": 15476.3773,
+      "sell_usdc": 377.9545,
+      "n_buys": 142,
+      "n_sells": 19,
+      "hold_seconds": 73314
+    },
+    {
+      "title": "Will Pablo Mar\u00e7al win the 2026 Brazilian presidential election?",
+      "pnl": -9574.2688,
+      "buy_usdc": 19691.4145,
+      "sell_usdc": 127.2891,
+      "n_buys": 192,
+      "n_sells": 15,
+      "hold_seconds": 937971
+    },
+    {
+      "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+      "pnl": -8319.6438,
+      "buy_usdc": 41889.7533,
+      "sell_usdc": 2.4275,
+      "n_buys": 163,
+      "n_sells": 3,
+      "hold_seconds": 1945805
+    },
+    {
+      "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+      "pnl": -7267.0748,
+      "buy_usdc": 41969.5968,
+      "sell_usdc": 8.286,
+      "n_buys": 164,
+      "n_sells": 5,
+      "hold_seconds": 1945805
+    },
+    {
+      "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+      "pnl": -6766.9574,
+      "buy_usdc": 42436.8145,
+      "sell_usdc": 2.3592,
+      "n_buys": 165,
+      "n_sells": 3,
+      "hold_seconds": 1945805
+    },
+    {
+      "title": "Will Camilo Santana win the 2026 Brazilian presidential election?",
+      "pnl": -5933.5205,
+      "buy_usdc": 13389.2274,
+      "sell_usdc": 29.5116,
+      "n_buys": 121,
+      "n_sells": 6,
+      "hold_seconds": 1717821
+    },
+    {
+      "title": "Will Elon Musk post 240+ tweets from August 22 to August 24, 2026?",
+      "pnl": -4963.4554,
+      "buy_usdc": 4.995,
+      "sell_usdc": 0.2525,
+      "n_buys": 1,
+      "n_sells": 1,
+      "hold_seconds": 148071
+    },
+    {
+      "title": "Will Hull City win the 2026-27 English Premier League (EPL) Championship?",
+      "pnl": -3944.813,
+      "buy_usdc": 2571.2262,
+      "sell_usdc": 2.8723,
+      "n_buys": 44,
+      "n_sells": 3,
+      "hold_seconds": 691038
+    },
+    {
+      "title": "Will Fulham win the 2026-27 English Premier League (EPL) Championship?",
+      "pnl": -3944.8044,
+      "buy_usdc": 549.1503,
+      "sell_usdc": 4.8964,
+      "n_buys": 12,
+      "n_sells": 1,
+      "hold_seconds": 21039
+    },
+    {
+      "title": "Will Ipswich Town win the 2026-27 English Premier League (EPL) Championship?",
+      "pnl": -3944.8043,
+      "buy_usdc": 549.1503,
+      "sell_usdc": 4.8964,
+      "n_buys": 12,
+      "n_sells": 1,
+      "hold_seconds": 15979
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+      "avg_buy": 0.3424,
+      "avg_sell": 0.6372,
+      "spread": 0.2948,
+      "pnl": 15433.8871,
+      "n_buys": 165,
+      "n_sells": 8,
+      "hold_seconds": 1945807,
+      "both_sides": true
+    },
+    {
+      "title": "Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential election?",
+      "avg_buy": 0.3661,
+      "avg_sell": 0.6099,
+      "spread": 0.2438,
+      "pnl": 9349.8074,
+      "n_buys": 379,
+      "n_sells": 2,
+      "hold_seconds": 1725663,
+      "both_sides": true
+    },
+    {
+      "title": "Will Elon Musk post 180-199 tweets from August 21 to August 28, 2026?",
+      "avg_buy": 0.3615,
+      "avg_sell": 0.4264,
+      "spread": 0.0649,
+      "pnl": 4145.0549,
+      "n_buys": 108,
+      "n_sells": 22,
+      "hold_seconds": 882483,
+      "both_sides": true
+    },
+    {
+      "title": "Will Mike Mazzei win the 2026 Oklahoma Governor Republican primary election?",
+      "avg_buy": 0.1575,
+      "avg_sell": 0.6599,
+      "spread": 0.5024,
+      "pnl": 3805.2694,
+      "n_buys": 22,
+      "n_sells": 3,
+      "hold_seconds": 656840,
+      "both_sides": true
+    },
+    {
+      "title": "Will Enzo Fernandez join Manchester City?",
+      "avg_buy": 0.3537,
+      "avg_sell": 0.5074,
+      "spread": 0.1537,
+      "pnl": 2972.8346,
+      "n_buys": 93,
+      "n_sells": 10,
+      "hold_seconds": 2144631,
+      "both_sides": true
+    },
+    {
+      "title": "Will Harry Kane win the 2026 Ballon d'Or?",
+      "avg_buy": 0.3706,
+      "avg_sell": 0.6267,
+      "spread": 0.2561,
+      "pnl": 2231.8794,
+      "n_buys": 120,
+      "n_sells": 3,
+      "hold_seconds": 1684515,
+      "both_sides": true
+    },
+    {
+      "title": "Will NVIDIA be the largest company in the world by market cap on September 30?",
+      "avg_buy": 0.1035,
+      "avg_sell": 0.8686,
+      "spread": 0.7651,
+      "pnl": 2212.7259,
+      "n_buys": 40,
+      "n_sells": 5,
+      "hold_seconds": 2310011,
+      "both_sides": true
+    },
+    {
+      "title": "Will Elon Musk post 160-179 tweets from August 25 to September 1, 2026?",
+      "avg_buy": 0.3603,
+      "avg_sell": 0.5267,
+      "spread": 0.1664,
+      "pnl": 2206.7452,
+      "n_buys": 88,
+      "n_sells": 21,
+      "hold_seconds": 867839,
+      "both_sides": true
+    },
+    {
+      "title": "Will the highest temperature in New York City be between 78-79\u00b0F on August 25?",
+      "avg_buy": 0.3796,
+      "avg_sell": 0.9634,
+      "spread": 0.5838,
+      "pnl": 1890.364,
+      "n_buys": 58,
+      "n_sells": 29,
+      "hold_seconds": 159985,
+      "both_sides": true
+    },
+    {
+      "title": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+      "avg_buy": 0.3199,
+      "avg_sell": 0.7023,
+      "spread": 0.3824,
+      "pnl": 1866.3591,
+      "n_buys": 82,
+      "n_sells": 4,
+      "hold_seconds": 2145839,
+      "both_sides": true
+    }
+  ]
+}

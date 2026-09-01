@@ -1,0 +1,18 @@
+{
+  "wallet": "0xe40aaa5ce1dac0b7dc24c9d0284f27e17c3fe4a2",
+  "username": "Mysaria",
+  "mode": "full",
+  "duration_s": 1062.34,
+  "counts": {
+    "activity": 32629,
+    "trades": 266027,
+    "closed_positions": 49842,
+    "open_positions": 4481
+  },
+  "last_activity_ts": 1786161663,
+  "last_trade_ts": 1788273016,
+  "resolved": {
+    "username": "Mysaria",
+    "wallet": "0xe40aaa5ce1dac0b7dc24c9d0284f27e17c3fe4a2"
+  }
+}
