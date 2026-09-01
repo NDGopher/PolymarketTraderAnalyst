@@ -15,7 +15,8 @@ from suspension_lab.env_loader import (
 WS_PATH = "/trade-api/ws/v2"
 REST_BASE_PROD = "https://api.elections.kalshi.com/trade-api/v2"
 REST_BASE_DEMO = "https://demo-api.kalshi.co/trade-api/v2"
-WS_URL_PROD = "wss://external-api-ws.kalshi.com/trade-api/ws/v2"
+WS_URL_PROD = "wss://api.elections.kalshi.com/trade-api/ws/v2"
+WS_URL_PROD_ALT = "wss://external-api-ws.kalshi.com/trade-api/ws/v2"
 WS_URL_DEMO = "wss://external-api-ws.demo.kalshi.co/trade-api/ws/v2"
 
 BOND_MID_THRESHOLD = 0.90
