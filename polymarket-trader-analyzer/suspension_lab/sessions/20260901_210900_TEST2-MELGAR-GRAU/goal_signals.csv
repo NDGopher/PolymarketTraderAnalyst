@@ -1,0 +1,3 @@
+signal_id,signal_ts_ms,signal_ts_iso,ticker,market_label,prev_bid,new_bid,bid_jump_cents,bid_qty,prev_ask,new_ask,reason,exit_mode
+1,1788298365337,2026-09-01T21:32:45.337000+00:00,KXPERLIGA1GAME-26AUG31CAGMEL-CAG,Peru Liga 1 — Atletico Grau vs Melgar — Atletico Grau,0.1900,0.3400,15,2567.98,0.2000,0.4000,bid_jump_with_size_and_ask_confirm,scalp
+2,1788298371421,2026-09-01T21:32:51.421000+00:00,KXPERLIGA1TOTAL-26AUG31CAGMEL-1,Peru Liga 1 — Atletico Grau vs Melgar — Over 0.5,0.6000,0.9800,38,248.86,0.9400,0.9900,bid_jump_with_size_and_ask_confirm,hold_bond
