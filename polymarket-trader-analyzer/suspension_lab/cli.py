@@ -6,7 +6,7 @@ from pathlib import Path
 import typer
 
 from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
-from suspension_lab.env_loader import load_project_env, project_root
+from suspension_lab.env_loader import env_status_message, load_project_env, project_root
 
 load_project_env()
 
@@ -34,10 +34,10 @@ def main(
 
     ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
     if not ticker_str:
+        typer.echo(env_status_message(), err=True)
         typer.echo(
-            "No tickers found.\n"
-            "Add this to your .env file:\n"
-            "  LAB_TICKERS=TICKER1,TICKER2,TICKER3\n"
+            "\nAdd to your .env (same folder as START_SUSPENSION_LAB.ps1):\n"
+            "  LAB_TICKERS=TICKER1,TICKER2\n"
             "  LAB_GAME=Your-Game-Name",
             err=True,
         )
@@ -66,6 +66,7 @@ def main(
         )
         config.use_ws = False
 
+    typer.echo(env_status_message())
     typer.echo(f"Project: {project_root()}")
     typer.echo(f"Tickers: {', '.join(ticker_list)}")
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
