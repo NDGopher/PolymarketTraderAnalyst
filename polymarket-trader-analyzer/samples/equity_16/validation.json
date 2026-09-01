@@ -1,0 +1,95 @@
+{
+  "ok": false,
+  "all_checks_passed": false,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 7374604.843242512,
+      "ours": 17071768.0427,
+      "ours_field": "closed_positions_sum",
+      "diff": 9697163.1995,
+      "match": false,
+      "volume_reference": 1000345735.4958478
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 7387346.99,
+      "ours": 17071768.0427,
+      "ours_field": "closed_positions_sum",
+      "diff": 9684421.0527,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 324009,
+      "ours": 351490,
+      "diff": 27481,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.5548,
+      "ours": 0.6052,
+      "diff": 0.0504,
+      "match": false
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": 17071768.0427,
+      "ours": -29849472.9006,
+      "diff": -46921240.9433,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": -29849472.9006,
+    "cashflow_core": -29957480.733,
+    "closed_positions_sum": 17071768.0427,
+    "trades": 351490,
+    "win_rate": 0.6052
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+    "raw_meta": {
+      "net_pnl": 7387346.99,
+      "pos_realized_pnl": 7387346.99,
+      "n_trades": 324009.0,
+      "total_buy": 29925170.58,
+      "total_sell": 6306989.83,
+      "total_redeem": 6112.78,
+      "win_rate": 0.5548,
+      "profit_factor": 1.16,
+      "n_markets": 1806.0,
+      "n_buys": 30516.0,
+      "n_sells": 2182.0,
+      "n_redeems": 45.0
+    },
+    "headline_pnl": 7387347.0,
+    "win_rate_pct": 55,
+    "smart_score": 65,
+    "n_trades": 324009,
+    "realized_pnl": 7387346.99
+  },
+  "leaderboard": {
+    "rank": "16",
+    "proxyWallet": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
+    "userName": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 1000345735.4958478,
+    "pnl": 7374604.843242512,
+    "profileImage": ""
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}

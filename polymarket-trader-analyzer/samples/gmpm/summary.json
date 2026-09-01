@@ -1,0 +1,4301 @@
+{
+  "username": "gmpm",
+  "wallet": "0x14964aefa2cd7caff7878b3820a690a03c5aa429",
+  "counts": {
+    "activity": 49106,
+    "trades": 47326,
+    "buys": 43929,
+    "sells": 3397,
+    "closed_positions": 1063,
+    "open_positions": 0,
+    "markets_traded": 845,
+    "activity_types": {
+      "DEPOSIT": 163,
+      "TRADE": 47326,
+      "REDEEM": 917,
+      "WITHDRAWAL": 68,
+      "MERGE": 578,
+      "REWARD": 11,
+      "MAKER_REBATE": 14,
+      "REFERRAL_REWARD": 29
+    }
+  },
+  "span": {
+    "first_ts": 1757710491,
+    "last_ts": 1779313149,
+    "first_iso": "2025-09-12T20:54:51+00:00",
+    "last_iso": "2026-05-20T21:39:09+00:00",
+    "days_active_span": 250.03
+  },
+  "pnl": {
+    "cashflow_realized": -5400173.3742,
+    "cashflow_core": -5401057.5512,
+    "cashflow_detail": {
+      "buys_usdc": 42125386.59687953,
+      "sells_usdc": 2452503.5771160023,
+      "redeems_usdc": 34271825.46860099,
+      "merges_usdc": 8931496.678614,
+      "splits_usdc": 0.0,
+      "maker_rebates_usdc": 773.2121999999999,
+      "taker_rebates_usdc": 0.0,
+      "rewards_usdc": 110.96479999999998,
+      "conversions_usdc": 0.0
+    },
+    "closed_positions_sum": 3075155.7644,
+    "closed_wins": 569,
+    "closed_losses": 473,
+    "closed_flat": 21,
+    "win_rate": 0.5461,
+    "profit_factor": 1.2494,
+    "win_pnl": 15403396.514,
+    "loss_pnl": -12328240.7496,
+    "total_bought": 80980571.719,
+    "open_cash_pnl": 0,
+    "open_current_value": 0,
+    "open_realized_pnl": 0,
+    "leaderboard_all": {
+      "rank": "42",
+      "proxyWallet": "0x14964aefa2cd7caff7878b3820a690a03c5aa429",
+      "userName": "gmpm",
+      "xUsername": "",
+      "verifiedBadge": false,
+      "vol": 87349857.86280502,
+      "pnl": 3530847.5828185184,
+      "profileImage": ""
+    }
+  },
+  "equity": {
+    "final": 3531323.3045,
+    "max_drawdown": -3311999.8112,
+    "points": 48846,
+    "curve_sample": [
+      {
+        "timestamp": 1757710491,
+        "equity": -620.858709,
+        "delta": -620.858709,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+        "usdc": 620.858709
+      },
+      {
+        "timestamp": 1757810364,
+        "equity": -203104.748742,
+        "delta": -7.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+        "usdc": 7.6
+      },
+      {
+        "timestamp": 1757817138,
+        "equity": -224687.66301,
+        "delta": -2353.264,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+        "usdc": 2353.264
+      },
+      {
+        "timestamp": 1757821468,
+        "equity": -325598.538571,
+        "delta": -61.290322,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+        "usdc": 61.290322
+      },
+      {
+        "timestamp": 1758586546,
+        "equity": 614053.236062,
+        "delta": -2000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: BAL (-4.5)",
+        "usdc": 2000.0
+      },
+      {
+        "timestamp": 1758832677,
+        "equity": 612287.060918,
+        "delta": -50.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will USA win the 2025 Ryder Cup?",
+        "usdc": 50.4
+      },
+      {
+        "timestamp": 1758860793,
+        "equity": 597241.883209,
+        "delta": -39.1314,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will USA win the 2025 Ryder Cup?",
+        "usdc": 39.1314
+      },
+      {
+        "timestamp": 1759057681,
+        "equity": 723921.544288,
+        "delta": -41.846,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Vikings (-2.5)",
+        "usdc": 41.846
+      },
+      {
+        "timestamp": 1759675875,
+        "equity": 633640.378665,
+        "delta": -11000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Texans (-1.5)",
+        "usdc": 11000.0
+      },
+      {
+        "timestamp": 1760228545,
+        "equity": 814623.811684,
+        "delta": -342.8145,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Broncos (-7.5)",
+        "usdc": 342.8145
+      },
+      {
+        "timestamp": 1760279757,
+        "equity": 794495.28989,
+        "delta": -211.372549,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Chiefs (-2.5)",
+        "usdc": 211.372549
+      },
+      {
+        "timestamp": 1760796228,
+        "equity": 917665.852149,
+        "delta": -58.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Georgia Tech vs. Duke",
+        "usdc": 58.8
+      },
+      {
+        "timestamp": 1760814520,
+        "equity": 706224.897059,
+        "delta": -190.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "SMU Mustangs vs. Clemson",
+        "usdc": 190.96
+      },
+      {
+        "timestamp": 1760913291,
+        "equity": 504488.338058,
+        "delta": 5850.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Dolphins vs. Browns",
+        "usdc": 5850.0
+      },
+      {
+        "timestamp": 1760956965,
+        "equity": 567244.956823,
+        "delta": -3.997,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Lions",
+        "usdc": 3.997
+      },
+      {
+        "timestamp": 1760960425,
+        "equity": 559008.74984,
+        "delta": -21.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Buccaneers vs. Lions",
+        "usdc": 21.0
+      },
+      {
+        "timestamp": 1761009046,
+        "equity": 549237.794169,
+        "delta": -135.784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-3.5)",
+        "usdc": 135.784
+      },
+      {
+        "timestamp": 1761246971,
+        "equity": 563981.818969,
+        "delta": -168.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Chargers (-3.5)",
+        "usdc": 168.48
+      },
+      {
+        "timestamp": 1761262305,
+        "equity": 493059.656559,
+        "delta": -257.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Chargers (-3.5)",
+        "usdc": 257.92
+      },
+      {
+        "timestamp": 1761407601,
+        "equity": 379654.864525,
+        "delta": -48.888888,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rutgers vs. Purdue Boilermakers",
+        "usdc": 48.888888
+      },
+      {
+        "timestamp": 1761426013,
+        "equity": 305569.372525,
+        "delta": -22.95,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texas A&M vs. LSU",
+        "usdc": 22.95
+      },
+      {
+        "timestamp": 1761492163,
+        "equity": 343559.433035,
+        "delta": -662.790697,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Texans",
+        "usdc": 662.790697
+      },
+      {
+        "timestamp": 1761512071,
+        "equity": 277109.883659,
+        "delta": -1305.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Canucks",
+        "usdc": 1305.3
+      },
+      {
+        "timestamp": 1761519119,
+        "equity": 300611.871446,
+        "delta": -26.55,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Blackhawks",
+        "usdc": 26.55
+      },
+      {
+        "timestamp": 1761727819,
+        "equity": 405686.974004,
+        "delta": -5.041862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Lions win Super Bowl 2026?",
+        "usdc": 5.041862
+      },
+      {
+        "timestamp": 1761788923,
+        "equity": 404852.84902,
+        "delta": -2.9,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Lions win Super Bowl 2026?",
+        "usdc": 2.9
+      },
+      {
+        "timestamp": 1761978160,
+        "equity": 227913.820156,
+        "delta": 19.5651,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Penn State vs. Ohio State",
+        "usdc": 19.5651
+      },
+      {
+        "timestamp": 1762010175,
+        "equity": 353999.024336,
+        "delta": -262.788,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vanderbilt vs. Texas",
+        "usdc": 262.788
+      },
+      {
+        "timestamp": 1762029416,
+        "equity": 259244.721722,
+        "delta": -2.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will the Detroit Lions win Super Bowl 2026?",
+        "usdc": 2.34
+      },
+      {
+        "timestamp": 1762041508,
+        "equity": 370584.076285,
+        "delta": -68.052727,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dodgers vs. Blue Jays",
+        "usdc": 68.052727
+      },
+      {
+        "timestamp": 1762097651,
+        "equity": 750906.985988,
+        "delta": -1.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Steelers",
+        "usdc": 1.225806
+      },
+      {
+        "timestamp": 1762101799,
+        "equity": 698733.510972,
+        "delta": -4.94,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Colts vs. Steelers",
+        "usdc": 4.94
+      },
+      {
+        "timestamp": 1762123107,
+        "equity": 355977.719431,
+        "delta": -99.6198,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Red Wings (-1.5)",
+        "usdc": 99.6198
+      },
+      {
+        "timestamp": 1762198865,
+        "equity": 1170542.238865,
+        "delta": 96.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Cowboys (-3.5)",
+        "usdc": 96.0
+      },
+      {
+        "timestamp": 1762270935,
+        "equity": 1037193.290517,
+        "delta": -4.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Flyers vs. Canadiens",
+        "usdc": 4.1
+      },
+      {
+        "timestamp": 1762540989,
+        "equity": 1116614.249814,
+        "delta": -3.184615,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Houston vs. UCF",
+        "usdc": 3.184615
+      },
+      {
+        "timestamp": 1762544503,
+        "equity": 1099353.700317,
+        "delta": -408.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Houston vs. UCF",
+        "usdc": 408.0
+      },
+      {
+        "timestamp": 1762550475,
+        "equity": 1046542.86048,
+        "delta": -339.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Memphis (-3.5)",
+        "usdc": 339.0
+      },
+      {
+        "timestamp": 1762557631,
+        "equity": 978687.803665,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Houston vs. UCF",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1762562075,
+        "equity": 911068.994513,
+        "delta": -129.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Houston vs. UCF",
+        "usdc": 129.5
+      },
+      {
+        "timestamp": 1762630567,
+        "equity": 897566.581734,
+        "delta": -45.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kraken vs. Blues",
+        "usdc": 45.0
+      },
+      {
+        "timestamp": 1762697679,
+        "equity": 1008462.402778,
+        "delta": 24.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Colts (-6.5)",
+        "usdc": 24.0
+      },
+      {
+        "timestamp": 1762709343,
+        "equity": 941618.971099,
+        "delta": 165.3695,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Seahawks (-6.5)",
+        "usdc": 165.3695
+      },
+      {
+        "timestamp": 1762733545,
+        "equity": 829826.008778,
+        "delta": -18.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Steelers vs. Chargers",
+        "usdc": 18.5
+      },
+      {
+        "timestamp": 1762821792,
+        "equity": 774572.721747,
+        "delta": -300.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Packers",
+        "usdc": 300.0
+      },
+      {
+        "timestamp": 1763212923,
+        "equity": 792290.752424,
+        "delta": 48.41,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Oregon State vs. Tulsa",
+        "usdc": 48.41
+      },
+      {
+        "timestamp": 1763223623,
+        "equity": 741295.07098,
+        "delta": -0.639344,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texas State vs. Southern Miss",
+        "usdc": 0.639344
+      },
+      {
+        "timestamp": 1763227185,
+        "equity": 741298.611767,
+        "delta": 49.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Oregon State vs. Tulsa",
+        "usdc": 49.0
+      },
+      {
+        "timestamp": 1763295419,
+        "equity": 882286.05137,
+        "delta": -2000.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Dolphins (-2.5)",
+        "usdc": 2000.0
+      },
+      {
+        "timestamp": 1763313161,
+        "equity": 799490.912452,
+        "delta": -10.862068,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chargers vs. Jaguars",
+        "usdc": 10.862068
+      },
+      {
+        "timestamp": 1763317799,
+        "equity": 792621.642567,
+        "delta": -13.052631,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Rams",
+        "usdc": 13.052631
+      },
+      {
+        "timestamp": 1763325431,
+        "equity": 806733.391717,
+        "delta": -978.947368,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Rams",
+        "usdc": 978.947368
+      },
+      {
+        "timestamp": 1763335201,
+        "equity": 748121.398348,
+        "delta": -21.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lions vs. Eagles: O/U 47.5",
+        "usdc": 21.6
+      },
+      {
+        "timestamp": 1763361341,
+        "equity": 689325.257904,
+        "delta": -0.47,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Cowboys (-3.5)",
+        "usdc": 0.47
+      },
+      {
+        "timestamp": 1763676255,
+        "equity": 993849.528259,
+        "delta": -44.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Bills (-6.5)",
+        "usdc": 44.88
+      },
+      {
+        "timestamp": 1763683999,
+        "equity": 921336.216122,
+        "delta": -842.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Bills (-3.5)",
+        "usdc": 842.16
+      },
+      {
+        "timestamp": 1763760919,
+        "equity": 934077.237249,
+        "delta": -1.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Hurricanes vs. Jets",
+        "usdc": 1.5
+      },
+      {
+        "timestamp": 1763830477,
+        "equity": 962744.851542,
+        "delta": -78.606666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Oklahoma (-5.5)",
+        "usdc": 78.606666
+      },
+      {
+        "timestamp": 1763854511,
+        "equity": 752244.690204,
+        "delta": -98.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: BYU (-2.5)",
+        "usdc": 98.0
+      },
+      {
+        "timestamp": 1763910887,
+        "equity": 1054740.118974,
+        "delta": -509.2129,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-12.5)",
+        "usdc": 509.2129
+      },
+      {
+        "timestamp": 1763915805,
+        "equity": 951284.603339,
+        "delta": -4.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Jaguars (-2.5)",
+        "usdc": 4.0
+      },
+      {
+        "timestamp": 1763922579,
+        "equity": 879428.995048,
+        "delta": -144.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. 49ers: O/U 49.5",
+        "usdc": 144.5
+      },
+      {
+        "timestamp": 1763944923,
+        "equity": 944012.974409,
+        "delta": -2.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Rams (-7.5)",
+        "usdc": 2.35
+      },
+      {
+        "timestamp": 1763945537,
+        "equity": 920776.432014,
+        "delta": -48.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Rams (-7.5)",
+        "usdc": 48.0
+      },
+      {
+        "timestamp": 1763946571,
+        "equity": 904043.157553,
+        "delta": -768.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Rams (-7.5)",
+        "usdc": 768.0
+      },
+      {
+        "timestamp": 1764029441,
+        "equity": 1348135.507977,
+        "delta": -1.773584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-7.5)",
+        "usdc": 1.773584
+      },
+      {
+        "timestamp": 1764030521,
+        "equity": 1336313.21056,
+        "delta": -5.46,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-7.5)",
+        "usdc": 5.46
+      },
+      {
+        "timestamp": 1764262657,
+        "equity": 1367257.402179,
+        "delta": -254.5413,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Lions",
+        "usdc": 254.5413
+      },
+      {
+        "timestamp": 1764263921,
+        "equity": 1242472.997656,
+        "delta": -12.786885,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Lions",
+        "usdc": 12.786885
+      },
+      {
+        "timestamp": 1764278779,
+        "equity": 974108.119629,
+        "delta": 9.18,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Chiefs (-3.5)",
+        "usdc": 9.18
+      },
+      {
+        "timestamp": 1764343449,
+        "equity": 1149368.523821,
+        "delta": -3.69863,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ole Miss vs. Mississippi State",
+        "usdc": 3.69863
+      },
+      {
+        "timestamp": 1764360235,
+        "equity": 905907.779863,
+        "delta": -141.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-7.5)",
+        "usdc": 141.64
+      },
+      {
+        "timestamp": 1764371629,
+        "equity": 966562.077249,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "O/U 62.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1764374067,
+        "equity": 960334.716053,
+        "delta": -43.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Texas A&M (-2.5)",
+        "usdc": 43.2
+      },
+      {
+        "timestamp": 1764374473,
+        "equity": 947690.556053,
+        "delta": -96.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Texas A&M (-2.5)",
+        "usdc": 96.0
+      },
+      {
+        "timestamp": 1764374871,
+        "equity": 914170.262269,
+        "delta": -2.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Texas A&M (-2.5)",
+        "usdc": 2.4
+      },
+      {
+        "timestamp": 1764425855,
+        "equity": 1180083.062959,
+        "delta": -19.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-11.5)",
+        "usdc": 19.6
+      },
+      {
+        "timestamp": 1764434561,
+        "equity": 1078904.848176,
+        "delta": -2.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Oregon (-7.5)",
+        "usdc": 2.25
+      },
+      {
+        "timestamp": 1764437133,
+        "equity": 1062903.670064,
+        "delta": -500.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: UTSA Roadrunners (-7.5)",
+        "usdc": 500.0
+      },
+      {
+        "timestamp": 1764437271,
+        "equity": 1059392.820064,
+        "delta": -2.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Oregon (-7.5)",
+        "usdc": 2.25
+      },
+      {
+        "timestamp": 1764442289,
+        "equity": 980518.374008,
+        "delta": -0.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Virginia Tech vs. Virginia",
+        "usdc": 0.333333
+      },
+      {
+        "timestamp": 1764460422,
+        "equity": 890043.49983,
+        "delta": -587.510638,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Colts (-3.5)",
+        "usdc": 587.510638
+      },
+      {
+        "timestamp": 1764462452,
+        "equity": 852167.242366,
+        "delta": -7.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Alabama vs. Auburn",
+        "usdc": 7.25
+      },
+      {
+        "timestamp": 1764472501,
+        "equity": 989901.835415,
+        "delta": -6.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Fresno State vs. San Jose State",
+        "usdc": 6.1
+      },
+      {
+        "timestamp": 1764487019,
+        "equity": 993258.31348,
+        "delta": -1.636451,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Colts",
+        "usdc": 1.636451
+      },
+      {
+        "timestamp": 1764535524,
+        "equity": 818896.557117,
+        "delta": -5.16,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Vikings vs. Seahawks",
+        "usdc": 5.16
+      },
+      {
+        "timestamp": 1764550296,
+        "equity": 724543.895973,
+        "delta": -22.54,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Broncos vs. Commanders: O/U 43.5",
+        "usdc": 22.54
+      },
+      {
+        "timestamp": 1764618510,
+        "equity": 1451494.859201,
+        "delta": 81009.993144,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Broncos vs. Commanders: O/U 43.5",
+        "usdc": 81009.993144
+      },
+      {
+        "timestamp": 1764895117,
+        "equity": 1330599.085451,
+        "delta": -2586.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cowboys vs. Lions",
+        "usdc": 2586.64
+      },
+      {
+        "timestamp": 1764980847,
+        "equity": 2213338.127331,
+        "delta": -62.075471,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "North Texas vs. Tulane",
+        "usdc": 62.075471
+      },
+      {
+        "timestamp": 1765039551,
+        "equity": 2332640.011641,
+        "delta": -11.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami (OH) vs. Western Michigan",
+        "usdc": 11.0
+      },
+      {
+        "timestamp": 1765053717,
+        "equity": 2236845.267469,
+        "delta": -1.083333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Georgia (-2.5)",
+        "usdc": 1.083333
+      },
+      {
+        "timestamp": 1765058977,
+        "equity": 2221914.81165,
+        "delta": -391.111111,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Texans vs. Chiefs",
+        "usdc": 391.111111
+      },
+      {
+        "timestamp": 1765066715,
+        "equity": 2200526.516015,
+        "delta": -19.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Virginia (-3.5)",
+        "usdc": 19.5
+      },
+      {
+        "timestamp": 1765068311,
+        "equity": 2096065.630562,
+        "delta": -16.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Ohio State (-3.5)",
+        "usdc": 16.5
+      },
+      {
+        "timestamp": 1765068663,
+        "equity": 2066056.127619,
+        "delta": -97.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Ohio State (-3.5)",
+        "usdc": 97.5
+      },
+      {
+        "timestamp": 1765117309,
+        "equity": 2155600.745664,
+        "delta": -15.6133,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Dolphins vs. Jets",
+        "usdc": 15.6133
+      },
+      {
+        "timestamp": 1765126621,
+        "equity": 1802626.758146,
+        "delta": -2019.3768,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Titans vs. Browns",
+        "usdc": 2019.3768
+      },
+      {
+        "timestamp": 1765139813,
+        "equity": 1601433.729807,
+        "delta": -3.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: LAR (-10.5)",
+        "usdc": 3.96
+      },
+      {
+        "timestamp": 1765233195,
+        "equity": 2974073.075001,
+        "delta": -18.461538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-2.5)",
+        "usdc": 18.461538
+      },
+      {
+        "timestamp": 1765242443,
+        "equity": 2708380.871185,
+        "delta": -19.215686,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Chargers",
+        "usdc": 19.215686
+      },
+      {
+        "timestamp": 1765496374,
+        "equity": 2784345.697629,
+        "delta": -33.35,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Falcons vs. Buccaneers",
+        "usdc": 33.35
+      },
+      {
+        "timestamp": 1765653179,
+        "equity": 2825682.197448,
+        "delta": -1.056862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Navy (-6.5)",
+        "usdc": 1.056862
+      },
+      {
+        "timestamp": 1765674591,
+        "equity": 2801774.965174,
+        "delta": -2.660377,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Washington (-9.5)",
+        "usdc": 2.660377
+      },
+      {
+        "timestamp": 1765722545,
+        "equity": 2810692.403576,
+        "delta": -98.43,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Jaguars (-13.5)",
+        "usdc": 98.43
+      },
+      {
+        "timestamp": 1765729747,
+        "equity": 2631494.592124,
+        "delta": -26.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Chiefs (-5.5)",
+        "usdc": 26.4
+      },
+      {
+        "timestamp": 1765733755,
+        "equity": 2476320.361286,
+        "delta": -17.64,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Panthers (-2.5)",
+        "usdc": 17.64
+      },
+      {
+        "timestamp": 1765734953,
+        "equity": 2427532.436546,
+        "delta": -8.82,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Panthers (-2.5)",
+        "usdc": 8.82
+      },
+      {
+        "timestamp": 1765741339,
+        "equity": 2475240.035765,
+        "delta": -96.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Broncos",
+        "usdc": 96.0
+      },
+      {
+        "timestamp": 1765811215,
+        "equity": 2744316.709555,
+        "delta": -61.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Steelers (-3.5)",
+        "usdc": 61.1
+      },
+      {
+        "timestamp": 1765826365,
+        "equity": 2741583.580232,
+        "delta": -0.975471,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Steelers (-3.5)",
+        "usdc": 0.975471
+      },
+      {
+        "timestamp": 1765826779,
+        "equity": 2741293.657587,
+        "delta": -2.279056,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Steelers (-3.5)",
+        "usdc": 2.279056
+      },
+      {
+        "timestamp": 1765833825,
+        "equity": 2739443.912773,
+        "delta": -49.660377,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Steelers (-3.5)",
+        "usdc": 49.660377
+      },
+      {
+        "timestamp": 1766173763,
+        "equity": 2775344.167068,
+        "delta": -8.090909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Anthony Joshua win his boxing match against Jake Paul?",
+        "usdc": 8.090909
+      },
+      {
+        "timestamp": 1766214328,
+        "equity": 2539291.538403,
+        "delta": -4.633846,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Commanders: O/U 44.5",
+        "usdc": 4.633846
+      },
+      {
+        "timestamp": 1766246813,
+        "equity": 2929636.972276,
+        "delta": -87.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Tulane vs. Ole Miss",
+        "usdc": 87.0
+      },
+      {
+        "timestamp": 1766248733,
+        "equity": 2884043.216721,
+        "delta": -6.363636,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Texas A&M",
+        "usdc": 6.363636
+      },
+      {
+        "timestamp": 1766251687,
+        "equity": 2519082.151327,
+        "delta": -4.695652,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Texas A&M",
+        "usdc": 4.695652
+      },
+      {
+        "timestamp": 1766267959,
+        "equity": 2219864.115132,
+        "delta": -1.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Eagles vs. Commanders",
+        "usdc": 1.333333
+      },
+      {
+        "timestamp": 1766275405,
+        "equity": 2041066.184069,
+        "delta": -2150.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Oregon (-21.5)",
+        "usdc": 2150.0
+      },
+      {
+        "timestamp": 1766330359,
+        "equity": 2514474.773568,
+        "delta": -3.600377,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chargers vs. Cowboys",
+        "usdc": 3.600377
+      },
+      {
+        "timestamp": 1766340307,
+        "equity": 2101951.862821,
+        "delta": -961.104255,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chargers vs. Cowboys",
+        "usdc": 961.104255
+      },
+      {
+        "timestamp": 1766351074,
+        "equity": 1950562.281486,
+        "delta": -1.39186,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Falcons vs. Cardinals",
+        "usdc": 1.39186
+      },
+      {
+        "timestamp": 1766365064,
+        "equity": 2604889.12861,
+        "delta": -128.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Ravens",
+        "usdc": 128.0
+      },
+      {
+        "timestamp": 1766365176,
+        "equity": 2586728.115283,
+        "delta": -11.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Ravens",
+        "usdc": 11.52
+      },
+      {
+        "timestamp": 1766365280,
+        "equity": 2569730.180352,
+        "delta": -170.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Ravens",
+        "usdc": 170.666666
+      },
+      {
+        "timestamp": 1766366182,
+        "equity": 2567974.329672,
+        "delta": -512.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Ravens (-3.5)",
+        "usdc": 512.2
+      },
+      {
+        "timestamp": 1766366332,
+        "equity": 2546819.797139,
+        "delta": -130.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Ravens (-3.5)",
+        "usdc": 130.0
+      },
+      {
+        "timestamp": 1766424535,
+        "equity": 2542010.808809,
+        "delta": -12.36,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-5.5)",
+        "usdc": 12.36
+      },
+      {
+        "timestamp": 1766444327,
+        "equity": 2526283.178069,
+        "delta": -7163.058,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-6.5)",
+        "usdc": 7163.058
+      },
+      {
+        "timestamp": 1766516045,
+        "equity": 2654022.102724,
+        "delta": -31507.0503,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Louisville (-11.5)",
+        "usdc": 31507.0503
+      },
+      {
+        "timestamp": 1766624605,
+        "equity": 2520023.196807,
+        "delta": -12.325319,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "California vs. Hawaii",
+        "usdc": 12.325319
+      },
+      {
+        "timestamp": 1766692903,
+        "equity": 2522104.582153,
+        "delta": 4856.8085,
+        "type": "MERGE",
+        "side": null,
+        "title": "Spread: Broncos (-13.5)",
+        "usdc": 4856.8085
+      },
+      {
+        "timestamp": 1766713743,
+        "equity": 2380951.291129,
+        "delta": -3410.4049,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Timberwolves vs. Nuggets",
+        "usdc": 3410.4049
+      },
+      {
+        "timestamp": 1766769323,
+        "equity": 2564941.17685,
+        "delta": -96.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Florida International vs. UTSA Roadrunners",
+        "usdc": 96.56
+      },
+      {
+        "timestamp": 1766780127,
+        "equity": 2561825.284036,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Florida International vs. UTSA Roadrunners: O/U 61.5",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1766780181,
+        "equity": 2561585.676228,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Florida International vs. UTSA Roadrunners: O/U 61.5",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1766780229,
+        "equity": 2560608.449012,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Florida International vs. UTSA Roadrunners: O/U 61.5",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1766780277,
+        "equity": 2560368.841204,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Florida International vs. UTSA Roadrunners: O/U 61.5",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1766854393,
+        "equity": 2449355.494138,
+        "delta": -9600.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Clemson (-2.5)",
+        "usdc": 9600.0
+      },
+      {
+        "timestamp": 1766862767,
+        "equity": 2284227.681132,
+        "delta": -1925.1576,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Army (-8.5)",
+        "usdc": 1925.1576
+      },
+      {
+        "timestamp": 1766864191,
+        "equity": 2245240.473207,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Fresno State (-5.5)",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1766864495,
+        "equity": 2223545.943167,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Fresno State (-5.5)",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1766867301,
+        "equity": 2200571.980361,
+        "delta": -0.923076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Packers (-2.5)",
+        "usdc": 0.923076
+      },
+      {
+        "timestamp": 1766869053,
+        "equity": 2155569.386967,
+        "delta": -0.923076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Packers (-2.5)",
+        "usdc": 0.923076
+      },
+      {
+        "timestamp": 1766878085,
+        "equity": 2139828.466536,
+        "delta": -13.77,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Packers (-2.5)",
+        "usdc": 13.77
+      },
+      {
+        "timestamp": 1766883089,
+        "equity": 2092309.484179,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Packers (-2.5)",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1766928869,
+        "equity": 2698502.870741,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "LSU vs. Houston: O/U 42.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1766930901,
+        "equity": 2678618.698378,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-13.5)",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1766930999,
+        "equity": 2678373.484298,
+        "delta": -2.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-13.5)",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1766931093,
+        "equity": 2678126.011786,
+        "delta": -1.921568,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-13.5)",
+        "usdc": 1.921568
+      },
+      {
+        "timestamp": 1766937801,
+        "equity": 2637893.657091,
+        "delta": -1.702753,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Jaguars vs. Colts",
+        "usdc": 1.702753
+      },
+      {
+        "timestamp": 1766942699,
+        "equity": 2534802.304287,
+        "delta": -3.84,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-13.5)",
+        "usdc": 3.84
+      },
+      {
+        "timestamp": 1766944183,
+        "equity": 2466105.960027,
+        "delta": -940.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Steelers (-4.5)",
+        "usdc": 940.0
+      },
+      {
+        "timestamp": 1766958197,
+        "equity": 2131491.842552,
+        "delta": -40.3218,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Canadiens vs. Lightning",
+        "usdc": 40.3218
+      },
+      {
+        "timestamp": 1766965875,
+        "equity": 2350480.005359,
+        "delta": -16.4,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-2.5)",
+        "usdc": 16.4
+      },
+      {
+        "timestamp": 1766970505,
+        "equity": 2230188.54846,
+        "delta": -1178.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: 49ers (-3.5)",
+        "usdc": 1178.88
+      },
+      {
+        "timestamp": 1767039067,
+        "equity": 2897757.787856,
+        "delta": -7.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Falcons",
+        "usdc": 7.5
+      },
+      {
+        "timestamp": 1767051411,
+        "equity": 2900057.679528,
+        "delta": -3.483333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Falcons",
+        "usdc": 3.483333
+      },
+      {
+        "timestamp": 1767197177,
+        "equity": 3065729.369516,
+        "delta": -0.449295,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Michigan vs. Texas",
+        "usdc": 0.449295
+      },
+      {
+        "timestamp": 1767207281,
+        "equity": 3035409.383989,
+        "delta": -2.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Duke (-3.5)",
+        "usdc": 2.5
+      },
+      {
+        "timestamp": 1767225657,
+        "equity": 2407304.775632,
+        "delta": -101.199411,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Ohio State (-7.5)",
+        "usdc": 101.199411
+      },
+      {
+        "timestamp": 1767280837,
+        "equity": 2784023.80754,
+        "delta": -22.553191,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Texas Tech Red Raiders",
+        "usdc": 22.553191
+      },
+      {
+        "timestamp": 1767285401,
+        "equity": 2686551.342041,
+        "delta": -1.1375,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.1375
+      },
+      {
+        "timestamp": 1767286391,
+        "equity": 2470206.054851,
+        "delta": -12.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 12.0
+      },
+      {
+        "timestamp": 1767296925,
+        "equity": 2438087.938016,
+        "delta": -9.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Alabama vs. Indiana",
+        "usdc": 9.333333
+      },
+      {
+        "timestamp": 1767298961,
+        "equity": 2330523.41281,
+        "delta": -1136.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Alabama vs. Indiana",
+        "usdc": 1136.333333
+      },
+      {
+        "timestamp": 1767300725,
+        "equity": 2187677.801869,
+        "delta": -14573.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-6.5)",
+        "usdc": 14573.56
+      },
+      {
+        "timestamp": 1767301083,
+        "equity": 2170211.118656,
+        "delta": -9.31,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 9.31
+      },
+      {
+        "timestamp": 1767307095,
+        "equity": 2442802.09829,
+        "delta": 1.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Georgia (-6.5)",
+        "usdc": 1.999998
+      },
+      {
+        "timestamp": 1767307157,
+        "equity": 2439857.116582,
+        "delta": 1.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Georgia (-6.5)",
+        "usdc": 1.999998
+      },
+      {
+        "timestamp": 1767307197,
+        "equity": 2438909.547273,
+        "delta": 1.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Georgia (-6.5)",
+        "usdc": 1.999998
+      },
+      {
+        "timestamp": 1767307325,
+        "equity": 2436866.70452,
+        "delta": 1.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Georgia (-6.5)",
+        "usdc": 1.999998
+      },
+      {
+        "timestamp": 1767309501,
+        "equity": 2434083.557033,
+        "delta": -1.773584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Georgia (-6.5)",
+        "usdc": 1.773584
+      },
+      {
+        "timestamp": 1767312831,
+        "equity": 2123287.400654,
+        "delta": -9.18,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ole Miss vs. Georgia: O/U 53.5",
+        "usdc": 9.18
+      },
+      {
+        "timestamp": 1767375713,
+        "equity": 2901091.899008,
+        "delta": -1399.2964,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Wake Forest vs. Mississippi State",
+        "usdc": 1399.2964
+      },
+      {
+        "timestamp": 1767391581,
+        "equity": 2743433.355246,
+        "delta": -1.773584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Arizona vs. SMU Mustangs",
+        "usdc": 1.773584
+      },
+      {
+        "timestamp": 1767399601,
+        "equity": 2624063.626571,
+        "delta": -112.765957,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Mississippi State (-3.5)",
+        "usdc": 112.765957
+      },
+      {
+        "timestamp": 1767416327,
+        "equity": 2682006.340593,
+        "delta": 74990.16527,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: Navy (-7.5)",
+        "usdc": 74990.16527
+      },
+      {
+        "timestamp": 1767465177,
+        "equity": 2879998.877515,
+        "delta": -4.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Vikings (-9.5)",
+        "usdc": 4.68
+      },
+      {
+        "timestamp": 1767472483,
+        "equity": 2842549.709184,
+        "delta": -17.7,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Panthers vs. Buccaneers",
+        "usdc": 17.7
+      },
+      {
+        "timestamp": 1767480065,
+        "equity": 2810112.290841,
+        "delta": -4.48,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. 49ers",
+        "usdc": 4.48
+      },
+      {
+        "timestamp": 1767486755,
+        "equity": 2760347.193498,
+        "delta": -30.8653,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Cardinals vs. Rams",
+        "usdc": 30.8653
+      },
+      {
+        "timestamp": 1767493549,
+        "equity": 2847832.410517,
+        "delta": 5.239999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Spread: Vikings (-9.5)",
+        "usdc": 5.239999
+      },
+      {
+        "timestamp": 1767543371,
+        "equity": 2859034.88108,
+        "delta": -308.2525,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Vikings",
+        "usdc": 308.2525
+      },
+      {
+        "timestamp": 1767549473,
+        "equity": 2645127.480397,
+        "delta": -20160.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Jaguars (-13.5)",
+        "usdc": 20160.0
+      },
+      {
+        "timestamp": 1767622497,
+        "equity": 3085501.694996,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Spread: Broncos (-13.5)",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1767918662,
+        "equity": 2740306.282826,
+        "delta": -30.738947,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Ole Miss",
+        "usdc": 30.738947
+      },
+      {
+        "timestamp": 1767977988,
+        "equity": 3112452.832457,
+        "delta": -1.225806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Indiana",
+        "usdc": 1.225806
+      },
+      {
+        "timestamp": 1767978578,
+        "equity": 3013945.102254,
+        "delta": -1.109354,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Indiana",
+        "usdc": 1.109354
+      },
+      {
+        "timestamp": 1767981574,
+        "equity": 3087059.243114,
+        "delta": -1.998064,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Indiana",
+        "usdc": 1.998064
+      },
+      {
+        "timestamp": 1767981694,
+        "equity": 3086886.048974,
+        "delta": -0.612903,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Indiana",
+        "usdc": 0.612903
+      },
+      {
+        "timestamp": 1767982374,
+        "equity": 3086723.085904,
+        "delta": -0.674193,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oregon vs. Indiana",
+        "usdc": 0.674193
+      },
+      {
+        "timestamp": 1768001232,
+        "equity": 2893627.257533,
+        "delta": -231.2604,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-4.5)",
+        "usdc": 231.2604
+      },
+      {
+        "timestamp": 1768055166,
+        "equity": 3623467.857953,
+        "delta": -11.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Bears",
+        "usdc": 11.34
+      },
+      {
+        "timestamp": 1768061296,
+        "equity": 3582977.008376,
+        "delta": -17.28,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Packers vs. Bears",
+        "usdc": 17.28
+      },
+      {
+        "timestamp": 1768077840,
+        "equity": 2909135.559444,
+        "delta": 4.5,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Packers vs. Bears",
+        "usdc": 4.5
+      },
+      {
+        "timestamp": 1768080320,
+        "equity": 2849767.589308,
+        "delta": 4.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Packers vs. Bears",
+        "usdc": 4.999999
+      },
+      {
+        "timestamp": 1768153412,
+        "equity": 3056375.125833,
+        "delta": -1.098461,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 1.098461
+      },
+      {
+        "timestamp": 1768153424,
+        "equity": 3056122.655134,
+        "delta": -0.923076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 0.923076
+      },
+      {
+        "timestamp": 1768153498,
+        "equity": 3055005.312292,
+        "delta": -0.923076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 0.923076
+      },
+      {
+        "timestamp": 1768154048,
+        "equity": 3045363.965646,
+        "delta": -1.061538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 1.061538
+      },
+      {
+        "timestamp": 1768154260,
+        "equity": 3037364.68152,
+        "delta": -0.941538,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 0.941538
+      },
+      {
+        "timestamp": 1768154356,
+        "equity": 3036741.997152,
+        "delta": -1.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 1.2
+      },
+      {
+        "timestamp": 1768154370,
+        "equity": 3035631.417515,
+        "delta": -2.824615,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 2.824615
+      },
+      {
+        "timestamp": 1768155862,
+        "equity": 3018500.849762,
+        "delta": -11.276595,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-4.5)",
+        "usdc": 11.276595
+      },
+      {
+        "timestamp": 1768163042,
+        "equity": 2972426.219761,
+        "delta": -7.65,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 7.65
+      },
+      {
+        "timestamp": 1768164340,
+        "equity": 2959581.474307,
+        "delta": -13.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 13.05
+      },
+      {
+        "timestamp": 1768165754,
+        "equity": 2880412.550811,
+        "delta": -0.818181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 0.818181
+      },
+      {
+        "timestamp": 1768166452,
+        "equity": 2843591.261999,
+        "delta": -6.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 6.75
+      },
+      {
+        "timestamp": 1768166534,
+        "equity": 2834718.652909,
+        "delta": -116.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 116.1
+      },
+      {
+        "timestamp": 1768166616,
+        "equity": 2818011.126548,
+        "delta": -58.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 58.05
+      },
+      {
+        "timestamp": 1768166714,
+        "equity": 2792278.624732,
+        "delta": -5.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Eagles (-6.5)",
+        "usdc": 5.85
+      },
+      {
+        "timestamp": 1768177676,
+        "equity": 2717296.936854,
+        "delta": -1501.283137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 1501.283137
+      },
+      {
+        "timestamp": 1768191348,
+        "equity": 2698410.579032,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Bills vs. Jaguars: O/U 51.5",
+        "usdc": 0.0
+      },
+      {
+        "timestamp": 1768353920,
+        "equity": 2761977.022921,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768390148,
+        "equity": 2731063.942921,
+        "delta": -6.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 6.0
+      },
+      {
+        "timestamp": 1768417904,
+        "equity": 2711858.135062,
+        "delta": -60.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 60.0
+      },
+      {
+        "timestamp": 1768419704,
+        "equity": 2710502.778484,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768420142,
+        "equity": 2709409.679537,
+        "delta": -13.035,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 13.035
+      },
+      {
+        "timestamp": 1768420834,
+        "equity": 2702859.438201,
+        "delta": -4.035,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 4.035
+      },
+      {
+        "timestamp": 1768421282,
+        "equity": 2702104.690701,
+        "delta": -8.0475,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 8.0475
+      },
+      {
+        "timestamp": 1768421872,
+        "equity": 2701138.841096,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768422452,
+        "equity": 2699820.364386,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768422776,
+        "equity": 2699312.419386,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768423208,
+        "equity": 2698861.78465,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768423510,
+        "equity": 2698339.33465,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768423988,
+        "equity": 2697864.065572,
+        "delta": -3.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 3.75
+      },
+      {
+        "timestamp": 1768428930,
+        "equity": 2683164.090082,
+        "delta": -26.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Broncos",
+        "usdc": 26.0
+      },
+      {
+        "timestamp": 1768431120,
+        "equity": 2665770.005914,
+        "delta": -451.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Bills vs. Broncos",
+        "usdc": 451.88
+      },
+      {
+        "timestamp": 1768441468,
+        "equity": 2646135.403287,
+        "delta": -5.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 5.85
+      },
+      {
+        "timestamp": 1768480660,
+        "equity": 2630968.07703,
+        "delta": -5.3775,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 5.3775
+      },
+      {
+        "timestamp": 1768514096,
+        "equity": 2523968.455615,
+        "delta": -7.47129,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sharks vs. Capitals",
+        "usdc": 7.47129
+      },
+      {
+        "timestamp": 1768551200,
+        "equity": 2497629.603692,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768564304,
+        "equity": 2600916.153094,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768564332,
+        "equity": 2600749.485966,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768569168,
+        "equity": 2578055.20506,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768574736,
+        "equity": 2577804.97069,
+        "delta": -1.040816,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1.040816
+      },
+      {
+        "timestamp": 1768619894,
+        "equity": 2417185.599675,
+        "delta": -15.08,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 15.08
+      },
+      {
+        "timestamp": 1768643402,
+        "equity": 2428328.413045,
+        "delta": -16.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 16.45
+      },
+      {
+        "timestamp": 1768659230,
+        "equity": 2379054.338306,
+        "delta": -12.22,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 12.22
+      },
+      {
+        "timestamp": 1768661562,
+        "equity": 2364956.663664,
+        "delta": -16.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 16.45
+      },
+      {
+        "timestamp": 1768662488,
+        "equity": 2349335.738891,
+        "delta": -294.69,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 294.69
+      },
+      {
+        "timestamp": 1768664714,
+        "equity": 2310740.500534,
+        "delta": -49.998,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 49.998
+      },
+      {
+        "timestamp": 1768670764,
+        "equity": 2343814.331775,
+        "delta": -0.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks",
+        "usdc": 0.52
+      },
+      {
+        "timestamp": 1768676522,
+        "equity": 2124618.307697,
+        "delta": -45.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 45.0
+      },
+      {
+        "timestamp": 1768678086,
+        "equity": 2199572.423115,
+        "delta": -39.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 39.6
+      },
+      {
+        "timestamp": 1768684904,
+        "equity": 2180764.789288,
+        "delta": -0.818181,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-7.5)",
+        "usdc": 0.818181
+      },
+      {
+        "timestamp": 1768697886,
+        "equity": 2056479.190895,
+        "delta": -3.7036,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "49ers vs. Seahawks: O/U 45.5",
+        "usdc": 3.7036
+      },
+      {
+        "timestamp": 1768749376,
+        "equity": 2623492.825745,
+        "delta": 19.999999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Lightning vs. Stars",
+        "usdc": 19.999999
+      },
+      {
+        "timestamp": 1768751382,
+        "equity": 2613970.475429,
+        "delta": -0.6716,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 0.6716
+      },
+      {
+        "timestamp": 1768752292,
+        "equity": 2528711.756089,
+        "delta": -0.851851,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 0.851851
+      },
+      {
+        "timestamp": 1768758212,
+        "equity": 2717896.192125,
+        "delta": 25.579899,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Lightning vs. Stars",
+        "usdc": 25.579899
+      },
+      {
+        "timestamp": 1768768978,
+        "equity": 2658301.308524,
+        "delta": -4.957647,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 4.957647
+      },
+      {
+        "timestamp": 1768772114,
+        "equity": 2527426.93899,
+        "delta": -5.85,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 5.85
+      },
+      {
+        "timestamp": 1768773048,
+        "equity": 2509794.581928,
+        "delta": -9.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 9.1
+      },
+      {
+        "timestamp": 1768774916,
+        "equity": 2484985.559383,
+        "delta": -27.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 27.3
+      },
+      {
+        "timestamp": 1768778266,
+        "equity": 2333761.320151,
+        "delta": -1.082448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Rams (-3.5)",
+        "usdc": 1.082448
+      },
+      {
+        "timestamp": 1768778922,
+        "equity": 2210292.866044,
+        "delta": -37.142857,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Bears",
+        "usdc": 37.142857
+      },
+      {
+        "timestamp": 1768793344,
+        "equity": 2193705.754491,
+        "delta": -0.98,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 0.98
+      },
+      {
+        "timestamp": 1768807962,
+        "equity": 2190018.980298,
+        "delta": -9.607843,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 9.607843
+      },
+      {
+        "timestamp": 1768842286,
+        "equity": 2830449.639234,
+        "delta": -13.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 13.32
+      },
+      {
+        "timestamp": 1768853422,
+        "equity": 2783227.912443,
+        "delta": -230.76923,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 230.76923
+      },
+      {
+        "timestamp": 1768858190,
+        "equity": 2769222.1389,
+        "delta": -13.14,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 13.14
+      },
+      {
+        "timestamp": 1768859596,
+        "equity": 2727988.987501,
+        "delta": -7.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 7.3
+      },
+      {
+        "timestamp": 1768861574,
+        "equity": 2757017.865278,
+        "delta": -27.01,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 27.01
+      },
+      {
+        "timestamp": 1768863026,
+        "equity": 2682393.985949,
+        "delta": -1300.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 1300.0
+      },
+      {
+        "timestamp": 1768868352,
+        "equity": 2771432.980633,
+        "delta": 4.499999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Miami vs. Indiana",
+        "usdc": 4.499999
+      },
+      {
+        "timestamp": 1768868596,
+        "equity": 2772451.00242,
+        "delta": -676.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Indiana (-7.5)",
+        "usdc": 676.0
+      },
+      {
+        "timestamp": 1768869106,
+        "equity": 2820062.641266,
+        "delta": -99.615384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 99.615384
+      },
+      {
+        "timestamp": 1768869690,
+        "equity": 2720556.762441,
+        "delta": -6.66,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Miami vs. Indiana",
+        "usdc": 6.66
+      },
+      {
+        "timestamp": 1769015722,
+        "equity": 2984161.118868,
+        "delta": -2.21,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Broncos",
+        "usdc": 2.21
+      },
+      {
+        "timestamp": 1769039928,
+        "equity": 3030892.560683,
+        "delta": 1374.5525,
+        "type": "MERGE",
+        "side": null,
+        "title": "Patriots vs. Broncos",
+        "usdc": 1374.5525
+      },
+      {
+        "timestamp": 1769062288,
+        "equity": 3021419.030035,
+        "delta": 6.7398,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Rams vs. Seahawks: O/U 47.5",
+        "usdc": 6.7398
+      },
+      {
+        "timestamp": 1769117812,
+        "equity": 2939213.168182,
+        "delta": -9091.821158,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-2.5)",
+        "usdc": 9091.821158
+      },
+      {
+        "timestamp": 1769199840,
+        "equity": 2600092.170847,
+        "delta": -2088.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Suns vs. Hawks",
+        "usdc": 2088.0
+      },
+      {
+        "timestamp": 1769211046,
+        "equity": 2568960.153054,
+        "delta": 2.3,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Rams vs. Seahawks: O/U 47.5",
+        "usdc": 2.3
+      },
+      {
+        "timestamp": 1769281054,
+        "equity": 2539713.737432,
+        "delta": -399.96,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Virginia Tech Hokies vs. Louisville Cardinals",
+        "usdc": 399.96
+      },
+      {
+        "timestamp": 1769293486,
+        "equity": 2475010.170053,
+        "delta": -0.960784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-2.5)",
+        "usdc": 0.960784
+      },
+      {
+        "timestamp": 1769324604,
+        "equity": 2433685.468952,
+        "delta": -4.803921,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-2.5)",
+        "usdc": 4.803921
+      },
+      {
+        "timestamp": 1769350672,
+        "equity": 2214244.231812,
+        "delta": -4.9539,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-2.5)",
+        "usdc": 4.9539
+      },
+      {
+        "timestamp": 1769357122,
+        "equity": 2219507.920826,
+        "delta": -8.242424,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Patriots vs. Broncos",
+        "usdc": 8.242424
+      },
+      {
+        "timestamp": 1769358570,
+        "equity": 2198351.298988,
+        "delta": -1.523076,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 1.523076
+      },
+      {
+        "timestamp": 1769360384,
+        "equity": 2178675.804217,
+        "delta": -1.056862,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 1.056862
+      },
+      {
+        "timestamp": 1769362132,
+        "equity": 2171914.256844,
+        "delta": -17.909019,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 17.909019
+      },
+      {
+        "timestamp": 1769363144,
+        "equity": 2166045.75784,
+        "delta": -44.339622,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Rams vs. Seahawks: O/U 46.5",
+        "usdc": 44.339622
+      },
+      {
+        "timestamp": 1769365044,
+        "equity": 2158222.686193,
+        "delta": -1.393137,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Patriots (-3.5)",
+        "usdc": 1.393137
+      },
+      {
+        "timestamp": 1769372062,
+        "equity": 2198365.903861,
+        "delta": 196999.8886,
+        "type": "MERGE",
+        "side": null,
+        "title": "Patriots vs. Broncos",
+        "usdc": 196999.8886
+      },
+      {
+        "timestamp": 1769382458,
+        "equity": 2190108.59268,
+        "delta": 3999.999998,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Rams vs. Seahawks",
+        "usdc": 3999.999998
+      },
+      {
+        "timestamp": 1769383112,
+        "equity": 1907828.899386,
+        "delta": -1.082448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-2.5)",
+        "usdc": 1.082448
+      },
+      {
+        "timestamp": 1769388646,
+        "equity": 1889499.337359,
+        "delta": -153.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Ducks vs. Flames",
+        "usdc": 153.0
+      },
+      {
+        "timestamp": 1769456519,
+        "equity": 2059766.340583,
+        "delta": -9.850746,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 9.850746
+      },
+      {
+        "timestamp": 1769497189,
+        "equity": 1978532.467905,
+        "delta": -8.433333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 46.5",
+        "usdc": 8.433333
+      },
+      {
+        "timestamp": 1769527131,
+        "equity": 2081097.46508,
+        "delta": -2.45,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 2.45
+      },
+      {
+        "timestamp": 1769527247,
+        "equity": 2080938.551384,
+        "delta": -0.960784,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 0.960784
+      },
+      {
+        "timestamp": 1769552353,
+        "equity": 1985153.212948,
+        "delta": -40.56,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Sabres vs. Maple Leafs",
+        "usdc": 40.56
+      },
+      {
+        "timestamp": 1769836510,
+        "equity": 1888218.14351,
+        "delta": -14.230769,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Australian Open Men's: Carlos Alcaraz vs Novak Djokovic",
+        "usdc": 14.230769
+      },
+      {
+        "timestamp": 1769869238,
+        "equity": 1749569.086923,
+        "delta": -5.4132,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 5.4132
+      },
+      {
+        "timestamp": 1769901628,
+        "equity": 1724406.923361,
+        "delta": -14.71,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Arkansas Razorbacks (-6.5)",
+        "usdc": 14.71
+      },
+      {
+        "timestamp": 1769923522,
+        "equity": 1556844.952709,
+        "delta": -28.8886,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Australian Open Men's: Carlos Alcaraz vs Novak Djokovic",
+        "usdc": 28.8886
+      },
+      {
+        "timestamp": 1769958852,
+        "equity": 1728806.775075,
+        "delta": -3.1,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Hurricanes",
+        "usdc": 3.1
+      },
+      {
+        "timestamp": 1769959510,
+        "equity": 1727013.857898,
+        "delta": -3.1806,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Hurricanes",
+        "usdc": 3.1806
+      },
+      {
+        "timestamp": 1769964780,
+        "equity": 1705366.714247,
+        "delta": -442.1654,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Kings vs. Hurricanes",
+        "usdc": 442.1654
+      },
+      {
+        "timestamp": 1770018444,
+        "equity": 1694815.831878,
+        "delta": -0.957735,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 0.957735
+      },
+      {
+        "timestamp": 1770052358,
+        "equity": 1666807.44855,
+        "delta": -493.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Penguins",
+        "usdc": 493.5
+      },
+      {
+        "timestamp": 1770064906,
+        "equity": 1642902.61456,
+        "delta": -1.9062,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Islanders vs. Capitals",
+        "usdc": 1.9062
+      },
+      {
+        "timestamp": 1770128406,
+        "equity": 1678991.591674,
+        "delta": -3.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 3.76
+      },
+      {
+        "timestamp": 1770138978,
+        "equity": 1751665.587111,
+        "delta": 19.499999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 19.499999
+      },
+      {
+        "timestamp": 1770155470,
+        "equity": 1801051.019635,
+        "delta": 0.5478,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 0.5478
+      },
+      {
+        "timestamp": 1770182144,
+        "equity": 1812875.837725,
+        "delta": -47.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 47.0
+      },
+      {
+        "timestamp": 1770198890,
+        "equity": 1809191.790965,
+        "delta": -64.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 64.5
+      },
+      {
+        "timestamp": 1770220597,
+        "equity": 1881292.613594,
+        "delta": -363.0915,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Oilers vs. Flames",
+        "usdc": 363.0915
+      },
+      {
+        "timestamp": 1770230775,
+        "equity": 1878380.941679,
+        "delta": -28.2256,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Manchester City FC win on 2026-02-04?",
+        "usdc": 28.2256
+      },
+      {
+        "timestamp": 1770243371,
+        "equity": 1882205.881531,
+        "delta": -0.9928,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 0.9928
+      },
+      {
+        "timestamp": 1770251477,
+        "equity": 1829207.252401,
+        "delta": -10410.31125,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 10410.31125
+      },
+      {
+        "timestamp": 1770278729,
+        "equity": 1763690.903477,
+        "delta": -107.44,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 107.44
+      },
+      {
+        "timestamp": 1770292551,
+        "equity": 1725194.476411,
+        "delta": -9.46,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 9.46
+      },
+      {
+        "timestamp": 1770298677,
+        "equity": 1678414.360137,
+        "delta": -25.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 25.8
+      },
+      {
+        "timestamp": 1770307455,
+        "equity": 1651626.997958,
+        "delta": -4.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 4.68
+      },
+      {
+        "timestamp": 1770313521,
+        "equity": 1727135.057684,
+        "delta": -2.2,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Flyers",
+        "usdc": 2.2
+      },
+      {
+        "timestamp": 1770317253,
+        "equity": 1714965.10705,
+        "delta": -10.88,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 10.88
+      },
+      {
+        "timestamp": 1770319941,
+        "equity": 1692951.183539,
+        "delta": -4.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 4.3
+      },
+      {
+        "timestamp": 1770323773,
+        "equity": 1683660.050064,
+        "delta": -3.928571,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Senators vs. Flyers",
+        "usdc": 3.928571
+      },
+      {
+        "timestamp": 1770327575,
+        "equity": 1648344.934853,
+        "delta": -6.375,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 6.375
+      },
+      {
+        "timestamp": 1770337731,
+        "equity": 1575494.929348,
+        "delta": -60.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 60.52
+      },
+      {
+        "timestamp": 1770349787,
+        "equity": 1525149.077193,
+        "delta": -10.32,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 10.32
+      },
+      {
+        "timestamp": 1770371473,
+        "equity": 1522005.740602,
+        "delta": -2.15,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Sam Darnold win the Super Bowl LX MVP?",
+        "usdc": 2.15
+      },
+      {
+        "timestamp": 1770386513,
+        "equity": 1454957.644402,
+        "delta": -1.015,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.015
+      },
+      {
+        "timestamp": 1770395469,
+        "equity": 1556517.818665,
+        "delta": -2.571428,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Grizzlies vs. Trail Blazers",
+        "usdc": 2.571428
+      },
+      {
+        "timestamp": 1770401161,
+        "equity": 1537328.594132,
+        "delta": -77.34,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 77.34
+      },
+      {
+        "timestamp": 1770409917,
+        "equity": 1532618.513724,
+        "delta": -4.68,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 4.68
+      },
+      {
+        "timestamp": 1770414597,
+        "equity": 1453096.94154,
+        "delta": -203.84,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 203.84
+      },
+      {
+        "timestamp": 1770416573,
+        "equity": 1457651.489513,
+        "delta": 1.28,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 1.28
+      },
+      {
+        "timestamp": 1770425183,
+        "equity": 1460947.869423,
+        "delta": 2.13,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 2.13
+      },
+      {
+        "timestamp": 1770451339,
+        "equity": 1645730.269976,
+        "delta": -8.846938,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 8.846938
+      },
+      {
+        "timestamp": 1770470217,
+        "equity": 1627814.500796,
+        "delta": 7.019999,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 7.019999
+      },
+      {
+        "timestamp": 1770476615,
+        "equity": 1637645.916002,
+        "delta": 4.62,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 4.62
+      },
+      {
+        "timestamp": 1770480271,
+        "equity": 1637849.951088,
+        "delta": -19.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 19.38
+      },
+      {
+        "timestamp": 1770486865,
+        "equity": 1941837.656361,
+        "delta": 330.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 330.0
+      },
+      {
+        "timestamp": 1770502875,
+        "equity": 1937997.06897,
+        "delta": -97.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 97.92
+      },
+      {
+        "timestamp": 1770507703,
+        "equity": 1794524.807425,
+        "delta": -204.0,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 204.0
+      },
+      {
+        "timestamp": 1770513227,
+        "equity": 1787719.573456,
+        "delta": -38.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 38.25
+      },
+      {
+        "timestamp": 1770517471,
+        "equity": 1775312.935452,
+        "delta": -1.2444,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 1.2444
+      },
+      {
+        "timestamp": 1770521879,
+        "equity": 1768459.304209,
+        "delta": -244.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 244.8
+      },
+      {
+        "timestamp": 1770537509,
+        "equity": 1748399.33761,
+        "delta": -14.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 14.3
+      },
+      {
+        "timestamp": 1770545461,
+        "equity": 1735782.118376,
+        "delta": -0.015,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 0.015
+      },
+      {
+        "timestamp": 1770551989,
+        "equity": 1723008.468777,
+        "delta": -4.333333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 4.333333
+      },
+      {
+        "timestamp": 1770555847,
+        "equity": 1715645.426703,
+        "delta": -2.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 2.6
+      },
+      {
+        "timestamp": 1770559587,
+        "equity": 1703912.806515,
+        "delta": -7.99,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 7.99
+      },
+      {
+        "timestamp": 1770563699,
+        "equity": 1793289.755279,
+        "delta": -2.6,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 2.6
+      },
+      {
+        "timestamp": 1770571277,
+        "equity": 1750139.111878,
+        "delta": -4.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 4.25
+      },
+      {
+        "timestamp": 1770572469,
+        "equity": 1714753.751006,
+        "delta": -127.5,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 127.5
+      },
+      {
+        "timestamp": 1770573461,
+        "equity": 1639725.262791,
+        "delta": -3.122448,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 3.122448
+      },
+      {
+        "timestamp": 1770574373,
+        "equity": 1557357.484495,
+        "delta": -207.684489,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 207.684489
+      },
+      {
+        "timestamp": 1770575763,
+        "equity": 1513115.860817,
+        "delta": -1.92,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-4.5)",
+        "usdc": 1.92
+      },
+      {
+        "timestamp": 1770577355,
+        "equity": 1260943.471346,
+        "delta": -4.25,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 4.25
+      },
+      {
+        "timestamp": 1770577659,
+        "equity": 1222023.35657,
+        "delta": -77.52,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 77.52
+      },
+      {
+        "timestamp": 1770577683,
+        "equity": 1195208.51197,
+        "delta": -193.8,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 193.8
+      },
+      {
+        "timestamp": 1770577709,
+        "equity": 1181311.35197,
+        "delta": -42.84,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 42.84
+      },
+      {
+        "timestamp": 1770578465,
+        "equity": 1169027.875611,
+        "delta": -4.59,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 4.59
+      },
+      {
+        "timestamp": 1770579347,
+        "equity": 1177128.809269,
+        "delta": -9.69,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 9.69
+      },
+      {
+        "timestamp": 1770580109,
+        "equity": 1171502.688748,
+        "delta": -9.18,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 9.18
+      },
+      {
+        "timestamp": 1770580727,
+        "equity": 1174509.069575,
+        "delta": -9.69,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 9.69
+      },
+      {
+        "timestamp": 1770581393,
+        "equity": 1152033.214032,
+        "delta": -9.69,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 9.69
+      },
+      {
+        "timestamp": 1770584385,
+        "equity": 1187989.407325,
+        "delta": -305.560606,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 305.560606
+      },
+      {
+        "timestamp": 1770584829,
+        "equity": 1118399.557738,
+        "delta": -64.624545,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 64.624545
+      },
+      {
+        "timestamp": 1770585303,
+        "equity": 1062712.022368,
+        "delta": 37.57,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Seahawks vs. Patriots: O/U 45.5",
+        "usdc": 37.57
+      },
+      {
+        "timestamp": 1770585431,
+        "equity": 1068423.629368,
+        "delta": -10.05,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 10.05
+      },
+      {
+        "timestamp": 1770585761,
+        "equity": 1026546.955206,
+        "delta": -16.75,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 16.75
+      },
+      {
+        "timestamp": 1770585857,
+        "equity": 1012348.741581,
+        "delta": -192.29,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 192.29
+      },
+      {
+        "timestamp": 1770585891,
+        "equity": 1003676.890978,
+        "delta": -18.76,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 18.76
+      },
+      {
+        "timestamp": 1770585953,
+        "equity": 975027.181375,
+        "delta": -9.38,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 9.38
+      },
+      {
+        "timestamp": 1770586175,
+        "equity": 976340.354667,
+        "delta": -4060.60606,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 4060.60606
+      },
+      {
+        "timestamp": 1770586305,
+        "equity": 951970.764818,
+        "delta": -40.60606,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 40.60606
+      },
+      {
+        "timestamp": 1770586423,
+        "equity": 872851.003355,
+        "delta": -450.24,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 450.24
+      },
+      {
+        "timestamp": 1770588079,
+        "equity": 762833.68134,
+        "delta": -25.439696,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Seahawks vs. Patriots",
+        "usdc": 25.439696
+      },
+      {
+        "timestamp": 1770589019,
+        "equity": 571421.580075,
+        "delta": -1.773584,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 1.773584
+      },
+      {
+        "timestamp": 1770592067,
+        "equity": 632205.1536,
+        "delta": -183.3,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: Seahawks (-5.5)",
+        "usdc": 183.3
+      },
+      {
+        "timestamp": 1770783107,
+        "equity": 3595554.934792,
+        "delta": -12.654,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Will Canada win the Men's Ice Hockey gold medal at the 2026 Winter Olympics?",
+        "usdc": 12.654
+      },
+      {
+        "timestamp": 1770860909,
+        "equity": 3562448.948421,
+        "delta": 2.0,
+        "type": "TRADE",
+        "side": "SELL",
+        "title": "Kings vs. Jazz: O/U 229.5",
+        "usdc": 2.0
+      },
+      {
+        "timestamp": 1771798248,
+        "equity": 3376107.433919,
+        "delta": -9.607843,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Celtics vs. Lakers",
+        "usdc": 9.607843
+      },
+      {
+        "timestamp": 1774545623,
+        "equity": 3392558.403676,
+        "delta": -42.567567,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Chicago White Sox vs. Milwaukee Brewers",
+        "usdc": 42.567567
+      },
+      {
+        "timestamp": 1776626080,
+        "equity": 3259279.853931,
+        "delta": -5943.84,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Magic vs. Pistons",
+        "usdc": 5943.84
+      },
+      {
+        "timestamp": 1777064362,
+        "equity": 3170242.181555,
+        "delta": -5.635384,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Lakers vs. Rockets",
+        "usdc": 5.635384
+      },
+      {
+        "timestamp": 1777145936,
+        "equity": 3217915.692479,
+        "delta": -236.9874,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Thunder vs. Suns",
+        "usdc": 236.9874
+      },
+      {
+        "timestamp": 1777146314,
+        "equity": 3183742.078637,
+        "delta": -28.540909,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Thunder vs. Suns",
+        "usdc": 28.540909
+      },
+      {
+        "timestamp": 1777154976,
+        "equity": 3066067.490601,
+        "delta": -1.9872,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Knicks vs. Hawks",
+        "usdc": 1.9872
+      },
+      {
+        "timestamp": 1778091126,
+        "equity": 3436777.978541,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091163,
+        "equity": 3436563.391947,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091179,
+        "equity": 3436447.345353,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091198,
+        "equity": 3436330.232092,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091236,
+        "equity": 3436200.465495,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091254,
+        "equity": 3436084.298902,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091271,
+        "equity": 3435970.165642,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091289,
+        "equity": 3435856.032382,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091303,
+        "equity": 3435742.665789,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091320,
+        "equity": 3435603.919196,
+        "delta": -0.666666,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 0.666666
+      },
+      {
+        "timestamp": 1778091389,
+        "equity": 3435239.239242,
+        "delta": -2.033333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 2.033333
+      },
+      {
+        "timestamp": 1778091471,
+        "equity": 3434918.639283,
+        "delta": -2.033333,
+        "type": "TRADE",
+        "side": "BUY",
+        "title": "Spread: FC Bayern M\u00fcnchen (-1.5)",
+        "usdc": 2.033333
+      },
+      {
+        "timestamp": 1781084208,
+        "equity": 3531323.304455,
+        "delta": 0.0,
+        "type": "REDEEM",
+        "side": null,
+        "title": "Will the Oklahoma City Thunder win the NBA Western Conference Finals?",
+        "usdc": 0.0
+      }
+    ]
+  },
+  "market_making": {
+    "score": 40,
+    "label": "hybrid_mm_directional",
+    "signals": [
+      "Fast round-trips (<2h) in 42% of two-sided markets",
+      "High-frequency cadence (median gap 18s)",
+      "Heavy concentration in Over/Under sports totals (sports MM niche)"
+    ],
+    "metrics": {
+      "both_sides_rate": 0.2592,
+      "fast_roundtrip_rate": 0.4222,
+      "spread_capture_rate": 0.4167,
+      "size_cv": 7.1682,
+      "median_gap_seconds": 18.0,
+      "outcome_counts": {
+        "Crawford": 456,
+        "Yes": 1692,
+        "Colts": 369,
+        "Texans": 697,
+        "No": 590,
+        "NYG": 2,
+        "Lions": 553,
+        "DET": 3,
+        "Cardinals": 169,
+        "Eagles": 1027,
+        "Bills": 186,
+        "Steelers": 564,
+        "Vikings": 304,
+        "Packers": 604,
+        "Cowboys": 568,
+        "Broncos": 1096,
+        "Dodgers": 46,
+        "Tigers": 3,
+        "Ankalaev": 9,
+        "Browns": 56,
+        "Jaguars": 402,
+        "Giants": 69,
+        "Ravens": 1079,
+        "Washington": 48,
+        "Houston": 122,
+        "Florida State": 1,
+        "UCF": 508,
+        "Texas": 614,
+        "Ole Miss": 662,
+        "Air Force": 5,
+        "Appalachian State": 11,
+        "Brewers": 17,
+        "Cubs": 12,
+        "Chiefs": 208,
+        "Chargers": 581,
+        "Saints": 233,
+        "49ers": 681,
+        "Bengals": 154,
+        "Louisville": 63,
+        "Titans": 151,
+        "Auburn": 209,
+        "Duke": 240,
+        "Clemson": 96,
+        "Vanderbilt": 33,
+        "Arizona": 36,
+        "Under": 2206,
+        "Akron": 6,
+        "Southern Miss": 39,
+        "Utah": 98,
+        "Cincinnati": 123,
+        "Kentucky": 4,
+        "Patriots": 2920,
+        "Jets": 381,
+        "Raiders": 34,
+        "Blue Jays": 1,
+        "Louisiana Tech": 20,
+        "Sharks": 55,
+        "Capitals": 117,
+        "Ducks": 57,
+        "Kings": 135,
+        "Flames": 58,
+        "Devils": 32,
+        "Northwestern": 14,
+        "Arkansas": 1,
+        "Texas A&M": 160,
+        "Over": 1966,
+        "Purdue Boilermakers": 28,
+        "Nebraska Cornhuskers": 5,
+        "Western Michigan": 7,
+        "Iowa State": 9,
+        "Baylor": 5,
+        "LSU": 144,
+        "Golden Knights": 44,
+        "Georgia Southern": 15,
+        "Dolphins": 185,
+        "Spurs": 67,
+        "Timberwolves": 133,
+        "Oilers": 98,
+        "Clippers": 2,
+        "Bruins": 52,
+        "Magic": 7,
+        "Commanders": 185,
+        "Rangers": 57,
+        "Lightning": 194,
+        "Blues": 18,
+        "Blackhawks": 1,
+        "Sabres": 23,
+        "Penn State": 35,
+        "North Carolina": 25,
+        "Sam Houston Bearkats": 1,
+        "Boise State": 67,
+        "Ohio State": 225,
+        "Florida Gators": 130,
+        "Virginia Tech": 20,
+        "Stars": 3,
+        "New Mexico": 11,
+        "UNLV": 3,
+        "Delaware Blue Hens": 1,
+        "Oregon State": 45,
+        "Tennessee": 52,
+        "Arkansas State": 7,
+        "Oklahoma": 96,
+        "Falcons": 216,
+        "Raptors": 14,
+        "Lakers": 101,
+        "Red Wings": 12,
+        "Seahawks": 7849,
+        "Flyers": 126,
+        "USC": 34,
+        "Tulane": 232,
+        "Memphis": 1,
+        "Kansas": 10,
+        "Panthers": 138,
+        "Virginia": 15,
+        "Charlotte 49ers": 1,
+        "Tulsa": 46,
+        "Senators": 5,
+        "Grizzlies": 3,
+        "Old Dominion": 1,
+        "Avalanche": 40,
+        "Predators": 8,
+        "Eubank Jr.": 17,
+        "Indiana": 2617,
+        "Wisconsin Badgers": 2,
+        "Texas State": 246,
+        "NC State": 9,
+        "Shevchenko": 3,
+        "Washington State": 68,
+        "Kennesaw State": 1,
+        "Rams": 2311,
+        "Islanders": 9,
+        "Warriors": 20,
+        "76ers": 12,
+        "Louisiana": 3,
+        "Georgia Tech": 49,
+        "Hurricanes": 258,
+        "Missouri": 10,
+        "Temple": 28,
+        "Toledo": 16,
+        "Canadiens": 1,
+        "Nevada Wolf Pack": 5,
+        "Kraken": 2,
+        "Fresno State": 204,
+        "Colorado": 1,
+        "Utah State": 38,
+        "Mississippi State": 90,
+        "Bears": 482,
+        "South Carolina": 16,
+        "UTSA Roadrunners": 60,
+        "Michigan": 69,
+        "West Virginia": 4,
+        "Oregon": 1224,
+        "Miami": 611,
+        "Troy": 30,
+        "New Mexico State": 2,
+        "Alabama": 202,
+        "TCU": 2,
+        "San Jose State": 1,
+        "LAR": 57,
+        "James Madison": 10,
+        "BYU": 39,
+        "Texas Tech Red Raiders": 8,
+        "Miami (OH)": 144,
+        "Maple Leafs": 21,
+        "Georgia": 225,
+        "Wild": 12,
+        "Buccaneers": 191,
+        "Navy": 74,
+        "Army": 65,
+        "Sharaf": 1,
+        "Costa": 1,
+        "Western Kentucky": 32,
+        "Ohio": 9,
+        "UNLV Runnin": 20,
+        "Hawaii": 25,
+        "California": 25,
+        "Cavaliers": 63,
+        "Knicks": 99,
+        "Mavericks": 3,
+        "Thunder": 245,
+        "Nuggets": 36,
+        "Florida International": 31,
+        "Central Michigan": 1,
+        "Minnesota": 1,
+        "Bucks": 6,
+        "North Texas": 7,
+        "San Diego State": 33,
+        "Pittsburgh": 15,
+        "Penguins": 9,
+        "Pistons": 18,
+        "Rockets": 157,
+        "Rice": 10,
+        "Arizona State": 6,
+        "SMU Mustangs": 73,
+        "Wake Forest": 48,
+        "Pacers": 25,
+        "Blue Jackets": 5,
+        "Nets": 6,
+        "Bulls": 46,
+        "Hornets": 8,
+        "Hawks": 3,
+        "Suns": 20,
+        "Louisville Cardinals": 12,
+        "Kansas City Roos": 1,
+        "Alcaraz": 172,
+        "Rybakina": 5,
+        "Texas A&M Aggies": 57,
+        "Heat": 1,
+        "Kentucky Wildcats": 15,
+        "Djokovic": 102,
+        "Trail Blazers": 158,
+        "Pelicans": 66,
+        "Jazz": 9,
+        "Hernandez": 23,
+        "St. Johns Red Storm": 5,
+        "Houston Astros": 5,
+        "Milwaukee Brewers": 81,
+        "Tampa Bay Rays": 9,
+        "Celtics": 10,
+        "Philadelphia Phillies": 8,
+        "Athletics": 1,
+        "FC Bayern M\u00fcnchen": 1422
+      }
+    }
+  },
+  "timing": {
+    "hour_utc": {
+      "0": 4615,
+      "1": 1482,
+      "2": 558,
+      "3": 684,
+      "4": 571,
+      "5": 358,
+      "6": 454,
+      "7": 564,
+      "8": 423,
+      "9": 369,
+      "10": 437,
+      "11": 694,
+      "12": 525,
+      "13": 781,
+      "14": 1692,
+      "15": 2579,
+      "16": 3173,
+      "17": 4440,
+      "18": 3610,
+      "19": 4127,
+      "20": 4724,
+      "21": 4334,
+      "22": 3171,
+      "23": 2961
+    },
+    "dow_utc": {
+      "0": 4776,
+      "1": 2159,
+      "2": 4865,
+      "3": 4869,
+      "4": 5715,
+      "5": 8699,
+      "6": 16243
+    },
+    "peak_hours": [
+      20,
+      0,
+      17,
+      21,
+      19
+    ],
+    "peak_dows": [
+      6,
+      5,
+      4
+    ]
+  },
+  "sizing": {
+    "n": 47326,
+    "mean_usdc": 941.6215,
+    "median_usdc": 12.24,
+    "p10_usdc": 1.0408,
+    "p90_usdc": 662.7907,
+    "max_usdc": 394800.0,
+    "mean_shares": 1797.2278,
+    "median_shares": 24.76
+  },
+  "categories": {
+    "pnl": {
+      "sports_match": 2352474.3389,
+      "sports_totals": 509347.3214,
+      "other": 213334.1041
+    },
+    "counts": {
+      "sports_match": 940,
+      "other": 15,
+      "sports_totals": 108
+    }
+  },
+  "top_wins": [
+    {
+      "title": "Seahawks vs. Patriots",
+      "pnl": 862149.4941,
+      "buy_usdc": 2150359.4474,
+      "sell_usdc": 344905.4686,
+      "n_buys": 3350,
+      "n_sells": 876,
+      "hold_seconds": 1148112,
+      "avg_buy": 0.5745,
+      "avg_sell": 0.3239
+    },
+    {
+      "title": "Boxing: Canelo \u00c1lvarez vs. Terence Crawford ",
+      "pnl": 598139.4722,
+      "buy_usdc": 366811.0139,
+      "sell_usdc": 0.0,
+      "n_buys": 456,
+      "n_sells": 0,
+      "hold_seconds": 113931,
+      "avg_buy": 0.3802,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Lions (-3.5)",
+      "pnl": 332851.0764,
+      "buy_usdc": 361754.0643,
+      "sell_usdc": 0.0,
+      "n_buys": 39,
+      "n_sells": 0,
+      "hold_seconds": 6722,
+      "avg_buy": 0.4925,
+      "avg_sell": null
+    },
+    {
+      "title": "Chiefs vs. Bills",
+      "pnl": 318948.0,
+      "buy_usdc": 255046.0,
+      "sell_usdc": 4444.0,
+      "n_buys": 5,
+      "n_sells": 1,
+      "hold_seconds": 4188,
+      "avg_buy": 0.44,
+      "avg_sell": 0.44
+    },
+    {
+      "title": "Chargers vs. Cowboys",
+      "pnl": 310451.5039,
+      "buy_usdc": 569146.5156,
+      "sell_usdc": 51174.3168,
+      "n_buys": 105,
+      "n_sells": 1,
+      "hold_seconds": 13220,
+      "avg_buy": 0.4833,
+      "avg_sell": 0.48
+    },
+    {
+      "title": "Spread: Indiana (-7.5)",
+      "pnl": 302855.9136,
+      "buy_usdc": 292880.7459,
+      "sell_usdc": 47.561,
+      "n_buys": 439,
+      "n_sells": 2,
+      "hold_seconds": 102068,
+      "avg_buy": 0.4895,
+      "avg_sell": 0.4682
+    },
+    {
+      "title": "Oregon vs. Texas Tech Red Raiders",
+      "pnl": 277765.3674,
+      "buy_usdc": 287388.7797,
+      "sell_usdc": 0.0,
+      "n_buys": 69,
+      "n_sells": 0,
+      "hold_seconds": 6572,
+      "avg_buy": 0.4904,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Seahawks (-1.5)",
+      "pnl": 270996.1989,
+      "buy_usdc": 269414.1,
+      "sell_usdc": 0.0,
+      "n_buys": 11,
+      "n_sells": 0,
+      "hold_seconds": 7128,
+      "avg_buy": 0.4982,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Seahawks (-6.5)",
+      "pnl": 262355.6498,
+      "buy_usdc": 256852.0577,
+      "sell_usdc": 0.0,
+      "n_buys": 43,
+      "n_sells": 0,
+      "hold_seconds": 6792,
+      "avg_buy": 0.4947,
+      "avg_sell": null
+    },
+    {
+      "title": "Spread: Indiana (-3.5)",
+      "pnl": 245267.7636,
+      "buy_usdc": 296633.0425,
+      "sell_usdc": 0.0,
+      "n_buys": 101,
+      "n_sells": 0,
+      "hold_seconds": 34842,
+      "avg_buy": 0.4817,
+      "avg_sell": null
+    }
+  ],
+  "top_losses": [
+    {
+      "title": "Spread: Seahawks (-2.5)",
+      "pnl": -777467.8465,
+      "buy_usdc": 789100.4642,
+      "sell_usdc": 0.0,
+      "n_buys": 538,
+      "n_sells": 0,
+      "hold_seconds": 349030
+    },
+    {
+      "title": "Spread: Spurs (-9.5)",
+      "pnl": -690130.98,
+      "buy_usdc": 30906.0,
+      "sell_usdc": 0.0,
+      "n_buys": 1,
+      "n_sells": 0,
+      "hold_seconds": 0
+    },
+    {
+      "title": "Spread: Rams (-10.5)",
+      "pnl": -666476.2268,
+      "buy_usdc": 666866.4742,
+      "sell_usdc": 375.9718,
+      "n_buys": 59,
+      "n_sells": 1,
+      "hold_seconds": 19382
+    },
+    {
+      "title": "Miami vs. Ohio State",
+      "pnl": -534296.9855,
+      "buy_usdc": 534308.6713,
+      "sell_usdc": 0.0,
+      "n_buys": 79,
+      "n_sells": 0,
+      "hold_seconds": 6032
+    },
+    {
+      "title": "Spread: Texas A&M (-3.5)",
+      "pnl": -288363.7706,
+      "buy_usdc": 288366.9656,
+      "sell_usdc": 0.0,
+      "n_buys": 35,
+      "n_sells": 0,
+      "hold_seconds": 4286
+    },
+    {
+      "title": "Ole Miss vs. Georgia",
+      "pnl": -261192.2245,
+      "buy_usdc": 319211.212,
+      "sell_usdc": 0.0,
+      "n_buys": 47,
+      "n_sells": 0,
+      "hold_seconds": 21920
+    },
+    {
+      "title": "Houston vs. UCF",
+      "pnl": -248787.2931,
+      "buy_usdc": 248804.0387,
+      "sell_usdc": 0.0,
+      "n_buys": 501,
+      "n_sells": 0,
+      "hold_seconds": 28448
+    },
+    {
+      "title": "Packers vs. Lions",
+      "pnl": -247101.7881,
+      "buy_usdc": 313024.6485,
+      "sell_usdc": 0.0,
+      "n_buys": 84,
+      "n_sells": 0,
+      "hold_seconds": 111622
+    },
+    {
+      "title": "Spread: Eagles (-6.5)",
+      "pnl": -241870.204,
+      "buy_usdc": 245062.0441,
+      "sell_usdc": 0.0,
+      "n_buys": 812,
+      "n_sells": 0,
+      "hold_seconds": 95262
+    },
+    {
+      "title": "Spread: Oregon (-21.5)",
+      "pnl": -203674.3721,
+      "buy_usdc": 203699.4835,
+      "sell_usdc": 0.0,
+      "n_buys": 128,
+      "n_sells": 0,
+      "hold_seconds": 14266
+    }
+  ],
+  "strategy_vignettes": [
+    {
+      "title": "Spread: Seahawks (-4.5)",
+      "avg_buy": 0.4983,
+      "avg_sell": 0.51,
+      "spread": 0.0117,
+      "pnl": 201964.3054,
+      "n_buys": 935,
+      "n_sells": 91,
+      "hold_seconds": 1145634,
+      "both_sides": true
+    },
+    {
+      "title": "Texas State vs. Southern Miss",
+      "avg_buy": 0.3985,
+      "avg_sell": 0.4045,
+      "spread": 0.006,
+      "pnl": 171874.3296,
+      "n_buys": 218,
+      "n_sells": 27,
+      "hold_seconds": 19478,
+      "both_sides": false
+    },
+    {
+      "title": "Spread: Seahawks (-5.5)",
+      "avg_buy": 0.4925,
+      "avg_sell": 0.5199,
+      "spread": 0.0274,
+      "pnl": 161113.4103,
+      "n_buys": 1208,
+      "n_sells": 79,
+      "hold_seconds": 1148738,
+      "both_sides": true
+    },
+    {
+      "title": "North Carolina vs. Syracuse",
+      "avg_buy": 0.4733,
+      "avg_sell": 0.4791,
+      "spread": 0.0058,
+      "pnl": 133817.353,
+      "n_buys": 17,
+      "n_sells": 7,
+      "hold_seconds": 8614,
+      "both_sides": false
+    },
+    {
+      "title": "Spread: Patriots (-13.5)",
+      "avg_buy": 0.4855,
+      "avg_sell": 0.49,
+      "spread": 0.0045,
+      "pnl": 107620.7192,
+      "n_buys": 610,
+      "n_sells": 3,
+      "hold_seconds": 14396,
+      "both_sides": true
+    },
+    {
+      "title": "Spread: Patriots (-3.5)",
+      "avg_buy": 0.4898,
+      "avg_sell": 0.51,
+      "spread": 0.0202,
+      "pnl": 69862.7993,
+      "n_buys": 536,
+      "n_sells": 7,
+      "hold_seconds": 29790,
+      "both_sides": true
+    },
+    {
+      "title": "Will USA win the 2025 Ryder Cup?",
+      "avg_buy": 0.42,
+      "avg_sell": 0.69,
+      "spread": 0.27,
+      "pnl": 63670.0676,
+      "n_buys": 240,
+      "n_sells": 79,
+      "hold_seconds": 137232,
+      "both_sides": false
+    },
+    {
+      "title": "Will Arsenal win on 2025-09-21?",
+      "avg_buy": 0.5057,
+      "avg_sell": 0.52,
+      "spread": 0.0143,
+      "pnl": 55885.6804,
+      "n_buys": 6,
+      "n_sells": 2,
+      "hold_seconds": 3300,
+      "both_sides": false
+    },
+    {
+      "title": "Spread: 49ers (-3.5)",
+      "avg_buy": 0.501,
+      "avg_sell": 0.51,
+      "spread": 0.009,
+      "pnl": 44677.6476,
+      "n_buys": 24,
+      "n_sells": 2,
+      "hold_seconds": 23042,
+      "both_sides": true
+    },
+    {
+      "title": "Patriots vs. Broncos",
+      "avg_buy": 0.5164,
+      "avg_sell": 0.6599,
+      "spread": 0.1435,
+      "pnl": 37956.8205,
+      "n_buys": 428,
+      "n_sells": 3,
+      "hold_seconds": 538524,
+      "both_sides": true
+    }
+  ]
+}
