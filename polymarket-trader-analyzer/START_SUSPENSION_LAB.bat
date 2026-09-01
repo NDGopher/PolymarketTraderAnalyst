@@ -57,7 +57,7 @@ if not exist ".env" (
 echo [3/3] Launching Suspension Edge Lab...
 echo.
 set "PYTHONPATH=%CD%"
-".venv\Scripts\python.exe" -m suspension_lab.cli run
+".venv\Scripts\python.exe" -m suspension_lab.cli
 set EXITCODE=%ERRORLEVEL%
 if not %EXITCODE%==0 (
   echo.

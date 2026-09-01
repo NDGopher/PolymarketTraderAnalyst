@@ -7,18 +7,24 @@ import typer
 
 from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
 from suspension_lab.env_loader import load_project_env, project_root
-from suspension_lab.ui import run_app
+
+# Load .env before Typer parses anything (LAB_TICKERS, LAB_GAME, Kalshi keys)
+load_project_env()
 
 app = typer.Typer(add_completion=False, no_args_is_help=True, help="Manual suspension edge lab")
 
 
-@app.command("run")
-def run_lab(
-    tickers: str = typer.Argument(
+@app.callback(invoke_without_command=True)
+def main(
+    ctx: typer.Context,
+    tickers: str = typer.Option(
         "",
+        "--tickers",
+        "-t",
+        envvar="LAB_TICKERS",
         help="Comma-separated Kalshi tickers. Or set LAB_TICKERS in .env",
     ),
-    game: str = typer.Option("", "--game", "-g", help="Match label, e.g. Parma-Cremonese"),
+    game: str = typer.Option("", "--game", "-g", envvar="LAB_GAME", help="Match label"),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
     rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; poll REST orderbook"),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms", help="Book sample interval in ms"),
@@ -29,21 +35,32 @@ def run_lab(
     ),
 ) -> None:
     """Launch the manual B/F click logger with live Kalshi orderbooks."""
-    load_project_env()
-    ticker_str = tickers or os.environ.get("LAB_TICKERS", "")
+    if ctx.invoked_subcommand is not None:
+        return
+
+    ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
     if not ticker_str:
         typer.echo(
             "No tickers provided.\n"
-            "  Option A: add LAB_TICKERS=TICKER1,TICKER2 to your .env\n"
-            "  Option B: suspension-lab run TICKER1,TICKER2 --game \"My Game\"",
+            "  Add LAB_TICKERS=TICKER1,TICKER2 to your .env file\n"
+            "  Or: python -m suspension_lab.cli --tickers TICKER1,TICKER2",
+            err=True,
+        )
+        raise typer.Exit(1)
+
+    if ticker_str.lower() == "run":
+        typer.echo(
+            "Tickers was set to 'run' by mistake. Set LAB_TICKERS in .env to your Kalshi tickers.",
             err=True,
         )
         raise typer.Exit(1)
 
     ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()]
+    game_label = game or os.environ.get("LAB_GAME", "")
+
     config = LabConfig.from_env(
         ticker_list,
-        game_label=game,
+        game_label=game_label,
         demo=demo,
         use_ws=not rest_only,
         poll_ms=poll_ms,
@@ -62,6 +79,9 @@ def run_lab(
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
     typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'REST polling'}")
+
+    from suspension_lab.ui import run_app
+
     run_app(config)
 
 

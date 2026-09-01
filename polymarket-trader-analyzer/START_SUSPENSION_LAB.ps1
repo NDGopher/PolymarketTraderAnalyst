@@ -40,7 +40,7 @@ if (-not (Test-Path ".env")) {
 Write-Host "[3/3] Launching Suspension Edge Lab..."
 Write-Host ""
 $env:PYTHONPATH = $PWD.Path
-& .\.venv\Scripts\python.exe -m suspension_lab.cli run
+& .\.venv\Scripts\python.exe -m suspension_lab.cli
 $exitCode = $LASTEXITCODE
 if ($exitCode -ne 0) {
     Write-Host ""
