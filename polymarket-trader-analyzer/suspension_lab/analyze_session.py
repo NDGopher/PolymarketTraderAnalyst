@@ -389,3 +389,15 @@ def run_analysis(session_dir: Path) -> Path:
     out = session_dir / "analysis.md"
     out.write_text(report, encoding="utf-8")
     return out
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) < 2:
+        print("Usage: python -m suspension_lab.analyze_session <session_folder>")
+        raise SystemExit(1)
+    folder = Path(sys.argv[1]).resolve()
+    print(analyze_session(folder))
+    out = run_analysis(folder)
+    print(f"\nSaved: {out}")

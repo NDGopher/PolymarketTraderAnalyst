@@ -38,6 +38,27 @@ class KalshiBookFeed:
         self._thread: threading.Thread | None = None
         self._loop: asyncio.AbstractEventLoop | None = None
         self._ws_url_index = 0
+        self._subscribe_id = 1
+        self._pending_subscribe: list[str] = []
+
+    def add_ticker(self, ticker: str) -> bool:
+        ticker = ticker.strip()
+        if not ticker or ticker in self.books:
+            return False
+        self.books[ticker] = OrderBook(ticker)
+        if ticker not in self.config.tickers:
+            self.config.tickers.append(ticker)
+        self._pending_subscribe.append(ticker)
+        session = requests.Session()
+        session.headers.update({"User-Agent": "suspension-lab/0.1"})
+        self._fetch_rest_snapshot(session, ticker)
+        self._emit_status(f"Added ticker {ticker}")
+        return True
+
+    def pending_subscribes(self) -> list[str]:
+        pending = list(self._pending_subscribe)
+        self._pending_subscribe.clear()
+        return pending
 
     def start(self) -> None:
         if self._thread and self._thread.is_alive():
@@ -162,13 +183,14 @@ class KalshiBookFeed:
                         await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
 
                     sub = {
-                        "id": 1,
+                        "id": self._subscribe_id,
                         "cmd": "subscribe",
                         "params": {
                             "channels": ["orderbook_delta"],
                             "market_tickers": self.config.tickers,
                         },
                     }
+                    self._subscribe_id += 1
                     await ws.send(json.dumps(sub))
 
                     # Kalshi seq is per subscription stream (sid), NOT per ticker
@@ -215,6 +237,23 @@ class KalshiBookFeed:
                         if now_ms - last_emit_ms[ticker] >= emit_gap_ms:
                             last_emit_ms[ticker] = now_ms
                             self._emit_book(ticker)
+
+                        pending = self.pending_subscribes()
+                        if pending:
+                            self._subscribe_id += 1
+                            await ws.send(
+                                json.dumps(
+                                    {
+                                        "id": self._subscribe_id,
+                                        "cmd": "subscribe",
+                                        "params": {
+                                            "channels": ["orderbook_delta"],
+                                            "market_tickers": pending,
+                                        },
+                                    }
+                                )
+                            )
+                            self._emit_status(f"WS subscribe added: {', '.join(pending)}")
 
             except Exception as exc:  # noqa: BLE001
                 if self._stop.is_set():

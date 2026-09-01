@@ -33,21 +33,19 @@ def main(
     load_project_env()
 
     ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
-    if not ticker_str:
-        typer.echo(env_status_message(), err=True)
-        typer.echo(
-            "\nAdd to your .env (same folder as START_SUSPENSION_LAB.ps1):\n"
-            "  LAB_TICKERS=TICKER1,TICKER2\n"
-            "  LAB_GAME=Your-Game-Name",
-            err=True,
-        )
-        raise typer.Exit(1)
+    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()] if ticker_str else []
 
     if ticker_str.lower() == "run":
         typer.echo("LAB_TICKERS must be Kalshi tickers, not the word 'run'.", err=True)
         raise typer.Exit(1)
 
-    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()]
+    if not ticker_list:
+        typer.echo(
+            "No LAB_TICKERS in .env — starting with empty list. "
+            "Add tickers in the UI while the session runs.",
+            err=True,
+        )
+
     game_label = (game or os.environ.get("LAB_GAME", "")).strip()
 
     config = LabConfig.from_env(
@@ -68,7 +66,7 @@ def main(
 
     typer.echo(env_status_message())
     typer.echo(f"Project: {project_root()}")
-    typer.echo(f"Tickers: {', '.join(ticker_list)}")
+    typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(add in UI)'}")
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
     typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'REST polling'}")
