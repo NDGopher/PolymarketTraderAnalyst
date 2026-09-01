@@ -13,6 +13,9 @@ dependencies = [
   "rich>=13.7",
   "typer>=0.12",
   "flask>=3.0",
+  "websockets>=12.0",
+  "cryptography>=42.0",
+  "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
@@ -20,9 +23,12 @@ dev = ["pytest>=8.0"]
 
 [project.scripts]
 polyanalyst = "polyanalyst.cli:app"
+suspension-lab = "suspension_lab.cli:app"
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "."]
+include = ["polyanalyst*", "suspension_lab*"]
+exclude = ["tests*", "samples*", "data*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

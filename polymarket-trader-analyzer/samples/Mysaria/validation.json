@@ -1,0 +1,95 @@
+{
+  "ok": false,
+  "all_checks_passed": false,
+  "primary_source": "polymarket_leaderboard_ALL",
+  "checks": [
+    {
+      "source": "polymarket_leaderboard_ALL",
+      "metric": "pnl",
+      "reference": 635298.6729157614,
+      "ours": -390114.7655,
+      "ours_field": "cashflow_realized",
+      "diff": -1025413.4384,
+      "match": false,
+      "volume_reference": 7379689.243795001
+    },
+    {
+      "source": "polydata",
+      "metric": "realized_pnl",
+      "reference": 497985.09,
+      "ours": -390114.7655,
+      "ours_field": "cashflow_realized",
+      "diff": -888099.8555,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "n_trades",
+      "reference": 95230,
+      "ours": 266027,
+      "diff": 170797,
+      "match": false
+    },
+    {
+      "source": "polydata",
+      "metric": "win_rate",
+      "reference": 0.7458,
+      "ours": 0.2834,
+      "diff": -0.4624,
+      "match": false
+    },
+    {
+      "source": "internal",
+      "metric": "cashflow_vs_closed",
+      "reference": -611424.9602,
+      "ours": -390114.7655,
+      "diff": 221310.1947,
+      "match": false,
+      "note": "Closed-position sum and activity cashflow use different accounting; large gaps deserve review."
+    }
+  ],
+  "ours": {
+    "cashflow_realized": -390114.7655,
+    "cashflow_core": -390557.0797,
+    "closed_positions_sum": -611424.9602,
+    "trades": 266027,
+    "win_rate": 0.2834
+  },
+  "polydata": {
+    "source": "https://polydata.pro/traders/Mysaria",
+    "raw_meta": {
+      "net_pnl": 497985.09,
+      "pos_realized_pnl": 497985.09,
+      "n_trades": 95230.0,
+      "total_buy": 1908095.72,
+      "total_sell": 403294.24,
+      "total_redeem": 0.0,
+      "win_rate": 0.7458,
+      "profit_factor": 1.03,
+      "n_markets": 6553.0,
+      "n_buys": 47349.0,
+      "n_sells": 47881.0,
+      "n_redeems": 0.0
+    },
+    "headline_pnl": 497985.0,
+    "win_rate_pct": 75,
+    "smart_score": 40,
+    "n_trades": 95230,
+    "realized_pnl": 497985.09
+  },
+  "leaderboard": {
+    "rank": "323",
+    "proxyWallet": "0xe40aaa5ce1dac0b7dc24c9d0284f27e17c3fe4a2",
+    "userName": "Mysaria",
+    "xUsername": "",
+    "verifiedBadge": false,
+    "vol": 7379689.243795001,
+    "pnl": 635298.6729157614,
+    "profileImage": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-9454294-b41426ea-b9d8-4cd3-819f-b8a1419fa95e.gif"
+  },
+  "notes": [
+    "Leaderboard ALL is the primary PnL validation target.",
+    "PolyData DRIFT on trade count/win rate is expected (different aggregation).",
+    "Spot-checks showed 0 missing unique fills vs Data API day samples."
+  ]
+}
