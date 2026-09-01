@@ -24,6 +24,7 @@ dev = ["pytest>=8.0"]
 [project.scripts]
 polyanalyst = "polyanalyst.cli:app"
 suspension-lab = "suspension_lab.cli:main"
+suspension-analyze = "suspension_lab.analyze_cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src", "."]
