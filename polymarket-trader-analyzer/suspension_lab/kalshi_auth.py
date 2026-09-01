@@ -7,12 +7,21 @@ from pathlib import Path
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 
-from suspension_lab.config import WS_PATH
+from suspension_lab.config import LabConfig, WS_PATH
 
 
 def load_private_key(path: str | Path):
     pem = Path(path).read_bytes()
     return serialization.load_pem_private_key(pem, password=None)
+
+
+def load_private_key_from_config(config: LabConfig):
+    if config.private_key_pem:
+        pem = config.private_key_pem.encode("utf-8")
+        return serialization.load_pem_private_key(pem, password=None)
+    if config.private_key_path:
+        return load_private_key(config.private_key_path)
+    raise ValueError("Kalshi private key not configured")
 
 
 def sign_message(private_key, message: str) -> str:

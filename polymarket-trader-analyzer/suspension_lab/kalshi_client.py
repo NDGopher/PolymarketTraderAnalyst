@@ -12,7 +12,7 @@ import websockets
 from websockets.exceptions import ConnectionClosed
 
 from suspension_lab.config import LabConfig
-from suspension_lab.kalshi_auth import load_private_key, ws_auth_headers
+from suspension_lab.kalshi_auth import load_private_key_from_config, ws_auth_headers
 from suspension_lab.orderbook import OrderBook
 
 
@@ -97,7 +97,7 @@ class KalshiBookFeed:
             await asyncio.sleep(interval)
 
     async def _ws_loop(self) -> None:
-        private_key = load_private_key(self.config.private_key_path)
+        private_key = load_private_key_from_config(self.config)
         attempt = 0
         while not self._stop.is_set():
             try:

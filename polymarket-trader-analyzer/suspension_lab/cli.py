@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import typer
 
 from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
+from suspension_lab.env_loader import load_project_env, project_root
 from suspension_lab.ui import run_app
 
 app = typer.Typer(add_completion=False, no_args_is_help=True, help="Manual suspension edge lab")
@@ -12,10 +14,13 @@ app = typer.Typer(add_completion=False, no_args_is_help=True, help="Manual suspe
 
 @app.command("run")
 def run_lab(
-    tickers: str = typer.Argument(..., help="Comma-separated Kalshi tickers (O/U 2.5, 3.5, 4.5, …)"),
-    game: str = typer.Option("", "--game", "-g", help="Label for this match, e.g. Parma-Cremonese"),
+    tickers: str = typer.Argument(
+        "",
+        help="Comma-separated Kalshi tickers. Or set LAB_TICKERS in .env",
+    ),
+    game: str = typer.Option("", "--game", "-g", help="Match label, e.g. Parma-Cremonese"),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
-    rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; poll REST orderbook (no auth needed)"),
+    rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; poll REST orderbook"),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms", help="Book sample interval in ms"),
     output_dir: Path = typer.Option(
         Path("data/suspension_lab/sessions"),
@@ -24,7 +29,18 @@ def run_lab(
     ),
 ) -> None:
     """Launch the manual B/F click logger with live Kalshi orderbooks."""
-    ticker_list = [t.strip() for t in tickers.split(",") if t.strip()]
+    load_project_env()
+    ticker_str = tickers or os.environ.get("LAB_TICKERS", "")
+    if not ticker_str:
+        typer.echo(
+            "No tickers provided.\n"
+            "  Option A: add LAB_TICKERS=TICKER1,TICKER2 to your .env\n"
+            "  Option B: suspension-lab run TICKER1,TICKER2 --game \"My Game\"",
+            err=True,
+        )
+        raise typer.Exit(1)
+
+    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()]
     config = LabConfig.from_env(
         ticker_list,
         game_label=game,
@@ -35,13 +51,17 @@ def run_lab(
     )
     if not config.has_ws_auth and not rest_only:
         typer.echo(
-            "No KALSHI_API_KEY_ID + KALSHI_PRIVATE_KEY_PATH — using REST polling (200ms). "
-            "Set env vars for WebSocket deltas.",
+            "No Kalshi credentials in .env — using REST polling (~200ms).\n"
+            "Add KALSHI_KEY_ID + KALSHI_PRIVATE_KEY to .env for WebSocket.",
             err=True,
         )
         config.use_ws = False
+
+    typer.echo(f"Project: {project_root()}")
     typer.echo(f"Tickers: {', '.join(ticker_list)}")
+    typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
+    typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'REST polling'}")
     run_app(config)
 
 
