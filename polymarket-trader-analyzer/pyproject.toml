@@ -25,7 +25,9 @@ polyanalyst = "polyanalyst.cli:app"
 suspension-lab = "suspension_lab.cli:app"
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "."]
+include = ["polyanalyst*", "suspension_lab*"]
+exclude = ["tests*", "samples*", "data*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
