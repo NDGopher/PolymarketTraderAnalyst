@@ -35,9 +35,13 @@ GOAL_SIGNAL_COOLDOWN_MS = 45_000
 GOAL_HIGHLIGHT_SECONDS = 45
 GOAL_ASK_LOOKBACK_MS = 2_500  # ask-led-bid: ask moved in prior ~2.5s
 GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS = 5  # allow small bid drift while ask leads
-GOAL_SPREAD_BLOWOUT_CENTS = 12  # tight book → wide = books pulled (goal/suspension)
+GOAL_SPREAD_BLOWOUT_CENTS = 12  # tight book -> wide = books pulled (goal/suspension)
 GOAL_MIN_BLOWOUT_JUMP_CENTS = 6
-GOAL_DELAYED_WINDOW_MS = 4_000  # grind over ~4s is red-card / delayed state, not a goal
+# +10c within this window is a GOAL only if ask confirms (+3c) or spread blows.
+GOAL_FAST_WINDOW_MS = 4_000
+# delayed_grind only for walks that take longer than ~6-8s (or no ask/blowout).
+GOAL_DELAYED_WINDOW_MS = 8_000
+GOAL_DELAYED_MIN_MS = 6_500
 BOND_HOLD_BID_CENTS = 88  # bid here -> hold to 99 / resolution, not +7 scalp
 VAR_REVERT_CENTS = 10  # peak-to-trough drop triggers VAR/cancelled alert
 VAR_REVERT_WINDOW_MS = 120_000
