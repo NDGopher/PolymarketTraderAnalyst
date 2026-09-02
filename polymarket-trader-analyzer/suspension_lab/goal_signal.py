@@ -5,6 +5,7 @@ from collections import deque
 from dataclasses import dataclass
 from decimal import Decimal
 
+from suspension_lab.exit_engine import is_bond_spoof_bid
 from suspension_lab.config import (
     BOND_MID_THRESHOLD,
     BOND_HOLD_BID_CENTS,
@@ -63,6 +64,20 @@ class VarRevertAlert:
     current_bid: Decimal
     drop_cents: int
     seconds_since_signal: float
+    is_spoof: bool = False  # lowball bid on bonded market; ask stayed high
+
+
+@dataclass
+class SpoofBidNotice:
+    """Thin lowball bid on a bonded market — not VAR, game still live."""
+
+    ticker: str
+    ts_ms: int
+    peak_bid: Decimal
+    current_bid: Decimal
+    current_ask: Decimal
+    bid_qty: Decimal
+    drop_cents: int
 
 
 class GoalSignalDetector:
@@ -74,6 +89,7 @@ class GoalSignalDetector:
         self._last_signal_ms: dict[str, int] = {}
         self._signal_peak_bid: dict[str, tuple[int, Decimal]] = {}
         self._primed: set[str] = set()
+        self._spoof_active: set[str] = set()
 
     def _history_window(self, ticker: str, now_ms: int) -> list[tuple[int, Decimal | None, Decimal | None]]:
         hist = self._history.get(ticker, deque())
@@ -123,7 +139,9 @@ class GoalSignalDetector:
             return "hold_bond"
         return "var_watch" if int(new_bid * 100) >= 70 else "scalp"
 
-    def evaluate(self, ticker: str, book: OrderBook) -> GoalSignal | VarRevertAlert | None:
+    def evaluate(
+        self, ticker: str, book: OrderBook
+    ) -> GoalSignal | VarRevertAlert | SpoofBidNotice | None:
         levels = book.top_levels()
         new_bid = _d(levels.get("yes_bid"))
         new_ask = _d(levels.get("yes_ask"))
@@ -136,7 +154,7 @@ class GoalSignalDetector:
         hist.append((ts_ms, new_bid, new_ask))
         self._prev[ticker] = (new_bid, new_ask, bid_qty)
 
-        var_alert = self._check_var_revert(ticker, new_bid, ts_ms)
+        var_alert = self._check_var_revert(ticker, new_bid, new_ask, bid_qty, ts_ms)
         if var_alert:
             return var_alert
 
@@ -169,6 +187,7 @@ class GoalSignalDetector:
 
         self._last_signal_ms[ticker] = ts_ms
         self._signal_peak_bid[ticker] = (ts_ms, new_bid)
+        self._spoof_active.discard(ticker)
         exit_mode = self._exit_mode(new_bid, new_ask, levels)
         reason = "bid_jump_with_size_and_ask_confirm"
         if prev_ask and new_ask and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100:
@@ -188,8 +207,13 @@ class GoalSignalDetector:
         )
 
     def _check_var_revert(
-        self, ticker: str, new_bid: Decimal | None, ts_ms: int
-    ) -> VarRevertAlert | None:
+        self,
+        ticker: str,
+        new_bid: Decimal | None,
+        new_ask: Decimal | None,
+        bid_qty: Decimal,
+        ts_ms: int,
+    ) -> VarRevertAlert | SpoofBidNotice | None:
         peak_info = self._signal_peak_bid.get(ticker)
         if not peak_info or new_bid is None:
             return None
@@ -201,14 +225,42 @@ class GoalSignalDetector:
             self._signal_peak_bid[ticker] = (signal_ms, new_bid)
             return None
         drop = int(round((peak_bid - new_bid) * 100))
-        if drop >= VAR_REVERT_CENTS:
-            self._signal_peak_bid.pop(ticker, None)
-            return VarRevertAlert(
-                ticker=ticker,
-                ts_ms=ts_ms,
-                peak_bid=peak_bid,
-                current_bid=new_bid,
-                drop_cents=drop,
-                seconds_since_signal=(ts_ms - signal_ms) / 1000.0,
-            )
-        return None
+        if drop < VAR_REVERT_CENTS:
+            return None
+
+        _, prev_ask, _ = self._prev.get(ticker, (None, None, None))
+        ask_ref = new_ask if new_ask is not None else prev_ask
+        peak_cents = int(round(peak_bid * 100))
+        bid_cents = int(round(new_bid * 100))
+        ask_cents = int(round(ask_ref * 100)) if ask_ref is not None else None
+
+        if is_bond_spoof_bid(
+            peak_cents=peak_cents,
+            current_bid_cents=bid_cents,
+            current_ask_cents=ask_cents,
+            bid_qty=float(bid_qty),
+        ):
+            if ticker not in self._spoof_active:
+                self._spoof_active.add(ticker)
+                return SpoofBidNotice(
+                    ticker=ticker,
+                    ts_ms=ts_ms,
+                    peak_bid=peak_bid,
+                    current_bid=new_bid,
+                    current_ask=ask_ref or new_bid,
+                    bid_qty=bid_qty,
+                    drop_cents=drop,
+                )
+            return None
+
+        self._spoof_active.discard(ticker)
+        self._signal_peak_bid.pop(ticker, None)
+        return VarRevertAlert(
+            ticker=ticker,
+            ts_ms=ts_ms,
+            peak_bid=peak_bid,
+            current_bid=new_bid,
+            drop_cents=drop,
+            seconds_since_signal=(ts_ms - signal_ms) / 1000.0,
+            is_spoof=False,
+        )

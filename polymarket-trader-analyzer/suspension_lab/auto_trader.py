@@ -119,7 +119,14 @@ class PaperAutoTrader:
             self._write_row(pos)
         return pos
 
-    def on_book(self, ticker: str, bid_cents: int | None) -> PaperPosition | None:
+    def on_book(
+        self,
+        ticker: str,
+        bid_cents: int | None,
+        *,
+        ask_cents: int | None = None,
+        bid_qty: float = 0,
+    ) -> PaperPosition | None:
         if bid_cents is None:
             return None
         pos = self._positions.get(ticker)
@@ -136,6 +143,8 @@ class PaperAutoTrader:
             current_bid_cents=bid_cents,
             peak_cents=pos.peak_cents,
             seconds_held=held,
+            current_ask_cents=ask_cents,
+            bid_qty=bid_qty,
         )
 
         if decision.action == "exit":
