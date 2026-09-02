@@ -84,6 +84,8 @@ class TapeEngine:
                 "occurrence_time": g.occurrence_time,
                 "tickers": g.get_tickers(),
                 "volume_24h": g.total_24h_volume,
+                "totals": g.totals_summary(),
+                "totals_repick": g.totals_repick,
             }
             for g in self.games
         ]

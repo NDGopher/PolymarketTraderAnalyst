@@ -15,6 +15,7 @@ from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
 from suspension_lab.env_loader import env_status_message, load_project_env, project_root
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.soccer_discovery import (
+    apply_live_totals,
     discover_soccer_games,
     format_discovery_log,
     format_slate_digest,
@@ -66,7 +67,7 @@ def run_paper_logger(
     poll_ms: int,
     output_dir: Path,
     duration_seconds: float,
-    rediscover_seconds: float = 300.0,
+    rediscover_seconds: float = 60.0,
 ) -> Path:
     config = LabConfig.from_env(
         tickers,
@@ -141,15 +142,50 @@ def run_paper_logger(
                 max_games=8,
                 min_volume=50,
             )
+            recent_goal = any(e.kind == "GOAL" for e in engine.events[-12:])
+            grind_ready = (time.time() - started) >= 15 * 60 and not recent_goal
             added = 0
-            for ticker in extra:
+            known = {g.event_ticker: g for g in engine.games}
+            for game in extra_games:
+                if game.total_books:
+                    apply_live_totals(
+                        game, game.total_books, drop_far_wing=grind_ready
+                    )
+                old = known.get(game.event_ticker)
+                if old is None:
+                    engine.games.append(game)
+                    known[game.event_ticker] = game
+                else:
+                    old.total_atm_ticker = game.total_atm_ticker
+                    old.total_atm_label = game.total_atm_label
+                    old.total_atm_price = game.total_atm_price
+                    old.total_up_ticker = game.total_up_ticker
+                    old.total_up_label = game.total_up_label
+                    old.total_up_price = game.total_up_price
+                    old.over_05_ticker = game.over_05_ticker
+                    old.over_15_ticker = game.over_15_ticker
+                    old.totals_repick = game.totals_repick
+                    old.in_play_hint = game.in_play_hint
+            fund = list(extra)
+            for game in extra_games:
+                fund.extend(game.get_tickers())
+            seen: set[str] = set()
+            for ticker in fund:
+                if ticker in seen:
+                    continue
+                seen.add(ticker)
                 if feed.add_ticker(ticker):
                     engine.logger.register_ticker(ticker)
                     engine.labels.register_ticker(ticker)
                     added += 1
             if added:
-                engine.games.extend(extra_games)
-                print(f"[discover] added {added} tickers\n{extra_log}", flush=True)
+                print(f"[discover] added {added} tickers (live totals re-pick)\n{extra_log}", flush=True)
+            elif extra_games:
+                print(
+                    "[discover] live totals re-pick "
+                    + "; ".join(f"{g.title[:28]}={g.totals_summary()}" for g in extra_games[:4]),
+                    flush=True,
+                )
         time.sleep(interval)
 
     feed.stop()

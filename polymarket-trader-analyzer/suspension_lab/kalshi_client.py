@@ -118,6 +118,7 @@ class KalshiBookFeed:
 
     def _fetch_rest_snapshot(self, session: requests.Session, ticker: str) -> bool:
         try:
+            session.headers.update({"User-Agent": "suspension-lab/0.1"})
             url = f"{self.config.rest_base}/markets/{ticker}/orderbook"
             resp = session.get(url, params={"depth": 0}, timeout=5)
             resp.raise_for_status()
@@ -131,15 +132,17 @@ class KalshiBookFeed:
             return False
 
     async def _rest_loop(self) -> None:
-        session = requests.Session()
-        session.headers.update({"User-Agent": "suspension-lab/0.1"})
         interval = max(self.config.poll_ms, 100) / 1000.0
-        self._emit_status(f"REST polling every {int(interval * 1000)}ms")
+        self._emit_status(f"REST polling every {int(interval * 1000)}ms (parallel books)")
         while not self._stop.is_set():
-            for ticker in self.config.tickers:
-                if self._stop.is_set():
-                    break
-                await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
+            tickers = list(self.config.tickers)
+            if tickers:
+                await asyncio.gather(
+                    *[
+                        asyncio.to_thread(self._fetch_rest_snapshot, requests.Session(), ticker)
+                        for ticker in tickers
+                    ]
+                )
             await asyncio.sleep(interval)
 
     def _snapshot_payload(self, msg: dict) -> dict:

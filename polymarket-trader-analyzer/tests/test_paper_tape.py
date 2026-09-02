@@ -15,6 +15,8 @@ from suspension_lab.soccer_discovery import (
     build_soccer_game,
     discover_soccer_games,
     needs_auto_discover,
+    select_ingame_totals,
+    TotalBook,
 )
 from suspension_lab.tape_engine import TapeEngine
 
@@ -153,6 +155,18 @@ class TestBookGoalDetection:
         for i, bid in enumerate(("0.32", "0.34", "0.36", "0.38", "0.41")):
             result = det.evaluate(t, _book(t, bid, "0.43", ts=1000 + (i + 1) * 800))
         assert isinstance(result, DelayedStateNotice)
+
+
+class TestInGameTotalsOnTape:
+    def test_live_yes_repick_not_pregame_snapshot(self):
+        books = [
+            TotalBook(3, "T-3", 0.85, 50, 50, True),
+            TotalBook(4, "T-4", 0.51, 50, 50, True),
+            TotalBook(5, "T-5", 0.24, 50, 50, True),
+        ]
+        atm, up = select_ingame_totals(books)
+        assert atm is not None and atm.ticker == "T-4"
+        assert up is not None and up.ticker == "T-5"
 
 
 class TestTapeEnginePaperOnly:

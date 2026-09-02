@@ -21,10 +21,10 @@ The auto-discovery:
 - Queries Kalshi's public API for open soccer markets
 - Groups markets by game and funds:
   - **Home ML** / **Away ML** (TIE is skipped)
-  - The **total nearest 50¢ YES** (not a default O0.5/O1.5 — O0.5 is usually a 90¢ bond)
-  - The **next strike up** if that book is liquid
+  - The **total nearest 50¢ YES from live prices** (not a frozen pregame O2.5; at 1-1 that is usually O3.5)
+  - The **next strike up** if liquid (O4.5 at 1-1). If that wing drifts far from 50¢ with no goal, drop to the cheaper adjacent strike (O2.5)
 - Prefers **today/tonight kickoffs**, then volume (default: ≥50 total or ≥100 24h)
-- Auto-funds the top 5 live/soon games
+- Auto-funds the top 5 live/soon games, plus **in-play** and **priority** matches (Sassuolo / Frosinone / AEK) even if they miss top-5 volume
 - Logs which tickers were added and why
 
 ### Auto-discovery options
@@ -47,6 +47,7 @@ Auto-discovery picks **today / tonight** by `occurrence_datetime` (not Saturday 
 - **Brasileirão** A/B, **Liga MX**
 - **Peru Liga 1**, **Argentina Primera**, **Chile**, **Colombia (DIMAYOR)**
 - **Ecuador LigaPro**, **Venezuela**, **Libertadores / Sudamericana**
+- **Super League Greece**, **Greek Cup** (AEK / PAOK slates)
 
 Unattended paper logger (no UI, no live bets):
 

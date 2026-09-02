@@ -1,5 +1,7 @@
 """Tests for soccer auto-discovery from Kalshi API."""
 
+from datetime import datetime, timezone
+
 import pytest
 from unittest.mock import patch, MagicMock
 
@@ -7,6 +9,9 @@ from suspension_lab.soccer_discovery import (
     SoccerGame,
     DiscoveryResult,
     TotalBook,
+    SOCCER_SERIES_PREFIXES,
+    SERIES_WITH_GAMES,
+    SERIES_WITH_TOTALS,
     _parse_volume,
     _extract_teams_from_title,
     _match_game_ticker,
@@ -17,6 +22,9 @@ from suspension_lab.soccer_discovery import (
     discover_soccer_games,
     discover_tickers_for_lab,
     select_scalp_totals,
+    select_ingame_totals,
+    apply_live_totals,
+    is_priority_game,
     strike_to_over_label,
 )
 
@@ -710,3 +718,276 @@ class TestNearestFiftyTotals:
         assert game.total_atm_ticker is None
         assert game.total_up_ticker is None
         assert game.get_tickers() == ["KXEPLGAME-X-ARS", "KXEPLGAME-X-CHE"]
+
+
+class TestInGameTotalsRepick:
+    """In-game totals come from live YES, not a frozen pregame O2.5."""
+
+    def test_score_11_funds_o35_o45_not_pregame_o25(self):
+        # Pregame ATM was O2.5 (~50¢). After 1-1 that book is 85¢.
+        books = [
+            _tb(1, 0.99),
+            _tb(2, 0.99),
+            _tb(3, 0.85),
+            _tb(4, 0.52),
+            _tb(5, 0.25),
+        ]
+        atm, up = select_ingame_totals(books, drop_far_wing=False)
+        assert atm is not None and atm.strike == 4 and atm.label == "O3.5"
+        assert up is not None and up.strike == 5 and up.label == "O4.5"
+
+    def test_does_not_freeze_pregame_o25_when_reapplying(self):
+        game = SoccerGame(
+            event_ticker="KXCOPPAITALIAGAME-26SEP02SASFRO",
+            title="Sassuolo vs Frosinone",
+            home_team="Sassuolo",
+            away_team="Frosinone",
+            close_time="2026-09-02T18:00:00Z",
+            total_atm_ticker="KXCOPPAITALIATOTAL-26SEP02SASFRO-3",
+            total_atm_label="O2.5",
+            total_atm_price=0.49,
+            over_05_ticker="KXCOPPAITALIATOTAL-26SEP02SASFRO-3",
+        )
+        live = [
+            TotalBook(1, "KXCOPPAITALIATOTAL-26SEP02SASFRO-1", 0.99, 100, 100, True),
+            TotalBook(2, "KXCOPPAITALIATOTAL-26SEP02SASFRO-2", 0.99, 100, 100, True),
+            TotalBook(3, "KXCOPPAITALIATOTAL-26SEP02SASFRO-3", 0.85, 100, 100, True),
+            TotalBook(4, "KXCOPPAITALIATOTAL-26SEP02SASFRO-4", 0.51, 100, 100, True),
+            TotalBook(5, "KXCOPPAITALIATOTAL-26SEP02SASFRO-5", 0.26, 100, 100, True),
+        ]
+        apply_live_totals(game, live, drop_far_wing=False)
+        assert game.total_atm_label == "O3.5"
+        assert game.total_up_label == "O4.5"
+        assert game.total_atm_ticker.endswith("-4")
+        assert game.in_play_hint is True
+        assert "O2.5" not in (game.total_atm_label, game.total_up_label)
+
+    def test_grind_drops_far_o45_to_o25_cheap_side(self):
+        books = [
+            _tb(1, 0.99),
+            _tb(2, 0.99),
+            _tb(3, 0.78),
+            _tb(4, 0.48),
+            _tb(5, 0.12),
+        ]
+        atm, wing = select_ingame_totals(books, drop_far_wing=True)
+        assert atm is not None and atm.strike == 4
+        assert wing is not None and wing.strike == 3 and wing.label == "O2.5"
+
+    def test_grind_keeps_o45_when_still_near_fifty(self):
+        books = [
+            _tb(3, 0.80),
+            _tb(4, 0.50),
+            _tb(5, 0.36),
+        ]
+        atm, wing = select_ingame_totals(books, drop_far_wing=True)
+        assert atm is not None and atm.strike == 4
+        assert wing is not None and wing.strike == 5
+
+    def test_does_not_drop_to_bonded_o25(self):
+        books = [_tb(3, 0.91), _tb(4, 0.50), _tb(5, 0.10)]
+        atm, wing = select_ingame_totals(books, drop_far_wing=True)
+        assert atm is not None and atm.strike == 4
+        assert wing is None or wing.strike == 5
+
+    def test_skips_wide_mid_fifty_longshot(self):
+        books = [
+            TotalBook(3, "T-3", 0.73, 50, 50, True, spread=0.26),
+            TotalBook(4, "T-4", 0.555, 50, 50, True, spread=0.13),
+            TotalBook(5, "T-5", 0.335, 50, 50, True, spread=0.31),
+            TotalBook(7, "T-7", 0.515, 50, 50, True, spread=0.87),
+        ]
+        atm, up = select_ingame_totals(books, drop_far_wing=False)
+        assert atm is not None and atm.strike == 4
+        assert up is not None and up.strike == 5
+
+    def test_build_game_live_11_sassuolo(self):
+        markets = [
+            {
+                "ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO-SAS",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+                "rules_primary": "If Sassuolo wins the Sassuolo vs Frosinone professional Coppa Italia soccer game",
+            },
+            {
+                "ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO-FRO",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+            },
+            {
+                "ticker": "KXCOPPAITALIATOTAL-26SEP02SASFRO-3",
+                "volume_fp": "80",
+                "volume_24h_fp": "80",
+                "yes_bid_dollars": "0.82",
+                "yes_ask_dollars": "0.88",
+            },
+            {
+                "ticker": "KXCOPPAITALIATOTAL-26SEP02SASFRO-4",
+                "volume_fp": "90",
+                "volume_24h_fp": "90",
+                "yes_bid_dollars": "0.50",
+                "yes_ask_dollars": "0.55",
+            },
+            {
+                "ticker": "KXCOPPAITALIATOTAL-26SEP02SASFRO-5",
+                "volume_fp": "70",
+                "volume_24h_fp": "70",
+                "yes_bid_dollars": "0.23",
+                "yes_ask_dollars": "0.28",
+            },
+        ]
+        game = build_soccer_game("26SEP02SASFRO", markets)
+        assert game is not None
+        assert game.total_atm_label == "O3.5"
+        assert game.total_up_label == "O4.5"
+        assert "KXCOPPAITALIATOTAL-26SEP02SASFRO-3" not in game.get_tickers()
+
+
+class TestGreekAndPriorityFund:
+    def test_greek_prefixes_present(self):
+        for series in (
+            "KXSLGREECEGAME",
+            "KXSLGREECETOTAL",
+            "KXGRECUPGAME",
+            "KXGRECUPTOTAL",
+        ):
+            assert series in SOCCER_SERIES_PREFIXES
+        assert "KXSLGREECEGAME" in SERIES_WITH_GAMES
+        assert "KXGRECUPTOTAL" in SERIES_WITH_TOTALS
+
+    def test_priority_matches_aek_and_sassuolo(self):
+        aek = SoccerGame(
+            event_ticker="KXGRECUPGAME-26SEP02NCHAEK",
+            title="Chrysoupoli vs AEK Athens",
+            home_team="Chrysoupoli",
+            away_team="AEK Athens",
+            close_time="2026-09-02T17:00:00Z",
+        )
+        sas = SoccerGame(
+            event_ticker="KXCOPPAITALIAGAME-26SEP02SASFRO",
+            title="Sassuolo vs Frosinone",
+            home_team="Sassuolo",
+            away_team="Frosinone",
+            close_time="2026-09-02T18:00:00Z",
+        )
+        other = SoccerGame(
+            event_ticker="KXEPLGAME-26SEP02ARSLIV",
+            title="Arsenal vs Liverpool",
+            home_team="Arsenal",
+            away_team="Liverpool",
+            close_time="2026-09-02T18:00:00Z",
+        )
+        assert is_priority_game(aek)
+        assert is_priority_game(sas)
+        assert not is_priority_game(other)
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_priority_aek_funded_outside_top5_volume(self, mock_fetch):
+        markets = []
+        now_occ = "2026-09-02T14:00:00Z"
+        for i in range(5):
+            markets.extend(
+                [
+                    {
+                        "ticker": f"KXEPLGAME-26SEP02VOL{i}-HOM",
+                        "event_ticker": f"KXEPLGAME-26SEP02VOL{i}",
+                        "title": f"Volume Club {i} vs Other",
+                        "close_time": "2026-09-05T01:00:00Z",
+                        "occurrence_datetime": now_occ,
+                        "volume_fp": "90000",
+                        "volume_24h_fp": str(200000 - i),
+                    },
+                    {
+                        "ticker": f"KXEPLGAME-26SEP02VOL{i}-AWY",
+                        "event_ticker": f"KXEPLGAME-26SEP02VOL{i}",
+                        "title": f"Volume Club {i} vs Other",
+                        "occurrence_datetime": now_occ,
+                        "volume_fp": "90000",
+                        "volume_24h_fp": str(200000 - i),
+                    },
+                ]
+            )
+        markets.extend(
+            [
+                {
+                    "ticker": "KXGRECUPGAME-26SEP02NCHAEK-AEK",
+                    "event_ticker": "KXGRECUPGAME-26SEP02NCHAEK",
+                    "title": "Chrysoupoli vs AEK Athens",
+                    "close_time": "2026-09-05T01:00:00Z",
+                    "occurrence_datetime": now_occ,
+                    "volume_fp": "20",
+                    "volume_24h_fp": "30",
+                    "rules_primary": "If AEK Athens wins the Chrysoupoli vs AEK Athens professional soccer game",
+                },
+                {
+                    "ticker": "KXGRECUPGAME-26SEP02NCHAEK-NCH",
+                    "event_ticker": "KXGRECUPGAME-26SEP02NCHAEK",
+                    "title": "Chrysoupoli vs AEK Athens",
+                    "occurrence_datetime": now_occ,
+                    "volume_fp": "10",
+                    "volume_24h_fp": "20",
+                },
+                {
+                    "ticker": "KXGRECUPTOTAL-26SEP02NCHAEK-3",
+                    "event_ticker": "KXGRECUPTOTAL-26SEP02NCHAEK",
+                    "occurrence_datetime": now_occ,
+                    "volume_fp": "10",
+                    "volume_24h_fp": "20",
+                    "yes_bid_dollars": "0.48",
+                    "yes_ask_dollars": "0.52",
+                },
+                {
+                    "ticker": "KXGRECUPTOTAL-26SEP02NCHAEK-4",
+                    "event_ticker": "KXGRECUPTOTAL-26SEP02NCHAEK",
+                    "occurrence_datetime": now_occ,
+                    "volume_fp": "8",
+                    "volume_24h_fp": "15",
+                    "yes_bid_dollars": "0.28",
+                    "yes_ask_dollars": "0.32",
+                },
+            ]
+        )
+        mock_fetch.return_value = markets
+        now = datetime(2026, 9, 2, 14, 10, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now, min_volume=50, min_24h_volume=100)
+        titles = " ".join(g.title for g in result.games)
+        assert "AEK" in titles
+        assert any("KXGRECUPGAME-26SEP02NCHAEK" in t for t in result.tickers)
+        assert any(t.endswith("-3") and "NCHAEK" in t for t in result.tickers)
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_priority_does_not_pin_next_week_sassuolo(self, mock_fetch):
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXSERIEAGAME-26SEP06BFCSAS-SAS",
+                "event_ticker": "KXSERIEAGAME-26SEP06BFCSAS",
+                "title": "Bologna vs Sassuolo",
+                "close_time": "2026-09-09T01:00:00Z",
+                "occurrence_datetime": "2026-09-06T19:00:00Z",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+                "yes_bid_dollars": "0.24",
+                "yes_ask_dollars": "0.25",
+            },
+            {
+                "ticker": "KXSERIEAGAME-26SEP06BFCSAS-BFC",
+                "event_ticker": "KXSERIEAGAME-26SEP06BFCSAS",
+                "title": "Bologna vs Sassuolo",
+                "occurrence_datetime": "2026-09-06T19:00:00Z",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+            },
+            {
+                "ticker": "KXSERIEATOTAL-26SEP06BFCSAS-1",
+                "event_ticker": "KXSERIEATOTAL-26SEP06BFCSAS",
+                "occurrence_datetime": "2026-09-06T19:00:00Z",
+                "volume_fp": "50",
+                "volume_24h_fp": "50",
+                "yes_bid_dollars": "0.92",
+                "yes_ask_dollars": "0.93",
+            },
+        ]
+        now = datetime(2026, 9, 2, 14, 10, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now)
+        assert result.games == []
+        assert result.tickers == []

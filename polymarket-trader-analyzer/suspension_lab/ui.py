@@ -9,7 +9,7 @@ from tkinter import messagebox, scrolledtext, ttk
 from suspension_lab.config import LabConfig
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.market_labels import MarketLabel
-from suspension_lab.soccer_discovery import SoccerGame, discover_tickers_for_lab
+from suspension_lab.soccer_discovery import SoccerGame, apply_live_totals, discover_tickers_for_lab
 from suspension_lab.tape_engine import TapeEngine, TapeEvent
 
 BG = "#0e1116"
@@ -53,6 +53,7 @@ class SuspensionLabApp:
         self._pending_events: list[TapeEvent] = []
         self._event_lock = threading.Lock()
         self._last_rediscover = time.time()
+        self._started = time.time()
 
         self.root = tk.Tk()
         self.root.title("PTA · Soccer paper tape")
@@ -64,7 +65,7 @@ class SuspensionLabApp:
         self._labels.load_all_async(on_update=self._on_label_loaded)
         self.root.after(200, self._drain_events)
         self.root.after(400, self._refresh_display)
-        self.root.after(300_000, self._rediscover)
+        self.root.after(60_000, self._rediscover)
 
     def _style(self) -> None:
         style = ttk.Style(self.root)
@@ -400,15 +401,28 @@ class SuspensionLabApp:
                     rest_base=self.config.rest_base, max_games=8
                 )
             except Exception:  # noqa: BLE001
-                self.root.after(300_000, self._rediscover)
+                self.root.after(60_000, self._rediscover)
                 return
+            recent_goal = any(e.kind == "GOAL" for e in self.engine.events[-12:])
+            grind_ready = (time.time() - self._started) >= 15 * 60 and not recent_goal
+            for game in games:
+                if game.total_books:
+                    apply_live_totals(game, game.total_books, drop_far_wing=grind_ready)
             self.root.after(0, lambda: self._absorb_discovery(tickers, games))
 
         threading.Thread(target=_run, name="rediscover", daemon=True).start()
 
     def _absorb_discovery(self, tickers: list[str], games: list[SoccerGame]) -> None:
+        known = {g.event_ticker: g for g in self.engine.games}
+        for game in games:
+            old = known.get(game.event_ticker)
+            if old is None:
+                continue
+            old.total_atm_ticker = game.total_atm_ticker
+            old.total_up_ticker = game.total_up_ticker
+            old.totals_repick = game.totals_repick
         new_games = [g for g in games if not any(t in self._ticker_boxes for t in g.get_tickers())]
-        for game in new_games:
+        for game in new_games + [g for g in games if g not in new_games]:
             added = []
             for ticker in game.get_tickers():
                 if ticker in self._ticker_boxes:
@@ -418,13 +432,20 @@ class SuspensionLabApp:
                     self._labels.register_ticker(ticker)
                     self._active_tickers.append(ticker)
                     added.append(ticker)
-            if added:
+            if added and game in new_games:
                 self._create_game_card(game)
                 self.engine.games.append(game)
                 for ticker in added:
                     self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
                 self.events_text.insert(tk.END, f"AUTO-FUND  {game.title}\n", "PAPER")
-        self.root.after(300_000, self._rediscover)
+            elif added:
+                self._create_loose_card(added)
+                for ticker in added:
+                    self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
+                self.events_text.insert(
+                    tk.END, f"TOTALS RE-PICK  {game.title} {game.totals_summary()}\n", "PAPER"
+                )
+        self.root.after(60_000, self._rediscover)
 
     def _sample_loop(self) -> None:
         interval = max(self.config.poll_ms, 100) / 1000.0
