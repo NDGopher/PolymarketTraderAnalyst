@@ -24,8 +24,8 @@ The auto-discovery:
   - **Away ML** (moneyline)
   - **O0.5** (over 0.5 goals total)
   - **O1.5** (over 1.5 goals total)
-- Filters by volume (default: ≥50 total or ≥100 24h volume)
-- Limits to the top 5 games by volume
+- Prefers **today/tonight kickoffs**, then volume (default: ≥50 total or ≥100 24h)
+- Auto-funds the top 5 live/soon games
 - Logs which tickers were added and why
 
 ### Auto-discovery options
