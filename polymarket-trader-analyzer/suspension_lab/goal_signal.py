@@ -188,8 +188,8 @@ class GoalSignalDetector:
         if not self._ask_confirmed(ticker, prev_bid, prev_ask, new_ask, ts_ms):
             return None
 
-        last = self._last_signal_ms.get(ticker, 0)
-        if ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
+        last = self._last_signal_ms.get(ticker)
+        if last is not None and ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
             return None
 
         self._last_signal_ms[ticker] = ts_ms
