@@ -468,3 +468,99 @@ class TestDiscoveryResultEdgeCases:
         assert "KXPERLIGA1" in game.home_ml_ticker
         assert game.over_05_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-1"
         assert game.over_15_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-2"
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_brasileirao_tickers(self, mock_fetch):
+        """Test that Brasileirão (Brazil Série A) tickers are discovered correctly."""
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXBRASILEIROGAME-26SEP02FLAMIR-FLA",
+                "event_ticker": "KXBRASILEIROGAME-26SEP02FLAMIR",
+                "title": "Flamengo vs Mirassol",
+                "close_time": "2026-09-02T23:00:00Z",
+                "volume_fp": "200.00",
+                "volume_24h_fp": "800.00",
+            },
+            {
+                "ticker": "KXBRASILEIROGAME-26SEP02FLAMIR-MIR",
+                "event_ticker": "KXBRASILEIROGAME-26SEP02FLAMIR",
+                "title": "Flamengo vs Mirassol",
+                "close_time": "2026-09-02T23:00:00Z",
+                "volume_fp": "150.00",
+                "volume_24h_fp": "600.00",
+            },
+            {
+                "ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR-1",
+                "event_ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR",
+                "title": "Flamengo vs Mirassol O0.5",
+                "close_time": "2026-09-02T23:00:00Z",
+                "volume_fp": "100.00",
+                "volume_24h_fp": "400.00",
+            },
+            {
+                "ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR-2",
+                "event_ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR",
+                "title": "Flamengo vs Mirassol O1.5",
+                "close_time": "2026-09-02T23:00:00Z",
+                "volume_fp": "80.00",
+                "volume_24h_fp": "350.00",
+            },
+        ]
+
+        result = discover_soccer_games()
+
+        assert len(result.games) == 1
+        game = result.games[0]
+        assert game.home_ml_ticker == "KXBRASILEIROGAME-26SEP02FLAMIR-FLA"
+        assert game.away_ml_ticker == "KXBRASILEIROGAME-26SEP02FLAMIR-MIR"
+        assert game.over_05_ticker == "KXBRASILEIROTOTAL-26SEP02FLAMIR-1"
+        assert game.over_15_ticker == "KXBRASILEIROTOTAL-26SEP02FLAMIR-2"
+        assert len(game.get_tickers()) == 4
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_liga_mx_tickers(self, mock_fetch):
+        """Test that Liga MX tickers are discovered correctly."""
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXLIGAMXGAME-26SEP06CRASLA-CRA",
+                "event_ticker": "KXLIGAMXGAME-26SEP06CRASLA",
+                "title": "Cruz Azul vs Santos Laguna",
+                "close_time": "2026-09-06T02:00:00Z",
+                "volume_fp": "500.00",
+                "volume_24h_fp": "1200.00",
+            },
+            {
+                "ticker": "KXLIGAMXGAME-26SEP06CRASLA-SLA",
+                "event_ticker": "KXLIGAMXGAME-26SEP06CRASLA",
+                "title": "Cruz Azul vs Santos Laguna",
+                "close_time": "2026-09-06T02:00:00Z",
+                "volume_fp": "450.00",
+                "volume_24h_fp": "1100.00",
+            },
+            {
+                "ticker": "KXLIGAMXTOTAL-26SEP06CRASLA-1",
+                "event_ticker": "KXLIGAMXTOTAL-26SEP06CRASLA",
+                "title": "Cruz Azul vs Santos Laguna O0.5",
+                "close_time": "2026-09-06T02:00:00Z",
+                "volume_fp": "50.00",
+                "volume_24h_fp": "200.00",
+            },
+            {
+                "ticker": "KXLIGAMXTOTAL-26SEP06CRASLA-2",
+                "event_ticker": "KXLIGAMXTOTAL-26SEP06CRASLA",
+                "title": "Cruz Azul vs Santos Laguna O1.5",
+                "close_time": "2026-09-06T02:00:00Z",
+                "volume_fp": "40.00",
+                "volume_24h_fp": "180.00",
+            },
+        ]
+
+        result = discover_soccer_games()
+
+        assert len(result.games) == 1
+        game = result.games[0]
+        assert game.home_ml_ticker == "KXLIGAMXGAME-26SEP06CRASLA-CRA"
+        assert game.away_ml_ticker == "KXLIGAMXGAME-26SEP06CRASLA-SLA"
+        assert game.over_05_ticker == "KXLIGAMXTOTAL-26SEP06CRASLA-1"
+        assert game.over_15_ticker == "KXLIGAMXTOTAL-26SEP06CRASLA-2"
+        assert len(game.get_tickers()) == 4
