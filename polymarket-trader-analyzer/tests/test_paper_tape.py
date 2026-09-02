@@ -124,7 +124,7 @@ class TestTodayFirstDiscover:
                 "event_ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO",
                 "title": "Sassuolo vs Frosinone",
                 "close_time": "2026-09-05T01:00:00Z",
-                "occurrence_datetime": "2026-09-02T16:00:00Z",
+                "occurrence_datetime": "2026-09-02T12:00:00Z",
                 "volume_fp": "10000",
                 "volume_24h_fp": "8000",
                 "rules_primary": "If Sassuolo wins the Sassuolo vs Frosinone professional Coppa Italia soccer game",
@@ -134,14 +134,14 @@ class TestTodayFirstDiscover:
                 "event_ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO",
                 "title": "Sassuolo vs Frosinone",
                 "close_time": "2026-09-05T01:00:00Z",
-                "occurrence_datetime": "2026-09-02T16:00:00Z",
+                "occurrence_datetime": "2026-09-02T12:00:00Z",
                 "volume_fp": "9000",
                 "volume_24h_fp": "7000",
             },
             {
                 "ticker": "KXCOPPAITALIATOTAL-26SEP02SASFRO-1",
                 "event_ticker": "KXCOPPAITALIATOTAL-26SEP02SASFRO",
-                "occurrence_datetime": "2026-09-02T16:00:00Z",
+                "occurrence_datetime": "2026-09-02T12:00:00Z",
                 "volume_fp": "1000",
                 "volume_24h_fp": "500",
             },
@@ -208,13 +208,50 @@ class TestBookGoalDetection:
         assert isinstance(result, GoalSignal)
         assert "blowout" in result.reason or result.bid_jump_cents >= 6
 
-    def test_delayed_grind_is_skip(self):
+    def test_plus10c_walk_within_4s_is_goal_not_delayed(self):
+        """Wed Sep 2 Udinese 1-1: +10c over 3.7s was SKIP. Must be GOAL."""
+        det = GoalSignalDetector()
+        t = "KXCOPPAITALIATOTAL-26SEP02UDIVEN-2"
+        det.evaluate(t, _book(t, "0.40", "0.42", ts=16_343_000))
+        result = None
+        for i, bid in enumerate(("0.42", "0.44", "0.46", "0.48", "0.50")):
+            result = det.evaluate(
+                t, _book(t, bid, "0.52", bid_qty="200", ts=16_343_000 + (i + 1) * 740)
+            )
+        assert isinstance(result, GoalSignal)
+        assert result.bid_jump_cents >= 10
+        assert result.reason == "bid_walk_plus10c_within_4s"
+
+    def test_venezia_ml_walk_14c_over_3s_is_goal(self):
+        det = GoalSignalDetector()
+        t = "KXCOPPAITALIAGAME-26SEP02UDIVEN-VEN"
+        det.evaluate(t, _book(t, "0.24", "0.26", ts=16_233_000))
+        seen = []
+        for i, bid in enumerate(("0.27", "0.30", "0.33", "0.36", "0.38")):
+            seen.append(
+                det.evaluate(
+                    t, _book(t, bid, "0.40", bid_qty="180", ts=16_233_000 + (i + 1) * 700)
+                )
+            )
+        goals = [r for r in seen if isinstance(r, GoalSignal)]
+        assert goals
+        assert goals[0].bid_jump_cents >= 10
+
+    def test_slow_8s_walk_without_ask_confirm_is_delayed(self):
         det = GoalSignalDetector()
         t = "KXEPLGAME-26SEP02TEST-ARS"
-        det.evaluate(t, _book(t, "0.30", "0.32", ts=1000))
-        for i, bid in enumerate(("0.32", "0.34", "0.36", "0.38", "0.41")):
-            result = det.evaluate(t, _book(t, bid, "0.43", ts=1000 + (i + 1) * 800))
-        assert isinstance(result, DelayedStateNotice)
+        det.evaluate(t, _book(t, "0.30", "0.31", ts=1000))
+        seen = []
+        for i, bid in enumerate(("0.31", "0.32", "0.33", "0.34", "0.36", "0.38", "0.40", "0.42")):
+            seen.append(
+                det.evaluate(
+                    t, _book(t, bid, "0.32", bid_qty="200", ts=1000 + (i + 1) * 1000)
+                )
+            )
+        delayed = [r for r in seen if isinstance(r, DelayedStateNotice)]
+        assert delayed
+        assert delayed[0].seconds >= 6.0
+        assert not any(isinstance(r, GoalSignal) for r in seen)
 
 
 class TestInGameTotalsOnTape:
@@ -242,6 +279,24 @@ class TestInGameTotalsOnTape:
 
 
 class TestTapeEnginePaperOnly:
+    def test_walk_goal_writes_csv_even_if_trader_skips_bond(self, tmp_path: Path):
+        engine = TapeEngine.create(
+            tmp_path / "sess",
+            ["KXCOPPAITALIATOTAL-26SEP02UDIVEN-2"],
+            paper_enabled=True,
+        )
+        t = "KXCOPPAITALIATOTAL-26SEP02UDIVEN-2"
+        engine.handle_book(t, _book(t, "0.88", "0.90", ts=1000))
+        result = None
+        for i, bid in enumerate(("0.90", "0.92", "0.94", "0.96", "0.98")):
+            result = engine.handle_book(
+                t, _book(t, bid, "0.99", bid_qty="200", ts=1000 + (i + 1) * 700)
+            )
+        signals = (tmp_path / "sess" / "goal_signals.csv").read_text(encoding="utf-8")
+        assert "KXCOPPAITALIATOTAL-26SEP02UDIVEN-2" in signals
+        assert any(e.kind == "GOAL" for e in engine.events)
+        assert engine.trader.config.live is False
+
     def test_goal_logs_paper_not_invented_fill(self, tmp_path: Path):
         engine = TapeEngine.create(
             tmp_path / "sess",

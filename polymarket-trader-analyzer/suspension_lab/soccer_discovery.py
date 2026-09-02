@@ -755,7 +755,7 @@ def repick_session_totals(
     drop_far_wing: bool = False,
     now: datetime | None = None,
 ) -> tuple[list[SoccerGame], list[str], list[str]]:
-    """Timer rediscover: live ATM, drop dead wings, drop finished games.
+    """Timer rediscover: live ATM, drop dead wings, drop pregame and finished.
 
     Returns (kept_games, fund_tickers, drop_tickers). Does not invent fills.
     """
@@ -773,6 +773,8 @@ def repick_session_totals(
     live_events = {g.event_ticker for g in fresh_games if g.event_ticker}
 
     for game in fresh_games:
+        if not should_fund_live(game, now=now):
+            continue
         old = known.get(game.event_ticker)
         if old is None:
             kept.append(game)
@@ -790,7 +792,8 @@ def repick_session_totals(
             and old.event_ticker not in live_events
             and is_finished_game(old, now=now)
         )
-        if finished:
+        pregame = is_pregame(candidate, now=now) or not should_fund_live(candidate, now=now)
+        if finished or pregame:
             drop.extend(old.get_tickers())
             continue
         still.append(old)
@@ -851,6 +854,20 @@ def is_finished_game(game: SoccerGame, *, now: datetime | None = None) -> bool:
     return False
 
 
+def is_pregame(game: SoccerGame, *, now: datetime | None = None) -> bool:
+    """Kickoff has not happened (and no bonded in-play hint). Never fund."""
+    if is_finished_game(game, now=now):
+        return False
+    return not is_in_play(game, now=now)
+
+
+def should_fund_live(game: SoccerGame, *, now: datetime | None = None) -> bool:
+    """Lab seats in-play soccer only. Pregame / finished / not-started stay off the board."""
+    if is_finished_game(game, now=now):
+        return False
+    return is_in_play(game, now=now)
+
+
 def is_watchable(
     game: SoccerGame,
     *,
@@ -876,15 +893,11 @@ def select_watchlist(
     min_volume: float,
     min_24h_volume: float,
 ) -> tuple[list[SoccerGame], list[SoccerGame], list[SoccerGame], list[str]]:
-    """In-play first, then kickoff-soon, then 24h volume. No team-name bias."""
+    """Fund in-play only. Pregame / not-started are listed but never seated."""
     notes: list[str] = []
     liveable = [g for g in games if not is_finished_game(g, now=now)]
-    soon = [g for g in liveable if is_watchable(g, now=now)]
-    later = [g for g in liveable if g not in soon]
-    later.sort(key=lambda g: g.total_24h_volume, reverse=True)
-
-    in_play = [g for g in soon if is_in_play(g, now=now)]
-    in_play.sort(key=lambda g: g.total_24h_volume, reverse=True)
+    in_play = [g for g in liveable if is_in_play(g, now=now)]
+    in_play.sort(key=lambda g: (-g.total_24h_volume, -(g.total_volume)))
     selected: list[SoccerGame] = []
     for game in in_play:
         if len(selected) >= max_games:
@@ -892,23 +905,9 @@ def select_watchlist(
         selected.append(game)
         notes.append(f"in-play auto-fund: {game.title[:48]} (24h {game.total_24h_volume:.0f})")
 
-    rest = [g for g in soon if g not in selected]
-    rest.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
-    rest_vol = [
-        g for g in rest if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
-    ]
-    rest_vol.sort(key=lambda g: g.total_24h_volume, reverse=True)
-    rest_other = [g for g in rest if g not in rest_vol]
-    rest_other.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
-
-    for pool in (rest_vol, rest_other):
-        for game in pool:
-            if len(selected) >= max_games:
-                break
-            selected.append(game)
-        if len(selected) >= max_games:
-            break
-
+    soon = [g for g in liveable if is_watchable(g, now=now) and g not in selected]
+    later = [g for g in liveable if g not in selected and g not in soon]
+    later.sort(key=lambda g: g.total_24h_volume, reverse=True)
     return selected, soon, later, notes
 
 
@@ -1493,36 +1492,23 @@ def discover_soccer_games(
 
     now = now or datetime.now(tz=timezone.utc)
     games = [g for g in games if not is_finished_game(g, now=now)]
-    has_kickoffs = any(g.occurrence_time for g in games)
-    watchable = [g for g in games if is_watchable(g, now=now)]
     soon: list[SoccerGame] = []
     later: list[SoccerGame] = []
-    if watchable:
-        selected, soon, later, extra_notes = select_watchlist(
-            games,
-            now=now,
-            max_games=max_games,
-            min_volume=min_volume,
-            min_24h_volume=min_24h_volume,
-        )
+    selected, soon, later, extra_notes = select_watchlist(
+        games,
+        now=now,
+        max_games=max_games,
+        min_volume=min_volume,
+        min_24h_volume=min_24h_volume,
+    )
+    log_lines.append(
+        f"In-play only: {len(selected)} funded. Pregame/not-started/finished not seated."
+    )
+    log_lines.append(f"Auto-selected {len(selected)} live games for the paper logger")
+    log_lines.extend(f"  {n}" for n in extra_notes)
+    if not selected:
         log_lines.append(
-            f"Live/soon/in-play games (kickoff -{LIVE_LOOKBACK_HOURS:.0f}h..+{SOON_HORIZON_HOURS:.0f}h): {len(soon)}"
-        )
-        log_lines.append(f"Auto-selected {len(selected)} for the paper logger")
-        log_lines.extend(f"  {n}" for n in extra_notes)
-    elif has_kickoffs:
-        selected = []
-        log_lines.append("No soccer live or later today/tonight (kickoffs known). Auto-discover is ready for the next slate.")
-    else:
-        # Unit fixtures often omit occurrence_datetime — keep volume ranking.
-        selected = [
-            g for g in games
-            if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
-        ]
-        selected.sort(key=lambda g: g.total_24h_volume, reverse=True)
-        selected = selected[:max_games]
-        log_lines.append(
-            f"Games with volume (>={min_volume} total or >={min_24h_volume} 24h): {len(selected)}"
+            "No in-play soccer. Waiting - will fund when a kickoff goes live."
         )
 
     all_tickers: list[str] = []
@@ -1538,7 +1524,7 @@ def discover_soccer_games(
         )
 
     if not all_tickers:
-        log_lines.append("No tickers auto-funded (no today/tonight soccer, or no volume on fixtures)")
+        log_lines.append("No tickers auto-funded (no in-play soccer)")
 
     result = DiscoveryResult(
         games=selected,

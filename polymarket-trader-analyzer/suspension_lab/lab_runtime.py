@@ -237,11 +237,7 @@ class LabRuntime:
             )
             if not result.games and seated:
                 return
-        if result.from_cache and not result.games and seated:
-            return
-        if not result.games and not result.tickers and seated:
-            # Empty fetch must not blank Udinese (or any seated slate).
-            self._on_feed_status("Discover empty - keeping seated books")
+        if result.from_cache and result.rate_limited and not result.games and seated:
             return
         recent_goal = any(e.kind == "GOAL" for e in self.engine.events[-12:])
         grind_ready = (time.monotonic() - self._started) >= 15 * 60 and not recent_goal

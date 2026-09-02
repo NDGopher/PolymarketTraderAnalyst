@@ -26,7 +26,10 @@ from suspension_lab.soccer_discovery import (
     apply_live_totals,
     is_dead_wing,
     is_finished_game,
+    is_pregame,
+    is_in_play,
     repick_session_totals,
+    should_fund_live,
     unfunded_tickers,
     is_soccer_series_ticker,
     is_stale_lab_ticker,
@@ -337,6 +340,7 @@ class TestDiscoverSoccerGames:
                 "event_ticker": "KXEPLGAME-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea",
                 "close_time": "2026-09-02T18:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
@@ -345,6 +349,7 @@ class TestDiscoverSoccerGames:
                 "event_ticker": "KXEPLGAME-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea",
                 "close_time": "2026-09-02T18:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
@@ -378,7 +383,8 @@ class TestDiscoverSoccerGames:
             },
         ]
 
-        result = discover_soccer_games(min_volume=50, min_24h_volume=100)
+        now = datetime(2026, 9, 2, 15, 30, tzinfo=timezone.utc)
+        result = discover_soccer_games(min_volume=50, min_24h_volume=100, now=now)
 
         assert len(result.games) == 1
         assert "KXEPLGAME-26SEP02ARSCHE-ARS" in result.tickers
@@ -427,7 +433,7 @@ class TestDiscoverSoccerGames:
                     "event_ticker": f"KXEPLGAME-GAME{i}",
                     "title": f"Home vs Away {i}",
                     "close_time": "2026-09-05T18:00:00Z",
-                    "occurrence_datetime": "2026-09-02T18:00:00Z",
+                    "occurrence_datetime": "2026-09-02T14:00:00Z",
                     "volume_fp": "100.00",
                     "volume_24h_fp": str(1000 - i * 100),
                 },
@@ -436,7 +442,7 @@ class TestDiscoverSoccerGames:
                     "event_ticker": f"KXEPLGAME-GAME{i}",
                     "title": f"Home vs Away {i}",
                     "close_time": "2026-09-05T18:00:00Z",
-                    "occurrence_datetime": "2026-09-02T18:00:00Z",
+                    "occurrence_datetime": "2026-09-02T14:00:00Z",
                     "volume_fp": "100.00",
                     "volume_24h_fp": str(1000 - i * 100),
                 },
@@ -491,6 +497,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXPERLIGA1GAME-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar",
                 "close_time": "2026-09-02T18:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
@@ -499,6 +506,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXPERLIGA1GAME-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar",
                 "close_time": "2026-09-02T18:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
@@ -532,7 +540,7 @@ class TestDiscoveryResultEdgeCases:
             },
         ]
 
-        result = discover_soccer_games()
+        result = discover_soccer_games(now=datetime(2026, 9, 2, 15, 30, tzinfo=timezone.utc))
 
         assert len(result.games) == 1
         game = result.games[0]
@@ -549,6 +557,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXBRASILEIROGAME-26SEP02FLAMIR",
                 "title": "Flamengo vs Mirassol",
                 "close_time": "2026-09-02T23:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "200.00",
                 "volume_24h_fp": "800.00",
             },
@@ -557,6 +566,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXBRASILEIROGAME-26SEP02FLAMIR",
                 "title": "Flamengo vs Mirassol",
                 "close_time": "2026-09-02T23:00:00Z",
+                "occurrence_datetime": "2026-09-02T14:00:00Z",
                 "volume_fp": "150.00",
                 "volume_24h_fp": "600.00",
             },
@@ -598,7 +608,7 @@ class TestDiscoveryResultEdgeCases:
             },
         ]
 
-        result = discover_soccer_games()
+        result = discover_soccer_games(now=datetime(2026, 9, 2, 15, 30, tzinfo=timezone.utc))
 
         assert len(result.games) == 1
         game = result.games[0]
@@ -618,6 +628,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXLIGAMXGAME-26SEP06CRASLA",
                 "title": "Cruz Azul vs Santos Laguna",
                 "close_time": "2026-09-06T02:00:00Z",
+                "occurrence_datetime": "2026-09-06T00:30:00Z",
                 "volume_fp": "500.00",
                 "volume_24h_fp": "1200.00",
             },
@@ -626,6 +637,7 @@ class TestDiscoveryResultEdgeCases:
                 "event_ticker": "KXLIGAMXGAME-26SEP06CRASLA",
                 "title": "Cruz Azul vs Santos Laguna",
                 "close_time": "2026-09-06T02:00:00Z",
+                "occurrence_datetime": "2026-09-06T00:30:00Z",
                 "volume_fp": "450.00",
                 "volume_24h_fp": "1100.00",
             },
@@ -651,7 +663,7 @@ class TestDiscoveryResultEdgeCases:
             },
         ]
 
-        result = discover_soccer_games()
+        result = discover_soccer_games(now=datetime(2026, 9, 6, 1, 0, tzinfo=timezone.utc))
 
         assert len(result.games) == 1
         game = result.games[0]
@@ -1454,3 +1466,72 @@ class TestStaleEnvAndFingerprint:
         assert game.tie_ml_ticker == "KXEGYPLGAME-26SEP02GOUMOK-TIE"
         assert "TIE" not in (game.home_ml_ticker or "")
         assert game.tie_ml_ticker in game.get_tickers()
+
+
+class TestLiveOnlySeats:
+    def _game(self, ticker: str, title: str, kick: str, **kwargs) -> SoccerGame:
+        return SoccerGame(
+            event_ticker=ticker,
+            title=title,
+            home_team=title.split(" vs ")[0],
+            away_team=title.split(" vs ")[-1],
+            close_time="",
+            occurrence_time=kick,
+            home_ml_ticker=f"{ticker}-H",
+            away_ml_ticker=f"{ticker}-A",
+            **kwargs,
+        )
+
+    def test_pregame_not_funded_in_play_coppa_is(self):
+        now = datetime(2026, 9, 2, 16, 30, tzinfo=timezone.utc)
+        live = self._game(
+            "KXCOPPAITALIAGAME-26SEP02UDIVEN",
+            "Udinese vs Venezia",
+            "2026-09-02T15:00:00Z",
+        )
+        pre = self._game(
+            "KXEPLGAME-26SEP02ARSLIV",
+            "Arsenal vs Liverpool",
+            "2026-09-02T19:00:00Z",
+        )
+        done = self._game(
+            "KXEPLGAME-26SEP02OLD",
+            "Finished vs Match",
+            "2026-09-02T10:00:00Z",
+        )
+        assert is_in_play(live, now=now)
+        assert should_fund_live(live, now=now)
+        assert is_pregame(pre, now=now)
+        assert not should_fund_live(pre, now=now)
+        assert is_finished_game(done, now=now)
+        assert not should_fund_live(done, now=now)
+
+    def test_repick_drops_pregame_keeps_live_adds_newly_live(self):
+        now = datetime(2026, 9, 2, 16, 30, tzinfo=timezone.utc)
+        seated_live = self._game(
+            "KXCOPPAITALIAGAME-26SEP02UDIVEN",
+            "Udinese vs Venezia",
+            "2026-09-02T15:00:00Z",
+        )
+        seated_pre = self._game(
+            "KXEPLGAME-26SEP02NEXTEPL",
+            "Later vs Kickoff",
+            "2026-09-02T19:30:00Z",
+        )
+        newly_live = self._game(
+            "KXCOPPAITALIAGAME-26SEP02NEWCOP",
+            "New vs Live",
+            "2026-09-02T16:00:00Z",
+        )
+        kept, fund, drop = repick_session_totals(
+            [seated_live, seated_pre],
+            [seated_live, newly_live],
+            now=now,
+        )
+        titles = [g.title for g in kept]
+        assert any("Udinese" in t for t in titles)
+        assert any("New vs Live" in t for t in titles)
+        assert not any("Later vs Kickoff" in t for t in titles)
+        assert seated_pre.home_ml_ticker in drop
+        assert seated_live.home_ml_ticker in fund
+        assert newly_live.home_ml_ticker in fund

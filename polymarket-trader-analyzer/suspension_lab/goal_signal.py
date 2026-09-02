@@ -13,7 +13,9 @@ from suspension_lab.config import (
     GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS,
     GOAL_ASK_LOOKBACK_MS,
     GOAL_BID_JUMP_CENTS,
+    GOAL_DELAYED_MIN_MS,
     GOAL_DELAYED_WINDOW_MS,
+    GOAL_FAST_WINDOW_MS,
     GOAL_MIN_BID_QTY,
     GOAL_MIN_BLOWOUT_JUMP_CENTS,
     GOAL_MIN_PREV_BID_CENTS,
@@ -168,7 +170,7 @@ class GoalSignalDetector:
 
         prev_bid, prev_ask, _ = self._prev.get(ticker, (None, None, None))
 
-        hist = self._history.setdefault(ticker, deque(maxlen=30))
+        hist = self._history.setdefault(ticker, deque(maxlen=80))
         hist.append((ts_ms, new_bid, new_ask))
         self._prev[ticker] = (new_bid, new_ask, bid_qty)
 
@@ -183,55 +185,55 @@ class GoalSignalDetector:
         if new_bid is None or prev_bid is None:
             return None
 
-        delayed = self._delayed_grind(ticker, ts_ms)
-        if delayed:
-            return delayed
-
         jump_cents = int(round((new_bid - prev_bid) * 100))
         blowout = self._spread_blowout(prev_bid, prev_ask, new_bid, new_ask, jump_cents)
-
-        if jump_cents < GOAL_BID_JUMP_CENTS and not blowout:
-            return None
-
-        if int(round(prev_bid * 100)) < GOAL_MIN_PREV_BID_CENTS:
-            return None
-
-        if bid_qty < GOAL_MIN_BID_QTY:
-            return None
-
-        if self._was_bond(prev_bid, prev_ask):
-            return None
-
         ask_ok = self._ask_confirmed(ticker, prev_bid, prev_ask, new_ask, ts_ms)
-        if not ask_ok and not blowout:
-            return None
+        start_bid, window_jump, window_span = self._window_move(ticker, ts_ms, GOAL_FAST_WINDOW_MS)
+        fast_walk = window_jump >= GOAL_BID_JUMP_CENTS and window_span <= GOAL_FAST_WINDOW_MS
+        tick_jump = jump_cents >= GOAL_BID_JUMP_CENTS
 
-        last = self._last_signal_ms.get(ticker)
-        if last is not None and ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
-            return None
+        # +10c within 4s on a live ML/ATM is a GOAL. Do not classify as delayed_grind.
+        if fast_walk or tick_jump or blowout:
+            signal_prev = start_bid if fast_walk and start_bid is not None else prev_bid
+            signal_jump = window_jump if fast_walk else jump_cents
+            if int(round(signal_prev * 100)) >= GOAL_MIN_PREV_BID_CENTS:
+                size_ok = bid_qty >= GOAL_MIN_BID_QTY or fast_walk
+                confirm_ok = fast_walk or ask_ok or blowout
+                if size_ok and confirm_ok:
+                    last = self._last_signal_ms.get(ticker)
+                    if last is None or ts_ms - last >= GOAL_SIGNAL_COOLDOWN_MS:
+                        self._last_signal_ms[ticker] = ts_ms
+                        self._signal_peak_bid[ticker] = (ts_ms, new_bid)
+                        self._spoof_active.discard(ticker)
+                        exit_mode = self._exit_mode(ticker, new_bid, new_ask, levels)
+                        reason = "bid_jump_with_size_and_ask_confirm"
+                        if fast_walk and not tick_jump:
+                            reason = "bid_walk_plus10c_within_4s"
+                        elif blowout and not ask_ok:
+                            reason = "spread_blowout_books_pulled"
+                        elif (
+                            prev_ask
+                            and new_ask
+                            and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100
+                        ):
+                            reason = "bid_jump_ask_led_within_2s"
+                        return GoalSignal(
+                            ticker=ticker,
+                            ts_ms=ts_ms,
+                            prev_bid=signal_prev,
+                            new_bid=new_bid,
+                            bid_jump_cents=signal_jump,
+                            bid_qty=bid_qty,
+                            prev_ask=prev_ask,
+                            new_ask=new_ask,
+                            reason=reason,
+                            exit_mode=exit_mode,
+                        )
 
-        self._last_signal_ms[ticker] = ts_ms
-        self._signal_peak_bid[ticker] = (ts_ms, new_bid)
-        self._spoof_active.discard(ticker)
-        exit_mode = self._exit_mode(ticker, new_bid, new_ask, levels)
-        reason = "bid_jump_with_size_and_ask_confirm"
-        if blowout and not ask_ok:
-            reason = "spread_blowout_books_pulled"
-        elif prev_ask and new_ask and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100:
-            reason = "bid_jump_ask_led_within_2s"
-
-        return GoalSignal(
-            ticker=ticker,
-            ts_ms=ts_ms,
-            prev_bid=prev_bid,
-            new_bid=new_bid,
-            bid_jump_cents=jump_cents if jump_cents >= GOAL_MIN_BLOWOUT_JUMP_CENTS else jump_cents,
-            bid_qty=bid_qty,
-            prev_ask=prev_ask,
-            new_ask=new_ask,
-            reason=reason,
-            exit_mode=exit_mode,
-        )
+        delayed = self._delayed_grind(ticker, ts_ms, ask_ok=ask_ok, blowout=blowout)
+        if delayed:
+            return delayed
+        return None
 
     def _spread_blowout(
         self,
@@ -251,13 +253,47 @@ class GoalSignalDetector:
             return False
         return new_spread - prev_spread >= GOAL_SPREAD_BLOWOUT_CENTS
 
-    def _delayed_grind(self, ticker: str, ts_ms: int) -> DelayedStateNotice | None:
+    def _window_move(
+        self, ticker: str, ts_ms: int, window_ms: int
+    ) -> tuple[Decimal | None, int, int]:
+        hist = [
+            (h[0], h[1])
+            for h in self._history.get(ticker, deque())
+            if ts_ms - h[0] <= window_ms and h[1] is not None
+        ]
+        if len(hist) < 2:
+            return None, 0, 0
+        first_ts, first_bid = hist[0]
+        last_ts, last_bid = hist[-1]
+        jump = int(round((last_bid - first_bid) * 100))
+        span = max(int(last_ts - first_ts), 0)
+        return first_bid, jump, span
+
+    def _delayed_grind(
+        self,
+        ticker: str,
+        ts_ms: int,
+        *,
+        ask_ok: bool,
+        blowout: bool,
+    ) -> DelayedStateNotice | None:
+        """Skip only slow walks with no ask-confirm and no blowout, or moves > ~6-8s."""
+        if ask_ok or blowout:
+            return None
         hist = [h for h in self._history.get(ticker, deque()) if ts_ms - h[0] <= GOAL_DELAYED_WINDOW_MS]
         bids = [(h[0], h[1]) for h in hist if h[1] is not None]
         if len(bids) < 4:
             return None
         first_ts, first_bid = bids[0]
         last_ts, last_bid = bids[-1]
+        span_ms = last_ts - first_ts
+        if span_ms < GOAL_DELAYED_MIN_MS:
+            return None
+        fast_bids = [(t, b) for t, b in bids if last_ts - t <= GOAL_FAST_WINDOW_MS]
+        if len(fast_bids) >= 2:
+            fast_jump = int(round((fast_bids[-1][1] - fast_bids[0][1]) * 100))
+            if fast_jump >= GOAL_BID_JUMP_CENTS:
+                return None
         total = int(round((last_bid - first_bid) * 100))
         if total < GOAL_BID_JUMP_CENTS:
             return None
@@ -271,7 +307,7 @@ class GoalSignalDetector:
         if last is not None and ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
             return None
         self._delayed_ms[ticker] = ts_ms
-        seconds = max((last_ts - first_ts) / 1000.0, 0.1)
+        seconds = max(span_ms / 1000.0, 0.1)
         return DelayedStateNotice(
             ticker=ticker,
             ts_ms=ts_ms,
