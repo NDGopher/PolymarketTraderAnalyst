@@ -28,6 +28,21 @@ def main(
         "--output-dir",
         help="Where session CSVs are written",
     ),
+    auto_discover: bool = typer.Option(
+        True,
+        "--auto-discover/--no-auto-discover",
+        help="Auto-discover soccer games when no tickers provided",
+    ),
+    max_games: int = typer.Option(
+        5,
+        "--max-games",
+        help="Max number of games to auto-discover",
+    ),
+    min_volume: float = typer.Option(
+        50.0,
+        "--min-volume",
+        help="Min volume threshold for auto-discovery",
+    ),
 ) -> None:
     """Launch the manual B/F click logger with live Kalshi orderbooks."""
     load_project_env()
@@ -39,14 +54,47 @@ def main(
         typer.echo("LAB_TICKERS must be Kalshi tickers, not the word 'run'.", err=True)
         raise typer.Exit(1)
 
-    if not ticker_list:
+    discovered_games = []
+    if not ticker_list and auto_discover:
+        from suspension_lab.soccer_discovery import discover_tickers_for_lab
+
+        rest_base = (
+            "https://demo-api.kalshi.co/trade-api/v2"
+            if demo
+            else "https://api.elections.kalshi.com/trade-api/v2"
+        )
+        typer.echo("\n--- Auto-discovering soccer games ---", err=True)
+        ticker_list, discovery_log, discovered_games = discover_tickers_for_lab(
+            rest_base=rest_base,
+            min_volume=min_volume,
+            max_games=max_games,
+        )
+        typer.echo(discovery_log, err=True)
+        typer.echo("---\n", err=True)
+
+        if ticker_list:
+            typer.echo(
+                f"Auto-discovered {len(ticker_list)} tickers from {len(discovered_games)} games.",
+                err=True,
+            )
+        else:
+            typer.echo(
+                "No soccer games with sufficient volume found. "
+                "Add tickers in the UI while the session runs.",
+                err=True,
+            )
+    elif not ticker_list:
         typer.echo(
-            "No LAB_TICKERS in .env — starting with empty list. "
+            "No LAB_TICKERS in .env and auto-discover disabled — starting with empty list. "
             "Add tickers in the UI while the session runs.",
             err=True,
         )
 
     game_label = (game or os.environ.get("LAB_GAME", "")).strip()
+    if not game_label and discovered_games:
+        game_label = " | ".join(g.title[:30] for g in discovered_games[:2])
+        if len(discovered_games) > 2:
+            game_label += f" +{len(discovered_games) - 2}"
 
     config = LabConfig.from_env(
         ticker_list,

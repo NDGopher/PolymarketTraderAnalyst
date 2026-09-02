@@ -8,7 +8,46 @@ Quick run (after `.env` is configured):
 START_SUSPENSION_LAB.bat
 ```
 
-## Switch to a new game
+## Auto-discovery (NEW)
+
+When you launch the lab **without** `LAB_TICKERS`, it automatically discovers in-play or imminent soccer games from Kalshi:
+
+```bash
+# No tickers needed — auto-discover soccer games with volume
+python -m suspension_lab.cli
+```
+
+The auto-discovery:
+- Queries Kalshi's public API for open soccer markets
+- Groups markets by game and finds the 4 key tickers per match:
+  - **Home ML** (moneyline)
+  - **Away ML** (moneyline)
+  - **O0.5** (over 0.5 goals total)
+  - **O1.5** (over 1.5 goals total)
+- Filters by volume (default: ≥50 total or ≥100 24h volume)
+- Limits to the top 5 games by volume
+- Logs which tickers were added and why
+
+### Auto-discovery options
+
+```bash
+# Discover up to 3 games with higher volume threshold
+python -m suspension_lab.cli --max-games 3 --min-volume 100
+
+# Disable auto-discovery (start with empty tickers)
+python -m suspension_lab.cli --no-auto-discover
+```
+
+### Supported leagues
+
+Auto-discovery works for all Kalshi soccer series:
+- **EPL** (English Premier League)
+- **La Liga**, **Bundesliga**, **Serie A**, **Ligue 1**
+- **Champions League**, **Europa League**, **Conference League**
+- **MLS**, **World Cup**
+- **Peruvian Liga 1**, **Argentine Liga 1**
+
+## Switch to a new game (manual)
 
 1. Close the lab (choose **No** to delete empty test sessions).
 2. Either edit `.env` **or** paste tickers in the UI after launch:
@@ -57,6 +96,23 @@ When a ticker’s **bid jumps ≥10¢** with **≥100 contracts** and **ask conf
 - Signals logged to `goal_signals.csv`
 - VAR revert → red border
 
+## Session analysis digest (NEW)
+
+After a session, run the digest to get a complete summary:
+
+```powershell
+python -m suspension_lab.analyze_digest data/suspension_lab/sessions/YOUR_SESSION
+```
+
+The digest includes:
+- **Signal summary:** total goal signals, spoof bids, VAR events
+- **Fill verification:** which signals would have filled (FILL/PARTIAL/NO_FILL)
+- **P&L analysis:** gross vs adjusted (FILL/PARTIAL only)
+- **Per-line performance:** ML vs O0.5 vs O1.5 breakdown
+- **Conclusions:** whether paper edge looks real
+
+Output: `analysis.md` in the session folder.
+
 ## Replay & backtest (after a session)
 
 ```powershell
@@ -66,6 +122,7 @@ python -m suspension_lab.backtest_exits data/suspension_lab/sessions/YOUR_SESSIO
 python -m suspension_lab.analyze_fills data/suspension_lab/sessions/YOUR_SESSION 100
 python -m suspension_lab.fill_verifier data/suspension_lab/sessions/YOUR_SESSION 50    # fill check
 python -m suspension_lab.lead_lag data/suspension_lab/sessions/YOUR_SESSION            # lead/lag
+python -m suspension_lab.analyze_digest data/suspension_lab/sessions/YOUR_SESSION      # full digest
 ```
 
 Exit modes: **hold_bond** (near-won), **scalp** (+7¢), **var_watch** (VAR protection).
