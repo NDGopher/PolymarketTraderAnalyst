@@ -3,19 +3,13 @@ from __future__ import annotations
 import threading
 import time
 import tkinter as tk
-from datetime import datetime, timezone
 from tkinter import messagebox, scrolledtext, ttk
 
 from suspension_lab.config import LabConfig
-from suspension_lab.kalshi_client import KalshiBookFeed
+from suspension_lab.lab_runtime import LabRuntime
 from suspension_lab.market_labels import MarketLabel
-from suspension_lab.soccer_discovery import (
-    SoccerGame,
-    discover_tickers_for_lab,
-    is_finished_game,
-    repick_session_totals,
-)
-from suspension_lab.tape_engine import TapeEngine, TapeEvent
+from suspension_lab.soccer_discovery import SoccerGame, is_finished_game
+from suspension_lab.tape_engine import TapeEvent
 
 BG = "#0e1116"
 CARD = "#161b22"
@@ -31,35 +25,29 @@ SPOOF_BG = "#3d2e10"
 
 
 class SuspensionLabApp:
-    def __init__(self, config: LabConfig) -> None:
-        self.config = config
-        ts = datetime.now(tz=timezone.utc).strftime("%Y%m%d_%H%M%S")
-        slug = config.game_label.replace(" ", "_")[:40] if config.game_label else "session"
-        session_dir = config.output_dir / f"{ts}_{slug}"
-        paper_on = config.paper_enabled or True
-        self.engine = TapeEngine.create(
-            session_dir,
-            config.tickers,
-            game_label=config.game_label,
-            games=list(getattr(config, "games", []) or []),
-            rest_base=config.rest_base,
-            paper_enabled=paper_on,
-        )
-        self.engine.on_event = self._queue_event
+    def __init__(
+        self,
+        config: LabConfig | None = None,
+        *,
+        runtime: LabRuntime | None = None,
+    ) -> None:
+        if runtime is None:
+            if config is None:
+                raise ValueError("config or runtime is required")
+            runtime = LabRuntime(config)
+        self.runtime = runtime
+        self.config = runtime.config
+        self.engine = runtime.engine
         self.logger = self.engine.logger
         self.trader = self.engine.trader
-        self.feed = KalshiBookFeed(config, on_book=self._on_book, on_status=self._on_status)
-        self.logger.bind_book_provider(self._books_for_log)
-        self._sample_stop = threading.Event()
-        self._sample_thread: threading.Thread | None = None
+        self.feed = runtime.feed
         self._labels = self.engine.labels
         self._ticker_boxes: dict[str, dict] = {}
         self._game_cards: dict[str, tk.Widget] = {}
         self._idle_card = None
-        self._active_tickers: list[str] = list(config.tickers)
+        self._active_tickers: list[str] = list(self.config.tickers)
         self._pending_events: list[TapeEvent] = []
         self._event_lock = threading.Lock()
-        self._last_rediscover = time.time()
         self._started = time.time()
 
         self.root = tk.Tk()
@@ -72,7 +60,7 @@ class SuspensionLabApp:
         self._labels.load_all_async(on_update=self._on_label_loaded)
         self.root.after(200, self._drain_events)
         self.root.after(400, self._refresh_display)
-        self.root.after(30_000 if not config.tickers else 60_000, self._rediscover)
+        # Laptop hotfix: do not schedule _rediscover at 30s (empty) or 60s (seated).
 
     def _style(self) -> None:
         style = ttk.Style(self.root)
@@ -227,7 +215,7 @@ class SuspensionLabApp:
             ).pack(fill="x")
             tk.Label(
                 idle,
-                text="Auto-discover rescans every 30s. Kalshi WS is not subscribed until a book appears.",
+                text="Waiting for live soccer. One discover until a book seats, then WS only. No 60s rediscover.",
                 font=("Segoe UI", 9),
                 fg=MUTED,
                 bg=CARD,
@@ -352,25 +340,12 @@ class SuspensionLabApp:
         if not raw or raw.startswith("Optional:"):
             return
         parts = [p.strip() for p in raw.replace("\n", ",").split(",") if p.strip()]
-        added = 0
-        new: list[str] = []
-        for ticker in parts:
-            if ticker in self._ticker_boxes:
-                continue
-            if not self.feed.add_ticker(ticker):
-                continue
-            self.logger.register_ticker(ticker)
-            self._labels.register_ticker(ticker)
-            self._active_tickers.append(ticker)
-            new.append(ticker)
-            added += 1
-        if added:
-            self._create_loose_card(new)
-            self._ticker_entry.delete(0, tk.END)
-            for ticker in new:
-                self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
-        else:
+        new = [t for t in parts if t not in self._ticker_boxes]
+        if not new:
             messagebox.showinfo("Add ticker", "Ticker already tracked or invalid.")
+            return
+        self.runtime.request_add_tickers(new)
+        self._ticker_entry.delete(0, tk.END)
 
     def _books_for_log(self) -> dict[str, dict]:
         out: dict[str, dict] = {}
@@ -388,27 +363,56 @@ class SuspensionLabApp:
             self._pending_events.append(event)
 
     def _drain_events(self) -> None:
+        for paint in self.runtime.drain_ui():
+            if paint.kind == "event":
+                event = paint.payload.get("event")
+                if event is not None:
+                    self._show_event(event)
+            elif paint.kind == "status":
+                self.status_var.set(paint.payload.get("text") or self.status_var.get())
+            elif paint.kind == "discover":
+                self._absorb_discovery(
+                    list(paint.payload.get("result").tickers)
+                    if paint.payload.get("result") is not None
+                    else [],
+                    list(paint.payload.get("result").games)
+                    if paint.payload.get("result") is not None
+                    else [],
+                    paint.payload.get("kept"),
+                    paint.payload.get("fund"),
+                    paint.payload.get("drop"),
+                )
+            elif paint.kind == "tickers_added":
+                added = [t for t in paint.payload.get("tickers") or [] if t not in self._ticker_boxes]
+                if added:
+                    self._create_loose_card(added)
+                    self._active_tickers.extend(added)
+                    for ticker in added:
+                        self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
         with self._event_lock:
             pending = list(self._pending_events)
             self._pending_events.clear()
         for event in pending:
-            self.events_text.insert(tk.END, f"{event.ts_iso[11:19]}  {event.kind:5}  {event.detail}\n", event.kind)
-            self.events_text.see(tk.END)
-            box = self._ticker_boxes.get(event.ticker)
-            if box:
-                colors = {
-                    "GOAL": (GREEN, GOAL_BG),
-                    "VAR": (RED, VAR_BG),
-                    "SPOOF": (AMBER, SPOOF_BG),
-                    "SKIP": (MUTED, BG),
-                    "EXIT": (INK, BG),
-                }
-                fg, bg = colors.get(event.kind, (INK, BG))
-                box["banner"].config(text=f"{event.kind}: {event.detail[:80]}", fg=fg, bg=bg)
-                box["banner"].pack(fill="x", pady=(4, 0))
-                box["box"].config(highlightbackground=fg, highlightthickness=2)
+            self._show_event(event)
         self._refresh_scoreboard()
         self.root.after(200, self._drain_events)
+
+    def _show_event(self, event: TapeEvent) -> None:
+        self.events_text.insert(tk.END, f"{event.ts_iso[11:19]}  {event.kind:5}  {event.detail}\n", event.kind)
+        self.events_text.see(tk.END)
+        box = self._ticker_boxes.get(event.ticker)
+        if box:
+            colors = {
+                "GOAL": (GREEN, GOAL_BG),
+                "VAR": (RED, VAR_BG),
+                "SPOOF": (AMBER, SPOOF_BG),
+                "SKIP": (MUTED, BG),
+                "EXIT": (INK, BG),
+            }
+            fg, bg = colors.get(event.kind, (INK, BG))
+            box["banner"].config(text=f"{event.kind}: {event.detail[:80]}", fg=fg, bg=bg)
+            box["banner"].pack(fill="x", pady=(4, 0))
+            box["box"].config(highlightbackground=fg, highlightthickness=2)
 
     def _refresh_scoreboard(self) -> None:
         b = self.trader.scoreboard()
@@ -448,24 +452,8 @@ class SuspensionLabApp:
         self.root.after(250, self._refresh_display)
 
     def _rediscover(self) -> None:
-        def _run() -> None:
-            try:
-                tickers, _log, games = discover_tickers_for_lab(
-                    rest_base=self.config.rest_base, max_games=8
-                )
-            except Exception:  # noqa: BLE001
-                self.root.after(60_000, self._rediscover)
-                return
-            recent_goal = any(e.kind == "GOAL" for e in self.engine.events[-12:])
-            grind_ready = (time.time() - self._started) >= 15 * 60 and not recent_goal
-            kept, fund, drop = repick_session_totals(
-                list(self.engine.games),
-                games,
-                drop_far_wing=grind_ready,
-            )
-            self.root.after(0, lambda: self._absorb_discovery(tickers, games, kept, fund, drop))
-
-        threading.Thread(target=_run, name="rediscover", daemon=True).start()
+        """Do not reschedule. The 30s/60s Tk timer was the second 429 pump."""
+        return
 
     def _drop_ticker_box(self, ticker: str) -> None:
         self.feed.remove_ticker(ticker)
@@ -533,10 +521,13 @@ class SuspensionLabApp:
                     continue
                 if fund_set and ticker not in fund_set:
                     continue
-                if self.feed.add_ticker(ticker):
-                    self.logger.register_ticker(ticker)
-                    self._labels.register_ticker(ticker)
-                    self._active_tickers.append(ticker)
+                already = ticker in self.feed.books
+                if already or self.feed.add_ticker(ticker):
+                    if ticker not in self._active_tickers:
+                        self._active_tickers.append(ticker)
+                    if not already:
+                        self.logger.register_ticker(ticker)
+                        self._labels.register_ticker(ticker)
                     added.append(ticker)
             if added and game in new_games:
                 if self._idle_card is not None:
@@ -559,22 +550,14 @@ class SuspensionLabApp:
                 self.events_text.insert(
                     tk.END, f"TOTALS RE-PICK  {game.title} {game.totals_summary()}\n", "PAPER"
                 )
-        delay = 30_000 if not self._active_tickers else 60_000
-        self.root.after(delay, self._rediscover)
+        # Once any book is seated, discovery stops for the rest of the session.
 
-    def _sample_loop(self) -> None:
-        interval = max(self.config.poll_ms, 100) / 1000.0
-        while not self._sample_stop.is_set():
-            books = self._books_for_log()
-            if books:
-                self.logger.log_book_sample(books)
-            time.sleep(interval)
+    def start(self) -> None:
+        """Start the feed. Seated tickers do not queue a 60s rediscover."""
+        self.runtime.start()
 
     def run(self) -> None:
-        self.feed.start()
-        self._sample_stop.clear()
-        self._sample_thread = threading.Thread(target=self._sample_loop, daemon=True)
-        self._sample_thread.start()
+        self.start()
         self.root.mainloop()
 
     def _on_close(self) -> None:
@@ -587,8 +570,7 @@ class SuspensionLabApp:
         )
         if choice is None:
             return
-        self._sample_stop.set()
-        self.feed.stop()
+        self.runtime.stop()
         if choice:
             self.logger.finalize(saved=True, notes_text=notes_preview)
             messagebox.showinfo("Session saved", f"Logs saved to:\n{self.logger.session_dir}")
@@ -599,6 +581,6 @@ class SuspensionLabApp:
         self.root.destroy()
 
 
-def run_app(config: LabConfig) -> None:
-    app = SuspensionLabApp(config)
+def run_app(config: LabConfig | None = None, runtime: LabRuntime | None = None) -> None:
+    app = SuspensionLabApp(config, runtime=runtime)
     app.run()
