@@ -5,7 +5,6 @@ from pathlib import Path
 from unittest.mock import patch
 
 from suspension_lab.goal_signal import (
-    DelayedStateNotice,
     GoalSignal,
     GoalSignalDetector,
 )
@@ -193,28 +192,32 @@ class TestScalpQuote:
         assert q.entry_cents == 33
         assert q.entry_cents != 36  # not mid of 32/40
 
-    def test_skip_fee_peak_tight_spread(self):
+    def test_near_fifty_still_quotes_bid_plus_1(self):
         q = make_around_jump(49, 51)
-        assert q.skipped
-        assert "50" in q.skip_reason or "tight" in q.skip_reason or "fee" in q.skip_reason
+        assert not q.skipped
+        assert q.entry_cents == 50
+        assert q.used_mid is False
 
 
 class TestBookGoalDetection:
-    def test_spread_blowout_is_goal(self):
+    def test_one_tick_bid_jump_with_size_and_ask_confirm(self):
         det = GoalSignalDetector()
-        t = "KXCOPPAITALIATOTAL-26SEP02SASFRO-1"
-        det.evaluate(t, _book(t, "0.40", "0.42", ts=1000))
-        result = det.evaluate(t, _book(t, "0.48", "0.64", bid_qty="250", ts=1200))
+        t = "KXCOPPAITALIAGAME-26SEP02SASFRO-SAS"
+        det.evaluate(t, _book(t, "0.19", "0.20", bid_qty="100", ts=1000))
+        result = det.evaluate(t, _book(t, "0.34", "0.40", bid_qty="2568", ts=1200))
         assert isinstance(result, GoalSignal)
-        assert "blowout" in result.reason or result.bid_jump_cents >= 6
+        assert result.reason == "bid_jump_with_size_and_ask_confirm"
+        assert result.bid_jump_cents == 15
+        assert result.exit_mode == "scalp"
 
-    def test_delayed_grind_is_skip(self):
+    def test_grind_is_not_goal_or_skip_signal(self):
         det = GoalSignalDetector()
         t = "KXEPLGAME-26SEP02TEST-ARS"
-        det.evaluate(t, _book(t, "0.30", "0.32", ts=1000))
+        result = det.evaluate(t, _book(t, "0.30", "0.32", bid_qty="500", ts=1000))
         for i, bid in enumerate(("0.32", "0.34", "0.36", "0.38", "0.41")):
-            result = det.evaluate(t, _book(t, bid, "0.43", ts=1000 + (i + 1) * 800))
-        assert isinstance(result, DelayedStateNotice)
+            result = det.evaluate(t, _book(t, bid, "0.43", bid_qty="500", ts=1000 + (i + 1) * 800))
+        assert result is None
+        assert not det._signal_peak_bid
 
 
 class TestInGameTotalsOnTape:

@@ -26,21 +26,19 @@ WIDE_SPREAD_CENTS = 10
 MARKOUT_SECONDS = (1, 3, 5, 10, 30)
 BOOK_SAMPLE_MS = 200
 
-# Live goal-signal detector (bid momentum, not ask-only scares)
-GOAL_BID_JUMP_CENTS = 10
-GOAL_MIN_BID_QTY = 100
+# Live goal-signal detector — fd32045 fire (PR #5) + qty 500
+GOAL_BID_JUMP_CENTS = 10  # one-tick bid jump
+GOAL_MIN_BID_QTY = 500  # MM size; 100 was too thin (was 100 through PR #8)
 GOAL_MIN_PREV_BID_CENTS = 15  # ignore startup / bond noise
-GOAL_ASK_CONFIRM_CENTS = 3  # ask must step up with bid (full book reprice)
+GOAL_ASK_CONFIRM_CENTS = 3  # extra confirm: same-tick ask +3c or 2.5s lookback
 GOAL_SIGNAL_COOLDOWN_MS = 45_000
 GOAL_HIGHLIGHT_SECONDS = 45
-GOAL_ASK_LOOKBACK_MS = 2_500  # ask-led-bid: ask moved in prior ~2.5s
+GOAL_ASK_LOOKBACK_MS = 2_500  # extra ask-led confirm only; not a standalone trigger
 GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS = 5  # allow small bid drift while ask leads
-GOAL_SPREAD_BLOWOUT_CENTS = 12  # tight book → wide = books pulled (goal/suspension)
-GOAL_MIN_BLOWOUT_JUMP_CENTS = 6
-GOAL_DELAYED_WINDOW_MS = 4_000  # grind over ~4s is red-card / delayed state, not a goal
 BOND_HOLD_BID_CENTS = 88  # bid here -> hold to 99 / resolution, not +7 scalp
 VAR_REVERT_CENTS = 10  # peak-to-trough drop triggers VAR/cancelled alert
 VAR_REVERT_WINDOW_MS = 120_000
+SCALP_TARGET_CENTS = 7  # paper scalp +7 (user band 7–10)
 
 # Paper auto-trader (off by default — set LAB_TRADER_ENABLED=1 to paper-trade)
 TRADER_DEFAULT_CONTRACTS = 50

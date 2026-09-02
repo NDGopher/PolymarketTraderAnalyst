@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from suspension_lab.config import SCALP_TARGET_CENTS
+
 
 @dataclass(frozen=True)
 class ExitDecision:
@@ -13,7 +15,7 @@ class ExitDecision:
     limit_cents: int | None = None
 
 
-def scalp_target_cents(entry_cents: int, plus: int = 7) -> int:
+def scalp_target_cents(entry_cents: int, plus: int = SCALP_TARGET_CENTS) -> int:
     return min(entry_cents + plus, 99)
 
 
@@ -115,7 +117,7 @@ def check_exit(
     seconds_held: float,
     current_ask_cents: int | None = None,
     bid_qty: float = 0,
-    scalp_plus: int = 7,
+    scalp_plus: int = SCALP_TARGET_CENTS,
     bond_cents: int = 95,
     stall_sec: float = 20.0,
 ) -> ExitDecision:

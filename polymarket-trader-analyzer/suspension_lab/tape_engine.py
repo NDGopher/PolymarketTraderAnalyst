@@ -13,7 +13,6 @@ from typing import Any, Callable
 
 from suspension_lab.auto_trader import PaperAutoTrader, PaperPosition, TraderConfig
 from suspension_lab.goal_signal import (
-    DelayedStateNotice,
     GoalSignal,
     GoalSignalDetector,
     SpoofBidNotice,
@@ -159,22 +158,6 @@ class TapeEngine:
                 )
             )
             return None
-
-        if isinstance(result, DelayedStateNotice):
-            closed = self.trader.flatten(
-                ticker, bid_cents, f"flatten delayed/red-card-like +{result.bid_change_cents}c"
-            )
-            self._emit(
-                TapeEvent(
-                    "SKIP",
-                    ticker,
-                    display,
-                    f"{result.reason} +{result.bid_change_cents}c over {result.seconds:.1f}s — no scalp",
-                    now,
-                    "burned" if closed else "skip",
-                )
-            )
-            return closed
 
         if bid_cents is not None and self.trader.config.enabled:
             closed = self.trader.on_book(
