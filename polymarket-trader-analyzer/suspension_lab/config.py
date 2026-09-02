@@ -73,7 +73,7 @@ class LabConfig:
         output_dir: str | Path | None = None,
     ) -> LabConfig:
         load_project_env()
-        game = game_label or os.environ.get("LAB_GAME", "")
+        game = game_label
         demo_flag = demo or os.environ.get("KALSHI_DEMO", "").lower() in ("1", "true", "yes")
         pem = resolve_private_key_pem()
         key_path = resolve_private_key_path()

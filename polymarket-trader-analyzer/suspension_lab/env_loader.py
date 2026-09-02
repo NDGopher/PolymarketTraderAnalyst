@@ -100,11 +100,12 @@ def env_status_message() -> str:
             f"  {root.parent / '.env'}"
         )
     load_project_env()
-    tickers = os.environ.get("LAB_TICKERS", "").strip()
+    leftover = os.environ.get("LAB_TICKERS", "").strip()
     key_id = resolve_api_key_id()
     lines = [f"Using .env: {path}"]
     lines.append(
-        f"LAB_TICKERS: {'set (' + str(len(tickers)) + ' chars)' if tickers else 'auto-discover (empty)'}"
+        "LAB_TICKERS: ignored (auto-discover always wins; use CLI --tickers to pin)"
+        + (f" — leftover .env has {len(leftover)} chars" if leftover else "")
     )
     lines.append(f"KALSHI_KEY_ID: {'set' if key_id else 'MISSING'}")
     return "\n".join(lines)

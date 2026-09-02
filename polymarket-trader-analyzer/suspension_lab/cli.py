@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
 import typer
@@ -12,6 +11,7 @@ from suspension_lab.soccer_discovery import (
     format_discovery_log,
     format_slate_digest,
     needs_auto_discover,
+    parse_cli_tickers,
 )
 
 load_project_env()
@@ -22,10 +22,15 @@ def main(
         "",
         "--tickers",
         "-t",
-        envvar="LAB_TICKERS",
-        help="Optional pin. Empty / placeholder / 'auto' → discover today's soccer",
+        help="Optional explicit KX… pin. Empty / placeholder / yesterday → discover. "
+        "Does not read LAB_TICKERS from .env.",
     ),
-    game: str = typer.Option("", "--game", "-g", envvar="LAB_GAME", help="Match label"),
+    game: str = typer.Option(
+        "",
+        "--game",
+        "-g",
+        help="Match label. Does not read LAB_GAME from .env.",
+    ),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
     rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; poll REST orderbook"),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms", help="Book sample interval in ms"),
@@ -37,20 +42,18 @@ def main(
     auto_discover: bool = typer.Option(
         True,
         "--auto-discover/--no-auto-discover",
-        help="Auto-discover today's soccer when LAB_TICKERS is empty or a placeholder",
+        help="Default ON. Auto-discover always wins unless --tickers is a real KX… ticker.",
     ),
     max_games: int = typer.Option(5, "--max-games", help="Max games to auto-fund"),
     min_volume: float = typer.Option(50.0, "--min-volume", help="Min volume for auto-pick"),
     headless: bool = typer.Option(False, "--headless", help="Unattended paper logger (no UI)"),
     digest_only: bool = typer.Option(False, "--digest-only", help="Print today's slate and exit"),
 ) -> None:
-    """Soccer paper tape: auto-discover today, log books, scalp GOAL jumps. No live bets."""
+    """Soccer paper tape: auto-discover live soccer. Empty start waits. No live bets."""
     load_project_env()
 
-    ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
-    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()] if ticker_str else []
-    if ticker_str.lower() == "run":
-        ticker_list = []
+    # CLI --tickers only. Stale .env LAB_TICKERS cannot skip discovery.
+    ticker_list = parse_cli_tickers(tickers)
 
     rest_base = (
         "https://demo-api.kalshi.co/trade-api/v2"
@@ -60,29 +63,32 @@ def main(
 
     discovered_games = []
     discovery_result = None
-    if auto_discover and needs_auto_discover(ticker_list):
-        typer.echo("\n--- Auto-discovering today's soccer ---", err=True)
-        discovery_result = discover_soccer_games(
-            rest_base=rest_base,
-            min_volume=min_volume,
-            max_games=max_games,
-        )
-        ticker_list = discovery_result.tickers
-        discovered_games = discovery_result.games
-        typer.echo(format_discovery_log(discovery_result), err=True)
-        typer.echo("---\n", err=True)
-        if ticker_list:
-            typer.echo(
-                f"Auto-funded {len(ticker_list)} tickers from {len(discovered_games)} games (paper).",
-                err=True,
+    if auto_discover or needs_auto_discover(ticker_list):
+        if needs_auto_discover(ticker_list):
+            typer.echo("\n--- Auto-discovering live Kalshi soccer (ignoring .env pins) ---", err=True)
+            discovery_result = discover_soccer_games(
+                rest_base=rest_base,
+                min_volume=min_volume,
+                max_games=max_games,
             )
+            ticker_list = discovery_result.tickers
+            discovered_games = discovery_result.games
+            typer.echo(format_discovery_log(discovery_result), err=True)
+            typer.echo("---\n", err=True)
+            if ticker_list:
+                typer.echo(
+                    f"Auto-funded {len(ticker_list)} tickers from {len(discovered_games)} games (paper).",
+                    err=True,
+                )
+            else:
+                typer.echo(
+                    "No live soccer yet — REST idle, no WS subscribe. Rescan every 30–60s.",
+                    err=True,
+                )
         else:
-            typer.echo(
-                "No today/tonight soccer tape. Auto-discover is ready for the next slate.",
-                err=True,
-            )
+            typer.echo("Using explicit CLI --tickers (real KX… pin).", err=True)
     elif not ticker_list:
-        typer.echo("No tickers and auto-discover disabled — add books in the UI.", err=True)
+        typer.echo("No tickers and auto-discover disabled — waiting for live soccer.", err=True)
 
     if digest_only:
         if discovery_result is None:
@@ -95,11 +101,9 @@ def main(
     if headless:
         from suspension_lab.paper_logger import run_paper_logger
 
-        game_label = (game or os.environ.get("LAB_GAME", "")).strip()
+        game_label = (game or "").strip()
         if not game_label and discovered_games:
             game_label = " | ".join(g.title[:28] for g in discovered_games[:2])
-        if not ticker_list:
-            raise typer.Exit(0)
         run_paper_logger(
             tickers=ticker_list,
             games=discovered_games,
@@ -112,7 +116,7 @@ def main(
         )
         return
 
-    game_label = (game or os.environ.get("LAB_GAME", "")).strip()
+    game_label = (game or "").strip()
     if not game_label and discovered_games:
         game_label = " | ".join(g.title[:30] for g in discovered_games[:2])
         if len(discovered_games) > 2:
@@ -138,7 +142,7 @@ def main(
 
     typer.echo(env_status_message())
     typer.echo(f"Project: {project_root()}")
-    typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(add in UI)'}")
+    typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(waiting for live soccer)'}")
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
     typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'REST polling'}")

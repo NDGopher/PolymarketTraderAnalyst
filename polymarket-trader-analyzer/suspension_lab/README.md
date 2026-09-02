@@ -10,7 +10,7 @@ START_SUSPENSION_LAB.bat
 
 ## Auto-discovery (NEW)
 
-When you launch the lab **without** `LAB_TICKERS`, it automatically discovers in-play or imminent soccer games from Kalshi:
+When you launch the lab **without** `--tickers`, it automatically discovers in-play or imminent soccer games from Kalshi. `.env LAB_TICKERS` is ignored (it is not a pin list):
 
 ```bash
 # No tickers needed — auto-discover soccer games with volume
@@ -20,11 +20,12 @@ python -m suspension_lab.cli
 The auto-discovery:
 - Queries Kalshi's public API for open soccer markets
 - Groups markets by game and funds:
-  - **Home ML** / **Away ML** (TIE is skipped)
+  - **Home ML** / **Away ML** (liquid TIE is funded)
   - The **total nearest 50¢ YES from live prices** (not a frozen pregame O2.5; at 1-1 that is usually O3.5)
   - The **next strike up** if liquid (O4.5 at 1-1). If that wing drifts far from 50¢ with no goal, drop to the cheaper adjacent strike (O2.5)
-- Prefers **today/tonight kickoffs**, then volume (default: ≥50 total or ≥100 24h)
-- Auto-funds the top 5 live/soon games, plus **in-play** and **priority** matches (Sassuolo / Frosinone / AEK) even if they miss top-5 volume
+- Rank: **in-play first**, then kickoff-soon, then 24h volume. No team-name bias.
+- Fingerprint discovery (Egypt, TFF, Coppa, cups, second divisions) — prefix list is a boost, not a closed set
+- Finished / yesterday books are dropped. Empty start stays REST-idle (no empty WS subscribe) and rescans
 - Logs which tickers were added and why
 
 ### Auto-discovery options
@@ -47,7 +48,9 @@ Auto-discovery picks **today / tonight** by `occurrence_datetime` (not Saturday 
 - **Brasileirão** A/B, **Liga MX**
 - **Peru Liga 1**, **Argentina Primera**, **Chile**, **Colombia (DIMAYOR)**
 - **Ecuador LigaPro**, **Venezuela**, **Libertadores / Sudamericana**
-- **Super League Greece**, **Greek Cup** (AEK / PAOK slates)
+- **Super League Greece**, **Greek Cup**
+- **Egypt Premier League**, **Turkish TFF 1. Lig**
+- Plus any other open Kalshi soccer GAME/TOTAL (fingerprint, not a whitelist)
 
 Unattended paper logger (no UI, no live bets):
 
@@ -62,11 +65,7 @@ GOAL is detected from the **order book** (bid jump or spread blowout), not a sco
 ## Switch to a new game (manual)
 
 1. Close the lab (choose **No** to delete empty test sessions).
-2. Either edit `.env` **or** paste tickers in the UI after launch:
-   ```env
-   LAB_TICKERS=NEW_TICKER_O35,NEW_TICKER_O45   # optional — can add in UI instead
-   LAB_GAME=TeamA-TeamB
-   ```
+2. Paste extra tickers in the UI after launch, or pass an explicit CLI `--tickers KX…` (real Kalshi ticker only). Do not pin yesterday in `.env`.
 3. Run the launcher again. Each run creates a new session folder.
 
 **Runtime tickers:** Use the text box at the top of the UI to add Kalshi tickers while the session runs.

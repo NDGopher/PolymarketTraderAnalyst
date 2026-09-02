@@ -24,7 +24,14 @@ from suspension_lab.soccer_discovery import (
     select_scalp_totals,
     select_ingame_totals,
     apply_live_totals,
-    is_priority_game,
+    is_finished_game,
+    is_soccer_series_ticker,
+    is_stale_lab_ticker,
+    looks_like_soccer_market,
+    filter_soccer_markets,
+    needs_auto_discover,
+    parse_cli_tickers,
+    soccer_series_tickers_from_catalog,
     strike_to_over_label,
 )
 
@@ -323,44 +330,44 @@ class TestDiscoverSoccerGames:
         """Test discovery returns games with sufficient volume."""
         mock_fetch.return_value = [
             {
-                "ticker": "KXEPLGAME-26AUG31ARSCHE-ARS",
-                "event_ticker": "KXEPLGAME-26AUG31ARSCHE",
+                "ticker": "KXEPLGAME-26SEP02ARSCHE-ARS",
+                "event_ticker": "KXEPLGAME-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
             {
-                "ticker": "KXEPLGAME-26AUG31ARSCHE-CHE",
-                "event_ticker": "KXEPLGAME-26AUG31ARSCHE",
+                "ticker": "KXEPLGAME-26SEP02ARSCHE-CHE",
+                "event_ticker": "KXEPLGAME-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
             {
-                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-1",
-                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "ticker": "KXEPLTOTAL-26SEP02ARSCHE-1",
+                "event_ticker": "KXEPLTOTAL-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea O0.5",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
                 "yes_bid_dollars": "0.91",
                 "yes_ask_dollars": "0.93",
             },
             {
-                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-2",
-                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "ticker": "KXEPLTOTAL-26SEP02ARSCHE-2",
+                "event_ticker": "KXEPLTOTAL-26SEP02ARSCHE",
                 "title": "Arsenal vs Chelsea O1.5",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
                 "yes_bid_dollars": "0.70",
                 "yes_ask_dollars": "0.72",
             },
             {
-                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-3",
-                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "ticker": "KXEPLTOTAL-26SEP02ARSCHE-3",
+                "event_ticker": "KXEPLTOTAL-26SEP02ARSCHE",
                 "volume_fp": "80.00",
                 "volume_24h_fp": "250.00",
                 "yes_bid_dollars": "0.48",
@@ -371,10 +378,10 @@ class TestDiscoverSoccerGames:
         result = discover_soccer_games(min_volume=50, min_24h_volume=100)
 
         assert len(result.games) == 1
-        assert "KXEPLGAME-26AUG31ARSCHE-ARS" in result.tickers
-        assert "KXEPLGAME-26AUG31ARSCHE-CHE" in result.tickers
-        assert "KXEPLTOTAL-26AUG31ARSCHE-1" not in result.tickers
-        assert "KXEPLTOTAL-26AUG31ARSCHE-3" in result.tickers
+        assert "KXEPLGAME-26SEP02ARSCHE-ARS" in result.tickers
+        assert "KXEPLGAME-26SEP02ARSCHE-CHE" in result.tickers
+        assert "KXEPLTOTAL-26SEP02ARSCHE-1" not in result.tickers
+        assert "KXEPLTOTAL-26SEP02ARSCHE-3" in result.tickers
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
     def test_discover_no_markets(self, mock_fetch):
@@ -416,7 +423,8 @@ class TestDiscoverSoccerGames:
                     "ticker": f"KXEPLGAME-GAME{i}-HOME",
                     "event_ticker": f"KXEPLGAME-GAME{i}",
                     "title": f"Home vs Away {i}",
-                    "close_time": "2026-08-31T18:00:00Z",
+                    "close_time": "2026-09-05T18:00:00Z",
+                    "occurrence_datetime": "2026-09-02T18:00:00Z",
                     "volume_fp": "100.00",
                     "volume_24h_fp": str(1000 - i * 100),
                 },
@@ -424,14 +432,16 @@ class TestDiscoverSoccerGames:
                     "ticker": f"KXEPLGAME-GAME{i}-AWAY",
                     "event_ticker": f"KXEPLGAME-GAME{i}",
                     "title": f"Home vs Away {i}",
-                    "close_time": "2026-08-31T18:00:00Z",
+                    "close_time": "2026-09-05T18:00:00Z",
+                    "occurrence_datetime": "2026-09-02T18:00:00Z",
                     "volume_fp": "100.00",
                     "volume_24h_fp": str(1000 - i * 100),
                 },
             ])
         mock_fetch.return_value = markets
 
-        result = discover_soccer_games(max_games=3)
+        now = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=3, now=now)
 
         assert len(result.games) == 3
 
@@ -474,44 +484,44 @@ class TestDiscoveryResultEdgeCases:
         """Test that Peruvian league tickers are discovered correctly."""
         mock_fetch.return_value = [
             {
-                "ticker": "KXPERLIGA1GAME-26AUG31CAGMEL-CAG",
-                "event_ticker": "KXPERLIGA1GAME-26AUG31CAGMEL",
+                "ticker": "KXPERLIGA1GAME-26SEP02CAGMEL-CAG",
+                "event_ticker": "KXPERLIGA1GAME-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
             {
-                "ticker": "KXPERLIGA1GAME-26AUG31CAGMEL-MEL",
-                "event_ticker": "KXPERLIGA1GAME-26AUG31CAGMEL",
+                "ticker": "KXPERLIGA1GAME-26SEP02CAGMEL-MEL",
+                "event_ticker": "KXPERLIGA1GAME-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "500.00",
             },
             {
-                "ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL-1",
-                "event_ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL",
+                "ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL-1",
+                "event_ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar O0.5",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
                 "yes_bid_dollars": "0.91",
                 "yes_ask_dollars": "0.93",
             },
             {
-                "ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL-2",
-                "event_ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL",
+                "ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL-2",
+                "event_ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL",
                 "title": "Cajamarca vs Melgar O1.5",
-                "close_time": "2026-08-31T18:00:00Z",
+                "close_time": "2026-09-02T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
                 "yes_bid_dollars": "0.48",
                 "yes_ask_dollars": "0.50",
             },
             {
-                "ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL-3",
-                "event_ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL",
+                "ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL-3",
+                "event_ticker": "KXPERLIGA1TOTAL-26SEP02CAGMEL",
                 "volume_fp": "40.00",
                 "volume_24h_fp": "180.00",
                 "yes_bid_dollars": "0.28",
@@ -524,8 +534,8 @@ class TestDiscoveryResultEdgeCases:
         assert len(result.games) == 1
         game = result.games[0]
         assert "KXPERLIGA1" in game.home_ml_ticker
-        assert game.total_atm_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-2"
-        assert game.total_up_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-3"
+        assert game.total_atm_ticker == "KXPERLIGA1TOTAL-26SEP02CAGMEL-2"
+        assert game.total_up_ticker == "KXPERLIGA1TOTAL-26SEP02CAGMEL-3"
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
     def test_brasileirao_tickers(self, mock_fetch):
@@ -843,46 +853,26 @@ class TestInGameTotalsRepick:
         assert "KXCOPPAITALIATOTAL-26SEP02SASFRO-3" not in game.get_tickers()
 
 
-class TestGreekAndPriorityFund:
-    def test_greek_prefixes_present(self):
+class TestGreekPrefixesNoTeamBias:
+    def test_greek_and_egypt_tff_prefixes_are_boost_only(self):
         for series in (
             "KXSLGREECEGAME",
             "KXSLGREECETOTAL",
             "KXGRECUPGAME",
             "KXGRECUPTOTAL",
+            "KXEGYPLGAME",
+            "KXEGYPLTOTAL",
+            "KXTFF1LIGGAME",
+            "KXTFF1LIGTOTAL",
         ):
             assert series in SOCCER_SERIES_PREFIXES
         assert "KXSLGREECEGAME" in SERIES_WITH_GAMES
         assert "KXGRECUPTOTAL" in SERIES_WITH_TOTALS
-
-    def test_priority_matches_aek_and_sassuolo(self):
-        aek = SoccerGame(
-            event_ticker="KXGRECUPGAME-26SEP02NCHAEK",
-            title="Chrysoupoli vs AEK Athens",
-            home_team="Chrysoupoli",
-            away_team="AEK Athens",
-            close_time="2026-09-02T17:00:00Z",
-        )
-        sas = SoccerGame(
-            event_ticker="KXCOPPAITALIAGAME-26SEP02SASFRO",
-            title="Sassuolo vs Frosinone",
-            home_team="Sassuolo",
-            away_team="Frosinone",
-            close_time="2026-09-02T18:00:00Z",
-        )
-        other = SoccerGame(
-            event_ticker="KXEPLGAME-26SEP02ARSLIV",
-            title="Arsenal vs Liverpool",
-            home_team="Arsenal",
-            away_team="Liverpool",
-            close_time="2026-09-02T18:00:00Z",
-        )
-        assert is_priority_game(aek)
-        assert is_priority_game(sas)
-        assert not is_priority_game(other)
+        assert "KXEGYPLGAME" in SERIES_WITH_GAMES
+        assert "KXTFF1LIGTOTAL" in SERIES_WITH_TOTALS
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
-    def test_priority_aek_funded_outside_top5_volume(self, mock_fetch):
+    def test_low_volume_aek_is_not_force_funded(self, mock_fetch):
         markets = []
         now_occ = "2026-09-02T14:00:00Z"
         for i in range(5):
@@ -927,36 +917,18 @@ class TestGreekAndPriorityFund:
                     "volume_fp": "10",
                     "volume_24h_fp": "20",
                 },
-                {
-                    "ticker": "KXGRECUPTOTAL-26SEP02NCHAEK-3",
-                    "event_ticker": "KXGRECUPTOTAL-26SEP02NCHAEK",
-                    "occurrence_datetime": now_occ,
-                    "volume_fp": "10",
-                    "volume_24h_fp": "20",
-                    "yes_bid_dollars": "0.48",
-                    "yes_ask_dollars": "0.52",
-                },
-                {
-                    "ticker": "KXGRECUPTOTAL-26SEP02NCHAEK-4",
-                    "event_ticker": "KXGRECUPTOTAL-26SEP02NCHAEK",
-                    "occurrence_datetime": now_occ,
-                    "volume_fp": "8",
-                    "volume_24h_fp": "15",
-                    "yes_bid_dollars": "0.28",
-                    "yes_ask_dollars": "0.32",
-                },
             ]
         )
         mock_fetch.return_value = markets
         now = datetime(2026, 9, 2, 14, 10, tzinfo=timezone.utc)
         result = discover_soccer_games(max_games=5, now=now, min_volume=50, min_24h_volume=100)
         titles = " ".join(g.title for g in result.games)
-        assert "AEK" in titles
-        assert any("KXGRECUPGAME-26SEP02NCHAEK" in t for t in result.tickers)
-        assert any(t.endswith("-3") and "NCHAEK" in t for t in result.tickers)
+        assert "AEK" not in titles
+        assert not any("NCHAEK" in t for t in result.tickers)
+        assert len(result.games) == 5
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
-    def test_priority_does_not_pin_next_week_sassuolo(self, mock_fetch):
+    def test_does_not_pin_next_week_sassuolo(self, mock_fetch):
         mock_fetch.return_value = [
             {
                 "ticker": "KXSERIEAGAME-26SEP06BFCSAS-SAS",
@@ -991,3 +963,281 @@ class TestGreekAndPriorityFund:
         result = discover_soccer_games(max_games=5, now=now)
         assert result.games == []
         assert result.tickers == []
+
+
+class TestStaleEnvAndFingerprint:
+    """Stale .env pins, Egypt/TFF without prefix, finished Coppa."""
+
+    def test_stale_melgar_env_needs_auto_discover(self):
+        now = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+        melgar = "KXPERLIGA1GAME-26AUG31CAGMEL-MEL"
+        assert is_stale_lab_ticker(melgar, now=now)
+        assert needs_auto_discover([melgar], now=now)
+        assert needs_auto_discover(
+            [melgar, "KXPERLIGA1GAME-26AUG31CAGMEL-CAG", "KXPERLIGA1TOTAL-26AUG31CAGMEL-4"],
+            now=now,
+        )
+        assert parse_cli_tickers("") == []
+        assert parse_cli_tickers("auto") == []
+
+    def test_today_explicit_kx_can_pin(self):
+        now = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+        assert not needs_auto_discover(["KXEGYPLGAME-26SEP02GOUMOK-GOU"], now=now)
+
+    def test_egypt_tff_fingerprint_without_prefix(self, monkeypatch):
+        from suspension_lab import soccer_discovery as sd
+
+        monkeypatch.setattr(
+            sd,
+            "SOCCER_SERIES_PREFIXES",
+            tuple(p for p in sd.SOCCER_SERIES_PREFIXES if "EGYPL" not in p and "TFF" not in p),
+        )
+        egypt = {
+            "ticker": "KXEGYPLGAME-26SEP02GOUMOK-GOU",
+            "series_ticker": "KXEGYPLGAME",
+            "title": "El Gouna vs Al Mokawloon",
+            "yes_sub_title": "El Gouna wins",
+            "rules_primary": "If El Gouna wins the El Gouna vs Al Mokawloon professional soccer game",
+        }
+        turkey = {
+            "ticker": "KXTFF1LIGGAME-26SEP02VASBAT-VAS",
+            "series_ticker": "KXTFF1LIGGAME",
+            "title": "Van Spor vs Batman Petrolspor",
+            "subtitle": "goals scored",
+        }
+        nfl = {
+            "ticker": "KXNFLGAME-26SEP02SH-KC",
+            "series_ticker": "KXNFLGAME",
+            "title": "Chiefs vs Bills",
+            "subtitle": "NFL moneyline",
+        }
+        assert is_soccer_series_ticker("KXEGYPLGAME")
+        assert is_soccer_series_ticker("KXTFF1LIGTOTAL")
+        assert not is_soccer_series_ticker("KXNFLGAME")
+        assert looks_like_soccer_market(egypt)
+        assert looks_like_soccer_market(turkey)
+        assert not looks_like_soccer_market(nfl)
+        kept = {m["ticker"] for m in filter_soccer_markets([egypt, turkey, nfl])}
+        assert "KXEGYPLGAME-26SEP02GOUMOK-GOU" in kept
+        assert "KXTFF1LIGGAME-26SEP02VASBAT-VAS" in kept
+        assert "KXNFLGAME-26SEP02SH-KC" not in kept
+
+    def test_catalog_soccer_tag_includes_egypt_tff(self):
+        rows = [
+            {"ticker": "KXEGYPLGAME", "title": "Egyptian Premier League", "tags": ["Soccer"]},
+            {"ticker": "KXTFF1LIGTOTAL", "title": "TFF 1. Lig totals", "tags": ["Soccer"]},
+            {"ticker": "KXNFLGAME", "title": "NFL", "tags": ["Football"]},
+            {"ticker": "KXEGYPLGAME", "title": "delete me", "tags": ["Soccer"]},
+        ]
+        got = soccer_series_tickers_from_catalog(rows)
+        assert "KXEGYPLGAME" in got
+        assert "KXTFF1LIGTOTAL" in got
+        assert "KXNFLGAME" not in got
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_egypt_and_tff_discovered_if_live(self, mock_fetch):
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-GOU",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "title": "El Gouna vs Al Mokawloon",
+                "close_time": "2026-09-02T20:00:00Z",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "status": "open",
+                "volume_fp": "4000",
+                "volume_24h_fp": "8000",
+                "rules_primary": "If El Gouna wins the El Gouna vs Al Mokawloon professional soccer game",
+                "yes_bid_dollars": "0.40",
+                "yes_ask_dollars": "0.42",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-MOK",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "3500",
+                "volume_24h_fp": "7000",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-3",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "2000",
+                "volume_24h_fp": "4000",
+                "yes_bid_dollars": "0.49",
+                "yes_ask_dollars": "0.51",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-4",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "1800",
+                "volume_24h_fp": "3600",
+                "yes_bid_dollars": "0.31",
+                "yes_ask_dollars": "0.33",
+            },
+            {
+                "ticker": "KXTFF1LIGGAME-26SEP02VASBAT-VAS",
+                "event_ticker": "KXTFF1LIGGAME-26SEP02VASBAT",
+                "title": "Van vs Batman",
+                "occurrence_datetime": "2026-09-02T14:30:00Z",
+                "status": "open",
+                "volume_fp": "3000",
+                "volume_24h_fp": "6000",
+                "rules_primary": "If Van wins the Van vs Batman professional soccer game",
+            },
+            {
+                "ticker": "KXTFF1LIGGAME-26SEP02VASBAT-BAT",
+                "event_ticker": "KXTFF1LIGGAME-26SEP02VASBAT",
+                "occurrence_datetime": "2026-09-02T14:30:00Z",
+                "volume_fp": "2800",
+                "volume_24h_fp": "5500",
+            },
+            {
+                "ticker": "KXTFF1LIGTOTAL-26SEP02VASBAT-3",
+                "event_ticker": "KXTFF1LIGTOTAL-26SEP02VASBAT",
+                "occurrence_datetime": "2026-09-02T14:30:00Z",
+                "volume_fp": "1500",
+                "volume_24h_fp": "3000",
+                "yes_bid_dollars": "0.50",
+                "yes_ask_dollars": "0.52",
+            },
+            {
+                "ticker": "KXTFF1LIGTOTAL-26SEP02VASBAT-4",
+                "event_ticker": "KXTFF1LIGTOTAL-26SEP02VASBAT",
+                "occurrence_datetime": "2026-09-02T14:30:00Z",
+                "volume_fp": "1400",
+                "volume_24h_fp": "2800",
+                "yes_bid_dollars": "0.32",
+                "yes_ask_dollars": "0.34",
+            },
+        ]
+        now = datetime(2026, 9, 2, 15, 20, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now)
+        titles = " ".join(g.title for g in result.games)
+        assert "Gouna" in titles or "Mokawloon" in titles
+        assert "Van" in titles or "Batman" in titles
+        assert any("GOUMOK" in t for t in result.tickers)
+        assert any("VASBAT" in t for t in result.tickers)
+        assert any(t.endswith("-3") and "GOUMOK" in t for t in result.tickers)
+        assert any(t.endswith("-4") and "GOUMOK" in t for t in result.tickers)
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_finished_coppa_sasfro_not_selected(self, mock_fetch):
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO-SAS",
+                "event_ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO",
+                "title": "Sassuolo vs Frosinone",
+                "close_time": "2026-09-05T01:00:00Z",
+                "occurrence_datetime": "2026-09-02T16:00:00Z",
+                "status": "closed",
+                "volume_fp": "90000",
+                "volume_24h_fp": "200000",
+                "rules_primary": "If Sassuolo wins the Sassuolo vs Frosinone professional Coppa Italia soccer game",
+            },
+            {
+                "ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO-FRO",
+                "event_ticker": "KXCOPPAITALIAGAME-26SEP02SASFRO",
+                "occurrence_datetime": "2026-09-02T16:00:00Z",
+                "status": "closed",
+                "volume_fp": "80000",
+                "volume_24h_fp": "180000",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-GOU",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "title": "El Gouna vs Al Mokawloon",
+                "occurrence_datetime": "2026-09-02T18:00:00Z",
+                "status": "open",
+                "volume_fp": "4000",
+                "volume_24h_fp": "8000",
+                "rules_primary": "If El Gouna wins the El Gouna vs Al Mokawloon professional soccer game",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-MOK",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T18:00:00Z",
+                "status": "open",
+                "volume_fp": "3500",
+                "volume_24h_fp": "7000",
+            },
+        ]
+        now = datetime(2026, 9, 2, 19, 10, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now)
+        titles = " ".join(g.title for g in result.games)
+        assert "Sassuolo" not in titles
+        assert not any("SASFRO" in t for t in result.tickers)
+        assert any("GOUMOK" in t for t in result.tickers)
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_yesterday_grau_melgar_never_selected(self, mock_fetch):
+        mock_fetch.return_value = [
+            {
+                "ticker": "KXPERLIGA1GAME-26AUG31CAGMEL-MEL",
+                "event_ticker": "KXPERLIGA1GAME-26AUG31CAGMEL",
+                "title": "Carlos A. Mannucci vs Melgar",
+                "close_time": "2026-09-01T02:00:00Z",
+                "occurrence_datetime": "2026-08-31T20:00:00Z",
+                "status": "settled",
+                "volume_fp": "999999",
+                "volume_24h_fp": "999999",
+                "rules_primary": "If Melgar wins the Grau vs Melgar professional soccer game",
+            },
+            {
+                "ticker": "KXPERLIGA1GAME-26AUG31CAGMEL-CAG",
+                "event_ticker": "KXPERLIGA1GAME-26AUG31CAGMEL",
+                "occurrence_datetime": "2026-08-31T20:00:00Z",
+                "status": "settled",
+                "volume_fp": "900000",
+                "volume_24h_fp": "900000",
+            },
+        ]
+        now = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now)
+        assert result.games == []
+        assert result.tickers == []
+        assert not any("CAGMEL" in t for t in result.tickers)
+
+    def test_finished_by_kickoff_age_without_in_play_hint(self):
+        now = datetime(2026, 9, 2, 19, 0, tzinfo=timezone.utc)
+        game = SoccerGame(
+            event_ticker="KXCOPPAITALIAGAME-26SEP02SASFRO",
+            title="Sassuolo vs Frosinone",
+            home_team="Sassuolo",
+            away_team="Frosinone",
+            close_time="2026-09-05T01:00:00Z",
+            occurrence_time="2026-09-02T16:00:00Z",
+            status="open",
+            in_play_hint=False,
+        )
+        assert is_finished_game(game, now=now)
+
+    def test_liquid_tie_is_funded(self):
+        markets = [
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-GOU",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+                "yes_bid_dollars": "0.40",
+                "yes_ask_dollars": "0.42",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-MOK",
+                "volume_fp": "100",
+                "volume_24h_fp": "100",
+                "yes_bid_dollars": "0.30",
+                "yes_ask_dollars": "0.32",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-TIE",
+                "volume_fp": "80",
+                "volume_24h_fp": "80",
+                "yes_bid_dollars": "0.26",
+                "yes_ask_dollars": "0.28",
+            },
+        ]
+        game = build_soccer_game("26SEP02GOUMOK", markets)
+        assert game is not None
+        assert game.tie_ml_ticker == "KXEGYPLGAME-26SEP02GOUMOK-TIE"
+        assert "TIE" not in (game.home_ml_ticker or "")
+        assert game.tie_ml_ticker in game.get_tickers()

@@ -1,26 +1,25 @@
-"""Auto-discover live/imminent soccer events from Kalshi API and map to 4 tickers per game.
+"""Auto-discover live/imminent soccer events from Kalshi API.
 
-This module queries Kalshi's public API to find active soccer markets,
-identifies games with volume, and maps each game to:
-- Home ML (moneyline)
-- Away ML (moneyline)
-- The total whose YES is nearest 50¢ (not a default O0.5/O1.5)
-- The next strike up, if that book is liquid
+Fingerprint (not a Big-5 prefix allowlist):
+- title/subtitle contains "goals scored", or
+- series looks like soccer KX*GAME / KX*TOTAL and is not NFL/MLB/NBA/NHL/…
 
-O0.5 is usually a ~90¢ bond pregame and is not auto-funded as a scalp.
+Funds home + away ML (and liquid TIE), plus live ATM total + next strike.
+O0.5 ~90¢ bonds are skipped. Paper only — no live bets.
 
-No scraping - uses official REST API endpoints.
+`.env LAB_TICKERS` is never a pin list. Empty / placeholder / yesterday
+tickers always auto-discover.
 """
 
 from __future__ import annotations
 
 import logging
-import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-from typing import Any
+from datetime import date, datetime, timedelta, timezone
+from typing import Any, Iterable, Sequence
 
 import requests
 
@@ -91,6 +90,10 @@ SOCCER_SERIES_PREFIXES = (
     "KXSLGREECETOTAL",
     "KXGRECUPGAME",
     "KXGRECUPTOTAL",
+    "KXEGYPLGAME",
+    "KXEGYPLTOTAL",
+    "KXTFF1LIGGAME",
+    "KXTFF1LIGTOTAL",
 )
 
 SERIES_WITH_GAMES = (
@@ -124,6 +127,8 @@ SERIES_WITH_GAMES = (
     "KXNWSLGAME",
     "KXSLGREECEGAME",
     "KXGRECUPGAME",
+    "KXEGYPLGAME",
+    "KXTFF1LIGGAME",
 )
 
 SERIES_WITH_TOTALS = (
@@ -156,6 +161,8 @@ SERIES_WITH_TOTALS = (
     "KXNWSLTOTAL",
     "KXSLGREECETOTAL",
     "KXGRECUPTOTAL",
+    "KXEGYPLTOTAL",
+    "KXTFF1LIGTOTAL",
 )
 
 MIN_VOLUME_THRESHOLD = 50
@@ -167,12 +174,68 @@ TOTAL_BOND_YES = 0.88  # skip ~90¢ O0.5 bonds when picking the scalp total
 TOTAL_WING_DRIFT = 0.22
 # Ignore 80¢-wide longshot books whose mid luckily prints ~50¢ (e.g. O6.5 8¢/95¢).
 TOTAL_MAX_SPREAD = 0.25
-DEFAULT_PRIORITY_TEAMS = "sassuolo,frosinone,aek"
-
 # Kickoff window for "today / tonight" tape. close_time is market expiry (often
 # +2–3 days) so we rank on occurrence_datetime instead.
 LIVE_LOOKBACK_HOURS = 4
 SOON_HORIZON_HOURS = 18
+FINISHED_AFTER_KICKOFF_HOURS = 2.5
+FINISHED_HARD_HOURS = 4.0
+
+# Prefix list is a fetch *boost*, never a closed allowlist.
+SOCCER_SERIES_RE = re.compile(r"^KX[A-Z0-9]+(GAME|TOTAL)$")
+TICKER_DATE_RE = re.compile(
+    r"-(\d{2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2})",
+    re.IGNORECASE,
+)
+_MONTHS = {
+    "JAN": 1,
+    "FEB": 2,
+    "MAR": 3,
+    "APR": 4,
+    "MAY": 5,
+    "JUN": 6,
+    "JUL": 7,
+    "AUG": 8,
+    "SEP": 9,
+    "OCT": 10,
+    "NOV": 11,
+    "DEC": 12,
+}
+NON_SOCCER_SERIES_HINTS = (
+    "NFL",
+    "MLB",
+    "NBA",
+    "NHL",
+    "WNBA",
+    "NCAAF",
+    "NCAAB",
+    "ATP",
+    "WTA",
+    "TENNIS",
+    "GOLF",
+    "MMA",
+    "UFC",
+    "NASCAR",
+    "FORMULA",
+)
+NON_SOCCER_TITLE_HINTS = (
+    "nfl",
+    "mlb",
+    "nba",
+    "nhl",
+    "wnba",
+    "ncaaf",
+    "ncaab",
+    "college football",
+    "atp ",
+    "wta ",
+    "tennis",
+    "golf",
+    "pga ",
+    "mma",
+    "ufc",
+    "nascar",
+)
 
 SKIP_ML_CODES = {"TIE", "DRAW", "X"}
 
@@ -200,6 +263,8 @@ class SoccerGame:
     close_time: str
     home_ml_ticker: str | None = None
     away_ml_ticker: str | None = None
+    tie_ml_ticker: str | None = None
+    status: str = ""
     total_atm_ticker: str | None = None
     total_atm_label: str = ""
     total_atm_price: float | None = None
@@ -226,6 +291,8 @@ class SoccerGame:
             tickers.append(self.home_ml_ticker)
         if self.away_ml_ticker:
             tickers.append(self.away_ml_ticker)
+        if self.tie_ml_ticker:
+            tickers.append(self.tie_ml_ticker)
         atm = self.total_atm_ticker or self.over_05_ticker
         up = self.total_up_ticker or self.over_15_ticker
         if atm:
@@ -301,12 +368,72 @@ def is_placeholder_ticker(ticker: str) -> bool:
     return False
 
 
-def needs_auto_discover(tickers: list[str] | None) -> bool:
-    """Empty or placeholder LAB_TICKERS should auto-discover, not pin fake books."""
+def ticker_embedded_date(ticker: str) -> date | None:
+    """Parse the `-26AUG31-` calendar date Kalshi embeds in soccer tickers."""
+    match = TICKER_DATE_RE.search((ticker or "").upper())
+    if not match:
+        return None
+    year = 2000 + int(match.group(1))
+    month = _MONTHS.get(match.group(2))
+    day = int(match.group(3))
+    if month is None:
+        return None
+    try:
+        return date(year, month, day)
+    except ValueError:
+        return None
+
+
+def is_stale_lab_ticker(ticker: str, *, now: datetime | None = None) -> bool:
+    """Placeholder or yesterday/finished pin — never treat as a live fund list."""
+    token = (ticker or "").strip()
+    if is_placeholder_ticker(token):
+        return True
+    now_utc = now or datetime.now(tz=timezone.utc)
+    embedded = ticker_embedded_date(token)
+    if embedded is not None and embedded < now_utc.date():
+        return True
+    return False
+
+
+def is_explicit_kalshi_ticker(ticker: str, *, now: datetime | None = None) -> bool:
+    """Real KX… ticker the user typed on the CLI — not a .env leftover."""
+    token = (ticker or "").strip()
+    if not token.upper().startswith("KX"):
+        return False
+    if is_stale_lab_ticker(token, now=now):
+        return False
+    return True
+
+
+def parse_cli_tickers(cli_tickers: str | None) -> list[str]:
+    """Parse `--tickers` only. Never read LAB_TICKERS from the environment."""
+    raw = (cli_tickers or "").strip()
+    if not raw or raw.lower() in PLACEHOLDER_TICKER_TOKENS:
+        return []
+    return [t.strip() for t in raw.split(",") if t.strip()]
+
+
+def needs_auto_discover(
+    tickers: list[str] | None,
+    *,
+    now: datetime | None = None,
+) -> bool:
+    """Empty, placeholder, or yesterday/finished pins must auto-discover.
+
+    Hardcoded `.env LAB_TICKERS` is not a pin list. A real KX… ticker the
+    user typed today on the CLI is the only thing that skips discovery.
+    """
     cleaned = [t.strip() for t in (tickers or []) if t and t.strip()]
     if not cleaned:
         return True
-    return all(is_placeholder_ticker(t) for t in cleaned)
+    if all(is_placeholder_ticker(t) for t in cleaned):
+        return True
+    if any(is_stale_lab_ticker(t, now=now) for t in cleaned):
+        return True
+    if not any(is_explicit_kalshi_ticker(t, now=now) for t in cleaned):
+        return True
+    return False
 
 
 def is_live_or_soon(
@@ -489,25 +616,6 @@ def apply_live_totals(
     return game
 
 
-def priority_title_tokens() -> tuple[str, ...]:
-    raw = os.environ.get("LAB_PRIORITY_TEAMS", DEFAULT_PRIORITY_TEAMS)
-    return tuple(t.strip().lower() for t in raw.split(",") if t.strip())
-
-
-def is_priority_game(game: SoccerGame, tokens: tuple[str, ...] | None = None) -> bool:
-    needles = tokens if tokens is not None else priority_title_tokens()
-    blob = " ".join(
-        (
-            game.title,
-            game.home_team,
-            game.away_team,
-            game.event_ticker,
-            game.series,
-        )
-    ).lower()
-    return any(tok in blob for tok in needles)
-
-
 def is_in_play(game: SoccerGame, *, now: datetime | None = None) -> bool:
     """Kickoff already happened, or O1.5 is bonded (2+ goals) near listed kickoff."""
     now_utc = now or datetime.now(tz=timezone.utc)
@@ -523,6 +631,31 @@ def is_in_play(game: SoccerGame, *, now: datetime | None = None) -> bool:
     return bool(game.in_play_hint)
 
 
+def is_finished_game(game: SoccerGame, *, now: datetime | None = None) -> bool:
+    """Settled, yesterday, or kickoff + ~2.5h with no in-play hint — never fund."""
+    now_utc = now or datetime.now(tz=timezone.utc)
+    status = (game.status or "").strip().lower()
+    if status in {"settled", "closed", "finalized", "determined", "inactive", "resolved"}:
+        return True
+
+    for raw in (game.event_ticker, game.home_ml_ticker, game.away_ml_ticker, game.series):
+        if raw and is_stale_lab_ticker(raw, now=now_utc):
+            return True
+
+    kickoff = game.kickoff
+    if kickoff is not None:
+        age = now_utc - kickoff
+        if age >= timedelta(hours=FINISHED_HARD_HOURS):
+            return True
+        if age >= timedelta(hours=FINISHED_AFTER_KICKOFF_HOURS) and not game.in_play_hint:
+            return True
+
+    close = _parse_iso(game.close_time)
+    if close is not None and now_utc > close and not is_in_play(game, now=now_utc):
+        return True
+    return False
+
+
 def is_watchable(
     game: SoccerGame,
     *,
@@ -531,6 +664,8 @@ def is_watchable(
     horizon_hours: float = SOON_HORIZON_HOURS,
 ) -> bool:
     """Live, soon, or already in-play by bonded totals (kickoff clock may lag)."""
+    if is_finished_game(game, now=now):
+        return False
     if is_live_or_soon(
         game, now=now, lookback_hours=lookback_hours, horizon_hours=horizon_hours
     ):
@@ -546,38 +681,24 @@ def select_watchlist(
     min_volume: float,
     min_24h_volume: float,
 ) -> tuple[list[SoccerGame], list[SoccerGame], list[SoccerGame], list[str]]:
-    """Priority + in-play first so a 1-1 Coppa / AEK tape is not dropped for volume."""
+    """In-play first, then kickoff-soon, then 24h volume. No team-name bias."""
     notes: list[str] = []
-    soon = [g for g in games if is_watchable(g, now=now)]
-    later = [g for g in games if g not in soon]
+    liveable = [g for g in games if not is_finished_game(g, now=now)]
+    soon = [g for g in liveable if is_watchable(g, now=now)]
+    later = [g for g in liveable if g not in soon]
     later.sort(key=lambda g: g.total_24h_volume, reverse=True)
 
-    must: list[SoccerGame] = []
-    for game in games:
-        if not is_priority_game(game):
-            continue
-        # Today/tonight only — do not pin next week's Sassuolo/AEK because the
-        # team token matches. In-play hint covers a late Kalshi kickoff clock.
-        if not (is_live_or_soon(game, now=now) or is_in_play(game, now=now)):
-            continue
-        if game not in must:
-            must.append(game)
-            notes.append(f"priority auto-fund: {game.title[:48]}")
-
-    in_play = [g for g in soon if is_in_play(g, now=now) and g not in must]
+    in_play = [g for g in soon if is_in_play(g, now=now)]
     in_play.sort(key=lambda g: g.total_24h_volume, reverse=True)
-    selected = list(must)
-    # In-play is forced even outside top-N, but not every bonded-O0.5 pregame
-    # on the catalog. Cap extras so the tape stays on today's live matches.
-    in_play_cap = max(max_games, 8)
+    selected: list[SoccerGame] = []
     for game in in_play:
-        if len([g for g in selected if is_in_play(g, now=now)]) >= in_play_cap:
+        if len(selected) >= max_games:
             break
-        if game not in selected:
-            selected.append(game)
-            notes.append(f"in-play auto-fund: {game.title[:48]}")
+        selected.append(game)
+        notes.append(f"in-play auto-fund: {game.title[:48]} (24h {game.total_24h_volume:.0f})")
 
     rest = [g for g in soon if g not in selected]
+    rest.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
     rest_vol = [
         g for g in rest if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
     ]
@@ -593,7 +714,6 @@ def select_watchlist(
         if len(selected) >= max_games:
             break
 
-    # Priority / in-play always stay even if that exceeds max_games.
     return selected, soon, later, notes
 
 
@@ -701,44 +821,208 @@ def _get_event_identifier(ticker: str) -> str | None:
     return None
 
 
+def _market_text_blob(market: dict) -> str:
+    return " ".join(
+        str(market.get(key) or "")
+        for key in (
+            "title",
+            "subtitle",
+            "yes_sub_title",
+            "no_sub_title",
+            "rules_primary",
+            "rules_secondary",
+        )
+    ).lower()
+
+
+def _series_from_market(market: dict) -> str:
+    series = str(market.get("series_ticker") or "").strip().upper()
+    if series:
+        return series
+    ticker = str(market.get("ticker") or "")
+    return ticker.split("-", 1)[0].upper() if ticker else ""
+
+
+def is_soccer_series_ticker(series: str) -> bool:
+    """KX*GAME / KX*TOTAL that is not a non-soccer sport. Prefix list is not required."""
+    token = (series or "").strip().upper()
+    if not SOCCER_SERIES_RE.match(token):
+        return False
+    for hint in NON_SOCCER_SERIES_HINTS:
+        if token.startswith(f"KX{hint}"):
+            return False
+    return True
+
+
+def soccer_series_tickers_from_catalog(rows: Sequence[dict] | Iterable[dict]) -> list[str]:
+    """Soccer-tagged GAME/TOTAL series from GET /series. Skip deleted titles."""
+    out: list[str] = []
+    seen: set[str] = set()
+    for row in rows:
+        ticker = str(row.get("ticker") or "").strip().upper()
+        if not ticker or ticker in seen:
+            continue
+        title = str(row.get("title") or "")
+        if "delete" in title.lower():
+            continue
+        tags = [str(t).lower() for t in (row.get("tags") or [])]
+        if "soccer" not in tags and not is_soccer_series_ticker(ticker):
+            continue
+        if not (ticker.endswith("GAME") or ticker.endswith("TOTAL")):
+            continue
+        if not is_soccer_series_ticker(ticker):
+            continue
+        seen.add(ticker)
+        out.append(ticker)
+    return out
+
+
+def looks_like_soccer_market(market: dict) -> bool:
+    """Fingerprint: 'goals scored' copy or soccer GAME/TOTAL series, not NFL/MLB/…"""
+    series = _series_from_market(market)
+    blob = _market_text_blob(market)
+    if any(hint in blob for hint in NON_SOCCER_TITLE_HINTS):
+        return False
+    for hint in NON_SOCCER_SERIES_HINTS:
+        if series.startswith(f"KX{hint}"):
+            return False
+    if "goals scored" in blob:
+        return True
+    if "soccer" in blob:
+        return True
+    if is_soccer_series_ticker(series):
+        return True
+    if series in SOCCER_SERIES_PREFIXES:
+        return True
+    return False
+
+
+def filter_soccer_markets(markets: Sequence[dict]) -> list[dict]:
+    """Keep soccer books even when their series is missing from the prefix tuple."""
+    return [m for m in markets if looks_like_soccer_market(m)]
+
+
+def _get_with_retry(
+    session: requests.Session,
+    url: str,
+    params: dict,
+    timeout: float,
+    label: str,
+) -> dict | None:
+    try:
+        resp = session.get(url, params=params, timeout=timeout)
+        if resp.status_code == 429:
+            logger.warning("Rate-limited on %s; retrying once", label)
+            time.sleep(1.5)
+            resp = session.get(url, params=params, timeout=timeout)
+        if resp.status_code != 200:
+            logger.warning("HTTP %s on %s", resp.status_code, label)
+            return None
+        payload = resp.json()
+        return payload if isinstance(payload, dict) else None
+    except requests.RequestException as exc:
+        logger.warning("Failed %s: %s", label, exc)
+        return None
+
+
+def fetch_soccer_series_tickers(
+    session: requests.Session,
+    rest_base: str,
+    timeout: float = 15.0,
+) -> list[str]:
+    """Catalog-first soccer series. Prefix list is appended as a boost only."""
+    rows: list[dict] = []
+    cursor = None
+    for _ in range(20):
+        params: dict[str, Any] = {"limit": 200}
+        if cursor:
+            params["cursor"] = cursor
+        payload = _get_with_retry(session, f"{rest_base}/series", params, timeout, "series")
+        if not payload:
+            break
+        chunk = payload.get("series") or payload.get("series_list") or []
+        rows.extend(chunk)
+        cursor = payload.get("cursor") or payload.get("next_cursor")
+        if not cursor or not chunk:
+            break
+    catalog = soccer_series_tickers_from_catalog(rows)
+    seen = set(catalog)
+    out = list(catalog)
+    for prefix in SOCCER_SERIES_PREFIXES:
+        if prefix not in seen:
+            seen.add(prefix)
+            out.append(prefix)
+    return out
+
+
+def _fetch_series_markets(rest_base: str, series: str, timeout: float) -> list[dict]:
+    session = requests.Session()
+    session.headers.update({"User-Agent": "suspension-lab/0.1"})
+    payload = _get_with_retry(
+        session,
+        f"{rest_base}/markets",
+        {"series_ticker": series, "status": "open", "limit": 200},
+        timeout,
+        series,
+    )
+    if not payload:
+        return []
+    return list(payload.get("markets") or [])
+
+
 def fetch_open_soccer_markets(
     rest_base: str = KALSHI_API_BASE,
     timeout: float = 15.0,
 ) -> list[dict]:
-    """Fetch all open soccer markets from Kalshi API.
+    """Open soccer markets by fingerprint + catalog. Prefix list is a boost only.
 
-    Returns list of market dicts for all soccer-related series with status=open.
+    A live Egypt / TFF / Coppa book is kept even if its series is not in
+    SOCCER_SERIES_PREFIXES. NFL/MLB/NBA/NHL and other non-soccer sports are dropped.
     """
     session = requests.Session()
     session.headers.update({"User-Agent": "suspension-lab/0.1"})
 
-    all_markets: list[dict] = []
+    by_ticker: dict[str, dict] = {}
 
-    for i, series in enumerate(SOCCER_SERIES_PREFIXES):
-        if i and i % 8 == 0:
-            time.sleep(0.35)
-        url = f"{rest_base}/markets"
-        params = {
-            "series_ticker": series,
-            "status": "open",
-            "limit": 200,
+    def _absorb(markets: Sequence[dict]) -> None:
+        for market in filter_soccer_markets(markets):
+            ticker = market.get("ticker")
+            if ticker:
+                by_ticker[str(ticker)] = market
+
+    series_list = fetch_soccer_series_tickers(session, rest_base, timeout)
+    workers = min(12, max(4, len(series_list) or 4))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {
+            pool.submit(_fetch_series_markets, rest_base, series, timeout): series
+            for series in series_list
         }
-        try:
-            resp = session.get(url, params=params, timeout=timeout)
-            if resp.status_code == 429:
-                logger.warning(f"Rate-limited on {series}; retrying once")
-                time.sleep(1.5)
-                resp = session.get(url, params=params, timeout=timeout)
-            if resp.status_code == 200:
-                data = resp.json()
-                markets = data.get("markets", [])
-                all_markets.extend(markets)
-                logger.debug(f"Fetched {len(markets)} markets from {series}")
-        except requests.RequestException as e:
-            logger.warning(f"Failed to fetch {series}: {e}")
-            continue
+        for fut in as_completed(futures):
+            series = futures[fut]
+            try:
+                _absorb(fut.result())
+            except Exception as exc:  # noqa: BLE001
+                logger.warning("series fetch %s failed: %s", series, exc)
 
-    return all_markets
+    # Global open-market scan so a brand-new league is not dropped if /series lags.
+    cursor = None
+    for page in range(8):
+        params: dict[str, Any] = {"status": "open", "limit": 200}
+        if cursor:
+            params["cursor"] = cursor
+        payload = _get_with_retry(
+            session, f"{rest_base}/markets", params, timeout, f"markets-page-{page}"
+        )
+        if not payload:
+            break
+        chunk = payload.get("markets") or []
+        _absorb(chunk)
+        cursor = payload.get("cursor") or payload.get("next_cursor")
+        if not cursor or not chunk:
+            break
+
+    logger.debug("Fingerprint soccer fetch kept %s markets", len(by_ticker))
+    return list(by_ticker.values())
 
 
 def group_markets_by_event(markets: list[dict]) -> dict[str, list[dict]]:
@@ -765,6 +1049,13 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     first = markets[0]
     event_ticker = first.get("event_ticker", "")
     close_time = first.get("close_time", "")
+    status = ""
+    for market in markets:
+        raw_status = str(market.get("status") or "").strip()
+        if raw_status:
+            status = raw_status
+            if raw_status.lower() not in {"open", "active"}:
+                break
 
     title = None
     for market in markets:
@@ -797,9 +1088,11 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         close_time=close_time,
         occurrence_time=occurrence,
         series=series,
+        status=status,
     )
 
     game_tickers: list[tuple[str, str]] = []
+    tie_ticker: str | None = None
     total_books: list[TotalBook] = []
 
     for market in markets:
@@ -813,6 +1106,12 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         if gm:
             team_code = gm.group(3)
             if team_code in SKIP_ML_CODES:
+                yes = yes_price_from_market(market)
+                if (
+                    market_is_liquid(market, vol, vol_24h)
+                    and not is_bond_yes(yes)
+                ):
+                    tie_ticker = ticker
                 continue
             game_tickers.append((ticker, team_code))
             continue
@@ -845,6 +1144,9 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     elif len(game_tickers) == 1:
         game.home_ml_ticker = game_tickers[0][0]
         game.reasons.append(f"ML: only {game_tickers[0][1]} found")
+    if tie_ticker:
+        game.tie_ml_ticker = tie_ticker
+        game.reasons.append("TIE funded (liquid)")
 
     game.total_books = total_books
     apply_live_totals(game, total_books, drop_far_wing=False)
@@ -903,6 +1205,7 @@ def discover_soccer_games(
             games.append(game)
 
     now = now or datetime.now(tz=timezone.utc)
+    games = [g for g in games if not is_finished_game(g, now=now)]
     has_kickoffs = any(g.occurrence_time for g in games)
     watchable = [g for g in games if is_watchable(g, now=now)]
     soon: list[SoccerGame] = []

@@ -9,7 +9,12 @@ from tkinter import messagebox, scrolledtext, ttk
 from suspension_lab.config import LabConfig
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.market_labels import MarketLabel
-from suspension_lab.soccer_discovery import SoccerGame, apply_live_totals, discover_tickers_for_lab
+from suspension_lab.soccer_discovery import (
+    SoccerGame,
+    apply_live_totals,
+    discover_tickers_for_lab,
+    is_finished_game,
+)
 from suspension_lab.tape_engine import TapeEngine, TapeEvent
 
 BG = "#0e1116"
@@ -49,6 +54,8 @@ class SuspensionLabApp:
         self._sample_thread: threading.Thread | None = None
         self._labels = self.engine.labels
         self._ticker_boxes: dict[str, dict] = {}
+        self._game_cards: dict[str, tk.Widget] = {}
+        self._idle_card = None
         self._active_tickers: list[str] = list(config.tickers)
         self._pending_events: list[TapeEvent] = []
         self._event_lock = threading.Lock()
@@ -65,7 +72,7 @@ class SuspensionLabApp:
         self._labels.load_all_async(on_update=self._on_label_loaded)
         self.root.after(200, self._drain_events)
         self.root.after(400, self._refresh_display)
-        self.root.after(60_000, self._rediscover)
+        self.root.after(30_000 if not config.tickers else 60_000, self._rediscover)
 
     def _style(self) -> None:
         style = ttk.Style(self.root)
@@ -126,10 +133,26 @@ class SuspensionLabApp:
                 bg=BG,
             ).pack(side="left", padx=(0, 28))
 
-        self.status_var = tk.StringVar(value="Starting…")
+        self.status_var = tk.StringVar(
+            value="Waiting for live soccer…" if not self.config.tickers else "Starting…"
+        )
         tk.Label(self.root, textvariable=self.status_var, font=("Segoe UI", 9), fg=MUTED, bg=BG).pack(
             anchor="w"
         )
+        self._waiting_var = tk.StringVar(
+            value="WAITING FOR LIVE SOCCER — REST idle, no WS subscribe until books appear"
+            if not self.config.tickers
+            else ""
+        )
+        self._waiting_label = tk.Label(
+            self.root,
+            textvariable=self._waiting_var,
+            font=("Segoe UI", 11, "bold"),
+            fg=AMBER,
+            bg=BG,
+        )
+        if not self.config.tickers:
+            self._waiting_label.pack(anchor="w", pady=(4, 0))
 
         trader_row = tk.Frame(self.root, bg=BG)
         trader_row.pack(fill="x", pady=(4, 6))
@@ -191,6 +214,28 @@ class SuspensionLabApp:
         leftover = [t for t in self.config.tickers if t not in placed]
         if leftover:
             self._create_loose_card(leftover)
+        if not games and not leftover:
+            idle = tk.Frame(self._cards, bg=CARD, highlightbackground=LINE, highlightthickness=1, padx=10, pady=16)
+            idle.pack(fill="x", pady=(0, 10), padx=2)
+            tk.Label(
+                idle,
+                text="No live soccer tape yet",
+                font=("Segoe UI", 13, "bold"),
+                fg=INK,
+                bg=CARD,
+                anchor="w",
+            ).pack(fill="x")
+            tk.Label(
+                idle,
+                text="Auto-discover rescans every 30s. Kalshi WS is not subscribed until a book appears.",
+                font=("Segoe UI", 9),
+                fg=MUTED,
+                bg=CARD,
+                anchor="w",
+            ).pack(fill="x", pady=(4, 0))
+            self._idle_card = idle
+        else:
+            self._idle_card = None
 
         tk.Label(
             right,
@@ -234,6 +279,8 @@ class SuspensionLabApp:
     def _create_game_card(self, game: SoccerGame) -> None:
         card = tk.Frame(self._cards, bg=CARD, highlightbackground=LINE, highlightthickness=1, padx=10, pady=8)
         card.pack(fill="x", pady=(0, 10), padx=2)
+        if game.event_ticker:
+            self._game_cards[game.event_ticker] = card
         kick = (game.occurrence_time or game.close_time or "")[:16].replace("T", " ")
         head = f"{game.title}"
         tk.Label(card, text=head, font=("Segoe UI", 13, "bold"), fg=INK, bg=CARD, anchor="w").pack(fill="x")
@@ -250,9 +297,15 @@ class SuspensionLabApp:
         slots = [
             ("Home ML", game.home_ml_ticker),
             ("Away ML", game.away_ml_ticker),
-            (game.total_atm_label or "ATM total", game.total_atm_ticker or game.over_05_ticker),
-            (game.total_up_label or "ATM+1", game.total_up_ticker or game.over_15_ticker),
         ]
+        if game.tie_ml_ticker:
+            slots.append(("TIE", game.tie_ml_ticker))
+        slots.extend(
+            [
+                (game.total_atm_label or "ATM total", game.total_atm_ticker or game.over_05_ticker),
+                (game.total_up_label or "ATM+1", game.total_up_ticker or game.over_15_ticker),
+            ]
+        )
         for title, ticker in slots:
             self._create_book_box(row, ticker, title)
 
@@ -412,7 +465,36 @@ class SuspensionLabApp:
 
         threading.Thread(target=_run, name="rediscover", daemon=True).start()
 
+    def _drop_game_card(self, game: SoccerGame) -> None:
+        for ticker in game.get_tickers():
+            self.feed.remove_ticker(ticker)
+            box = self._ticker_boxes.pop(ticker, None)
+            if box and box.get("box"):
+                try:
+                    box["box"].destroy()
+                except tk.TclError:
+                    pass
+            if ticker in self._active_tickers:
+                self._active_tickers.remove(ticker)
+        card = self._game_cards.pop(game.event_ticker, None)
+        if card is not None:
+            try:
+                card.destroy()
+            except tk.TclError:
+                pass
+        if game in self.engine.games:
+            self.engine.games.remove(game)
+
     def _absorb_discovery(self, tickers: list[str], games: list[SoccerGame]) -> None:
+        discovered = {g.event_ticker: g for g in games}
+        for old in list(self.engine.games):
+            fresh = discovered.get(old.event_ticker)
+            if fresh is not None:
+                old.status = fresh.status
+            if is_finished_game(fresh if fresh is not None else old):
+                self.events_text.insert(tk.END, f"DROPPED  {old.title} (finished)\n", "SKIP")
+                self._drop_game_card(old)
+
         known = {g.event_ticker: g for g in self.engine.games}
         for game in games:
             old = known.get(game.event_ticker)
@@ -421,6 +503,8 @@ class SuspensionLabApp:
             old.total_atm_ticker = game.total_atm_ticker
             old.total_up_ticker = game.total_up_ticker
             old.totals_repick = game.totals_repick
+            old.tie_ml_ticker = game.tie_ml_ticker
+            old.status = game.status
         new_games = [g for g in games if not any(t in self._ticker_boxes for t in g.get_tickers())]
         for game in new_games + [g for g in games if g not in new_games]:
             added = []
@@ -433,6 +517,13 @@ class SuspensionLabApp:
                     self._active_tickers.append(ticker)
                     added.append(ticker)
             if added and game in new_games:
+                if self._idle_card is not None:
+                    try:
+                        self._idle_card.destroy()
+                    except tk.TclError:
+                        pass
+                    self._idle_card = None
+                self._waiting_var.set("")
                 self._create_game_card(game)
                 self.engine.games.append(game)
                 for ticker in added:
@@ -445,7 +536,8 @@ class SuspensionLabApp:
                 self.events_text.insert(
                     tk.END, f"TOTALS RE-PICK  {game.title} {game.totals_summary()}\n", "PAPER"
                 )
-        self.root.after(60_000, self._rediscover)
+        delay = 30_000 if not self._active_tickers else 60_000
+        self.root.after(delay, self._rediscover)
 
     def _sample_loop(self) -> None:
         interval = max(self.config.poll_ms, 100) / 1000.0

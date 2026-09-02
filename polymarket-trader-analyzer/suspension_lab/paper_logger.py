@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 import signal
 import threading
 import time
@@ -19,7 +18,9 @@ from suspension_lab.soccer_discovery import (
     discover_soccer_games,
     format_discovery_log,
     format_slate_digest,
+    is_finished_game,
     needs_auto_discover,
+    parse_cli_tickers,
 )
 from suspension_lab.tape_engine import TapeEngine
 
@@ -34,10 +35,8 @@ def _resolve_tickers(
     max_games: int,
     min_volume: float,
 ) -> tuple[list[str], list, str]:
-    ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
-    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()] if ticker_str else []
-    if ticker_str.lower() == "run":
-        ticker_list = []
+    # CLI --tickers only. Stale .env LAB_TICKERS cannot skip discovery.
+    ticker_list = parse_cli_tickers(tickers)
     rest_base = (
         "https://demo-api.kalshi.co/trade-api/v2"
         if demo
@@ -166,9 +165,25 @@ def run_paper_logger(
                     old.over_15_ticker = game.over_15_ticker
                     old.totals_repick = game.totals_repick
                     old.in_play_hint = game.in_play_hint
+                    old.status = game.status
+                    old.tie_ml_ticker = game.tie_ml_ticker
             fund = list(extra)
             for game in extra_games:
                 fund.extend(game.get_tickers())
+            live_events = {g.event_ticker for g in extra_games}
+            for old in list(engine.games):
+                fresh = known.get(old.event_ticker)
+                if fresh is None:
+                    candidate = old
+                else:
+                    candidate = fresh
+                if is_finished_game(candidate) or (
+                    old.event_ticker and old.event_ticker not in live_events and is_finished_game(old)
+                ):
+                    for ticker in old.get_tickers():
+                        feed.remove_ticker(ticker)
+                    if old in engine.games:
+                        engine.games.remove(old)
             seen: set[str] = set()
             for ticker in fund:
                 if ticker in seen:
@@ -210,8 +225,13 @@ def run_paper_logger(
 
 
 def main(
-    tickers: str = typer.Option("", "--tickers", "-t", help="Optional pin; empty = auto-discover today"),
-    game: str = typer.Option("", "--game", "-g"),
+    tickers: str = typer.Option(
+        "",
+        "--tickers",
+        "-t",
+        help="Optional explicit KX… pin. Empty = auto-discover. Does not read LAB_TICKERS.",
+    ),
+    game: str = typer.Option("", "--game", "-g", help="Match label. Does not read LAB_GAME."),
     demo: bool = typer.Option(False, "--demo"),
     rest_only: bool = typer.Option(False, "--rest-only"),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms"),
@@ -235,10 +255,9 @@ def main(
     if digest_only:
         raise typer.Exit(0)
     if not ticker_list:
-        typer.echo("No today/tonight soccer tape to fund. Auto-discover is ready for the next slate.")
-        raise typer.Exit(0)
+        typer.echo("No live soccer yet — REST idle, no WS subscribe. Rescan every 60s.")
 
-    game_label = (game or os.environ.get("LAB_GAME", "")).strip()
+    game_label = (game or "").strip()
     if not game_label and games:
         game_label = " | ".join(g.title[:28] for g in games[:2])
         if len(games) > 2:

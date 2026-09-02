@@ -11,10 +11,13 @@ from suspension_lab.goal_signal import (
 )
 from suspension_lab.orderbook import OrderBook
 from suspension_lab.scalp_quote import kalshi_fee_cents, make_around_jump
+from suspension_lab.kalshi_client import orderbook_subscribe_payload
 from suspension_lab.soccer_discovery import (
+    DiscoveryResult,
     build_soccer_game,
     discover_soccer_games,
     needs_auto_discover,
+    parse_cli_tickers,
     select_ingame_totals,
     TotalBook,
 )
@@ -34,6 +37,63 @@ class TestPlaceholderTickers:
         assert needs_auto_discover(["auto"])
         assert needs_auto_discover(["run"])
         assert not needs_auto_discover(["KXEPLGAME-26SEP02ARSCHE-ARS"])
+
+    def test_yesterday_melgar_env_does_not_skip_discovery(self, monkeypatch):
+        now = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+        leftover = "KXPERLIGA1GAME-26AUG31CAGMEL-MEL,KXPERLIGA1GAME-26AUG31CAGMEL-CAG"
+        monkeypatch.setenv("LAB_TICKERS", leftover)
+        monkeypatch.setenv("LAB_GAME", "TEST2-MELGAR-GRAU")
+        assert parse_cli_tickers("") == []
+        assert needs_auto_discover(leftover.split(","), now=now)
+        assert needs_auto_discover(parse_cli_tickers(""), now=now)
+
+
+class TestEmptySubscribe:
+    def test_empty_ticker_list_does_not_emit_subscribe(self):
+        assert orderbook_subscribe_payload([], msg_id=1) is None
+        assert orderbook_subscribe_payload(["", "  "], msg_id=2) is None
+
+    def test_real_tickers_include_market_tickers(self):
+        payload = orderbook_subscribe_payload(
+            ["KXEGYPLGAME-26SEP02GOUMOK-GOU"], msg_id=3
+        )
+        assert payload is not None
+        assert payload["params"]["market_tickers"] == ["KXEGYPLGAME-26SEP02GOUMOK-GOU"]
+        assert "orderbook_delta" in payload["params"]["channels"]
+
+    def test_cli_options_do_not_bind_env_lab_tickers(self):
+        import inspect
+
+        from suspension_lab import cli
+
+        src = inspect.getsource(cli.main)
+        assert 'envvar="LAB_TICKERS"' not in src
+        assert 'envvar="LAB_GAME"' not in src
+
+
+class TestEnvCannotSkipDiscover:
+    @patch("suspension_lab.paper_logger.discover_soccer_games")
+    def test_resolve_tickers_ignores_env_melgar(self, mock_discover, monkeypatch):
+        monkeypatch.setenv(
+            "LAB_TICKERS",
+            "KXPERLIGA1GAME-26AUG31CAGMEL-MEL,KXPERLIGA1TOTAL-26AUG31CAGMEL-4",
+        )
+        mock_discover.return_value = DiscoveryResult(
+            games=[],
+            tickers=["KXEGYPLGAME-26SEP02GOUMOK-GOU"],
+            log_lines=["discovered egypt"],
+        )
+        from suspension_lab.paper_logger import _resolve_tickers
+
+        tickers, _games, _log = _resolve_tickers(
+            "",
+            demo=False,
+            auto_discover=True,
+            max_games=5,
+            min_volume=50,
+        )
+        mock_discover.assert_called_once()
+        assert tickers == ["KXEGYPLGAME-26SEP02GOUMOK-GOU"]
 
 
 class TestTodayFirstDiscover:
