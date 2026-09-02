@@ -55,7 +55,9 @@ class PaperAutoTrader:
     def __init__(self, session_dir: Path, config: TraderConfig | None = None) -> None:
         self.config = config or TraderConfig()
         self.session_dir = session_dir
-        self._lock = threading.Lock()
+        # RLock: on_goal_signal holds the lock then calls _write_row.
+        # A plain Lock deadlocks the WS callback (Celtic O3.5 2026-09-02).
+        self._lock = threading.RLock()
         self._trade_id = 0
         self._positions: dict[str, PaperPosition] = {}
         self._closed: list[PaperPosition] = []
@@ -161,21 +163,26 @@ class PaperAutoTrader:
     def _close(
         self, pos: PaperPosition, exit_cents: int, reason: str, ts_ms: int
     ) -> PaperPosition:
-        pos.status = "closed"
-        pos.exit_cents = exit_cents
-        pos.exit_reason = reason
-        pos.exit_ts_ms = ts_ms
-        self._positions.pop(pos.ticker, None)
-        self._closed.append(pos)
-        pnl = exit_cents - pos.entry_cents
-        burned = reason.lower().startswith("var") or "flatten" in reason.lower() or "delayed" in reason.lower()
-        if burned:
-            self.burned_pnl_cents += pnl
-            self.burned_count += 1
-        else:
-            self.would_have_pnl_cents += pnl
-            self.would_have_count += 1
-        self._write_row(pos)
+        with self._lock:
+            pos.status = "closed"
+            pos.exit_cents = exit_cents
+            pos.exit_reason = reason
+            pos.exit_ts_ms = ts_ms
+            self._positions.pop(pos.ticker, None)
+            self._closed.append(pos)
+            pnl = exit_cents - pos.entry_cents
+            burned = (
+                reason.lower().startswith("var")
+                or "flatten" in reason.lower()
+                or "delayed" in reason.lower()
+            )
+            if burned:
+                self.burned_pnl_cents += pnl
+                self.burned_count += 1
+            else:
+                self.would_have_pnl_cents += pnl
+                self.would_have_count += 1
+            self._write_row(pos)
         return pos
 
     def flatten(self, ticker: str, bid_cents: int | None, reason: str) -> PaperPosition | None:
@@ -198,6 +205,11 @@ class PaperAutoTrader:
         }
 
     def _write_row(self, pos: PaperPosition) -> None:
+        """Append one CSV row. Caller must hold ``self._lock``.
+
+        Nested acquire used to deadlock: ``on_goal_signal`` already holds the
+        lock, then called this method which took the same non-reentrant Lock.
+        """
         from datetime import datetime, timezone
 
         def _iso(ms: int | None) -> str:
@@ -223,9 +235,8 @@ class PaperAutoTrader:
             _iso(pos.exit_ts_ms),
             pos.exit_reason,
         ]
-        with self._lock:
-            with self._path.open("a", newline="", encoding="utf-8") as f:
-                csv.writer(f).writerow(row)
+        with self._path.open("a", newline="", encoding="utf-8") as f:
+            csv.writer(f).writerow(row)
 
     def open_positions(self) -> list[PaperPosition]:
         return list(self._positions.values())
