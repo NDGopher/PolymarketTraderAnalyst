@@ -5,7 +5,10 @@ Fingerprint (not a Big-5 prefix allowlist):
 - series looks like soccer KX*GAME / KX*TOTAL and is not NFL/MLB/NBA/NHL/…
 
 Funds home + away ML (and liquid TIE), plus live ATM total + next strike.
-O0.5 ~90¢ bonds are skipped. Paper only — no live bets.
+ATM is live YES nearest 50¢ — a 0-1 grind with O1.5 at 50¢ funds O1.5,
+not leftover O3.5/O4.5. 1-1 → O3.5+O4.5 is that ATM case, not a pin.
+O0.5 ~90¢ bonds and dead wings (YES < ~10¢, bid missing) are skipped.
+Rediscover on a timer while the session runs. Paper only — no live bets.
 
 `.env LAB_TICKERS` is never a pin list. Empty / placeholder / yesterday
 tickers always auto-discover.
@@ -172,6 +175,8 @@ TOTAL_BOND_YES = 0.88  # skip ~90¢ O0.5 bonds when picking the scalp total
 # Next-up farther than this from 50¢ during a no-goal grind → swap to the
 # cheaper adjacent strike (e.g. O4.5 at 12¢ → O2.5 while ATM is O3.5).
 TOTAL_WING_DRIFT = 0.22
+# Drop untradeable / missing-bid / junk longshot wings (El Gouna O3.5 at 5¢).
+TOTAL_DEAD_YES = 0.10
 # Ignore 80¢-wide longshot books whose mid luckily prints ~50¢ (e.g. O6.5 8¢/95¢).
 TOTAL_MAX_SPREAD = 0.25
 # Kickoff window for "today / tonight" tape. close_time is market expiry (often
@@ -464,6 +469,8 @@ class TotalBook:
     volume_24h: float
     liquid: bool
     spread: float | None = None
+    yes_bid: float | None = None
+    untradeable: bool = False
 
     @property
     def label(self) -> str:
@@ -513,6 +520,23 @@ def is_bond_yes(price: float | None, *, bond: float = TOTAL_BOND_YES) -> bool:
     return price >= bond or price <= (1.0 - bond)
 
 
+def is_dead_wing(book: TotalBook, *, floor: float = TOTAL_DEAD_YES) -> bool:
+    """Untradeable, bid missing, or YES ≤ ~10¢ — never fund as ATM or next-up.
+
+    Constructed unit books with only a mid (yes_bid=None, untradeable=False)
+    are not dead just because the bid was omitted.
+    """
+    if book.untradeable:
+        return True
+    if not book.liquid:
+        return True
+    if book.yes_price is not None and book.yes_price <= floor:
+        return True
+    if book.yes_bid is not None and book.yes_bid <= floor:
+        return True
+    return False
+
+
 def market_is_liquid(market: dict, volume: float, volume_24h: float) -> bool:
     if volume >= MIN_VOLUME_THRESHOLD or volume_24h >= MIN_24H_VOLUME_THRESHOLD:
         return True
@@ -521,17 +545,47 @@ def market_is_liquid(market: dict, volume: float, volume_24h: float) -> bool:
     return bid is not None and ask is not None
 
 
-def select_scalp_totals(books: list[TotalBook]) -> tuple[TotalBook | None, TotalBook | None]:
-    """ATM = YES nearest 50¢ among non-bond books. Up = next strike if liquid.
+def _fundable_total(book: TotalBook) -> bool:
+    """ATM candidate: live mid, not a 90¢ bond, not a 5¢ junk wing, not a 80¢ hole."""
+    if book.yes_price is None:
+        return False
+    if is_dead_wing(book) or is_bond_yes(book.yes_price) or not book.tight_enough:
+        return False
+    return True
 
-    Does not default to O0.5/O1.5. Bonded O0.5 (~90¢) is not a scalp.
-    Live YES only — never reuse a pregame snapshot.
+
+def _wing_ok(book: TotalBook) -> bool:
+    """Next-up / cheap-adjacent: liquid and not dead. Wide-but-alive 30¢ books stay."""
+    if is_dead_wing(book):
+        return False
+    if book.yes_price is not None and is_bond_yes(book.yes_price):
+        return False
+    return True
+
+
+def _cheaper_adjacent(
+    books: list[TotalBook],
+    atm: TotalBook,
+) -> TotalBook | None:
+    """O2.5 then O1.5 when ATM is O3.5 and the up-wing is dead or drifted."""
+    by_strike = {b.strike: b for b in books}
+    for delta in (1, 2):
+        down = by_strike.get(atm.strike - delta)
+        if down is not None and down.yes_price is not None and _wing_ok(down):
+            return down
+    return None
+
+
+def select_scalp_totals(books: list[TotalBook]) -> tuple[TotalBook | None, TotalBook | None]:
+    """ATM = live YES nearest 50¢. Up = next strike if liquid and not dead.
+
+    1-1 / ≥3 goals → O3.5+O4.5 only when those books *are* the 50¢ tape.
+    A 0-1 / 1-0 grind with O1.5 at ~50¢ funds O1.5 (and O2.5 if that is
+    the next live strike) — never keep O3.5/O4.5 as a score pin.
+
+    Skips ~90¢ O0.5 bonds and YES≤10¢ junk wings. Live YES only.
     """
-    priced = [
-        b
-        for b in books
-        if b.yes_price is not None and not is_bond_yes(b.yes_price) and b.tight_enough
-    ]
+    priced = [b for b in books if _fundable_total(b)]
     if not priced:
         return None, None
     atm = min(
@@ -540,7 +594,7 @@ def select_scalp_totals(books: list[TotalBook]) -> tuple[TotalBook | None, Total
     )
     by_strike = {b.strike: b for b in books}
     up = by_strike.get(atm.strike + 1)
-    if up is None or not up.liquid:
+    if up is None or not _wing_ok(up):
         return atm, None
     return atm, up
 
@@ -551,36 +605,33 @@ def select_ingame_totals(
     drop_far_wing: bool = False,
     drift: float = TOTAL_WING_DRIFT,
 ) -> tuple[TotalBook | None, TotalBook | None]:
-    """Re-pick totals from *current* live YES prices given the score.
+    """Re-pick totals from *current* live YES. Score rules are ATM, not pins.
 
-    At 1-1, O2.5 is usually 70–85¢ (not 50/50). ATM becomes O3.5 and the
-    next strike is O4.5. Do not freeze a pregame O2.5 snapshot.
+    At 1-1, O2.5 is often 70–85¢ so ATM is O3.5 and next-up is O4.5 — but
+    only while those prices sit near 50¢. If the game is 0-1 / 1-0 and
+    O1.5 is the 50¢ book, fund O1.5. Dead wings (no bid, untradeable,
+    YES < ~10¢) are dropped immediately.
 
-    If the next-up wing has drifted far from 50¢ *and* there has been no
-    goal for a while (`drop_far_wing`), swap that wing for the cheaper
-    adjacent strike below ATM (O2.5 when ATM is O3.5), unless that book
-    is a bond.
+    When the next-up strike exists but is dead, or has drifted far from
+    50¢ (`drop_far_wing` grind), swap to the cheaper adjacent (O2.5 or
+    O1.5), never keep a junk O3.5/O4.5.
     """
     atm, up = select_scalp_totals(books)
     if atm is None:
         return None, None
-    if not drop_far_wing:
-        return atm, up
     by_strike = {b.strike: b for b in books}
+    up_raw = by_strike.get(atm.strike + 1)
+    up_dead = up_raw is not None and not _wing_ok(up_raw)
     up_far = (
-        up is None
-        or up.yes_price is None
-        or abs(up.yes_price - TOTAL_ATM_TARGET) > drift
+        up is not None
+        and up.yes_price is not None
+        and abs(up.yes_price - TOTAL_ATM_TARGET) > drift
     )
-    if not up_far:
+    need_cheap = up_dead or (drop_far_wing and (up is None or up_far))
+    if not need_cheap:
         return atm, up
-    down = by_strike.get(atm.strike - 1)
-    if (
-        down is not None
-        and down.liquid
-        and down.yes_price is not None
-        and not is_bond_yes(down.yes_price)
-    ):
+    down = _cheaper_adjacent(books, atm)
+    if down is not None:
         return atm, down
     return atm, up
 
@@ -607,13 +658,106 @@ def apply_live_totals(
         b.strike == 2 and b.yes_price is not None and is_bond_yes(b.yes_price) for b in books
     )
     if atm and wing:
-        mode = "grind-cheap-side" if drop_far_wing and wing.strike < atm.strike else "live-atm+up"
+        cheap = wing.strike < atm.strike
+        mode = "grind-cheap-side" if cheap else "live-atm+up"
         game.totals_repick = f"{mode} {atm.label}/{wing.label}"
     elif atm:
         game.totals_repick = f"live-atm {atm.label}"
     else:
         game.totals_repick = "no liquid live total"
     return game
+
+
+_TOTALS_COPY_FIELDS = (
+    "total_atm_ticker",
+    "total_atm_label",
+    "total_atm_price",
+    "total_up_ticker",
+    "total_up_label",
+    "total_up_price",
+    "over_05_ticker",
+    "over_15_ticker",
+    "totals_repick",
+    "in_play_hint",
+    "status",
+    "tie_ml_ticker",
+    "total_books",
+)
+
+
+def copy_totals_fields(dst: SoccerGame, src: SoccerGame) -> None:
+    """Copy live ATM / wing selection onto the session's game object."""
+    for attr in _TOTALS_COPY_FIELDS:
+        setattr(dst, attr, getattr(src, attr))
+
+
+def unfunded_tickers(before: Sequence[str], after: Sequence[str]) -> list[str]:
+    """Tickers that left the fund list (dead wings, finished books)."""
+    keep = {t for t in after if t}
+    return [t for t in before if t and t not in keep]
+
+
+def repick_session_totals(
+    current_games: list[SoccerGame],
+    fresh_games: list[SoccerGame],
+    *,
+    drop_far_wing: bool = False,
+    now: datetime | None = None,
+) -> tuple[list[SoccerGame], list[str], list[str]]:
+    """Timer rediscover: live ATM, drop dead wings, drop finished games.
+
+    Returns (kept_games, fund_tickers, drop_tickers). Does not invent fills.
+    """
+    for game in fresh_games:
+        if game.total_books:
+            apply_live_totals(game, game.total_books, drop_far_wing=drop_far_wing)
+
+    before: dict[str, list[str]] = {}
+    for game in current_games:
+        key = game.event_ticker or id(game)
+        before[key] = list(game.get_tickers())
+
+    known = {g.event_ticker: g for g in current_games if g.event_ticker}
+    kept: list[SoccerGame] = list(current_games)
+    live_events = {g.event_ticker for g in fresh_games if g.event_ticker}
+
+    for game in fresh_games:
+        old = known.get(game.event_ticker)
+        if old is None:
+            kept.append(game)
+            known[game.event_ticker] = game
+        else:
+            copy_totals_fields(old, game)
+
+    drop: list[str] = []
+    still: list[SoccerGame] = []
+    for old in kept:
+        fresh = known.get(old.event_ticker) if old.event_ticker else None
+        candidate = fresh if fresh is not None else old
+        finished = is_finished_game(candidate, now=now) or (
+            old.event_ticker
+            and old.event_ticker not in live_events
+            and is_finished_game(old, now=now)
+        )
+        if finished:
+            drop.extend(old.get_tickers())
+            continue
+        still.append(old)
+        prev = before.get(old.event_ticker or id(old), [])
+        drop.extend(unfunded_tickers(prev, old.get_tickers()))
+
+    fund: list[str] = []
+    seen: set[str] = set()
+    for game in still:
+        for ticker in game.get_tickers():
+            if ticker in seen:
+                continue
+            seen.add(ticker)
+            fund.append(ticker)
+
+    # Unique drop list, never drop something we still fund.
+    drop = [t for t in dict.fromkeys(drop) if t not in seen]
+    return still, fund, drop
 
 
 def is_in_play(game: SoccerGame, *, now: datetime | None = None) -> bool:
@@ -1132,6 +1276,8 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
                     volume_24h=vol_24h,
                     liquid=market_is_liquid(market, vol, vol_24h),
                     spread=spread,
+                    yes_bid=bid,
+                    untradeable=bid is None,
                 )
             )
             continue
@@ -1277,8 +1423,10 @@ def format_slate_digest(result: DiscoveryResult) -> str:
         "Paper only — no live orders. Fills are **not** invented; would-have "
         "scalps appear only after a book-detected GOAL and a fill check on tape.",
         "",
-        "In-game totals re-pick from **live YES** (nearest 50¢ given the current "
-        "score). A pregame O2.5 is not frozen after the score moves.",
+        "In-game totals follow **live YES nearest 50¢** (ATM) plus the next "
+        "liquid strike. 1-1 / ≥3 goals → O3.5+O4.5 only when those books are "
+        "the 50¢ tape — not a hard pin. A 0-1 grind with O1.5 at 50¢ funds "
+        "O1.5. Dead wings (no bid, YES < ~10¢) are dropped on the rediscover timer.",
         "",
         "## Auto-funded (logger will watch)",
         "",
