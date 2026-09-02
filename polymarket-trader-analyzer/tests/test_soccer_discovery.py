@@ -6,6 +6,7 @@ from unittest.mock import patch, MagicMock
 from suspension_lab.soccer_discovery import (
     SoccerGame,
     DiscoveryResult,
+    TotalBook,
     _parse_volume,
     _extract_teams_from_title,
     _match_game_ticker,
@@ -15,6 +16,8 @@ from suspension_lab.soccer_discovery import (
     build_soccer_game,
     discover_soccer_games,
     discover_tickers_for_lab,
+    select_scalp_totals,
+    strike_to_over_label,
 )
 
 
@@ -164,6 +167,8 @@ class TestBuildSoccerGame:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "100.00",
+                "yes_bid_dollars": "0.90",
+                "yes_ask_dollars": "0.92",
             },
             {
                 "ticker": "KXEPLTOTAL-26AUG31ARSCHE-2",
@@ -172,6 +177,28 @@ class TestBuildSoccerGame:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "75.00",
                 "volume_24h_fp": "125.00",
+                "yes_bid_dollars": "0.71",
+                "yes_ask_dollars": "0.73",
+            },
+            {
+                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-3",
+                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "title": "Arsenal vs Chelsea O2.5 Goals",
+                "close_time": "2026-08-31T18:00:00Z",
+                "volume_fp": "80.00",
+                "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.47",
+                "yes_ask_dollars": "0.49",
+            },
+            {
+                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-4",
+                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "title": "Arsenal vs Chelsea O3.5 Goals",
+                "close_time": "2026-08-31T18:00:00Z",
+                "volume_fp": "60.00",
+                "volume_24h_fp": "150.00",
+                "yes_bid_dollars": "0.27",
+                "yes_ask_dollars": "0.29",
             },
         ]
         game = build_soccer_game("26AUG31ARSCHE", markets)
@@ -179,10 +206,10 @@ class TestBuildSoccerGame:
         assert game is not None
         assert game.home_ml_ticker == "KXEPLGAME-26AUG31ARSCHE-ARS"
         assert game.away_ml_ticker == "KXEPLGAME-26AUG31ARSCHE-CHE"
-        assert game.over_05_ticker == "KXEPLTOTAL-26AUG31ARSCHE-1"
-        assert game.over_15_ticker == "KXEPLTOTAL-26AUG31ARSCHE-2"
-        assert game.total_volume == 375.0
-        assert game.total_24h_volume == 725.0
+        assert game.total_atm_ticker == "KXEPLTOTAL-26AUG31ARSCHE-3"
+        assert game.total_atm_label == "O2.5"
+        assert game.total_up_ticker == "KXEPLTOTAL-26AUG31ARSCHE-4"
+        assert game.total_up_label == "O3.5"
         assert len(game.get_tickers()) == 4
 
     def test_builds_game_no_totals(self):
@@ -310,6 +337,8 @@ class TestDiscoverSoccerGames:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.91",
+                "yes_ask_dollars": "0.93",
             },
             {
                 "ticker": "KXEPLTOTAL-26AUG31ARSCHE-2",
@@ -318,17 +347,26 @@ class TestDiscoverSoccerGames:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.70",
+                "yes_ask_dollars": "0.72",
+            },
+            {
+                "ticker": "KXEPLTOTAL-26AUG31ARSCHE-3",
+                "event_ticker": "KXEPLTOTAL-26AUG31ARSCHE",
+                "volume_fp": "80.00",
+                "volume_24h_fp": "250.00",
+                "yes_bid_dollars": "0.48",
+                "yes_ask_dollars": "0.50",
             },
         ]
 
         result = discover_soccer_games(min_volume=50, min_24h_volume=100)
 
         assert len(result.games) == 1
-        assert len(result.tickers) == 4
         assert "KXEPLGAME-26AUG31ARSCHE-ARS" in result.tickers
         assert "KXEPLGAME-26AUG31ARSCHE-CHE" in result.tickers
-        assert "KXEPLTOTAL-26AUG31ARSCHE-1" in result.tickers
-        assert "KXEPLTOTAL-26AUG31ARSCHE-2" in result.tickers
+        assert "KXEPLTOTAL-26AUG31ARSCHE-1" not in result.tickers
+        assert "KXEPLTOTAL-26AUG31ARSCHE-3" in result.tickers
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
     def test_discover_no_markets(self, mock_fetch):
@@ -450,6 +488,8 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.91",
+                "yes_ask_dollars": "0.93",
             },
             {
                 "ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL-2",
@@ -458,6 +498,16 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-08-31T18:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.48",
+                "yes_ask_dollars": "0.50",
+            },
+            {
+                "ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL-3",
+                "event_ticker": "KXPERLIGA1TOTAL-26AUG31CAGMEL",
+                "volume_fp": "40.00",
+                "volume_24h_fp": "180.00",
+                "yes_bid_dollars": "0.28",
+                "yes_ask_dollars": "0.30",
             },
         ]
 
@@ -466,8 +516,8 @@ class TestDiscoveryResultEdgeCases:
         assert len(result.games) == 1
         game = result.games[0]
         assert "KXPERLIGA1" in game.home_ml_ticker
-        assert game.over_05_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-1"
-        assert game.over_15_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-2"
+        assert game.total_atm_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-2"
+        assert game.total_up_ticker == "KXPERLIGA1TOTAL-26AUG31CAGMEL-3"
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
     def test_brasileirao_tickers(self, mock_fetch):
@@ -496,6 +546,8 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-09-02T23:00:00Z",
                 "volume_fp": "100.00",
                 "volume_24h_fp": "400.00",
+                "yes_bid_dollars": "0.95",
+                "yes_ask_dollars": "0.97",
             },
             {
                 "ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR-2",
@@ -504,6 +556,24 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-09-02T23:00:00Z",
                 "volume_fp": "80.00",
                 "volume_24h_fp": "350.00",
+                "yes_bid_dollars": "0.82",
+                "yes_ask_dollars": "0.84",
+            },
+            {
+                "ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR-4",
+                "event_ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR",
+                "volume_fp": "90.00",
+                "volume_24h_fp": "300.00",
+                "yes_bid_dollars": "0.49",
+                "yes_ask_dollars": "0.51",
+            },
+            {
+                "ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR-5",
+                "event_ticker": "KXBRASILEIROTOTAL-26SEP02FLAMIR",
+                "volume_fp": "70.00",
+                "volume_24h_fp": "220.00",
+                "yes_bid_dollars": "0.31",
+                "yes_ask_dollars": "0.33",
             },
         ]
 
@@ -513,9 +583,10 @@ class TestDiscoveryResultEdgeCases:
         game = result.games[0]
         assert game.home_ml_ticker == "KXBRASILEIROGAME-26SEP02FLAMIR-FLA"
         assert game.away_ml_ticker == "KXBRASILEIROGAME-26SEP02FLAMIR-MIR"
-        assert game.over_05_ticker == "KXBRASILEIROTOTAL-26SEP02FLAMIR-1"
-        assert game.over_15_ticker == "KXBRASILEIROTOTAL-26SEP02FLAMIR-2"
-        assert len(game.get_tickers()) == 4
+        assert game.total_atm_label == "O3.5"
+        assert game.total_up_label == "O4.5"
+        assert game.total_atm_ticker == "KXBRASILEIROTOTAL-26SEP02FLAMIR-4"
+        assert "KXBRASILEIROTOTAL-26SEP02FLAMIR-1" not in game.get_tickers()
 
     @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
     def test_liga_mx_tickers(self, mock_fetch):
@@ -544,6 +615,8 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-09-06T02:00:00Z",
                 "volume_fp": "50.00",
                 "volume_24h_fp": "200.00",
+                "yes_bid_dollars": "0.90",
+                "yes_ask_dollars": "0.92",
             },
             {
                 "ticker": "KXLIGAMXTOTAL-26SEP06CRASLA-2",
@@ -552,6 +625,8 @@ class TestDiscoveryResultEdgeCases:
                 "close_time": "2026-09-06T02:00:00Z",
                 "volume_fp": "40.00",
                 "volume_24h_fp": "180.00",
+                "yes_bid_dollars": "0.47",
+                "yes_ask_dollars": "0.49",
             },
         ]
 
@@ -561,6 +636,77 @@ class TestDiscoveryResultEdgeCases:
         game = result.games[0]
         assert game.home_ml_ticker == "KXLIGAMXGAME-26SEP06CRASLA-CRA"
         assert game.away_ml_ticker == "KXLIGAMXGAME-26SEP06CRASLA-SLA"
-        assert game.over_05_ticker == "KXLIGAMXTOTAL-26SEP06CRASLA-1"
-        assert game.over_15_ticker == "KXLIGAMXTOTAL-26SEP06CRASLA-2"
-        assert len(game.get_tickers()) == 4
+        assert game.total_atm_ticker == "KXLIGAMXTOTAL-26SEP06CRASLA-2"
+        assert game.total_up_ticker is None
+        assert "KXLIGAMXTOTAL-26SEP06CRASLA-1" not in game.get_tickers()
+
+
+def _tb(strike: int, yes: float | None, *, vol24: float = 200, liquid: bool = True) -> TotalBook:
+    return TotalBook(
+        strike=strike,
+        ticker=f"KXTOTAL-GAME-{strike}",
+        yes_price=yes,
+        volume=vol24,
+        volume_24h=vol24,
+        liquid=liquid,
+    )
+
+
+class TestNearestFiftyTotals:
+    """Totals = YES nearest 50¢ plus next strike up if liquid. No O0.5 default."""
+
+    def test_strike_label(self):
+        assert strike_to_over_label(1) == "O0.5"
+        assert strike_to_over_label(3) == "O2.5"
+        assert strike_to_over_label(4) == "O3.5"
+
+    def test_skips_bonded_o05_picks_nearest_fifty(self):
+        atm, up = select_scalp_totals([
+            _tb(1, 0.91),
+            _tb(2, 0.72),
+            _tb(3, 0.48),
+            _tb(4, 0.28),
+        ])
+        assert atm is not None and atm.strike == 3 and atm.label == "O2.5"
+        assert up is not None and up.strike == 4 and up.label == "O3.5"
+
+    def test_no_prices_does_not_default_o05_o15(self):
+        atm, up = select_scalp_totals([
+            _tb(1, None),
+            _tb(2, None),
+        ])
+        assert atm is None
+        assert up is None
+
+    def test_all_bonds_funds_no_totals(self):
+        atm, up = select_scalp_totals([_tb(1, 0.93), _tb(2, 0.89)])
+        assert atm is None
+        assert up is None
+
+    def test_next_strike_skipped_if_illiquid(self):
+        atm, up = select_scalp_totals([
+            _tb(3, 0.51),
+            _tb(4, 0.30, liquid=False, vol24=0),
+        ])
+        assert atm is not None and atm.strike == 3
+        assert up is None
+
+    def test_equal_distance_prefers_higher_volume(self):
+        atm, _up = select_scalp_totals([
+            _tb(2, 0.40, vol24=50),
+            _tb(3, 0.60, vol24=800),
+        ])
+        assert atm is not None and atm.strike == 3
+
+    def test_build_game_no_default_without_prices(self):
+        markets = [
+            {"ticker": "KXEPLGAME-X-ARS", "volume_fp": "100", "volume_24h_fp": "100"},
+            {"ticker": "KXEPLGAME-X-CHE", "volume_fp": "100", "volume_24h_fp": "100"},
+            {"ticker": "KXEPLTOTAL-X-1", "volume_fp": "100", "volume_24h_fp": "100"},
+            {"ticker": "KXEPLTOTAL-X-2", "volume_fp": "100", "volume_24h_fp": "100"},
+        ]
+        game = build_soccer_game("X", markets)
+        assert game is not None
+        assert game.total_atm_ticker is None
+        assert game.total_up_ticker is None
+        assert game.get_tickers() == ["KXEPLGAME-X-ARS", "KXEPLGAME-X-CHE"]

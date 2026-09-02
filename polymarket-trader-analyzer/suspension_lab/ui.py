@@ -249,8 +249,8 @@ class SuspensionLabApp:
         slots = [
             ("Home ML", game.home_ml_ticker),
             ("Away ML", game.away_ml_ticker),
-            ("O0.5", game.over_05_ticker),
-            ("O1.5", game.over_15_ticker),
+            (game.total_atm_label or "ATM total", game.total_atm_ticker or game.over_05_ticker),
+            (game.total_up_label or "ATM+1", game.total_up_ticker or game.over_15_ticker),
         ]
         for title, ticker in slots:
             self._create_book_box(row, ticker, title)

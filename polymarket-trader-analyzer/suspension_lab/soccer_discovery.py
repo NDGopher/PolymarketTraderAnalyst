@@ -1,11 +1,13 @@
 """Auto-discover live/imminent soccer events from Kalshi API and map to 4 tickers per game.
 
 This module queries Kalshi's public API to find active soccer markets,
-identifies games with volume, and maps each game to the 4 key tickers:
+identifies games with volume, and maps each game to:
 - Home ML (moneyline)
 - Away ML (moneyline)
-- O0.5 goals (totals)
-- O1.5 goals (totals)
+- The total whose YES is nearest 50¢ (not a default O0.5/O1.5)
+- The next strike up, if that book is liquid
+
+O0.5 is usually a ~90¢ bond pregame and is not auto-funded as a scalp.
 
 No scraping - uses official REST API endpoints.
 """
@@ -149,6 +151,8 @@ SERIES_WITH_TOTALS = (
 
 MIN_VOLUME_THRESHOLD = 50
 MIN_24H_VOLUME_THRESHOLD = 100
+TOTAL_ATM_TARGET = 0.50
+TOTAL_BOND_YES = 0.88  # skip ~90¢ O0.5 bonds when picking the scalp total
 
 # Kickoff window for "today / tonight" tape. close_time is market expiry (often
 # +2–3 days) so we rank on occurrence_datetime instead.
@@ -181,6 +185,13 @@ class SoccerGame:
     close_time: str
     home_ml_ticker: str | None = None
     away_ml_ticker: str | None = None
+    total_atm_ticker: str | None = None
+    total_atm_label: str = ""
+    total_atm_price: float | None = None
+    total_up_ticker: str | None = None
+    total_up_label: str = ""
+    total_up_price: float | None = None
+    # Compat aliases — ATM / next-up slots (not necessarily O0.5 / O1.5).
     over_05_ticker: str | None = None
     over_15_ticker: str | None = None
     total_volume: float = 0.0
@@ -197,11 +208,23 @@ class SoccerGame:
             tickers.append(self.home_ml_ticker)
         if self.away_ml_ticker:
             tickers.append(self.away_ml_ticker)
-        if self.over_05_ticker:
-            tickers.append(self.over_05_ticker)
-        if self.over_15_ticker:
-            tickers.append(self.over_15_ticker)
+        atm = self.total_atm_ticker or self.over_05_ticker
+        up = self.total_up_ticker or self.over_15_ticker
+        if atm:
+            tickers.append(atm)
+        if up:
+            tickers.append(up)
         return tickers
+
+    def totals_summary(self) -> str:
+        parts = []
+        if self.total_atm_ticker:
+            px = f" {self.total_atm_price:.2f}" if self.total_atm_price is not None else ""
+            parts.append(f"{self.total_atm_label or 'ATM'}{px}")
+        if self.total_up_ticker:
+            px = f" {self.total_up_price:.2f}" if self.total_up_price is not None else ""
+            parts.append(f"{self.total_up_label or 'ATM+1'}{px}")
+        return ", ".join(parts) if parts else "no liquid 50/50 total"
 
     @property
     def has_volume(self) -> bool:
@@ -283,6 +306,86 @@ def is_live_or_soon(
     start = now_utc - timedelta(hours=lookback_hours)
     end = now_utc + timedelta(hours=horizon_hours)
     return start <= kickoff <= end
+
+
+@dataclass(frozen=True)
+class TotalBook:
+    """One totals strike for a match."""
+
+    strike: int
+    ticker: str
+    yes_price: float | None
+    volume: float
+    volume_24h: float
+    liquid: bool
+
+    @property
+    def label(self) -> str:
+        return strike_to_over_label(self.strike)
+
+
+def strike_to_over_label(strike: int) -> str:
+    """Kalshi TOTAL-N is Over (N-1).5 — strike 1=O0.5, 3=O2.5."""
+    return f"O{strike - 1}.5"
+
+
+def _parse_dollar_price(raw: Any) -> float | None:
+    if raw is None or raw == "":
+        return None
+    try:
+        val = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if val > 1.5:
+        val = val / 100.0
+    if val < 0 or val > 1:
+        return None
+    return val
+
+
+def yes_price_from_market(market: dict) -> float | None:
+    """YES mid if two-sided, else last, else bid. Dollars (0–1)."""
+    bid = _parse_dollar_price(market.get("yes_bid_dollars") or market.get("yes_bid"))
+    ask = _parse_dollar_price(market.get("yes_ask_dollars") or market.get("yes_ask"))
+    last = _parse_dollar_price(market.get("last_price_dollars") or market.get("last_price"))
+    if bid is not None and ask is not None:
+        return (bid + ask) / 2.0
+    if last is not None:
+        return last
+    return bid if bid is not None else ask
+
+
+def is_bond_yes(price: float | None, *, bond: float = TOTAL_BOND_YES) -> bool:
+    if price is None:
+        return False
+    return price >= bond or price <= (1.0 - bond)
+
+
+def market_is_liquid(market: dict, volume: float, volume_24h: float) -> bool:
+    if volume >= MIN_VOLUME_THRESHOLD or volume_24h >= MIN_24H_VOLUME_THRESHOLD:
+        return True
+    bid = _parse_dollar_price(market.get("yes_bid_dollars") or market.get("yes_bid"))
+    ask = _parse_dollar_price(market.get("yes_ask_dollars") or market.get("yes_ask"))
+    return bid is not None and ask is not None
+
+
+def select_scalp_totals(books: list[TotalBook]) -> tuple[TotalBook | None, TotalBook | None]:
+    """ATM = YES nearest 50¢ among non-bond books. Up = next strike if liquid.
+
+    Does not default to O0.5/O1.5. Bonded O0.5 (~90¢) is not a scalp.
+    """
+    priced = [b for b in books if b.yes_price is not None and not is_bond_yes(b.yes_price)]
+    if not priced:
+        return None, None
+    atm = min(
+        priced,
+        key=lambda b: (abs((b.yes_price or 0.0) - TOTAL_ATM_TARGET), -b.volume_24h, -b.volume, b.strike),
+    )
+    by_strike = {b.strike: b for b in books}
+    up = by_strike.get(atm.strike + 1)
+    if up is None or not up.liquid:
+        return atm, None
+    return atm, up
 
 
 def _parse_volume(market: dict) -> tuple[float, float]:
@@ -444,9 +547,8 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     """Build a SoccerGame from a group of related markets.
 
     Maps markets to:
-    - home_ml_ticker, away_ml_ticker (from GAME series)
-    - over_05_ticker (TOTAL strike 1)
-    - over_15_ticker (TOTAL strike 2)
+    - home_ml_ticker, away_ml_ticker (from GAME series; TIE skipped)
+    - total nearest 50¢ YES + next strike up if liquid
     """
     if not markets:
         return None
@@ -489,7 +591,7 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     )
 
     game_tickers: list[tuple[str, str]] = []
-    total_tickers: dict[int, str] = {}
+    total_books: list[TotalBook] = []
 
     for market in markets:
         ticker = market.get("ticker", "")
@@ -509,7 +611,17 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         tm = _match_total_ticker(ticker)
         if tm:
             strike = int(tm.group(3))
-            total_tickers[strike] = ticker
+            yes = yes_price_from_market(market)
+            total_books.append(
+                TotalBook(
+                    strike=strike,
+                    ticker=ticker,
+                    yes_price=yes,
+                    volume=vol,
+                    volume_24h=vol_24h,
+                    liquid=market_is_liquid(market, vol, vol_24h),
+                )
+            )
             continue
 
     if len(game_tickers) >= 2:
@@ -521,12 +633,21 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         game.home_ml_ticker = game_tickers[0][0]
         game.reasons.append(f"ML: only {game_tickers[0][1]} found")
 
-    if 1 in total_tickers:
-        game.over_05_ticker = total_tickers[1]
-        game.reasons.append("O0.5 found")
-    if 2 in total_tickers:
-        game.over_15_ticker = total_tickers[2]
-        game.reasons.append("O1.5 found")
+    atm, up = select_scalp_totals(total_books)
+    if atm:
+        game.total_atm_ticker = atm.ticker
+        game.total_atm_label = atm.label
+        game.total_atm_price = atm.yes_price
+        game.over_05_ticker = atm.ticker
+        game.reasons.append(f"{atm.label} nearest 50¢ ({atm.yes_price:.2f})" if atm.yes_price is not None else atm.label)
+    if up:
+        game.total_up_ticker = up.ticker
+        game.total_up_label = up.label
+        game.total_up_price = up.yes_price
+        game.over_15_ticker = up.ticker
+        game.reasons.append(f"{up.label} next strike up")
+    if total_books and not atm:
+        game.reasons.append("no non-bond total near 50¢ — skipped O0.5/O1.5 default")
 
     return game
 
@@ -608,11 +729,11 @@ def discover_soccer_games(
     for game in selected:
         tickers = game.get_tickers()
         all_tickers.extend(tickers)
-        ticker_summary = ", ".join(t.split("-")[-1] for t in tickers)
+        ml = ", ".join(t.split("-")[-1] for t in tickers if "TOTAL" not in t)
         kick = game.occurrence_time or game.close_time or "?"
         log_lines.append(
             f"  {game.title[:50]}: kick={kick} vol={game.total_volume:.0f}, "
-            f"24h={game.total_24h_volume:.0f}, tickers=[{ticker_summary}]"
+            f"24h={game.total_24h_volume:.0f}, ML=[{ml}] totals=[{game.totals_summary()}]"
         )
 
     if not all_tickers:
@@ -649,13 +770,12 @@ def format_slate_digest(result: DiscoveryResult) -> str:
         lines.append("None. No today/tonight soccer tape selected.")
         lines.append("")
     else:
-        lines.append("| Kickoff (UTC) | Match | 24h vol | Tickers |")
+        lines.append("| Kickoff (UTC) | Match | 24h vol | Totals (ATM + next) |")
         lines.append("|---|---|---:|---|")
         for game in result.games:
-            tickers = ", ".join(t.rsplit("-", 1)[-1] for t in game.get_tickers())
             lines.append(
                 f"| {game.occurrence_time or game.close_time or '?'} | "
-                f"{game.title[:48]} | {game.total_24h_volume:.0f} | `{tickers}` |"
+                f"{game.title[:48]} | {game.total_24h_volume:.0f} | {game.totals_summary()} |"
             )
         lines.append("")
 

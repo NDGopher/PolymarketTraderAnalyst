@@ -19,11 +19,10 @@ python -m suspension_lab.cli
 
 The auto-discovery:
 - Queries Kalshi's public API for open soccer markets
-- Groups markets by game and finds the 4 key tickers per match:
-  - **Home ML** (moneyline)
-  - **Away ML** (moneyline)
-  - **O0.5** (over 0.5 goals total)
-  - **O1.5** (over 1.5 goals total)
+- Groups markets by game and funds:
+  - **Home ML** / **Away ML** (TIE is skipped)
+  - The **total nearest 50¢ YES** (not a default O0.5/O1.5 — O0.5 is usually a 90¢ bond)
+  - The **next strike up** if that book is liquid
 - Prefers **today/tonight kickoffs**, then volume (default: ≥50 total or ≥100 24h)
 - Auto-funds the top 5 live/soon games
 - Logs which tickers were added and why
