@@ -103,7 +103,9 @@ def env_status_message() -> str:
     tickers = os.environ.get("LAB_TICKERS", "").strip()
     key_id = resolve_api_key_id()
     lines = [f"Using .env: {path}"]
-    lines.append(f"LAB_TICKERS: {'set (' + str(len(tickers)) + ' chars)' if tickers else 'MISSING'}")
+    lines.append(
+        f"LAB_TICKERS: {'set (' + str(len(tickers)) + ' chars)' if tickers else 'auto-discover (empty)'}"
+    )
     lines.append(f"KALSHI_KEY_ID: {'set' if key_id else 'MISSING'}")
     return "\n".join(lines)
 

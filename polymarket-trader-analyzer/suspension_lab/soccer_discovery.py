@@ -16,7 +16,7 @@ import logging
 import re
 import time
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import requests
@@ -25,6 +25,9 @@ logger = logging.getLogger(__name__)
 
 KALSHI_API_BASE = "https://api.elections.kalshi.com/trade-api/v2"
 
+# GAME + TOTAL pairs. Midweek cups/second divisions are required so tonight's
+# tape (Coppa Italia, EFL Championship, Sudamericana-adjacent slates) is not
+# skipped in favor of Saturday EPL volume.
 SOCCER_SERIES_PREFIXES = (
     "KXEPLGAME",
     "KXEPLTOTAL",
@@ -49,12 +52,38 @@ SOCCER_SERIES_PREFIXES = (
     "KXPERLIGA1TOTAL",
     "KXARGLIGA1GAME",
     "KXARGLIGA1TOTAL",
+    "KXARGPREMDIVGAME",
+    "KXARGPREMDIVTOTAL",
     "KXWCGAME",
     "KXWCTOTAL",
     "KXBRASILEIROGAME",
     "KXBRASILEIROTOTAL",
+    "KXBRASILEIROBGAME",
+    "KXBRASILEIROBTOTAL",
     "KXLIGAMXGAME",
     "KXLIGAMXTOTAL",
+    "KXCOPPAITALIAGAME",
+    "KXCOPPAITALIATOTAL",
+    "KXEFLCHAMPIONSHIPGAME",
+    "KXEFLCHAMPIONSHIPTOTAL",
+    "KXECULPGAME",
+    "KXECULPTOTAL",
+    "KXCHLLDPGAME",
+    "KXCHLLDPTOTAL",
+    "KXDIMAYORGAME",
+    "KXDIMAYORTOTAL",
+    "KXUSLGAME",
+    "KXUSLTOTAL",
+    "KXVENFUTVEGAME",
+    "KXVENFUTVETOTAL",
+    "KXCONMEBOLLIBGAME",
+    "KXCONMEBOLLIBTOTAL",
+    "KXCONMEBOLSUDGAME",
+    "KXCONMEBOLSUDTOTAL",
+    "KXEREDIVISIEGAME",
+    "KXEREDIVISIETOTAL",
+    "KXNWSLGAME",
+    "KXNWSLTOTAL",
 )
 
 SERIES_WITH_GAMES = (
@@ -70,9 +99,22 @@ SERIES_WITH_GAMES = (
     "KXMLSGAME",
     "KXPERLIGA1GAME",
     "KXARGLIGA1GAME",
+    "KXARGPREMDIVGAME",
     "KXWCGAME",
     "KXBRASILEIROGAME",
+    "KXBRASILEIROBGAME",
     "KXLIGAMXGAME",
+    "KXCOPPAITALIAGAME",
+    "KXEFLCHAMPIONSHIPGAME",
+    "KXECULPGAME",
+    "KXCHLLDPGAME",
+    "KXDIMAYORGAME",
+    "KXUSLGAME",
+    "KXVENFUTVEGAME",
+    "KXCONMEBOLLIBGAME",
+    "KXCONMEBOLSUDGAME",
+    "KXEREDIVISIEGAME",
+    "KXNWSLGAME",
 )
 
 SERIES_WITH_TOTALS = (
@@ -87,13 +129,45 @@ SERIES_WITH_TOTALS = (
     "KXMLSTOTAL",
     "KXPERLIGA1TOTAL",
     "KXARGLIGA1TOTAL",
+    "KXARGPREMDIVTOTAL",
     "KXWCTOTAL",
     "KXBRASILEIROTOTAL",
+    "KXBRASILEIROBTOTAL",
     "KXLIGAMXTOTAL",
+    "KXCOPPAITALIATOTAL",
+    "KXEFLCHAMPIONSHIPTOTAL",
+    "KXECULPTOTAL",
+    "KXCHLLDPTOTAL",
+    "KXDIMAYORTOTAL",
+    "KXUSLTOTAL",
+    "KXVENFUTVETOTAL",
+    "KXCONMEBOLLIBTOTAL",
+    "KXCONMEBOLSUDTOTAL",
+    "KXEREDIVISIETOTAL",
+    "KXNWSLTOTAL",
 )
 
 MIN_VOLUME_THRESHOLD = 50
 MIN_24H_VOLUME_THRESHOLD = 100
+
+# Kickoff window for "today / tonight" tape. close_time is market expiry (often
+# +2–3 days) so we rank on occurrence_datetime instead.
+LIVE_LOOKBACK_HOURS = 3
+SOON_HORIZON_HOURS = 18
+
+SKIP_ML_CODES = {"TIE", "DRAW", "X"}
+
+PLACEHOLDER_TICKER_TOKENS = {
+    "auto",
+    "discover",
+    "run",
+    "none",
+    "example",
+    "ticker_o35",
+    "ticker_o45",
+    "your_o35_ticker",
+    "your_o45_ticker",
+}
 
 
 @dataclass
@@ -113,6 +187,8 @@ class SoccerGame:
     total_24h_volume: float = 0.0
     market_count: int = 0
     reasons: list[str] = field(default_factory=list)
+    occurrence_time: str = ""
+    series: str = ""
 
     def get_tickers(self) -> list[str]:
         """Return the list of non-None tickers for this game."""
@@ -134,6 +210,10 @@ class SoccerGame:
             or self.total_24h_volume >= MIN_24H_VOLUME_THRESHOLD
         )
 
+    @property
+    def kickoff(self) -> datetime | None:
+        return _parse_iso(self.occurrence_time) or _parse_iso(self.close_time)
+
 
 @dataclass
 class DiscoveryResult:
@@ -143,10 +223,66 @@ class DiscoveryResult:
     tickers: list[str]
     log_lines: list[str]
     discovered_at: str = ""
+    soon_games: list[SoccerGame] = field(default_factory=list)
+    later_games: list[SoccerGame] = field(default_factory=list)
 
     def __post_init__(self) -> None:
         if not self.discovered_at:
             self.discovered_at = datetime.now(tz=timezone.utc).isoformat()
+
+
+def _parse_iso(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    text = value.strip()
+    if not text:
+        return None
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        dt = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def is_placeholder_ticker(ticker: str) -> bool:
+    """True for .env.example tokens / 'auto' — not a real Kalshi ticker."""
+    token = (ticker or "").strip().lower()
+    if not token:
+        return True
+    if token in PLACEHOLDER_TICKER_TOKENS:
+        return True
+    if token.startswith("ticker_") or token.startswith("your_"):
+        return True
+    return False
+
+
+def needs_auto_discover(tickers: list[str] | None) -> bool:
+    """Empty or placeholder LAB_TICKERS should auto-discover, not pin fake books."""
+    cleaned = [t.strip() for t in (tickers or []) if t and t.strip()]
+    if not cleaned:
+        return True
+    return all(is_placeholder_ticker(t) for t in cleaned)
+
+
+def is_live_or_soon(
+    game: SoccerGame,
+    *,
+    now: datetime | None = None,
+    lookback_hours: float = LIVE_LOOKBACK_HOURS,
+    horizon_hours: float = SOON_HORIZON_HOURS,
+) -> bool:
+    """True if kickoff is in-play or later today/tonight."""
+    kickoff = game.kickoff
+    if kickoff is None:
+        return False
+    now_utc = now or datetime.now(tz=timezone.utc)
+    start = now_utc - timedelta(hours=lookback_hours)
+    end = now_utc + timedelta(hours=horizon_hours)
+    return start <= kickoff <= end
 
 
 def _parse_volume(market: dict) -> tuple[float, float]:
@@ -195,14 +331,14 @@ def _extract_game_from_rules(rules_primary: str) -> str | None:
     Returns: "Leeds United vs Newcastle"
     """
     match = re.search(
-        r"the\s+([A-Z][A-Za-z\s]+?)\s+vs\.?\s+([A-Z][A-Za-z\s]+?)\s+professional",
+        r"the\s+([A-Z][A-Za-z0-9'.\s]+?)\s+vs\.?\s+([A-Z][A-Za-z0-9'.\s]+?)\s+professional",
         rules_primary,
     )
     if match:
         return f"{match.group(1).strip()} vs {match.group(2).strip()}"
 
     match = re.search(
-        r"([A-Z][A-Za-z\s]+?)\s+vs\.?\s+([A-Z][A-Za-z\s]+?)(?:\s+professional|\s+soccer|\s+EPL|\s+La Liga)",
+        r"([A-Z][A-Za-z0-9'.\s]+?)\s+vs\.?\s+([A-Z][A-Za-z0-9'.\s]+?)(?:\s+professional|\s+soccer|\s+EPL|\s+La Liga)",
         rules_primary,
     )
     if match:
@@ -266,7 +402,9 @@ def fetch_open_soccer_markets(
 
     all_markets: list[dict] = []
 
-    for series in SOCCER_SERIES_PREFIXES:
+    for i, series in enumerate(SOCCER_SERIES_PREFIXES):
+        if i and i % 8 == 0:
+            time.sleep(0.35)
         url = f"{rest_base}/markets"
         params = {
             "series_ticker": series,
@@ -275,6 +413,10 @@ def fetch_open_soccer_markets(
         }
         try:
             resp = session.get(url, params=params, timeout=timeout)
+            if resp.status_code == 429:
+                logger.warning(f"Rate-limited on {series}; retrying once")
+                time.sleep(1.5)
+                resp = session.get(url, params=params, timeout=timeout)
             if resp.status_code == 200:
                 data = resp.json()
                 markets = data.get("markets", [])
@@ -327,12 +469,23 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
 
     home_team, away_team = _extract_teams_from_title(title)
 
+    occurrence = ""
+    series = ""
+    for market in markets:
+        if not occurrence:
+            occurrence = market.get("occurrence_datetime") or market.get("expected_expiration_time") or ""
+        ticker = market.get("ticker", "")
+        if ticker and not series:
+            series = ticker.split("-", 1)[0]
+
     game = SoccerGame(
         event_ticker=event_ticker,
         title=title,
         home_team=home_team,
         away_team=away_team,
         close_time=close_time,
+        occurrence_time=occurrence,
+        series=series,
     )
 
     game_tickers: list[tuple[str, str]] = []
@@ -348,6 +501,8 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         gm = _match_game_ticker(ticker)
         if gm:
             team_code = gm.group(3)
+            if team_code in SKIP_ML_CODES:
+                continue
             game_tickers.append((ticker, team_code))
             continue
 
@@ -381,6 +536,7 @@ def discover_soccer_games(
     min_volume: float = MIN_VOLUME_THRESHOLD,
     min_24h_volume: float = MIN_24H_VOLUME_THRESHOLD,
     max_games: int = 5,
+    now: datetime | None = None,
 ) -> DiscoveryResult:
     """Discover live/imminent soccer games with volume and return discovery result.
 
@@ -412,39 +568,130 @@ def discover_soccer_games(
         if game and game.get_tickers():
             games.append(game)
 
-    games_with_volume = [
-        g for g in games
-        if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
-    ]
+    now = now or datetime.now(tz=timezone.utc)
+    soon = [g for g in games if is_live_or_soon(g, now=now)]
+    later = [g for g in games if g not in soon]
+    later.sort(key=lambda g: g.total_24h_volume, reverse=True)
 
-    games_with_volume.sort(key=lambda g: g.total_24h_volume, reverse=True)
-    games_with_volume = games_with_volume[:max_games]
-
-    log_lines.append(f"Games with volume (>={min_volume} total or >={min_24h_volume} 24h): {len(games_with_volume)}")
+    has_kickoffs = any(g.occurrence_time for g in games)
+    if soon:
+        soon_with_vol = [
+            g for g in soon
+            if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
+        ]
+        soon_with_vol.sort(key=lambda g: g.total_24h_volume, reverse=True)
+        selected = list(soon_with_vol[:max_games])
+        if len(selected) < max_games:
+            rest = [g for g in soon if g not in selected]
+            rest.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
+            selected.extend(rest[: max_games - len(selected)])
+        log_lines.append(
+            f"Live/soon games (kickoff -{LIVE_LOOKBACK_HOURS:.0f}h..+{SOON_HORIZON_HOURS:.0f}h): {len(soon)}"
+        )
+        log_lines.append(f"Auto-selected {len(selected)} for the paper logger")
+    elif has_kickoffs:
+        selected = []
+        log_lines.append("No soccer live or later today/tonight (kickoffs known). Auto-discover is ready for the next slate.")
+    else:
+        # Unit fixtures often omit occurrence_datetime — keep volume ranking.
+        selected = [
+            g for g in games
+            if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
+        ]
+        selected.sort(key=lambda g: g.total_24h_volume, reverse=True)
+        selected = selected[:max_games]
+        log_lines.append(
+            f"Games with volume (>={min_volume} total or >={min_24h_volume} 24h): {len(selected)}"
+        )
 
     all_tickers: list[str] = []
-    for game in games_with_volume:
+    for game in selected:
         tickers = game.get_tickers()
         all_tickers.extend(tickers)
         ticker_summary = ", ".join(t.split("-")[-1] for t in tickers)
+        kick = game.occurrence_time or game.close_time or "?"
         log_lines.append(
-            f"  {game.title[:50]}: vol={game.total_volume:.0f}, 24h={game.total_24h_volume:.0f}, "
-            f"tickers=[{ticker_summary}]"
+            f"  {game.title[:50]}: kick={kick} vol={game.total_volume:.0f}, "
+            f"24h={game.total_24h_volume:.0f}, tickers=[{ticker_summary}]"
         )
 
     if not all_tickers:
-        log_lines.append("No tickers discovered (no games with sufficient volume)")
+        log_lines.append("No tickers auto-funded (no today/tonight soccer, or no volume on fixtures)")
 
     return DiscoveryResult(
-        games=games_with_volume,
+        games=selected,
         tickers=all_tickers,
         log_lines=log_lines,
+        soon_games=soon,
+        later_games=later[:12],
     )
 
 
 def format_discovery_log(result: DiscoveryResult) -> str:
     """Format discovery result as a multi-line log string."""
     return "\n".join(result.log_lines)
+
+
+def format_slate_digest(result: DiscoveryResult) -> str:
+    """Short markdown digest of live/soon books vs what the paper logger funds."""
+    lines = [
+        "# Soccer slate digest (paper logger)",
+        "",
+        f"Discovered at `{result.discovered_at}` (UTC).",
+        "",
+        "Paper only — no live orders. Fills are **not** invented; would-have "
+        "scalps appear only after a book-detected GOAL and a fill check on tape.",
+        "",
+        "## Auto-funded (logger will watch)",
+        "",
+    ]
+    if not result.games:
+        lines.append("None. No today/tonight soccer tape selected.")
+        lines.append("")
+    else:
+        lines.append("| Kickoff (UTC) | Match | 24h vol | Tickers |")
+        lines.append("|---|---|---:|---|")
+        for game in result.games:
+            tickers = ", ".join(t.rsplit("-", 1)[-1] for t in game.get_tickers())
+            lines.append(
+                f"| {game.occurrence_time or game.close_time or '?'} | "
+                f"{game.title[:48]} | {game.total_24h_volume:.0f} | `{tickers}` |"
+            )
+        lines.append("")
+
+    if result.soon_games and len(result.soon_games) > len(result.games):
+        extra = [g for g in result.soon_games if g not in result.games]
+        lines.append("## Also live/soon (not in top-N)")
+        lines.append("")
+        for game in extra[:8]:
+            lines.append(
+                f"- {game.occurrence_time or '?'} {game.title[:48]} "
+                f"(24h {game.total_24h_volume:.0f})"
+            )
+        lines.append("")
+
+    if result.later_games:
+        lines.append("## Later (not today/tonight — not auto-funded)")
+        lines.append("")
+        for game in result.later_games[:8]:
+            lines.append(
+                f"- {game.occurrence_time or game.close_time or '?'} "
+                f"{game.title[:48]} (24h {game.total_24h_volume:.0f})"
+            )
+        lines.append("")
+
+    if not result.tickers:
+        lines.append(
+            "Auto-discover is ready for the next slate. "
+            "Launch without `LAB_TICKERS` and it will fund when games appear."
+        )
+    else:
+        lines.append(
+            f"Paper logger would capture **{len(result.tickers)}** books "
+            f"(`books_long.csv` at 200ms) with spoof filter + fill-would-have. "
+            f"No fills until a GOAL prints on the tape."
+        )
+    return "\n".join(lines)
 
 
 def discover_tickers_for_lab(

@@ -28,7 +28,7 @@ Write-Host "[2/3] Installing dependencies..."
 if (-not (Test-Path ".env")) {
     Write-Host ""
     Write-Host "[ERROR] No .env file in this folder." -ForegroundColor Red
-    Write-Host "Copy .env.example to .env and add your Kalshi credentials + LAB_TICKERS."
+    Write-Host "Copy .env.example to .env and add Kalshi credentials. LAB_TICKERS is optional (auto-discovers today's soccer)."
     if (Test-Path ".env.example") {
         Copy-Item ".env.example" ".env"
         Write-Host "Created .env from .env.example - edit it, then run this script again."

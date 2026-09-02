@@ -40,12 +40,24 @@ python -m suspension_lab.cli --no-auto-discover
 
 ### Supported leagues
 
-Auto-discovery works for all Kalshi soccer series:
-- **EPL** (English Premier League)
-- **La Liga**, **Bundesliga**, **Serie A**, **Ligue 1**
+Auto-discovery picks **today / tonight** by `occurrence_datetime` (not Saturday volume). Supported series include:
+- **EPL**, **La Liga**, **Bundesliga**, **Serie A**, **Ligue 1**
 - **Champions League**, **Europa League**, **Conference League**
-- **MLS**, **World Cup**
-- **Peruvian Liga 1**, **Argentine Liga 1**
+- **Coppa Italia**, **EFL Championship**
+- **MLS**, **USL**, **NWSL**, **World Cup**
+- **Brasileirão** A/B, **Liga MX**
+- **Peru Liga 1**, **Argentina Primera**, **Chile**, **Colombia (DIMAYOR)**
+- **Ecuador LigaPro**, **Venezuela**, **Libertadores / Sudamericana**
+
+Unattended paper logger (no UI, no live bets):
+
+```bash
+python -m suspension_lab.paper_logger
+python -m suspension_lab.cli --digest-only
+python -m suspension_lab.cli --headless
+```
+
+GOAL is detected from the **order book** (bid jump or spread blowout), not a score feed. Paper scalp makes around the jump (bid+1¢) — never mid-only. Fees peak at 50¢ so near-50 prints with a tight spread are skipped. VAR / delayed / red-card-like grinds flatten or skip.
 
 ## Switch to a new game (manual)
 

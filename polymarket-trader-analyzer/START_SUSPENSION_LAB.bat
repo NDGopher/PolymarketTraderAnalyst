@@ -43,7 +43,7 @@ if not exist ".env" (
   echo.
   echo   1. Copy .env.example to .env
   echo   2. Paste your KALSHI_KEY_ID and KALSHI_PRIVATE_KEY
-  echo   3. Set LAB_TICKERS to your Kalshi O/U tickers
+  echo   3. LAB_TICKERS is optional — empty means auto-discover today's soccer
   echo   4. Double-click this bat again
   echo.
   if exist ".env.example" copy /Y ".env.example" ".env" >nul
