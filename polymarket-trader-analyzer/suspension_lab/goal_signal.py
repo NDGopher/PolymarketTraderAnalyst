@@ -5,7 +5,7 @@ from collections import deque
 from dataclasses import dataclass
 from decimal import Decimal
 
-from suspension_lab.exit_engine import is_bond_spoof_bid
+from suspension_lab.exit_engine import get_per_line_exit_mode, is_bond_spoof_bid, is_total_05_ticker
 from suspension_lab.config import (
     BOND_MID_THRESHOLD,
     BOND_HOLD_BID_CENTS,
@@ -132,12 +132,15 @@ class GoalSignalDetector:
             mid = prev_bid
         return mid >= Decimal(str(BOND_MID_THRESHOLD)) or mid <= Decimal("0.10")
 
-    def _exit_mode(self, new_bid: Decimal, new_ask: Decimal | None, levels: dict) -> str:
-        if int(new_bid * 100) >= BOND_HOLD_BID_CENTS or new_ask is None:
+    def _exit_mode(self, ticker: str, new_bid: Decimal, new_ask: Decimal | None, levels: dict) -> str:
+        bid_cents = int(new_bid * 100)
+        is_bonded = bid_cents >= BOND_HOLD_BID_CENTS or new_ask is None or levels.get("is_bond")
+        
+        if is_bonded:
             return "hold_bond"
-        if levels.get("is_bond"):
-            return "hold_bond"
-        return "var_watch" if int(new_bid * 100) >= 70 else "scalp"
+        
+        base_mode = "var_watch" if bid_cents >= 70 else "scalp"
+        return get_per_line_exit_mode(ticker, base_mode, is_bonded=False)
 
     def evaluate(
         self, ticker: str, book: OrderBook
@@ -188,7 +191,7 @@ class GoalSignalDetector:
         self._last_signal_ms[ticker] = ts_ms
         self._signal_peak_bid[ticker] = (ts_ms, new_bid)
         self._spoof_active.discard(ticker)
-        exit_mode = self._exit_mode(new_bid, new_ask, levels)
+        exit_mode = self._exit_mode(ticker, new_bid, new_ask, levels)
         reason = "bid_jump_with_size_and_ask_confirm"
         if prev_ask and new_ask and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100:
             reason = "bid_jump_ask_led_within_2s"

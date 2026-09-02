@@ -55,9 +55,10 @@ class TradeResult:
         return self.pnl_cents / 100.0
 
 
-def _load_tape(
+def _load_tape_from_wide(
     session_dir: Path, *, entry_offset_cents: int = 0
 ) -> tuple[dict[str, list[TapePoint]], list[TradeEntry]]:
+    """Load tape from wide-format books.csv (original tickers only)."""
     books_path = session_dir / "books.csv"
     with books_path.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -115,6 +116,72 @@ def _load_tape(
                     )
                 )
     return tape, entries
+
+
+def _load_tape_from_long(
+    session_dir: Path, *, entry_offset_cents: int = 0
+) -> tuple[dict[str, list[TapePoint]], list[TradeEntry]]:
+    """Load tape from long-format books_long.csv (includes runtime-added tickers)."""
+    long_path = session_dir / "books_long.csv"
+    with long_path.open(encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    tickers = sorted({r["ticker"] for r in rows if r.get("ticker")})
+    tape: dict[str, list[TapePoint]] = {t: [] for t in tickers}
+    detectors: dict[str, GoalSignalDetector] = {t: GoalSignalDetector() for t in tickers}
+    entries: list[TradeEntry] = []
+
+    for row in rows:
+        ticker = row.get("ticker", "")
+        if not ticker or ticker not in tickers:
+            continue
+        bid_s = row.get("yes_bid", "")
+        ask_s = row.get("yes_ask", "")
+        if not bid_s or not ask_s:
+            continue
+        ts_ms = int(row["ts_ms"])
+        tape[ticker].append(
+            TapePoint(
+                ts_ms=ts_ms,
+                bid_cents=int(round(Decimal(bid_s) * 100)),
+                ask_cents=int(round(Decimal(ask_s) * 100)),
+            )
+        )
+        book = OrderBook(ticker)
+        book.set_from_top(
+            bid=bid_s,
+            ask=ask_s,
+            bid_qty=row.get("yes_bid_qty", "0") or "0",
+            ask_qty=row.get("yes_ask_qty", "0") or "0",
+            updated_ms=ts_ms,
+        )
+        result = detectors[ticker].evaluate(ticker, book)
+        if isinstance(result, GoalSignal):
+            signal_cents = int(round(result.new_bid * 100))
+            entry_cents = min(signal_cents + entry_offset_cents, 99)
+            entries.append(
+                TradeEntry(
+                    ts_ms=ts_ms,
+                    ts_iso=row["ts_iso"],
+                    ticker=ticker,
+                    entry_cents=entry_cents,
+                    signal_bid_cents=signal_cents,
+                    exit_mode=result.exit_mode,
+                    bid_jump_cents=result.bid_jump_cents,
+                    entry_offset_cents=entry_offset_cents,
+                )
+            )
+    return tape, entries
+
+
+def _load_tape(
+    session_dir: Path, *, entry_offset_cents: int = 0
+) -> tuple[dict[str, list[TapePoint]], list[TradeEntry]]:
+    """Load tape, preferring books_long.csv if present."""
+    long_path = session_dir / "books_long.csv"
+    if long_path.exists():
+        return _load_tape_from_long(session_dir, entry_offset_cents=entry_offset_cents)
+    return _load_tape_from_wide(session_dir, entry_offset_cents=entry_offset_cents)
 
 
 def _bid_at_offset(tape: list[TapePoint], entry_ms: int, offset_sec: float) -> int | None:

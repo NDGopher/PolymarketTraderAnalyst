@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 
@@ -14,6 +15,33 @@ class ExitDecision:
 
 def scalp_target_cents(entry_cents: int, plus: int = 7) -> int:
     return min(entry_cents + plus, 99)
+
+
+def is_total_05_ticker(ticker: str) -> bool:
+    """Check if ticker is a totals O0.5 line (e.g. KXPERLIGA1TOTAL-...-1).
+    
+    O0.5 = strike 1, O1.5 = strike 2, O2.5 = strike 3, etc.
+    This function returns True for O0.5 (strike 1) which should hold_bond after bonding.
+    """
+    if "TOTAL" not in ticker.upper():
+        return False
+    match = re.search(r"-(\d+)$", ticker)
+    if match:
+        strike_num = int(match.group(1))
+        return strike_num == 1
+    return False
+
+
+def get_per_line_exit_mode(ticker: str, base_exit_mode: str, is_bonded: bool) -> str:
+    """Determine exit mode based on per-line policy.
+    
+    Rules:
+    - Totals with strike 0.5 (O0.5) that have already bonded → hold_bond, never scalp +7
+    - ML (moneyline) and O1.5+ keep their base exit mode (scalp / var_watch)
+    """
+    if is_total_05_ticker(ticker) and is_bonded:
+        return "hold_bond"
+    return base_exit_mode
 
 
 def is_bond_spoof_bid(
