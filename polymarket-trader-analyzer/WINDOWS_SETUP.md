@@ -44,8 +44,8 @@ KALSHI_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
 ...your key...
 -----END RSA PRIVATE KEY-----"
 
-LAB_TICKERS=YOUR_O35_TICKER,YOUR_O45_TICKER
-LAB_GAME=Parma-Cremonese
+# LAB_TICKERS=   # optional — empty auto-discovers today's soccer
+# LAB_GAME=
 ```
 
 ---

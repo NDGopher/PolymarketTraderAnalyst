@@ -25,6 +25,7 @@ dev = ["pytest>=8.0"]
 polyanalyst = "polyanalyst.cli:app"
 suspension-lab = "suspension_lab.cli:main"
 suspension-analyze = "suspension_lab.analyze_cli:app"
+suspension-paper-logger = "suspension_lab.paper_logger:main"
 
 [tool.setuptools.packages.find]
 where = ["src", "."]

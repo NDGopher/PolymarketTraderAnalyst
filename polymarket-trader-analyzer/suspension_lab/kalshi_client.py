@@ -5,7 +5,7 @@ import json
 import random
 import threading
 import time
-from typing import Callable
+from typing import Callable, Sequence
 
 import requests
 import websockets
@@ -19,6 +19,30 @@ BookCallback = Callable[[str, OrderBook], None]
 StatusCallback = Callable[[str], None]
 
 WS_FAILS_BEFORE_REST = 4
+
+
+def orderbook_subscribe_payload(
+    tickers: Sequence[str],
+    *,
+    msg_id: int,
+    channels: Sequence[str] | None = None,
+) -> dict | None:
+    """Kalshi WS subscribe body, or None if market_tickers would be empty.
+
+    Error 2 ("params required") is raised by Kalshi when orderbook_delta is
+    subscribed without market_tickers. Never emit that payload.
+    """
+    markets = [t.strip() for t in tickers if t and str(t).strip()]
+    if not markets:
+        return None
+    return {
+        "id": msg_id,
+        "cmd": "subscribe",
+        "params": {
+            "channels": list(channels or ["orderbook_delta"]),
+            "market_tickers": markets,
+        },
+    }
 
 
 class KalshiBookFeed:
@@ -55,8 +79,19 @@ class KalshiBookFeed:
         self._emit_status(f"Added ticker {ticker}")
         return True
 
+    def remove_ticker(self, ticker: str) -> bool:
+        ticker = ticker.strip()
+        if not ticker or ticker not in self.books:
+            return False
+        self.books.pop(ticker, None)
+        if ticker in self.config.tickers:
+            self.config.tickers.remove(ticker)
+        self._pending_subscribe = [t for t in self._pending_subscribe if t != ticker]
+        self._emit_status(f"Dropped resolved ticker {ticker}")
+        return True
+
     def pending_subscribes(self) -> list[str]:
-        pending = list(self._pending_subscribe)
+        pending = [t for t in self._pending_subscribe if t and t.strip()]
         self._pending_subscribe.clear()
         return pending
 
@@ -118,6 +153,7 @@ class KalshiBookFeed:
 
     def _fetch_rest_snapshot(self, session: requests.Session, ticker: str) -> bool:
         try:
+            session.headers.update({"User-Agent": "suspension-lab/0.1"})
             url = f"{self.config.rest_base}/markets/{ticker}/orderbook"
             resp = session.get(url, params={"depth": 0}, timeout=5)
             resp.raise_for_status()
@@ -131,15 +167,17 @@ class KalshiBookFeed:
             return False
 
     async def _rest_loop(self) -> None:
-        session = requests.Session()
-        session.headers.update({"User-Agent": "suspension-lab/0.1"})
         interval = max(self.config.poll_ms, 100) / 1000.0
-        self._emit_status(f"REST polling every {int(interval * 1000)}ms")
+        self._emit_status(f"REST polling every {int(interval * 1000)}ms (parallel books)")
         while not self._stop.is_set():
-            for ticker in self.config.tickers:
-                if self._stop.is_set():
-                    break
-                await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
+            tickers = list(self.config.tickers)
+            if tickers:
+                await asyncio.gather(
+                    *[
+                        asyncio.to_thread(self._fetch_rest_snapshot, requests.Session(), ticker)
+                        for ticker in tickers
+                    ]
+                )
             await asyncio.sleep(interval)
 
     def _snapshot_payload(self, msg: dict) -> dict:
@@ -179,40 +217,58 @@ class KalshiBookFeed:
                     self._emit_status(f"Kalshi WS connected ({host})")
 
                     # Seed books via REST so UI has data even before snapshots arrive
-                    for ticker in self.config.tickers:
+                    for ticker in list(self.config.tickers):
                         await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
 
-                    sub = {
-                        "id": self._subscribe_id,
-                        "cmd": "subscribe",
-                        "params": {
-                            "channels": ["orderbook_delta"],
-                            "market_tickers": self.config.tickers,
-                        },
-                    }
+                    sub = orderbook_subscribe_payload(
+                        self.config.tickers, msg_id=self._subscribe_id
+                    )
                     self._subscribe_id += 1
-                    await ws.send(json.dumps(sub))
+                    if sub is None:
+                        self._emit_status(
+                            "Waiting for live soccer — no WS subscribe (empty market_tickers)"
+                        )
+                    else:
+                        await ws.send(json.dumps(sub))
 
                     # Kalshi seq is per subscription stream (sid), NOT per ticker
                     last_seq: int | None = None
                     last_emit_ms: dict[str, int] = {}
                     emit_gap_ms = 50
 
-                    async for raw in ws:
-                        if self._stop.is_set():
-                            break
+                    async def _flush_pending() -> None:
+                        pending = self.pending_subscribes()
+                        extra = orderbook_subscribe_payload(
+                            pending, msg_id=self._subscribe_id + 1
+                        )
+                        if extra is None:
+                            return
+                        self._subscribe_id += 1
+                        extra["id"] = self._subscribe_id
+                        await ws.send(json.dumps(extra))
+                        self._emit_status(f"WS subscribe added: {', '.join(pending)}")
+
+                    while not self._stop.is_set():
+                        try:
+                            raw = await asyncio.wait_for(ws.recv(), timeout=2.0)
+                        except TimeoutError:
+                            await _flush_pending()
+                            continue
                         event = json.loads(raw)
                         etype = event.get("type")
                         if etype == "error":
                             self._emit_status(f"WS error: {event.get('msg', event)}")
+                            await _flush_pending()
                             continue
                         if etype == "subscribed":
                             self._emit_status(f"Subscribed: {event.get('msg', {}).get('channel')}")
+                            await _flush_pending()
                             continue
 
                         msg = event.get("msg") or {}
                         ticker = msg.get("market_ticker")
                         if not ticker or ticker not in self.books:
+                            await _flush_pending()
                             continue
 
                         seq = event.get("seq")
@@ -232,28 +288,14 @@ class KalshiBookFeed:
                         elif etype == "orderbook_delta":
                             book.apply_delta(msg, updated_ms=now_ms)
                         else:
+                            await _flush_pending()
                             continue
 
                         if now_ms - last_emit_ms.get(ticker, 0) >= emit_gap_ms:
                             last_emit_ms[ticker] = now_ms
                             self._emit_book(ticker)
 
-                        pending = self.pending_subscribes()
-                        if pending:
-                            self._subscribe_id += 1
-                            await ws.send(
-                                json.dumps(
-                                    {
-                                        "id": self._subscribe_id,
-                                        "cmd": "subscribe",
-                                        "params": {
-                                            "channels": ["orderbook_delta"],
-                                            "market_tickers": pending,
-                                        },
-                                    }
-                                )
-                            )
-                            self._emit_status(f"WS subscribe added: {', '.join(pending)}")
+                        await _flush_pending()
 
             except Exception as exc:  # noqa: BLE001
                 if self._stop.is_set():

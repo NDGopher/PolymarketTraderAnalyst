@@ -13,9 +13,12 @@ from suspension_lab.config import (
     GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS,
     GOAL_ASK_LOOKBACK_MS,
     GOAL_BID_JUMP_CENTS,
+    GOAL_DELAYED_WINDOW_MS,
     GOAL_MIN_BID_QTY,
+    GOAL_MIN_BLOWOUT_JUMP_CENTS,
     GOAL_MIN_PREV_BID_CENTS,
     GOAL_SIGNAL_COOLDOWN_MS,
+    GOAL_SPREAD_BLOWOUT_CENTS,
     VAR_REVERT_CENTS,
     VAR_REVERT_WINDOW_MS,
 )
@@ -80,6 +83,17 @@ class SpoofBidNotice:
     drop_cents: int
 
 
+@dataclass
+class DelayedStateNotice:
+    """Gradual reprice — red card / delayed news / VAR-ending grind. Do not scalp."""
+
+    ticker: str
+    ts_ms: int
+    bid_change_cents: int
+    seconds: float
+    reason: str
+
+
 class GoalSignalDetector:
     """Detect bid-side goal momentum (not ask-only scares). Point-in-time only."""
 
@@ -90,6 +104,7 @@ class GoalSignalDetector:
         self._signal_peak_bid: dict[str, tuple[int, Decimal]] = {}
         self._primed: set[str] = set()
         self._spoof_active: set[str] = set()
+        self._delayed_ms: dict[str, int] = {}
 
     def _history_window(self, ticker: str, now_ms: int) -> list[tuple[int, Decimal | None, Decimal | None]]:
         hist = self._history.get(ticker, deque())
@@ -144,7 +159,7 @@ class GoalSignalDetector:
 
     def evaluate(
         self, ticker: str, book: OrderBook
-    ) -> GoalSignal | VarRevertAlert | SpoofBidNotice | None:
+    ) -> GoalSignal | VarRevertAlert | SpoofBidNotice | DelayedStateNotice | None:
         levels = book.top_levels()
         new_bid = _d(levels.get("yes_bid"))
         new_ask = _d(levels.get("yes_ask"))
@@ -168,8 +183,14 @@ class GoalSignalDetector:
         if new_bid is None or prev_bid is None:
             return None
 
+        delayed = self._delayed_grind(ticker, ts_ms)
+        if delayed:
+            return delayed
+
         jump_cents = int(round((new_bid - prev_bid) * 100))
-        if jump_cents < GOAL_BID_JUMP_CENTS:
+        blowout = self._spread_blowout(prev_bid, prev_ask, new_bid, new_ask, jump_cents)
+
+        if jump_cents < GOAL_BID_JUMP_CENTS and not blowout:
             return None
 
         if int(round(prev_bid * 100)) < GOAL_MIN_PREV_BID_CENTS:
@@ -181,11 +202,12 @@ class GoalSignalDetector:
         if self._was_bond(prev_bid, prev_ask):
             return None
 
-        if not self._ask_confirmed(ticker, prev_bid, prev_ask, new_ask, ts_ms):
+        ask_ok = self._ask_confirmed(ticker, prev_bid, prev_ask, new_ask, ts_ms)
+        if not ask_ok and not blowout:
             return None
 
-        last = self._last_signal_ms.get(ticker, 0)
-        if ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
+        last = self._last_signal_ms.get(ticker)
+        if last is not None and ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
             return None
 
         self._last_signal_ms[ticker] = ts_ms
@@ -193,7 +215,9 @@ class GoalSignalDetector:
         self._spoof_active.discard(ticker)
         exit_mode = self._exit_mode(ticker, new_bid, new_ask, levels)
         reason = "bid_jump_with_size_and_ask_confirm"
-        if prev_ask and new_ask and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100:
+        if blowout and not ask_ok:
+            reason = "spread_blowout_books_pulled"
+        elif prev_ask and new_ask and new_ask - prev_ask < Decimal(GOAL_ASK_CONFIRM_CENTS) / 100:
             reason = "bid_jump_ask_led_within_2s"
 
         return GoalSignal(
@@ -201,12 +225,59 @@ class GoalSignalDetector:
             ts_ms=ts_ms,
             prev_bid=prev_bid,
             new_bid=new_bid,
-            bid_jump_cents=jump_cents,
+            bid_jump_cents=jump_cents if jump_cents >= GOAL_MIN_BLOWOUT_JUMP_CENTS else jump_cents,
             bid_qty=bid_qty,
             prev_ask=prev_ask,
             new_ask=new_ask,
             reason=reason,
             exit_mode=exit_mode,
+        )
+
+    def _spread_blowout(
+        self,
+        prev_bid: Decimal,
+        prev_ask: Decimal | None,
+        new_bid: Decimal,
+        new_ask: Decimal | None,
+        jump_cents: int,
+    ) -> bool:
+        if prev_ask is None or new_ask is None:
+            return False
+        if jump_cents < GOAL_MIN_BLOWOUT_JUMP_CENTS:
+            return False
+        prev_spread = int(round((prev_ask - prev_bid) * 100))
+        new_spread = int(round((new_ask - new_bid) * 100))
+        if prev_spread > 5:
+            return False
+        return new_spread - prev_spread >= GOAL_SPREAD_BLOWOUT_CENTS
+
+    def _delayed_grind(self, ticker: str, ts_ms: int) -> DelayedStateNotice | None:
+        hist = [h for h in self._history.get(ticker, deque()) if ts_ms - h[0] <= GOAL_DELAYED_WINDOW_MS]
+        bids = [(h[0], h[1]) for h in hist if h[1] is not None]
+        if len(bids) < 4:
+            return None
+        first_ts, first_bid = bids[0]
+        last_ts, last_bid = bids[-1]
+        total = int(round((last_bid - first_bid) * 100))
+        if total < GOAL_BID_JUMP_CENTS:
+            return None
+        steps = [
+            int(round((bids[i][1] - bids[i - 1][1]) * 100))
+            for i in range(1, len(bids))
+        ]
+        if max(steps) >= GOAL_BID_JUMP_CENTS:
+            return None
+        last = self._delayed_ms.get(ticker)
+        if last is not None and ts_ms - last < GOAL_SIGNAL_COOLDOWN_MS:
+            return None
+        self._delayed_ms[ticker] = ts_ms
+        seconds = max((last_ts - first_ts) / 1000.0, 0.1)
+        return DelayedStateNotice(
+            ticker=ticker,
+            ts_ms=ts_ms,
+            bid_change_cents=total,
+            seconds=seconds,
+            reason="delayed_grind_red_card_like",
         )
 
     def _check_var_revert(

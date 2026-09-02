@@ -11,6 +11,7 @@ from pathlib import Path
 
 from suspension_lab.exit_engine import check_exit, scalp_target_cents
 from suspension_lab.goal_signal import GoalSignal
+from suspension_lab.scalp_quote import make_around_jump
 
 
 @dataclass
@@ -25,8 +26,9 @@ class TraderConfig:
     def from_env(cls) -> TraderConfig:
         import os
 
+        enabled_raw = os.environ.get("LAB_TRADER_ENABLED", "").lower()
         return cls(
-            enabled=os.environ.get("LAB_TRADER_ENABLED", "").lower() in ("1", "true", "yes"),
+            enabled=enabled_raw in ("1", "true", "yes"),
             live=False,
             contracts=int(os.environ.get("LAB_TRADER_CONTRACTS", "50")),
             bid_offset_cents=int(os.environ.get("LAB_TRADER_BID_OFFSET_CENTS", "1")),
@@ -59,6 +61,11 @@ class PaperAutoTrader:
         self._positions: dict[str, PaperPosition] = {}
         self._closed: list[PaperPosition] = []
         self._path = session_dir / "paper_trades.csv"
+        self.would_have_pnl_cents = 0
+        self.burned_pnl_cents = 0
+        self.would_have_count = 0
+        self.burned_count = 0
+        self.skipped: list[str] = []
         self._init_csv()
 
     def _init_csv(self) -> None:
@@ -99,7 +106,16 @@ class PaperAutoTrader:
             return None
 
         signal_cents = int(round(signal.new_bid * 100))
-        entry_cents = min(signal_cents + self.config.bid_offset_cents, 99)
+        ask_cents = int(round(signal.new_ask * 100)) if signal.new_ask is not None else None
+        quote = make_around_jump(
+            signal_cents,
+            ask_cents,
+            bid_offset=self.config.bid_offset_cents,
+        )
+        if quote.skipped or quote.entry_cents is None:
+            self.skipped.append(quote.skip_reason or quote.reason)
+            return None
+        entry_cents = quote.entry_cents
 
         with self._lock:
             self._trade_id += 1
@@ -160,8 +176,35 @@ class PaperAutoTrader:
         pos.exit_ts_ms = ts_ms
         self._positions.pop(pos.ticker, None)
         self._closed.append(pos)
+        pnl = exit_cents - pos.entry_cents
+        burned = reason.lower().startswith("var") or "flatten" in reason.lower() or "delayed" in reason.lower()
+        if burned:
+            self.burned_pnl_cents += pnl
+            self.burned_count += 1
+        else:
+            self.would_have_pnl_cents += pnl
+            self.would_have_count += 1
         self._write_row(pos)
         return pos
+
+    def flatten(self, ticker: str, bid_cents: int | None, reason: str) -> PaperPosition | None:
+        """Skip/flatten on VAR, red-card, or delayed state. Paper only."""
+        pos = self._positions.get(ticker)
+        if not pos or pos.status != "open":
+            return None
+        now_ms = int(time.time() * 1000)
+        px = bid_cents if bid_cents is not None else pos.entry_cents
+        return self._close(pos, px, reason, now_ms)
+
+    def scoreboard(self) -> dict[str, int]:
+        return {
+            "would_have_count": self.would_have_count,
+            "would_have_pnl_cents": self.would_have_pnl_cents,
+            "burned_count": self.burned_count,
+            "burned_pnl_cents": self.burned_pnl_cents,
+            "open": len(self._positions),
+            "skipped": len(self.skipped),
+        }
 
     def _write_row(self, pos: PaperPosition) -> None:
         from datetime import datetime, timezone

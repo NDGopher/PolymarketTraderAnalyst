@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 from suspension_lab.env_loader import (
     load_project_env,
@@ -34,6 +35,9 @@ GOAL_SIGNAL_COOLDOWN_MS = 45_000
 GOAL_HIGHLIGHT_SECONDS = 45
 GOAL_ASK_LOOKBACK_MS = 2_500  # ask-led-bid: ask moved in prior ~2.5s
 GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS = 5  # allow small bid drift while ask leads
+GOAL_SPREAD_BLOWOUT_CENTS = 12  # tight book → wide = books pulled (goal/suspension)
+GOAL_MIN_BLOWOUT_JUMP_CENTS = 6
+GOAL_DELAYED_WINDOW_MS = 4_000  # grind over ~4s is red-card / delayed state, not a goal
 BOND_HOLD_BID_CENTS = 88  # bid here -> hold to 99 / resolution, not +7 scalp
 VAR_REVERT_CENTS = 10  # peak-to-trough drop triggers VAR/cancelled alert
 VAR_REVERT_WINDOW_MS = 120_000
@@ -54,6 +58,8 @@ class LabConfig:
     api_key_id: str = ""
     private_key_path: str = ""
     private_key_pem: str = ""
+    games: list[Any] = field(default_factory=list)
+    paper_enabled: bool = False
 
     @classmethod
     def from_env(
@@ -67,7 +73,7 @@ class LabConfig:
         output_dir: str | Path | None = None,
     ) -> LabConfig:
         load_project_env()
-        game = game_label or os.environ.get("LAB_GAME", "")
+        game = game_label
         demo_flag = demo or os.environ.get("KALSHI_DEMO", "").lower() in ("1", "true", "yes")
         pem = resolve_private_key_pem()
         key_path = resolve_private_key_path()

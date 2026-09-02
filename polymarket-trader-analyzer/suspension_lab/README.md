@@ -10,7 +10,7 @@ START_SUSPENSION_LAB.bat
 
 ## Auto-discovery (NEW)
 
-When you launch the lab **without** `LAB_TICKERS`, it automatically discovers in-play or imminent soccer games from Kalshi:
+When you launch the lab **without** `--tickers`, it automatically discovers in-play or imminent soccer games from Kalshi. `.env LAB_TICKERS` is ignored (it is not a pin list):
 
 ```bash
 # No tickers needed — auto-discover soccer games with volume
@@ -19,13 +19,13 @@ python -m suspension_lab.cli
 
 The auto-discovery:
 - Queries Kalshi's public API for open soccer markets
-- Groups markets by game and finds the 4 key tickers per match:
-  - **Home ML** (moneyline)
-  - **Away ML** (moneyline)
-  - **O0.5** (over 0.5 goals total)
-  - **O1.5** (over 1.5 goals total)
-- Filters by volume (default: ≥50 total or ≥100 24h volume)
-- Limits to the top 5 games by volume
+- Groups markets by game and funds:
+  - **Home ML** / **Away ML** (liquid TIE is funded)
+  - The **total nearest 50¢ YES from live prices** (not a frozen pregame O2.5; at 1-1 that is usually O3.5)
+  - The **next strike up** if liquid (O4.5 at 1-1). If that wing drifts far from 50¢ with no goal, drop to the cheaper adjacent strike (O2.5)
+- Rank: **in-play first**, then kickoff-soon, then 24h volume. No team-name bias.
+- Fingerprint discovery (Egypt, TFF, Coppa, cups, second divisions) — prefix list is a boost, not a closed set
+- Finished / yesterday books are dropped. Empty start stays REST-idle (no empty WS subscribe) and rescans
 - Logs which tickers were added and why
 
 ### Auto-discovery options
@@ -40,21 +40,32 @@ python -m suspension_lab.cli --no-auto-discover
 
 ### Supported leagues
 
-Auto-discovery works for all Kalshi soccer series:
-- **EPL** (English Premier League)
-- **La Liga**, **Bundesliga**, **Serie A**, **Ligue 1**
+Auto-discovery picks **today / tonight** by `occurrence_datetime` (not Saturday volume). Supported series include:
+- **EPL**, **La Liga**, **Bundesliga**, **Serie A**, **Ligue 1**
 - **Champions League**, **Europa League**, **Conference League**
-- **MLS**, **World Cup**
-- **Peruvian Liga 1**, **Argentine Liga 1**
+- **Coppa Italia**, **EFL Championship**
+- **MLS**, **USL**, **NWSL**, **World Cup**
+- **Brasileirão** A/B, **Liga MX**
+- **Peru Liga 1**, **Argentina Primera**, **Chile**, **Colombia (DIMAYOR)**
+- **Ecuador LigaPro**, **Venezuela**, **Libertadores / Sudamericana**
+- **Super League Greece**, **Greek Cup**
+- **Egypt Premier League**, **Turkish TFF 1. Lig**
+- Plus any other open Kalshi soccer GAME/TOTAL (fingerprint, not a whitelist)
+
+Unattended paper logger (no UI, no live bets):
+
+```bash
+python -m suspension_lab.paper_logger
+python -m suspension_lab.cli --digest-only
+python -m suspension_lab.cli --headless
+```
+
+GOAL is detected from the **order book** (bid jump or spread blowout), not a score feed. Paper scalp makes around the jump (bid+1¢) — never mid-only. Fees peak at 50¢ so near-50 prints with a tight spread are skipped. VAR / delayed / red-card-like grinds flatten or skip.
 
 ## Switch to a new game (manual)
 
 1. Close the lab (choose **No** to delete empty test sessions).
-2. Either edit `.env` **or** paste tickers in the UI after launch:
-   ```env
-   LAB_TICKERS=NEW_TICKER_O35,NEW_TICKER_O45   # optional — can add in UI instead
-   LAB_GAME=TeamA-TeamB
-   ```
+2. Paste extra tickers in the UI after launch, or pass an explicit CLI `--tickers KX…` (real Kalshi ticker only). Do not pin yesterday in `.env`.
 3. Run the launcher again. Each run creates a new session folder.
 
 **Runtime tickers:** Use the text box at the top of the UI to add Kalshi tickers while the session runs.

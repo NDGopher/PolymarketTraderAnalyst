@@ -1,13 +1,14 @@
-"""Auto-discover live/imminent soccer events from Kalshi API and map to 4 tickers per game.
+"""Auto-discover live/imminent soccer events from Kalshi API.
 
-This module queries Kalshi's public API to find active soccer markets,
-identifies games with volume, and maps each game to the 4 key tickers:
-- Home ML (moneyline)
-- Away ML (moneyline)
-- O0.5 goals (totals)
-- O1.5 goals (totals)
+Fingerprint (not a Big-5 prefix allowlist):
+- title/subtitle contains "goals scored", or
+- series looks like soccer KX*GAME / KX*TOTAL and is not NFL/MLB/NBA/NHL/…
 
-No scraping - uses official REST API endpoints.
+Funds home + away ML (and liquid TIE), plus live ATM total + next strike.
+O0.5 ~90¢ bonds are skipped. Paper only — no live bets.
+
+`.env LAB_TICKERS` is never a pin list. Empty / placeholder / yesterday
+tickers always auto-discover.
 """
 
 from __future__ import annotations
@@ -15,9 +16,10 @@ from __future__ import annotations
 import logging
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
-from typing import Any
+from datetime import date, datetime, timedelta, timezone
+from typing import Any, Iterable, Sequence
 
 import requests
 
@@ -25,6 +27,9 @@ logger = logging.getLogger(__name__)
 
 KALSHI_API_BASE = "https://api.elections.kalshi.com/trade-api/v2"
 
+# GAME + TOTAL pairs. Midweek cups/second divisions are required so tonight's
+# tape (Coppa Italia, EFL Championship, Sudamericana-adjacent slates) is not
+# skipped in favor of Saturday EPL volume.
 SOCCER_SERIES_PREFIXES = (
     "KXEPLGAME",
     "KXEPLTOTAL",
@@ -49,12 +54,46 @@ SOCCER_SERIES_PREFIXES = (
     "KXPERLIGA1TOTAL",
     "KXARGLIGA1GAME",
     "KXARGLIGA1TOTAL",
+    "KXARGPREMDIVGAME",
+    "KXARGPREMDIVTOTAL",
     "KXWCGAME",
     "KXWCTOTAL",
     "KXBRASILEIROGAME",
     "KXBRASILEIROTOTAL",
+    "KXBRASILEIROBGAME",
+    "KXBRASILEIROBTOTAL",
     "KXLIGAMXGAME",
     "KXLIGAMXTOTAL",
+    "KXCOPPAITALIAGAME",
+    "KXCOPPAITALIATOTAL",
+    "KXEFLCHAMPIONSHIPGAME",
+    "KXEFLCHAMPIONSHIPTOTAL",
+    "KXECULPGAME",
+    "KXECULPTOTAL",
+    "KXCHLLDPGAME",
+    "KXCHLLDPTOTAL",
+    "KXDIMAYORGAME",
+    "KXDIMAYORTOTAL",
+    "KXUSLGAME",
+    "KXUSLTOTAL",
+    "KXVENFUTVEGAME",
+    "KXVENFUTVETOTAL",
+    "KXCONMEBOLLIBGAME",
+    "KXCONMEBOLLIBTOTAL",
+    "KXCONMEBOLSUDGAME",
+    "KXCONMEBOLSUDTOTAL",
+    "KXEREDIVISIEGAME",
+    "KXEREDIVISIETOTAL",
+    "KXNWSLGAME",
+    "KXNWSLTOTAL",
+    "KXSLGREECEGAME",
+    "KXSLGREECETOTAL",
+    "KXGRECUPGAME",
+    "KXGRECUPTOTAL",
+    "KXEGYPLGAME",
+    "KXEGYPLTOTAL",
+    "KXTFF1LIGGAME",
+    "KXTFF1LIGTOTAL",
 )
 
 SERIES_WITH_GAMES = (
@@ -70,9 +109,26 @@ SERIES_WITH_GAMES = (
     "KXMLSGAME",
     "KXPERLIGA1GAME",
     "KXARGLIGA1GAME",
+    "KXARGPREMDIVGAME",
     "KXWCGAME",
     "KXBRASILEIROGAME",
+    "KXBRASILEIROBGAME",
     "KXLIGAMXGAME",
+    "KXCOPPAITALIAGAME",
+    "KXEFLCHAMPIONSHIPGAME",
+    "KXECULPGAME",
+    "KXCHLLDPGAME",
+    "KXDIMAYORGAME",
+    "KXUSLGAME",
+    "KXVENFUTVEGAME",
+    "KXCONMEBOLLIBGAME",
+    "KXCONMEBOLSUDGAME",
+    "KXEREDIVISIEGAME",
+    "KXNWSLGAME",
+    "KXSLGREECEGAME",
+    "KXGRECUPGAME",
+    "KXEGYPLGAME",
+    "KXTFF1LIGGAME",
 )
 
 SERIES_WITH_TOTALS = (
@@ -87,13 +143,113 @@ SERIES_WITH_TOTALS = (
     "KXMLSTOTAL",
     "KXPERLIGA1TOTAL",
     "KXARGLIGA1TOTAL",
+    "KXARGPREMDIVTOTAL",
     "KXWCTOTAL",
     "KXBRASILEIROTOTAL",
+    "KXBRASILEIROBTOTAL",
     "KXLIGAMXTOTAL",
+    "KXCOPPAITALIATOTAL",
+    "KXEFLCHAMPIONSHIPTOTAL",
+    "KXECULPTOTAL",
+    "KXCHLLDPTOTAL",
+    "KXDIMAYORTOTAL",
+    "KXUSLTOTAL",
+    "KXVENFUTVETOTAL",
+    "KXCONMEBOLLIBTOTAL",
+    "KXCONMEBOLSUDTOTAL",
+    "KXEREDIVISIETOTAL",
+    "KXNWSLTOTAL",
+    "KXSLGREECETOTAL",
+    "KXGRECUPTOTAL",
+    "KXEGYPLTOTAL",
+    "KXTFF1LIGTOTAL",
 )
 
 MIN_VOLUME_THRESHOLD = 50
 MIN_24H_VOLUME_THRESHOLD = 100
+TOTAL_ATM_TARGET = 0.50
+TOTAL_BOND_YES = 0.88  # skip ~90¢ O0.5 bonds when picking the scalp total
+# Next-up farther than this from 50¢ during a no-goal grind → swap to the
+# cheaper adjacent strike (e.g. O4.5 at 12¢ → O2.5 while ATM is O3.5).
+TOTAL_WING_DRIFT = 0.22
+# Ignore 80¢-wide longshot books whose mid luckily prints ~50¢ (e.g. O6.5 8¢/95¢).
+TOTAL_MAX_SPREAD = 0.25
+# Kickoff window for "today / tonight" tape. close_time is market expiry (often
+# +2–3 days) so we rank on occurrence_datetime instead.
+LIVE_LOOKBACK_HOURS = 4
+SOON_HORIZON_HOURS = 18
+FINISHED_AFTER_KICKOFF_HOURS = 2.5
+FINISHED_HARD_HOURS = 4.0
+
+# Prefix list is a fetch *boost*, never a closed allowlist.
+SOCCER_SERIES_RE = re.compile(r"^KX[A-Z0-9]+(GAME|TOTAL)$")
+TICKER_DATE_RE = re.compile(
+    r"-(\d{2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2})",
+    re.IGNORECASE,
+)
+_MONTHS = {
+    "JAN": 1,
+    "FEB": 2,
+    "MAR": 3,
+    "APR": 4,
+    "MAY": 5,
+    "JUN": 6,
+    "JUL": 7,
+    "AUG": 8,
+    "SEP": 9,
+    "OCT": 10,
+    "NOV": 11,
+    "DEC": 12,
+}
+NON_SOCCER_SERIES_HINTS = (
+    "NFL",
+    "MLB",
+    "NBA",
+    "NHL",
+    "WNBA",
+    "NCAAF",
+    "NCAAB",
+    "ATP",
+    "WTA",
+    "TENNIS",
+    "GOLF",
+    "MMA",
+    "UFC",
+    "NASCAR",
+    "FORMULA",
+)
+NON_SOCCER_TITLE_HINTS = (
+    "nfl",
+    "mlb",
+    "nba",
+    "nhl",
+    "wnba",
+    "ncaaf",
+    "ncaab",
+    "college football",
+    "atp ",
+    "wta ",
+    "tennis",
+    "golf",
+    "pga ",
+    "mma",
+    "ufc",
+    "nascar",
+)
+
+SKIP_ML_CODES = {"TIE", "DRAW", "X"}
+
+PLACEHOLDER_TICKER_TOKENS = {
+    "auto",
+    "discover",
+    "run",
+    "none",
+    "example",
+    "ticker_o35",
+    "ticker_o45",
+    "your_o35_ticker",
+    "your_o45_ticker",
+}
 
 
 @dataclass
@@ -107,12 +263,26 @@ class SoccerGame:
     close_time: str
     home_ml_ticker: str | None = None
     away_ml_ticker: str | None = None
+    tie_ml_ticker: str | None = None
+    status: str = ""
+    total_atm_ticker: str | None = None
+    total_atm_label: str = ""
+    total_atm_price: float | None = None
+    total_up_ticker: str | None = None
+    total_up_label: str = ""
+    total_up_price: float | None = None
+    # Compat aliases — ATM / next-up slots (not necessarily O0.5 / O1.5).
     over_05_ticker: str | None = None
     over_15_ticker: str | None = None
     total_volume: float = 0.0
     total_24h_volume: float = 0.0
     market_count: int = 0
     reasons: list[str] = field(default_factory=list)
+    occurrence_time: str = ""
+    series: str = ""
+    in_play_hint: bool = False
+    totals_repick: str = ""
+    total_books: list[TotalBook] = field(default_factory=list)
 
     def get_tickers(self) -> list[str]:
         """Return the list of non-None tickers for this game."""
@@ -121,11 +291,25 @@ class SoccerGame:
             tickers.append(self.home_ml_ticker)
         if self.away_ml_ticker:
             tickers.append(self.away_ml_ticker)
-        if self.over_05_ticker:
-            tickers.append(self.over_05_ticker)
-        if self.over_15_ticker:
-            tickers.append(self.over_15_ticker)
+        if self.tie_ml_ticker:
+            tickers.append(self.tie_ml_ticker)
+        atm = self.total_atm_ticker or self.over_05_ticker
+        up = self.total_up_ticker or self.over_15_ticker
+        if atm:
+            tickers.append(atm)
+        if up:
+            tickers.append(up)
         return tickers
+
+    def totals_summary(self) -> str:
+        parts = []
+        if self.total_atm_ticker:
+            px = f" {self.total_atm_price:.2f}" if self.total_atm_price is not None else ""
+            parts.append(f"{self.total_atm_label or 'ATM'}{px}")
+        if self.total_up_ticker:
+            px = f" {self.total_up_price:.2f}" if self.total_up_price is not None else ""
+            parts.append(f"{self.total_up_label or 'ATM+1'}{px}")
+        return ", ".join(parts) if parts else "no liquid 50/50 total"
 
     @property
     def has_volume(self) -> bool:
@@ -133,6 +317,10 @@ class SoccerGame:
             self.total_volume >= MIN_VOLUME_THRESHOLD
             or self.total_24h_volume >= MIN_24H_VOLUME_THRESHOLD
         )
+
+    @property
+    def kickoff(self) -> datetime | None:
+        return _parse_iso(self.occurrence_time) or _parse_iso(self.close_time)
 
 
 @dataclass
@@ -143,10 +331,390 @@ class DiscoveryResult:
     tickers: list[str]
     log_lines: list[str]
     discovered_at: str = ""
+    soon_games: list[SoccerGame] = field(default_factory=list)
+    later_games: list[SoccerGame] = field(default_factory=list)
 
     def __post_init__(self) -> None:
         if not self.discovered_at:
             self.discovered_at = datetime.now(tz=timezone.utc).isoformat()
+
+
+def _parse_iso(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    text = value.strip()
+    if not text:
+        return None
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        dt = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def is_placeholder_ticker(ticker: str) -> bool:
+    """True for .env.example tokens / 'auto' — not a real Kalshi ticker."""
+    token = (ticker or "").strip().lower()
+    if not token:
+        return True
+    if token in PLACEHOLDER_TICKER_TOKENS:
+        return True
+    if token.startswith("ticker_") or token.startswith("your_"):
+        return True
+    return False
+
+
+def ticker_embedded_date(ticker: str) -> date | None:
+    """Parse the `-26AUG31-` calendar date Kalshi embeds in soccer tickers."""
+    match = TICKER_DATE_RE.search((ticker or "").upper())
+    if not match:
+        return None
+    year = 2000 + int(match.group(1))
+    month = _MONTHS.get(match.group(2))
+    day = int(match.group(3))
+    if month is None:
+        return None
+    try:
+        return date(year, month, day)
+    except ValueError:
+        return None
+
+
+def is_stale_lab_ticker(ticker: str, *, now: datetime | None = None) -> bool:
+    """Placeholder or yesterday/finished pin — never treat as a live fund list."""
+    token = (ticker or "").strip()
+    if is_placeholder_ticker(token):
+        return True
+    now_utc = now or datetime.now(tz=timezone.utc)
+    embedded = ticker_embedded_date(token)
+    if embedded is not None and embedded < now_utc.date():
+        return True
+    return False
+
+
+def is_explicit_kalshi_ticker(ticker: str, *, now: datetime | None = None) -> bool:
+    """Real KX… ticker the user typed on the CLI — not a .env leftover."""
+    token = (ticker or "").strip()
+    if not token.upper().startswith("KX"):
+        return False
+    if is_stale_lab_ticker(token, now=now):
+        return False
+    return True
+
+
+def parse_cli_tickers(cli_tickers: str | None) -> list[str]:
+    """Parse `--tickers` only. Never read LAB_TICKERS from the environment."""
+    raw = (cli_tickers or "").strip()
+    if not raw or raw.lower() in PLACEHOLDER_TICKER_TOKENS:
+        return []
+    return [t.strip() for t in raw.split(",") if t.strip()]
+
+
+def needs_auto_discover(
+    tickers: list[str] | None,
+    *,
+    now: datetime | None = None,
+) -> bool:
+    """Empty, placeholder, or yesterday/finished pins must auto-discover.
+
+    Hardcoded `.env LAB_TICKERS` is not a pin list. A real KX… ticker the
+    user typed today on the CLI is the only thing that skips discovery.
+    """
+    cleaned = [t.strip() for t in (tickers or []) if t and t.strip()]
+    if not cleaned:
+        return True
+    if all(is_placeholder_ticker(t) for t in cleaned):
+        return True
+    if any(is_stale_lab_ticker(t, now=now) for t in cleaned):
+        return True
+    if not any(is_explicit_kalshi_ticker(t, now=now) for t in cleaned):
+        return True
+    return False
+
+
+def is_live_or_soon(
+    game: SoccerGame,
+    *,
+    now: datetime | None = None,
+    lookback_hours: float = LIVE_LOOKBACK_HOURS,
+    horizon_hours: float = SOON_HORIZON_HOURS,
+) -> bool:
+    """True if kickoff is in-play or later today/tonight."""
+    kickoff = game.kickoff
+    if kickoff is None:
+        return False
+    now_utc = now or datetime.now(tz=timezone.utc)
+    start = now_utc - timedelta(hours=lookback_hours)
+    end = now_utc + timedelta(hours=horizon_hours)
+    return start <= kickoff <= end
+
+
+@dataclass(frozen=True)
+class TotalBook:
+    """One totals strike for a match."""
+
+    strike: int
+    ticker: str
+    yes_price: float | None
+    volume: float
+    volume_24h: float
+    liquid: bool
+    spread: float | None = None
+
+    @property
+    def label(self) -> str:
+        return strike_to_over_label(self.strike)
+
+    @property
+    def tight_enough(self) -> bool:
+        if self.spread is None:
+            return True
+        return self.spread <= TOTAL_MAX_SPREAD
+
+
+def strike_to_over_label(strike: int) -> str:
+    """Kalshi TOTAL-N is Over (N-1).5 — strike 1=O0.5, 3=O2.5."""
+    return f"O{strike - 1}.5"
+
+
+def _parse_dollar_price(raw: Any) -> float | None:
+    if raw is None or raw == "":
+        return None
+    try:
+        val = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if val > 1.5:
+        val = val / 100.0
+    if val < 0 or val > 1:
+        return None
+    return val
+
+
+def yes_price_from_market(market: dict) -> float | None:
+    """YES mid if two-sided, else last, else bid. Dollars (0–1)."""
+    bid = _parse_dollar_price(market.get("yes_bid_dollars") or market.get("yes_bid"))
+    ask = _parse_dollar_price(market.get("yes_ask_dollars") or market.get("yes_ask"))
+    last = _parse_dollar_price(market.get("last_price_dollars") or market.get("last_price"))
+    if bid is not None and ask is not None:
+        return (bid + ask) / 2.0
+    if last is not None:
+        return last
+    return bid if bid is not None else ask
+
+
+def is_bond_yes(price: float | None, *, bond: float = TOTAL_BOND_YES) -> bool:
+    if price is None:
+        return False
+    return price >= bond or price <= (1.0 - bond)
+
+
+def market_is_liquid(market: dict, volume: float, volume_24h: float) -> bool:
+    if volume >= MIN_VOLUME_THRESHOLD or volume_24h >= MIN_24H_VOLUME_THRESHOLD:
+        return True
+    bid = _parse_dollar_price(market.get("yes_bid_dollars") or market.get("yes_bid"))
+    ask = _parse_dollar_price(market.get("yes_ask_dollars") or market.get("yes_ask"))
+    return bid is not None and ask is not None
+
+
+def select_scalp_totals(books: list[TotalBook]) -> tuple[TotalBook | None, TotalBook | None]:
+    """ATM = YES nearest 50¢ among non-bond books. Up = next strike if liquid.
+
+    Does not default to O0.5/O1.5. Bonded O0.5 (~90¢) is not a scalp.
+    Live YES only — never reuse a pregame snapshot.
+    """
+    priced = [
+        b
+        for b in books
+        if b.yes_price is not None and not is_bond_yes(b.yes_price) and b.tight_enough
+    ]
+    if not priced:
+        return None, None
+    atm = min(
+        priced,
+        key=lambda b: (abs((b.yes_price or 0.0) - TOTAL_ATM_TARGET), -b.volume_24h, -b.volume, b.strike),
+    )
+    by_strike = {b.strike: b for b in books}
+    up = by_strike.get(atm.strike + 1)
+    if up is None or not up.liquid:
+        return atm, None
+    return atm, up
+
+
+def select_ingame_totals(
+    books: list[TotalBook],
+    *,
+    drop_far_wing: bool = False,
+    drift: float = TOTAL_WING_DRIFT,
+) -> tuple[TotalBook | None, TotalBook | None]:
+    """Re-pick totals from *current* live YES prices given the score.
+
+    At 1-1, O2.5 is usually 70–85¢ (not 50/50). ATM becomes O3.5 and the
+    next strike is O4.5. Do not freeze a pregame O2.5 snapshot.
+
+    If the next-up wing has drifted far from 50¢ *and* there has been no
+    goal for a while (`drop_far_wing`), swap that wing for the cheaper
+    adjacent strike below ATM (O2.5 when ATM is O3.5), unless that book
+    is a bond.
+    """
+    atm, up = select_scalp_totals(books)
+    if atm is None:
+        return None, None
+    if not drop_far_wing:
+        return atm, up
+    by_strike = {b.strike: b for b in books}
+    up_far = (
+        up is None
+        or up.yes_price is None
+        or abs(up.yes_price - TOTAL_ATM_TARGET) > drift
+    )
+    if not up_far:
+        return atm, up
+    down = by_strike.get(atm.strike - 1)
+    if (
+        down is not None
+        and down.liquid
+        and down.yes_price is not None
+        and not is_bond_yes(down.yes_price)
+    ):
+        return atm, down
+    return atm, up
+
+
+def apply_live_totals(
+    game: SoccerGame,
+    books: list[TotalBook],
+    *,
+    drop_far_wing: bool = False,
+) -> SoccerGame:
+    """Overwrite ATM / next-up from live YES books (in-game re-pick)."""
+    atm, wing = select_ingame_totals(books, drop_far_wing=drop_far_wing)
+    game.total_atm_ticker = atm.ticker if atm else None
+    game.total_atm_label = atm.label if atm else ""
+    game.total_atm_price = atm.yes_price if atm else None
+    game.total_up_ticker = wing.ticker if wing else None
+    game.total_up_label = wing.label if wing else ""
+    game.total_up_price = wing.yes_price if wing else None
+    game.over_05_ticker = game.total_atm_ticker
+    game.over_15_ticker = game.total_up_ticker
+    # O0.5 is often a 90¢ *pregame* bond. O1.5 bonded (~99¢) means 2+ goals
+    # already — the match is in-play even if Kalshi's kickoff clock is late.
+    game.in_play_hint = any(
+        b.strike == 2 and b.yes_price is not None and is_bond_yes(b.yes_price) for b in books
+    )
+    if atm and wing:
+        mode = "grind-cheap-side" if drop_far_wing and wing.strike < atm.strike else "live-atm+up"
+        game.totals_repick = f"{mode} {atm.label}/{wing.label}"
+    elif atm:
+        game.totals_repick = f"live-atm {atm.label}"
+    else:
+        game.totals_repick = "no liquid live total"
+    return game
+
+
+def is_in_play(game: SoccerGame, *, now: datetime | None = None) -> bool:
+    """Kickoff already happened, or O1.5 is bonded (2+ goals) near listed kickoff."""
+    now_utc = now or datetime.now(tz=timezone.utc)
+    kickoff = game.kickoff
+    if kickoff is not None:
+        started = kickoff <= now_utc + timedelta(minutes=10)
+        recent = now_utc - kickoff <= timedelta(hours=LIVE_LOOKBACK_HOURS)
+        if started and recent:
+            return True
+        if game.in_play_hint and abs((kickoff - now_utc).total_seconds()) <= 8 * 3600:
+            return True
+        return False
+    return bool(game.in_play_hint)
+
+
+def is_finished_game(game: SoccerGame, *, now: datetime | None = None) -> bool:
+    """Settled, yesterday, or kickoff + ~2.5h with no in-play hint — never fund."""
+    now_utc = now or datetime.now(tz=timezone.utc)
+    status = (game.status or "").strip().lower()
+    if status in {"settled", "closed", "finalized", "determined", "inactive", "resolved"}:
+        return True
+
+    for raw in (game.event_ticker, game.home_ml_ticker, game.away_ml_ticker, game.series):
+        if raw and is_stale_lab_ticker(raw, now=now_utc):
+            return True
+
+    kickoff = game.kickoff
+    if kickoff is not None:
+        age = now_utc - kickoff
+        if age >= timedelta(hours=FINISHED_HARD_HOURS):
+            return True
+        if age >= timedelta(hours=FINISHED_AFTER_KICKOFF_HOURS) and not game.in_play_hint:
+            return True
+
+    close = _parse_iso(game.close_time)
+    if close is not None and now_utc > close and not is_in_play(game, now=now_utc):
+        return True
+    return False
+
+
+def is_watchable(
+    game: SoccerGame,
+    *,
+    now: datetime | None = None,
+    lookback_hours: float = LIVE_LOOKBACK_HOURS,
+    horizon_hours: float = SOON_HORIZON_HOURS,
+) -> bool:
+    """Live, soon, or already in-play by bonded totals (kickoff clock may lag)."""
+    if is_finished_game(game, now=now):
+        return False
+    if is_live_or_soon(
+        game, now=now, lookback_hours=lookback_hours, horizon_hours=horizon_hours
+    ):
+        return True
+    return is_in_play(game, now=now)
+
+
+def select_watchlist(
+    games: list[SoccerGame],
+    *,
+    now: datetime,
+    max_games: int,
+    min_volume: float,
+    min_24h_volume: float,
+) -> tuple[list[SoccerGame], list[SoccerGame], list[SoccerGame], list[str]]:
+    """In-play first, then kickoff-soon, then 24h volume. No team-name bias."""
+    notes: list[str] = []
+    liveable = [g for g in games if not is_finished_game(g, now=now)]
+    soon = [g for g in liveable if is_watchable(g, now=now)]
+    later = [g for g in liveable if g not in soon]
+    later.sort(key=lambda g: g.total_24h_volume, reverse=True)
+
+    in_play = [g for g in soon if is_in_play(g, now=now)]
+    in_play.sort(key=lambda g: g.total_24h_volume, reverse=True)
+    selected: list[SoccerGame] = []
+    for game in in_play:
+        if len(selected) >= max_games:
+            break
+        selected.append(game)
+        notes.append(f"in-play auto-fund: {game.title[:48]} (24h {game.total_24h_volume:.0f})")
+
+    rest = [g for g in soon if g not in selected]
+    rest.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
+    rest_vol = [
+        g for g in rest if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
+    ]
+    rest_vol.sort(key=lambda g: g.total_24h_volume, reverse=True)
+    rest_other = [g for g in rest if g not in rest_vol]
+    rest_other.sort(key=lambda g: (g.kickoff or now, -g.total_24h_volume))
+
+    for pool in (rest_vol, rest_other):
+        for game in pool:
+            if len(selected) >= max_games:
+                break
+            selected.append(game)
+        if len(selected) >= max_games:
+            break
+
+    return selected, soon, later, notes
 
 
 def _parse_volume(market: dict) -> tuple[float, float]:
@@ -195,14 +763,14 @@ def _extract_game_from_rules(rules_primary: str) -> str | None:
     Returns: "Leeds United vs Newcastle"
     """
     match = re.search(
-        r"the\s+([A-Z][A-Za-z\s]+?)\s+vs\.?\s+([A-Z][A-Za-z\s]+?)\s+professional",
+        r"the\s+([A-Z][A-Za-z0-9'.\s]+?)\s+vs\.?\s+([A-Z][A-Za-z0-9'.\s]+?)\s+professional",
         rules_primary,
     )
     if match:
         return f"{match.group(1).strip()} vs {match.group(2).strip()}"
 
     match = re.search(
-        r"([A-Z][A-Za-z\s]+?)\s+vs\.?\s+([A-Z][A-Za-z\s]+?)(?:\s+professional|\s+soccer|\s+EPL|\s+La Liga)",
+        r"([A-Z][A-Za-z0-9'.\s]+?)\s+vs\.?\s+([A-Z][A-Za-z0-9'.\s]+?)(?:\s+professional|\s+soccer|\s+EPL|\s+La Liga)",
         rules_primary,
     )
     if match:
@@ -253,38 +821,208 @@ def _get_event_identifier(ticker: str) -> str | None:
     return None
 
 
+def _market_text_blob(market: dict) -> str:
+    return " ".join(
+        str(market.get(key) or "")
+        for key in (
+            "title",
+            "subtitle",
+            "yes_sub_title",
+            "no_sub_title",
+            "rules_primary",
+            "rules_secondary",
+        )
+    ).lower()
+
+
+def _series_from_market(market: dict) -> str:
+    series = str(market.get("series_ticker") or "").strip().upper()
+    if series:
+        return series
+    ticker = str(market.get("ticker") or "")
+    return ticker.split("-", 1)[0].upper() if ticker else ""
+
+
+def is_soccer_series_ticker(series: str) -> bool:
+    """KX*GAME / KX*TOTAL that is not a non-soccer sport. Prefix list is not required."""
+    token = (series or "").strip().upper()
+    if not SOCCER_SERIES_RE.match(token):
+        return False
+    for hint in NON_SOCCER_SERIES_HINTS:
+        if token.startswith(f"KX{hint}"):
+            return False
+    return True
+
+
+def soccer_series_tickers_from_catalog(rows: Sequence[dict] | Iterable[dict]) -> list[str]:
+    """Soccer-tagged GAME/TOTAL series from GET /series. Skip deleted titles."""
+    out: list[str] = []
+    seen: set[str] = set()
+    for row in rows:
+        ticker = str(row.get("ticker") or "").strip().upper()
+        if not ticker or ticker in seen:
+            continue
+        title = str(row.get("title") or "")
+        if "delete" in title.lower():
+            continue
+        tags = [str(t).lower() for t in (row.get("tags") or [])]
+        if "soccer" not in tags and not is_soccer_series_ticker(ticker):
+            continue
+        if not (ticker.endswith("GAME") or ticker.endswith("TOTAL")):
+            continue
+        if not is_soccer_series_ticker(ticker):
+            continue
+        seen.add(ticker)
+        out.append(ticker)
+    return out
+
+
+def looks_like_soccer_market(market: dict) -> bool:
+    """Fingerprint: 'goals scored' copy or soccer GAME/TOTAL series, not NFL/MLB/…"""
+    series = _series_from_market(market)
+    blob = _market_text_blob(market)
+    if any(hint in blob for hint in NON_SOCCER_TITLE_HINTS):
+        return False
+    for hint in NON_SOCCER_SERIES_HINTS:
+        if series.startswith(f"KX{hint}"):
+            return False
+    if "goals scored" in blob:
+        return True
+    if "soccer" in blob:
+        return True
+    if is_soccer_series_ticker(series):
+        return True
+    if series in SOCCER_SERIES_PREFIXES:
+        return True
+    return False
+
+
+def filter_soccer_markets(markets: Sequence[dict]) -> list[dict]:
+    """Keep soccer books even when their series is missing from the prefix tuple."""
+    return [m for m in markets if looks_like_soccer_market(m)]
+
+
+def _get_with_retry(
+    session: requests.Session,
+    url: str,
+    params: dict,
+    timeout: float,
+    label: str,
+) -> dict | None:
+    try:
+        resp = session.get(url, params=params, timeout=timeout)
+        if resp.status_code == 429:
+            logger.warning("Rate-limited on %s; retrying once", label)
+            time.sleep(1.5)
+            resp = session.get(url, params=params, timeout=timeout)
+        if resp.status_code != 200:
+            logger.warning("HTTP %s on %s", resp.status_code, label)
+            return None
+        payload = resp.json()
+        return payload if isinstance(payload, dict) else None
+    except requests.RequestException as exc:
+        logger.warning("Failed %s: %s", label, exc)
+        return None
+
+
+def fetch_soccer_series_tickers(
+    session: requests.Session,
+    rest_base: str,
+    timeout: float = 15.0,
+) -> list[str]:
+    """Catalog-first soccer series. Prefix list is appended as a boost only."""
+    rows: list[dict] = []
+    cursor = None
+    for _ in range(20):
+        params: dict[str, Any] = {"limit": 200}
+        if cursor:
+            params["cursor"] = cursor
+        payload = _get_with_retry(session, f"{rest_base}/series", params, timeout, "series")
+        if not payload:
+            break
+        chunk = payload.get("series") or payload.get("series_list") or []
+        rows.extend(chunk)
+        cursor = payload.get("cursor") or payload.get("next_cursor")
+        if not cursor or not chunk:
+            break
+    catalog = soccer_series_tickers_from_catalog(rows)
+    seen = set(catalog)
+    out = list(catalog)
+    for prefix in SOCCER_SERIES_PREFIXES:
+        if prefix not in seen:
+            seen.add(prefix)
+            out.append(prefix)
+    return out
+
+
+def _fetch_series_markets(rest_base: str, series: str, timeout: float) -> list[dict]:
+    session = requests.Session()
+    session.headers.update({"User-Agent": "suspension-lab/0.1"})
+    payload = _get_with_retry(
+        session,
+        f"{rest_base}/markets",
+        {"series_ticker": series, "status": "open", "limit": 200},
+        timeout,
+        series,
+    )
+    if not payload:
+        return []
+    return list(payload.get("markets") or [])
+
+
 def fetch_open_soccer_markets(
     rest_base: str = KALSHI_API_BASE,
     timeout: float = 15.0,
 ) -> list[dict]:
-    """Fetch all open soccer markets from Kalshi API.
+    """Open soccer markets by fingerprint + catalog. Prefix list is a boost only.
 
-    Returns list of market dicts for all soccer-related series with status=open.
+    A live Egypt / TFF / Coppa book is kept even if its series is not in
+    SOCCER_SERIES_PREFIXES. NFL/MLB/NBA/NHL and other non-soccer sports are dropped.
     """
     session = requests.Session()
     session.headers.update({"User-Agent": "suspension-lab/0.1"})
 
-    all_markets: list[dict] = []
+    by_ticker: dict[str, dict] = {}
 
-    for series in SOCCER_SERIES_PREFIXES:
-        url = f"{rest_base}/markets"
-        params = {
-            "series_ticker": series,
-            "status": "open",
-            "limit": 200,
+    def _absorb(markets: Sequence[dict]) -> None:
+        for market in filter_soccer_markets(markets):
+            ticker = market.get("ticker")
+            if ticker:
+                by_ticker[str(ticker)] = market
+
+    series_list = fetch_soccer_series_tickers(session, rest_base, timeout)
+    workers = min(12, max(4, len(series_list) or 4))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {
+            pool.submit(_fetch_series_markets, rest_base, series, timeout): series
+            for series in series_list
         }
-        try:
-            resp = session.get(url, params=params, timeout=timeout)
-            if resp.status_code == 200:
-                data = resp.json()
-                markets = data.get("markets", [])
-                all_markets.extend(markets)
-                logger.debug(f"Fetched {len(markets)} markets from {series}")
-        except requests.RequestException as e:
-            logger.warning(f"Failed to fetch {series}: {e}")
-            continue
+        for fut in as_completed(futures):
+            series = futures[fut]
+            try:
+                _absorb(fut.result())
+            except Exception as exc:  # noqa: BLE001
+                logger.warning("series fetch %s failed: %s", series, exc)
 
-    return all_markets
+    # Global open-market scan so a brand-new league is not dropped if /series lags.
+    cursor = None
+    for page in range(8):
+        params: dict[str, Any] = {"status": "open", "limit": 200}
+        if cursor:
+            params["cursor"] = cursor
+        payload = _get_with_retry(
+            session, f"{rest_base}/markets", params, timeout, f"markets-page-{page}"
+        )
+        if not payload:
+            break
+        chunk = payload.get("markets") or []
+        _absorb(chunk)
+        cursor = payload.get("cursor") or payload.get("next_cursor")
+        if not cursor or not chunk:
+            break
+
+    logger.debug("Fingerprint soccer fetch kept %s markets", len(by_ticker))
+    return list(by_ticker.values())
 
 
 def group_markets_by_event(markets: list[dict]) -> dict[str, list[dict]]:
@@ -302,9 +1040,8 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     """Build a SoccerGame from a group of related markets.
 
     Maps markets to:
-    - home_ml_ticker, away_ml_ticker (from GAME series)
-    - over_05_ticker (TOTAL strike 1)
-    - over_15_ticker (TOTAL strike 2)
+    - home_ml_ticker, away_ml_ticker (from GAME series; TIE skipped)
+    - total nearest 50¢ YES + next strike up if liquid
     """
     if not markets:
         return None
@@ -312,6 +1049,13 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     first = markets[0]
     event_ticker = first.get("event_ticker", "")
     close_time = first.get("close_time", "")
+    status = ""
+    for market in markets:
+        raw_status = str(market.get("status") or "").strip()
+        if raw_status:
+            status = raw_status
+            if raw_status.lower() not in {"open", "active"}:
+                break
 
     title = None
     for market in markets:
@@ -327,16 +1071,29 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
 
     home_team, away_team = _extract_teams_from_title(title)
 
+    occurrence = ""
+    series = ""
+    for market in markets:
+        if not occurrence:
+            occurrence = market.get("occurrence_datetime") or market.get("expected_expiration_time") or ""
+        ticker = market.get("ticker", "")
+        if ticker and not series:
+            series = ticker.split("-", 1)[0]
+
     game = SoccerGame(
         event_ticker=event_ticker,
         title=title,
         home_team=home_team,
         away_team=away_team,
         close_time=close_time,
+        occurrence_time=occurrence,
+        series=series,
+        status=status,
     )
 
     game_tickers: list[tuple[str, str]] = []
-    total_tickers: dict[int, str] = {}
+    tie_ticker: str | None = None
+    total_books: list[TotalBook] = []
 
     for market in markets:
         ticker = market.get("ticker", "")
@@ -348,13 +1105,35 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
         gm = _match_game_ticker(ticker)
         if gm:
             team_code = gm.group(3)
+            if team_code in SKIP_ML_CODES:
+                yes = yes_price_from_market(market)
+                if (
+                    market_is_liquid(market, vol, vol_24h)
+                    and not is_bond_yes(yes)
+                ):
+                    tie_ticker = ticker
+                continue
             game_tickers.append((ticker, team_code))
             continue
 
         tm = _match_total_ticker(ticker)
         if tm:
             strike = int(tm.group(3))
-            total_tickers[strike] = ticker
+            yes = yes_price_from_market(market)
+            bid = _parse_dollar_price(market.get("yes_bid_dollars") or market.get("yes_bid"))
+            ask = _parse_dollar_price(market.get("yes_ask_dollars") or market.get("yes_ask"))
+            spread = (ask - bid) if bid is not None and ask is not None else None
+            total_books.append(
+                TotalBook(
+                    strike=strike,
+                    ticker=ticker,
+                    yes_price=yes,
+                    volume=vol,
+                    volume_24h=vol_24h,
+                    liquid=market_is_liquid(market, vol, vol_24h),
+                    spread=spread,
+                )
+            )
             continue
 
     if len(game_tickers) >= 2:
@@ -365,13 +1144,25 @@ def build_soccer_game(event_id: str, markets: list[dict]) -> SoccerGame | None:
     elif len(game_tickers) == 1:
         game.home_ml_ticker = game_tickers[0][0]
         game.reasons.append(f"ML: only {game_tickers[0][1]} found")
+    if tie_ticker:
+        game.tie_ml_ticker = tie_ticker
+        game.reasons.append("TIE funded (liquid)")
 
-    if 1 in total_tickers:
-        game.over_05_ticker = total_tickers[1]
-        game.reasons.append("O0.5 found")
-    if 2 in total_tickers:
-        game.over_15_ticker = total_tickers[2]
-        game.reasons.append("O1.5 found")
+    game.total_books = total_books
+    apply_live_totals(game, total_books, drop_far_wing=False)
+    atm_t = game.total_atm_ticker
+    up_t = game.total_up_ticker
+    if game.total_atm_label:
+        px = game.total_atm_price
+        game.reasons.append(
+            f"{game.total_atm_label} nearest 50¢ live ({px:.2f})" if px is not None else game.total_atm_label
+        )
+    if game.total_up_label:
+        game.reasons.append(f"{game.total_up_label} next strike up (live YES)")
+    if total_books and not atm_t:
+        game.reasons.append("no non-bond total near 50¢ — skipped O0.5/O1.5 default")
+    if game.in_play_hint:
+        game.reasons.append("in-play hint: low totals bonded — re-picked from live YES")
 
     return game
 
@@ -381,6 +1172,7 @@ def discover_soccer_games(
     min_volume: float = MIN_VOLUME_THRESHOLD,
     min_24h_volume: float = MIN_24H_VOLUME_THRESHOLD,
     max_games: int = 5,
+    now: datetime | None = None,
 ) -> DiscoveryResult:
     """Discover live/imminent soccer games with volume and return discovery result.
 
@@ -412,39 +1204,131 @@ def discover_soccer_games(
         if game and game.get_tickers():
             games.append(game)
 
-    games_with_volume = [
-        g for g in games
-        if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
-    ]
-
-    games_with_volume.sort(key=lambda g: g.total_24h_volume, reverse=True)
-    games_with_volume = games_with_volume[:max_games]
-
-    log_lines.append(f"Games with volume (>={min_volume} total or >={min_24h_volume} 24h): {len(games_with_volume)}")
+    now = now or datetime.now(tz=timezone.utc)
+    games = [g for g in games if not is_finished_game(g, now=now)]
+    has_kickoffs = any(g.occurrence_time for g in games)
+    watchable = [g for g in games if is_watchable(g, now=now)]
+    soon: list[SoccerGame] = []
+    later: list[SoccerGame] = []
+    if watchable:
+        selected, soon, later, extra_notes = select_watchlist(
+            games,
+            now=now,
+            max_games=max_games,
+            min_volume=min_volume,
+            min_24h_volume=min_24h_volume,
+        )
+        log_lines.append(
+            f"Live/soon/in-play games (kickoff -{LIVE_LOOKBACK_HOURS:.0f}h..+{SOON_HORIZON_HOURS:.0f}h): {len(soon)}"
+        )
+        log_lines.append(f"Auto-selected {len(selected)} for the paper logger")
+        log_lines.extend(f"  {n}" for n in extra_notes)
+    elif has_kickoffs:
+        selected = []
+        log_lines.append("No soccer live or later today/tonight (kickoffs known). Auto-discover is ready for the next slate.")
+    else:
+        # Unit fixtures often omit occurrence_datetime — keep volume ranking.
+        selected = [
+            g for g in games
+            if g.total_volume >= min_volume or g.total_24h_volume >= min_24h_volume
+        ]
+        selected.sort(key=lambda g: g.total_24h_volume, reverse=True)
+        selected = selected[:max_games]
+        log_lines.append(
+            f"Games with volume (>={min_volume} total or >={min_24h_volume} 24h): {len(selected)}"
+        )
 
     all_tickers: list[str] = []
-    for game in games_with_volume:
+    for game in selected:
         tickers = game.get_tickers()
         all_tickers.extend(tickers)
-        ticker_summary = ", ".join(t.split("-")[-1] for t in tickers)
+        ml = ", ".join(t.split("-")[-1] for t in tickers if "TOTAL" not in t)
+        kick = game.occurrence_time or game.close_time or "?"
+        repick = f" repick={game.totals_repick}" if game.totals_repick else ""
         log_lines.append(
-            f"  {game.title[:50]}: vol={game.total_volume:.0f}, 24h={game.total_24h_volume:.0f}, "
-            f"tickers=[{ticker_summary}]"
+            f"  {game.title[:50]}: kick={kick} vol={game.total_volume:.0f}, "
+            f"24h={game.total_24h_volume:.0f}, ML=[{ml}] totals=[{game.totals_summary()}]{repick}"
         )
 
     if not all_tickers:
-        log_lines.append("No tickers discovered (no games with sufficient volume)")
+        log_lines.append("No tickers auto-funded (no today/tonight soccer, or no volume on fixtures)")
 
     return DiscoveryResult(
-        games=games_with_volume,
+        games=selected,
         tickers=all_tickers,
         log_lines=log_lines,
+        soon_games=soon,
+        later_games=later[:12],
     )
 
 
 def format_discovery_log(result: DiscoveryResult) -> str:
     """Format discovery result as a multi-line log string."""
     return "\n".join(result.log_lines)
+
+
+def format_slate_digest(result: DiscoveryResult) -> str:
+    """Short markdown digest of live/soon books vs what the paper logger funds."""
+    lines = [
+        "# Soccer slate digest (paper logger)",
+        "",
+        f"Discovered at `{result.discovered_at}` (UTC).",
+        "",
+        "Paper only — no live orders. Fills are **not** invented; would-have "
+        "scalps appear only after a book-detected GOAL and a fill check on tape.",
+        "",
+        "In-game totals re-pick from **live YES** (nearest 50¢ given the current "
+        "score). A pregame O2.5 is not frozen after the score moves.",
+        "",
+        "## Auto-funded (logger will watch)",
+        "",
+    ]
+    if not result.games:
+        lines.append("None. No today/tonight soccer tape selected.")
+        lines.append("")
+    else:
+        lines.append("| Kickoff (UTC) | Match | 24h vol | Totals (ATM + next) |")
+        lines.append("|---|---|---:|---|")
+        for game in result.games:
+            lines.append(
+                f"| {game.occurrence_time or game.close_time or '?'} | "
+                f"{game.title[:48]} | {game.total_24h_volume:.0f} | {game.totals_summary()} |"
+            )
+        lines.append("")
+
+    if result.soon_games and len(result.soon_games) > len(result.games):
+        extra = [g for g in result.soon_games if g not in result.games]
+        lines.append("## Also live/soon (not in top-N)")
+        lines.append("")
+        for game in extra[:8]:
+            lines.append(
+                f"- {game.occurrence_time or '?'} {game.title[:48]} "
+                f"(24h {game.total_24h_volume:.0f})"
+            )
+        lines.append("")
+
+    if result.later_games:
+        lines.append("## Later (not today/tonight — not auto-funded)")
+        lines.append("")
+        for game in result.later_games[:8]:
+            lines.append(
+                f"- {game.occurrence_time or game.close_time or '?'} "
+                f"{game.title[:48]} (24h {game.total_24h_volume:.0f})"
+            )
+        lines.append("")
+
+    if not result.tickers:
+        lines.append(
+            "Auto-discover is ready for the next slate. "
+            "Launch without `LAB_TICKERS` and it will fund when games appear."
+        )
+    else:
+        lines.append(
+            f"Paper logger would capture **{len(result.tickers)}** books "
+            f"(`books_long.csv` at 200ms) with spoof filter + fill-would-have. "
+            f"No fills until a GOAL prints on the tape."
+        )
+    return "\n".join(lines)
 
 
 def discover_tickers_for_lab(

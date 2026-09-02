@@ -1,12 +1,18 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
 import typer
 
 from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
 from suspension_lab.env_loader import env_status_message, load_project_env, project_root
+from suspension_lab.soccer_discovery import (
+    discover_soccer_games,
+    format_discovery_log,
+    format_slate_digest,
+    needs_auto_discover,
+    parse_cli_tickers,
+)
 
 load_project_env()
 
@@ -16,10 +22,15 @@ def main(
         "",
         "--tickers",
         "-t",
-        envvar="LAB_TICKERS",
-        help="Comma-separated Kalshi tickers (or set LAB_TICKERS in .env)",
+        help="Optional explicit KX… pin. Empty / placeholder / yesterday → discover. "
+        "Does not read LAB_TICKERS from .env.",
     ),
-    game: str = typer.Option("", "--game", "-g", envvar="LAB_GAME", help="Match label"),
+    game: str = typer.Option(
+        "",
+        "--game",
+        "-g",
+        help="Match label. Does not read LAB_GAME from .env.",
+    ),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
     rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; poll REST orderbook"),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms", help="Book sample interval in ms"),
@@ -31,66 +42,81 @@ def main(
     auto_discover: bool = typer.Option(
         True,
         "--auto-discover/--no-auto-discover",
-        help="Auto-discover soccer games when no tickers provided",
+        help="Default ON. Auto-discover always wins unless --tickers is a real KX… ticker.",
     ),
-    max_games: int = typer.Option(
-        5,
-        "--max-games",
-        help="Max number of games to auto-discover",
-    ),
-    min_volume: float = typer.Option(
-        50.0,
-        "--min-volume",
-        help="Min volume threshold for auto-discovery",
-    ),
+    max_games: int = typer.Option(5, "--max-games", help="Max games to auto-fund"),
+    min_volume: float = typer.Option(50.0, "--min-volume", help="Min volume for auto-pick"),
+    headless: bool = typer.Option(False, "--headless", help="Unattended paper logger (no UI)"),
+    digest_only: bool = typer.Option(False, "--digest-only", help="Print today's slate and exit"),
 ) -> None:
-    """Launch the manual B/F click logger with live Kalshi orderbooks."""
+    """Soccer paper tape: auto-discover live soccer. Empty start waits. No live bets."""
     load_project_env()
 
-    ticker_str = (tickers or os.environ.get("LAB_TICKERS", "")).strip()
-    ticker_list = [t.strip() for t in ticker_str.split(",") if t.strip()] if ticker_str else []
+    # CLI --tickers only. Stale .env LAB_TICKERS cannot skip discovery.
+    ticker_list = parse_cli_tickers(tickers)
 
-    if ticker_str.lower() == "run":
-        typer.echo("LAB_TICKERS must be Kalshi tickers, not the word 'run'.", err=True)
-        raise typer.Exit(1)
+    rest_base = (
+        "https://demo-api.kalshi.co/trade-api/v2"
+        if demo
+        else "https://api.elections.kalshi.com/trade-api/v2"
+    )
 
     discovered_games = []
-    if not ticker_list and auto_discover:
-        from suspension_lab.soccer_discovery import discover_tickers_for_lab
-
-        rest_base = (
-            "https://demo-api.kalshi.co/trade-api/v2"
-            if demo
-            else "https://api.elections.kalshi.com/trade-api/v2"
-        )
-        typer.echo("\n--- Auto-discovering soccer games ---", err=True)
-        ticker_list, discovery_log, discovered_games = discover_tickers_for_lab(
-            rest_base=rest_base,
-            min_volume=min_volume,
-            max_games=max_games,
-        )
-        typer.echo(discovery_log, err=True)
-        typer.echo("---\n", err=True)
-
-        if ticker_list:
-            typer.echo(
-                f"Auto-discovered {len(ticker_list)} tickers from {len(discovered_games)} games.",
-                err=True,
+    discovery_result = None
+    if auto_discover or needs_auto_discover(ticker_list):
+        if needs_auto_discover(ticker_list):
+            typer.echo("\n--- Auto-discovering live Kalshi soccer (ignoring .env pins) ---", err=True)
+            discovery_result = discover_soccer_games(
+                rest_base=rest_base,
+                min_volume=min_volume,
+                max_games=max_games,
             )
+            ticker_list = discovery_result.tickers
+            discovered_games = discovery_result.games
+            typer.echo(format_discovery_log(discovery_result), err=True)
+            typer.echo("---\n", err=True)
+            if ticker_list:
+                typer.echo(
+                    f"Auto-funded {len(ticker_list)} tickers from {len(discovered_games)} games (paper).",
+                    err=True,
+                )
+            else:
+                typer.echo(
+                    "No live soccer yet — REST idle, no WS subscribe. Rescan every 30–60s.",
+                    err=True,
+                )
         else:
-            typer.echo(
-                "No soccer games with sufficient volume found. "
-                "Add tickers in the UI while the session runs.",
-                err=True,
-            )
+            typer.echo("Using explicit CLI --tickers (real KX… pin).", err=True)
     elif not ticker_list:
-        typer.echo(
-            "No LAB_TICKERS in .env and auto-discover disabled — starting with empty list. "
-            "Add tickers in the UI while the session runs.",
-            err=True,
-        )
+        typer.echo("No tickers and auto-discover disabled — waiting for live soccer.", err=True)
 
-    game_label = (game or os.environ.get("LAB_GAME", "")).strip()
+    if digest_only:
+        if discovery_result is None:
+            discovery_result = discover_soccer_games(
+                rest_base=rest_base, min_volume=min_volume, max_games=max_games
+            )
+        typer.echo(format_slate_digest(discovery_result))
+        raise typer.Exit(0)
+
+    if headless:
+        from suspension_lab.paper_logger import run_paper_logger
+
+        game_label = (game or "").strip()
+        if not game_label and discovered_games:
+            game_label = " | ".join(g.title[:28] for g in discovered_games[:2])
+        run_paper_logger(
+            tickers=ticker_list,
+            games=discovered_games,
+            game_label=game_label,
+            demo=demo,
+            rest_only=rest_only,
+            poll_ms=poll_ms,
+            output_dir=output_dir,
+            duration_seconds=0,
+        )
+        return
+
+    game_label = (game or "").strip()
     if not game_label and discovered_games:
         game_label = " | ".join(g.title[:30] for g in discovered_games[:2])
         if len(discovered_games) > 2:
@@ -104,6 +130,8 @@ def main(
         poll_ms=poll_ms,
         output_dir=output_dir,
     )
+    config.games = discovered_games
+    config.paper_enabled = True
     if not config.has_ws_auth and not rest_only:
         typer.echo(
             "No Kalshi credentials in .env — using REST polling (~200ms).\n"
@@ -114,10 +142,11 @@ def main(
 
     typer.echo(env_status_message())
     typer.echo(f"Project: {project_root()}")
-    typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(add in UI)'}")
+    typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(waiting for live soccer)'}")
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
     typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'REST polling'}")
+    typer.echo("Mode: PAPER ONLY (live=False)")
 
     from suspension_lab.ui import run_app
 

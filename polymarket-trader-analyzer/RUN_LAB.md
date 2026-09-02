@@ -35,8 +35,14 @@ C:\PolymarketTraderAnalyst\polymarket-trader-analyzer\.env
 Must include:
 - `KALSHI_KEY_ID=...`
 - `KALSHI_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY----- ..."`
-- `LAB_TICKERS=...`
-- `LAB_GAME=Parma-Cremonese`
+
+`LAB_TICKERS` is optional. Leave it empty and the lab auto-discovers **today's** soccer, auto-funds the paper logger, and never places live bets.
+
+Unattended (no UI):
+
+```powershell
+python -m suspension_lab.paper_logger
+```
 
 ---
 
