@@ -37,7 +37,8 @@ class FillReport:
     note: str
 
 
-def analyze_fills(session_dir: Path, *, target_size: int = 100) -> str:
+def _analyze_from_wide(session_dir: Path, target_size: int) -> list[FillReport]:
+    """Analyze fills from wide-format books.csv."""
     books_path = session_dir / "books.csv"
     with books_path.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -115,6 +116,105 @@ def analyze_fills(session_dir: Path, *, target_size: int = 100) -> str:
                     note=note,
                 )
             )
+    return reports
+
+
+def _analyze_from_long(session_dir: Path, target_size: int) -> list[FillReport]:
+    """Analyze fills from long-format books_long.csv (includes runtime-added tickers)."""
+    long_path = session_dir / "books_long.csv"
+    with long_path.open(encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    tickers = sorted({r["ticker"] for r in rows if r.get("ticker")})
+    detectors = {t: GoalSignalDetector() for t in tickers}
+    reports: list[FillReport] = []
+
+    ticker_rows: dict[str, list[tuple[int, dict]]] = {t: [] for t in tickers}
+    for row in rows:
+        ticker = row.get("ticker", "")
+        if ticker and ticker in tickers:
+            ticker_rows[ticker].append((int(row["ts_ms"]), row))
+
+    for i, row in enumerate(rows):
+        ticker = row.get("ticker", "")
+        if not ticker or ticker not in tickers:
+            continue
+        bid_s = row.get("yes_bid", "")
+        ask_s = row.get("yes_ask", "")
+        if not bid_s or not ask_s:
+            continue
+        ts_ms = int(row["ts_ms"])
+        book = OrderBook(ticker)
+        book.set_from_top(
+            bid=bid_s,
+            ask=ask_s,
+            bid_qty=row.get("yes_bid_qty", "0") or "0",
+            ask_qty=row.get("yes_ask_qty", "0") or "0",
+            updated_ms=ts_ms,
+        )
+        result = detectors[ticker].evaluate(ticker, book)
+        if not isinstance(result, GoalSignal):
+            continue
+
+        entry_cents = int(round(result.new_bid * 100))
+        top_qty = float(row.get("yes_bid_qty", 0) or 0)
+        levels = book.top_levels()
+        depth_3 = float(levels.get("bid_depth_3", 0) or 0)
+        spread = str(row.get("spread_cents", ""))
+
+        note = ""
+        for later_ts, later in ticker_rows[ticker]:
+            if later_ts <= ts_ms:
+                continue
+            if later_ts > ts_ms + 5000:
+                break
+            lb = later.get("yes_bid", "")
+            if not lb:
+                continue
+            lb_c = int(round(Decimal(lb) * 100))
+            if lb_c > entry_cents:
+                note = f"bid lifted to {lb_c}c within 5s"
+                break
+            if lb_c == entry_cents:
+                lq = float(later.get("yes_bid_qty", 0) or 0)
+                if lq < top_qty - 10:
+                    note = f"qty at {entry_cents}c fell {top_qty:.0f}->{lq:.0f} in 5s"
+                    break
+
+        if top_qty >= target_size * 3:
+            verdict = "back of queue — partial/none likely at join-bid"
+        elif top_qty >= target_size:
+            verdict = "queue exists — bid+1c or wait for lift"
+        elif depth_3 >= target_size:
+            verdict = "thin top but 3-level depth OK — bid+1c likely fills"
+        else:
+            verdict = "thin book — may need to lift ask (taker)"
+
+        reports.append(
+            FillReport(
+                ts_iso=row["ts_iso"],
+                ticker=ticker,
+                entry_cents=entry_cents,
+                top_bid_qty=top_qty,
+                bid_depth_3=depth_3,
+                ask_qty=float(row.get("yes_ask_qty", 0) or 0),
+                spread_cents=spread,
+                exit_mode=result.exit_mode,
+                target_size=target_size,
+                queue_ahead=top_qty,
+                verdict=verdict,
+                note=note,
+            )
+        )
+    return reports
+
+
+def analyze_fills(session_dir: Path, *, target_size: int = 100) -> str:
+    long_path = session_dir / "books_long.csv"
+    if long_path.exists():
+        reports = _analyze_from_long(session_dir, target_size)
+    else:
+        reports = _analyze_from_wide(session_dir, target_size)
 
     lines = [
         f"# Fill analysis: {session_dir.name}",

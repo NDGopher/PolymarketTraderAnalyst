@@ -1,0 +1,7 @@
+ts_iso,ticker,signal_bid_cents,exit_mode,size,strategy,verdict,reason,best_fill_cents,queue_consumed
+2026-09-01T21:32:45.340000+00:00,KXPERLIGA1GAME-26AUG31CAGMEL-CAG,34,scalp,50,join_bid,FILL,bid lifted past 34c to 35c,34,0.0
+2026-09-01T21:32:45.340000+00:00,KXPERLIGA1GAME-26AUG31CAGMEL-CAG,34,scalp,50,bid_plus_1,FILL,queue consumed 2342 contracts,35,2341.98
+2026-09-01T21:32:45.340000+00:00,KXPERLIGA1GAME-26AUG31CAGMEL-CAG,34,scalp,50,lift_ask,FILL,lifted ask @ 40c,40,0.0
+2026-09-01T21:32:51.405000+00:00,KXPERLIGA1TOTAL-26AUG31CAGMEL-1,98,hold_bond,50,join_bid,FILL,queue consumed 75 contracts,98,75.14000000000001
+2026-09-01T21:32:51.405000+00:00,KXPERLIGA1TOTAL-26AUG31CAGMEL-1,98,hold_bond,50,bid_plus_1,NO_FILL,"deep queue (249ct ahead), no lift",,0.0
+2026-09-01T21:32:51.405000+00:00,KXPERLIGA1TOTAL-26AUG31CAGMEL-1,98,hold_bond,50,lift_ask,FILL,lifted ask @ 99c,99,0.0
