@@ -32,7 +32,9 @@ def main(
         help="Match label. Does not read LAB_GAME from .env.",
     ),
     demo: bool = typer.Option(False, "--demo", help="Use Kalshi demo environment"),
-    rest_only: bool = typer.Option(False, "--rest-only", help="Skip WS; slow sequential REST"),
+    rest_only: bool = typer.Option(
+        False, "--rest-only", help="Explicit REST only. Live L2 is WS; this is not a fallback."
+    ),
     poll_ms: int = typer.Option(BOOK_SAMPLE_MS, "--poll-ms", help="Tape sample interval in ms"),
     output_dir: Path = typer.Option(
         Path("data/suspension_lab/sessions"),
@@ -42,7 +44,7 @@ def main(
     auto_discover: bool = typer.Option(
         True,
         "--auto-discover/--no-auto-discover",
-        help="Default ON. Auto-discover always wins unless --tickers is a real KX ticker.",
+        help="Empty start may discover once. Real KX --tickers never rediscover.",
     ),
     max_games: int = typer.Option(5, "--max-games", help="Max games to auto-fund"),
     min_volume: float = typer.Option(50.0, "--min-volume", help="Min volume for auto-pick"),
@@ -87,16 +89,21 @@ def main(
             )
         raise typer.Exit(2) from exc
 
-    if auto_discover or needs_auto_discover(ticker_list):
-        if needs_auto_discover(ticker_list):
-            typer.echo(
-                "\n--- Auto-discover deferred to lab worker (Tk will not block) ---",
-                err=True,
-            )
-            ticker_list = []
-            discovered_games = []
-        else:
-            typer.echo("Using explicit CLI --tickers (real KX pin).", err=True)
+    pinned = bool(ticker_list) and not needs_auto_discover(ticker_list)
+    if pinned:
+        auto_discover = False
+        typer.echo(
+            "Using explicit CLI --tickers (real KX pin). No /series+/markets rediscover.",
+            err=True,
+        )
+    elif auto_discover:
+        typer.echo(
+            "\n--- Auto-discover deferred to lab worker (Tk will not block). "
+            "Once a book seats, no 60s rescan ---",
+            err=True,
+        )
+        ticker_list = []
+        discovered_games = []
     elif not ticker_list:
         typer.echo("No tickers and auto-discover disabled - waiting for live soccer.", err=True)
 
@@ -113,25 +120,24 @@ def main(
     config.paper_enabled = True
     if not config.has_ws_auth and not rest_only:
         typer.echo(
-            "No Kalshi credentials in .env - using slow sequential REST snapshots.\n"
+            "No Kalshi credentials in .env - WS-only L2 will stay idle (no REST poll).\n"
             "Add KALSHI_KEY_ID + KALSHI_PRIVATE_KEY to .env for WebSocket.",
             err=True,
         )
-        config.use_ws = False
 
     typer.echo(env_status_message())
     typer.echo(f"Project: {project_root()}")
     typer.echo(f"Tickers: {', '.join(ticker_list) if ticker_list else '(waiting for live soccer)'}")
     typer.echo(f"Game: {config.game_label or '(unnamed)'}")
     typer.echo(f"Output: {config.output_dir}")
-    typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'slow REST'}")
+    typer.echo(f"Feed: {'WebSocket' if config.use_ws else 'slow REST (explicit --rest-only)'}")
     typer.echo("Mode: PAPER ONLY (live=False)")
 
     from suspension_lab.lab_runtime import LabRuntime
 
     runtime = LabRuntime(
         config,
-        auto_discover=auto_discover or needs_auto_discover(ticker_list),
+        auto_discover=auto_discover,
         max_games=max_games,
         min_volume=min_volume,
     )

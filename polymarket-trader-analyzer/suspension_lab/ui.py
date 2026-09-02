@@ -264,7 +264,7 @@ class SuspensionLabApp:
             ).pack(fill="x")
             tk.Label(
                 idle,
-                text="Auto-discover rescans every 60s. Kalshi WS is not subscribed until a book appears.",
+                text="Waiting for live soccer. One discover until a book seats, then WS only. No 60s rediscover.",
                 font=("Segoe UI", 9),
                 fg=MUTED,
                 bg=CARD,

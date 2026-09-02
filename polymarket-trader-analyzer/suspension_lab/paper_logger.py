@@ -108,15 +108,13 @@ def run_paper_logger(
     )
     config.games = games
     config.paper_enabled = True
-    if not config.has_ws_auth:
-        config.use_ws = False
 
     runtime = LabRuntime(
         config,
         auto_discover=needs_auto_discover(tickers),
         max_games=8,
         min_volume=50,
-        rediscover_seconds=max(rediscover_seconds, 60.0),
+        rediscover_seconds=max(rediscover_seconds, 60.0),  # empty-start only; seated never scans
         on_status=lambda msg: print(f"[feed] {msg}", flush=True),
     )
     return run_headless(runtime, duration_seconds=duration_seconds)
@@ -168,10 +166,13 @@ def main(
     ticker_list = parse_cli_tickers(tickers)
     games: list = []
     if not needs_auto_discover(ticker_list):
-        typer.echo("Using explicit CLI --tickers (real KX pin).")
+        typer.echo("Using explicit CLI --tickers (real KX pin). No /series+/markets rediscover.")
     else:
         ticker_list = []
-        typer.echo("No live soccer yet - worker will discover. Rescan every 60s.")
+        typer.echo(
+            "No live soccer yet - worker will discover once. "
+            "No 60s /series+/markets rescan once a book seats."
+        )
 
     game_label = (game or "").strip()
     typer.echo(env_status_message())

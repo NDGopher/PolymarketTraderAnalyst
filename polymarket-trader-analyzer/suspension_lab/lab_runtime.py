@@ -1,6 +1,7 @@
-"""Shared paper-lab engine: one Kalshi client, worker-thread trader, 60s discover.
+"""Shared paper-lab engine: one Kalshi client, worker-thread trader, WS L2.
 
 Used by the Tk GUI and the headless paper logger. The Tk thread only paints.
+Once CLI/session has tickers, discovery never runs again (no 60s /series+/markets).
 """
 
 from __future__ import annotations
@@ -143,6 +144,25 @@ class LabRuntime:
     def request_discover(self, *, force: bool = False) -> None:
         self._book_q.put(("discover", force))
 
+    def session_tickers(self) -> list[str]:
+        """Tickers already pinned on the CLI or seated in this session."""
+        seen: list[str] = []
+        for ticker in list(self.config.tickers) + list(self.feed.books):
+            text = (ticker or "").strip()
+            if text and text not in seen:
+                seen.append(text)
+        for game in list(self.engine.games):
+            for ticker in game.get_tickers():
+                text = (ticker or "").strip()
+                if text and text not in seen:
+                    seen.append(text)
+        return seen
+
+    def has_known_markets(self) -> bool:
+        """Real KX pins or seated books. That is enough; do not rediscover."""
+        tickers = self.session_tickers()
+        return bool(tickers) and not needs_auto_discover(tickers)
+
     def start(self) -> None:
         if self._engine_thread and self._engine_thread.is_alive():
             return
@@ -160,10 +180,12 @@ class LabRuntime:
         self._engine_thread.start()
         self._sample_thread.start()
         self._discover_thread.start()
-        if self.auto_discover and needs_auto_discover(self.config.tickers):
-            self.request_discover(force=True)
+        if self.has_known_markets():
+            self._on_feed_status(
+                "Known markets pinned - WS only, no /series+/markets rediscover"
+            )
         elif self.auto_discover:
-            self.request_discover(force=False)
+            self.request_discover(force=True)
 
     def stop(self) -> None:
         self._stop.set()
@@ -204,6 +226,12 @@ class LabRuntime:
             self._push_ui("tickers_added", {"tickers": added})
 
     def _run_discover(self, *, force: bool = False) -> None:
+        if self.has_known_markets():
+            self._on_feed_status(
+                "Known markets already seated - skip /series+/markets (no AUTO-FUND)"
+            )
+            self._push_ui("discover_skipped", {"reason": "known_markets"})
+            return
         if self.gate.cooldown_remaining() > 0 and not force:
             remain = self.gate.cooldown_remaining()
             self._on_feed_status(f"429 cooldown {remain:.0f}s - keeping seated books")
@@ -274,14 +302,18 @@ class LabRuntime:
         )
 
     def _discover_loop(self) -> None:
-        # First discover is queued from start(). Then at most every 60s,
-        # and never while a 429 cooldown is active.
+        # Empty start may scan until a book seats. Once tickers exist, never
+        # hit /series or /markets again (that scan is the 429).
         while not self._stop.wait(1.0):
+            if self.has_known_markets():
+                continue
+            if not self.auto_discover:
+                continue
             if self.gate.cooldown_remaining() > 0:
                 continue
-            if (time.monotonic() - self._last_discover) < self.rediscover_seconds:
+            if self._last_discover <= 0:
                 continue
-            if self._last_discover <= 0 and self.auto_discover:
+            if (time.monotonic() - self._last_discover) < self.rediscover_seconds:
                 continue
             self.request_discover(force=False)
 
@@ -332,7 +364,14 @@ class LabRuntime:
             return "FROZEN", f"No book update for {age:.0f}s - feed is not live"
         if self.health == "STALE":
             return "STALE", f"Heartbeat stale ({age:.0f}s since last book) - not a live tape"
-        feed = "WS" if self.feed.ws_connected else ("slow REST" if self.feed.using_slow_rest else "idle")
+        if self.feed.ws_connected:
+            feed = "WS"
+        elif self.feed.using_slow_rest:
+            feed = "slow REST"
+        elif self.config.use_ws:
+            feed = "WS reconnect"
+        else:
+            feed = "idle"
         if age is None:
             return "LIVE", f"{feed} - {n} books - waiting for first tick"
         return "LIVE", f"{feed} - {n} books - last tick {age:.1f}s ago"

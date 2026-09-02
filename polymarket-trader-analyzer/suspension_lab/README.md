@@ -22,11 +22,11 @@ The auto-discovery:
 - Groups markets by game and funds:
   - **Home ML** / **Away ML** (liquid TIE is funded)
   - The **total nearest 50¢ YES from live prices** (ATM). A 0-1 / 1-0 grind with O1.5 at ~50¢ funds **O1.5**, not leftover O3.5/O4.5. 1-1 / ≥3 goals → O3.5+O4.5 is that ATM special case, not a hard pin.
-  - The **next strike up** if liquid (skip ~90¢ O0.5 bonds). Dead wings (untradeable, bid missing, YES < ~10¢) are dropped on the rediscover timer. If O4.5 drifts far from 50¢ with no more goals, swap to the cheaper adjacent (O2.5 or O1.5).
+  - The **next strike up** if liquid (skip ~90¢ O0.5 bonds). If O4.5 drifts far from 50¢ with no more goals, the first discover picks the cheaper adjacent (O2.5 or O1.5). Once tickers are seated, there is no rediscover timer.
 - Rank: **in-play first**, then kickoff-soon, then 24h volume. No team-name bias.
 - Fingerprint discovery (Egypt, TFF, Coppa, cups, second divisions) — prefix list is a boost, not a closed set
-- Finished / yesterday books are dropped. Empty start stays REST-idle (no empty WS subscribe) and rescans
-- Totals **rediscover on a timer** while the session runs (no restart). Dead wings leave the fund list.
+- Finished / yesterday books are dropped. Empty start stays idle (no empty WS subscribe) until the first discover seats a book
+- Once CLI/session has tickers, **never rediscover** (no 60s `/series`+`/markets` scan, no AUTO-FUND extra leagues). Live L2 is WS only.
 - Logs which tickers were added and why
 
 ### Auto-discovery options

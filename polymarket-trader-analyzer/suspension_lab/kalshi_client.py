@@ -18,7 +18,6 @@ from suspension_lab.rate_limit import DEFAULT_RETRY_AFTER_S, retry_after_seconds
 BookCallback = Callable[[str, OrderBook], None]
 StatusCallback = Callable[[str], None]
 
-WS_FAILS_BEFORE_REST = 4
 WS_BACKOFF_CAP_S = 30.0
 REST_TICKER_GAP_S = 1.0
 REST_CYCLE_MIN_S = 3.0
@@ -94,7 +93,7 @@ class KalshiBookFeed:
         return "kalshi-book-feed"
 
     def add_ticker(self, ticker: str, *, snapshot: bool = True) -> bool:
-        """Register a ticker. REST snapshot is queued for the feed thread, never the caller."""
+        """Register a ticker. REST snapshot is --rest-only only; WS path subscribes."""
         ticker = ticker.strip()
         if not ticker or ticker in self.books:
             return False
@@ -102,7 +101,7 @@ class KalshiBookFeed:
         if ticker not in self.config.tickers:
             self.config.tickers.append(ticker)
         self._pending_subscribe.append(ticker)
-        if snapshot:
+        if snapshot and not self.config.use_ws:
             self._queue_snapshot(ticker)
         self._emit_status(f"Added ticker {ticker}")
         return True
@@ -188,9 +187,11 @@ class KalshiBookFeed:
         try:
             if self.config.use_ws and self.config.has_ws_auth:
                 self._loop.run_until_complete(self._ws_loop())
+            elif self.config.use_ws:
+                self._emit_status("No WS creds - idle (WS-only L2, not polling REST)")
+                while not self._stop.wait(1.0):
+                    pass
             else:
-                if self.config.use_ws and not self.config.has_ws_auth:
-                    self._emit_status("No WS creds - using slow sequential REST snapshots")
                 self._loop.run_until_complete(self._slow_rest_loop())
         finally:
             self.ws_connected = False
@@ -252,7 +253,7 @@ class KalshiBookFeed:
         return self._snapshot_once(http, ticker)
 
     async def _slow_rest_loop(self) -> None:
-        """Fallback after WS is dead: one ticker at a time, >=1s gap, >=3s cycle.
+        """Explicit --rest-only only. Never a WS fallback. One ticker, >=1s gap.
 
         Never fetch all books in parallel. Never poll at BOOK_SAMPLE_MS.
         """
@@ -288,20 +289,9 @@ class KalshiBookFeed:
 
     async def _ws_loop(self) -> None:
         private_key = load_private_key_from_config(self.config)
-        session = requests.Session()
-        session.headers.update({"User-Agent": "suspension-lab/0.1"})
         attempt = 0
-        ws_failures = 0
 
         while not self._stop.is_set():
-            if ws_failures >= WS_FAILS_BEFORE_REST:
-                self._emit_status(
-                    f"WS failed {ws_failures}x - slow sequential REST "
-                    f"(1s/ticker), not 200ms parallel"
-                )
-                await self._slow_rest_loop()
-                return
-
             ws_url = self._next_ws_url()
             try:
                 headers = ws_auth_headers(self.config.api_key_id, private_key)
@@ -315,17 +305,10 @@ class KalshiBookFeed:
                     max_size=8 * 1024 * 1024,
                 ) as ws:
                     attempt = 0
-                    ws_failures = 0
                     self.ws_connected = True
                     self.using_slow_rest = False
                     host = ws_url.split("/")[2]
                     self._emit_status(f"Kalshi WS connected ({host})")
-
-                    # One REST snapshot per ticker on first subscribe only.
-                    for ticker in list(self.config.tickers):
-                        if self._stop.is_set():
-                            return
-                        await asyncio.to_thread(self._snapshot_once, session, ticker)
 
                     sub = orderbook_subscribe_payload(
                         self.config.tickers, msg_id=self._subscribe_id
@@ -348,14 +331,11 @@ class KalshiBookFeed:
                             pending, msg_id=self._subscribe_id + 1
                         )
                         if extra is None:
-                            await asyncio.to_thread(self.flush_one_snapshot, session)
                             return
                         self._subscribe_id += 1
                         extra["id"] = self._subscribe_id
                         await ws.send(json.dumps(extra))
                         self._emit_status(f"WS subscribe added: {', '.join(pending)}")
-                        for ticker in pending:
-                            await asyncio.to_thread(self._snapshot_once, session, ticker)
 
                     while not self._stop.is_set():
                         try:
@@ -410,7 +390,6 @@ class KalshiBookFeed:
                 self.ws_connected = False
                 if self._stop.is_set():
                     break
-                ws_failures += 1
                 retry_hdr = retry_after_from_exc(exc)
                 if retry_hdr:
                     delay = min(max(retry_hdr, 1.0), WS_BACKOFF_CAP_S)
@@ -420,7 +399,6 @@ class KalshiBookFeed:
                     delay = max(delay, 1.0) + random.uniform(0, 0.25)
                     attempt = min(attempt + 1, 8)
                 self._emit_status(
-                    f"WS disconnected ({exc}) - retry {ws_failures}/{WS_FAILS_BEFORE_REST} "
-                    f"in {delay:.1f}s"
+                    f"WS disconnected ({exc}) - reconnect in {delay:.1f}s (no REST fallback)"
                 )
                 await asyncio.sleep(delay)

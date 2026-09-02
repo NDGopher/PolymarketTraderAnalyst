@@ -172,6 +172,71 @@ class TestDiscoveryWorkersAndScan:
         assert "KXCOPPAITALIAGAME-26SEP02UDIVEN-UDI" in runtime.feed.books
 
 
+class TestKnownMarketsNeverRediscover:
+    def _udinese_runtime(self, tmp_path) -> LabRuntime:
+        game = SoccerGame(
+            event_ticker="KXCOPPAITALIAGAME-26SEP02UDIVEN",
+            title="Udinese vs Venezia",
+            home_team="Udinese",
+            away_team="Venezia",
+            close_time="",
+            home_ml_ticker="KXCOPPAITALIAGAME-26SEP02UDIVEN-UDI",
+            away_ml_ticker="KXCOPPAITALIAGAME-26SEP02UDIVEN-VEN",
+        )
+        config = LabConfig(
+            tickers=game.get_tickers(),
+            game_label="Udinese vs Venezia",
+            output_dir=tmp_path,
+        )
+        config.games = [game]
+        return LabRuntime(config, auto_discover=True)
+
+    def test_seated_tickers_skip_series_scan(self, tmp_path):
+        runtime = self._udinese_runtime(tmp_path)
+        assert runtime.has_known_markets()
+        with patch("suspension_lab.lab_runtime.discover_soccer_games") as mock:
+            runtime._run_discover(force=False)
+            runtime._run_discover(force=True)
+            mock.assert_not_called()
+
+    def test_start_with_pins_does_not_queue_discover(self, tmp_path):
+        runtime = self._udinese_runtime(tmp_path)
+        queued: list[object] = []
+        runtime.request_discover = lambda **_k: queued.append("discover")
+        runtime.feed.start = lambda: None
+        with patch("threading.Thread.start", lambda self: None):
+            runtime.start()
+        assert queued == []
+
+    def test_discover_loop_source_bails_on_known_markets(self):
+        src = inspect.getsource(LabRuntime._discover_loop)
+        assert "has_known_markets" in src
+        start = inspect.getsource(LabRuntime.start)
+        assert "has_known_markets" in start
+        assert "request_discover(force=False)" not in start
+
+    def test_cli_pins_force_auto_discover_off(self):
+        from suspension_lab import cli
+
+        src = inspect.getsource(cli.main)
+        assert "auto_discover = False" in src
+        assert "auto_discover=auto_discover or needs_auto_discover" not in src
+
+
+class TestWsOnlyNoRestFallback:
+    def test_ws_loop_never_falls_to_rest(self):
+        ws = inspect.getsource(KalshiBookFeed._ws_loop)
+        run = inspect.getsource(KalshiBookFeed._run)
+        whole = inspect.getsource(KalshiBookFeed)
+        assert "_slow_rest_loop" not in ws
+        assert "_snapshot_once" not in ws
+        assert "flush_one_snapshot" not in ws
+        assert "WS_FAILS_BEFORE_REST" not in whole
+        assert "reconnect" in ws
+        assert "_slow_rest_loop" in run
+        assert "not polling REST" in run
+
+
 class TestRestLoopPacing:
     def test_constants_and_no_gather(self):
         assert REST_TICKER_GAP_S >= 1.0
@@ -182,7 +247,16 @@ class TestRestLoopPacing:
         assert "gather(" not in slow
 
     def test_add_ticker_does_not_rest_on_caller(self):
-        feed = KalshiBookFeed(LabConfig(tickers=[]))
+        feed = KalshiBookFeed(LabConfig(tickers=[], use_ws=True))
+        called: list[str] = []
+        feed._fetch_rest_snapshot = lambda *_a, **_k: called.append("rest") or True
+        assert feed.add_ticker("KXTESTGAME-26SEP02AB-A")
+        assert called == []
+        assert feed._pending_snapshots == []
+        assert "KXTESTGAME-26SEP02AB-A" in feed._pending_subscribe
+
+    def test_add_ticker_queues_snapshot_on_rest_only(self):
+        feed = KalshiBookFeed(LabConfig(tickers=[], use_ws=False))
         called: list[str] = []
         feed._fetch_rest_snapshot = lambda *_a, **_k: called.append("rest") or True
         assert feed.add_ticker("KXTESTGAME-26SEP02AB-A")
@@ -307,6 +381,8 @@ class TestDesignerLock:
         assert "STALE" in src
         assert "FROZEN" in src
         assert "429" in src
+        assert "rescans every 60s" not in src
+        assert "No 60s rediscover" in src
         configure = src[src.index("def _on_canvas_configure") : src.index("def _on_cards_configure")]
         assert "itemconfigure" in configure
         assert "scrollregion" in configure

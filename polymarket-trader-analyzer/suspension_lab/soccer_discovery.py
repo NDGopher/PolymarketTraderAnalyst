@@ -755,8 +755,9 @@ def repick_session_totals(
     drop_far_wing: bool = False,
     now: datetime | None = None,
 ) -> tuple[list[SoccerGame], list[str], list[str]]:
-    """Timer rediscover: live ATM, drop dead wings, drop pregame and finished.
+    """First-seat pick: live ATM, drop dead wings, drop pregame and finished.
 
+    Used only when the session has no tickers yet. Seated books never rescan.
     Returns (kept_games, fund_tickers, drop_tickers). Does not invent fills.
     """
     for game in fresh_games:
@@ -1568,7 +1569,7 @@ def format_slate_digest(result: DiscoveryResult) -> str:
         "In-game totals follow **live YES nearest 50¢** (ATM) plus the next "
         "liquid strike. 1-1 / ≥3 goals → O3.5+O4.5 only when those books are "
         "the 50¢ tape — not a hard pin. A 0-1 grind with O1.5 at 50¢ funds "
-        "O1.5. Dead wings (no bid, YES < ~10¢) are dropped on the rediscover timer.",
+        "O1.5. Once a book seats, the logger does not rediscover extra leagues.",
         "",
         "## Auto-funded (logger will watch)",
         "",
