@@ -218,7 +218,7 @@ class KalshiBookFeed:
             time.sleep(remain)
 
     def _fetch_rest_snapshot(self, session: requests.Session, ticker: str) -> bool:
-        """Seed-on-connect or --rest-only snapshot. Never raise_for_status into UI."""
+        """Seed-on-connect or --rest-only snapshot. Do not raise HTTP errors into the UI."""
         if ticker not in self.books:
             return False
         self._cooldown_sleep()

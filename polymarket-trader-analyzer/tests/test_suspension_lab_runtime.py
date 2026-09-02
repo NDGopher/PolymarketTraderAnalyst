@@ -128,7 +128,7 @@ class TestWsOnlyNoRestFallback:
         src = inspect.getsource(KalshiBookFeed._fetch_rest_snapshot)
         assert "raise_for_status" not in src
         assert "429" in src
-        assert "_emit_note" in src or "on_note" in src
+        assert "_mark_rate_limit" in src
 
 
 class TestRetryAfter:
