@@ -9,16 +9,19 @@ from typing import Callable, Sequence
 
 import requests
 import websockets
-from websockets.exceptions import ConnectionClosed
 
-from suspension_lab.config import LabConfig, WS_PATH
+from suspension_lab.config import LabConfig
 from suspension_lab.kalshi_auth import load_private_key_from_config, ws_auth_headers
 from suspension_lab.orderbook import OrderBook
+from suspension_lab.rate_limit import DEFAULT_RETRY_AFTER_S, retry_after_seconds
 
 BookCallback = Callable[[str, OrderBook], None]
 StatusCallback = Callable[[str], None]
 
 WS_FAILS_BEFORE_REST = 4
+WS_BACKOFF_CAP_S = 30.0
+REST_TICKER_GAP_S = 1.0
+REST_CYCLE_MIN_S = 3.0
 
 
 def orderbook_subscribe_payload(
@@ -45,8 +48,22 @@ def orderbook_subscribe_payload(
     }
 
 
+def retry_after_from_exc(exc: BaseException) -> float | None:
+    """Pull Retry-After off a WS/HTTP connect error when Kalshi sends one."""
+    headers = None
+    response = getattr(exc, "response", None)
+    if response is not None:
+        headers = getattr(response, "headers", None)
+    if headers is None:
+        headers = getattr(exc, "headers", None)
+    if not headers:
+        return None
+    wait = retry_after_seconds(headers, default=0.0)
+    return wait if wait >= 0.1 else None
+
+
 class KalshiBookFeed:
-    """Maintains live Kalshi orderbooks via WebSocket (preferred) or REST polling."""
+    """Live L2 via WebSocket. REST is a one-shot subscribe snapshot, not a 200ms poll."""
 
     def __init__(
         self,
@@ -64,8 +81,20 @@ class KalshiBookFeed:
         self._ws_url_index = 0
         self._subscribe_id = 1
         self._pending_subscribe: list[str] = []
+        self._pending_snapshots: list[str] = []
+        self._snapshotted: set[str] = set()
+        self._snap_lock = threading.Lock()
+        self.rate_limit_until: float = 0.0
+        self.last_book_monotonic: float = 0.0
+        self.ws_connected: bool = False
+        self.using_slow_rest: bool = False
 
-    def add_ticker(self, ticker: str) -> bool:
+    @property
+    def thread_name(self) -> str:
+        return "kalshi-book-feed"
+
+    def add_ticker(self, ticker: str, *, snapshot: bool = True) -> bool:
+        """Register a ticker. REST snapshot is queued for the feed thread, never the caller."""
         ticker = ticker.strip()
         if not ticker or ticker in self.books:
             return False
@@ -73,9 +102,8 @@ class KalshiBookFeed:
         if ticker not in self.config.tickers:
             self.config.tickers.append(ticker)
         self._pending_subscribe.append(ticker)
-        session = requests.Session()
-        session.headers.update({"User-Agent": "suspension-lab/0.1"})
-        self._fetch_rest_snapshot(session, ticker)
+        if snapshot:
+            self._queue_snapshot(ticker)
         self._emit_status(f"Added ticker {ticker}")
         return True
 
@@ -87,6 +115,9 @@ class KalshiBookFeed:
         if ticker in self.config.tickers:
             self.config.tickers.remove(ticker)
         self._pending_subscribe = [t for t in self._pending_subscribe if t != ticker]
+        with self._snap_lock:
+            self._pending_snapshots = [t for t in self._pending_snapshots if t != ticker]
+            self._snapshotted.discard(ticker)
         self._emit_status(f"Dropped resolved ticker {ticker}")
         return True
 
@@ -95,11 +126,23 @@ class KalshiBookFeed:
         self._pending_subscribe.clear()
         return pending
 
+    def _queue_snapshot(self, ticker: str) -> None:
+        with self._snap_lock:
+            if ticker in self._snapshotted or ticker in self._pending_snapshots:
+                return
+            self._pending_snapshots.append(ticker)
+
+    def _pop_snapshot(self) -> str | None:
+        with self._snap_lock:
+            if not self._pending_snapshots:
+                return None
+            return self._pending_snapshots.pop(0)
+
     def start(self) -> None:
         if self._thread and self._thread.is_alive():
             return
         self._stop.clear()
-        self._thread = threading.Thread(target=self._run, name="kalshi-book-feed", daemon=True)
+        self._thread = threading.Thread(target=self._run, name=self.thread_name, daemon=True)
         self._thread.start()
 
     def stop(self) -> None:
@@ -118,6 +161,7 @@ class KalshiBookFeed:
             self.on_status(msg)
 
     def _emit_book(self, ticker: str) -> None:
+        self.last_book_monotonic = time.monotonic()
         if self.on_book:
             self.on_book(ticker, self.books[ticker])
 
@@ -146,39 +190,95 @@ class KalshiBookFeed:
                 self._loop.run_until_complete(self._ws_loop())
             else:
                 if self.config.use_ws and not self.config.has_ws_auth:
-                    self._emit_status("No WS creds — using REST polling")
-                self._loop.run_until_complete(self._rest_loop())
+                    self._emit_status("No WS creds - using slow sequential REST snapshots")
+                self._loop.run_until_complete(self._slow_rest_loop())
         finally:
+            self.ws_connected = False
             self._loop.close()
 
+    def _mark_rate_limit(self, wait: float) -> None:
+        wait = max(wait, DEFAULT_RETRY_AFTER_S)
+        self.rate_limit_until = max(self.rate_limit_until, time.monotonic() + wait)
+        self._emit_status(f"REST 429 - cooling {wait:.0f}s (Retry-After)")
+
+    def _cooldown_sleep(self) -> None:
+        remain = self.rate_limit_until - time.monotonic()
+        if remain > 0:
+            time.sleep(remain)
+
     def _fetch_rest_snapshot(self, session: requests.Session, ticker: str) -> bool:
+        """One-shot L2 REST. Never called in a parallel gather."""
+        if ticker not in self.books:
+            return False
+        self._cooldown_sleep()
         try:
             session.headers.update({"User-Agent": "suspension-lab/0.1"})
             url = f"{self.config.rest_base}/markets/{ticker}/orderbook"
             resp = session.get(url, params={"depth": 0}, timeout=5)
+            if resp.status_code == 429:
+                wait = retry_after_seconds(resp.headers, default=DEFAULT_RETRY_AFTER_S)
+                self._mark_rate_limit(wait)
+                time.sleep(wait)
+                return False
             resp.raise_for_status()
             payload = resp.json().get("orderbook_fp") or resp.json().get("orderbook") or {}
             now_ms = int(time.time() * 1000)
             self.books[ticker].load_snapshot(payload, updated_ms=now_ms)
+            with self._snap_lock:
+                self._snapshotted.add(ticker)
             self._emit_book(ticker)
             return True
         except Exception as exc:  # noqa: BLE001
+            headers = getattr(getattr(exc, "response", None), "headers", None)
+            if headers:
+                wait = retry_after_from_exc(exc)
+                if wait:
+                    self._mark_rate_limit(wait)
             self._emit_status(f"REST {ticker}: {exc}")
             return False
 
-    async def _rest_loop(self) -> None:
-        interval = max(self.config.poll_ms, 100) / 1000.0
-        self._emit_status(f"REST polling every {int(interval * 1000)}ms (parallel books)")
+    def _snapshot_once(self, session: requests.Session, ticker: str) -> bool:
+        with self._snap_lock:
+            if ticker in self._snapshotted:
+                return True
+        return self._fetch_rest_snapshot(session, ticker)
+
+    def flush_one_snapshot(self, session: requests.Session | None = None) -> bool:
+        ticker = self._pop_snapshot()
+        if not ticker:
+            return False
+        http = session or requests.Session()
+        http.headers.update({"User-Agent": "suspension-lab/0.1"})
+        return self._snapshot_once(http, ticker)
+
+    async def _slow_rest_loop(self) -> None:
+        """Fallback after WS is dead: one ticker at a time, >=1s gap, >=3s cycle.
+
+        Never fetch all books in parallel. Never poll at BOOK_SAMPLE_MS.
+        """
+        self.using_slow_rest = True
+        self.ws_connected = False
+        session = requests.Session()
+        session.headers.update({"User-Agent": "suspension-lab/0.1"})
+        self._emit_status(
+            f"Slow REST snapshots ({REST_TICKER_GAP_S:.1f}s/ticker, "
+            f"{REST_CYCLE_MIN_S:.0f}s/cycle) - not 200ms parallel"
+        )
         while not self._stop.is_set():
+            cycle_start = time.monotonic()
             tickers = list(self.config.tickers)
-            if tickers:
-                await asyncio.gather(
-                    *[
-                        asyncio.to_thread(self._fetch_rest_snapshot, requests.Session(), ticker)
-                        for ticker in tickers
-                    ]
-                )
-            await asyncio.sleep(interval)
+            if not tickers:
+                await asyncio.sleep(REST_CYCLE_MIN_S)
+                continue
+            for ticker in tickers:
+                if self._stop.is_set():
+                    return
+                await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
+                await asyncio.sleep(REST_TICKER_GAP_S)
+            elapsed = time.monotonic() - cycle_start
+            leftover = REST_CYCLE_MIN_S - elapsed
+            if leftover > 0:
+                await asyncio.sleep(leftover)
 
     def _snapshot_payload(self, msg: dict) -> dict:
         if "yes_dollars" in msg or "yes" in msg:
@@ -195,8 +295,11 @@ class KalshiBookFeed:
 
         while not self._stop.is_set():
             if ws_failures >= WS_FAILS_BEFORE_REST:
-                self._emit_status("WS unstable — switching to REST polling (still works for lab)")
-                await self._rest_loop()
+                self._emit_status(
+                    f"WS failed {ws_failures}x - slow sequential REST "
+                    f"(1s/ticker), not 200ms parallel"
+                )
+                await self._slow_rest_loop()
                 return
 
             ws_url = self._next_ws_url()
@@ -213,12 +316,16 @@ class KalshiBookFeed:
                 ) as ws:
                     attempt = 0
                     ws_failures = 0
+                    self.ws_connected = True
+                    self.using_slow_rest = False
                     host = ws_url.split("/")[2]
                     self._emit_status(f"Kalshi WS connected ({host})")
 
-                    # Seed books via REST so UI has data even before snapshots arrive
+                    # One REST snapshot per ticker on first subscribe only.
                     for ticker in list(self.config.tickers):
-                        await asyncio.to_thread(self._fetch_rest_snapshot, session, ticker)
+                        if self._stop.is_set():
+                            return
+                        await asyncio.to_thread(self._snapshot_once, session, ticker)
 
                     sub = orderbook_subscribe_payload(
                         self.config.tickers, msg_id=self._subscribe_id
@@ -226,12 +333,11 @@ class KalshiBookFeed:
                     self._subscribe_id += 1
                     if sub is None:
                         self._emit_status(
-                            "Waiting for live soccer — no WS subscribe (empty market_tickers)"
+                            "Waiting for live soccer - no WS subscribe (empty market_tickers)"
                         )
                     else:
                         await ws.send(json.dumps(sub))
 
-                    # Kalshi seq is per subscription stream (sid), NOT per ticker
                     last_seq: int | None = None
                     last_emit_ms: dict[str, int] = {}
                     emit_gap_ms = 50
@@ -242,11 +348,14 @@ class KalshiBookFeed:
                             pending, msg_id=self._subscribe_id + 1
                         )
                         if extra is None:
+                            await asyncio.to_thread(self.flush_one_snapshot, session)
                             return
                         self._subscribe_id += 1
                         extra["id"] = self._subscribe_id
                         await ws.send(json.dumps(extra))
                         self._emit_status(f"WS subscribe added: {', '.join(pending)}")
+                        for ticker in pending:
+                            await asyncio.to_thread(self._snapshot_once, session, ticker)
 
                     while not self._stop.is_set():
                         try:
@@ -274,9 +383,9 @@ class KalshiBookFeed:
                         seq = event.get("seq")
                         if seq is not None:
                             if last_seq is not None and seq != last_seq + 1:
-                                self._emit_status(f"Seq gap ({last_seq}->{seq}) — refreshing books")
-                                for t in self.config.tickers:
-                                    await asyncio.to_thread(self._fetch_rest_snapshot, session, t)
+                                self._emit_status(
+                                    f"Seq gap ({last_seq}->{seq}) - waiting for WS snapshot"
+                                )
                                 last_seq = seq
                             else:
                                 last_seq = seq
@@ -298,12 +407,20 @@ class KalshiBookFeed:
                         await _flush_pending()
 
             except Exception as exc:  # noqa: BLE001
+                self.ws_connected = False
                 if self._stop.is_set():
                     break
                 ws_failures += 1
-                attempt = min(attempt + 1, 6)
-                delay = min(0.5 * (2**attempt), 15) + random.uniform(0, 0.25)
+                retry_hdr = retry_after_from_exc(exc)
+                if retry_hdr:
+                    delay = min(max(retry_hdr, 1.0), WS_BACKOFF_CAP_S)
+                    self._mark_rate_limit(retry_hdr)
+                else:
+                    delay = min(2**attempt, WS_BACKOFF_CAP_S)
+                    delay = max(delay, 1.0) + random.uniform(0, 0.25)
+                    attempt = min(attempt + 1, 8)
                 self._emit_status(
-                    f"WS disconnected ({exc}) — retry {ws_failures}/{WS_FAILS_BEFORE_REST} in {delay:.1f}s"
+                    f"WS disconnected ({exc}) - retry {ws_failures}/{WS_FAILS_BEFORE_REST} "
+                    f"in {delay:.1f}s"
                 )
                 await asyncio.sleep(delay)

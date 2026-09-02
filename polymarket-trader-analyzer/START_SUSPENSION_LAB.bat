@@ -54,7 +54,9 @@ if not exist ".env" (
   exit /b 1
 )
 
-echo [3/3] Launching Suspension Edge Lab...
+echo [3/3] Launching Suspension Edge Lab (GUI on the shared paper engine)...
+echo      One lab process only. If paper_logger already holds data\suspension_lab\lab.lock,
+echo      this exits instead of opening a second Kalshi client.
 echo.
 set "PYTHONPATH=%CD%"
 ".venv\Scripts\python.exe" -m suspension_lab.cli
