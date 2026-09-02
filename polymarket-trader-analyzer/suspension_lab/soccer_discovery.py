@@ -8,7 +8,8 @@ Funds home + away ML (and liquid TIE), plus live ATM total + next strike.
 ATM is live YES nearest 50¢ — a 0-1 grind with O1.5 at 50¢ funds O1.5,
 not leftover O3.5/O4.5. 1-1 → O3.5+O4.5 is that ATM case, not a pin.
 O0.5 ~90¢ bonds and dead wings (YES < ~10¢, bid missing) are skipped.
-Rediscover on a timer while the session runs. Paper only — no live bets.
+Empty launch may discover until a book seats; seated sessions never
+rescans /series+/markets. Paper only — no live bets.
 
 `.env LAB_TICKERS` is never a pin list. Empty / placeholder / yesterday
 tickers always auto-discover.
@@ -26,9 +27,17 @@ from typing import Any, Iterable, Sequence
 
 import requests
 
+from suspension_lab.rate_limit import (
+    DEFAULT_RETRY_AFTER_S,
+    FetchStats,
+    get_json_with_retry,
+)
+
 logger = logging.getLogger(__name__)
 
 KALSHI_API_BASE = "https://api.elections.kalshi.com/trade-api/v2"
+DISCOVERY_MAX_WORKERS = 2
+MIN_REDISCOVER_SECONDS = 30.0
 
 # GAME + TOTAL pairs. Midweek cups/second divisions are required so tonight's
 # tape (Coppa Italia, EFL Championship, Sudamericana-adjacent slates) is not
@@ -338,10 +347,51 @@ class DiscoveryResult:
     discovered_at: str = ""
     soon_games: list[SoccerGame] = field(default_factory=list)
     later_games: list[SoccerGame] = field(default_factory=list)
+    rate_limited: bool = False
+    retry_after: float = 0.0
+    from_cache: bool = False
 
     def __post_init__(self) -> None:
         if not self.discovered_at:
             self.discovered_at = datetime.now(tz=timezone.utc).isoformat()
+
+
+class DiscoveryGate:
+    """Skip rediscover during a 429 cooldown. Last good slate is kept.
+
+    Seated sessions never call discover. This gate is for empty-launch only.
+    """
+
+    def __init__(self) -> None:
+        self.last_result: DiscoveryResult | None = None
+        self.last_at: float = 0.0
+        self.cooldown_until: float = 0.0
+
+    def note_rate_limit(self, retry_after: float) -> None:
+        wait = max(float(retry_after or 0.0), DEFAULT_RETRY_AFTER_S)
+        self.cooldown_until = max(self.cooldown_until, time.monotonic() + wait)
+
+    def cooldown_remaining(self) -> float:
+        return max(0.0, self.cooldown_until - time.monotonic())
+
+    def allow(self, *, force: bool = False) -> tuple[bool, DiscoveryResult | None]:
+        now = time.monotonic()
+        if now < self.cooldown_until:
+            return False, self.last_result
+        if (
+            not force
+            and self.last_result is not None
+            and (now - self.last_at) < MIN_REDISCOVER_SECONDS
+        ):
+            return False, self.last_result
+        return True, self.last_result
+
+    def store(self, result: DiscoveryResult) -> None:
+        if result.rate_limited and not result.games and not result.tickers:
+            return
+        if result.games or result.tickers or self.last_result is None:
+            self.last_result = result
+            self.last_at = time.monotonic()
 
 
 def _parse_iso(value: str | None) -> datetime | None:
@@ -704,8 +754,9 @@ def repick_session_totals(
     drop_far_wing: bool = False,
     now: datetime | None = None,
 ) -> tuple[list[SoccerGame], list[str], list[str]]:
-    """Timer rediscover: live ATM, drop dead wings, drop finished games.
+    """First-seat pick: live ATM, drop dead wings, drop finished games.
 
+    Used only when the session has no tickers yet. Seated books never rescan.
     Returns (kept_games, fund_tickers, drop_tickers). Does not invent fills.
     """
     for game in fresh_games:
@@ -1052,27 +1103,21 @@ def _get_with_retry(
     params: dict,
     timeout: float,
     label: str,
+    *,
+    stats: FetchStats | None = None,
 ) -> dict | None:
-    try:
-        resp = session.get(url, params=params, timeout=timeout)
-        if resp.status_code == 429:
-            logger.warning("Rate-limited on %s; retrying once", label)
-            time.sleep(1.5)
-            resp = session.get(url, params=params, timeout=timeout)
-        if resp.status_code != 200:
-            logger.warning("HTTP %s on %s", resp.status_code, label)
-            return None
-        payload = resp.json()
-        return payload if isinstance(payload, dict) else None
-    except requests.RequestException as exc:
-        logger.warning("Failed %s: %s", label, exc)
-        return None
+    fetched = get_json_with_retry(session, url, params, timeout, label, stats=stats)
+    if fetched.rate_limited and stats is not None:
+        stats.note_429(fetched.retry_after)
+    return fetched.payload
 
 
 def fetch_soccer_series_tickers(
     session: requests.Session,
     rest_base: str,
     timeout: float = 15.0,
+    *,
+    stats: FetchStats | None = None,
 ) -> list[str]:
     """Catalog-first soccer series. Prefix list is appended as a boost only."""
     rows: list[dict] = []
@@ -1081,7 +1126,12 @@ def fetch_soccer_series_tickers(
         params: dict[str, Any] = {"limit": 200}
         if cursor:
             params["cursor"] = cursor
-        payload = _get_with_retry(session, f"{rest_base}/series", params, timeout, "series")
+        fetched = get_json_with_retry(
+            session, f"{rest_base}/series", params, timeout, "series", stats=stats
+        )
+        if fetched.rate_limited:
+            break
+        payload = fetched.payload
         if not payload:
             break
         chunk = payload.get("series") or payload.get("series_list") or []
@@ -1099,30 +1149,42 @@ def fetch_soccer_series_tickers(
     return out
 
 
-def _fetch_series_markets(rest_base: str, series: str, timeout: float) -> list[dict]:
+def _fetch_series_markets(
+    rest_base: str,
+    series: str,
+    timeout: float,
+    stats: FetchStats | None = None,
+) -> tuple[list[dict], bool, float]:
     session = requests.Session()
     session.headers.update({"User-Agent": "suspension-lab/0.1"})
-    payload = _get_with_retry(
+    fetched = get_json_with_retry(
         session,
         f"{rest_base}/markets",
         {"series_ticker": series, "status": "open", "limit": 200},
         timeout,
         series,
+        stats=stats,
     )
-    if not payload:
-        return []
-    return list(payload.get("markets") or [])
+    if fetched.rate_limited:
+        return [], True, fetched.retry_after or DEFAULT_RETRY_AFTER_S
+    if not fetched.payload:
+        return [], False, 0.0
+    return list(fetched.payload.get("markets") or []), False, 0.0
 
 
 def fetch_open_soccer_markets(
     rest_base: str = KALSHI_API_BASE,
     timeout: float = 15.0,
+    *,
+    stats: FetchStats | None = None,
 ) -> list[dict]:
     """Open soccer markets by fingerprint + catalog. Prefix list is a boost only.
 
     A live Egypt / TFF / Coppa book is kept even if its series is not in
     SOCCER_SERIES_PREFIXES. NFL/MLB/NBA/NHL and other non-soccer sports are dropped.
+    At most two series workers. A 429 skips the global open-market scan.
     """
+    stats = stats if stats is not None else FetchStats()
     session = requests.Session()
     session.headers.update({"User-Agent": "suspension-lab/0.1"})
 
@@ -1134,19 +1196,34 @@ def fetch_open_soccer_markets(
             if ticker:
                 by_ticker[str(ticker)] = market
 
-    series_list = fetch_soccer_series_tickers(session, rest_base, timeout)
-    workers = min(12, max(4, len(series_list) or 4))
+    series_list = fetch_soccer_series_tickers(session, rest_base, timeout, stats=stats)
+    workers = min(DISCOVERY_MAX_WORKERS, max(1, len(series_list) or 1))
+    stats.workers = workers
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {
-            pool.submit(_fetch_series_markets, rest_base, series, timeout): series
+            pool.submit(_fetch_series_markets, rest_base, series, timeout, stats): series
             for series in series_list
         }
         for fut in as_completed(futures):
             series = futures[fut]
             try:
-                _absorb(fut.result())
+                markets, hit_429, wait = fut.result()
             except Exception as exc:  # noqa: BLE001
                 logger.warning("series fetch %s failed: %s", series, exc)
+                continue
+            _absorb(markets)
+            if hit_429:
+                stats.note_429(wait)
+                stats.series_429 = True
+                for pending in futures:
+                    pending.cancel()
+                break
+
+    if stats.rate_limited or stats.series_429:
+        stats.skipped_global_scan = True
+        logger.warning("Series fetch 429 - skipping global open-market scan")
+        logger.debug("Fingerprint soccer fetch kept %s markets", len(by_ticker))
+        return list(by_ticker.values())
 
     # Global open-market scan so a brand-new league is not dropped if /series lags.
     cursor = None
@@ -1154,9 +1231,13 @@ def fetch_open_soccer_markets(
         params: dict[str, Any] = {"status": "open", "limit": 200}
         if cursor:
             params["cursor"] = cursor
-        payload = _get_with_retry(
-            session, f"{rest_base}/markets", params, timeout, f"markets-page-{page}"
+        fetched = get_json_with_retry(
+            session, f"{rest_base}/markets", params, timeout, f"markets-page-{page}", stats=stats
         )
+        if fetched.rate_limited:
+            stats.skipped_global_scan = True
+            break
+        payload = fetched.payload
         if not payload:
             break
         chunk = payload.get("markets") or []
@@ -1319,6 +1400,9 @@ def discover_soccer_games(
     min_24h_volume: float = MIN_24H_VOLUME_THRESHOLD,
     max_games: int = 5,
     now: datetime | None = None,
+    *,
+    gate: DiscoveryGate | None = None,
+    force: bool = False,
 ) -> DiscoveryResult:
     """Discover live/imminent soccer games with volume and return discovery result.
 
@@ -1327,6 +1411,8 @@ def discover_soccer_games(
         min_volume: Minimum total volume to include a game
         min_24h_volume: Minimum 24h volume to include a game
         max_games: Maximum number of games to return
+        gate: Optional 429 cooldown cache. Last good slate is kept.
+        force: Bypass the empty-launch interval (still honors an active 429 cooldown).
 
     Returns:
         DiscoveryResult with games, tickers, and log lines
@@ -1334,12 +1420,65 @@ def discover_soccer_games(
     log_lines: list[str] = []
     log_lines.append(f"[{datetime.now(tz=timezone.utc).isoformat()}] Starting soccer discovery...")
 
-    markets = fetch_open_soccer_markets(rest_base)
+    if gate is not None:
+        allowed, cached = gate.allow(force=force)
+        if not allowed:
+            if cached is not None:
+                cached.from_cache = True
+                remain = gate.cooldown_remaining()
+                if remain > 0:
+                    cached.rate_limited = True
+                    cached.retry_after = remain
+                    log_lines.append(
+                        f"429 cooldown {remain:.0f}s - keeping last good slate "
+                        f"({len(cached.tickers)} tickers)"
+                    )
+                else:
+                    log_lines.append(
+                        f"Rediscover skipped (<{MIN_REDISCOVER_SECONDS:.0f}s) - "
+                        f"keeping last good slate ({len(cached.tickers)} tickers)"
+                    )
+                cached.log_lines = list(cached.log_lines) + log_lines
+                return cached
+            log_lines.append("429 cooldown active and no cached slate")
+            return DiscoveryResult(
+                games=[],
+                tickers=[],
+                log_lines=log_lines,
+                rate_limited=True,
+                retry_after=gate.cooldown_remaining(),
+            )
+
+    stats = FetchStats()
+    markets = fetch_open_soccer_markets(rest_base, stats=stats)
     log_lines.append(f"Fetched {len(markets)} open soccer markets")
+    if stats.rate_limited:
+        log_lines.append(
+            f"HTTP 429 (Retry-After {stats.retry_after:.0f}s) - "
+            "will not blank already-seated books"
+        )
+        if gate is not None:
+            gate.note_rate_limit(stats.retry_after)
+        if gate is not None and gate.last_result is not None:
+            kept = gate.last_result
+            kept.from_cache = True
+            kept.rate_limited = True
+            kept.retry_after = stats.retry_after
+            kept.log_lines = list(kept.log_lines) + log_lines
+            return kept
 
     if not markets:
         log_lines.append("No open soccer markets found")
-        return DiscoveryResult(games=[], tickers=[], log_lines=log_lines)
+        empty = DiscoveryResult(
+            games=[],
+            tickers=[],
+            log_lines=log_lines,
+            rate_limited=stats.rate_limited,
+            retry_after=stats.retry_after,
+        )
+        if gate is not None and stats.rate_limited and gate.last_result is not None:
+            return gate.last_result
+        return empty
 
     groups = group_markets_by_event(markets)
     log_lines.append(f"Found {len(groups)} unique events")
@@ -1399,13 +1538,28 @@ def discover_soccer_games(
     if not all_tickers:
         log_lines.append("No tickers auto-funded (no today/tonight soccer, or no volume on fixtures)")
 
-    return DiscoveryResult(
+    result = DiscoveryResult(
         games=selected,
         tickers=all_tickers,
         log_lines=log_lines,
         soon_games=soon,
         later_games=later[:12],
+        rate_limited=stats.rate_limited,
+        retry_after=stats.retry_after,
     )
+    if gate is not None:
+        if stats.rate_limited:
+            gate.note_rate_limit(stats.retry_after)
+        if result.games or result.tickers:
+            gate.store(result)
+        elif stats.rate_limited and gate.last_result is not None:
+            kept = gate.last_result
+            kept.from_cache = True
+            kept.rate_limited = True
+            kept.retry_after = stats.retry_after
+            kept.log_lines = list(kept.log_lines) + log_lines
+            return kept
+    return result
 
 
 def format_discovery_log(result: DiscoveryResult) -> str:
@@ -1426,7 +1580,7 @@ def format_slate_digest(result: DiscoveryResult) -> str:
         "In-game totals follow **live YES nearest 50¢** (ATM) plus the next "
         "liquid strike. 1-1 / ≥3 goals → O3.5+O4.5 only when those books are "
         "the 50¢ tape — not a hard pin. A 0-1 grind with O1.5 at 50¢ funds "
-        "O1.5. Dead wings (no bid, YES < ~10¢) are dropped on the rediscover timer.",
+        "O1.5. Once a book seats, the logger does not rediscover extra leagues.",
         "",
         "## Auto-funded (logger will watch)",
         "",

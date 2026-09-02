@@ -25,8 +25,8 @@ The auto-discovery:
   - The **next strike up** if liquid (skip ~90¢ O0.5 bonds). Dead wings (untradeable, bid missing, YES < ~10¢) are dropped on the rediscover timer. If O4.5 drifts far from 50¢ with no more goals, swap to the cheaper adjacent (O2.5 or O1.5).
 - Rank: **in-play first**, then kickoff-soon, then 24h volume. No team-name bias.
 - Fingerprint discovery (Egypt, TFF, Coppa, cups, second divisions) — prefix list is a boost, not a closed set
-- Finished / yesterday books are dropped. Empty start stays REST-idle (no empty WS subscribe) and rescans
-- Totals **rediscover on a timer** while the session runs (no restart). Dead wings leave the fund list.
+- Finished / yesterday books are dropped. Empty start stays REST-idle (no empty WS subscribe) until a book seats
+- Once CLI/session has tickers, discovery **stops** (no 60s `/series`+`/markets` scan). Live L2 is WebSocket-only
 - Logs which tickers were added and why
 
 ### Auto-discovery options
