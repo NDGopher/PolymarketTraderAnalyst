@@ -37,7 +37,7 @@ GOAL_ASK_LOOKBACK_MS = 2_500  # ask-led-bid: ask moved in prior ~2.5s
 GOAL_ASK_LOOKBACK_MAX_BID_DRIFT_CENTS = 5  # allow small bid drift while ask leads
 GOAL_SPREAD_BLOWOUT_CENTS = 12  # tight book -> wide = books pulled (goal/suspension)
 GOAL_MIN_BLOWOUT_JUMP_CENTS = 6
-# +10c within this window on an in-play ML/ATM is a GOAL, not a red-card grind.
+# +10c within this window is a GOAL only if ask confirms (+3c) or spread blows.
 GOAL_FAST_WINDOW_MS = 4_000
 # delayed_grind only for walks that take longer than ~6-8s (or no ask/blowout).
 GOAL_DELAYED_WINDOW_MS = 8_000

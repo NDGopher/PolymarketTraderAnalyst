@@ -8,6 +8,7 @@ from suspension_lab.goal_signal import (
     DelayedStateNotice,
     GoalSignal,
     GoalSignalDetector,
+    VarRevertAlert,
 )
 from suspension_lab.orderbook import OrderBook
 from suspension_lab.scalp_quote import kalshi_fee_cents, make_around_jump
@@ -208,19 +209,55 @@ class TestBookGoalDetection:
         assert isinstance(result, GoalSignal)
         assert "blowout" in result.reason or result.bid_jump_cents >= 6
 
-    def test_plus10c_walk_within_4s_is_goal_not_delayed(self):
-        """Wed Sep 2 Udinese 1-1: +10c over 3.7s was SKIP. Must be GOAL."""
+    def test_plus10c_walk_with_ask_confirm_is_goal(self):
+        """Walk +10c in 4s AND ask +3c (Grau/Melgar style) is a GOAL."""
         det = GoalSignalDetector()
         t = "KXCOPPAITALIATOTAL-26SEP02UDIVEN-2"
         det.evaluate(t, _book(t, "0.40", "0.42", ts=16_343_000))
         result = None
+        asks = ("0.44", "0.46", "0.48", "0.50", "0.52")
         for i, bid in enumerate(("0.42", "0.44", "0.46", "0.48", "0.50")):
             result = det.evaluate(
-                t, _book(t, bid, "0.52", bid_qty="200", ts=16_343_000 + (i + 1) * 740)
+                t, _book(t, bid, asks[i], bid_qty="200", ts=16_343_000 + (i + 1) * 740)
             )
         assert isinstance(result, GoalSignal)
         assert result.bid_jump_cents >= 10
-        assert result.reason == "bid_walk_plus10c_within_4s"
+        assert result.reason == "bid_walk_plus10c_ask_confirm"
+
+    def test_bid_only_walk_does_not_fire_or_arm_var(self):
+        """16:38 CT false fire: bid 0.35->0.45, ask stuck 0.48. Not a goal. No VAR."""
+        det = GoalSignalDetector()
+        t = "KXCOPPAITALIAGAME-26SEP02UDIVEN-UDI"
+        det.evaluate(t, _book(t, "0.35", "0.48", ts=16_382_400))
+        seen = []
+        for i, bid in enumerate(("0.37", "0.39", "0.41", "0.43", "0.45")):
+            seen.append(
+                det.evaluate(
+                    t, _book(t, bid, "0.48", bid_qty="200", ts=16_382_400 + (i + 1) * 700)
+                )
+            )
+        assert not any(isinstance(r, GoalSignal) for r in seen)
+        assert t not in det._signal_peak_bid
+        drop = det.evaluate(t, _book(t, "0.36", "0.48", bid_qty="200", ts=16_391_500))
+        assert not isinstance(drop, VarRevertAlert)
+        assert not isinstance(drop, GoalSignal)
+
+    def test_one_tick_plus10c_ask_flat_is_not_goal(self):
+        det = GoalSignalDetector()
+        t = "KXEPLGAME-26SEP02TEST-ARS"
+        det.evaluate(t, _book(t, "0.35", "0.48", ts=1000))
+        result = det.evaluate(t, _book(t, "0.45", "0.48", bid_qty="200", ts=1200))
+        assert not isinstance(result, GoalSignal)
+        assert t not in det._signal_peak_bid
+
+    def test_one_tick_plus10c_with_ask_confirm_is_goal(self):
+        """Yesterday Grau/Melgar: bid and ask jumped together."""
+        det = GoalSignalDetector()
+        t = "KXPERLIGA1GAME-26AUG31CAGMEL-GRA"
+        det.evaluate(t, _book(t, "0.20", "0.22", ts=1000))
+        result = det.evaluate(t, _book(t, "0.40", "0.40", bid_qty="200", ts=1200))
+        assert isinstance(result, GoalSignal)
+        assert result.bid_jump_cents >= 10
 
     def test_venezia_ml_walk_14c_over_3s_is_goal(self):
         det = GoalSignalDetector()

@@ -189,17 +189,19 @@ class GoalSignalDetector:
         blowout = self._spread_blowout(prev_bid, prev_ask, new_bid, new_ask, jump_cents)
         ask_ok = self._ask_confirmed(ticker, prev_bid, prev_ask, new_ask, ts_ms)
         start_bid, window_jump, window_span = self._window_move(ticker, ts_ms, GOAL_FAST_WINDOW_MS)
+        window_ask_ok = self._window_ask_confirmed(ticker, ts_ms, GOAL_FAST_WINDOW_MS)
         fast_walk = window_jump >= GOAL_BID_JUMP_CENTS and window_span <= GOAL_FAST_WINDOW_MS
         tick_jump = jump_cents >= GOAL_BID_JUMP_CENTS
+        # Bid walk is a GOAL only if ask confirms (+3c) or spread blows.
+        # Bid-only walks must not fire, flash, or arm VAR peak.
+        confirm_ok = ask_ok or blowout or (fast_walk and window_ask_ok)
 
-        # +10c within 4s on a live ML/ATM is a GOAL. Do not classify as delayed_grind.
-        if fast_walk or tick_jump or blowout:
+        if (fast_walk or tick_jump or blowout) and confirm_ok:
             signal_prev = start_bid if fast_walk and start_bid is not None else prev_bid
             signal_jump = window_jump if fast_walk else jump_cents
             if int(round(signal_prev * 100)) >= GOAL_MIN_PREV_BID_CENTS:
                 size_ok = bid_qty >= GOAL_MIN_BID_QTY or fast_walk
-                confirm_ok = fast_walk or ask_ok or blowout
-                if size_ok and confirm_ok:
+                if size_ok:
                     last = self._last_signal_ms.get(ticker)
                     if last is None or ts_ms - last >= GOAL_SIGNAL_COOLDOWN_MS:
                         self._last_signal_ms[ticker] = ts_ms
@@ -208,7 +210,7 @@ class GoalSignalDetector:
                         exit_mode = self._exit_mode(ticker, new_bid, new_ask, levels)
                         reason = "bid_jump_with_size_and_ask_confirm"
                         if fast_walk and not tick_jump:
-                            reason = "bid_walk_plus10c_within_4s"
+                            reason = "bid_walk_plus10c_ask_confirm"
                         elif blowout and not ask_ok:
                             reason = "spread_blowout_books_pulled"
                         elif (
@@ -268,6 +270,18 @@ class GoalSignalDetector:
         jump = int(round((last_bid - first_bid) * 100))
         span = max(int(last_ts - first_ts), 0)
         return first_bid, jump, span
+
+    def _window_ask_confirmed(self, ticker: str, ts_ms: int, window_ms: int) -> bool:
+        """Ask must step at least +3c over the same window as the bid walk."""
+        hist = [
+            h[2]
+            for h in self._history.get(ticker, deque())
+            if ts_ms - h[0] <= window_ms and h[2] is not None
+        ]
+        if len(hist) < 2:
+            return False
+        confirm = Decimal(GOAL_ASK_CONFIRM_CENTS) / 100
+        return hist[-1] - hist[0] >= confirm
 
     def _delayed_grind(
         self,
