@@ -195,7 +195,7 @@ class KalshiBookFeed:
 
                     # Kalshi seq is per subscription stream (sid), NOT per ticker
                     last_seq: int | None = None
-                    last_emit_ms: dict[str, int] = {t: 0 for t in self.config.tickers}
+                    last_emit_ms: dict[str, int] = {}
                     emit_gap_ms = 50
 
                     async for raw in ws:
@@ -234,7 +234,7 @@ class KalshiBookFeed:
                         else:
                             continue
 
-                        if now_ms - last_emit_ms[ticker] >= emit_gap_ms:
+                        if now_ms - last_emit_ms.get(ticker, 0) >= emit_gap_ms:
                             last_emit_ms[ticker] = now_ms
                             self._emit_book(ticker)
 
