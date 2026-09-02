@@ -60,8 +60,7 @@ class SuspensionLabApp:
         self._labels.load_all_async(on_update=self._on_label_loaded)
         self.root.after(200, self._drain_events)
         self.root.after(400, self._refresh_display)
-        # Seated tickers never queue a 60s /series+/markets rediscover.
-        # Empty launch: LabRuntime.start() discovers until a book seats.
+        # Laptop hotfix: do not schedule _rediscover at 30s (empty) or 60s (seated).
 
     def _style(self) -> None:
         style = ttk.Style(self.root)
@@ -453,10 +452,8 @@ class SuspensionLabApp:
         self.root.after(250, self._refresh_display)
 
     def _rediscover(self) -> None:
-        """Seated sessions never rediscover. Empty launch is owned by LabRuntime."""
-        if self.runtime.has_known_markets():
-            return
-        self.runtime.request_discover(force=False)
+        """Do not reschedule. The 30s/60s Tk timer was the second 429 pump."""
+        return
 
     def _drop_ticker_box(self, ticker: str) -> None:
         self.feed.remove_ticker(ticker)

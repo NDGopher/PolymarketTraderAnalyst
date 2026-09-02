@@ -89,21 +89,22 @@ def main(
             )
         raise typer.Exit(2) from exc
 
-    pinned = bool(ticker_list) and not needs_auto_discover(ticker_list)
-    if pinned:
+    # Laptop hotfix: `or` made --no-auto-discover a no-op and ran the
+    # catalog discover on this thread before Tk (429 storm, no window).
+    # `and` + no catalog call here. run_app first.
+    if auto_discover and needs_auto_discover(ticker_list):
+        typer.echo(
+            "Empty seats — opening Tk first. No /series+/markets on this thread.",
+            err=True,
+        )
+        ticker_list = []
+        discovered_games = []
+    elif ticker_list and not needs_auto_discover(ticker_list):
         auto_discover = False
         typer.echo(
             "Using explicit CLI --tickers (real KX pin). No /series+/markets rediscover.",
             err=True,
         )
-    elif auto_discover:
-        typer.echo(
-            "\n--- Empty launch may discover until a book seats. "
-            "Once seated, no 60s /series+/markets rescan ---",
-            err=True,
-        )
-        ticker_list = []
-        discovered_games = []
     elif not ticker_list:
         typer.echo("No tickers and auto-discover disabled - waiting for live soccer.", err=True)
 

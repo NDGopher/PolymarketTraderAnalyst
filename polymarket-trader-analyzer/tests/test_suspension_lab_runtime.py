@@ -96,12 +96,33 @@ class TestKnownMarketsNeverRediscover:
 
         src = inspect.getsource(cli.main)
         assert "auto_discover = False" in src
+        assert "auto_discover and needs_auto_discover" in src
+        assert "auto_discover or needs_auto_discover" not in src
+
+    def test_cli_does_not_discover_before_run_app(self):
+        from suspension_lab import cli
+
+        src = inspect.getsource(cli.main)
+        digest_idx = src.index("if digest_only:")
+        run_idx = src.index("run_app")
+        call = "discover_soccer_games("
+        assert src.find(call, digest_idx, run_idx) != -1
+        assert src.find(call, run_idx) == -1
+        assert "run_app" in src
 
     def test_ui_does_not_schedule_60s_rediscover(self):
         src = UI_PY.read_text(encoding="utf-8")
         assert "after(60_000" not in src
         assert "after(30_000" not in src
         assert "No 60s rediscover" in src
+        rediscover = src[src.index("def _rediscover") : src.index("def _drop_ticker_box")]
+        assert "after(" not in rediscover
+        assert "request_discover" not in rediscover
+
+    def test_discover_loop_does_not_reschedule(self):
+        src = inspect.getsource(LabRuntime._discover_loop)
+        assert "has_known_markets" in src
+        assert "request_discover" not in src
 
 
 class TestWsOnlyNoRestFallback:

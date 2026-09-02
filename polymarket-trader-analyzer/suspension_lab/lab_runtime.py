@@ -300,20 +300,12 @@ class LabRuntime:
         )
 
     def _discover_loop(self) -> None:
-        # Empty start may scan until a book seats. Once tickers exist, never
-        # hit /series or /markets again (that scan is the 429).
+        # Do not reschedule 30s/60s /series+/markets. start() may one-shot
+        # empty seats after Tk exists. Seated never scans. has_known_markets
+        # stays the bail condition if a caller queues discover anyway.
         while not self._stop.wait(1.0):
             if self.has_known_markets():
                 continue
-            if not self.auto_discover:
-                continue
-            if self.gate.cooldown_remaining() > 0:
-                continue
-            if self._last_discover <= 0:
-                continue
-            if (time.monotonic() - self._last_discover) < self.rediscover_seconds:
-                continue
-            self.request_discover(force=False)
 
     def _sample_loop(self) -> None:
         interval = max(self.config.poll_ms, BOOK_SAMPLE_MS, 100) / 1000.0
