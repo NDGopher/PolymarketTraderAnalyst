@@ -11,9 +11,9 @@ from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.market_labels import MarketLabel
 from suspension_lab.soccer_discovery import (
     SoccerGame,
-    apply_live_totals,
     discover_tickers_for_lab,
     is_finished_game,
+    repick_session_totals,
 )
 from suspension_lab.tape_engine import TapeEngine, TapeEvent
 
@@ -458,24 +458,29 @@ class SuspensionLabApp:
                 return
             recent_goal = any(e.kind == "GOAL" for e in self.engine.events[-12:])
             grind_ready = (time.time() - self._started) >= 15 * 60 and not recent_goal
-            for game in games:
-                if game.total_books:
-                    apply_live_totals(game, game.total_books, drop_far_wing=grind_ready)
-            self.root.after(0, lambda: self._absorb_discovery(tickers, games))
+            kept, fund, drop = repick_session_totals(
+                list(self.engine.games),
+                games,
+                drop_far_wing=grind_ready,
+            )
+            self.root.after(0, lambda: self._absorb_discovery(tickers, games, kept, fund, drop))
 
         threading.Thread(target=_run, name="rediscover", daemon=True).start()
 
+    def _drop_ticker_box(self, ticker: str) -> None:
+        self.feed.remove_ticker(ticker)
+        box = self._ticker_boxes.pop(ticker, None)
+        if box and box.get("box"):
+            try:
+                box["box"].destroy()
+            except tk.TclError:
+                pass
+        if ticker in self._active_tickers:
+            self._active_tickers.remove(ticker)
+
     def _drop_game_card(self, game: SoccerGame) -> None:
         for ticker in game.get_tickers():
-            self.feed.remove_ticker(ticker)
-            box = self._ticker_boxes.pop(ticker, None)
-            if box and box.get("box"):
-                try:
-                    box["box"].destroy()
-                except tk.TclError:
-                    pass
-            if ticker in self._active_tickers:
-                self._active_tickers.remove(ticker)
+            self._drop_ticker_box(ticker)
         card = self._game_cards.pop(game.event_ticker, None)
         if card is not None:
             try:
@@ -485,31 +490,48 @@ class SuspensionLabApp:
         if game in self.engine.games:
             self.engine.games.remove(game)
 
-    def _absorb_discovery(self, tickers: list[str], games: list[SoccerGame]) -> None:
+    def _absorb_discovery(
+        self,
+        tickers: list[str],
+        games: list[SoccerGame],
+        kept: list[SoccerGame] | None = None,
+        fund: list[str] | None = None,
+        drop: list[str] | None = None,
+    ) -> None:
+        if kept is not None:
+            kept_events = {g.event_ticker for g in kept if g.event_ticker}
+            for old in list(self.engine.games):
+                if old.event_ticker and old.event_ticker not in kept_events:
+                    self.events_text.insert(tk.END, f"DROPPED  {old.title} (finished)\n", "SKIP")
+                    self._drop_game_card(old)
+            self.engine.games[:] = kept
+        for ticker in drop or []:
+            self._drop_ticker_box(ticker)
+            self.events_text.insert(tk.END, f"DROP WING  {ticker}\n", "SKIP")
+
         discovered = {g.event_ticker: g for g in games}
         for old in list(self.engine.games):
             fresh = discovered.get(old.event_ticker)
             if fresh is not None:
                 old.status = fresh.status
-            if is_finished_game(fresh if fresh is not None else old):
+            if kept is None and is_finished_game(fresh if fresh is not None else old):
                 self.events_text.insert(tk.END, f"DROPPED  {old.title} (finished)\n", "SKIP")
                 self._drop_game_card(old)
 
-        known = {g.event_ticker: g for g in self.engine.games}
-        for game in games:
-            old = known.get(game.event_ticker)
-            if old is None:
-                continue
-            old.total_atm_ticker = game.total_atm_ticker
-            old.total_up_ticker = game.total_up_ticker
-            old.totals_repick = game.totals_repick
-            old.tie_ml_ticker = game.tie_ml_ticker
-            old.status = game.status
-        new_games = [g for g in games if not any(t in self._ticker_boxes for t in g.get_tickers())]
-        for game in new_games + [g for g in games if g not in new_games]:
+        new_games = [
+            g
+            for g in (kept if kept is not None else games)
+            if g.event_ticker not in self._game_cards
+            and not any(t in self._ticker_boxes for t in g.get_tickers())
+        ]
+        watch = kept if kept is not None else games
+        fund_set = set(fund or [])
+        for game in new_games + [g for g in watch if g not in new_games]:
             added = []
             for ticker in game.get_tickers():
                 if ticker in self._ticker_boxes:
+                    continue
+                if fund_set and ticker not in fund_set:
                     continue
                 if self.feed.add_ticker(ticker):
                     self.logger.register_ticker(ticker)
@@ -525,7 +547,8 @@ class SuspensionLabApp:
                     self._idle_card = None
                 self._waiting_var.set("")
                 self._create_game_card(game)
-                self.engine.games.append(game)
+                if game not in self.engine.games:
+                    self.engine.games.append(game)
                 for ticker in added:
                     self._labels.fetch_one_async(ticker, on_update=self._on_label_loaded)
                 self.events_text.insert(tk.END, f"AUTO-FUND  {game.title}\n", "PAPER")

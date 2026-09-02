@@ -228,6 +228,18 @@ class TestInGameTotalsOnTape:
         assert atm is not None and atm.ticker == "T-4"
         assert up is not None and up.ticker == "T-5"
 
+    def test_el_gouna_grind_funds_o15_not_o35(self):
+        books = [
+            TotalBook(1, "GOUMOK-1", 0.91, 50, 50, True),
+            TotalBook(2, "GOUMOK-2", 0.50, 200, 200, True, yes_bid=0.47),
+            TotalBook(3, "GOUMOK-3", 0.24, 80, 80, True),
+            TotalBook(4, "GOUMOK-4", 0.05, 40, 40, True, yes_bid=0.04),
+            TotalBook(5, "GOUMOK-5", 0.02, 20, 20, True, untradeable=True),
+        ]
+        atm, up = select_ingame_totals(books)
+        assert atm is not None and atm.ticker == "GOUMOK-2"
+        assert up is not None and up.ticker == "GOUMOK-3"
+
 
 class TestTapeEnginePaperOnly:
     def test_goal_logs_paper_not_invented_fill(self, tmp_path: Path):

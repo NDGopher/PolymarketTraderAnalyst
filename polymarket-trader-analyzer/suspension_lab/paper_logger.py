@@ -14,13 +14,12 @@ from suspension_lab.config import BOOK_SAMPLE_MS, LabConfig
 from suspension_lab.env_loader import env_status_message, load_project_env, project_root
 from suspension_lab.kalshi_client import KalshiBookFeed
 from suspension_lab.soccer_discovery import (
-    apply_live_totals,
     discover_soccer_games,
     format_discovery_log,
     format_slate_digest,
-    is_finished_game,
     needs_auto_discover,
     parse_cli_tickers,
+    repick_session_totals,
 )
 from suspension_lab.tape_engine import TapeEngine
 
@@ -143,49 +142,19 @@ def run_paper_logger(
             )
             recent_goal = any(e.kind == "GOAL" for e in engine.events[-12:])
             grind_ready = (time.time() - started) >= 15 * 60 and not recent_goal
+            kept, fund, drop = repick_session_totals(
+                list(engine.games),
+                extra_games,
+                drop_far_wing=grind_ready,
+            )
+            engine.games[:] = kept
+            dropped = 0
+            for ticker in drop:
+                if feed.remove_ticker(ticker):
+                    dropped += 1
             added = 0
-            known = {g.event_ticker: g for g in engine.games}
-            for game in extra_games:
-                if game.total_books:
-                    apply_live_totals(
-                        game, game.total_books, drop_far_wing=grind_ready
-                    )
-                old = known.get(game.event_ticker)
-                if old is None:
-                    engine.games.append(game)
-                    known[game.event_ticker] = game
-                else:
-                    old.total_atm_ticker = game.total_atm_ticker
-                    old.total_atm_label = game.total_atm_label
-                    old.total_atm_price = game.total_atm_price
-                    old.total_up_ticker = game.total_up_ticker
-                    old.total_up_label = game.total_up_label
-                    old.total_up_price = game.total_up_price
-                    old.over_05_ticker = game.over_05_ticker
-                    old.over_15_ticker = game.over_15_ticker
-                    old.totals_repick = game.totals_repick
-                    old.in_play_hint = game.in_play_hint
-                    old.status = game.status
-                    old.tie_ml_ticker = game.tie_ml_ticker
-            fund = list(extra)
-            for game in extra_games:
-                fund.extend(game.get_tickers())
-            live_events = {g.event_ticker for g in extra_games}
-            for old in list(engine.games):
-                fresh = known.get(old.event_ticker)
-                if fresh is None:
-                    candidate = old
-                else:
-                    candidate = fresh
-                if is_finished_game(candidate) or (
-                    old.event_ticker and old.event_ticker not in live_events and is_finished_game(old)
-                ):
-                    for ticker in old.get_tickers():
-                        feed.remove_ticker(ticker)
-                    if old in engine.games:
-                        engine.games.remove(old)
             seen: set[str] = set()
-            for ticker in fund:
+            for ticker in list(extra) + fund:
                 if ticker in seen:
                     continue
                 seen.add(ticker)
@@ -193,8 +162,12 @@ def run_paper_logger(
                     engine.logger.register_ticker(ticker)
                     engine.labels.register_ticker(ticker)
                     added += 1
-            if added:
-                print(f"[discover] added {added} tickers (live totals re-pick)\n{extra_log}", flush=True)
+            if added or dropped:
+                print(
+                    f"[discover] added {added} dropped {dropped} tickers "
+                    f"(live ATM re-pick, dead wings out)\n{extra_log}",
+                    flush=True,
+                )
             elif extra_games:
                 print(
                     "[discover] live totals re-pick "

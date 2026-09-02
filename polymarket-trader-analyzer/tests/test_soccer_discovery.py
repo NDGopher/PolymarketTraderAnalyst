@@ -24,7 +24,10 @@ from suspension_lab.soccer_discovery import (
     select_scalp_totals,
     select_ingame_totals,
     apply_live_totals,
+    is_dead_wing,
     is_finished_game,
+    repick_session_totals,
+    unfunded_tickers,
     is_soccer_series_ticker,
     is_stale_lab_ticker,
     looks_like_soccer_market,
@@ -811,6 +814,67 @@ class TestInGameTotalsRepick:
         assert atm is not None and atm.strike == 4
         assert up is not None and up.strike == 5
 
+    def test_el_gouna_o15_at_fifty_not_junk_o35(self):
+        """0-1 / 1-0 grind: O1.5 ~47/53 is ATM. O3.5 at 5¢ is junk — do not pin 3.5/4.5."""
+        books = [
+            _tb(1, 0.91),
+            _tb(2, 0.50),
+            _tb(3, 0.28),
+            _tb(4, 0.05),
+            _tb(5, 0.03),
+        ]
+        atm, up = select_ingame_totals(books, drop_far_wing=False)
+        assert atm is not None and atm.strike == 2 and atm.label == "O1.5"
+        assert up is not None and up.strike == 3 and up.label == "O2.5"
+        assert atm.strike != 4
+        assert up.strike not in {4, 5}
+
+    def test_el_gouna_dead_o35_not_next_up(self):
+        books = [
+            _tb(2, 0.50),
+            _tb(3, 0.05, liquid=True),
+            _tb(4, 0.02),
+        ]
+        atm, up = select_scalp_totals(books)
+        assert atm is not None and atm.strike == 2
+        assert up is None
+
+    def test_dead_wing_untradeable_and_missing_bid(self):
+        dead = TotalBook(4, "T-4", 0.05, 80, 80, True, yes_bid=None, untradeable=True)
+        junk = TotalBook(5, "T-5", 0.07, 80, 80, True, yes_bid=0.04)
+        live = TotalBook(2, "T-2", 0.50, 80, 80, True, yes_bid=0.47)
+        assert is_dead_wing(dead)
+        assert is_dead_wing(junk)
+        assert not is_dead_wing(live)
+        atm, up = select_scalp_totals([live, dead, junk])
+        assert atm is not None and atm.strike == 2
+        assert up is None
+
+    def test_o45_dead_swaps_to_o15_when_o25_also_junk(self):
+        books = [
+            _tb(1, 0.90),
+            _tb(2, 0.48),
+            _tb(3, 0.08),
+            _tb(4, 0.51),
+            _tb(5, 0.04),
+        ]
+        atm, wing = select_ingame_totals(books, drop_far_wing=False)
+        assert atm is not None and atm.strike == 4
+        assert wing is not None and wing.strike == 2 and wing.label == "O1.5"
+
+    def test_score_11_is_atm_not_a_hard_pin(self):
+        """When 4.5 is still the 50¢ tape after 1-1, fund 3.5/4.5 — that is ATM."""
+        books = [
+            _tb(1, 0.99),
+            _tb(2, 0.99),
+            _tb(3, 0.85),
+            _tb(4, 0.52),
+            _tb(5, 0.25),
+        ]
+        atm, up = select_ingame_totals(books, drop_far_wing=False)
+        assert atm is not None and atm.strike == 4
+        assert up is not None and up.strike == 5
+
     def test_build_game_live_11_sassuolo(self):
         markets = [
             {
@@ -851,6 +915,155 @@ class TestInGameTotalsRepick:
         assert game.total_atm_label == "O3.5"
         assert game.total_up_label == "O4.5"
         assert "KXCOPPAITALIATOTAL-26SEP02SASFRO-3" not in game.get_tickers()
+
+
+class TestElGounaSlateFundsO15:
+    """Live El Gouna-like tape: O1.5 is the 50¢ book. Do not fund junk O3.5."""
+
+    def _markets(self) -> list[dict]:
+        return [
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-GOU",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "title": "El Gouna vs Al Mokawloon",
+                "close_time": "2026-09-02T20:00:00Z",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "status": "open",
+                "volume_fp": "4000",
+                "volume_24h_fp": "8000",
+                "rules_primary": "If El Gouna wins the El Gouna vs Al Mokawloon professional soccer game",
+                "yes_bid_dollars": "0.40",
+                "yes_ask_dollars": "0.42",
+            },
+            {
+                "ticker": "KXEGYPLGAME-26SEP02GOUMOK-MOK",
+                "event_ticker": "KXEGYPLGAME-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "3500",
+                "volume_24h_fp": "7000",
+                "yes_bid_dollars": "0.30",
+                "yes_ask_dollars": "0.32",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-1",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "900",
+                "volume_24h_fp": "1800",
+                "yes_bid_dollars": "0.90",
+                "yes_ask_dollars": "0.93",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-2",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "2200",
+                "volume_24h_fp": "4400",
+                "yes_bid_dollars": "0.47",
+                "yes_ask_dollars": "0.53",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-3",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "1500",
+                "volume_24h_fp": "3000",
+                "yes_bid_dollars": "0.22",
+                "yes_ask_dollars": "0.26",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-4",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "800",
+                "volume_24h_fp": "1600",
+                "yes_bid_dollars": "0.04",
+                "yes_ask_dollars": "0.07",
+            },
+            {
+                "ticker": "KXEGYPLTOTAL-26SEP02GOUMOK-5",
+                "event_ticker": "KXEGYPLTOTAL-26SEP02GOUMOK",
+                "occurrence_datetime": "2026-09-02T15:00:00Z",
+                "volume_fp": "400",
+                "volume_24h_fp": "700",
+                "yes_bid_dollars": "0.01",
+                "yes_ask_dollars": "0.03",
+            },
+        ]
+
+    def test_build_funds_o15_not_o35(self):
+        game = build_soccer_game("26SEP02GOUMOK", self._markets())
+        assert game is not None
+        assert game.total_atm_label == "O1.5"
+        assert game.total_atm_ticker.endswith("-2")
+        assert game.total_up_label == "O2.5"
+        tickers = game.get_tickers()
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-2" in tickers
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-4" not in tickers
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-5" not in tickers
+
+    @patch("suspension_lab.soccer_discovery.fetch_open_soccer_markets")
+    def test_discover_el_gouna_slate(self, mock_fetch):
+        mock_fetch.return_value = self._markets()
+        now = datetime(2026, 9, 2, 15, 40, tzinfo=timezone.utc)
+        result = discover_soccer_games(max_games=5, now=now)
+        assert len(result.games) == 1
+        game = result.games[0]
+        assert game.total_atm_label == "O1.5"
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-2" in result.tickers
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-4" not in result.tickers
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-5" not in result.tickers
+
+
+class TestRepickDropsDeadWings:
+    def test_unfunded_tickers_are_the_diff(self):
+        assert unfunded_tickers(["ML-H", "T-4", "T-5"], ["ML-H", "T-2", "T-3"]) == ["T-4", "T-5"]
+
+    def test_session_repick_drops_o35_when_o15_is_atm(self):
+        stuck = SoccerGame(
+            event_ticker="KXEGYPLGAME-26SEP02GOUMOK",
+            title="El Gouna vs Al Mokawloon",
+            home_team="El Gouna",
+            away_team="Al Mokawloon",
+            close_time="2026-09-02T20:00:00Z",
+            occurrence_time="2026-09-02T15:00:00Z",
+            home_ml_ticker="KXEGYPLGAME-26SEP02GOUMOK-GOU",
+            away_ml_ticker="KXEGYPLGAME-26SEP02GOUMOK-MOK",
+            total_atm_ticker="KXEGYPLTOTAL-26SEP02GOUMOK-4",
+            total_atm_label="O3.5",
+            total_atm_price=0.52,
+            total_up_ticker="KXEGYPLTOTAL-26SEP02GOUMOK-5",
+            total_up_label="O4.5",
+            total_up_price=0.25,
+            over_05_ticker="KXEGYPLTOTAL-26SEP02GOUMOK-4",
+            over_15_ticker="KXEGYPLTOTAL-26SEP02GOUMOK-5",
+        )
+        live = SoccerGame(
+            event_ticker="KXEGYPLGAME-26SEP02GOUMOK",
+            title="El Gouna vs Al Mokawloon",
+            home_team="El Gouna",
+            away_team="Al Mokawloon",
+            close_time="2026-09-02T20:00:00Z",
+            occurrence_time="2026-09-02T15:00:00Z",
+            home_ml_ticker="KXEGYPLGAME-26SEP02GOUMOK-GOU",
+            away_ml_ticker="KXEGYPLGAME-26SEP02GOUMOK-MOK",
+            total_books=[
+                TotalBook(1, "KXEGYPLTOTAL-26SEP02GOUMOK-1", 0.91, 100, 100, True),
+                TotalBook(2, "KXEGYPLTOTAL-26SEP02GOUMOK-2", 0.50, 200, 200, True, yes_bid=0.47),
+                TotalBook(3, "KXEGYPLTOTAL-26SEP02GOUMOK-3", 0.24, 150, 150, True),
+                TotalBook(4, "KXEGYPLTOTAL-26SEP02GOUMOK-4", 0.05, 80, 80, True, yes_bid=0.04, untradeable=False),
+                TotalBook(5, "KXEGYPLTOTAL-26SEP02GOUMOK-5", 0.02, 40, 40, True, yes_bid=None, untradeable=True),
+            ],
+        )
+        now = datetime(2026, 9, 2, 15, 45, tzinfo=timezone.utc)
+        kept, fund, drop = repick_session_totals([stuck], [live], drop_far_wing=False, now=now)
+        assert len(kept) == 1
+        assert kept[0].total_atm_label == "O1.5"
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-2" in fund
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-4" in drop
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-5" in drop
+        assert "KXEGYPLTOTAL-26SEP02GOUMOK-4" not in fund
+        assert "KXEGYPLGAME-26SEP02GOUMOK-GOU" in fund
 
 
 class TestGreekPrefixesNoTeamBias:
