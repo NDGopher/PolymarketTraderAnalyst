@@ -11,7 +11,6 @@ from pathlib import Path
 
 from suspension_lab.exit_engine import check_exit, scalp_target_cents
 from suspension_lab.goal_signal import GoalSignal
-from suspension_lab.scalp_quote import make_around_jump
 
 
 @dataclass
@@ -106,16 +105,8 @@ class PaperAutoTrader:
             return None
 
         signal_cents = int(round(signal.new_bid * 100))
-        ask_cents = int(round(signal.new_ask * 100)) if signal.new_ask is not None else None
-        quote = make_around_jump(
-            signal_cents,
-            ask_cents,
-            bid_offset=self.config.bid_offset_cents,
-        )
-        if quote.skipped or quote.entry_cents is None:
-            self.skipped.append(quote.skip_reason or quote.reason)
-            return None
-        entry_cents = quote.entry_cents
+        # PR #6 paper scalp: bid+1, then +7 target. No 50c fee-skip deny.
+        entry_cents = min(signal_cents + self.config.bid_offset_cents, 99)
 
         with self._lock:
             self._trade_id += 1

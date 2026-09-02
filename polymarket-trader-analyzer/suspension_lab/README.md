@@ -61,7 +61,7 @@ python -m suspension_lab.cli --digest-only
 python -m suspension_lab.cli --headless
 ```
 
-GOAL is detected from the **order book** (bid jump or spread blowout), not a score feed. Paper scalp makes around the jump (bid+1¢) — never mid-only. Fees peak at 50¢ so near-50 prints with a tight spread are skipped. VAR / delayed / red-card-like grinds flatten or skip.
+GOAL is detected from the **order book** (one-tick bid jump ≥10¢ with ≥500 contracts and ask confirm), not a score feed. Paper scalp enters bid+1¢ and targets +7¢. VAR flatten if the bid reverts ≥10¢ from the signal peak (spoof bids on bonded books are not VAR).
 
 ## Switch to a new game (manual)
 
@@ -102,7 +102,7 @@ LAB_TRADER_BID_OFFSET_CENTS=1
 
 ## Live goal signal (green box)
 
-When a ticker’s **bid jumps ≥10¢** with **≥100 contracts** and **ask confirms**, the panel gets a green border.
+When a ticker’s **bid jumps ≥10¢** with **≥500 contracts** and **ask confirms**, the panel gets a green border.
 
 - Shows **YES and NO** sides of the book
 - Signals logged to `goal_signals.csv`

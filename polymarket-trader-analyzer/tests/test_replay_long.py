@@ -54,7 +54,7 @@ def _create_test_session(tmpdir: Path, use_long: bool = True) -> Path:
             ])
             writer.writerow([
                 ts_ms, ts_iso, "TICKER-O05",
-                "0.80", "0.85", "0.825", "5", "300", "150", "False", "False", "False"
+                "0.80", "0.85", "0.825", "5", "500", "150", "False", "False", "False"
             ])
             
             for ms_offset in range(5200, 10000, 200):
