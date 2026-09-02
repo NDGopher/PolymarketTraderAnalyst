@@ -67,23 +67,26 @@ class OrderBook:
                 book[price] = qty
 
     def best_yes_bid(self) -> tuple[Decimal | None, Decimal]:
-        if not self.yes_bids:
+        snapshot = dict(self.yes_bids)
+        if not snapshot:
             return None, Decimal(0)
-        price = max(self.yes_bids, key=lambda p: _d(p))
-        return _d(price), self.yes_bids[price]
+        price = max(snapshot, key=lambda p: _d(p))
+        return _d(price), snapshot[price]
 
     def best_yes_ask(self) -> tuple[Decimal | None, Decimal]:
-        if not self.no_bids:
+        snapshot = dict(self.no_bids)
+        if not snapshot:
             return None, Decimal(0)
-        no_bid_price = max(self.no_bids, key=lambda p: _d(p))
+        no_bid_price = max(snapshot, key=lambda p: _d(p))
         yes_ask = Decimal(1) - _d(no_bid_price)
-        return yes_ask, self.no_bids[no_bid_price]
+        return yes_ask, snapshot[no_bid_price]
 
     def best_no_bid(self) -> tuple[Decimal | None, Decimal]:
-        if not self.no_bids:
+        snapshot = dict(self.no_bids)
+        if not snapshot:
             return None, Decimal(0)
-        price = max(self.no_bids, key=lambda p: _d(p))
-        return _d(price), self.no_bids[price]
+        price = max(snapshot, key=lambda p: _d(p))
+        return _d(price), snapshot[price]
 
     def best_no_ask(self) -> tuple[Decimal | None, Decimal]:
         """Implied NO ask = 1 - YES bid (lift NO by selling YES)."""
@@ -95,7 +98,7 @@ class OrderBook:
     def no_asks(self, depth: int = 10) -> list[list[str]]:
         """NO asks derived from YES bids (inverse prices)."""
         levels: list[tuple[Decimal, Decimal]] = []
-        for yes_price, qty in self.yes_bids.items():
+        for yes_price, qty in dict(self.yes_bids).items():
             no_ask = Decimal(1) - _d(yes_price)
             levels.append((no_ask, qty))
         levels.sort(key=lambda x: x[0])
@@ -128,7 +131,7 @@ class OrderBook:
     def yes_asks(self, depth: int = 10) -> list[list[str]]:
         """YES-side asks derived from NO bids (Kalshi binary book)."""
         asks: list[tuple[Decimal, Decimal]] = []
-        for no_price, qty in self.no_bids.items():
+        for no_price, qty in dict(self.no_bids).items():
             yes_ask = Decimal(1) - _d(no_price)
             asks.append((yes_ask, qty))
         asks.sort(key=lambda x: x[0])
@@ -136,9 +139,9 @@ class OrderBook:
 
     def depth_top_n(self, side: str, n: int = 3) -> Decimal:
         if side == "bid":
-            levels = sorted(self.yes_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:n]
+            levels = sorted(dict(self.yes_bids).items(), key=lambda x: _d(x[0]), reverse=True)[:n]
         else:
-            levels = sorted(self.no_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:n]
+            levels = sorted(dict(self.no_bids).items(), key=lambda x: _d(x[0]), reverse=True)[:n]
         return sum((qty for _, qty in levels), Decimal(0))
 
     def spread_cents(self) -> int | None:
@@ -148,8 +151,8 @@ class OrderBook:
         return int(round(sp * 100))
 
     def top_levels(self, depth: int = 10) -> dict[str, Any]:
-        yes_sorted = sorted(self.yes_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
-        no_sorted = sorted(self.no_bids.items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
+        yes_sorted = sorted(dict(self.yes_bids).items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
+        no_sorted = sorted(dict(self.no_bids).items(), key=lambda x: _d(x[0]), reverse=True)[:depth]
         bid, bid_qty = self.best_yes_bid()
         ask, ask_qty = self.best_yes_ask()
         no_bid, no_bid_qty = self.best_no_bid()
